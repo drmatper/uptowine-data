@@ -1,0 +1,27 @@
+name: Actualizar vinos desde uptowine.cl
+
+on:
+  schedule:
+    - cron: '15 */6 * * *' # cada 6 horas
+  workflow_dispatch: {} # permite ejecutarlo a mano desde GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Scrapear fichas
+        run: node scrape.js
+      - name: Commit si hay cambios
+        run: |
+          git config user.name "uptowine-bot"
+          git config user.email "actions@github.com"
+          git add wines.json
+          git diff --cached --quiet && echo "Sin cambios" || git commit -m "Actualizar vinos $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
