@@ -22,6 +22,6 @@ jobs:
         run: |
           git config user.name "uptowine-bot"
           git config user.email "actions@github.com"
-          git add wines.json
+          git add wines.json magazines.json
           git diff --cached --quiet && echo "Sin cambios" || git commit -m "Actualizar vinos $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push

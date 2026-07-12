@@ -143,4 +143,23 @@ function extractProduct(url, html) {
   // ponytail: si el scrape se degrada (sitio caido/redisenado), no publicar un JSON roto
   if (wines.length < 100) throw new Error('Solo ' + wines.length + ' vinos: aborto para no publicar datos incompletos');
   fs.writeFileSync(__dirname + '/wines.json', JSON.stringify(wines, null, 2) + '\n');
+
+  // --- Revistas: paginas /revistas* con JSON embebido {y,m,u,s} ---
+  const revPages = urls.filter((u) => /\/revistas/.test(u));
+  const bySlug = new Map();
+  for (const rp of revPages) {
+    const page = await fetchPage(rp);
+    if (!page || page.status !== 200) continue;
+    for (const m of page.html.matchAll(/\{"y":\s*(\d{4}),\s*"m":\s*"([^"]+)",\s*"u":\s*"([^"]+)",\s*"s":\s*"([^"]+)"\}/g)) {
+      const [, y, mes, u, s] = m;
+      if (!bySlug.has(s)) bySlug.set(s, { year: y, month: mes, slug: s, title: mes + ' ' + y, url: u, cover: 'https://online.fliphtml5.com/votjo/' + s + '/files/shot.jpg?v=2' });
+    }
+  }
+  const mags = [...bySlug.values()];
+  console.log('Revistas encontradas:', mags.length);
+  if (mags.length >= 50) {
+    fs.writeFileSync(__dirname + '/magazines.json', JSON.stringify(mags, null, 2) + '\n');
+  } else {
+    console.log('Muy pocas revistas: mantengo magazines.json anterior');
+  }
 })();
