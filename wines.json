@@ -22,6 +22,38 @@
     "sugiere": "Cordero a las brasas, Risotto de remolacha, Costillitas de cerdo a la ciruela, Pato a la naranja, Queso taleggio. Malbec–Syrah floral: carnes con salsas de fruta y platos de cuerpo medio."
   },
   {
+    "name": "Alchemy Angelina Carmenere",
+    "winery": "Alchemy",
+    "image": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78661805/ALCHEMY_20ANGELINA_20CARMENERE.png?1783625013",
+    "url": "https://uptowine.cl/alchemy-angelina-carmenere",
+    "price": 13000,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2021",
+        "cepa": "100% Carménère",
+        "valle": "Cachapoal",
+        "grad": "14%",
+        "crianza": "12 meses en huevos de cemento y flextanks",
+        "nota": "",
+        "premios": "Medalla de Oro - Carménère al Mundo 2024 (categoría Carménère Puro) · 92 pts La Cav",
+        "revista": "https://online.fliphtml5.com/votjo/gpcs/"
+      },
+      {
+        "anada": "2018",
+        "cepa": "100% Carménère",
+        "valle": "Cachapoal",
+        "grad": "14,1%",
+        "crianza": "Fermentado en huevo de cemento; línea premium Angelina",
+        "nota": "Carménère más versátil, fresco y jugoso; al no existir intervención de madera, genera volumen en boca y cuerpo medio. Se perciben notas frutales limpias.",
+        "premios": "",
+        "revista": "https://online.fliphtml5.com/votjo/zifl/"
+      }
+    ],
+    "opina": "La versión Angelina (premium, sin madera) del Carménère de Alchemy, desde Almahue (Cachapoal): fermentado en huevo de cemento para un Carménère fresco, jugoso y de fruta limpia. Medalla de Oro en Carménère al Mundo 2024.",
+    "sugiere": "Costillar de cerdo a la BBQ, Charquicán, Berenjenas rellenas, Chorrillana, Queso gouda. Carménère especiado: brasa suave, guisos y comida chilena."
+  },
+  {
     "name": "Alchemy Angelina Chardonnay",
     "winery": "Alchemy",
     "image": "",
@@ -58,7 +90,7 @@
         "grad": "13,5%",
         "crianza": "70% en tinaja y 25% en barrica de 4/5 uso por 8 meses. Vino estabilizado de manera natural y sin filtrar",
         "nota": "Rubí intenso. En nariz, a frutos rojos, especias, toffee. En boca, Tiene un cuerpo medio, fresco, tanino medio y final largo.",
-        "premios": "Oro - Catad&#x27;Or",
+        "premios": "Oro - Catad'Or",
         "revista": ""
       },
       {
@@ -74,6 +106,120 @@
     ],
     "opina": "El White Angel de la línea premium Angelina de Alchemy: Sauvignon Blanc de Casablanca fermentado en huevos de cemento y embotellado sin filtrar, lo que le da mineralidad, micro-oxigenación y una boca dinámica, casi como un Chardonnay. Nariz muy expresiva. Un blanco de autor, distinto a lo habitual.",
     "sugiere": "Ceviche de camarón, Ensalada tailandesa, Empanadas de mariscos, Sushi, Queso fresco con hierbas. Sauvignon Blanc tropical: cebiches, cocina asiática y ensaladas frescas."
+  },
+  {
+    "name": "Alchemy Carmenere",
+    "winery": "Alchemy",
+    "image": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78661796/ALCHEMY_20CARMENERE.png?1783624978",
+    "url": "https://uptowine.cl/alchemy-carmenere",
+    "price": 18990,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2021",
+        "cepa": "100% Carménère",
+        "valle": "Cachapoal (Valle de Almahue)",
+        "grad": "14%",
+        "crianza": "12 meses en barrica de madera",
+        "nota": "",
+        "premios": "Oro Catad'Or 2024 · 92 pts La Cav",
+        "revista": ""
+      },
+      {
+        "anada": "2019",
+        "cepa": "100% Carménère",
+        "valle": "Cachapoal (Valle de Almahue)",
+        "grad": "14,1%",
+        "crianza": "12 meses en barricas de roble francés usadas",
+        "nota": "Se caracteriza por tener un color violeta intenso. En nariz frutos negros del bosque, moras, arándanos, especias, cacao y café. En boca, tiene un cuerpo voluminoso, fresco, con taninos redondos, maduros y un final largo e intenso.",
+        "premios": "94 pts Guía Vinau",
+        "revista": ""
+      },
+      {
+        "anada": "2018",
+        "cepa": "100% Carménère",
+        "valle": "Cachapoal",
+        "grad": "14,1%",
+        "crianza": "18 meses en roble francés",
+        "nota": "Color rojo púrpura profundo, con aromas a cereza madura, ciruela ácida, especias y tabaco. En boca cuerpo medio, redondo, taninos suaves, fresco y con un final largo.",
+        "premios": "90 pts La Cav",
+        "revista": "https://online.fliphtml5.com/votjo/05---UTW-REVISTA---NOVIEMBRE-2018/"
+      },
+      {
+        "anada": "2017",
+        "cepa": "100% Carménère",
+        "valle": "Cachapoal",
+        "grad": "14,1%",
+        "crianza": "12 meses en barrica de roble francés",
+        "nota": "Vino robusto, con aroma de berries rojos y especias varias. Da una sensación suave en el paladar, complementada con taninos elegantes.",
+        "premios": "Medalla Oro Catad'Or · 92 pts La Cav",
+        "revista": "https://online.fliphtml5.com/votjo/05---UTW-REVISTA---NOVIEMBRE-2018/"
+      },
+      {
+        "anada": "2015",
+        "cepa": "100% Carménère",
+        "valle": "Cachapoal (Valle de Almahue)",
+        "grad": "14,1%",
+        "crianza": "12 meses en barricas de roble francés usadas",
+        "nota": "Frutos negros del bosque, moras, arándanos, especias, cacao y café; vino robusto de aroma a berries rojos. En boca, sensación suave, complementado con taninos elegantes.",
+        "premios": "93 pts James Suckling",
+        "revista": ""
+      }
+    ],
+    "opina": "Carménère de Alchemy Wines, desde Santa Amelia de Almahue (Pichidegua, Cachapoal), la casa del enólogo Eduardo Camerati premiada como 'Mejor Carménère de Chile': pimentón, especias dulces y frutos rojos con taninos amables, criado con huevos de cemento. Vino de autor, sin filtrar, fresco y de cuerpo medio.",
+    "sugiere": "Cazuela de vacuno, Ají de gallina, Costillitas a la BBQ, Pimentón relleno, Queso mantecoso. Carménère de fruta y especia: guisos, pimientos y sabores caseros."
+  },
+  {
+    "name": "Alchemy Grand Cuvee",
+    "winery": "Alchemy",
+    "image": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78661857/ALCHEMY_20GRAND_20CUVEE.png?1783625170",
+    "url": "https://uptowine.cl/alchemy-grand-cuvee",
+    "price": 12720,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2018",
+        "cepa": "70% Carménère / 17% Malbec / 13% Syrah",
+        "valle": "Cachapoal",
+        "grad": "14,1%",
+        "crianza": "12 meses en roble francés",
+        "nota": "Ensamblaje de intenso color rojo, con aromas a frutos negros, especias y notas tostadas. En boca estructurado, con taninos maduros, buen cuerpo y final persistente.",
+        "premios": "",
+        "revista": "https://online.fliphtml5.com/votjo/ljsk/"
+      },
+      {
+        "anada": "2017",
+        "cepa": "Carménère 66,7% / Syrah 30,6% / Malbec 2,7%",
+        "valle": "Cachapoal - Peumo",
+        "grad": "13,8%",
+        "crianza": "12 meses de guarda",
+        "nota": "",
+        "premios": "Oro Catad'Or · 92 pts La Cav · 94 pts Guía Vinau",
+        "revista": ""
+      },
+      {
+        "anada": "2016",
+        "cepa": "55% Cabernet Sauvignon / 30% Carménère / 10% Syrah / 5% Malbec",
+        "valle": "Cachapoal",
+        "grad": "14,5%",
+        "crianza": "18 meses en barrica de roble francés",
+        "nota": "Vino robusto. Emana aromas a frutos rojos, especias varias y tostadas. Deja una suave sensación en boca, complementada con taninos redondos, toques de vainilla y berries del bosque.",
+        "premios": "Medalla Oro Catad'Or · 91 pts La Cav",
+        "revista": "https://online.fliphtml5.com/votjo/UTW-REVISTA---MARZO-2019/"
+      },
+      {
+        "anada": "2014",
+        "cepa": "Ensamblaje",
+        "valle": "Cachapoal",
+        "grad": "14,7%",
+        "crianza": "12 meses",
+        "nota": "",
+        "premios": "91 pts James Suckling",
+        "revista": ""
+      }
+    ],
+    "opina": "El tope de gama de Alchemy Wines, desde Santa Amelia de Almahue (Cachapoal): un ensamblaje de Carménère, Syrah y Malbec según la añada, vino de autor y sin filtrar. Fruta negra, especias, flores del bosque y un fondo tostado, con boca de trama tánica persistente. De guarda.",
+    "sugiere": "Pastel de choclo, Cordero al horno, Risotto de hongos, Costillar de cerdo, Queso gouda maduro. Ensamblaje sobre Carménère: comida chilena de horno y guisos especiados."
   },
   {
     "name": "Alchemy Parróne Blend",
@@ -121,8 +267,8 @@
         "valle": "Colchagua",
         "grad": "14%",
         "crianza": "12 meses en barricas de roble francés de 4to uso",
-        "nota": "Transparente con un leve tono dorado, burbujas finas y constantes. En nariz, Notas minerales, En boca, Acidez refrescante, voluminoso, final largo y persistente.",
-        "premios": "Oro Catad&#x27;Or 2024",
+        "nota": "Color rubí intenso, con aromas a frutos rojos, especias y un dejo de toffee. En boca es de cuerpo medio, fresco, con tanino medio y final largo.",
+        "premios": "Oro Catad'Or 2024",
         "revista": "https://online.fliphtml5.com/votjo/gpcs/"
       },
       {
@@ -131,19 +277,9 @@
         "valle": "Colchagua",
         "grad": "13,5%",
         "crianza": "12 meses en roble francés usado",
-        "nota": "Rubí intenso. En nariz, a frutos rojos, especias, toffee. Color rubí intenso, con aromas a frutos rojos, especias y toffee. En boca cuerpo medio, fresco, tanino medio y final largo. Un Cabernet Sauvignon jugoso pero con personalidad. En boca, tiene un cuerpo medio, fresco, tanino medio y final largo.",
+        "nota": "Rubí intenso, con aromas a frutos rojos, especias y toffee. En boca es de cuerpo medio, fresco, con tanino medio y final largo; un Cabernet Sauvignon jugoso pero con personalidad.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/rjra/"
-      },
-      {
-        "anada": "",
-        "cepa": "100% Cabernet Sauvignon",
-        "valle": "Colchagua",
-        "grad": "13,8%",
-        "crianza": "12 meses en roble francés",
-        "nota": "Rubí intenso. En nariz, a frutos rojos, especias, toffee. Color rubí intenso, aromas a frutos rojos, especias y toffee. En boca de cuerpo medio, fresco, tanino medio y final largo.",
-        "premios": "",
-        "revista": "https://online.fliphtml5.com/votjo/zlno/"
       }
     ],
     "opina": "La línea reserva Parróne de Alchemy (Almahue, Cachapoal), fermentada con levaduras nativas y prensa suave: en base Cabernet, rubí intenso, frutos rojos, especias y un dejo de toffee, de cuerpo medio, fresco y final largo. Vino de autor, embotellado sin filtrar.",
@@ -178,8 +314,122 @@
         "revista": "https://online.fliphtml5.com/votjo/zlno/"
       }
     ],
-    "opina": "El Parróne Garnacha de Alchemy Wines (Almahue, Cachapoal): cosechado a mano, con levaduras nativas y guarda en barrica por gravedad. Rubí pálido, frambuesa, &#x27;candy&#x27; y especias, de cuerpo ligero, fresco y taninos suaves. La cara más delicada y bebible de la casa de Eduardo Camerati.",
+    "opina": "El Parróne Garnacha de Alchemy Wines (Almahue, Cachapoal): cosechado a mano, con levaduras nativas y guarda en barrica por gravedad. Rubí pálido, frambuesa, 'candy' y especias, de cuerpo ligero, fresco y taninos suaves. La cara más delicada y bebible de la casa de Eduardo Camerati.",
     "sugiere": "Pierna de cordero al horno, Cuscús con verduras asadas, Salchichas artesanales, Pisto manchego, Queso curado de oveja. Garnacha jugosa: cordero, verduras asadas y guisos mediterráneos."
+  },
+  {
+    "name": "Alchemy Parróne Malbec",
+    "winery": "Alchemy",
+    "image": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78661831/ALCHEMY_20PARRONE_20MALBEC.png?1783625081",
+    "url": "https://uptowine.cl/alchemy-parrone-malbec",
+    "price": 12990,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2019",
+        "cepa": "Malbec",
+        "valle": "Colchagua",
+        "grad": "14,1%",
+        "crianza": "Barrica (línea gran reserva Parróne)",
+        "nota": "Cereza madura, ciruelas ácidas, especias y tabaco. Alta concentración y madurez con frescor.",
+        "premios": "",
+        "revista": "https://online.fliphtml5.com/votjo/tdxk/"
+      },
+      {
+        "anada": "2018",
+        "cepa": "100% Malbec",
+        "valle": "Cachapoal",
+        "grad": "14,1%",
+        "crianza": "12 meses en barricas de roble francés (10% nuevas)",
+        "nota": "Cereza madura, ciruelas ácidas, especias y tabaco. En boca de cuerpo medio, fresco, con taninos suaves y un final prolongado.",
+        "premios": "",
+        "revista": ""
+      },
+      {
+        "anada": "2017",
+        "cepa": "100% Malbec",
+        "valle": "Cachapoal (Valle de Almahue)",
+        "grad": "",
+        "crianza": "",
+        "nota": "",
+        "premios": "93 pts Guía Vinau",
+        "revista": ""
+      },
+      {
+        "anada": "2016",
+        "cepa": "100% Malbec",
+        "valle": "Cachapoal (Valle de Almahue)",
+        "grad": "14,7%",
+        "crianza": "12 meses",
+        "nota": "Cereza madura, ciruelas ácidas, especias y tabaco. En boca de cuerpo medio, fresco, con taninos suaves y un final prolongado.",
+        "premios": "Oro Catad'Or 2019 · 90 pts La Cav",
+        "revista": ""
+      }
+    ],
+    "opina": "Malbec de Alchemy en Cachapoal: moras, violetas y un tanino jugoso, con el perfil frutal y cuidado de la casa. Redondo y goloso.",
+    "sugiere": "Asado argentino, Provoleta, Empanadas de carne, Milanesa a caballo, Queso sardo. Malbec frutal: parrilla, empanadas y quesos duros."
+  },
+  {
+    "name": "Alchemy Syrah",
+    "winery": "Alchemy",
+    "image": "https://cdnx.jumpseller.com/up-to-wine-chile/image/62688533/Alchemy_Syrah_2021.png?1745273999",
+    "url": "https://uptowine.cl/alchemy-syrah",
+    "price": 15900,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2019",
+        "cepa": "100% Syrah",
+        "valle": "Cachapoal",
+        "grad": "13,8%",
+        "crianza": "12 meses en barrica de roble francés",
+        "nota": "Color violáceo, aromas a moras, flores del bosque, especias y café. En boca de cuerpo medio, fresco, con taninos jugosos y final largo.",
+        "premios": "",
+        "revista": "https://online.fliphtml5.com/votjo/ksgw/"
+      },
+      {
+        "anada": "2018",
+        "cepa": "100% Syrah",
+        "valle": "Cachapoal (Valle de Almahue)",
+        "grad": "14%",
+        "crianza": "18 meses en huevos de cemento y Flextanks",
+        "nota": "Color rubí, con. En nariz cereza madura, ciruelas ácidas, especias y tabaco. En boca con cuerpo medio, fresco, con taninos suaves y un ﬁnal prolongado.",
+        "premios": "94 pts James Suckling",
+        "revista": ""
+      },
+      {
+        "anada": "2017",
+        "cepa": "Syrah",
+        "valle": "Cachapoal",
+        "grad": "13,8%",
+        "crianza": "12 meses",
+        "nota": "Color rubí, con. En nariz cereza madura, ciruelas ácidas, especias y tabaco. En boca con cuerpo medio, fresco, con taninos suaves y un ﬁnal prolongado.",
+        "premios": "Oro Catad'Or 2018",
+        "revista": ""
+      },
+      {
+        "anada": "2016",
+        "cepa": "100% Syrah",
+        "valle": "Colchagua",
+        "grad": "13,9%",
+        "crianza": "23 meses en barrica (4º uso)",
+        "nota": "Syrah de color violáceo intenso, con aromas a frutos negros, pimienta y especias. En boca fresco, con taninos suaves y buena persistencia.",
+        "premios": "Medalla Oro Catad'Or",
+        "revista": "https://online.fliphtml5.com/votjo/UTW-REVISTA---JULIO-2019/"
+      },
+      {
+        "anada": "2015",
+        "cepa": "100% Syrah",
+        "valle": "Cachapoal (Valle de Almahue)",
+        "grad": "13,8%",
+        "crianza": "12 meses",
+        "nota": "Vino robusto, con aroma de berries rojos y especias varias, sensación suave. En nariz cereza madura, ciruelas ácidas, especias y tabaco. En boca complementado con taninos elegantes.",
+        "premios": "94 pts James Suckling · 92 pts La Cav",
+        "revista": ""
+      }
+    ],
+    "opina": "Syrah de Alchemy desde Almahue: pimienta negra, fruta negra y flores, con crianza que le suma un fondo especiado. Sedoso y de buen volumen.",
+    "sugiere": "Costillar ahumado, Cordero al merkén, Hongos a la parrilla, Carne mechada, Queso azul. Syrah de fruta negra y café: ahumados, merkén y quesos azules."
   },
   {
     "name": "Algorta Family Reserve Cabernet Sauvignon",
@@ -308,7 +558,7 @@
         "revista": "https://online.fliphtml5.com/votjo/rmqt/"
       }
     ],
-    "opina": "La joya de Bla Wines —el proyecto de cuatro amigos en Colchagua (Arturo Hillers, Claudio Montecinos, Juan Grandjean y Matías Pérez) que entiende el vino como arte—: un ensamblaje premium de Carménère, Petit Verdot y Petite Sirah, con 30 meses de barrica y fermentación espontánea. Cassis, regaliz y pimentón maduro sobre taninos robustos y gran volumen. Complejo, elegante y de guarda; una botella que, como dice la casa, &#x27;susurra&#x27;.",
+    "opina": "La joya de Bla Wines —el proyecto de cuatro amigos en Colchagua (Arturo Hillers, Claudio Montecinos, Juan Grandjean y Matías Pérez) que entiende el vino como arte—: un ensamblaje premium de Carménère, Petit Verdot y Petite Sirah, con 30 meses de barrica y fermentación espontánea. Cassis, regaliz y pimentón maduro sobre taninos robustos y gran volumen. Complejo, elegante y de guarda; una botella que, como dice la casa, 'susurra'.",
     "sugiere": "Asado de tira grueso, Osobuco al vino tinto, Cordero patagónico, Estofado de jabalí, Queso azul intenso. Blend robusto y tánico (Carménère–Petit Verdot–Petite Sirah): carnes potentes, caza y quesos de carácter."
   },
   {
@@ -352,7 +602,7 @@
         "revista": "https://online.fliphtml5.com/votjo/isll/"
       }
     ],
-    "opina": "El otro Carménère de Bla Wines —el sereno—: Gran Reserva de Colchagua, rojo violáceo brillante, con mora, ciruela y frambuesa, pimiento rojo maduro y especias suaves, y una madera muy integrada (18 meses en barrica francesa de 4° y 5° uso) que aparece &#x27;como un susurro&#x27;. Boca sedosa, de taninos maduros y redondos, matiz herbal elegante y final jugoso. Una &#x27;respiración lenta y consciente&#x27;.",
+    "opina": "El otro Carménère de Bla Wines —el sereno—: Gran Reserva de Colchagua, rojo violáceo brillante, con mora, ciruela y frambuesa, pimiento rojo maduro y especias suaves, y una madera muy integrada (18 meses en barrica francesa de 4° y 5° uso) que aparece 'como un susurro'. Boca sedosa, de taninos maduros y redondos, matiz herbal elegante y final jugoso. Una 'respiración lenta y consciente'.",
     "sugiere": "Costillar de cerdo a la BBQ, Cazuela de pava, Lentejas con chorizo, Pimentón relleno de carne, Queso gouda. Carménère especiado: guisos de invierno, cerdo a la brasa y pimientos."
   },
   {
@@ -396,7 +646,7 @@
         "revista": "https://online.fliphtml5.com/votjo/isll/"
       }
     ],
-    "opina": "El otro Carménère de Bla Wines —el sereno—: Gran Reserva de Colchagua, rojo violáceo brillante, con mora, ciruela y frambuesa, pimiento rojo maduro y especias suaves, y una madera muy integrada (18 meses en barrica francesa de 4° y 5° uso) que aparece &#x27;como un susurro&#x27;. Boca sedosa, de taninos maduros y redondos, matiz herbal elegante y final jugoso. Una &#x27;respiración lenta y consciente&#x27;.",
+    "opina": "El otro Carménère de Bla Wines —el sereno—: Gran Reserva de Colchagua, rojo violáceo brillante, con mora, ciruela y frambuesa, pimiento rojo maduro y especias suaves, y una madera muy integrada (18 meses en barrica francesa de 4° y 5° uso) que aparece 'como un susurro'. Boca sedosa, de taninos maduros y redondos, matiz herbal elegante y final jugoso. Una 'respiración lenta y consciente'.",
     "sugiere": "Costillar de cerdo a la BBQ, Cazuela de pava, Lentejas con chorizo, Pimentón relleno de carne, Queso gouda. Carménère especiado: guisos de invierno, cerdo a la brasa y pimientos."
   },
   {
@@ -418,8 +668,50 @@
         "revista": "https://online.fliphtml5.com/votjo/isll/"
       }
     ],
-    "opina": "Yawar, uno de los dos Carménère de Bla Wines —el visceral—: desde el Valle de Cachapoal, un rojo cereza profundo y denso, con mora y guinda madura, vainilla, clavo, pimienta y cacao, más capas de toffee y café de sus 18 meses en roble de primer y segundo uso. Amplio y envolvente, de taninos presentes y final tostado. Fuerza sin perder elegancia: &#x27;un latido que viene desde lo profundo&#x27;.",
+    "opina": "Yawar, uno de los dos Carménère de Bla Wines —el visceral—: desde el Valle de Cachapoal, un rojo cereza profundo y denso, con mora y guinda madura, vainilla, clavo, pimienta y cacao, más capas de toffee y café de sus 18 meses en roble de primer y segundo uso. Amplio y envolvente, de taninos presentes y final tostado. Fuerza sin perder elegancia: 'un latido que viene desde lo profundo'.",
     "sugiere": "Wagyu a la parrilla, Cordero confitado, Risotto de setas, Costillar braseado 8 horas, Queso ahumado. Carménère premium de guarda: carnes de cocción lenta y platos de fondo intenso."
+  },
+  {
+    "name": "Bodegas Re Chardonnoir",
+    "winery": "Bodegas RE",
+    "image": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78664771/BODEGAS_20RE_20CHARDONNOIR.png?1783632133",
+    "url": "https://uptowine.cl/bodegas-re-chardonnoir",
+    "price": 18990,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2024",
+        "cepa": "Chardonnay, Pinot Noir",
+        "valle": "Valle de Casablanca",
+        "grad": "",
+        "crianza": "",
+        "nota": "Naranjo suave. En nariz, frutales más bien neutrales, suaves especias. En boca, jugosa, cuidada, con cierto agarre. Compacta.",
+        "premios": "93 pts La Cav",
+        "revista": ""
+      },
+      {
+        "anada": "2021",
+        "cepa": "50% Chardonnay y 50% Pinot Noir (cofermentados)",
+        "valle": "Casablanca",
+        "grad": "12,5%",
+        "crianza": "6 meses en barrica francesa de 500 L (8 años de uso) y 2 años en botella; cofermentación en tinajas de greda y cuarzo de 180 años",
+        "nota": "Claro y delicado color rojo ciruela. Salvaje y refinado; delicados tonos de frutilla y cassis, notas de enología; puede ser suave como flor y salvaje como tierra húmeda. Fino, con taninos de seda y acidez de frutillas; retrogusto que invita a variadas comidas.",
+        "premios": "93 pts La Cav · 92 pts Descorchados · 93 pts Tim Atkin",
+        "revista": "https://online.fliphtml5.com/votjo/sgvl/"
+      },
+      {
+        "anada": "2020",
+        "cepa": "50% Chardonnay, 50% Pinot Noir",
+        "valle": "Casablanca",
+        "grad": "12,5%",
+        "crianza": "6 meses en barrica francesa de 500 L (8 años de uso) y 2 años en botella; cofermentación en tinajas de greda y cuarzo de 180 años",
+        "nota": "Claro y delicado color rojo ciruela. Salvaje y refinado; delicados tonos de frutilla y cassis, notas de enología; puede ser suave como flor y salvaje como tierra húmeda. Fino, con taninos de seda y acidez de frutillas; retrogusto que invita a variadas comidas.",
+        "premios": "",
+        "revista": "https://online.fliphtml5.com/votjo/sgvl/"
+      }
+    ],
+    "opina": "Ensamblaje de 50% Chardonnay y 50% Pinot Noir (cofermentados) de Casablanca: la cremosidad del Chardonnay con la fruta roja y elegancia del Pinot Noir. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas. Con 6 meses en barrica francesa de 500 L (8 años de uso) y 2 años en botella.",
+    "sugiere": "Pato confitado, Tabla de charcutería, Atún sellado, Quiche lorraine, Risotto de hongos. Tinto ligero y fresco: salmón, hongos, aves y charcutería."
   },
   {
     "name": "Bodegas RE Maulino Dry Farmer",
@@ -466,6 +758,28 @@
     "sugiere": "Lomo vetado a la parrilla, Cordero al horno con romero, Anticuchos, Bife ancho a la parrilla, Queso manchego curado. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
   },
   {
+    "name": "Bodegas Re Syranoir",
+    "winery": "Bodegas RE",
+    "image": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78664875/BODEGAS_20RE_20SYRANOIR.png?1783632376",
+    "url": "https://uptowine.cl/bodegas-re-syranoir",
+    "price": 18900,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2023",
+        "cepa": "70% Syrah y 30% Pinot Noir",
+        "valle": "Casablanca",
+        "grad": "14%",
+        "crianza": "3 meses en cuba y 1 año en fudre de 2.000 L",
+        "nota": "Intenso y profundo rubí. Vainilla, especias blancas, higos e incluso notas a violetas. Juventud y frescor casablanquino; frutos rojos frescos, cuerpo distinguido, refinado, extenso y elegante.",
+        "premios": "92 pts La Cav",
+        "revista": "https://online.fliphtml5.com/votjo/buvo/"
+      }
+    ],
+    "opina": "Syranoir de Bodegas Re: ensamblaje de 70% Syrah y 30% Pinot Noir de Casablanca, cofermentado. La pimienta y fruta negra de la Syrah con la fruta roja y elegancia del Pinot Noir; un tinto fresco, refinado y elegante, más complejo que la suma de sus cepas.",
+    "sugiere": "Costillar de vacuno a la BBQ, Anticuchos, Lomo vetado a la parrilla, Berenjenas a la parmesana, Queso manchego curado. Tinto de fruta y especia, estructurado: carnes a la brasa y quesos de carácter."
+  },
+  {
     "name": "Bodegas Re Vigno Carigan",
     "winery": "Bodegas RE",
     "image": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78666294/BODEGAS_20RE_20VIGNO_20CARIGNAN.png?1783636347",
@@ -479,8 +793,18 @@
         "valle": "Valle del Maule",
         "grad": "14,5%",
         "crianza": "16 meses en barricas usadas de 4 y 5 años",
-        "nota": "Rojo violeta profundo. En nariz, dulce, violeta, notas a moras, hojas de té, pimienta fresca, pimiento morrón. En boca, maduro, tánico, de cuerpo medio, rugoso.",
+        "nota": "Rojo violeta profundo. En nariz, dulce, violeta, notas a moras, hojas de té, pimienta fresca y pimiento morrón. En boca, maduro, tánico, de cuerpo medio, rugoso.",
         "premios": "91 pts La Cav",
+        "revista": ""
+      },
+      {
+        "anada": "2018",
+        "cepa": "Carignan (VIGNO)",
+        "valle": "Valle del Maule",
+        "grad": "",
+        "crianza": "De viñas viejas de secano; guarda prolongada según la certificación VIGNO (mínimo 24 meses)",
+        "nota": "",
+        "premios": "",
         "revista": ""
       }
     ],
@@ -523,7 +847,7 @@
         "valle": "Cachapoal Andes",
         "grad": "14%",
         "crianza": "Crianza mínima de 6 meses (10% en barricas de tercer uso) y 6 meses en botella",
-        "nota": "Color rubí violáceo. La. En nariz es fresca con aromas a frutos rojos y negros como cereza, ciruela, frutos del bosque. Un toque floral. En boca un vino jugoso con taninos suaves y cuerpo medio. El retrogusto es balanceado con notas de fruta roja dulce. Este vino es fácil de tomar y es una excelente opción para compartir.",
+        "nota": "Color rubí violáceo. En nariz es fresco, con aromas a frutos rojos y negros como cereza, ciruela y frutos del bosque, y un toque floral. En boca es un vino jugoso, con taninos suaves y cuerpo medio; retrogusto balanceado con notas de fruta roja dulce. Fácil de tomar y una excelente opción para compartir.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/rmqt/"
       },
@@ -533,8 +857,8 @@
         "valle": "Alto Cachapoal",
         "grad": "14%",
         "crianza": "90% 6 meses en cuba de acero y 10% 6 meses en barrica usada de tercer uso; 6 meses de guarda en botella",
-        "nota": "En nariz frescos, dominados por frutas rojas y negras como cereza madura, ciruela y moras, acompañadas de un matiz floral y sutiles notas de cuero que aportan complejidad. En boca : Entrada jugosa, cuerpo medio, con taninos sedosos y bien integrados. Fruta roja madura y un leve dejo especiado y terroso.",
-        "premios": "Oro - Catad&#x27;Or 2020 · 92 pts La Cav",
+        "nota": "En nariz, frescos aromas dominados por frutas rojas y negras como cereza madura, ciruela y moras, con un matiz floral y sutiles notas de cuero que aportan complejidad. En boca, entrada jugosa, cuerpo medio, con taninos sedosos y bien integrados; fruta roja madura y un leve dejo especiado y terroso.",
+        "premios": "Oro - Catad'Or 2020 · 92 pts La Cav",
         "revista": "https://online.fliphtml5.com/votjo/sgvl/"
       },
       {
@@ -543,8 +867,8 @@
         "valle": "Rapel",
         "grad": "14%",
         "crianza": "6 meses de guarda",
-        "nota": "Rojo rubí con tintes granates. En nariz, grosellas rojas, licor de moras, mentol, regaliz, cuero, tabaco, rosas y café tostado. En boca, de acidez media-alta, taninos suaves y bien integrados.",
-        "premios": "Oro - Catad&#x27;Or",
+        "nota": "Rojo rubí con tintes granates. En nariz, grosellas rojas, licor de moras, mentol, regaliz, cuero, tabaco, rosas y café tostado. En boca, de acidez media-alta, con taninos suaves y bien integrados.",
+        "premios": "Oro - Catad'Or",
         "revista": ""
       }
     ],
@@ -588,7 +912,7 @@
         "grad": "14%",
         "crianza": "Tanques de acero inoxidable por 12 meses; guarda en botella mínima de 12 meses",
         "nota": "En nariz frescos, dominados por frutas rojas y negras como cereza madura, ciruela y moras, acompañadas de un matiz floral y sutiles notas de cuero que aportan complejidad. En boca : Entrada jugosa, cuerpo medio, con taninos sedosos y bien integrados. Fruta roja madura y un leve dejo especiado y terroso.",
-        "premios": "Oro Catad&#x27;Or 2022",
+        "premios": "Oro Catad'Or 2022",
         "revista": "https://online.fliphtml5.com/votjo/lyjy/"
       }
     ],
@@ -664,7 +988,7 @@
         "grad": "14,9%",
         "crianza": "100% barricas francesas por 14 meses (20% nuevas, resto de 2do a 4to uso)",
         "nota": "",
-        "premios": "Gran Medalla de Oro y Mejor Vino de Emprendedor - Catad&#x27;Or World Wine Award | Gran Oro - Catad&#x27;Or 2018 · 92 pts Descorchados",
+        "premios": "Gran Medalla de Oro y Mejor Vino de Emprendedor - Catad'Or World Wine Award | Gran Oro - Catad'Or 2018 · 92 pts Descorchados",
         "revista": "https://online.fliphtml5.com/votjo/aarb/"
       }
     ],
@@ -712,17 +1036,37 @@
     "available": false,
     "anadas": [
       {
+        "anada": "2023",
+        "cepa": "100% Carménère",
+        "valle": "Almahue, Cachapoal",
+        "grad": "14,3%",
+        "crianza": "14 meses en barricas francesas (25% nuevas); maceración prefermentativa de 7 días y posfermentativa de 14 días, con maloláctica en barrica",
+        "nota": "Intenso color carmín profundo, de reflejos púrpura. En nariz, berries maduros como arándanos, moras y ciruelas, flores de violeta y suaves especias, con notas de vainilla, cacao y un toque tostado del roble francés. En boca, redonda, jugosa y seductora, con taninos aterciopelados, acidez fresca y un final largo.",
+        "premios": "93 pts CAV · Oro Catad'Or",
+        "revista": ""
+      },
+      {
+        "anada": "2021",
+        "cepa": "100% Carménère",
+        "valle": "Cachapoal",
+        "grad": "14,3%",
+        "crianza": "12 meses en barrica de roble francés",
+        "nota": "",
+        "premios": "Oro Catad'Or",
+        "revista": ""
+      },
+      {
         "anada": "2017",
-        "cepa": "Carménère (línea Premium)",
+        "cepa": "100% Carménère",
         "valle": "Cachapoal",
         "grad": "14%",
-        "crianza": "Línea",
-        "nota": "Rojo violeta intenso. Nariz madura, perfumada, cerezas, chocolate amargo, guindas licorosas. Maduro, de cuerpo medio, sabroso.",
+        "crianza": "",
+        "nota": "Rojo violeta intenso. Nariz madura y perfumada: cerezas, chocolate amargo y guindas licorosas. Maduro, de cuerpo medio y sabroso.",
         "premios": "93 pts La Cav",
         "revista": "https://online.fliphtml5.com/votjo/isll/"
       }
     ],
-    "opina": "Carménère de Cachapoal: pimentón, especias dulces y frutos rojos, con taninos amables. Con línea.",
+    "opina": "La Confundida es el Carménère de autor de Marcela Chandía (Chile diVino), desde parras de 26 años en el Valle de Almahue (Cachapoal). Su nombre rinde homenaje a la cepa que por décadas fue confundida con la Merlot. En copa, carmín profundo, berries maduros, violetas y especias dulces, con taninos aterciopelados y final largo.",
     "sugiere": "Bife ancho a la parrilla, Osobuco braseado al vino tinto, Cordero al horno con romero, Entrecot a la pimienta, Anticuchos. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
   },
   {
@@ -739,7 +1083,7 @@
         "valle": "Rapel",
         "grad": "14,2%",
         "crianza": "15 meses en barrica de roble francés usada",
-        "nota": "Violeta con ribetes púrpura. En nariz, mezcla lo mejor de ambas cepas, fruta roja como las guindas y manzana roja, levemente floral y fruta negra como las moras y arándanos. Color: Púrpura y ribetes rubí de intensidad media alta. Aromas: Predomina la ciruela y cerezas rojas, grosella negra, moras, ciruela negra, complementado con aromas a cedro y grafito. Boca: Es un vino seco, cálido, balanceado, de tanino amable, acidez media a media alta, intensidad media alta y gran persistencia.",
+        "nota": "Púrpura con ribetes rubí de intensidad media alta. En nariz predomina la ciruela y cerezas rojas, grosella negra, moras, ciruela negra, con aromas a cedro y grafito. En boca es un vino seco, cálido, balanceado, de tanino amable, acidez media a media alta, intensidad media alta y gran persistencia.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/svrf/"
       },
@@ -749,7 +1093,7 @@
         "valle": "Rapel",
         "grad": "14,2%",
         "crianza": "14 meses en barricas de roble francés de 2º uso",
-        "nota": "Violeta con ribetes púrpura. En nariz, mezcla lo mejor de ambas cepas, fruta roja como las guindas y manzana roja, levemente floral y fruta negra como las moras y arándanos. En boca, un vino fresco equilibrado, tanino sedoso, consecuente con la nariz y con persistencia media alta.",
+        "nota": "Violeta con ribetes púrpura. En nariz, fruta roja como guindas y manzana roja, levemente floral, y fruta negra como moras y arándanos. En boca, un vino fresco equilibrado, tanino sedoso, consecuente con la nariz y con persistencia media alta.",
         "premios": "",
         "revista": ""
       }
@@ -771,7 +1115,7 @@
         "valle": "Colchagua",
         "grad": "14,5%",
         "crianza": "15 meses en barricas de roble francés de 2do uso; 20% racimo completo",
-        "nota": "Rubí de intensidad media con ribetes rubí claros. En nariz : Pimienta blanca, cerezas rojas, frutilla fresca, frambuesa, flores secas, grafito, cedro, anís, notas de vainilla y chicle de fruta. En boca : Es un vino seco, jugoso, fresco, y con cierta calidez. De tanino levemente rugoso, acidez media alta, persistencia e intensidad media alta. Un vino que se bebe fácil y te invita a una nueva copa.",
+        "nota": "Rubí de intensidad media con ribetes claros. En nariz, pimienta blanca, cerezas rojas, frutilla fresca, frambuesa, flores secas, grafito, cedro, anís y notas de vainilla. En boca es un vino seco, jugoso, fresco y con cierta calidez; tanino levemente rugoso, acidez media alta, persistencia e intensidad media alta. Se bebe fácil e invita a una nueva copa.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/snzp/"
       },
@@ -781,7 +1125,7 @@
         "valle": "Colchagua",
         "grad": "14,2%",
         "crianza": "15 meses en barricas de roble francés de 4to uso",
-        "nota": "Rubí de intensidad media con ribetes rubí claros. En nariz : Pimienta blanca, cerezas rojas, frutilla fresca, frambuesa, flores secas, grafito, cedro, anís, notas de vainilla y chicle de fruta. En boca : Es un vino seco, jugoso, fresco, y con cierta calidez. De tanino levemente rugoso, acidez media alta, persistencia e intensidad media alta. Un vino que se bebe fácil y te invita a una nueva copa.",
+        "nota": "Rubí de intensidad media con ribetes claros. En nariz, pimienta blanca, cerezas rojas, frutilla fresca, frambuesa, flores secas, grafito, cedro, anís y notas de vainilla. En boca es un vino seco, jugoso, fresco y con cierta calidez; tanino levemente rugoso, acidez media alta, persistencia e intensidad media alta.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/lxwf/"
       },
@@ -791,7 +1135,7 @@
         "valle": "Colchagua",
         "grad": "14,2%",
         "crianza": "14 meses en barricas de roble francés de 2º uso",
-        "nota": "Violeta con ribetes púrpura. En nariz, mezcla lo mejor de ambas cepas, fruta roja como las guindas y manzana roja, levemente floral y fruta negra como las moras y arándanos. En boca, un vino fresco equilibrado, tanino sedoso, consecuente con la nariz y con persistencia media alta.",
+        "nota": "Rubí con ribetes claros. En nariz, fruta roja como guindas y frambuesa, levemente floral. En boca, fresco y equilibrado, tanino sedoso, de persistencia media alta.",
         "premios": "",
         "revista": ""
       }
@@ -813,7 +1157,7 @@
         "valle": "Cachapoal",
         "grad": "14,2%",
         "crianza": "15 meses en barricas de roble francés de 2do uso",
-        "nota": "Color: Púrpura de intensidad alta y ribetes morados. En nariz : Grosella negra, moras, arándanos, ciruela negra, cerezas negras, higos, notas animales, vainilla, tostado y cedro. En boca : Es un vino seco, cálido, de acidez media alta, tanino pulido y aterciopelado, estructurado, balanceado de intensidad media alta y largo final.",
+        "nota": "Púrpura de intensidad alta y ribetes morados. En nariz, grosella negra, moras, arándanos, ciruela negra, cerezas negras, higos, notas animales, vainilla, tostado y cedro. En boca es un vino seco, cálido, de acidez media alta, tanino pulido y aterciopelado, estructurado, balanceado, de intensidad media alta y largo final.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/snzp/"
       },
@@ -823,7 +1167,7 @@
         "valle": "Cachapoal",
         "grad": "14,2%",
         "crianza": "15 meses en barrica de roble francés usada",
-        "nota": "Color: Púrpura de intensidad alta y ribetes morados. En nariz : Grosella negra, moras, arándanos, ciruela negra, cerezas negras, higos, notas animales, vainilla, tostado y cedro. En boca : Es un vino seco, cálido, de acidez media alta, tanino pulido y aterciopelado, estructurado, balanceado de intensidad media alta y largo final.",
+        "nota": "Púrpura de intensidad alta y ribetes morados. En nariz, grosella negra, moras, arándanos, ciruela negra, cerezas negras, higos, notas animales, vainilla, tostado y cedro. En boca es un vino seco, cálido, de acidez media alta, tanino pulido y aterciopelado, estructurado, balanceado, de intensidad media alta y largo final.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/lxwf/"
       },
@@ -833,12 +1177,12 @@
         "valle": "Rapel",
         "grad": "14,2%",
         "crianza": "14 meses en barricas de roble francés de 2º uso",
-        "nota": "Violeta con ribetes púrpura. En nariz, presenta notas a fruta negra como las moras y arándanos, notas “animales” como cuero y carne asada, y notas terrosas y florales. En boca, un vino con cuerpo, equilibrado, tanino sedoso, consecuente con la nariz y con persistencia alta.",
+        "nota": "Violeta con ribetes púrpura. En nariz, notas a fruta negra como moras y arándanos, notas animales como cuero y carne asada, y notas terrosas y florales. En boca, un vino con cuerpo, equilibrado, tanino sedoso, consecuente con la nariz y con persistencia alta.",
         "premios": "94 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Syrah de Cachapoal: pimienta negra, fruta negra y un fondo especiado. Con 15 meses en barricas de roble francés de 2do uso.",
+    "opina": "Syrah de Cachapoal: pimienta negra, fruta negra y un fondo especiado, con notas animales y tostadas de la barrica. Con 15 meses en barricas de roble francés de 2do uso.",
     "sugiere": "Queso manchego curado, Ragú de cordero con pappardelle, Lomo vetado a la parrilla, Costillar de vacuno a la BBQ, Cordero al horno con romero. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
   },
   {
@@ -899,7 +1243,7 @@
         "valle": "Colchagua",
         "grad": "13,5%",
         "crianza": "Levaduras nativas y fermentación espontánea; 91% en cuba de acero y 9% en barrica de roble francés",
-        "nota": "Fruta fresca como ciruelas, cerezas y notas especiadas que complementan el perfil aromático del vino. En nariz, ciruelas y frutas negras, terrosidad, cuero, alquitrán. En boca muestra tensión y estructura, destacando la persistencia, frescura, tanino sedoso pero presente y largo final en boca.",
+        "nota": "En nariz, ciruelas y frutas negras, terrosidad, cuero y alquitrán, con notas especiadas. En boca muestra tensión y estructura, destacando la persistencia, la frescura, el tanino sedoso pero presente y un largo final.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/lyjy/"
       },
@@ -909,7 +1253,7 @@
         "valle": "Colchagua",
         "grad": "13,5%",
         "crianza": "Acero inoxidable",
-        "nota": "Fruta fresca como ciruelas, cerezas y notas especiadas que complementan el perfil aromático del vino. En nariz, ciruelas y frutas negras, terrosidad, cuero, alquitrán. Rojo violeta intenso. Nariz a mora, cereza, chocolate, hojas de tabaco y guindas licorosas. En boca es jugoso, de acidez y tanino medio.",
+        "nota": "Rojo violeta intenso. Nariz a mora, cereza, chocolate, hojas de tabaco y guindas licorosas. En boca es jugoso, de acidez y tanino medio.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/fjse/"
       },
@@ -919,12 +1263,12 @@
         "valle": "Colchagua",
         "grad": "13,8%",
         "crianza": "12 meses en tanque de acero inoxidable",
-        "nota": "Tinto sin madera y sin filtrar, otro lanzamiento prometedor de Mauricio Veloso. Equilibrado, refrescante pero estructurado, con una acidez fresca y un montón de perfume. 92 puntos Descorchados.",
-        "premios": "",
+        "nota": "Tinto sin madera y sin filtrar. Equilibrado, refrescante pero estructurado, con una acidez fresca y un montón de perfume.",
+        "premios": "92 pts Descorchados",
         "revista": "https://online.fliphtml5.com/votjo/06---UTW-REVISTA---DICIEMBRE-2018/"
       }
     ],
-    "opina": "Carignan de Colchagua: fruta roja de secano, alta acidez y carácter rústico. Con levaduras nativas y fermentación espontánea; 91% en cuba de acero y 9% en barrica de.",
+    "opina": "Carignan de Colchagua: fruta roja de secano, alta acidez y carácter rústico. Con levaduras nativas y fermentación espontánea; 91% en cuba de acero y 9% en barrica.",
     "sugiere": "Osobuco braseado al vino tinto, Entrecot a la pimienta, Bife ancho a la parrilla, Ragú de cordero con pappardelle, Queso manchego curado. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
   },
   {
@@ -963,7 +1307,7 @@
         "valle": "Colchagua",
         "grad": "12%",
         "crianza": "87% en acero y 13% en roble francés usado",
-        "nota": "Amarillo pajizo evolucionado. Aromas a miel, frutas y flores blancas, frutos secos. Amarillo pajizo evolucionado. Aromas a miel, frutas y flores blancas, frutos secos. Acidez media alta.",
+        "nota": "Amarillo pajizo evolucionado. Aromas a miel, frutas y flores blancas, frutos secos. Acidez media alta.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/UTW-CATALOGO---MAR26/"
       },
@@ -973,7 +1317,7 @@
         "valle": "Colchagua",
         "grad": "13,8%",
         "crianza": "Acero inoxidable",
-        "nota": "Color amarillo pajizo. En nariz frutas blancas, flores de jazmín, alquitrán y petróleo. En boca es redondo, ampuloso y con acidez media.",
+        "nota": "Color amarillo pajizo. En nariz, frutas blancas, flores de jazmín, alquitrán y petróleo. En boca es redondo, ampuloso y con acidez media.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/fjse/"
       }
@@ -1049,17 +1393,17 @@
         "valle": "Itata",
         "grad": "13%",
         "crianza": "Fermentado en tanques de acero inoxidables y posteriormente guardado en barricas francesas de diversos usos",
-        "nota": "Dorado brillante. En nariz el vino muestra un lado más hacia la fruta roja del Cabernet Sauvignon. En boca, es un vino estructurado pero amable con el paladar, con una concentración de sabores y aromas y un final largo que se balancea perfectamente con la acidez y los taninos.",
+        "nota": "Dorado brillante. En nariz, fruta blanca, cítricos y notas florales de moscatel. En boca es un vino estructurado pero amable con el paladar, con concentración de sabores y aromas y un final largo que se balancea con la acidez.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/UTW-CATALOGO---ENE26/"
       },
       {
         "anada": "2023",
-        "cepa": "MA, Chardonnay",
+        "cepa": "Moscatel, Chardonnay",
         "valle": "Valles de Itata y Casablanca",
         "grad": "",
         "crianza": "",
-        "nota": "Pajizo. En nariz, a miel, piña, notas florales, herbal. En boca, es jugoso, de cuerpo medio, rugoso. De rica acidez.",
+        "nota": "Pajizo. En nariz, a miel, piña, notas florales, herbal. En boca es jugoso, de cuerpo medio, rugoso. De rica acidez.",
         "premios": "92 pts La Cav",
         "revista": ""
       },
@@ -1074,7 +1418,7 @@
         "revista": "https://online.fliphtml5.com/votjo/UTW-CATALOGO---ENE26/"
       }
     ],
-    "opina": "Ensamblaje de Ensamblaje blanco: Moscatel, Chardonnay de Itata: el perfume floral de la Moscatel con la cremosidad del Chardonnay. El conjunto da un blanco más complejo y equilibrado que la suma de sus cepas. Con fermentado en tanques de acero inoxidables y posteriormente guardado en barricas.",
+    "opina": "Ensamblaje blanco de Moscatel y Chardonnay de Itata: el perfume floral de la Moscatel con la cremosidad del Chardonnay. El conjunto da un blanco más complejo y equilibrado que la suma de sus cepas. Fermentado en acero inoxidable y guardado en barricas.",
     "sugiere": "Salmón a la crema, Queso brie, Congrio a la mantequilla, Curry suave de pollo, Fetuccine Alfredo. Blanco con cuerpo: pescados en salsa, mariscos gratinados y aves cremosas."
   },
   {
@@ -1409,7 +1753,7 @@
         "valle": "Colchagua",
         "grad": "13,5%",
         "crianza": "10 meses en Flextank y barricas usadas",
-        "nota": "Rojo cereza medio con toques violetas. En nariz, fruta roja madura, cerezas, toques confitados, y algo floral. En boca, jugosa, tersa, de media profundidad. Frutal.",
+        "nota": "Rojo cereza medio con toques violetas. En nariz, fruta roja madura, cerezas, toques confitados y algo floral. En boca, jugoso, terso, de media profundidad. Frutal.",
         "premios": "92 pts La Cav",
         "revista": "https://online.fliphtml5.com/votjo/lmnm/"
       },
@@ -1419,7 +1763,7 @@
         "valle": "Colchagua",
         "grad": "13,5%",
         "crianza": "60% en barricas usadas por 6 meses",
-        "nota": "Rojo cereza medio con toques violetas. En nariz, fruta roja madura, cerezas, toques confitados, y algo floral. Este vino tiene un color profundo, una.",
+        "nota": "Rojo cereza medio con toques violetas. En nariz, fruta roja madura, cerezas, toques confitados y algo floral. De color profundo.",
         "premios": "91 pts La Cav · 91 pts Parker",
         "revista": ""
       }
@@ -1447,26 +1791,26 @@
       },
       {
         "anada": "2020",
-        "cepa": "GR, Syrah, MO, RO",
-        "valle": "Valle de Colchagua",
+        "cepa": "Grenache, Syrah, Mourvèdre, Roussanne",
+        "valle": "Colchagua",
         "grad": "",
-        "crianza": "24 meses barricas 4º uso",
-        "nota": "estructura y taninos firmes pero redondos a la mezcla. En boca, notas a vainilla y frutos negros. Acidez media. Cuerpo medio. Color rojo cereza oscuro. En boca, notas a vainilla y frutos negros. Acidez media. Cuerpo medio. Color rojo cereza oscuro.",
+        "crianza": "24 meses en barricas de 4º uso",
+        "nota": "Color rojo cereza oscuro. En boca, notas a vainilla y frutos negros, con estructura y taninos firmes pero redondos. Acidez media, cuerpo medio.",
         "premios": "92 pts La Cav",
         "revista": ""
       },
       {
         "anada": "2017",
-        "cepa": "GR, Syrah, MO, RO",
+        "cepa": "Grenache, Syrah, Mourvèdre, Roussanne",
         "valle": "Colchagua",
         "grad": "",
-        "crianza": "24 meses barricas 4º uso",
-        "nota": "estructura y taninos firmes pero redondos a la mezcla. En boca, notas a vainilla y frutos negros. Acidez media. Cuerpo medio. Color rojo cereza oscuro. Intensidad media a media +, en nariz presenta hojas de té, grafito, frutos negros, con algo de vainilla y caramelo, complejo de varias capas. Es de tanino rugoso, largo, con buena concentración que da sensación de buen grosor en boca.",
+        "crianza": "24 meses en barricas de 4º uso",
+        "nota": "Intensidad media a media+. En nariz, hojas de té, grafito y frutos negros, con algo de vainilla y caramelo; complejo, de varias capas. Tanino rugoso y largo, con buena concentración y sensación de buen grosor en boca.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/ecnr/"
       }
     ],
-    "opina": "Ensamblaje de 40% Grenache, 40% Syrah, 10% Mourvèdre, 8% Cinsault, 2% Roussanne de Colchagua: la fruta roja golosa de la Garnacha, la pimienta y la fruta negra de la Syrah y el cuerpo silvestre del Mourvèdre. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas. Con cofermentación de cinco cepas, 10 meses en cuba de hormigón.",
+    "opina": "Ensamblaje GSM+ de Colchagua: la fruta roja golosa de la Garnacha, la pimienta y la fruta negra de la Syrah y el cuerpo silvestre del Mourvèdre. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas. Con cofermentación de cinco cepas, 10 meses en cuba de hormigón.",
     "sugiere": "Entrecot a la pimienta, Bife ancho a la parrilla, Lomo vetado a la parrilla, Cordero al horno con romero, Costillar de vacuno a la BBQ. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
   },
   {
@@ -1483,7 +1827,7 @@
         "valle": "Colchagua",
         "grad": "14%",
         "crianza": "11 meses en barricas usadas y flextanks",
-        "nota": "Rojo cereza medio con toques violetas. En nariz, fruta roja madura, cerezas, toques confitados, y algo floral. En boca, jugosa, tersa, de media profundidad. Frutal.",
+        "nota": "Rojo cereza medio con toques violetas. En nariz, fruta roja madura, cerezas, toques confitados y algo floral. En boca, jugoso, terso, de media profundidad. Frutal.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/amfr/"
       },
@@ -1493,7 +1837,7 @@
         "valle": "Rapel",
         "grad": "14,2%",
         "crianza": "14 meses en barricas de roble francés de 2do uso",
-        "nota": "Increible, muy buena estructura, volumen en boca, con taninos firmes pero suaves, y notas de frambuesa y cereza. Vino jugoso, fresco y ligero. En boca limpio, seco, de acidez media.",
+        "nota": "Increíble estructura y volumen en boca, con taninos firmes pero suaves y notas de frambuesa y cereza. Vino jugoso, fresco y ligero; en boca limpio, seco, de acidez media.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/wbqx/"
       },
@@ -1503,7 +1847,7 @@
         "valle": "Pumanque, Colchagua",
         "grad": "13,5%",
         "crianza": "14 meses en barricas de roble francés de 2do uso",
-        "nota": "Increible, muy buena estructura, volumen en boca, con taninos firmes pero suaves, y notas de frambuesa y cereza. En boca, con taninos firmes pero suaves, y notas de frambuesa y cereza.",
+        "nota": "Muy buena estructura y volumen en boca, con taninos firmes pero suaves y notas de frambuesa y cereza.",
         "premios": "92 pts La Cav",
         "revista": ""
       }
@@ -1569,7 +1913,7 @@
         "valle": "Colchagua",
         "grad": "",
         "crianza": "Chardonnay de autor, elegante y salino",
-        "nota": "Amarillo pálido brillante. Cítricos, mineralidad, notas florales. Elegante y salino, con estructura y buen volumen; final persistente.",
+        "nota": "Amarillo pálido brillante. Cítricos, mineralidad y notas florales. Elegante y salino, con estructura y buen volumen; final persistente.",
         "premios": "93 pts Alistair Cooper",
         "revista": "https://online.fliphtml5.com/votjo/micu/"
       },
@@ -1579,12 +1923,12 @@
         "valle": "Santa Ana, Colchagua",
         "grad": "13,5%",
         "crianza": "15 meses: 60% en barricas de cuarto uso y 40% en estanque de concreto. Sin fermentación maloláctica",
-        "nota": "Amarillo pálido brillante. En nariz hay notas minerales, cítricas y de duraznos maduros, además de sutiles notas de toffee y frutos secos aportadas por la guarda en barrica. En boca es equilibrado, con las notas frutales en armonía y buena frescura.",
+        "nota": "Amarillo pálido brillante. En nariz, notas minerales, cítricas y de duraznos maduros, con sutiles notas de toffee y frutos secos aportadas por la guarda en barrica. En boca es equilibrado, con las notas frutales en armonía y buena frescura.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/micu/"
       }
     ],
-    "opina": "Chardonnay de Colchagua: fruta blanca, notas cremosas y volumen. Con chardonnay de autor, elegante y salino.",
+    "opina": "Chardonnay de Colchagua: fruta blanca, notas cremosas y volumen. Chardonnay de autor, elegante y salino.",
     "sugiere": "Pavo al horno, Risotto de camarones, Curry suave de pollo, Fetuccine Alfredo, Pollo al limón con hierbas. Blanco con cuerpo: pescados en salsa, mariscos gratinados y aves cremosas."
   },
   {
@@ -1601,8 +1945,8 @@
         "valle": "Colchagua",
         "grad": "14,5%",
         "crianza": "30% en barricas de roble francés de 2do, 3er y 4to uso y 70% en cubas de concreto, durante 14 meses",
-        "nota": "Rojo rubí. Frutos rojos como frambuesas frescas y notas de cassis. Elegante, de buena estructura, largo y persistente; taninos suaves y buena acidez que dan buena capacidad de guarda.",
-        "premios": "Oro - Catad&#x27;Or 2023",
+        "nota": "Rojo rubí. Frutos rojos como frambuesas frescas y notas de cassis. Elegante, de buena estructura, largo y persistente; taninos suaves y buena acidez que le dan capacidad de guarda.",
+        "premios": "Oro - Catad'Or 2023",
         "revista": "https://online.fliphtml5.com/votjo/uqzf/"
       },
       {
@@ -1610,9 +1954,9 @@
         "cepa": "Cabernet Sauvignon (línea Premium)",
         "valle": "Colchagua",
         "grad": "14%",
-        "crianza": "Beber ya",
-        "nota": "Rojo rubí oscuro. Aromas de frutos negros, berries azules, fondo goloso, especias dulces. Boca tersa, fresca, de media profundidad.",
-        "premios": "Gran Oro Catad&#x27;Or 2024 · 91 pts La Cav · 93 pts Alistair Cooper",
+        "crianza": "Listo para beber",
+        "nota": "Rojo rubí oscuro. Aromas de frutos negros, berries azules, fondo goloso y especias dulces. En boca, tersa, fresca, de media profundidad.",
+        "premios": "Gran Oro Catad'Or 2024 · 91 pts La Cav · 93 pts Alistair Cooper",
         "revista": ""
       },
       {
@@ -1620,13 +1964,13 @@
         "cepa": "Cabernet Sauvignon (línea Gran Reserva)",
         "valle": "Colchagua",
         "grad": "13,5%",
-        "crianza": "Guarda ~3 años",
-        "nota": "Rojo rubí. Nariz perfumada, moras, cerezas, tabaco, especiado, hojas de té. Jugoso, de rica acidez, lineal, de buen largo.",
+        "crianza": "Con guarda de ~3 años",
+        "nota": "Rojo rubí. Nariz perfumada: moras, cerezas, tabaco, especias y hojas de té. En boca, jugoso, de rica acidez, lineal y de buen largo.",
         "premios": "93 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Cabernet Sauvignon de Colchagua: casis, cedro y fruta negra, con taninos firmes. Con 30% en barricas de roble francés de 2do, 3er y 4to uso y 70% en cubas de concreto,.",
+    "opina": "Cabernet Sauvignon de Colchagua: casis, cedro y fruta negra, con taninos firmes. Con 30% en barricas de roble francés y 70% en cubas de concreto durante 14 meses.",
     "sugiere": "Bife ancho a la parrilla, Entrecot a la pimienta, Berenjenas a la parmesana, Cordero al horno con romero, Lomo vetado a la parrilla. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
   },
   {
@@ -1644,7 +1988,7 @@
         "grad": "14,5%",
         "crianza": "35% en barricas de roble francés de 2do, 3er, 4to y 5to uso y 65% en cubas de concreto, durante 14 meses",
         "nota": "Rojo rubí. Frutos negros como moras y arándanos. Suave pero de buena estructura; largo, persistente y de buena acidez que le da buena capacidad de guarda.",
-        "premios": "Gran Oro Catad&#x27;Or 2024 · 92 pts Alistair Cooper",
+        "premios": "Gran Oro Catad'Or 2024 · 92 pts Alistair Cooper",
         "revista": "https://online.fliphtml5.com/votjo/koew/"
       }
     ],
@@ -1710,7 +2054,7 @@
         "grad": "14,4%",
         "crianza": "12 meses en barricas de distintos usos",
         "nota": "Rojo púrpura profundo. Frutas negras maduras como arándanos, moras y cerezas negras, además de notas a pimentón rojo. Vino grande, redondo y sabroso, de estructura compleja y persistente, con excelente concentración.",
-        "premios": "Oro Catad&#x27;Or 2023 · 90 pts Alistair Cooper",
+        "premios": "Oro Catad'Or 2023 · 90 pts Alistair Cooper",
         "revista": "https://online.fliphtml5.com/votjo/micu/"
       }
     ],
@@ -1732,7 +2076,7 @@
         "grad": "14,4%",
         "crianza": "12 meses en barrica de madera",
         "nota": "",
-        "premios": "Oro - Catad&#x27;Or",
+        "premios": "Oro - Catad'Or",
         "revista": "https://online.fliphtml5.com/votjo/micu/"
       }
     ],
@@ -1754,7 +2098,7 @@
         "grad": "14,4%",
         "crianza": "Barricas de roble francés y americano",
         "nota": "Cerezas, frutillas y notas herbales que recuerdan al pimentón rojo, además de ciruela negra, moras y arándanos. Cuerpo medio alto, taninos sedosos pero firmes, acidez media y final persistente.",
-        "premios": "Oro - Catad&#x27;Or 2023",
+        "premios": "Oro - Catad'Or 2023",
         "revista": "https://online.fliphtml5.com/votjo/micu/"
       }
     ],
@@ -1819,7 +2163,7 @@
         "valle": "Colchagua",
         "grad": "13%",
         "crianza": "100% en barrica francesa de 3° y 4° uso durante 12 meses",
-        "nota": "Color rojo rubí, brillante. En nariz frutos rojos y muchas berries, mezclados con su característico toque especiado fino, paprika, pimienta blanca, finas hierbas como Laurel. En boca suculenta y fluida, con volumen medio y taninos firmes y frescos.",
+        "nota": "Color rojo rubí, brillante. En nariz, frutos rojos y muchas berries, mezclados con su característico toque especiado fino: paprika, pimienta blanca y finas hierbas como el laurel. En boca es suculenta y fluida, con volumen medio y taninos firmes y frescos.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/UTW-CATALOGO---ABR26/"
       },
@@ -1829,7 +2173,7 @@
         "valle": "Colchagua",
         "grad": "13%",
         "crianza": "12 meses en barrica francesa de 4to uso",
-        "nota": "Color rojo rubí, brillante. En nariz frutos rojos y muchas berries, mezclados con su característico toque especiado fino, paprika, pimienta blanca, finas hierbas como Laurel. Rojo carmín intenso y profundo. En nariz tiene intensa fruta roja, frutillas y moras, toques de especia, con notas de pimientos rojos y nuez moscada. En boca muestra una gran suavidad, con taninos elegantes y suaves, buena concentración y un final amable.",
+        "nota": "Rojo carmín intenso y profundo. En nariz, intensa fruta roja, frutillas y moras, toques de especia, con notas de pimientos rojos y nuez moscada. En boca muestra gran suavidad, con taninos elegantes, buena concentración y un final amable.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/auyo/"
       }
@@ -1846,18 +2190,18 @@
     "available": true,
     "anadas": [
       {
-        "anada": "2017",
-        "cepa": "Malbec",
-        "valle": "Colchagua Valley",
-        "grad": "13%",
-        "crianza": "",
-        "nota": "Tal como un Petit Verdot tiende a ser; este sigue manteniendo la elegancia y balance que son tan típicos de los vinos de Renato Czischke. Enfocado y suave, con agarre subyacente. En nariz, A roble, ciruela damascena y frutos de mora.",
-        "premios": "88 pts Tim Atkin",
+        "anada": "2024",
+        "cepa": "100% Malbec",
+        "valle": "Colchagua",
+        "grad": "",
+        "crianza": "Fermentado y criado en huevos de concreto, sin paso por barrica",
+        "nota": "Rojo violeta. Nariz especiada y floral: violetas, lavanda, chocolate amargo, pimienta fresca y hojas de laurel. En boca es rugoso, de tanino firme y lineal.",
+        "premios": "91 pts CAV",
         "revista": ""
       }
     ],
-    "opina": "Malbec de Laura Hartwig, viña clásica de Santa Cruz, en pleno valle de Colchagua. En copa, moras, violetas y un tanino jugoso.",
-    "sugiere": "Chorrillana, Empanadas de pino, Lasaña boloñesa, Costillar de cerdo a la BBQ, Pizza de carne. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
+    "opina": "La Luca es la línea fresca y directa de Laura Hartwig (viña clásica de Santa Cruz, Colchagua): un Malbec joven elaborado en huevos de concreto y sin paso por barrica, que potencia la fruta roja y las notas florales. Con volumen y frescura, al estilo de los Malbec argentinos.",
+    "sugiere": "Cerdo asado, Cordero al horno con romero, Chorrillana, Lasaña boloñesa, Pizza de carne. Malbec frutal y floral: parrilla, cerdo, cordero y quesos maduros."
   },
   {
     "name": "Laura Hartwig Petit Verdot - Selección del Viticultor",
@@ -2100,7 +2444,7 @@
         "cepa": "Carignan",
         "valle": "Valle del Maule",
         "grad": "13,8%",
-        "crianza": "BARRICAS DE 225 LTS. USADAS",
+        "crianza": "Barricas de 225 L usadas",
         "nota": "Rubí de intensidad media. En nariz, frutos negros, casis, ciruela, mermelada de arándanos, notas mentoladas, pimienta negra y cardamomo. En boca, de acidez media, tanino alto y final medio.",
         "premios": "93 pts La Cav · 92 pts Tim Atkin",
         "revista": ""
@@ -2110,8 +2454,8 @@
         "cepa": "Carignan",
         "valle": "Cauquenes, Maule",
         "grad": "13,9%",
-        "crianza": "16 meses en barricas de 5 usos de roble francés de 225 L, levaduras indígenas",
-        "nota": "Rojo rubí profundo con matices violeta. Frambuesa y cerezas, extremadamente floral y fresco, con notas a tabaco de evolución en botella. En boca, jugosa, tersa, compacta, amable, persistente.",
+        "crianza": "16 meses en barricas de 5to uso de roble francés de 225 L, con levaduras indígenas",
+        "nota": "Rojo rubí profundo con matices violeta. Frambuesa y cerezas, extremadamente floral y fresco, con notas a tabaco de evolución en botella. En boca, jugosa, tersa, compacta, amable y persistente.",
         "premios": "93 pts La Cav · 93 pts Descorchados · 92 pts Tim Atkin",
         "revista": "https://online.fliphtml5.com/votjo/cvnn/"
       },
@@ -2121,8 +2465,8 @@
         "valle": "Cauquenes",
         "grad": "14%",
         "crianza": "10 meses en barricas (5to uso)",
-        "nota": "Rojo rubí profundo con matices violeta. Frambuesa y cerezas, extremadamente floral y fresco, con notas a tabaco de evolución en botella. Visual: rojo rubí profundo con matices violeta. Nariz: abundantes notas a frambuesa y cerezas, extremadamente floral y fresco; se aprecian notas a tabaco como signo de evolución en botella. Boca: muy frutal, fresco y consistente con la nariz, con buena acidez. 92 puntos Descorchados.",
-        "premios": "92 pts Tim Atkin",
+        "nota": "Rojo rubí profundo con matices violeta. Abundantes notas a frambuesa y cerezas, extremadamente floral y fresco, con notas a tabaco como signo de evolución en botella. En boca, muy frutal, fresco y consistente, de buena acidez.",
+        "premios": "92 pts Tim Atkin · 92 pts Descorchados",
         "revista": "https://online.fliphtml5.com/votjo/04---UTW-REVISTA---OCTUBRE-2018/"
       }
     ],
@@ -2139,11 +2483,11 @@
     "anadas": [
       {
         "anada": "2024",
-        "cepa": "Cabernet sauvignon",
+        "cepa": "Cabernet Sauvignon",
         "valle": "Valle del Maule",
         "grad": "12,9%",
-        "crianza": "Barricas usadas de roble francés de 400 L de capacidad, de 3 a 6 usos, donde completa una guarda total de 19 meses",
-        "nota": "Cereza. En nariz, fruta roja madura, cerezas confitadas, algo de frambuesa, especiado, frutal. En boca, jugosa, tersa, compacta, con agarre, persistente.",
+        "crianza": "Barricas usadas de roble francés de 400 L (3 a 6 usos); guarda total 19 meses",
+        "nota": "Cereza. En nariz, fruta roja madura, cerezas confitadas, algo de frambuesa y notas especiadas. En boca, jugosa, tersa, compacta, con agarre y persistente.",
         "premios": "93 pts La Cav",
         "revista": ""
       },
@@ -2153,7 +2497,7 @@
         "valle": "Maule",
         "grad": "13,8%",
         "crianza": "17 meses en barricas usadas de 400 L (7 usos)",
-        "nota": "Rojo profundo. Frutos rojos como frambuesa y guinda, mezcladas con pimiento rojo y pimienta negra. En boca, jugosa, tersa, frutal y larga.",
+        "nota": "Rojo profundo. Frutos rojos como frambuesa y guinda, mezclados con pimiento rojo y pimienta negra. En boca, jugosa, tersa, frutal y larga.",
         "premios": "93 pts La Cav · 93 pts Descorchados",
         "revista": "https://online.fliphtml5.com/votjo/svrf/"
       },
@@ -2163,7 +2507,7 @@
         "valle": "Cauquenes",
         "grad": "13,8%",
         "crianza": "10 meses en barricas de roble francés de 7 usos",
-        "nota": "Rubí intenso oscuro. En nariz, frutos negros, berries, algo de tierra, hojas, tonos de jarabe medicinal. Color rojo rubí brillante. En nariz notas a frutas rojas como frambuesa y granada, mezcladas con flores y pimienta blanca. En boca ligero y fácil de tomar, de gran frescor y acidez.",
+        "nota": "Rubí intenso y oscuro. En nariz, frutos negros y berries, algo de tierra y hojas, con tonos de jarabe medicinal. En boca, ligero y fácil de tomar, de gran frescor y acidez.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/qfaq/"
       },
@@ -2173,7 +2517,7 @@
         "valle": "Maule",
         "grad": "13,2%",
         "crianza": "",
-        "nota": "Color rojo rubí con matices violeta. Nariz: predominan notas a cerezas y frutillas, con un lado fresco de notas especiadas tipo pimentón rojo. En boca es un vino muy frutal, fresco y consistente, de agradable final. Elaborado con uvas del viñedo de la familia Guzmán en Cauquenes. Producción de 3.940 botellas.",
+        "nota": "Rojo rubí con matices violeta. En nariz predominan cerezas y frutillas, con un lado fresco de notas especiadas tipo pimentón rojo. En boca, muy frutal, fresco y consistente, de agradable final.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/UTW-REVISTA---DICIEMBRE-2019/"
       }
@@ -2356,7 +2700,7 @@
         "cepa": "100% Malbec",
         "valle": "Colchagua",
         "grad": "13,5%",
-        "crianza": "1.000 L en huevo de concreto 9 meses, luego 9 meses en barricas usadas de roble francés; 700 L en barrica de 7 usos. Guarda total 18 meses",
+        "crianza": "9 meses en huevo de concreto y 9 meses en barricas usadas de roble francés (guarda total 18 meses)",
         "nota": "Rojo rubí de intensidad media. En nariz, frutos negros, casis, ciruela, mermelada de arándanos, notas mentoladas, pimienta negra y cardamomo. En boca, de acidez media, tanino alto y final medio.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/UTW-CATALOGO---MAR26/"
@@ -2367,7 +2711,7 @@
         "valle": "Colchagua",
         "grad": "13%",
         "crianza": "9 meses en huevo de concreto y 9 meses en barricas usadas de roble francés",
-        "nota": "Rojo intenso y profundo. Frutos negros como granada y arándano, además de una nota terrosa que aporta el raquis. Fresco y equilibrado, fácil de beber con buen medio.",
+        "nota": "Rojo intenso y profundo. Frutos negros como granada y arándano, con una nota terrosa que aporta el raquis. Fresco y equilibrado, fácil de beber y de buen medio.",
         "premios": "93 pts La Cav · 93 pts Descorchados",
         "revista": "https://online.fliphtml5.com/votjo/mlfq/"
       },
@@ -2376,8 +2720,8 @@
         "cepa": "Malbec",
         "valle": "Colchagua",
         "grad": "13,5%",
-        "crianza": "1.000 L en huevo de concreto 9 meses, luego 9 meses en barricas usadas de roble francés; 700 L en barrica de 7 usos. Guarda total 18 meses",
-        "nota": "Notas de cata: rojo. En nariz destacan los aromas a frutos negros como la granada y el arándano, además de una nota terrosa que aporta el raquis. En boca es fresco y equilibrado, un vino fácil de beber con muy buen medio.",
+        "crianza": "9 meses en huevo de concreto y 9 meses en barricas usadas de roble francés (guarda total 18 meses)",
+        "nota": "Rojo. En nariz destacan los aromas a frutos negros como la granada y el arándano, con una nota terrosa que aporta el raquis. En boca es fresco y equilibrado, un vino fácil de beber y de muy buen medio.",
         "premios": "93 pts Descorchados",
         "revista": ""
       }
@@ -2497,7 +2841,7 @@
         "valle": "Colchagua",
         "grad": "14%",
         "crianza": "12 meses en barrica de roble francés",
-        "nota": "Caracteriza por tener un color rubí intenso. En nariz frutos rojos como frutilla, especias, y un toque de toffee. En boca, astringencia adecuada, tiene un cuerpo medio, fresco, acidez típica de la cepa, tanino medio y final largo.",
+        "nota": "Rojo rubí intenso. En nariz, fruta negra, cassis y especias, con un toque de toffee de la crianza. En boca, de cuerpo medio, fresco, con tanino medio y final largo.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/pacn/"
       },
@@ -2507,7 +2851,7 @@
         "valle": "Colchagua",
         "grad": "14%",
         "crianza": "10 meses en barrica de 4to y 5to uso",
-        "nota": "Caracteriza por tener un color rubí intenso. En nariz frutos rojos como frutilla, especias, y un toque de toffee. Rojo rubí intenso, aroma a frutilla, bosque, regaliz, vainilla y leve carácter animal. En boca redondo, de buena estructura, con sabor a vainilla, chocolate y regaliz. Equilibrado y de final largo.",
+        "nota": "Rojo rubí intenso, con aroma a frutilla, bosque, regaliz, vainilla y leve carácter animal. En boca, redondo, de buena estructura, con sabor a vainilla, chocolate y regaliz. Equilibrado y de final largo.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/tdxk/"
       },
@@ -2517,7 +2861,7 @@
         "valle": "Rapel (Pichidegua)",
         "grad": "14%",
         "crianza": "24 meses en fudres",
-        "nota": "Rojo rubí intenso. En nariz, Intensa de frutilla, bosque, regaliz, vainilla y leve carácter animal. En boca, Redonda de buena estructura, aromas a vainilla, chocolate y regaliz sobre un final largo.",
+        "nota": "Rojo rubí intenso. En nariz, intensa, de frutilla, bosque, regaliz, vainilla y leve carácter animal. En boca, redonda, de buena estructura, con aromas a vainilla, chocolate y regaliz sobre un final largo.",
         "premios": "91 pts Guía Vinau",
         "revista": ""
       },
@@ -2532,7 +2876,7 @@
         "revista": ""
       }
     ],
-    "opina": "Cabernet Sauvignon de Muelle Oculto, la bodega de autor de la playa de Matanzas, costa de O&#x27;Higgins: casis, cedro y fruta negra con la firmeza clásica de la cepa, redondeada por su crianza en barrica. Estructurado pero amable, un tinto de mantel.",
+    "opina": "Cabernet Sauvignon de Muelle Oculto, la bodega de autor de la playa de Matanzas, costa de O'Higgins: casis, cedro y fruta negra con la firmeza clásica de la cepa, redondeada por su crianza en barrica. Estructurado pero amable, un tinto de mantel.",
     "sugiere": "Entrecot a la pimienta, Anticuchos de corazón, Lasaña boloñesa, Portobellos rellenos, Queso cheddar añejo. Cabernet clásico: carne roja a la brasa y salsas especiadas."
   },
   {
@@ -2549,7 +2893,7 @@
         "valle": "Colchagua",
         "grad": "14%",
         "crianza": "10 meses en barricas de roble francés (4º a 5º uso), para potenciar la expresión frutal y aportar una textura más redonda, con madera muy sutil",
-        "nota": "Caracteriza por tener un color rubí intenso. En nariz frutos rojos como frutilla, especias, y un toque de toffee. En boca, astringencia adecuada, tiene un cuerpo medio, fresco, acidez típica de la cepa, tanino medio y final largo.",
+        "nota": "Se caracteriza por un color rubí intenso. En nariz, frutos rojos como frutilla, especias y un toque de toffee. En boca, de astringencia adecuada, cuerpo medio, fresco, con la acidez típica de la cepa, tanino medio y final largo.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/UTW-CATALOGO---ENE26/"
       },
@@ -2559,7 +2903,7 @@
         "valle": "Rapel",
         "grad": "13%",
         "crianza": "12 meses en barrica de roble francés",
-        "nota": "Color rojo rubí, nariz intensa a frutos rojos como frutilla, toques de regaliz, vainilla y pimientos maduros. Boca redonda, de buena estructura, sobre un final largo.",
+        "nota": "Color rojo rubí. Nariz intensa a frutos rojos como frutilla, con toques de regaliz, vainilla y pimientos maduros. En boca, redonda, de buena estructura, sobre un final largo.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/wezf/"
       },
@@ -2569,7 +2913,7 @@
         "valle": "Cachapoal",
         "grad": "14%",
         "crianza": "12 meses en barrica de roble francés",
-        "nota": "Color carmín intenso y brillante, con notas a rosas rojas, pimienta negra, cassis y piquillos. En boca de cuerpo medio, acidez jugosa y final persistente.",
+        "nota": "Color carmín intenso y brillante, con notas a rosas rojas, pimienta negra, cassis y piquillos. En boca, de cuerpo medio, acidez jugosa y final persistente.",
         "premios": "90 pts La Cav",
         "revista": "https://online.fliphtml5.com/votjo/UTW-REVISTA---OCTUBRE-2019/"
       }
@@ -2622,6 +2966,142 @@
     "sugiere": "Choripán con pebre, Pizza de pepperoni, Hamburguesa casera con queso, Empanada de pino al horno, Tabla de quesos semimaduros. Un Cabernet–Syrah redondo y sin pretensiones: pide asado informal, masas y quesos de todos los días."
   },
   {
+    "name": "Muelle Oculto Santona Cabernet Sauvignon Blend",
+    "winery": "Muelle Oculto",
+    "image": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78663910/Santona_20cabernet_20Blend.png?1783630281",
+    "url": "https://uptowine.cl/santona-cabernet-sauvignon-blend",
+    "price": 13900,
+    "available": true,
+    "anadas": [
+      {
+        "anada": "2020",
+        "cepa": "Cabernet Sauvignon (blend base)",
+        "valle": "Colchagua",
+        "grad": "14,5%",
+        "crianza": "24 meses en barricas de cuarto y quinto uso",
+        "nota": "Notas complejas de frutas negras maduras, especias, cuero y un fondo terroso. Taninos sedosos, gran acidez y final prolongado, con jugosidad especiada.",
+        "premios": "",
+        "revista": "https://online.fliphtml5.com/votjo/pacn/"
+      },
+      {
+        "anada": "2019",
+        "cepa": "Cabernet Sauvignon / Syrah",
+        "valle": "Colchagua",
+        "grad": "13%",
+        "crianza": "23 meses en barrica de roble francés",
+        "nota": "Color rojo rubí con capa media, intensidad aromática media, frutos rojos, cerezas, ciruela, frutos secos y notas lácticas, con suaves notas de especias. En boca equilibrado, con taninos maduros.",
+        "premios": "",
+        "revista": "https://online.fliphtml5.com/votjo/wezf/"
+      },
+      {
+        "anada": "2018",
+        "cepa": "80% Cabernet Sauvignon, 20% Syrah",
+        "valle": "Colchagua",
+        "grad": "13,7%",
+        "crianza": "100% envejecido en barricas de roble",
+        "nota": "Rojo rubí intenso. En nariz, Intensa de frutilla, bosque, regaliz, vainilla y leve carácter animal. En boca, Redonda de buena estructura, aromas a vainilla, chocolate y regaliz sobre un final largo.",
+        "premios": "92 pts Guía Vinau",
+        "revista": ""
+      },
+      {
+        "anada": "2017",
+        "cepa": "60% Cabernet Sauvignon, 27% Malbec, 10% Tempranillo, 3% Syrah",
+        "valle": "Rapel",
+        "grad": "13,7%",
+        "crianza": "100% envejecido en barricas de roble",
+        "nota": "Rojo rubí, intensidad media a profunda. En nariz destacan frutos negros, arándanos y grosellas, en agradable mezcla sin presencia marcada de pirazina. En boca es interesante, de buena estructura y taninos elegantes.",
+        "premios": "90 pts La Cav · 93 pts Guía Vinau",
+        "revista": "https://online.fliphtml5.com/votjo/UTW-REVISTA---SEPTIEMBRE-2019/"
+      },
+      {
+        "anada": "2016",
+        "cepa": "80% Cabernet Sauvignon, 20% Syrah",
+        "valle": "Colchagua",
+        "grad": "13,9%",
+        "crianza": "23 meses en barrica de roble francés",
+        "nota": "Color rojo rubí. Intensidad media: frutos rojos, cerezas, ciruela, frutos secos, notas lácticas y suaves especias. Cabernet Sauvignon aporta cobertura en boca redondeando los taninos; el Syrah aporta frescor y acidez de frutos rojos.",
+        "premios": "92 pts La Cav",
+        "revista": "https://online.fliphtml5.com/votjo/03---UTW-REVISTA---SEPTIEMBRE-2018/"
+      }
+    ],
+    "opina": "La versión Cabernet del ícono Santona de Muelle Oculto, la bodega de autor de Matanzas: un ensamblaje base Cabernet Sauvignon con Syrah, de crianza larga (hasta 24 meses en barrica). Fruta negra madura, especias, cuero y un fondo terroso, con taninos sedosos, gran acidez y final prolongado. De guarda.",
+    "sugiere": "Bife ancho a la parrilla, Osobuco braseado al vino tinto, Berenjenas a la parmesana, Ragú de cordero con pappardelle, Queso manchego curado. Su columna de Cabernet pide carnes rojas jugosas y salsas de fondo largo."
+  },
+  {
+    "name": "Muelle Oculto Santona Carmenere 100%",
+    "winery": "Muelle Oculto",
+    "image": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78664026/Santona_20carmener_20100.png?1783630552",
+    "url": "https://uptowine.cl/muelle-oculto-santona-carmenere-100",
+    "price": 13900,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2018",
+        "cepa": "100% Carménère",
+        "valle": "Cachapoal (Almahue)",
+        "grad": "14%",
+        "crianza": "12 meses en barrica de roble francés usadas",
+        "nota": "Rojo rubí intenso. En nariz, intensa de frutilla, bosque, regaliz, vainilla y leve carácter animal. En boca, redonda de buena estructura, aromas a vainilla, chocolate y regaliz sobre un final largo.",
+        "premios": "92 pts La Cav · 92 pts Guía Vinau",
+        "revista": ""
+      }
+    ],
+    "opina": "El Santona en su versión 100% Carménère: el ícono de Muelle Oculto (la bodega de autor de Matanzas) mostrando su cepa insigne en pureza. Producción artesanal —cosecha y selección manual, fermentación en bins y trasvasije por gravedad— con 12 meses en barrica de roble francés usada. Frutilla, bosque, regaliz y vainilla sobre una boca redonda y de final largo.",
+    "sugiere": "Costillar de wagyu al horno, Pastel de choclo, Cordero a la cruz, Risotto de hongos con merkén, Queso de cabra madurado. Ícono de guarda sobre Carménère: aguanta platos potentes, cocción lenta y quesos intensos."
+  },
+  {
+    "name": "Muelle Oculto Santona Carmenere Blend",
+    "winery": "Muelle Oculto",
+    "image": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78662981/Santona_20Carmenere_20blend.png?1783628129",
+    "url": "https://uptowine.cl/santona-carmenere-blend",
+    "price": 13900,
+    "available": true,
+    "anadas": [
+      {
+        "anada": "2020",
+        "cepa": "60% Carménère, 30% Syrah, 10% Malbec",
+        "valle": "Colchagua",
+        "grad": "14,5%",
+        "crianza": "24 meses en barricas de roble francés (tercer uso), buscando una integración elegante del aporte de madera, sin dominar la fruta",
+        "nota": "Color rojo rubí profundo con reflejos violáceos e intensidad marcada. Perfil muy expresivo y complejo, dominado por frutos negros maduros como moras y arándanos, acompañados de notas de tabaco, un toque de pimienta blanca y un fondo de madera sutilmente integrada, que aporta fineza más que protagonismo. Entrada amplia, con buena concentración, taninos firmes y pulidos y una estructura marcada pero equilibrada. Final persistente, con sensación elegante y de gran carácter. 24 meses en barricas de roble francés (3er uso). Última cosecha con uvas del Fundo de Panamá.",
+        "premios": "",
+        "revista": "https://online.fliphtml5.com/votjo/UTW-CATALOGO---ENE26/"
+      },
+      {
+        "anada": "2019",
+        "cepa": "Blend base Carménère con Malbec y Syrah",
+        "valle": "Colchagua",
+        "grad": "13%",
+        "crianza": "2 años en barrica de 4to y 5to uso y 2 años en botella",
+        "nota": "Rojo rubí. En nariz, intensa a frutos rojos como frutilla, toques de regaliz, vainilla y pimientos maduros. En boca, redonda de buena estructura, sobre un final largo.",
+        "premios": "",
+        "revista": "https://online.fliphtml5.com/votjo/tdxk/"
+      },
+      {
+        "anada": "2018",
+        "cepa": "60% Carménère, 30% Syrah, 10% Malbec",
+        "valle": "Colchagua",
+        "grad": "14%",
+        "crianza": "2 años en barrica de 4to y 5to uso y 2 años en botella",
+        "nota": "Rojo rubí intenso. En nariz, intensa de frutilla, bosque, regaliz, vainilla y leve carácter animal. En boca, redonda de buena estructura, aromas a vainilla, chocolate y regaliz sobre un final largo.",
+        "premios": "",
+        "revista": ""
+      },
+      {
+        "anada": "2016",
+        "cepa": "60% Carménère, 30% Syrah, 10% Malbec",
+        "valle": "Colchagua",
+        "grad": "13,9%",
+        "crianza": "23 meses en barrica de roble francés",
+        "nota": "Color rojo rubí, intensidad media a profunda. Frutos negros, arándanos, grosellas, mezcla agradable sin pirazina marcada. Buen volumen, estructura y equilibrio de acidez, untuosidad y jugosidad con taninos redondos y suaves.",
+        "premios": "92 pts La Cav",
+        "revista": "https://online.fliphtml5.com/votjo/05---UTW-REVISTA---NOVIEMBRE-2018/"
+      }
+    ],
+    "opina": "El ícono de Muelle Oculto, la bodega de autor de la playa de Matanzas: un ensamblaje base Carménère —su cepa insigne— con Syrah y Malbec, de producción artesanal y crianza larga en barrica y botella. Frutilla, bosque, regaliz y vainilla sobre una boca redonda, estructurada y de final largo. Serio y de guarda.",
+    "sugiere": "Costillar de wagyu al horno, Pastel de choclo, Cordero a la cruz, Risotto de hongos con merkén, Queso de cabra madurado. Ícono de guarda sobre Carménère: aguanta platos potentes, cocción lenta y quesos intensos."
+  },
+  {
     "name": "Narbona Cabernet Sauvignon",
     "winery": "Narbona",
     "image": "https://cdnx.jumpseller.com/up-to-wine-chile/image/62412829/Narbona_Cabernet_Sauvignon.png?1744406879",
@@ -2666,8 +3146,8 @@
         "cepa": "100% Cabernet Franc",
         "valle": "Maule",
         "grad": "14,5%",
-        "crianza": "Barricas de roble francés de más de un uso por 16 meses",
-        "nota": "Profundo color rojo rubí violáceo. Aromas como frambuesas, guindas y moras, con un fondo de tabaco y vainilla proveniente de la guarda en barricas de roble francés de más de un uso. En boca sentiremos taninos abundantes y aterciopelados, con una acidez fresca que nos entregará un vino equilibrado y un excelente potencial de guarda.",
+        "crianza": "16 meses en barricas de roble francés de más de un uso",
+        "nota": "Profundo color rojo rubí violáceo. Aromas a frambuesas, guindas y moras, con un fondo de tabaco y vainilla de la guarda en barricas de roble francés. En boca, taninos abundantes y aterciopelados, con una acidez fresca que entrega un vino equilibrado y de excelente potencial de guarda.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/UTW-CATALOGO---ABR26/"
       },
@@ -2677,7 +3157,7 @@
         "valle": "Maule",
         "grad": "13,5%",
         "crianza": "16 meses en barricas de roble francés usadas",
-        "nota": "Al descorchar esta botella encontraremos. En nariz como cerezas, ciruelas y frutillas, acompañado de notas especiadas como pimienta negra y clavo de olor. En boca se presenta con acidez fresca y taninos sedosos pero persistentes.",
+        "nota": "En nariz, cerezas, ciruelas y frutillas, con notas especiadas como pimienta negra y clavo de olor. En boca se presenta con acidez fresca y taninos sedosos pero persistentes.",
         "premios": "93 pts La Cav",
         "revista": "https://online.fliphtml5.com/votjo/lxwf/"
       },
@@ -2687,12 +3167,12 @@
         "valle": "San Javier de Loncomilla, Maule",
         "grad": "14%",
         "crianza": "16 meses en barrica de roble francés (más de un uso)",
-        "nota": "Al descorchar esta botella encontraremos. En nariz como cerezas, ciruelas y frutillas, acompañado de notas especiadas como pimienta negra y clavo de olor. Aromas de frutas rojas como frambuesas y frutillas, con notas herbales propias de la variedad, acompañadas de notas especiadas dulces de la guarda en roble francés. En boca taninos elevados pero elegantes, con acidez fresca.",
+        "nota": "Aromas de frutas rojas como frambuesas y frutillas, con notas herbales propias de la variedad y notas especiadas dulces de la guarda en roble francés. En boca, taninos elevados pero elegantes, con acidez fresca.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/luiw/"
       }
     ],
-    "opina": "Cabernet Franc de Maule: casis, un sello herbal de eucalipto y buena frescura. Con barricas de roble francés de más de un uso por 16 meses.",
+    "opina": "Cabernet Franc de Maule: casis, un sello herbal de eucalipto y buena frescura. Con 16 meses en barricas de roble francés de más de un uso.",
     "sugiere": "Cordero al horno con romero, Anticuchos, Bife ancho a la parrilla, Queso manchego curado, Costillar de vacuno a la BBQ. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
   },
   {
@@ -2738,6 +3218,28 @@
     ],
     "opina": "Pinot Noir de Colchagua: frutilla, guinda y un perfil sedoso y delicado. Con 15 meses en barricas de roble francés usadas.",
     "sugiere": "Berenjenas a la parmesana, Cordero al horno con romero, Bife ancho a la parrilla, Osobuco braseado al vino tinto, Ragú de cordero con pappardelle. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+  },
+  {
+    "name": "Orígenes Syrah",
+    "winery": "Orígenes",
+    "image": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78706362/ORIGENES_20SYRAH.png?1783799739",
+    "url": "https://uptowine.cl/origenes-syrah",
+    "price": 10990,
+    "available": true,
+    "anadas": [
+      {
+        "anada": "2021",
+        "cepa": "100% Syrah",
+        "valle": "Maule",
+        "grad": "13,5%",
+        "crianza": "Barricas usadas de roble francés de 400 L, de 3 a 6 usos, donde completa una guarda total de 19 meses",
+        "nota": "Rojo profundo. Aromas a moras y arándanos, y un ligero fondo de cuero, notas especiadas dulces como coco y clavo de olor provenientes de la guarda en barricas de roble francés de más de un uso. En boca sentiremos taninos maduros y envolventes y una acidez equilibrada que nos permitirá un excelente potencial de guarda.",
+        "premios": "",
+        "revista": "https://online.fliphtml5.com/votjo/UTW-CATALOGO---ABR26/"
+      }
+    ],
+    "opina": "Syrah de Maule: pimienta negra, fruta negra y un fondo especiado. Con barricas usadas de roble francés de 400 L, de 3 a 6 usos, donde completa una guarda total.",
+    "sugiere": "Queso manchego curado, Ragú de cordero con pappardelle, Osobuco braseado al vino tinto, Lomo vetado a la parrilla, Bife ancho a la parrilla. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
   },
   {
     "name": "Orígenes Tempranillo",
@@ -3536,7 +4038,7 @@
         "grad": "",
         "crianza": "Crianza en barrica de roble francés",
         "nota": "Rojo violeta. En nariz, perfumada, mora, violeta y notas a guinda. En boca es frutal, jugosa, madura, de cuerpo medio.",
-        "premios": "95 pts James Suckling · 94 pts Catad&#x27;Or · 94 pts La Cav · 93 pts Descorchados · 92+ pts Wine Advocate · 92 pts Tim Atkin · 92 pts Vinous",
+        "premios": "95 pts James Suckling · 94 pts Catad'Or · 94 pts La Cav · 93 pts Descorchados · 92+ pts Wine Advocate · 92 pts Tim Atkin · 92 pts Vinous",
         "revista": ""
       },
       {
@@ -3546,7 +4048,7 @@
         "grad": "",
         "crianza": "Crianza en barrica de roble francés",
         "nota": "",
-        "premios": "95 pts James Suckling · 94 pts Descorchados · 94 pts Catad&#x27;Or · 93 pts Wine Advocate · 92 pts Tim Atkin",
+        "premios": "95 pts James Suckling · 94 pts Descorchados · 94 pts Catad'Or · 93 pts Wine Advocate · 92 pts Tim Atkin",
         "revista": ""
       },
       {
@@ -3556,7 +4058,7 @@
         "grad": "",
         "crianza": "Crianza en barrica de roble francés",
         "nota": "",
-        "premios": "95 pts Descorchados (Mejores Colchagua Entre Cordilleras · Mejores Syrah) · 95 pts La Cav · 94 pts Catad&#x27;Or · 90 pts Tim Atkin",
+        "premios": "95 pts Descorchados (Mejores Colchagua Entre Cordilleras · Mejores Syrah) · 95 pts La Cav · 94 pts Catad'Or · 90 pts Tim Atkin",
         "revista": ""
       },
       {
@@ -3598,7 +4100,7 @@
         "grad": "",
         "crianza": "",
         "nota": "",
-        "premios": "91 pts James Suckling · 91 pts Catad&#x27;Or",
+        "premios": "91 pts James Suckling · 91 pts Catad'Or",
         "revista": ""
       },
       {
@@ -3972,7 +4474,7 @@
         "grad": "",
         "crianza": "",
         "nota": "",
-        "premios": "Best Syrah in Chile La Cav · 92 pts Descorchados",
+        "premios": "Best Syrah in Chile - La Cav · 92 pts Descorchados",
         "revista": ""
       },
       {
@@ -4112,7 +4614,7 @@
         "grad": "14%",
         "crianza": "14 meses en barricas de roble francés",
         "nota": "Color violáceo. En nariz,.",
-        "premios": "Oro - Catad&#x27;Or 2018 · 93 pts La Cav · 93 pts Guía Vinau",
+        "premios": "Oro - Catad'Or 2018 · 93 pts La Cav · 93 pts Guía Vinau",
         "revista": ""
       },
       {
@@ -4186,7 +4688,7 @@
         "grad": "13%",
         "crianza": "14 meses en estanques 100% acero (sin barrica)",
         "nota": "Rubí rojo brillante, limpio y de intensidad media. Frambuesas, moras y arándanos maduros; delicadas notas de rosas en botón y pimienta negra. Moras, ciruelas y arándanos maduros; notas de pimienta negra y blanca; cuerpo medio y acidez balanceada.",
-        "premios": "Oro Catad&#x27;Or 2021 · 93 pts La Cav",
+        "premios": "Oro Catad'Or 2021 · 93 pts La Cav",
         "revista": ""
       }
     ],
@@ -4458,7 +4960,7 @@
         "grad": "13,5%",
         "crianza": "En cuba de acero (meses no indicados en la ficha)",
         "nota": "Pirazina equilibrada, donde resaltan los frutos rojos maduros, como frambuesas, ciruelas y notas a fruta negra como moras. En boca amigable, con acidez balanceada y un final cargado a la fruta roja.",
-        "premios": "Oro Catad&#x27;Or 2024",
+        "premios": "Oro Catad'Or 2024",
         "revista": ""
       }
     ],
@@ -4480,7 +4982,7 @@
         "grad": "13,5%",
         "crianza": "En cuba de acero (meses no indicados en la ficha)",
         "nota": "Pirazina equilibrada, donde resaltan los frutos rojos maduros, como frambuesas, ciruelas y notas a fruta negra como moras. En boca amigable, con acidez balanceada y un final cargado a la fruta roja.",
-        "premios": "Oro Catad&#x27;Or 2024",
+        "premios": "Oro Catad'Or 2024",
         "revista": "https://online.fliphtml5.com/votjo/vapz/"
       }
     ],
@@ -4545,7 +5047,7 @@
         "valle": "Colchagua",
         "grad": "14%",
         "crianza": "9 meses en barricas de distintos usos",
-        "nota": "Rojo cereza profundo con reflejos granate, limpio y brillante. Frutos rojos frescos como cereza y frambuesa (Grenache), fruta negra madura (Carignan), pimienta negra, regaliz y notas mentoladas (Syrah). Ataque firme y vibrante, buena estructura tánica, acidez equilibrada, notas de chocolate amargo. Cuerpo medio a robusto y largo final.",
+        "nota": "Rojo cereza profundo con reflejos granate, limpio y brillante. Frutos rojos frescos como cereza y frambuesa (Grenache), fruta negra madura (Carignan), pimienta negra, regaliz y notas mentoladas (Syrah). Ataque firme y vibrante, buena estructura tánica, acidez equilibrada y notas de chocolate amargo. Cuerpo medio a robusto y largo final.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/pacn/"
       },
@@ -4560,7 +5062,7 @@
         "revista": "https://online.fliphtml5.com/votjo/uqzf/"
       }
     ],
-    "opina": "Ensamblaje de Carignan, Grenache, Syrah de Colchagua: la acidez y el carácter rústico del Carignan, la fruta roja golosa de la Garnacha y la pimienta y la fruta negra de la Syrah. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas. Con 9 meses en barricas de distintos usos.",
+    "opina": "Ensamblaje de Carignan, Grenache y Syrah de Colchagua: la acidez y el carácter rústico del Carignan, la fruta roja golosa de la Garnacha y la pimienta y la fruta negra de la Syrah. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas. Con 9 meses en barricas de distintos usos.",
     "sugiere": "Osobuco braseado al vino tinto, Queso manchego curado, Ragú de cordero con pappardelle, Lomo vetado a la parrilla, Entrecot a la pimienta. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
   },
   {
@@ -4621,7 +5123,7 @@
         "valle": "Los Lingues, Colchagua",
         "grad": "13,5%",
         "crianza": "Maceración prefermentativa de 5 días, maloláctica completa; 9 meses en barricas de distintos usos",
-        "nota": "Rojo rubí profundo con matices violáceos, brillante. Expresivo y elegante: cerezas, moras y fresas con pimienta negra, clavo de olor y sutil nota herbácea del Cabernet Franc; tabaco y cacao de la crianza. Entrada suave con taninos sedosos y bien definidos, acidez fresca y jugosa. El Carmenere aporta redondez y el Cabernet Franc tensión y frescura. Final elegante y complejo.",
+        "nota": "Rojo rubí profundo con matices violáceos, brillante. Expresivo y elegante: cerezas, moras y fresas con pimienta negra, clavo de olor y una sutil nota herbácea del Cabernet Franc; tabaco y cacao de la crianza. Entrada suave con taninos sedosos y bien definidos, acidez fresca y jugosa. El Carmenere aporta redondez y el Cabernet Franc tensión y frescura. Final elegante y complejo.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/jreu/"
       },
@@ -4631,12 +5133,12 @@
         "valle": "Lontué (Sagrada Familia)",
         "grad": "13,5%",
         "crianza": "9 meses en barricas de distintos usos",
-        "nota": "Vino intenso y de elegante complejidad, color rojo rubí brillante con buen ataque en boca y vivos aromas florales y frutales como violeta y frutos rojos. En boca es intenso, elegante y de largo final.",
+        "nota": "Vino intenso y de elegante complejidad, color rojo rubí brillante, con buen ataque en boca y vivos aromas florales y frutales como violeta y frutos rojos. En boca es intenso, elegante y de largo final.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/uqzf/"
       }
     ],
-    "opina": "Ensamblaje de 70% Carmenere, 30% Cabernet Franc de Los Lingues, Colchagua: el pimentón y las especias dulces del Carménère con la frescura herbal del Cabernet Franc. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas. Con maceración prefermentativa de 5 días, maloláctica completa; 9 meses en barricas de.",
+    "opina": "Ensamblaje de 70% Carmenere y 30% Cabernet Franc de Los Lingues, Colchagua: el pimentón y las especias dulces del Carménère con la frescura herbal del Cabernet Franc. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas. Con maceración prefermentativa de 5 días y 9 meses en barricas.",
     "sugiere": "Cordero al horno con romero, Lomo vetado a la parrilla, Bife ancho a la parrilla, Queso manchego curado, Costillar de vacuno a la BBQ. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
   },
   {
@@ -4654,7 +5156,7 @@
         "grad": "14%",
         "crianza": "24 meses en fudres",
         "nota": "Rojo rubí. En nariz, aromas a grosellas y guindas ácidas, con acidez vibrante. En boca es una fiesta para los sentidos; la guarda de 24 meses en fudres aporta taninos presentes pero delicados. Conviene decantarlo.",
-        "premios": "Oro Catad&#x27;Or 2022",
+        "premios": "Oro Catad'Or 2022",
         "revista": "https://online.fliphtml5.com/votjo/buvo/"
       }
     ],
@@ -4676,7 +5178,7 @@
         "grad": "14%",
         "crianza": "12 meses en barrica francesa de tercer uso",
         "nota": "Rubí. En nariz combina notas de pimentón rojo y cerezas. En boca tiene estructura tánica notable y volumen medio; la crianza de 12 meses en barrica francesa de tercer uso aporta complejidad sin perder que se deja beber.",
-        "premios": "Oro Catad&#x27;Or 2022",
+        "premios": "Oro Catad'Or 2022",
         "revista": "https://online.fliphtml5.com/votjo/buvo/"
       }
     ],
@@ -4698,7 +5200,7 @@
         "grad": "14,5%",
         "crianza": "12 meses en barricas usadas",
         "nota": "En nariz, pimentón rojo, cerezas con notas de frutos morados. Volumen medio con taninos presentes y buen agarre, de buena acidez y estructura. Madera bien ensamblada con el vino haciendo un buen match, igual que la amistad que generamos con nuestras mascotas. 9. La creación más íntima de la bodega: un vino que simboliza la resiliencia, la reinvención y la experimentación. Mezcla de 85% Cot, 10% Cabernet Sauvignon y 5% Syrah del Valle de Cachapoal.",
-        "premios": "Oro Catad&#x27;Or 2022",
+        "premios": "Oro Catad'Or 2022",
         "revista": "https://online.fliphtml5.com/votjo/buvo/"
       }
     ],
@@ -4740,7 +5242,7 @@
         "grad": "15%",
         "crianza": "50% durante 12 meses en barricas usadas",
         "nota": "Violáceo. En nariz, durazno y especias. En boca, de volumen medio con taninos presentes, buena acidez y estructura.",
-        "premios": "Medalla Oro Catad&#x27;Or · 91 pts La Cav",
+        "premios": "Medalla Oro Catad'Or · 91 pts La Cav",
         "revista": ""
       }
     ],
@@ -4815,7 +5317,7 @@
         "valle": "Cachapoal Andes",
         "grad": "14%",
         "crianza": "14 meses en barrica francesa de segundo y tercer uso",
-        "nota": "Vivioláceo. En nariz, de moras, grosellas, cerezas. Volumen medio con taninos presentes, de buena acidez y estructura elegante. Violáceo. Aromas de moras, grosellas y cerezas. Volumen medio, con taninos presentes, de buena acidez y estructura elegante. Violáceo. Aromas de moras, grosellas, cerezas. Volumen medio con taninos presentes, de buena acidez y estructura elegante.",
+        "nota": "Violáceo. Aromas de moras, grosellas y cerezas. Volumen medio, con taninos presentes, de buena acidez y estructura elegante.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/pimz/"
       },
@@ -4825,8 +5327,8 @@
         "valle": "Cachapoal",
         "grad": "14%",
         "crianza": "14 meses en barricas de roble francés (Vicard y Seguin Moreau)",
-        "nota": "Rubí violáceo. En nariz, pimentón rojo, cerezas con notas de frutos morados. Volumen medio con taninos presentes y buen agarre, de buena acidez y estructura. Madera bien ensamblada con el vino haciendo un buen match, igual que la amistad que generamos con nuestras mascotas. 9. Cuerpo medio y acidez equilibrada.",
-        "premios": "Oro Catad&#x27;Or 2022 · 92 pts James Suckling · 95 pts La Cav",
+        "nota": "Rubí violáceo. En nariz, pimentón rojo y cerezas con notas de frutos morados. Volumen medio con taninos presentes y buen agarre, de buena acidez y estructura. Madera bien ensamblada con el vino.",
+        "premios": "Oro Catad'Or 2022 · 92 pts James Suckling · 95 pts La Cav",
         "revista": ""
       }
     ],
@@ -4847,7 +5349,7 @@
         "valle": "Cachapoal Andes",
         "grad": "13%",
         "crianza": "Batonaje de lías por 3 meses",
-        "nota": "100% Grenache Rubí violáceo, notas tocino, hierbas y especias, cuerpo medio. Lima y limón, maracuyá, ají, melón y pepino. Volumen medio y acidez equilibrada.",
+        "nota": "Lima y limón, maracuyá, ají verde, melón y pepino. Volumen medio y acidez equilibrada.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/vlpa/"
       },
@@ -4857,7 +5359,7 @@
         "valle": "Rapel",
         "grad": "12,5%",
         "crianza": "Acero inoxidable",
-        "nota": "Amarillo y tonos verdosos. Frutas tropicales, flores, pimentón verde cuerpo medio, de buena acidez y estructura.. Frutas tropicales, flores, pimentón verde. Amarillo con tonos verdosos. Frutas tropicales, flores y pimentón verde; cuerpo medio, de buena acidez y estructura. Cuerpo medio, buena acidez y estructura.",
+        "nota": "Amarillo con tonos verdosos. Frutas tropicales, flores y pimentón verde; cuerpo medio, de buena acidez y estructura.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/pimz/"
       }
@@ -4894,7 +5396,7 @@
         "revista": "https://online.fliphtml5.com/votjo/elmq/"
       }
     ],
-    "opina": "Syrah de Trabun, del Cachapoal Andes de Requínoa (500 msnm, suelos volcánicos): gran expresión frutal, pétalos de rosa, arándanos y granada, con taninos redondos, buena estructura y una acidez que permite guarda. El &#x27;enólogo frente a la cepa&#x27;, de Sergio Avendaño.",
+    "opina": "Syrah de Trabun, del Cachapoal Andes de Requínoa (500 msnm, suelos volcánicos): gran expresión frutal, pétalos de rosa, arándanos y granada, con taninos redondos, buena estructura y una acidez que permite guarda. El 'enólogo frente a la cepa', de Sergio Avendaño.",
     "sugiere": "Cerdo a las cinco especias, Curry rojo de cordero, Brochetas al cardamomo, Pato laqueado, Queso maduro de oveja. Syrah de altura, especiado: cocina asiática especiada, curry y aves laqueadas."
   },
   {
@@ -4911,7 +5413,7 @@
         "valle": "Maule",
         "grad": "14%",
         "crianza": "15 meses en barrica francesa usada, levaduras nativas y mínima intervención",
-        "nota": "100% Carignan Violáceo, notas a mora, guinda ácida chocolate, cuerpo medio. Mora, guinda ácida y chocolate. Cuerpo medio y acidez vibrante.",
+        "nota": "Violáceo. Mora, guinda ácida y chocolate. Cuerpo medio y acidez vibrante.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/vlpa/"
       },
@@ -4921,7 +5423,7 @@
         "valle": "Loncomilla (San Javier)",
         "grad": "14,5%",
         "crianza": "12 meses en barricas usadas de 2do y 3er uso",
-        "nota": "Rojo rubí. En boca es un vino equilibrado, muy fresco y jugoso, de exquisita acidez, con taninos dulces y suaves. Gran intensidad aromática, elegante y compleja. En nariz, frutal, destacando aromas a cerezas y ciruelas maduras, de gran frescura y persistencia aromática. En boca, es un vino equilibrado, muy fresco y jugoso, de exquisita acidez, con taninos dulces y suaves. Gran intensidad aromática, elegante y compleja nariz frutal, destacando aromas a cerezas y ciruelas maduras, de gran frescura y persistencia aromática.",
+        "nota": "Rojo rubí. En nariz, frutal, con aromas a cerezas y ciruelas maduras, de gran frescura y persistencia. En boca, equilibrado, muy fresco y jugoso, de exquisita acidez, con taninos dulces y suaves. Elegante y complejo.",
         "premios": "92 pts La Cav",
         "revista": "https://online.fliphtml5.com/votjo/bfzy/"
       }
@@ -5027,11 +5529,11 @@
     "anadas": [
       {
         "anada": "2022",
-        "cepa": "Carménère (línea Premium)",
+        "cepa": "100% Carménère",
         "valle": "Colchagua",
         "grad": "14%",
-        "crianza": "Línea",
-        "nota": "Elegante y evolucionado. En nariz donde destacan las notas a pomelo y salinas propias de la variedad. Redondo y de gran volumen. En boca, entregando persistencia y complejidad asociada a una acidez media y refrescante que otorga un buen equilibrio.",
+        "crianza": "12 meses en barrica de roble francés usada",
+        "nota": "Elegante y evolucionado. En nariz destacan notas a pomelo y salinas propias de la variedad. Redondo y de gran volumen; en boca entrega persistencia y complejidad, con una acidez media y refrescante que otorga buen equilibrio.",
         "premios": "92 pts La Cav · 88 pts Tim Atkin",
         "revista": ""
       },
@@ -5040,9 +5542,9 @@
         "cepa": "100% Carménère",
         "valle": "Colchagua",
         "grad": "13%",
-        "crianza": "12 meses en barrica de roble francés usadas",
-        "nota": "Representa bien las caracteristicas del Valle del Maipo, se siente la grosella, mora y pimienta negra, envuelta En nariz hierbas típicas del lugar. Profundo color rojo rubí, con tonos violetas muy vivos. En nariz presenta agradables aromas a frutos rojos y negros maduros, con notas especiadas que recuerdan a pimienta negra. En boca es balanceado y suave, con taninos redondos y dulces, dejando un final muy agradable. 92 puntos James Suckling.",
-        "premios": "",
+        "crianza": "12 meses en barricas de roble francés usadas",
+        "nota": "Profundo color rojo rubí con tonos violetas muy vivos. En nariz, agradables aromas a frutos rojos y negros maduros, con notas especiadas que recuerdan a la pimienta negra. En boca es balanceado y suave, con taninos redondos y dulces y un final muy agradable.",
+        "premios": "92 pts James Suckling",
         "revista": "https://online.fliphtml5.com/votjo/01---UTW-REVISTA---JULIO-2018/"
       },
       {
@@ -5050,8 +5552,8 @@
         "cepa": "Carménère",
         "valle": "Colchagua",
         "grad": "13%",
-        "crianza": "12 meses en barrica de roble francés usadas",
-        "nota": "Representa bien las caracteristicas del Valle del Maipo, se siente la grosella, mora y pimienta negra, envuelta En nariz hierbas típicas del lugar. En boca, es una estructura fina y con un final seco y joven.",
+        "crianza": "12 meses en barricas de roble francés usadas",
+        "nota": "Grosella, mora y pimienta negra, con hierbas. En boca, de estructura fina y con un final seco y joven.",
         "premios": "92 pts Guía Vinau",
         "revista": ""
       }
@@ -5104,8 +5606,8 @@
         "cepa": "Carignan",
         "valle": "Colchagua",
         "grad": "13%",
-        "crianza": "Acero inoxidable por 11 meses",
-        "nota": "Rojo rubi. En boca es muy jugoso. En boca, es muy jugoso.",
+        "crianza": "11 meses en acero inoxidable",
+        "nota": "Rojo rubí. En boca es muy jugoso, fresco y de rica acidez.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/cvnn/"
       },
@@ -5115,7 +5617,7 @@
         "valle": "Colchagua",
         "grad": "12%",
         "crianza": "9 meses de guarda en acero inoxidable",
-        "nota": "Color rojo rubí. En boca equilibrado, muy fresco y jugoso, de exquisita acidez, con taninos dulces y suaves. Gran intensidad aromática, elegante y compleja nariz frutal, destacando aromas a cerezas y ciruelas maduras, de gran frescura y persistencia.",
+        "nota": "Color rojo rubí. En boca, equilibrado, muy fresco y jugoso, de exquisita acidez, con taninos dulces y suaves. Nariz frutal de gran intensidad, con aromas a cerezas y ciruelas maduras, de gran frescura y persistencia.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/phws/"
       },
@@ -5125,7 +5627,7 @@
         "valle": "Colchagua",
         "grad": "12%",
         "crianza": "Acero inoxidable",
-        "nota": "Rojo rubi. En boca es muy jugoso. Color rojo rubí. En boca equilibrado, muy fresco y jugoso, de exquisita acidez, con taninos dulces y suaves. Gran intensidad aromática, elegante y compleja nariz frutal con aromas a cerezas y ciruelas maduras, de gran frescura y persistencia.",
+        "nota": "Color rojo rubí. En boca, equilibrado, muy fresco y jugoso, de exquisita acidez, con taninos dulces y suaves. Nariz frutal de gran intensidad, con aromas a cerezas y ciruelas maduras, de gran frescura y persistencia.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/elmq/"
       }

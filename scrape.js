@@ -6,7 +6,7 @@ const decode = (s) => {
   let t = s;
   for (let i = 0; i < 3; i++) {
     t = t
-      .replace(/&quot;/g, '"').replace(/&#0?39;|&apos;/g, "'")
+      .replace(/&quot;/g, '"').replace(/&#0?39;|&#x27;|&apos;/gi, "'").replace(/&#(\d+);/g, (_, n) => String.fromCharCode(n))
       .replace(/&aacute;/gi, (m) => m[1] === 'A' ? 'Á' : 'á')
       .replace(/&eacute;/gi, (m) => m[1] === 'E' ? 'É' : 'é')
       .replace(/&iacute;/gi, (m) => m[1] === 'I' ? 'Í' : 'í')
@@ -55,6 +55,38 @@ function parseTables(desc) {
   return { anadas, opina: opinaM ? stripTags(opinaM[1]) : '', sugiere: sugiereM ? stripTags(sugiereM[1]) : '' };
 }
 
+function parseTabs(desc) {
+  // formato 3: pestañas CSS <div class='panel pNOMBREAAAA'> con pares <p class='lb'>/<p class='vl'>
+  if (!/class=['"]panel /.test(desc)) return null;
+  const anadas = [];
+  const chunks = desc.split(/<div class=['"]panel /).slice(1);
+  for (const ch of chunks) {
+    const yearM = /^[a-z0-9_-]*?(\d{4})?['"]/.exec(ch);
+    const year = (yearM && yearM[1]) || '';
+    const fields = {};
+    for (const f of ch.matchAll(/<p class=['"]lb['"]>([\s\S]*?)<\/p>\s*<p class=['"]vl['"]>([\s\S]*?)<\/p>/g)) {
+      const label = stripTags(f[1]).toLowerCase();
+      const rawVal = f[2];
+      if (label.startsWith('cepa')) fields.cepa = stripTags(rawVal);
+      else if (label.startsWith('valle')) fields.valle = stripTags(rawVal);
+      else if (label.startsWith('graduaci')) fields.grad = stripTags(rawVal);
+      else if (label.startsWith('crianza')) fields.crianza = stripTags(rawVal);
+      else if (label.startsWith('nota')) fields.nota = stripTags(rawVal);
+      else if (label.startsWith('premios')) fields.premios = stripTags(rawVal);
+      else if (label.includes('revista')) {
+        const href = /href=["']?([^"'\s>]+)/i.exec(decode(rawVal));
+        if (href) fields.revista = href[1];
+      }
+    }
+    if (Object.keys(fields).length) anadas.push({ anada: year, ...fields });
+  }
+  if (!anadas.length) return null;
+  const un = decode(desc);
+  const opinaM = /<h3>[^<]*opina[^<]*<\/h3>\s*<p>([\s\S]*?)<\/p>/i.exec(un);
+  const sugiereM = /<h3>[^<]*sugiere[^<]*<\/h3>\s*<p>([\s\S]*?)<\/p>/i.exec(un);
+  return { anadas, opina: opinaM ? stripTags(opinaM[1]) : '', sugiere: sugiereM ? stripTags(sugiereM[1]) : '' };
+}
+
 function parseIframe(desc) {
   // formato nuevo: iframe srcdoc con const DATA={...};
   const un = decode(desc);
@@ -97,7 +129,7 @@ function extractProduct(url, html) {
   const offers = Array.isArray(prod.offers) ? prod.offers[0] : prod.offers;
   const image = Array.isArray(prod.image) ? prod.image[0] : prod.image;
   // ficha: usar el HTML completo de la página (el description está renderizado dentro)
-  const parsed = parseIframe(html) || parseTables(html);
+  const parsed = parseIframe(html) || parseTabs(html) || parseTables(html);
   return {
     name: stripTags(prod.name || ''),
     winery: stripTags((prod.brand && (prod.brand.name || prod.brand)) || ''),
@@ -140,6 +172,43 @@ function extractProduct(url, html) {
     opina: x.opina, sugiere: x.sugiere,
   })).sort((a, b) => a.name.localeCompare(b.name, 'es'));
   console.log('Vinos con ficha completa:', wines.length, '| fallidas:', failed.length);
+  // --- Recetas del sommelier: enlazar platos del 'sugiere' con el catalogo de recetas ---
+  const recetas = JSON.parse(fs.readFileSync(__dirname + '/recetas.json', 'utf8'));
+  const alias = JSON.parse(fs.readFileSync(__dirname + '/alias-platos.json', 'utf8'));
+  const normKey = (s) => (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+  const recipeWords = recetas.map((r) => ({ slug: r.slug, words: new Set(normKey(r.nombre).split(/\W+/).filter((w) => w.length > 3)) }));
+  const fuzzyMatch = (dish) => {
+    const words = normKey(dish).split(/\W+/).filter((w) => w.length > 3);
+    if (!words.length) return null;
+    let best = null;
+    for (const rw of recipeWords) {
+      const hits = words.filter((w) => rw.words.has(w)).length;
+      const ratio = hits / Math.max(words.length, 1);
+      if (ratio >= 0.5 && (!best || hits > best.hits)) best = { slug: rw.slug, hits };
+    }
+    return best && best.slug;
+  };
+  const platosPorVino = {};
+  const sinReceta = new Set();
+  for (const wine of wines) {
+    const permalink = (wine.url || '').split('/').filter(Boolean).pop();
+    const first = (wine.sugiere || '').split('.')[0];
+    const dishes = first.split(',').map((x) => x.trim()).filter((x) => x.length > 3);
+    const linked = [];
+    for (const dish of dishes) {
+      const slug = alias[normKey(dish)] || fuzzyMatch(dish);
+      if (slug) {
+        linked.push({ plato: dish, receta_slug: slug });
+        if (!alias[normKey(dish)]) alias[normKey(dish)] = slug; // aprender alias nuevo
+      } else sinReceta.add(dish);
+    }
+    if (linked.length) platosPorVino[permalink] = linked;
+  }
+  fs.writeFileSync(__dirname + '/recipes.json', JSON.stringify({ recetas, platosPorVino }) + '\n');
+  fs.writeFileSync(__dirname + '/alias-platos.json', JSON.stringify(alias, null, 1) + '\n');
+  console.log('Recetas enlazadas a', Object.keys(platosPorVino).length, 'vinos | platos sin receta:', sinReceta.size);
+  if (sinReceta.size) [...sinReceta].slice(0, 10).forEach((d) => console.log('  SIN RECETA:', d));
+
   // ponytail: si el scrape se degrada (sitio caido/redisenado), no publicar un JSON roto
   if (wines.length < 100) throw new Error('Solo ' + wines.length + ' vinos: aborto para no publicar datos incompletos');
   fs.writeFileSync(__dirname + '/wines.json', JSON.stringify(wines, null, 2) + '\n');
