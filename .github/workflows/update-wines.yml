@@ -17,6 +17,9 @@ jobs:
         with:
           node-version: '22'
       - name: Scrapear fichas
+        env:
+          JUMPSELLER_LOGIN: ${{ secrets.JUMPSELLER_LOGIN }}
+          JUMPSELLER_AUTHTOKEN: ${{ secrets.JUMPSELLER_AUTHTOKEN }}
         run: node scrape.js
       - name: Commit si hay cambios
         run: |

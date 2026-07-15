@@ -143,25 +143,68 @@ function extractProduct(url, html) {
   };
 }
 
+// --- Fuente preferida: API de Jumpseller (ve productos ocultos/deshabilitados) ---
+async function fetchViaApi() {
+  const login = process.env.JUMPSELLER_LOGIN;
+  const token = process.env.JUMPSELLER_AUTHTOKEN;
+  if (!login || !token) return null;
+  const auth = 'Basic ' + Buffer.from(`${login}:${token}`).toString('base64');
+  const out = [];
+  for (let page = 1; page <= 20; page++) {
+    const res = await fetch(`https://api.jumpseller.com/v1/products.json?limit=100&page=${page}`, {
+      headers: { Authorization: auth }, signal: AbortSignal.timeout(30000),
+    });
+    if (!res.ok) throw new Error('API Jumpseller HTTP ' + res.status);
+    const batch = await res.json();
+    if (!batch.length) break;
+    for (const { product } of batch) {
+      const desc = product.description || '';
+      const parsed = parseIframe(desc) || parseTabs(desc) || parseTables(desc);
+      if (!parsed || !parsed.anadas.length || !parsed.opina) continue;
+      out.push({
+        name: stripTags(product.name || ''),
+        winery: stripTags(product.brand || ''),
+        image: (product.images && product.images[0] && product.images[0].url) || '',
+        url: 'https://uptowine.cl/' + product.permalink,
+        price: product.price != null ? Number(product.price) : null,
+        available: product.status === 'available' && (product.stock_unlimited || product.stock > 0),
+        status: product.status,
+        anadas: parsed.anadas, opina: parsed.opina, sugiere: parsed.sugiere,
+      });
+    }
+    if (batch.length < 100) break;
+  }
+  return out;
+}
+
 (async () => {
   const smRes = await fetch('https://uptowine.cl/sitemap.xml', { signal: AbortSignal.timeout(30000) });
   if (!smRes.ok) throw new Error('sitemap HTTP ' + smRes.status);
   const sitemap = await smRes.text();
   const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1])
     .filter((u) => u !== 'https://uptowine.cl' && !/\/contact$/.test(u));
-  console.log('URLs a revisar:', urls.length);
-  const out = []; const failed = [];
-  const queue = [...urls];
-  const workers = Array.from({ length: 8 }, async () => {
-    while (queue.length) {
-      const url = queue.shift();
-      const page = await fetchPage(url);
-      if (!page || page.status !== 200) { failed.push({ url, status: page && page.status }); continue; }
-      const p = extractProduct(url, page.html);
-      if (p) out.push(p);
-    }
-  });
-  await Promise.all(workers);
+  let out = []; const failed = [];
+  let viaApi = false;
+  try {
+    const apiWines = await fetchViaApi();
+    if (apiWines && apiWines.length) { out = apiWines; viaApi = true; console.log('Fuente: API Jumpseller —', out.length, 'fichas'); }
+  } catch (e) {
+    console.log('API falló (' + e.message + '), usando scraping de páginas');
+  }
+  if (!viaApi) {
+    console.log('URLs a revisar:', urls.length);
+    const queue = [...urls];
+    const workers = Array.from({ length: 8 }, async () => {
+      while (queue.length) {
+        const url = queue.shift();
+        const page = await fetchPage(url);
+        if (!page || page.status !== 200) { failed.push({ url, status: page && page.status }); continue; }
+        const p = extractProduct(url, page.html);
+        if (p) out.push(p);
+      }
+    });
+    await Promise.all(workers);
+  }
   const wines = out.filter((x) => x.anadas.length && x.opina).map((x) => ({
     name: x.name, winery: x.winery, image: x.image, url: x.url,
     price: x.price, available: x.available === true,
