@@ -144,6 +144,7 @@ function extractProduct(url, html) {
 }
 
 // --- Fuente preferida: API de Jumpseller (ve productos ocultos/deshabilitados) ---
+const clubProducts = [];
 async function fetchViaApi() {
   const login = process.env.JUMPSELLER_LOGIN;
   const token = process.env.JUMPSELLER_AUTHTOKEN;
@@ -158,6 +159,18 @@ async function fetchViaApi() {
     const batch = await res.json();
     if (!batch.length) break;
     for (const { product } of batch) {
+      const cats = (product.categories || []).map((c) => c.name);
+      if (cats.includes('Club App')) {
+        clubProducts.push({
+          name: stripTags(product.name || ''),
+          winery: stripTags(product.brand || ''),
+          image: (product.images && product.images[0] && product.images[0].url) || '',
+          url: 'https://uptowine.cl/' + product.permalink,
+          price: product.price != null ? Number(product.price) : null,
+          available: product.status === 'available' && (product.stock_unlimited || product.stock > 0),
+        });
+        continue; // exclusivo: no va al catálogo general
+      }
       const desc = product.description || '';
       const parsed = parseIframe(desc) || parseTabs(desc) || parseTables(desc);
       if (!parsed || !parsed.anadas.length || !parsed.opina) continue;
@@ -255,6 +268,12 @@ async function fetchViaApi() {
   // ponytail: si el scrape se degrada (sitio caido/redisenado), no publicar un JSON roto
   if (wines.length < 100) throw new Error('Solo ' + wines.length + ' vinos: aborto para no publicar datos incompletos');
   fs.writeFileSync(__dirname + '/wines.json', JSON.stringify(wines, null, 2) + '\n');
+  if (viaApi) {
+    const socios = JSON.parse(fs.readFileSync(__dirname + '/socios.json', 'utf8'));
+    socios.products = clubProducts.sort((a, b) => (b.available ? 1 : 0) - (a.available ? 1 : 0) || a.name.localeCompare(b.name, 'es'));
+    fs.writeFileSync(__dirname + '/socios.json', JSON.stringify(socios, null, 2) + '\n');
+    console.log('Catálogo de socios:', clubProducts.length, 'productos');
+  }
 
   // --- Revistas: paginas /revistas* con JSON embebido {y,m,u,s} ---
   const revPages = urls.filter((u) => /\/revistas/.test(u));
