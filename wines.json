@@ -11442,16 +11442,16 @@
       {
         "anada": "2022",
         "cepa": "Chardonnay",
-        "valle": "Valle de Casablanca",
+        "valle": "Casablanca",
         "grad": "",
         "crianza": "",
-        "nota": "Verdoso plata. En nariz, cítrica, lima, cremoso, chocolate blanco. En la. En boca, es cítrico, jugoso, de acidez firme. Dorado plata brillante. Nariz a piña verde, lima, crema ácida. En la boca es frutal, cremoso, de acidez media, rugoso.",
+        "nota": "Dorado plata brillante. En nariz, piña verde, lima y crema ácida. En boca es frutal y cremoso, de acidez media y textura rugosa.",
         "premios": "94 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Chardonnay de Viña Villard, de Casablanca, clima frío costero, de raíces francesas. En copa, fruta blanca, notas cremosas y volumen.",
-    "sugiere": "Risotto de camarones, Curry suave de pollo, Machas a la parmesana, Congrio a la mantequilla, Salmón a la crema. Blanco con cuerpo: pescados en salsa, mariscos gratinados y aves cremosas."
+    "opina": "Chardonnay de Casablanca, el valle costero de clima frío donde esta cepa da lo mejor de sí en Chile. Villard es una viña de raíces francesas y eso se nota en el estilo: no busca el Chardonnay tropical y mantecoso, sino uno de acidez media y textura, donde la piña verde y la lima conviven con una nota cremosa que recuerda a la crema ácida. 94 puntos de La Cav.",
+    "sugiere": "Blanco con cuerpo, para pescados en salsa y mariscos gratinados: risotto de camarones, congrio a la mantequilla, machas a la parmesana, salmón a la crema y curry suave de pollo."
   },
   {
     "name": "Villard Expresión Reserve",
@@ -11572,10 +11572,10 @@
       {
         "anada": "2023",
         "cepa": "100% Pinot Grigio",
-        "valle": "Valle de Casablanca",
+        "valle": "Casablanca",
         "grad": "13,5%",
-        "crianza": "2 meses de contacto con las pieles, luego 6 meses de guarda en tanque de acero inoxidable",
-        "nota": "Syrah 65%,Carignan 20%, Vino con una excelente estructura, notas de frutas negras, espe- Petite Syrah 10%, Grenache 5% cias y un toque mineral, con taninos bien integrados y una acidez. En nariz, perfumada, floral, frutos rojos macerados, pimienta blanca. Ambar algo turbio. Nariz perfumada, floral, frutos rojos macerados, pimienta blanca. En la boca es frutal, rugoso, de acidez media, firme.",
+        "crianza": "2 meses de contacto con las pieles y luego 6 meses de guarda en tanque de acero inoxidable",
+        "nota": "Ámbar, algo turbio. En nariz, perfumada y floral, con frutos rojos macerados y pimienta blanca. En boca es frutal, rugoso, de acidez media y firme.",
         "premios": "93 pts La Cav",
         "revista": ""
       },
@@ -11584,14 +11584,14 @@
         "cepa": "100% Pinot Grigio",
         "valle": "Casablanca",
         "grad": "13,5%",
-        "crianza": "2 meses de contacto con las pieles, luego 6 meses de guarda en tanque de acero inoxidable",
-        "nota": "Syrah 65%,Carignan 20%, Vino con una excelente estructura, notas de frutas negras, espe- Petite Syrah 10%, Grenache 5% cias y un toque mineral, con taninos bien integrados y una acidez. En nariz, perfumada, floral, frutos rojos macerados, pimienta blanca. De color ámbar brillante, con algo de turbidez propia de su vinificación natural. En nariz aromas a zeste de naranja y fruta cítrica confitada, además de notas florales a jazmín y azahar. En boca posee un cuerpo e intensidad particulares por su maceración con las pieles.",
+        "crianza": "2 meses de contacto con las pieles y luego 6 meses de guarda en tanque de acero inoxidable",
+        "nota": "De color ámbar brillante, con algo de turbidez propia de su vinificación natural. En nariz, aromas a zeste de naranja y fruta cítrica confitada, además de notas florales a jazmín y azahar. En boca posee un cuerpo e intensidad particulares por su maceración con las pieles.",
         "premios": "",
         "revista": ""
       }
     ],
-    "opina": "Blanco de Viña Villard, de Casablanca, clima frío costero, de raíces francesas. En copa, fruta blanca y frescura cítrica.",
-    "sugiere": "Costillar de cerdo a la BBQ, Lasaña boloñesa, Chorrillana, Pimentones rellenos de carne, Empanadas de pino. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
+    "opina": "Ramato es el nombre que se usa en Friuli, en el noreste de Italia, para el Pinot Grigio macerado con sus pieles &mdash; ramato quiere decir cobrizo, por el color que toma. La uva es de piel rosada, así que al dejarla en contacto dos meses el vino sale ámbar y algo turbio, con una textura que ningún Pinot Grigio convencional tiene. Acá aparece la zeste de naranja, la fruta cítrica confitada y las flores de jazmín y azahar sobre un cuerpo inesperado. Una rareza bien lograda, con 93 puntos de La Cav.",
+    "sugiere": "Naranjo de textura, mejor no muy frío: cocina especiada, cerdo a las finas hierbas, pescados con salsas cremosas, quesos semimaduros y verduras asadas."
   },
   {
     "name": "Villard Le Chardonnay Grand Vin",
