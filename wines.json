@@ -22,50 +22,6 @@
     "sugiere": "Pastel de choclo, Lasaña boloñesa, Cazuela de vacuno, Pimentones rellenos de carne, Empanadas de pino. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
   },
   {
-    "name": "Alas de Parra",
-    "winery": "Alas de Parra",
-    "image": "",
-    "url": "https://uptowine.cl/alas-de-parra",
-    "price": 0,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "2020",
-        "cepa": "100% Cabernet Sauvignon",
-        "valle": "Valle del Itata",
-        "grad": "13%",
-        "crianza": "Cuba de acero inoxidable",
-        "nota": "Cabernet sin reposo en madera, lo que se expresa en nariz con su fruta, pimentón rojo, mantequilla suave. En boca es de taninos intensos, sin ser molestos, y de un color rojo oscuro y rubí.",
-        "premios": "",
-        "revista": "https://online.fliphtml5.com/votjo/jtik/"
-      }
-    ],
-    "opina": "Un Cabernet Sauvignon del Itata que rompe el molde: sin paso por madera, entrega la cara más pura y frutal de la cepa. Grosella negra y pimentón fresco sobre un fondo granítico y mineral, con taninos firmes pero pulidos y una acidez que lo mantiene ágil.",
-    "sugiere": "Su frescura sin madera luce con brasa directa y verduras: bife ancho a la parrilla, pimientos asados, berenjenas grilladas, entraña con chimichurri y quesos semiduros de cabra."
-  },
-  {
-    "name": "Alas de Parra Blend",
-    "winery": "Alas de Parra",
-    "image": "",
-    "url": "https://uptowine.cl/alas-de-parra-blend",
-    "price": 0,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "2020",
-        "cepa": "75% País, 25% Cinsault",
-        "valle": "Itata",
-        "grad": "12,5%",
-        "crianza": "Cuba de acero inoxidable",
-        "nota": "Rojo oscuro y rubí. En nariz, con su fruta, pimentón rojo, mantequilla suave. En boca, de taninos intensos, sin ser molestos.",
-        "premios": "",
-        "revista": "https://online.fliphtml5.com/votjo/jtik/"
-      }
-    ],
-    "opina": "Ensamblaje campesino del Itata: el País aporta fruta roja fresca y raíz chilena, y el Cinsault suma perfume floral y ligereza. Un tinto liviano, jugoso y muy bebible, de taninos suaves y final goloso.",
-    "sugiere": "Tinto ligero y perfumado, ideal para cocina de fondo suave y charcutería: pato confitado, quiche lorraine, cerdo a las finas hierbas, tabla de charcutería y queso brie."
-  },
-  {
     "name": "Alas de Parra Blend País Cinsault",
     "winery": "Alas de Parra",
     "image": "",
@@ -96,18 +52,18 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2020",
+        "anada": "",
         "cepa": "100% Cabernet Sauvignon",
-        "valle": "Itata",
+        "valle": "Valle del Itata",
         "grad": "13%",
-        "crianza": "Cuba de acero inoxidable (sin madera)",
-        "nota": "Rojo oscuro y rubí. En nariz, Con su fruta, pimentón rojo, mantequilla suave. En boca, Es de taninos intensos, sin ser molestos, y de un color rojo oscuro y rubí.",
+        "crianza": "Cuba de acero inoxidable, sin madera",
+        "nota": "Rojo oscuro con ribetes rubí. En nariz, fruta fresca, pimentón rojo y un dejo mantecoso suave. En boca, de taninos intensos sin ser molestos, frutal y de cierre fresco.",
         "premios": "Medalla de Oro Catad'Or 2020",
         "revista": "https://online.fliphtml5.com/votjo/jtik/"
       }
     ],
-    "opina": "Cabernet del Itata premiado con Oro en el Catad'Or, criado solo en acero para dejar hablar a la fruta. Grosella, pimentón rojo y un dejo mantecoso, con taninos intensos pero nobles y un cierre fresco y mineral.",
-    "sugiere": "Estructura frutal para carnes a la brasa y quesos con carácter: bife ancho a la parrilla, queso manchego curado, entrecot a la pimienta, osobuco al vino tinto y anticuchos."
+    "opina": "Cabernet del Itata premiado con Oro en el Catad'Or, criado solo en acero para dejar hablar a la fruta. Es una decisión poco común: casi todo el Cabernet chileno pasa por barrica, y aquí la ausencia de madera deja al descubierto la grosella, el pimentón rojo y el fondo granítico del Itata. Taninos intensos pero nobles y un cierre fresco y mineral.",
+    "sugiere": "Estructura frutal para carnes a la brasa y quesos con carácter: bife ancho a la parrilla, queso manchego curado, entrecot a la pimienta, osobuco al vino tinto y anticuchos. Su frescura sin madera también luce con pimientos y berenjenas asadas."
   },
   {
     "name": "Alchemy Angelina Black Angel",
@@ -1306,17 +1262,17 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2017",
-        "cepa": "75% Carménère / 15% Cabernet Sauvignon / 10% Carignan",
-        "valle": "Cachapoal",
+        "anada": "",
+        "cepa": "75% Carmén&egrave;re · 15% Cabernet Sauvignon · 10% Carignan",
+        "valle": "Valle del Cachapoal",
         "grad": "14%",
-        "crianza": "30 meses en barricas francesas (crianza total 24 meses incluyendo el reposo previo a la venta)",
-        "nota": "Un blend elegante y complejo, con un bouquet único adquirido durante su larga crianza. En boca una entrada fresca, con taninos envolventes y redondos y un final persistente.",
+        "crianza": "24 meses en barricas francesas",
+        "nota": "Un blend elegante y complejo, con un bouquet único adquirido durante su larga crianza. En boca, entrada fresca, taninos envolventes y redondos y un final persistente.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/ueyh/"
       }
     ],
-    "opina": "Ensamblaje de guarda de BOWines: el Carménère manda con su pimentón y especia dulce, el Cabernet aporta columna y casis, y el Carignan suma acidez y nervio de secano. Larga crianza para un bouquet complejo, taninos redondos y final persistente.",
+    "opina": "El ensamblaje de guarda de BOWines: el Carmén&egrave;re manda con su pimentón y especia dulce, el Cabernet aporta columna y casis, y el Carignan suma acidez y nervio de secano. Dos años de barrica francesa son muchísimo para un tinto chileno, y se notan en el bouquet: taninos ya redondos, sin aristas, y un final largo.",
     "sugiere": "Tinto estructurado y especiado, para carnes de cocción lenta y quesos maduros: osobuco al vino tinto, ragú de cordero con pappardelle, bife ancho a la parrilla, anticuchos y queso manchego curado."
   },
   {
@@ -1350,17 +1306,17 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2013",
+        "anada": "",
         "cepa": "Ensamblaje tinto",
-        "valle": "Maule",
+        "valle": "Valle del Maule",
         "grad": "14%",
         "crianza": "18 meses en barrica de roble francés",
-        "nota": "Color rojo púrpura intenso, con un ribete teja que denota su crianza en barrica. Nariz: aromas intensos a fruta fresca madura, flores y notas especiadas, acompañados de elegantes aromas tostados y ahumados. Boca: fresco y goloso, profundo y maduro en el paladar, con un paso de boca potente y envolvente que termina con una agradable sensación dulce. Vendimia de viñedos de más de 60 años. 93 puntos James Suckling.",
-        "premios": "",
+        "nota": "Rojo púrpura intenso, con un ribete teja que denota su crianza en barrica. En nariz, aromas intensos a fruta fresca madura, flores y notas especiadas, acompañados de elegantes tostados y ahumados. En boca es fresco y goloso, profundo y maduro, con un paso potente y envolvente que termina en una agradable sensación dulce.",
+        "premios": "93 pts James Suckling",
         "revista": "https://online.fliphtml5.com/votjo/UTW-REVISTA---AGOSTO-2018---IMP2/"
       }
     ],
-    "opina": "Ensamblaje de viñas viejas del Maule (más de 60 años), 93 puntos James Suckling. Púrpura profundo de ribete teja: fruta madura, flores y especias sobre tostados y ahumados elegantes; boca potente, envolvente y de cierre dulce.",
+    "opina": "Ensamblaje de viñas viejas del Maule &mdash;más de 60 años&mdash; con 93 puntos de James Suckling . Púrpura profundo de ribete teja: fruta madura, flores y especias sobre tostados y ahumados elegantes, con 18 meses de roble francés bien integrados. Boca potente, envolvente y de cierre goloso. La edad del viñedo se nota en la concentración: plantas viejas dan menos uva pero mucho más intensa.",
     "sugiere": "Vino de guarda y volumen, para carnes contundentes y guisos: cazuela de vacuno, pimentones rellenos de carne, plateada al jugo, costillar de cerdo a la BBQ y quesos maduros."
   },
   {
@@ -1372,17 +1328,17 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2017",
+        "anada": "",
         "cepa": "100% Carignan",
-        "valle": "Maule",
+        "valle": "Valle del Maule",
         "grad": "14%",
         "crianza": "18 meses en barrica de roble francés",
-        "nota": "En nariz tiene frutas rojas, tonos especiados y florales, todo sumergido en una estructura de taninos importante. Es un vino con un elegante bouquet y mucha frescura. 94 Descorchados, 90 Tim Atkin, 91 Parker.",
-        "premios": "",
+        "nota": "En nariz, frutas rojas con tonos especiados y florales, todo sumergido en una estructura de taninos importante. Un vino de bouquet elegante y mucha frescura.",
+        "premios": "94 pts Descorchados · 91 pts Parker · 90 pts Tim Atkin",
         "revista": "https://online.fliphtml5.com/votjo/dnum/"
       }
     ],
-    "opina": "Carignan de secano del Maule, la especialidad de BOWines. Fruta roja con tonos especiados y florales sobre una estructura tánica seria; bouquet elegante, mucha frescura y ese nervio ácido de las viñas viejas.",
+    "opina": "Carignan de secano del Maule, la especialidad de BOWines, y uno de los vinos más reconocidos del catálogo: 94 puntos Descorchados, 91 de Parker y 90 de Tim Atkin . Tres guías distintas coincidiendo es una señal fuerte. Fruta roja con tonos especiados y florales sobre una estructura tánica seria, bouquet elegante y ese nervio ácido que solo dan las viñas viejas del secano.",
     "sugiere": "Acidez y estructura para carnes a la brasa y cocción lenta: entrecot a la pimienta, ragú de cordero con pappardelle, cordero al horno con romero, anticuchos y berenjenas a la parmesana."
   },
   {
@@ -1394,17 +1350,17 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2019",
+        "anada": "",
         "cepa": "100% Carignan",
-        "valle": "Maule",
+        "valle": "Valle del Maule",
         "grad": "13,5%",
-        "crianza": "1 año en depósito",
-        "nota": "Un delicioso Carignan que muestra arándanos secos, fresa, especias y hierbas frescas. De cuerpo medio y jugoso, con taninos redondos y una definición encantadora proporcionada por la firme columna vertebral de taninos.",
+        "crianza": "1 año en depósito, sin madera",
+        "nota": "Un delicioso Carignan que muestra arándano seco, fresa, especias y hierbas frescas. De cuerpo medio y jugoso, con taninos redondos y una firme columna ácida que le da definición.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/ueyh/"
       }
     ],
-    "opina": "Carignan de secano del Maule criado en depósito para preservar su fruta. Arándano seco, fresa, especias y hierbas frescas; cuerpo medio y jugoso, de taninos redondos y una firme columna ácida que le da definición.",
+    "opina": "El Carignan de entrada de BOWines: mismo secano del Maule que el Carae, pero criado un año en depósito en lugar de barrica, para preservar la fruta. Arándano seco, fresa, especias y hierbas frescas, con cuerpo medio, taninos redondos y esa columna ácida que define a la cepa. Más directo y bebible que su hermano mayor.",
     "sugiere": "Fruta y acidez de secano, para carnes rojas y quesos de carácter: cordero al horno con romero, costillar de vacuno a la BBQ, osobuco al vino tinto, berenjenas a la parmesana y queso manchego curado."
   },
   {
@@ -1416,17 +1372,17 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2016",
+        "anada": "",
         "cepa": "100% Cabernet Sauvignon",
         "valle": "Cachapoal Alto",
         "grad": "14%",
         "crianza": "30 meses en barrica de roble francés",
-        "nota": "En nariz, El Buen Viejo es frutoso e intenso, destacándose por sus notas especiadas y tostadas. En boca muestra un equilibrio perfecto entre la madurez de los taninos y la acidez. 93 La CAV, 90 Vinau, 90 Parker.",
+        "nota": "En nariz, frutoso e intenso, destacándose por sus notas especiadas y tostadas. En boca muestra un equilibrio perfecto entre la madurez de los taninos y la acidez.",
         "premios": "93 pts La Cav · 90 pts Parker · 90 pts Guía Vinau",
         "revista": "https://online.fliphtml5.com/votjo/dnum/"
       }
     ],
-    "opina": "Cabernet de guarda del Cachapoal Alto, 93 puntos La Cav. Frutoso e intenso, con notas especiadas y tostadas de sus 30 meses en roble; en boca un equilibrio fino entre taninos maduros y acidez, con la nobleza de un Cabernet clásico.",
+    "opina": "Cabernet de guarda del Cachapoal Alto, con 93 puntos La Cav y 90 tanto de Parker como de la Guía Vinau. Frutoso e intenso, con las notas especiadas y tostadas que dejan sus 30 meses en roble francés; en boca, un equilibrio fino entre taninos maduros y acidez. La nobleza de un Cabernet clásico, con el nombre bien puesto.",
     "sugiere": "Estructura y crianza para carnes a la brasa y platos de cordero: bife ancho a la parrilla, ragú de cordero con pappardelle, osobuco al vino tinto, entrecot a la pimienta y queso manchego curado."
   },
   {
@@ -1580,17 +1536,17 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2015",
-        "cepa": "75% Carignan / 25% Cabernet Sauvignon",
-        "valle": "Maule",
+        "anada": "",
+        "cepa": "75% Carignan · 25% Cabernet Sauvignon",
+        "valle": "Valle del Maule",
         "grad": "14%",
         "crianza": "12 meses en barrica",
-        "nota": "Color rojo intenso; predominan los aromas a fruta con elegante fondo de notas de crianza en roble francés. Especial bouquet formado por fresas, cerezas, ahumados, tabaco y mentolado. En boca fresco, untuoso y frutal; su estructura y cuerpo medio, sumados a su buena acidez, alargan el sabor en el retrogusto, terminando en un final a confitura. 92 puntos James Suckling.",
-        "premios": "",
+        "nota": "Rojo intenso; predominan los aromas a fruta con un elegante fondo de notas de crianza en roble francés. Bouquet especial formado por fresas, cerezas, ahumados, tabaco y mentolado. En boca es fresco, untuoso y frutal; su estructura y cuerpo medio, sumados a la buena acidez, alargan el sabor en el retrogusto y terminan en un final a confitura.",
+        "premios": "92 pts James Suckling",
         "revista": "https://online.fliphtml5.com/votjo/07---UTW-REVISTA---ENERO-2019/"
       }
     ],
-    "opina": "Ensamblaje del Maule, 92 puntos James Suckling: el Carignan pone acidez y carácter de secano, el Cabernet estructura y casis. Fresas, cerezas, ahumados, tabaco y mentol; boca untuosa y frutal, de cuerpo medio y cierre a confitura.",
+    "opina": "Ensamblaje del Maule con 92 puntos de James Suckling : el Carignan pone acidez y carácter de secano, el Cabernet aporta estructura y casis. Fresas, cerezas, ahumados, tabaco y mentol; boca untuosa y frutal, de cuerpo medio y cierre a confitura. Un tinto de nombre travieso pero factura seria.",
     "sugiere": "Estructura y frescura para carnes a la brasa y cordero: bife ancho a la parrilla, costillar de vacuno a la BBQ, cordero al horno con romero, lomo vetado a la parrilla y berenjenas a la parmesana."
   },
   {
@@ -1602,18 +1558,18 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2018",
+        "anada": "",
         "cepa": "100% Touriga Nacional",
-        "valle": "Colchagua",
+        "valle": "Valle de Colchagua",
         "grad": "13,5%",
         "crianza": "12 meses en barrica francesa de 4to uso",
-        "nota": "Vino de carácter frutal y especiado, con notas florales y buena estructura. En boca equilibrado, con taninos firmes y final persistente. 90 puntos James Suckling.",
-        "premios": "",
+        "nota": "Vino de carácter frutal y especiado, con notas florales y buena estructura. En boca es equilibrado, de taninos firmes y final persistente.",
+        "premios": "90 pts James Suckling",
         "revista": "https://online.fliphtml5.com/votjo/yvbn/"
       }
     ],
-    "opina": "Rareza chilena: Touriga Nacional, la gran cepa portuguesa, en Colchagua (90 puntos James Suckling). Carácter frutal y especiado con notas florales; en boca equilibrado, de taninos firmes y final persistente.",
-    "sugiere": "Cepa exótica de buena estructura para brasa y quesos maduros: lomo vetado a la parrilla, bife ancho a la parrilla, anticuchos, osobuco al vino tinto y queso manchego curado."
+    "opina": "Una rareza dentro del catálogo: Touriga Nacional, la gran cepa tinta de Portugal &mdash;la del Oporto&mdash; plantada en Colchagua. Hay muy poca en Chile. Carácter frutal y especiado con notas florales, taninos firmes y final persistente, con 90 puntos de James Suckling . Para quien ya probó todo lo clásico y quiere algo distinto.",
+    "sugiere": "Cepa exótica de buena estructura para brasa y quesos maduros: lomo vetado a la parrilla, bife ancho, anticuchos, osobuco al vino tinto y queso manchego curado."
   },
   {
     "name": "Calyptra Blend prestige",
@@ -6231,27 +6187,27 @@
     "anadas": [
       {
         "anada": "2022",
-        "cepa": "Cabernet sauvignon",
+        "cepa": "Cabernet Sauvignon",
         "valle": "Valle Central",
         "grad": "",
         "crianza": "",
-        "nota": "Púrpura. En nariz, perfumada, moras, casis, chocolate amargo, pimienta fresca, tabaco. En la. En boca, es rugoso, de cuerpo medio, rugoso.",
+        "nota": "Púrpura. En nariz, perfumada, con moras, casis, chocolate amargo, pimienta fresca y tabaco. En boca es rugoso y de cuerpo medio.",
         "premios": "90 pts La Cav",
         "revista": ""
       },
       {
         "anada": "2019",
-        "cepa": "Carmenère",
-        "valle": "Valle de Colchagua",
+        "cepa": "Carmén&egrave;re",
+        "valle": "Colchagua",
         "grad": "",
         "crianza": "",
-        "nota": "Cereza. En nariz, fruta roja madura, especias tostadas, fondo maduro, pero equilibrado. En boca, jugosa, tersa, fresca, compacta. Persistente.",
+        "nota": "Cereza. En nariz, fruta roja madura, especias tostadas y un fondo maduro pero equilibrado. En boca, jugosa, tersa, fresca, compacta y persistente.",
         "premios": "91 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Cabernet Sauvignon de Marty, de tintos honestos y de buena relación precio del valle central. En copa, casis, cedro y fruta negra, con taninos firmes.",
-    "sugiere": "Bife ancho a la parrilla, Entrecot a la pimienta, Berenjenas a la parmesana, Anticuchos, Queso manchego curado. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "Chaka es la línea de entrada de Marty y cambia de cepa según la cosecha: Cabernet Sauvignon del Valle Central el 2022, Carmén&egrave;re de Colchagua el 2019. Son tintos honestos, sin pretensiones de guarda, que apuntan a la relación precio-calidad &mdash; y con 90 y 91 puntos de La Cav a este precio, la cumplen. El Cabernet va por lo perfumado, con mora y chocolate amargo; el Carmén&egrave;re es más jugoso y equilibrado.",
+    "sugiere": "Tinto de mesa para carnes a la brasa: bife ancho a la parrilla, entrec&ocirc;te a la pimienta, anticuchos, berenjenas a la parmesana y queso manchego curado."
   },
   {
     "name": "Marty Clos de Fa",
@@ -6263,17 +6219,17 @@
     "anadas": [
       {
         "anada": "2021",
-        "cepa": "Carménère, Merlot, Syrah",
+        "cepa": "Carmén&egrave;re · Merlot · Syrah",
         "valle": "Pirque, valle del Maipo",
         "grad": "",
         "crianza": "",
-        "nota": "Rubí teja. En nariz, especiada, moras, frutillas, hojas de tabaco, clavo. En la. En boca, es frutal, maduro, amplio, envolvente. Sabroso.",
+        "nota": "Rubí teja. En nariz, especiada, con moras, frutillas, hojas de tabaco y clavo de olor. En boca es frutal, maduro, amplio, envolvente y sabroso.",
         "premios": "94 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Ensamblaje de Carménère, Merlot, Syrah de Pirque, valle del Maipo: el pimentón y las especias dulces del Carménère, la redondez y la ciruela del Merlot y la pimienta y la fruta negra de la Syrah. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas.",
-    "sugiere": "Costillar de vacuno a la BBQ, Bife ancho a la parrilla, Entrecot a la pimienta, Berenjenas a la parmesana, Queso manchego curado. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "El vino ícono de Marty y el más caro de la viña. Viene de Pirque, en el Maipo Alto, y junta Carmén&egrave;re, Merlot y Syrah: el primero aporta el pimentón y la especia dulce, el Merlot la redondez y la ciruela, la Syrah la pimienta y la fruta negra. El tono rubí teja indica que ya lleva evolución, y eso se nota en la nariz &mdash; las hojas de tabaco y el clavo de olor conviven con la fruta. Amplio y envolvente en boca. 94 puntos de La Cav.",
+    "sugiere": "Tinto estructurado y de guarda: costillar de vacuno a la BBQ, bife ancho a la parrilla, entrec&ocirc;te a la pimienta, berenjenas a la parmesana y queso manchego curado."
   },
   {
     "name": "Marty Corazón del Indio",
@@ -6285,27 +6241,27 @@
     "anadas": [
       {
         "anada": "2022",
-        "cepa": "Carménère, Cabernet Sauvignon, Syrah",
+        "cepa": "Carmén&egrave;re · Cabernet Sauvignon · Syrah",
         "valle": "Valle Central",
         "grad": "",
         "crianza": "",
-        "nota": "Cereza oscuro. En nariz, fruta madura, cerezas confitadas, fondo terroso, toques de madera. En boca, jugosa, tersa, fresca, con rica textura de tanino, angular, con agarre.",
+        "nota": "Cereza oscuro. En nariz, fruta madura, cerezas confitadas, fondo terroso y toques de madera. En boca, jugosa, tersa, fresca, con rica textura de tanino, angular y con agarre.",
         "premios": "93 pts La Cav",
         "revista": ""
       },
       {
         "anada": "2021",
-        "cepa": "Carménère, Cabernet Sauvignon, Syrah",
-        "valle": "Valle del Rapel",
+        "cepa": "Carmén&egrave;re · Cabernet Sauvignon · Syrah",
+        "valle": "Rapel",
         "grad": "",
         "crianza": "",
-        "nota": "Cereza oscuro con leve violeta. En nariz, fruta roja y negra madura, en capas, berries en compota, suaves especias tostadas. En boca, tersa, jugosa, con acidez estructural para un cuerpo amplio.",
+        "nota": "Cereza oscuro con leve violeta. En nariz, fruta roja y negra madura en capas, con berries en compota y suaves especias tostadas. En boca, tersa, jugosa, con acidez estructural para un cuerpo amplio.",
         "premios": "93 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Ensamblaje de Carménère, Cabernet Sauvignon, Syrah de Valle Central: el pimentón y las especias dulces del Carménère, la estructura y el casis del Cabernet y la pimienta y la fruta negra de la Syrah. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas.",
-    "sugiere": "Bife ancho a la parrilla, Queso manchego curado, Anticuchos, Entrecot a la pimienta, Lomo vetado a la parrilla. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "El ensamblaje de la casa, con las tres cepas que definen el tinto chileno moderno: el Carmén&egrave;re pone el pimentón y la especia dulce, el Cabernet la estructura y el casis, la Syrah la pimienta y la fruta negra. Ambas cosechas obtuvieron 93 puntos de La Cav pese a venir de zonas distintas &mdash; Rapel la 2021, Valle Central la 2022 &mdash; lo que habla de consistencia. La 2022 tiene un tanino más angular y con agarre; la 2021 es más amplia y en capas.",
+    "sugiere": "Tinto estructurado para carnes rojas a la brasa: bife ancho a la parrilla, entrec&ocirc;te a la pimienta, lomo vetado, anticuchos y queso manchego curado."
   },
   {
     "name": "Marty Goutte D’argent",
@@ -6317,27 +6273,27 @@
     "anadas": [
       {
         "anada": "2023",
-        "cepa": "Sauvignon blanc",
-        "valle": "Valle de Leyda",
+        "cepa": "Sauvignon Blanc",
+        "valle": "Leyda",
         "grad": "",
         "crianza": "",
-        "nota": "Pajizo. En nariz, perfumada, dulce, notas a tuna, pepino, melón calameño, piña. En la. En boca, es dulce, de cuerpo medio, jugoso.",
+        "nota": "Pajizo. En nariz, perfumada y dulce, con notas a tuna, pepino, melón calameño y piña. En boca es dulce, de cuerpo medio y jugoso.",
         "premios": "90 pts La Cav",
         "revista": ""
       },
       {
         "anada": "2022",
-        "cepa": "Pinot noir",
+        "cepa": "Pinot Noir",
         "valle": "Leyda, valle de San Antonio",
         "grad": "",
         "crianza": "",
-        "nota": "Rubí. En nariz, frutillas, maduras, frambuesas, guindas confitadas, canela, café tostado y rosas. En boca, acidez media-alta, taninos suaves, de sabores terrosos y final medio.",
+        "nota": "Rubí. En nariz, frutillas maduras, frambuesas, guindas confitadas, canela, café tostado y rosas. En boca, de acidez media-alta, con taninos suaves, sabores terrosos y final medio.",
         "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Sauvignon Blanc de Marty, de tintos honestos y de buena relación precio del valle central. En copa, cítricos, hierba fresca y una acidez vibrante.",
-    "sugiere": "Machas al natural, Reineta al vapor con cilantro, Ensalada de palta y camarón, Ensalada César con pollo, Queso de cabra fresco. Blanco fresco y cítrico: mariscos crudos, cebiches y ensaladas."
+    "opina": "Goutte d'Argent &mdash; gota de plata &mdash; es la línea de Marty en Leyda, el valle costero de clima frío que está a pocos kilómetros del Pacífico. Cambia de cepa según la cosecha: Sauvignon Blanc el 2023, Pinot Noir el 2022. El blanco es tropical y perfumado, con esa nota a melón calameño poco habitual; el Pinot va por la fruta roja confitada con canela y rosas, sobre taninos suaves y un fondo terroso.",
+    "sugiere": "El Sauvignon Blanc pide mariscos crudos y ensaladas: machas al natural, reineta al vapor con cilantro, ensalada de palta y camarón. El Pinot Noir, servido algo fresco, va con salmón, hongos y aves."
   },
   {
     "name": "Marty Kalak",
@@ -6349,17 +6305,17 @@
     "anadas": [
       {
         "anada": "2021",
-        "cepa": "Carménère, Cabernet Sauvignon, Syrah",
-        "valle": "Valle del Rapel",
+        "cepa": "Carmén&egrave;re · Cabernet Sauvignon · Syrah",
+        "valle": "Rapel",
         "grad": "",
         "crianza": "",
-        "nota": "Rubí oscuro de suave evolución. En nariz, berries maduros, con fondo herbal, en evolución, algo terroso. En boca, frutal, jugosa, tersa, de tanino pulido.",
+        "nota": "Rubí oscuro de suave evolución. En nariz, berries maduros con fondo herbal, en evolución y algo terroso. En boca, frutal, jugosa, tersa y de tanino pulido.",
         "premios": "93 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Ensamblaje de Carménère, Cabernet Sauvignon, Syrah de Valle del Rapel: el pimentón y las especias dulces del Carménère, la estructura y el casis del Cabernet y la pimienta y la fruta negra de la Syrah. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas.",
-    "sugiere": "Bife ancho a la parrilla, Queso manchego curado, Berenjenas a la parmesana, Lomo vetado a la parrilla, Costillar de vacuno a la BBQ. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "Kalak comparte el trío de cepas del Corazón del Indio &mdash; Carmén&egrave;re, Cabernet Sauvignon y Syrah del Rapel &mdash; pero apunta más alto y se nota en el tanino, más pulido y trabajado. La 2021 ya muestra suave evolución: los berries maduros conviven con un fondo herbal y terroso que da complejidad sin perder la jugosidad. Un tinto que está en buen momento para tomar.",
+    "sugiere": "Tinto estructurado para carnes rojas a la brasa y cocciones lentas: bife ancho a la parrilla, lomo vetado, costillar de vacuno a la BBQ, berenjenas a la parmesana y queso manchego curado."
   },
   {
     "name": "Marty Love",
@@ -6371,27 +6327,27 @@
     "anadas": [
       {
         "anada": "2023",
-        "cepa": "Chardonnay, Sauvignon Blanc",
+        "cepa": "Chardonnay · Sauvignon Blanc",
         "valle": "Valle Central",
         "grad": "",
         "crianza": "",
-        "nota": "Con suaves toques verdosos. En nariz, fruta blanca madura con matices de espárragos, algo de tallos, en un fondo levemente tropical. En boca, madura, con volumen y textura, rica acidez, profundo.",
+        "nota": "Amarillo con suaves toques verdosos. En nariz, fruta blanca madura con matices de espárragos, algo de tallos, sobre un fondo levemente tropical. En boca, madura, con volumen y textura, rica acidez y profunda.",
         "premios": "91 pts La Cav",
         "revista": ""
       },
       {
         "anada": "2020",
-        "cepa": "Cabernet Sauvignon, Carménère",
+        "cepa": "Cabernet Sauvignon · Carmén&egrave;re",
         "valle": "Valle Central",
         "grad": "",
         "crianza": "",
-        "nota": "Con suaves toques verdosos. En nariz, fruta blanca madura con matices de espárragos, algo de tallos, en un fondo levemente tropical. En boca, jugosa, madura, de tanino con cierto agarre, compacto.",
+        "nota": "En boca, jugosa y madura, de tanino con cierto agarre y compacto.",
         "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Blanco de Marty, de tintos honestos y de buena relación precio del valle central. En copa, fruta blanca y frescura cítrica.",
-    "sugiere": "Queso brie, Pavo al horno, Risotto de camarones, Congrio a la mantequilla, Pollo al limón con hierbas. Blanco con cuerpo: pescados en salsa, mariscos gratinados y aves cremosas."
+    "opina": "Love es la línea más accesible de Marty y cambia por completo según el año: un blanco de Chardonnay y Sauvignon Blanc el 2023, un tinto de Cabernet Sauvignon y Carmén&egrave;re el 2020. Ambos del Valle Central y ambos con más de 90 puntos de La Cav a un precio de entrada. El blanco tiene más cuerpo del esperable, con volumen y textura; el tinto es compacto y de tanino con agarre.",
+    "sugiere": "Depende de la cosecha: el blanco va con pescados en salsa, mariscos gratinados y aves cremosas &mdash; risotto de camarones, congrio a la mantequilla, pollo al limón. El tinto pide carnes de cuerpo medio y quesos maduros."
   },
   {
     "name": "Marty Newen",
@@ -6403,17 +6359,17 @@
     "anadas": [
       {
         "anada": "2019",
-        "cepa": "Cabernet Sauvignon, Carménère, Syrah, Cabernet Franc",
+        "cepa": "Cabernet Sauvignon · Carmén&egrave;re · Syrah · Cabernet Franc",
         "valle": "Valle del Rapel",
         "grad": "",
         "crianza": "",
-        "nota": "En boca, jugosa, tersa, frutal, de textura tánica con trama, persistente.",
+        "nota": "En boca, jugosa, tersa y frutal, de textura tánica con trama y persistente.",
         "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Ensamblaje de Cabernet Sauvignon, Carménère, Syrah, Cabernet Franc de Valle del Rapel: la estructura y el casis del Cabernet, el pimentón y las especias dulces del Carménère y la pimienta y la fruta negra de la Syrah. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas.",
-    "sugiere": "Bife ancho a la parrilla, Cordero al horno con romero, Entrecot a la pimienta, Anticuchos, Queso manchego curado. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "Ensamblaje de cuatro cepas del Valle del Rapel: la estructura y el casis del Cabernet Sauvignon, el pimentón y las especias dulces del Carmén&egrave;re, la pimienta y la fruta negra de la Syrah, y el toque herbal y floral del Cabernet Franc. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas, con textura tánica de buena trama y final persistente.",
+    "sugiere": "Bife ancho a la parrilla, cordero al horno con romero, entrecot a la pimienta, anticuchos y queso manchego curado. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Marty Pacha",
@@ -6429,7 +6385,7 @@
         "valle": "Valle Central",
         "grad": "",
         "crianza": "",
-        "nota": "Cereza intenso. En nariz, a frutos rojos maduros, pimienta fresca. En boca, mantiene su estilo, jugoso, de tanino con fibra.",
+        "nota": "Cereza intenso. En nariz, frutos rojos maduros y pimienta fresca. En boca mantiene su estilo: jugoso, de tanino con fibra.",
         "premios": "93 pts La Cav",
         "revista": ""
       },
@@ -6439,13 +6395,13 @@
         "valle": "Valle del Maule",
         "grad": "",
         "crianza": "",
-        "nota": "Violeta. En nariz, perfumada, hojas secas, pimienta fresca, chocolate. Rojo violeta. Nariz perfumada, hojas secas, pimienta fresca, chocolate. En la boca es frutal, de cuerpo medio, firme.",
+        "nota": "Rojo violeta. En nariz, perfumada, con hojas secas, pimienta fresca y chocolate. En boca es frutal, de cuerpo medio y firme.",
         "premios": "90 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Merlot de Marty, de tintos honestos y de buena relación precio del valle central. En copa, ciruela, fruta roja madura y taninos suaves.",
-    "sugiere": "Lasaña boloñesa, Pastel de choclo, Pizza de carne, Empanadas de pino, Costillar de cerdo a la BBQ. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
+    "opina": "Pacha es el Merlot de Marty, uno de esos tintos honestos de muy buena relación precio-calidad. Ciruela, fruta roja madura y taninos suaves, con una vuelta de pimienta fresca que le da nervio. El 2023 del Valle Central es el más jugoso y el mejor puntuado; el 2021 del Maule resulta más perfumado y de cuerpo medio.",
+    "sugiere": "Lasaña boloñesa, pastel de choclo, pizza de carne, empanadas de pino y costillar de cerdo a la BBQ. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
   },
   {
     "name": "Marty Pillpintu",
@@ -6456,48 +6412,48 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2023",
+        "anada": "",
         "cepa": "Chardonnay",
         "valle": "Valle de Leyda",
         "grad": "",
         "crianza": "",
-        "nota": "Dorado plata. En nariz, cítrica, piña, vainilla, notas a grafito. En la. Dorado plata. Nariz cítrica, piña, vainilla, notas a grafito. En la boca es cítrico, jugoso, amplio.",
+        "nota": "Dorado plata. En nariz, cítrica, piña, vainilla y notas a grafito. En boca es cítrico, jugoso y amplio.",
         "premios": "92 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2021",
-        "cepa": "Cabernet sauvignon",
+        "anada": "",
+        "cepa": "Cabernet Sauvignon",
         "valle": "Valle de Colchagua",
         "grad": "",
         "crianza": "",
-        "nota": "Rubí oscuro. En nariz, berries rojos y negros maduros, con un toque especiado, con leve matiz a regaliz. En boca, tersa, jugosa, frutal, de textura media.",
+        "nota": "Rubí oscuro. En nariz, berries rojos y negros maduros, con un toque especiado y un leve matiz a regaliz. En boca, tersa, jugosa, frutal y de textura media.",
         "premios": "92 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2020",
-        "cepa": "Cabernet sauvignon",
+        "anada": "",
+        "cepa": "Cabernet Sauvignon",
         "valle": "Valle de Colchagua",
         "grad": "",
         "crianza": "",
-        "nota": "Cereza con ribetes rubíes. En nariz, aromas frutales y especiados, frutilla, cereza, mora, notas a cardamomo, regaliz. En boca, acidez media, tanino frutal, volumen medio.",
+        "nota": "Cereza con ribetes rubíes. En nariz, aromas frutales y especiados: frutilla, cereza, mora, con notas a cardamomo y regaliz. En boca, acidez media, tanino frutal y volumen medio.",
         "premios": "92 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2019",
+        "anada": "",
         "cepa": "Malbec",
         "valle": "Valle de Curicó",
         "grad": "",
         "crianza": "",
-        "nota": "Violeta brillante. En nariz, notas florales, violetas, lavanda, regaliz, aromas a frambuesas, moras, ciruelas negras maduras. En boca, acidez media y tanino jugoso.",
+        "nota": "Violeta brillante. En nariz, notas florales de violeta y lavanda, regaliz y aromas a frambuesa, mora y ciruela negra madura. En boca, acidez media y tanino jugoso.",
         "premios": "93 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Chardonnay de Marty, de tintos honestos y de buena relación precio del valle central. En copa, fruta blanca, notas cremosas y volumen.",
-    "sugiere": "Congrio a la mantequilla, Pavo al horno, Pollo al limón con hierbas, Salmón a la crema, Machas a la parmesana. Blanco con cuerpo: pescados en salsa, mariscos gratinados y aves cremosas."
+    "opina": "Pillpintu &mdash;mariposa en mapudungun&mdash; es la línea más cambiante de Marty: cada cosecha vuela a otra cepa y a otro valle. Chardonnay de Leyda el 2023, Cabernet Sauvignon de Colchagua el 2021 y 2020, Malbec de Curicó el 2019. Todas por sobre los 92 puntos de La Cav, lo que habla de una mano segura más allá de la variedad.",
+    "sugiere": "Depende de la cosecha. El Chardonnay pide congrio a la mantequilla, salmón a la crema, machas a la parmesana o pollo al limón con hierbas. Los Cabernet y el Malbec van con carnes rojas a la parrilla, cordero y quesos maduros."
   },
   {
     "name": "Marty Ser",
@@ -6508,28 +6464,28 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2021",
-        "cepa": "Cabernet sauvignon",
-        "valle": "Pirque, valle del Maipo",
+        "anada": "",
+        "cepa": "Cabernet Sauvignon",
+        "valle": "Pirque, Valle del Maipo",
         "grad": "",
         "crianza": "",
-        "nota": "En boca, es maduro, rugoso, de cuerpo medio.",
+        "nota": "En boca es maduro, de textura rugosa y cuerpo medio.",
         "premios": "93 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2017",
-        "cepa": "Cabernet sauvignon",
+        "anada": "",
+        "cepa": "Cabernet Sauvignon",
         "valle": "Valle del Maipo",
         "grad": "",
         "crianza": "",
-        "nota": "En boca, es frutal, maduro, de tanino medio. Rugoso.",
+        "nota": "En boca es frutal y maduro, de tanino medio y textura rugosa.",
         "premios": "93 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Cabernet Sauvignon de Marty, de tintos honestos y de buena relación precio del valle central. En copa, casis, cedro y fruta negra, con taninos firmes.",
-    "sugiere": "Bife ancho a la parrilla, Entrecot a la pimienta, Berenjenas a la parmesana, Osobuco braseado al vino tinto, Costillar de vacuno a la BBQ. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "Ser es el Cabernet Sauvignon de guarda de Marty y nace en Pirque, uno de los mejores sectores del Maipo para esta cepa. Casis, cedro y fruta negra, con taninos firmes y esa textura rugosa que en el Cabernet de Pirque es sello de origen, no defecto. Las dos cosechas puntuadas con 93 puntos de La Cav.",
+    "sugiere": "Bife ancho a la parrilla, entrecot a la pimienta, berenjenas a la parmesana, osobuco braseado al vino tinto y costillar de vacuno a la BBQ. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Mendoza & Carriel Atavus",
@@ -7406,38 +7362,38 @@
     "available": false,
     "anadas": [
       {
-        "anada": "NV",
-        "cepa": "Chardonnay, Pinot Noir",
+        "anada": "",
+        "cepa": "60% Chardonnay · 40% Pinot Noir",
         "valle": "Valle del Biobío",
         "grad": "12%",
-        "crianza": "Método Charmat",
-        "nota": "Rosa piel de cebolla. Nariz perfumada, frutos rojos ácidos, tierra seca, champiñones, piña verde. En la boca es frutal, jugoso, cítrico, de una acidez importante. Amarillo dorado con ribetes verdosos. Burbuja fina, constante, que forma corona. Aromas frutales, piña madura, ciruelas amarillas, notas a panadería, levaduras, caramelo. En boca es de acidez y volumen medio, cremoso, frutal.",
-        "premios": "92 pts La Cav",
-        "revista": ""
-      },
-      {
-        "anada": "2020",
-        "cepa": "60% Chardonnay / 40% Pinot Noir",
-        "valle": "Biobío",
-        "grad": "12%",
-        "crianza": "Método Charmat",
-        "nota": "Color amarillo pálido, transparente y brillante, con burbujas de tamaño medio bien integradas. Nariz de agradables notas cítricas como pomelo y aromas de manzana verde. En boca fresco, de buena acidez y final limpio.",
+        "crianza": "",
+        "nota": "Amarillo pálido, transparente y brillante, con burbujas de tamaño medio bien integradas. En nariz, agradables notas cítricas de pomelo y aromas de manzana verde. En boca es fresco, de buena acidez y final limpio.",
         "premios": "",
         "revista": ""
       },
       {
-        "anada": "2019",
-        "cepa": "60 % Chardonnay- 40 % Pinot Noir",
+        "anada": "",
+        "cepa": "60% Chardonnay · 40% Pinot Noir",
         "valle": "Valle del Biobío",
         "grad": "12%",
         "crianza": "",
-        "nota": "Damasco brillante, con burbujas pequeñas que forman corona. En nariz, con notas sutiles a flores blancas, bollería, frutos secos. En boca, jugoso, de una acidez media, amable. Envolvente.",
-        "premios": "Oro - Catad'Or",
+        "nota": "Damasco brillante, con burbujas pequeñas que forman corona. En nariz, notas sutiles a flores blancas, bollería y frutos secos. En boca es jugoso, de acidez media y amable. Envolvente.",
+        "premios": "Oro &mdash; Catad'Or",
+        "revista": ""
+      },
+      {
+        "anada": "",
+        "cepa": "Chardonnay · Pinot Noir",
+        "valle": "Valle del Biobío",
+        "grad": "12%",
+        "crianza": "",
+        "nota": "Amarillo dorado con ribetes verdosos. Burbuja fina y constante, que forma corona. Aromas frutales de piña madura y ciruela amarilla, con notas a panadería, levaduras y caramelo. En boca, de acidez y volumen medio, cremoso y frutal.",
+        "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Espumante de Biobío: burbuja fina, cítricos y un final seco y fresco. Con método Charmat.",
-    "sugiere": "Empanaditas de queso, Croquetas de jamón, Ostras al limón, Ceviche de reineta, Tempura de camarón. Espumante fresco: aperitivo, mariscos, frituras ligeras y tablas de fiesta."
+    "opina": "Espumante del Biobío por método Charmat, con la mezcla clásica de Chardonnay y Pinot Noir. El clima frío del sur da la acidez que un buen espumante necesita: burbuja fina, cítricos, manzana verde y un fondo de panadería y levaduras. Seco y fresco, con Oro en el Catad'Or y 92 puntos La Cav.",
+    "sugiere": "Empanaditas de queso, croquetas de jamón, ostras al limón, ceviche de reineta y tempura de camarón. Espumante fresco: aperitivo, mariscos, frituras ligeras y tablas de fiesta. Servir a 6-8 grados."
   },
   {
     "name": "Mujer Andina El Infaltable",
@@ -7448,18 +7404,18 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2022",
-        "cepa": "Carmenère",
+        "anada": "",
+        "cepa": "Carmén&egrave;re",
         "valle": "Valle del Maipo",
         "grad": "",
         "crianza": "",
-        "nota": "Ciruela. En nariz, especiada, violeta, moras, pimiento morrón. Chocolate amargo. En boca, es maduro, tánico, de cuerpo medio, firme.",
+        "nota": "Ciruela. En nariz, especiada, con violeta, moras, pimiento morrón y chocolate amargo. En boca es maduro, tánico, de cuerpo medio y firme.",
         "premios": "92 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2018",
-        "cepa": "Carménère",
+        "anada": "",
+        "cepa": "Carmén&egrave;re",
         "valle": "Maipo Costa",
         "grad": "",
         "crianza": "",
@@ -7468,8 +7424,8 @@
         "revista": ""
       }
     ],
-    "opina": "Carménère de Valle del Maipo: pimentón, especias dulces y frutos rojos, con taninos amables.",
-    "sugiere": "Pastel de choclo, Costillar de cerdo a la BBQ, Pimentones rellenos de carne, Queso gouda maduro, Ají de gallina. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
+    "opina": "El Carmén&egrave;re de la casa y, como dice su nombre, el que no puede faltar. Pimentón, especias dulces y frutos rojos con taninos amables, más un fondo de chocolate amargo que le da seriedad. Dos cosechas con 92 puntos en distintas guías &mdash;La Cav el 2022, Descorchados el 2018&mdash;, lo que habla de consistencia año a año.",
+    "sugiere": "Pastel de choclo, costillar de cerdo a la BBQ, pimentones rellenos de carne, queso gouda maduro y ají de gallina. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
   },
   {
     "name": "Mujer Andina Kelüna Rosé",
@@ -7480,28 +7436,28 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2024",
-        "cepa": "Cabernet Sauvignon, Cabernet Franc",
+        "anada": "",
+        "cepa": "Cabernet Sauvignon · Cabernet Franc",
         "valle": "Valle del Maipo",
         "grad": "",
         "crianza": "",
-        "nota": "En boca, jugosa, tersa, cítrica, de fondo algo amargo.",
+        "nota": "En boca, jugosa, tersa y cítrica, de fondo levemente amargo.",
         "premios": "91 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2021",
+        "anada": "",
         "cepa": "Cabernet Sauvignon",
         "valle": "Valle del Maipo",
         "grad": "",
         "crianza": "",
-        "nota": "Damasco intenso, brillante. En nariz, aromas frutales, cerezas, frutillas, moras maduras, notas a miel, caramelo. En boca, acidez media, frutal.",
+        "nota": "Damasco intenso y brillante. En nariz, aromas frutales de cereza, frutilla y mora madura, con notas a miel y caramelo. En boca, acidez media y frutal.",
         "premios": "91 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "El rosé de Mujer Andina: un Cabernet del Valle del Maipo vinificado en rosado. Fruta roja fresca —frutilla, cereza y damasco— sobre una boca cítrica, jugosa y de buena acidez. Seco, liviano y muy versátil para la mesa.",
-    "sugiere": "Ceviche de salmón, Ensalada caprese, Sushi rolls, Salmón a la plancha, Pad thai de camarones. Rosado versátil: ideal para cocina fresca, pescados, mariscos, sushi y ensaladas de verano."
+    "opina": "El rosé de Mujer Andina: un Cabernet del Valle del Maipo vinificado en rosado, con Cabernet Franc sumado en la cosecha 2024. Fruta roja fresca &mdash;frutilla, cereza y damasco&mdash; sobre una boca cítrica, jugosa y de buena acidez. Seco, liviano y muy versátil para la mesa. Ambas cosechas con 91 puntos La Cav.",
+    "sugiere": "Ceviche de salmón, ensalada caprese, sushi rolls, salmón a la plancha y pad thai de camarones. Rosado versátil: ideal para cocina fresca, pescados, mariscos, sushi y ensaladas de verano. Servir bien frío, a 8-10 grados."
   },
   {
     "name": "Mujer Andina Levita Extra Brut Vintage Rosé",
@@ -7512,28 +7468,28 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2019",
-        "cepa": "Syrah",
+        "anada": "",
+        "cepa": "100% Syrah",
         "valle": "Valle del Maipo",
         "grad": "12%",
         "crianza": "",
-        "nota": "Damasco brillante, con burbujas pequeñas que forman corona. En nariz, con notas sutiles a flores blancas, bollería, frutos secos. Damasco brillante, con burbujas pequeñas que forman corona. Nariz con notas sutiles a flores blancas, bollería, frutos secos. En la boca es jugoso, de una acidez media, amable. Envolvente.",
-        "premios": "Oro - Catad'Or · 94 pts La Cav",
+        "nota": "Damasco brillante, con burbujas pequeñas que forman corona. En nariz, notas sutiles a flores blancas, bollería y frutos secos. En boca es jugoso, de acidez media y amable. Envolvente.",
+        "premios": "Oro &mdash; Catad'Or · 94 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2017",
+        "anada": "",
         "cepa": "100% Syrah",
         "valle": "Valle del Maipo",
         "grad": "12,5%",
         "crianza": "",
         "nota": "",
-        "premios": "Plata - Catad'Or · 93 pts Descorchados",
+        "premios": "Plata &mdash; Catad'Or · 93 pts Descorchados",
         "revista": ""
       }
     ],
-    "opina": "Blanco de Valle del Maipo: fruta blanca y frescura cítrica.",
-    "sugiere": "Croquetas de jamón, Jamón serrano con melón, Empanaditas de queso, Ostras al limón, Tartaletas de frutos rojos. Espumante fresco: aperitivo, mariscos, frituras ligeras y tablas de fiesta."
+    "opina": "El espumante de más alto vuelo de Mujer Andina: un rosé extra brut de Syrah pura, con añada declarada &mdash;algo poco común en Chile, donde casi todos los espumantes son sin cosecha. Los 94 puntos La Cav de la cosecha 2019 son el puntaje más alto de la viña, y el Oro del Catad'Or lo respalda. Burbuja fina, bollería y frutos secos sobre una boca envolvente. Extra brut: prácticamente sin azúcar.",
+    "sugiere": "Croquetas de jamón, jamón serrano con melón, empanaditas de queso, ostras al limón y tartaletas de frutos rojos. Espumante seco de aperitivo, que también aguanta mariscos, frituras ligeras y tablas de fiesta. Servir a 6-8 grados."
   },
   {
     "name": "Mujer Andina Pinot Noir",
@@ -7544,18 +7500,18 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2021",
-        "cepa": "Pinot noir",
+        "anada": "",
+        "cepa": "Pinot Noir",
         "valle": "Valle de Cautín",
         "grad": "",
         "crianza": "",
-        "nota": "Cereza con ribetes rubíes. En nariz, cereza, mora, guinda, notas terrosas, regaliz y pimienta negra. En boca, acidez media-alta, tanino fresco y jugoso, final medio.",
+        "nota": "Cereza con ribetes rubíes. En nariz, cereza, mora y guinda, con notas terrosas, regaliz y pimienta negra. En boca, acidez media-alta, tanino fresco y jugoso, de final medio.",
         "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Pinot Noir de Valle de Cautín: frutilla, guinda y un perfil sedoso y delicado.",
-    "sugiere": "Pato confitado, Tabla de charcutería, Risotto de hongos, Queso brie, Champiñones rellenos. Tinto ligero y fresco: salmón, hongos, aves y charcutería."
+    "opina": "Pinot Noir del Valle de Cautín, en plena Araucanía: una de las zonas vitícolas más australes de Chile y todavía poco explorada. El clima frío y lluvioso es exigente, pero cuando la cosecha acompaña da Pinot de acidez viva y perfil sedoso. Cereza, guinda y un fondo terroso con pimienta negra. 92 puntos La Cav para una zona que recién se está poniendo en el mapa.",
+    "sugiere": "Pato confitado, tabla de charcutería, risotto de hongos, queso brie y champiñones rellenos. Tinto ligero y fresco: salmón, hongos, aves y charcutería. Servir a 14-16 grados."
   },
   {
     "name": "Narbona Cabernet Sauvignon",
@@ -9390,58 +9346,58 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2023",
-        "cepa": "85% Cabernet Sauvignon, 15% Tinto",
-        "valle": "Cachapoal",
+        "anada": "",
+        "cepa": "85% Cabernet Sauvignon · 15% otras tintas",
+        "valle": "Valle del Cachapoal",
         "grad": "14%",
         "crianza": "18 meses de guarda",
-        "nota": "Este Cabernet Sauvignon 2023 es una auténtica postal del Valle del Cachapoal. Despliega una intensa y fresca nariz de fruta roja y negra, donde mandan las cerezas, frambuesas y un toque dulce de higos. Pronto se suman capas sutiles de pimienta negra, tierra húmeda y una nota herbal que le da vida. Un fondo de café y chocolate delata una crianza bien integrada.",
-        "premios": "Oro - Catad'Or",
+        "nota": "Una auténtica postal del Valle del Cachapoal. Despliega una nariz intensa y fresca de fruta roja y negra, donde mandan las cerezas, las frambuesas y un toque dulce de higos. Pronto se suman capas sutiles de pimienta negra, tierra húmeda y una nota herbal que le da vida. Un fondo de café y chocolate delata una crianza bien integrada.",
+        "premios": "Oro &mdash; Catad'Or",
         "revista": ""
       },
       {
-        "anada": "2022",
-        "cepa": "Cabernet sauvignon",
+        "anada": "",
+        "cepa": "Cabernet Sauvignon",
         "valle": "Valle del Rapel",
         "grad": "14%",
         "crianza": "10 meses en barrica de roble",
-        "nota": "Rubí oscuro. En nariz, berries maduros, algo de cerezas confitadas, fondo de toques acaramelados. En boca, jugosa, tersa, fresca, frutal, madura.",
+        "nota": "Rubí oscuro. En nariz, berries maduros, algo de cerezas confitadas y un fondo de toques acaramelados. En boca, jugosa, tersa, fresca, frutal y madura.",
         "premios": "93 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2021",
+        "anada": "",
         "cepa": "Cabernet Sauvignon",
-        "valle": "Rapel",
+        "valle": "Valle del Rapel",
         "grad": "",
         "crianza": "",
-        "nota": "Color dorado intenso y destellos color verde. En nariz : Aromas frutales con notas de piña y durazno y algo de pan fresco. En boca : Acidez marcada y equilibrada, suaves y delicadas burbujas en copa, de cuerpo medio, elegante y sedoso.",
+        "nota": "",
         "premios": "92 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2018",
-        "cepa": "Cabernet sauvignon",
+        "anada": "",
+        "cepa": "Cabernet Sauvignon",
         "valle": "Valle del Rapel",
         "grad": "14%",
         "crianza": "14 meses en barrica de madera",
-        "nota": "Cereza oscuro con algo de violeta. En nariz, fruta madura, suaves especias, leve tostado de madera. En boca, jugosa, con agarre, de media profundidad.",
+        "nota": "Cereza oscuro con algo de violeta. En nariz, fruta madura, suaves especias y un leve tostado de madera. En boca, jugosa, con agarre y de media profundidad.",
         "premios": "92 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2013",
+        "anada": "",
         "cepa": "Cabernet Sauvignon",
-        "valle": "Rapel",
+        "valle": "Valle del Rapel",
         "grad": "",
         "crianza": "",
-        "nota": "Color dorado intenso y destellos color verde. En nariz : Aromas frutales con notas de piña y durazno y algo de pan fresco. En boca : Acidez marcada y equilibrada, suaves y delicadas burbujas en copa, de cuerpo medio, elegante y sedoso.",
+        "nota": "",
         "premios": "91 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Ensamblaje de 85% Cabernet Sauvignon, 15% Tinto de Cachapoal: casis, cedro y fruta negra, con taninos firmes. Con 18 meses de guarda.",
-    "sugiere": "Bife ancho a la parrilla, Berenjenas a la parmesana, Osobuco braseado al vino tinto, Entrecot a la pimienta, Costillar de vacuno a la BBQ. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "El Cabernet de la casa en Puntí Ferrer, con cinco cosechas documentadas y una consistencia notable: entre 91 y 93 puntos de La Cav año tras año, más el Oro del Catad'Or en la 2023. Casis, cereza y fruta negra sobre taninos firmes, con la crianza siempre bien integrada y nunca invasiva. La 2023 es la más completa: 18 meses de guarda y un fondo de café y chocolate que le da profundidad.",
+    "sugiere": "Bife ancho a la parrilla, berenjenas a la parmesana, osobuco braseado al vino tinto, entrecot a la pimienta y costillar de vacuno a la BBQ. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Puntí Ferrer Copperland Red Blend",
@@ -9452,18 +9408,18 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2022",
-        "cepa": "Cabernet Sauvignon, Malbec, Carménère",
+        "anada": "",
+        "cepa": "Cabernet Sauvignon · Malbec · Carmén&egrave;re",
         "valle": "Valle del Cachapoal",
         "grad": "14%",
         "crianza": "10 meses en barrica de roble",
-        "nota": "En boca, es frutal, jugoso, maduro, de cuerpo medio.",
+        "nota": "En boca es frutal, jugoso, maduro y de cuerpo medio.",
         "premios": "91 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Ensamblaje de Cabernet Sauvignon, Malbec, Carménère de Valle del Cachapoal: la estructura y el casis del Cabernet, el color y las moras del Malbec y el pimentón y las especias dulces del Carménère. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas. Con 10 meses en barrica de roble.",
-    "sugiere": "Bife ancho a la parrilla, Costillar de vacuno a la BBQ, Cordero al horno con romero, Berenjenas a la parmesana, Anticuchos. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "Ensamblaje del Cachapoal donde cada cepa cumple un rol claro: la estructura y el casis del Cabernet, el color y las moras del Malbec, el pimentón y las especias dulces del Carmén&egrave;re. Diez meses de barrica lo redondean sin taparlo. 91 puntos La Cav por $5.500 es de las mejores relaciones precio-calidad del catálogo.",
+    "sugiere": "Bife ancho a la parrilla, costillar de vacuno a la BBQ, cordero al horno con romero, berenjenas a la parmesana y anticuchos. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Puntí Ferrer Garage Blend",
@@ -9474,28 +9430,28 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2020",
-        "cepa": "Merlot, Cabernet Sauvignon, Carménère",
+        "anada": "",
+        "cepa": "Merlot · Cabernet Sauvignon · Carmén&egrave;re",
         "valle": "Valle del Cachapoal",
         "grad": "14,5%",
-        "crianza": "10 meses en barrica.**",
-        "nota": "Cereza oscuro, de leve opacidad. En nariz, berries silvestres con toques vegetales, algo de aceituna, especias, tostados. En boca, jugosa, tersa, fresca, compacta.",
+        "crianza": "10 meses en barrica",
+        "nota": "Cereza oscuro, de leve opacidad. En nariz, berries silvestres con toques vegetales, algo de aceituna, especias y tostados. En boca, jugosa, tersa, fresca y compacta.",
         "premios": "92 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2017",
-        "cepa": "Merlot, Cabernet Sauvignon, Carménère",
-        "valle": "Rapel",
+        "anada": "",
+        "cepa": "Merlot · Cabernet Sauvignon · Carmén&egrave;re",
+        "valle": "Valle del Rapel",
         "grad": "14,5%",
-        "crianza": "10 meses en barrica.**",
-        "nota": "Cereza oscuro, de leve opacidad. En nariz, berries silvestres con toques vegetales, algo de aceituna, especias, tostados. En boca, jugosa, tersa, fresca, compacta.",
+        "crianza": "10 meses en barrica",
+        "nota": "Cereza oscuro, de leve opacidad. En nariz, berries silvestres con toques vegetales, algo de aceituna, especias y tostados. En boca, jugosa, tersa, fresca y compacta.",
         "premios": "93 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Ensamblaje de Merlot, Cabernet Sauvignon, Carménère de Valle del Cachapoal: la redondez y la ciruela del Merlot, la estructura y el casis del Cabernet y el pimentón y las especias dulces del Carménère. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas. Con 10 meses en barrica.",
-    "sugiere": "Bife ancho a la parrilla, Osobuco braseado al vino tinto, Anticuchos, Berenjenas a la parmesana, Lomo vetado a la parrilla. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "Garage Blend juega con tres cepas bordelesas: la redondez y la ciruela del Merlot, la estructura y el casis del Cabernet, el pimentón y las especias dulces del Carmén&egrave;re. Lo distinto está en el perfil: berries silvestres con toques vegetales y un dejo de aceituna que le da carácter mediterráneo, poco habitual en un tinto chileno. Diez meses de barrica y una boca compacta y fresca. La 2017 alcanzó 93 puntos La Cav.",
+    "sugiere": "Bife ancho a la parrilla, osobuco braseado al vino tinto, anticuchos, berenjenas a la parmesana y lomo vetado a la parrilla. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Puntí Ferrer Gran Reserva",
@@ -9506,58 +9462,58 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2024",
-        "cepa": "Cabernet sauvignon",
+        "anada": "",
+        "cepa": "Cabernet Sauvignon",
         "valle": "Valle del Rapel",
         "grad": "14%",
         "crianza": "10 meses",
-        "nota": "Rubí teja. En nariz, especiada, frutos negros, clavo de olor, chocolate amargo. En la. En boca, jugosa, tersa, con un tanino dulce, de media profundidad.",
+        "nota": "Rubí teja. En nariz, especiada, con frutos negros, clavo de olor y chocolate amargo. En boca, jugosa y tersa, de tanino dulce y media profundidad.",
         "premios": "90 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2023",
-        "cepa": "Sauvignon blanc",
+        "anada": "",
+        "cepa": "Sauvignon Blanc",
         "valle": "Valle de Leyda",
-        "grad": "14%",
-        "crianza": "18 meses en barrica de roble",
-        "nota": "Plata. En nariz, a pepino, piña verde, lima, cebollín. En la. Amarillo plata. Nariz a pepino, piña verde, lima, cebollín. En la boca es cítrico, jugoso, lineal.",
+        "grad": "",
+        "crianza": "",
+        "nota": "Amarillo plata. En nariz, pepino, piña verde, lima y cebrollín. En boca es cítrico, jugoso y lineal.",
         "premios": "91 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2022",
+        "anada": "",
         "cepa": "Malbec",
         "valle": "Valle de Colchagua",
         "grad": "14%",
         "crianza": "10 meses en barrica de madera",
-        "nota": "Violeta. En nariz, madura, moras, frambuesa, especiado, licorosa. En la. Rojo violeta. Nariz madura, moras, frambuesa, especiado, licorosa. En la boca es maduro, de cuerpo medio, un poco plano.",
+        "nota": "Rojo violeta. En nariz, madura, con moras, frambuesa, especias y un fondo licoroso. En boca, maduro y de cuerpo medio.",
         "premios": "Oro Catad'Or 2024 · 90 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2020",
-        "cepa": "Carmenère",
+        "anada": "",
+        "cepa": "Carmén&egrave;re",
         "valle": "Valle del Rapel",
         "grad": "14%",
         "crianza": "14 meses en barrica de roble",
-        "nota": "Cereza con ribetes ciruelas. En nariz, aromas frutales, moras, guindas secas, ciruela, notas a chocolate amargo. En boca, acidez y tanino medio, notas a chocolate amargo, pimienta, final medio.",
+        "nota": "Cereza con ribetes ciruela. En nariz, aromas frutales de mora, guinda seca y ciruela, con notas a chocolate amargo. En boca, acidez y tanino medio, chocolate amargo, pimienta y final medio.",
         "premios": "92 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2019",
-        "cepa": "Cabernet sauvignon",
+        "anada": "",
+        "cepa": "Cabernet Sauvignon",
         "valle": "Valle del Rapel",
-        "grad": "14,13%",
+        "grad": "14,1%",
         "crianza": "10 meses en barrica de madera",
-        "nota": "Rubí oscuro y brillante. En nariz, fruta roja madura, cerezas confitadas, fondo de madera dulce. En boca, de tanino pulido, peso de fruta medio, frutal, persistente.",
+        "nota": "Rubí oscuro y brillante. En nariz, fruta roja madura, cerezas confitadas y un fondo de madera dulce. En boca, de tanino pulido, peso de fruta medio, frutal y persistente.",
         "premios": "Oro Catad'Or 2021 · 92 pts La Cav · 90 pts Descorchados",
         "revista": ""
       }
     ],
-    "opina": "Cabernet Sauvignon de Puntí Ferrer, del valle del Rapel, en el corazón de Colchagua. En copa, casis, cedro y fruta negra, con taninos firmes.",
-    "sugiere": "Bife ancho a la parrilla, Entrecot a la pimienta, Costillar de vacuno a la BBQ, Queso manchego curado, Osobuco braseado al vino tinto. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "Gran Reserva es la línea más cambiante de Puntí Ferrer: cada cosecha se embotella con una cepa distinta. Cabernet del Rapel el 2024 y el 2019, Sauvignon Blanc de Leyda el 2023, Malbec de Colchagua el 2022 y Carmén&egrave;re del Rapel el 2020. Lo consistente no es la variedad sino el nivel: entre 90 y 92 puntos de La Cav en las cinco, más dos Oros del Catad'Or. La 2019 es la más premiada de todas.",
+    "sugiere": "Depende de la cosecha. Los tintos piden bife ancho a la parrilla, entrecot a la pimienta, costillar de vacuno a la BBQ, osobuco al vino tinto y queso manchego curado. El Sauvignon Blanc 2023, en cambio, va con ceviches, ostras, ensaladas y pescados a la plancha."
   },
   {
     "name": "Puntí Ferrer Gran Reserva Cabernet Sauvignon",
@@ -9568,28 +9524,28 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2022",
+        "anada": "",
         "cepa": "100% Cabernet Sauvignon",
-        "valle": "Cachapoal",
+        "valle": "Valle del Cachapoal",
         "grad": "14%",
         "crianza": "10 meses de guarda",
-        "nota": "Rojo violeta. En nariz, madura, moras, frambuesa, especiado, licorosa. En boca, maduro, de cuerpo medio, un poco plano.",
-        "premios": "Oro - Catad'Or",
+        "nota": "Rojo violeta. En nariz, madura, con moras, frambuesa, especias y un fondo licoroso. En boca, maduro y de cuerpo medio.",
+        "premios": "Oro &mdash; Catad'Or",
         "revista": ""
       },
       {
-        "anada": "2019",
-        "cepa": "Cabernet Sauvignon",
-        "valle": "Cachapoal",
-        "grad": "14,13%",
-        "crianza": "10 meses de barrica",
-        "nota": "Color rubí intenso. Intensa y compleja, con notas a frutos negros y toques tostados aportados por la crianza. Boca redonda con taninos firmes y maduros junto con un final largo.",
-        "premios": "Oro - Catad'Or 2021 · 91 pts La Cav · 90 pts Descorchados",
+        "anada": "",
+        "cepa": "100% Cabernet Sauvignon",
+        "valle": "Valle del Cachapoal",
+        "grad": "14,1%",
+        "crianza": "10 meses en barrica",
+        "nota": "Rubí intenso. Nariz intensa y compleja, con notas a frutos negros y toques tostados aportados por la crianza. Boca redonda, con taninos firmes y maduros y un final largo.",
+        "premios": "Oro &mdash; Catad'Or 2021 · 91 pts La Cav · 90 pts Descorchados",
         "revista": ""
       }
     ],
-    "opina": "Cabernet Sauvignon de Puntí Ferrer, del valle del Rapel, en el corazón de Colchagua. En copa, casis, cedro y fruta negra, con taninos firmes.",
-    "sugiere": "Bife ancho a la parrilla, Queso manchego curado, Ragú de cordero con pappardelle, Berenjenas a la parmesana, Costillar de vacuno a la BBQ. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "El Gran Reserva de Puntí Ferrer nace en el Cachapoal, un valle de clima cálido y suelos aluviales donde el Cabernet madura con soltura. Casis, fruta negra y tostados de barrica sobre taninos firmes. La cosecha 2019 es la más completa: Oro en el Catad'Or, 91 puntos La Cav y 90 de Descorchados, con una boca redonda y final largo. Diez meses de crianza en ambas añadas.",
+    "sugiere": "Bife ancho a la parrilla, queso manchego curado, ragú de cordero con pappardelle, berenjenas a la parmesana y costillar de vacuno a la BBQ. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Puntí Ferrer Late Harvest",
@@ -9600,18 +9556,18 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2019",
+        "anada": "",
         "cepa": "Viognier",
         "valle": "Valle del Cachapoal",
         "grad": "",
         "crianza": "",
-        "nota": "Dorado brillante con ribetes damascos. En nariz, aromas frutales, papaya, damascos turcos, ciruelas amarillas, notas a miel, caramelo. En boca, acidez y dulzor equilibrados, volumen y cuerpo medio, notas a miel, caramelo. I.",
+        "nota": "Dorado brillante con ribetes damasco. En nariz, aromas frutales de papaya, damasco turco y ciruela amarilla, con notas a miel y caramelo. En boca, acidez y dulzor equilibrados, volumen y cuerpo medio, con ese mismo fondo de miel y caramelo.",
         "premios": "92 pts La Cav · 90 pts Descorchados",
         "revista": ""
       }
     ],
-    "opina": "Viognier de Puntí Ferrer, del valle del Rapel, en el corazón de Colchagua. En copa, damasco, flores blancas y textura untuosa.",
-    "sugiere": "Tarta de almendras, Frutas confitadas, Cheesecake de frutos rojos, Roquefort con nueces, Tarta de manzana. Vino dulce: foie gras, quesos azules y postres de fruta."
+    "opina": "El único vino dulce del catálogo de Puntí Ferrer: un Viognier de cosecha tardía del Cachapoal, con la uva dejada en la planta hasta concentrar azúcar. Damasco, papaya y ciruela amarilla sobre miel y caramelo. Lo importante es que el dulzor no se desboca: la acidez lo sostiene y evita que empalague. 92 puntos La Cav y 90 de Descorchados por $6.500.",
+    "sugiere": "Tarta de almendras, frutas confitadas, cheesecake de frutos rojos, roquefort con nueces y tarta de manzana. Vino dulce: foie gras, quesos azules y postres de fruta. Servir bien frío, a 8 grados."
   },
   {
     "name": "Puntí Ferrer Los Huevos de Loco",
@@ -9654,18 +9610,18 @@
     "available": false,
     "anadas": [
       {
-        "anada": "NV",
+        "anada": "",
         "cepa": "País",
         "valle": "Valle del Maule",
         "grad": "",
         "crianza": "",
-        "nota": "Rosado medio. Burbujas pequeñas constantes. Aromas de fruta blanca y roja suave, matices florales, fondos de leves especias blancas. Boca jugosa, cítrica, vertical.",
+        "nota": "Rosado medio, con burbujas pequeñas y constantes. Aromas de fruta blanca y roja suave, matices florales y un fondo de leves especias blancas. En boca, jugosa, cítrica y vertical.",
         "premios": "91 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Blanco de Puntí Ferrer, del valle del Rapel, en el corazón de Colchagua. En copa, fruta blanca y frescura cítrica.",
-    "sugiere": "Croquetas de jamón, Tartaletas de frutos rojos, Ceviche de reineta, Tabla de quesos y frutillas, Tempura de camarón. Espumante fresco: aperitivo, mariscos, frituras ligeras y tablas de fiesta."
+    "opina": "Una rareza que vale la pena conocer: espumante rosado hecho con País, la cepa colonial del secano del Maule. Casi nadie burbujea esta uva, y funciona muy bien: la acidez natural del País le da verticalidad y frescura, con fruta roja suave, flores y un dejo de especias blancas. Directo, cítrico y sin pretensiones.",
+    "sugiere": "Croquetas de jamón, tartaletas de frutos rojos, ceviche de reineta, tabla de quesos con frutillas y tempura de camarón. Espumante fresco: aperitivo, mariscos, frituras ligeras y tablas de fiesta. Servir a 6-8 grados."
   },
   {
     "name": "Puntí Ferrer Serie Tinajas Ensamblaje Tinto",
@@ -9698,18 +9654,18 @@
     "available": false,
     "anadas": [
       {
-        "anada": "NV",
-        "cepa": "Chardonnay, Pinot Noir",
+        "anada": "",
+        "cepa": "Chardonnay · Pinot Noir",
         "valle": "Valle del Rapel",
         "grad": "",
         "crianza": "",
-        "nota": "En boca, jugosa, tersa, de leve amargor, con volumen. Persistente.",
+        "nota": "Dorado intenso con destellos verdes. En nariz, aromas frutales con notas de piña y durazno y algo de pan fresco. En boca, jugosa y tersa, de acidez marcada y equilibrada, con burbujas suaves y delicadas en copa, cuerpo medio, leve amargor y volumen. Elegante, sedosa y persistente.",
         "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Blanco de Puntí Ferrer, del valle del Rapel, en el corazón de Colchagua. En copa, fruta blanca y frescura cítrica.",
-    "sugiere": "Ceviche de reineta, Ostras al limón, Croquetas de jamón, Empanaditas de queso, Tempura de camarón. Espumante fresco: aperitivo, mariscos, frituras ligeras y tablas de fiesta."
+    "opina": "El espumante de Puntí Ferrer, con la mezcla clásica de Chardonnay y Pinot Noir del Valle del Rapel. Extra brut, o sea prácticamente sin azúcar añadida: seco de verdad, con burbuja fina, cuerpo medio y ese leve amargor que le da carácter y lo hace buen compañero de mesa, no solo de brindis. Piña, durazno y un fondo de pan fresco de la crianza sobre lías. 92 puntos La Cav a un precio muy razonable.",
+    "sugiere": "Ceviche de reineta, ostras al limón, croquetas de jamón, empanaditas de queso y tempura de camarón. Espumante fresco: aperitivo, mariscos, frituras ligeras y tablas de fiesta. Servir a 6-8 grados."
   },
   {
     "name": "Robba & Rossi Primitivo",
@@ -11467,17 +11423,17 @@
         "valle": "Casablanca",
         "grad": "14%",
         "crianza": "8% en barricas de roble francés de 225 y 300 L, 16% en fudre de roble francés por 3 meses y 76% en tanques de acero inoxidable",
-        "nota": "Syrah 65%,Carignan 20%, Vino con una excelente estructura, notas de frutas negras, espe- Petite Syrah 10%, Grenache 5% cias y un toque mineral, con taninos bien integrados y una acidez. En nariz, perfumada, floral, frutos rojos macerados, pimienta blanca. Vibrante y refinado, de acidez fresca y taninos sedosos.",
+        "nota": "Vibrante y refinado, de acidez fresca y taninos sedosos.",
         "premios": "92 pts James Suckling · 90 pts Tim Atkin",
         "revista": ""
       },
       {
         "anada": "2022",
-        "cepa": "Pinot noir",
-        "valle": "Valle de Casablanca",
+        "cepa": "Pinot Noir",
+        "valle": "Casablanca",
         "grad": "",
         "crianza": "",
-        "nota": "Guinda de buena intensidad y brillo. En nariz, frutilla, frambuesa, guindas ácidas, lavanda, rosas, té negro y champiñones. En boca, acidez media-alta, taninos delicados y bien integrados, de buen equilibrio y balance.",
+        "nota": "Guinda de buena intensidad y brillo. En nariz, frutilla, frambuesa, guindas ácidas, lavanda, rosas, té negro y champiñones. En boca, de acidez media-alta, con taninos delicados y bien integrados, de buen equilibrio y balance.",
         "premios": "92 pts La Cav",
         "revista": ""
       },
@@ -11486,14 +11442,14 @@
         "cepa": "100% Pinot Noir",
         "valle": "Casablanca",
         "grad": "13,5%",
-        "crianza": "51% envejecido 11 meses en barricas de roble francés, 4% en fudre de roble francés (3er uso), 45% en tanque de acero inoxidable",
+        "crianza": "51% envejecido 11 meses en barricas de roble francés, 4% en fudre de roble francés de tercer uso y 45% en tanque de acero inoxidable",
         "nota": "Elegante Pinot Noir de color rojo rubí brillante. Sus aromas frutales a guindas y frutillas se entrelazan con notas a clavo de olor y especias aportadas por la guarda en fudre de roble francés.",
         "premios": "",
         "revista": ""
       }
     ],
-    "opina": "Pinot Noir de Viña Villard, de Casablanca, clima frío costero, de raíces francesas. En copa, frutilla, guinda y un perfil sedoso y delicado.",
-    "sugiere": "Pato confitado, Tabla de charcutería, Champiñones rellenos, Salmón a la plancha, Risotto de hongos. Tinto ligero y fresco: salmón, hongos, aves y charcutería."
+    "opina": "Pinot Noir de Casablanca a un precio que sorprende para lo que entrega: 92 puntos de James Suckling y 90 de Tim Atkin en la 2023. Lo interesante está en la crianza, que Villard detalla con precisión poco común &mdash; apenas un 8% en barrica, algo de fudre y el grueso en acero &mdash; una decisión que respeta la delicadeza de la cepa en vez de taparla con madera. Por eso aparecen la lavanda, las rosas y el té negro junto a la fruta roja, con taninos sedosos y acidez viva.",
+    "sugiere": "Tinto ligero y fresco, mejor servido algo frío: salmón a la plancha, pato confitado, risotto de hongos, champiñones rellenos y tabla de charcutería."
   },
   {
     "name": "Villard JCV",
@@ -11506,16 +11462,16 @@
       {
         "anada": "2023",
         "cepa": "Semillón",
-        "valle": "Valle de Casablanca",
+        "valle": "Casablanca",
         "grad": "",
         "crianza": "",
-        "nota": "Syrah 65%,Carignan 20%, Vino con una excelente estructura, notas de frutas negras, espe- Petite Syrah 10%, Grenache 5% cias y un toque mineral, con taninos bien integrados y una acidez. Dorado cremoso opaco. Nariz terrosa, pimienta blanca, lima, hojas secas, sudor. En la boca es terroso, de acidez importante, rugosa.",
+        "nota": "Dorado cremoso, opaco. En nariz, terrosa, con pimienta blanca, lima y hojas secas. En boca es terrosa, de acidez importante y textura rugosa.",
         "premios": "95 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Semillón de Viña Villard, de Casablanca, clima frío costero, de raíces francesas. En copa, fruta blanca, cera y notas cítricas con cuerpo.",
-    "sugiere": "Reineta al vapor con cilantro, Queso de cabra fresco, Sushi nigiri, Ensalada César con pollo, Ostras al limón. Blanco fresco y cítrico: mariscos crudos, cebiches y ensaladas."
+    "opina": "Con 95 puntos de La Cav es el vino mejor evaluado de Villard, y llama la atención que sea un Semillón &mdash; una cepa que en Chile estuvo por desaparecer y que el vino de autor está recuperando. No es un blanco fácil ni frutal: va por lo terroso, con pimienta blanca, lima y hojas secas, sobre una acidez importante y una textura rugosa que se siente. Un vino con carácter, para quien busca algo distinto a los blancos de siempre de Casablanca.",
+    "sugiere": "Blanco fresco y de carácter: ostras al limón, sushi nigiri, reineta al vapor con cilantro, ensalada César con pollo y queso de cabra fresco."
   },
   {
     "name": "Villard JCV Carignan",
@@ -11528,16 +11484,16 @@
       {
         "anada": "2021",
         "cepa": "Carignan",
-        "valle": "Valle del Maule",
+        "valle": "Maule",
         "grad": "13,3%",
         "crianza": "8 meses en concreto",
-        "nota": "Violeta. En nariz, grosella negra, ciruela, mora, cardamomo, cuero, té negro, vainilla y café tostado. En boca, acidez media-alta, taninos firmes y bien integrados, de buena estructura y largo.",
+        "nota": "Violeta. En nariz, grosella negra, ciruela, mora, cardamomo, cuero, té negro, vainilla y café tostado. En boca, de acidez media-alta, con taninos firmes y bien integrados, de buena estructura y largo final.",
         "premios": "93 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Carignan de Viña Villard, de Casablanca, clima frío costero, de raíces francesas. En copa, fruta roja de secano, alta acidez y carácter rústico.",
-    "sugiere": "Berenjenas a la parmesana, Costillar de vacuno a la BBQ, Queso manchego curado, Bife ancho a la parrilla, Cordero al horno con romero. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "Villard es una viña de Casablanca, pero para el Carignan sale a buscar la uva donde corresponde: al secano del Maule, que es su territorio. La crianza es la decisión clave &mdash; ocho meses en concreto, no en barrica &mdash; y por eso el vino conserva la acidez alta y el carácter de la cepa sin que la madera lo intervenga. Aparecen la grosella negra, el cardamomo y el té negro sobre taninos firmes y un final largo.",
+    "sugiere": "Tinto estructurado para carnes rojas a la brasa y cocciones lentas: bife ancho a la parrilla, costillar de vacuno a la BBQ, cordero al horno con romero, berenjenas a la parmesana y queso manchego curado."
   },
   {
     "name": "Villard JCV Garnacha",
@@ -11550,16 +11506,16 @@
       {
         "anada": "2022",
         "cepa": "Garnacha",
-        "valle": "Valle de Casablanca",
+        "valle": "Casablanca",
         "grad": "",
         "crianza": "",
-        "nota": "Ciruela oscuro, intenso. En nariz, especiado y frutal, pimienta negra, hojas de eucalipto, tierra de hojas, tabaco, mora, ciruela, dátiles. En boca, acidez alta, tanino potente, jugoso, de notas salinas y minerales.",
+        "nota": "Ciruela oscuro, intenso. En nariz, especiado y frutal, con pimienta negra, hojas de eucalipto, tierra de hojas, tabaco, mora, ciruela y dátiles. En boca, de acidez alta y tanino potente, jugoso, con notas salinas y minerales.",
         "premios": "93 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Garnacha de Viña Villard, de Casablanca, clima frío costero, de raíces francesas. En copa, fruta roja jugosa, hierbas y un perfil cálido y goloso.",
-    "sugiere": "Lasaña boloñesa, Pimentones rellenos de carne, Costillar de cerdo a la BBQ, Pizza de carne, Empanadas de pino. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
+    "opina": "Garnacha en Casablanca es poco habitual &mdash; es una cepa mediterránea, acostumbrada al calor, y acá está en clima frío costero. El resultado se aleja de la Garnacha golosa y alcohólica de manual: sale con acidez alta, tanino potente y unas notas salinas y minerales que delatan la cercanía del mar. La nariz es más compleja de lo esperable, con eucalipto, tierra de hojas y tabaco junto a la mora y los dátiles.",
+    "sugiere": "Tinto de fruta y cuerpo medio para la mesa: lasaña boloñesa, pimentones rellenos de carne, costillar de cerdo a la BBQ, pizza de carne y empanadas de pino."
   },
   {
     "name": "Villard JCV Ramato Pinot Grigio",
@@ -11604,10 +11560,10 @@
       {
         "anada": "2022",
         "cepa": "Chardonnay",
-        "valle": "Valle de Casablanca",
+        "valle": "Casablanca",
         "grad": "",
         "crianza": "",
-        "nota": "RETA QUEBRADA SECA Chardonnay 2021 Valle del Limarí. RETA QUEBRADA SECA Chardonnay 2021 Valle del Limarí.",
+        "nota": "",
         "premios": "95 pts La Cav · 93 pts Tim Atkin",
         "revista": ""
       },
@@ -11616,14 +11572,14 @@
         "cepa": "100% Chardonnay",
         "valle": "Casablanca",
         "grad": "13%",
-        "crianza": "Fermentado en barrica, con 10% maloláctica para aportar textura",
-        "nota": "Una cepa de origen italiano y la más cultivada de dicho lugar. Se caracteriza por su alta concentra ción tánica, poco color y acidez media alta. Tiene con color rojo rubí con ribetes violeta. Se perci. En nariz guinda acida con notas terrosas de té. Es seco, alta acidez con un amargor medio. Ahumado, con crianza sobre lías; fruta cítrica fresca y tostada, con textura.",
+        "crianza": "Fermentado en barrica, con 10% de maloláctica para aportar textura",
+        "nota": "Ahumado, con crianza sobre lías. Fruta cítrica fresca y tostada, con textura.",
         "premios": "93 pts Tim Atkin",
         "revista": ""
       }
     ],
-    "opina": "Chardonnay de Viña Villard, de Casablanca, clima frío costero, de raíces francesas. En copa, fruta blanca, notas cremosas y volumen.",
-    "sugiere": "Pastel de jaiba, Pavo al horno, Machas a la parmesana, Queso brie, Fetuccine Alfredo. Blanco con cuerpo: pescados en salsa, mariscos gratinados y aves cremosas."
+    "opina": "El Chardonnay de más alta gama de Villard y uno de los mejor evaluados del catálogo, con 95 puntos de La Cav y 93 de Tim Atkin en la 2022. Lo que lo distingue es la elaboración borgoñona: fermentación en barrica, crianza sobre lías y solo un 10% de maloláctica &mdash; suficiente para dar textura sin convertirlo en un Chardonnay mantecoso. De ahí el resultado ahumado y con cuerpo, pero de fruta cítrica fresca. Coherente con las raíces francesas de la casa.",
+    "sugiere": "Blanco con cuerpo, para pescados en salsa y mariscos gratinados: pastel de jaiba, machas a la parmesana, fetuccine Alfredo, pavo al horno y queso brie."
   },
   {
     "name": "Villard Le Pinot Noir Grand Vin",
@@ -11638,9 +11594,9 @@
         "cepa": "Pinot Noir",
         "valle": "Casablanca",
         "grad": "14,5%",
-        "crianza": "10 meses en barricas de 3 y 4 años de 225, 228, 300 y 500 L (75% fudre, 25% barricas)",
-        "nota": "Rojo rubí. Fruta roja (cerezas, ciruelas rojas, frutilla, frambuesas), notas terrosas y especias como pimienta y clavo de olor. Jugoso, de acidez media, taninos sedosos y un final largo cargado a la fruta roja. En boca, acidez balanceada, taninos delicados y suaves, de buena estructura. Final largo y elegante.",
-        "premios": "92 pts James Suckling · 93 pts La Cav · 93 pts Descorchados · 93 pts Tim Atkin",
+        "crianza": "10 meses en fudre (75%) y barricas de tercer y cuarto uso de 225, 228, 300 y 500 L (25%)",
+        "nota": "Rojo rubí. Fruta roja &mdash; cerezas, ciruelas rojas, frutilla, frambuesas &mdash; con notas terrosas y especias como pimienta y clavo de olor. En boca, jugoso, de acidez balanceada, con taninos delicados y sedosos, buena estructura y un final largo y elegante cargado a la fruta roja.",
+        "premios": "93 pts La Cav · 93 pts Descorchados · 93 pts Tim Atkin · 92 pts James Suckling",
         "revista": ""
       },
       {
@@ -11649,13 +11605,13 @@
         "valle": "Casablanca",
         "grad": "14,5%",
         "crianza": "10 meses en barrica de roble francés",
-        "nota": "Rojo rubí. Fruta roja (cerezas, ciruelas rojas, frutilla, frambuesas), notas terrosas y especias como pimienta y clavo de olor. Fresa roja brillante hermosa, con aroma a fresas frescas, así como chocolate y un toque de roble francés. Buena complejidad entre la fruta y el roble, con un final extremadamente bueno y largo. 96 puntos James Suckling.",
-        "premios": "93 pts Tim Atkin",
+        "nota": "Rojo fresa brillante, con aroma a fresas frescas, chocolate y un toque de roble francés. Buena complejidad entre la fruta y el roble, con un final extremadamente bueno y largo.",
+        "premios": "96 pts James Suckling · 93 pts Tim Atkin",
         "revista": ""
       }
     ],
-    "opina": "Pinot Noir de Viña Villard, de Casablanca, clima frío costero, de raíces francesas. En copa, frutilla, guinda y un perfil sedoso y delicado.",
-    "sugiere": "Berenjenas a la parmesana, Bife ancho a la parrilla, Osobuco braseado al vino tinto, Cordero al horno con romero, Lomo vetado a la parrilla. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "El vino más premiado de Villard y uno de los grandes Pinot Noir de Casablanca: la cosecha 2016 alcanzó 96 puntos de James Suckling y la 2021 sumó cuatro reconocimientos distintos, con 93 puntos de La Cav, Descorchados y Tim Atkin. La crianza cambió entre añadas &mdash; la 2016 fue diez meses en barrica de roble francés, la 2021 mayoritariamente en fudre &mdash; y eso explica que la nueva sea más sedosa y la vieja muestre más marca de roble junto al chocolate.",
+    "sugiere": "Pinot Noir de guarda, mejor servido algo fresco: salmón a la plancha, pato confitado, risotto de hongos, cordero al horno con romero y quesos semimaduros."
   },
   {
     "name": "Villard Le Syrah Grand Vin",
@@ -11668,10 +11624,10 @@
       {
         "anada": "2021",
         "cepa": "Syrah",
-        "valle": "Valle de Casablanca",
+        "valle": "Casablanca",
         "grad": "12,5%",
-        "crianza": "Acero Inox**",
-        "nota": "Violeta intenso. En nariz, en nariz tiene notas a aceitunas, lavanda, regaliz, aromas a guindas, ciruelas, moras frescas. En boca, acidez alta, tanino potente y estructurado, algo salino, final largo.",
+        "crianza": "Acero inoxidable",
+        "nota": "Violeta intenso. En nariz, notas a aceitunas, lavanda y regaliz, con aromas a guindas, ciruelas y moras frescas. En boca, de acidez alta, con tanino potente y estructurado, algo salino y final largo.",
         "premios": "93 pts La Cav",
         "revista": ""
       },
@@ -11686,8 +11642,8 @@
         "revista": ""
       }
     ],
-    "opina": "Syrah de Viña Villard, de Casablanca, clima frío costero, de raíces francesas. En copa, pimienta negra, fruta negra y un fondo especiado.",
-    "sugiere": "Osobuco braseado al vino tinto, Entrecot a la pimienta, Lomo vetado a la parrilla, Berenjenas a la parmesana, Costillar de vacuno a la BBQ. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "Una Syrah que rompe con lo esperable por partida doble: viene de Casablanca, valle de clima frío donde casi nadie la planta, y se cría solo en acero, sin madera. El resultado tiene apenas 12,5 grados y una acidez alta que sostiene todo &mdash; aceitunas, lavanda y regaliz sobre fruta fresca, con un dejo salino que delata la cercanía del mar. Más cerca de una Syrah del norte del Ródano que de las chilenas cálidas. La 2018 alcanzó 94 puntos de Descorchados.",
+    "sugiere": "Tinto estructurado y de acidez viva: osobuco braseado al vino tinto, entrec&ocirc;te a la pimienta, lomo vetado a la parrilla, costillar de vacuno a la BBQ y berenjenas a la parmesana."
   },
   {
     "name": "Villard QV Blend",
@@ -11722,10 +11678,10 @@
       {
         "anada": "2021",
         "cepa": "Syrah",
-        "valle": "Valle de Casablanca",
+        "valle": "Casablanca",
         "grad": "",
         "crianza": "",
-        "nota": "Cereza intenso con violeta oscuro. En nariz, fruta negra muy madura, berries, algo de aceituna negra, fondo floral. En boca, frutal, jugosa, tersa, con un fondo de madera algo alto.",
+        "nota": "Cereza intenso con violeta oscuro. En nariz, fruta negra muy madura, berries, algo de aceituna negra y un fondo floral. En boca, frutal, jugosa, tersa, con un fondo de madera algo alto.",
         "premios": "93 pts La Cav · 91 pts Tim Atkin",
         "revista": ""
       },
@@ -11740,8 +11696,8 @@
         "revista": ""
       }
     ],
-    "opina": "Syrah de Viña Villard, de Casablanca, clima frío costero, de raíces francesas. En copa, pimienta negra, fruta negra y un fondo especiado.",
-    "sugiere": "Cordero al horno con romero, Ragú de cordero con pappardelle, Berenjenas a la parmesana, Costillar de vacuno a la BBQ, Osobuco braseado al vino tinto. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "Syrah de Casablanca, que es una decisión poco obvia: el valle se asocia a blancos y Pinot Noir, no a Syrah. Pero el clima frío costero le da a la cepa un registro distinto al del norte &mdash; menos confitada, con la aceituna negra y el fondo floral que aparecen en las Syrah de clima fresco. Es el segundo vino más caro de Villard y la cosecha 2018 alcanzó 94 puntos de Descorchados. La 2021 muestra la madera algo marcada, señal de que todavía tiene tiempo por delante.",
+    "sugiere": "Tinto estructurado para carnes rojas a la brasa y cocciones lentas: cordero al horno con romero, ragú de cordero con pappardelle, costillar de vacuno a la BBQ, osobuco braseado al vino tinto y berenjenas a la parmesana."
   },
   {
     "name": "Vinos Manu Manu Cabernet Sauvignon",
@@ -11894,18 +11850,18 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2020",
+        "anada": "",
         "cepa": "Cinsault",
-        "valle": "Guarilihue, valle del Itata",
+        "valle": "Guarilihue, Valle del Itata",
         "grad": "14,5%",
-        "crianza": "MEZCLA de FLEXTANK Y barricas de 5 O MÁS USOS POR",
-        "nota": "Ciruela con ribetes rubíes. En nariz, cereza, frutilla, guinda, notas a pimienta, algo ahumado. En boca, acidez media, tanino frutal, jugoso, final floral. I.",
+        "crianza": "Mezcla de flextank y barricas de 5 o más usos",
+        "nota": "Ciruela con ribetes rubíes. En nariz, cereza, frutilla y guinda, con notas a pimienta y un toque ahumado. En boca, acidez media, tanino frutal, jugoso y de final floral.",
         "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Cinsault de Guarilihue, valle del Itata: fruta roja liviana, floral y de trago fácil. Con mEZCLA de FLEXTANK Y barricas de 5 O MÁS USOS POR.",
-    "sugiere": "Champiñones rellenos, Risotto de hongos, Queso brie, Atún sellado, Salmón a la plancha. Tinto ligero y fresco: salmón, hongos, aves y charcutería."
+    "opina": "Cinsault de Guarilihue, en pleno corazón del Itata, donde esta cepa lleva décadas plantada en secano y encontró su mejor expresión chilena. Fruta roja liviana, perfil floral y trago fácil, con ese fondo ahumado que da el granito de la zona. La crianza mezcla flextank y barricas de quinto uso o más: madera que ya no aporta sabor, solo micro-oxigenación, para no tapar la fruta. Un tinto para servir levemente fresco, a unos 14 grados.",
+    "sugiere": "Champiñones rellenos, risotto de hongos, queso brie, atún sellado y salmón a la plancha. Tinto ligero y fresco: salmón, hongos, aves y charcutería."
   },
   {
     "name": "Viña Zaranda Moscatel de Alejandría",
@@ -11916,18 +11872,18 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2020",
+        "anada": "",
         "cepa": "Moscatel de Alejandría",
-        "valle": "Guarilihue, valle del Itata",
+        "valle": "Guarilihue, Valle del Itata",
         "grad": "",
         "crianza": "",
-        "nota": "Damasco intenso brillante. En nariz, aromas frutales y especiados, mandarinas, naranjas, damascos, notas a pimienta blanca, anís. En boca, acidez media, bien marcada, taninos abundantes, es seco, estructurado y de fruta cítrica hacia el final.",
+        "nota": "Damasco intenso y brillante. En nariz, aromas frutales y especiados: mandarina, naranja y damasco, con notas a pimienta blanca y anís. En boca, acidez media bien marcada, taninos abundantes; es seco, estructurado y de fruta cítrica hacia el final.",
         "premios": "91 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Moscatel de Guarilihue, valle del Itata: flores, uva fresca y un perfil aromático.",
-    "sugiere": "Ceviche de corvina, Ensalada de palta y camarón, Queso de cabra fresco, Espárragos a la parrilla, Machas al natural. Blanco fresco y cítrico: mariscos crudos, cebiches y ensaladas."
+    "opina": "La Moscatel de Alejandría es la uva histórica del Itata y aquí se vinifica con maceración en pieles, no como el blanco dulce y perfumado que uno esperaría. El resultado es un naranjo seco, estructurado y de taninos abundantes, con la mandarina y el anís propios de la cepa pero sin nada de azucar. Un vino con carácter, muy lejos del Moscatel de consumo masivo.",
+    "sugiere": "Su estructura tánica pide platos con especias, grasa o fermentados: curry de verduras, cerdo con salsa de ciruelas, quesos de cabra madurados, hummus y mezze árabe, o pollo al limón con comino. Servir a 12-14 grados. Evitar los mariscos crudos: el tanino los deja metálicos."
   },
   {
     "name": "Viña Zaranda País",
@@ -11938,28 +11894,28 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2020",
+        "anada": "",
         "cepa": "País",
-        "valle": "Guarilihue, valle del Itata",
+        "valle": "Guarilihue, Valle del Itata",
         "grad": "",
         "crianza": "",
-        "nota": "Guinda pálido. En nariz, perfumada, frutilla macerada, hojas secas, tabaco. En la. En boca, es frutal, rugoso, de acidez media, firme, con retrogusto de cuero.",
+        "nota": "Guinda pálido. En nariz, perfumada, con frutilla macerada, hojas secas y tabaco. En boca es frutal y rugoso, de acidez media, firme, con retrogusto de cuero.",
         "premios": "92 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2017",
+        "anada": "",
         "cepa": "País",
-        "valle": "Itata",
+        "valle": "Valle del Itata",
         "grad": "",
         "crianza": "",
-        "nota": "Color guinda brillante. En nariz, Notas a fruta roja fresca con toques de murtilla y brotes de laurel. En boca, es terroso, de taninos potentes y buena estructura que piden a gritos embutidos, patés de campo, prietas, terrinas de cerdo o cocina tradicional del campo chileno.",
+        "nota": "Color guinda brillante. En nariz, notas a fruta roja fresca con toques de murtilla y brotes de laurel. En boca es terroso, de taninos potentes y buena estructura.",
         "premios": "",
         "revista": ""
       }
     ],
-    "opina": "País de Guarilihue, valle del Itata: fruta roja fresca, ligereza y raíz campesina chilena.",
-    "sugiere": "Atún sellado, Tabla de charcutería, Risotto de hongos, Quiche lorraine, Queso brie. Tinto ligero y fresco: salmón, hongos, aves y charcutería."
+    "opina": "País de Guarilihue, la cepa que los españoles trajeron en el siglo XVI y que sobrevivió en el secano del Itata cuando el resto de Chile la abandonó por las cepas francesas. Fruta roja fresca, ligereza y una raíz campesina inconfundible: hojas secas, tabaco, cuero y ese fondo terroso que ninguna cepa de moda logra imitar. El 2020 es más perfumado y firme; el 2017 muestra taninos más potentes y más estructura.",
+    "sugiere": "Este vino pide a gritos la mesa del campo chileno: embutidos, patés de campo, prietas, terrinas de cerdo, arrollado huaso y quesos de campo. También funciona con charcutería y hongos. Servir levemente fresco, a unos 14-15 grados."
   },
   {
     "name": "Viña Zaranda Semillón",
@@ -11970,18 +11926,18 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2020",
+        "anada": "",
         "cepa": "Semillón",
-        "valle": "Guarilihue, valle del Itata",
+        "valle": "Guarilihue, Valle del Itata",
         "grad": "",
         "crianza": "",
-        "nota": "Dorado con ribetes ocres. En nariz, perfumada, piña madura, cremoso, chocolate blanco, lima. En la. Dorado con ribetes ocres. Nariz perfumada, piña madura, cremoso, chocolate blanco, lima. En la boca es jugoso, leve amargor, de acidez media, rugoso, sabroso.",
+        "nota": "Dorado con ribetes ocres. En nariz, perfumado y cremoso, con piña madura, chocolate blanco y lima. En boca es jugoso, de leve amargor, acidez media, textura rugosa y muy sabroso.",
         "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Semillón de Guarilihue, valle del Itata: fruta blanca, cera y notas cítricas con cuerpo.",
-    "sugiere": "Espárragos a la parrilla, Sushi nigiri, Empanadas de mariscos, Ostras al limón, Machas al natural. Blanco fresco y cítrico: mariscos crudos, cebiches y ensaladas."
+    "opina": "El Semillón fue la uva blanca más plantada de Chile hasta los años sesenta y hoy queda casi solo en viñedos viejos del Itata y el Maule. Este tiene el color dorado con ribetes ocres de un blanco con textura, no de uno liviano: piña madura, lima y un fondo cremoso a chocolate blanco. En boca aparece ese leve amargor y esa textura rugosa que son la firma de la cepa cuando se trabaja sin miedo.",
+    "sugiere": "Con su textura y su amargor pide platos de más peso que un blanco corriente: congrio frito, machas a la parmesana, empanadas de mariscos, pollo asado con hierbas, quesos semimaduros o espárragos a la parrilla con oliva. Servir a 10-12 grados."
   },
   {
     "name": "Vultur Globo Carmenere",
@@ -12164,28 +12120,6 @@
     "sugiere": "Entrecot a la pimienta, Costillar de vacuno a la BBQ, Osobuco braseado al vino tinto, Cordero al horno con romero, Lomo vetado a la parrilla. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
   },
   {
-    "name": "Zaranda",
-    "winery": "Zaranda",
-    "image": "",
-    "url": "https://uptowine.cl/zaranda",
-    "price": 9990,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "2020",
-        "cepa": "Cinsault",
-        "valle": "Guarilihue, valle del Itata",
-        "grad": "",
-        "crianza": "",
-        "nota": "Ciruela con ribetes rubíes. En nariz, cereza, frutilla, guinda, notas a pimienta, algo ahumado. En boca, acidez media, tanino frutal, jugoso, final floral. I.",
-        "premios": "92 pts La Cav",
-        "revista": ""
-      }
-    ],
-    "opina": "Cinsault de Guarilihue, valle del Itata: fruta roja liviana, floral y de trago fácil.",
-    "sugiere": "Atún sellado, Risotto de hongos, Tabla de charcutería, Champiñones rellenos, Quiche lorraine. Tinto ligero y fresco: salmón, hongos, aves y charcutería."
-  },
-  {
     "name": "Zaranda Chasselas",
     "winery": "Zaranda",
     "image": "",
@@ -12194,17 +12128,17 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2020",
-        "cepa": "",
-        "valle": "Guarilihue, valle del Itata",
+        "anada": "",
+        "cepa": "Chasselas",
+        "valle": "Guarilihue, Valle del Itata",
         "grad": "",
         "crianza": "",
-        "nota": "Damasco intenso brillante. En nariz, aromas frutales y especiados, mandarinas, naranjas, damascos, notas a pimienta blanca, anís. En boca, acidez media, algo tánico, frutal.",
+        "nota": "Damasco intenso y brillante. En nariz, aromas frutales y especiados: mandarina, naranja y damasco, con notas a pimienta blanca y anís. En boca, acidez media, algo tánico y frutal.",
         "premios": "91 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Blanco de Guarilihue, valle del Itata: fruta blanca y frescura cítrica.",
-    "sugiere": "Pimentones rellenos de carne, Pastel de choclo, Lasaña boloñesa, Queso gouda maduro, Chorrillana. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
+    "opina": "Chasselas es una cepa blanca rarísima en Chile y sobrevive casi solo en el Itata, plantada hace generaciones. Aquí se trabaja con maceración en sus pieles: de ahí el color damasco intenso y ese tanino que no se espera en un blanco. Mandarina, naranja y anís, con una pimienta blanca que le da nervio. Más cerca de un vino naranjo que de un blanco clásico, y una de las rarezas más interesantes del catálogo.",
+    "sugiere": "Su tanino y su carácter cítrico piden comida con especias y grasa: curry suave de pollo, cerdo agridulce, tabla de quesos semimaduros, empanadas de queso o ceviche de camarón con limón de pica. Servir a 12-14 grados, no muy frío, para que se abra."
   }
 ]
