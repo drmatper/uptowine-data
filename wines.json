@@ -4478,18 +4478,18 @@
     "available": false,
     "anadas": [
       {
-        "anada": "NV",
-        "cepa": "Chardonnay, Pinot Noir",
+        "anada": "",
+        "cepa": "Chardonnay · Pinot Noir",
         "valle": "Valle de Curicó",
         "grad": "",
         "crianza": "",
-        "nota": "En boca, tiene un ataque dulce, de cuerpo medio, cítrico, leve amargor en el fondo.",
+        "nota": "En boca tiene un ataque dulce, de cuerpo medio, cítrico, con un leve amargor en el fondo.",
         "premios": "91 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Ensamblaje de Chardonnay, Pinot Noir de Valle de Curicó: la cremosidad del Chardonnay con la fruta roja y elegancia del Pinot Noir. El conjunto da un blanco más complejo y equilibrado que la suma de sus cepas.",
-    "sugiere": "Pato confitado, Queso brie, Quiche lorraine, Champiñones rellenos, Salmón a la plancha. Tinto ligero y fresco: salmón, hongos, aves y charcutería."
+    "opina": "Blanco de ensamblaje poco habitual: Chardonnay y Pinot Noir vinificados juntos como vino tranquilo, la misma pareja que suele ir a los espumantes. El Chardonnay aporta cremosidad y cuerpo; el Pinot, fruta roja suave y elegancia. Un blanco de cuerpo medio, cítrico y con un cierre levemente amargo que le da nervio.",
+    "sugiere": "Pato confitado, queso brie, quiche lorraine, champiñones rellenos y salmón a la plancha. Blanco de cuerpo para aves, hongos, pescados grasos y charcutería suave."
   },
   {
     "name": "James Paradisus",
@@ -4500,18 +4500,18 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2021",
-        "cepa": "Syrah, Cabernet Franc, Malbec",
+        "anada": "",
+        "cepa": "Syrah · Cabernet Franc · Malbec",
         "valle": "Valle de Curicó",
         "grad": "",
         "crianza": "",
-        "nota": "Cereza medio. En nariz, frutos rojos pequeños, algo de leve tostado, fondo especiado. En boca, jugosa, tersa, fresca, con textura, larga.",
+        "nota": "Cereza medio. En nariz, frutos rojos pequeños, un leve tostado y un fondo especiado. En boca, jugosa, tersa y fresca, con textura y final largo.",
         "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Ensamblaje de Syrah, Cabernet Franc, Malbec de Valle de Curicó: la pimienta y la fruta negra de la Syrah, la frescura herbal del Cabernet Franc y el color y las moras del Malbec. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas.",
-    "sugiere": "Cordero al horno con romero, Lomo vetado a la parrilla, Costillar de vacuno a la BBQ, Berenjenas a la parmesana, Anticuchos. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "Ensamblaje poco convencional de tres cepas que rara vez van juntas: la pimienta y la fruta negra de la Syrah, la frescura herbal del Cabernet Franc y el color y las moras del Malbec. El resultado es un tinto de perfil fresco y especiado, de buena textura y final largo, más interesante que la suma de sus partes. 92 puntos La Cav.",
+    "sugiere": "Cordero al horno con romero, lomo vetado a la parrilla, costillar de vacuno a la BBQ, berenjenas a la parmesana y anticuchos. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "James Paradisus Single Vineyard",
@@ -4522,18 +4522,18 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2022",
+        "anada": "",
         "cepa": "Tempranillo",
-        "valle": "Molina, valle de Curicó",
+        "valle": "Molina, Valle de Curicó",
         "grad": "",
         "crianza": "",
-        "nota": "Cereza. En nariz, fruta roja y negra madura, toques especiados, perfumado, algo de hierbas aromáticas. En boca, jugosa, frutal, de fruta confitada, leve amargor.",
+        "nota": "Cereza. En nariz, fruta roja y negra madura, toques especiados, perfumado, con hierbas aromáticas. En boca, jugosa y frutal, de fruta confitada y un leve amargor.",
         "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Tempranillo de Molina, valle de Curicó: fruta roja, cuero y notas de crianza.",
-    "sugiere": "Costillar de cerdo a la BBQ, Chorrillana, Empanadas de pino, Queso gouda maduro, Lasaña boloñesa. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
+    "opina": "Un Tempranillo de viñedo único (single vineyard) en Molina, Curicó. La cepa insignia de Rioja tiene muy poca presencia en Chile, y aquí se muestra perfumada, con fruta roja y negra madura, hierbas aromáticas y ese cierre de fruta confitada con leve amargor tan propio de la variedad. 92 puntos La Cav. El precio ($19.990) refleja que es la etiqueta top de la viña.",
+    "sugiere": "Costillar de cerdo a la BBQ, chorrillana, empanadas de pino, queso gouda maduro y lasaña boloñesa. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
   },
   {
     "name": "Javiera Ortúzar Ímpetu",
@@ -4544,28 +4544,28 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2022",
+        "anada": "",
         "cepa": "Syrah",
         "valle": "Valle de Colchagua",
         "grad": "14,5%",
         "crianza": "10 meses en barricas nuevas y de 2do uso",
-        "nota": "Cereza con algo de evolución. En nariz, fruta roja madura, tonos licorosos, especias tostadas, fondo de madera. En boca, jugosa, tersa, de media profundidad.",
+        "nota": "Cereza con algo de evolución. En nariz, fruta roja madura, tonos licorosos, especias tostadas y un fondo de madera. En boca, jugosa, tersa y de media profundidad.",
         "premios": "93 pts La Cav · 90 pts Descorchados",
         "revista": ""
       },
       {
-        "anada": "2018",
-        "cepa": "Syrah 60% Petit Verdot 40%",
-        "valle": "Colchagua",
+        "anada": "",
+        "cepa": "60% Syrah · 40% Petit Verdot",
+        "valle": "Valle de Colchagua",
         "grad": "14,5%",
         "crianza": "10 meses en barricas nuevas y de 2do uso",
-        "nota": "Cereza con algo de evolución. En nariz, fruta roja madura, tonos licorosos, especias tostadas, fondo de madera. De color rojo rubí y violáceo, profundo y denso. En nariz destacan fruta roja y negra como guinda licorosa, mora y ciruela. En boca se siente fruta madura, sedosa, taninos firmes pero suaves, madera muy bien integrada y una fresca acidez que realza su buena estructura. Equilibrio y elegancia; tiene identidad propia. 9 8.",
+        "nota": "Rojo rubí y violáceo, profundo y denso. En nariz destacan fruta roja y negra: guinda licorosa, mora y ciruela. En boca, fruta madura y sedosa, taninos firmes pero suaves, madera muy bien integrada y una fresca acidez que realza su buena estructura. Equilibrio y elegancia, con identidad propia.",
         "premios": "93 pts Descorchados",
         "revista": ""
       }
     ],
-    "opina": "Syrah de Valle de Colchagua: pimienta negra, fruta negra y un fondo especiado. Con 10 meses en barricas nuevas y de 2do uso.",
-    "sugiere": "Ragú de cordero con pappardelle, Bife ancho a la parrilla, Lomo vetado a la parrilla, Costillar de vacuno a la BBQ, Entrecot a la pimienta. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "Ímpetu es la línea de Syrah de Javiera Ortúzar, que en algunas cosechas suma Petit Verdot para dar más color y estructura. Pimienta negra, fruta negra y un fondo especiado con la madera bien integrada. Consistente en puntajes altos: 93 de La Cav en la 2022 y 93 de Descorchados en el ensamblaje 2018.",
+    "sugiere": "Ragú de cordero con pappardelle, bife ancho a la parrilla, lomo vetado a la parrilla, costillar de vacuno a la BBQ y entrecot a la pimienta. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Javiera Ortúzar Wines",
@@ -4576,28 +4576,28 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2022",
-        "cepa": "Cabernet sauvignon",
+        "anada": "",
+        "cepa": "Cabernet Sauvignon",
         "valle": "Valle de Colchagua",
         "grad": "13,5%",
-        "crianza": "De 12 a 14 meses en barricas de roble francés usadas",
-        "nota": "Rubí. En nariz, fruta roja madura, berries licorosos, fondo de suave tostado y especias dulces. En boca, jugosa, tersa, de tanino pulido, rica acidez vertical. Larga.",
+        "crianza": "12 a 14 meses en barricas de roble francés usadas",
+        "nota": "Rubí. En nariz, fruta roja madura, berries licorosos y un fondo de suave tostado y especias dulces. En boca, jugosa, tersa, de tanino pulido, con rica acidez vertical y final largo.",
         "premios": "93 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2021",
-        "cepa": "Petit verdot",
+        "anada": "",
+        "cepa": "Petit Verdot",
         "valle": "Valle de Colchagua",
         "grad": "13,5%",
-        "crianza": "De 12 a 14 meses en barricas de roble francés usadas",
-        "nota": "Cereza oscuro y opaco. En nariz, berries negros y rojos, algo terroso, hierbas, especias tostadas, fondo maduro y licoroso. En boca, jugosa, de gran peso frutal, tanino reactivo, compacto, largo.",
+        "crianza": "12 a 14 meses en barricas de roble francés usadas",
+        "nota": "Cereza oscuro y opaco. En nariz, berries negros y rojos, algo terroso, hierbas, especias tostadas y un fondo maduro y licoroso. En boca, jugosa, de gran peso frutal, tanino reactivo, compacta y larga.",
         "premios": "93 pts La Cav · 92 pts Descorchados",
         "revista": ""
       }
     ],
-    "opina": "Cabernet Sauvignon de Valle de Colchagua: casis, cedro y fruta negra, con taninos firmes. Con de 12 a 14 meses en barricas de roble francés usadas.",
-    "sugiere": "Bife ancho a la parrilla, Berenjenas a la parmesana, Queso manchego curado, Ragú de cordero con pappardelle, Osobuco braseado al vino tinto. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "La línea de autor de Javiera Ortúzar cambia de cepa según el año: Cabernet Sauvignon el 2022, Petit Verdot el 2021, ambos de Colchagua y ambos con 93 puntos de La Cav . Vinos de tanino pulido y acidez vertical, criados en barrica usada para que la madera acompañe sin tapar la fruta.",
+    "sugiere": "Bife ancho a la parrilla, berenjenas a la parmesana, queso manchego curado, ragú de cordero con pappardelle y osobuco braseado al vino tinto. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Javiera Ortúzar Wines Barbera",
@@ -4630,18 +4630,18 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2024",
-        "cepa": "",
-        "valle": "Valle de Tutuvén",
+        "anada": "",
+        "cepa": "Pinot Grigio",
+        "valle": "Valle de Tutuvén (Maule)",
         "grad": "",
         "crianza": "",
-        "nota": "Pálido. En nariz, fruta blanca madura, algo de cítricos, fondo de especias de suave tostado. En boca, jugosa, tersa, vertical, de media profundidad.",
+        "nota": "Amarillo pálido. En nariz, fruta blanca madura, algo de cítricos y un fondo de especias de suave tostado. En boca, jugosa, tersa, vertical y de media profundidad.",
         "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Blanco de Valle de Tutuvén: fruta blanca y frescura cítrica.",
-    "sugiere": "Costillar de cerdo a la BBQ, Lasaña boloñesa, Pastel de choclo, Chorrillana, Pizza de carne. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
+    "opina": "Pinot Grigio de Javiera Ortúzar, del Valle de Tutuvén en el Maule interior, una zona fresca y de secano. Es la cepa italiana por excelencia para blancos de aperitivo: fruta blanca, cítricos y una boca vertical y directa, con 92 puntos La Cav. Poco vista en Chile, donde predominan el Sauvignon Blanc y el Chardonnay.",
+    "sugiere": "Blanco fresco para mariscos, pescados y ensaladas: ceviche de reineta, machas al natural, ensalada de palta y camarón, congrio a la mantequilla y queso de cabra fresco. Servir bien frío, a 8-10 grados."
   },
   {
     "name": "JO Wines Barbera",
@@ -7706,48 +7706,48 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2022",
-        "cepa": "Petite sirah",
+        "anada": "",
+        "cepa": "Petite Sirah",
         "valle": "Valle de Colchagua",
         "grad": "13%",
         "crianza": "15 meses en barrica de roble francés",
-        "nota": "Violeta. En nariz, a moras, violetas, hojas de laurel, pimienta fresca, clavo de olor. En la. En boca, es jugoso, firme, de tanino medio.",
+        "nota": "Violeta. En nariz, moras, violetas, hoja de laurel, pimienta fresca y clavo de olor. En boca es jugoso y firme, de tanino medio.",
         "premios": "93 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2020",
-        "cepa": "Carmenère",
+        "anada": "",
+        "cepa": "Carmén&egrave;re",
         "valle": "Valle de Colchagua",
         "grad": "13%",
         "crianza": "15 meses en barrica de roble francés",
-        "nota": "Cereza medio. En nariz, fruta roja madura, de suaves especias, algo de hoja de betarraga. En boca, jugosa, frutal, tersa, de rica textura.",
+        "nota": "Cereza medio. En nariz, fruta roja madura, suaves especias y algo de hoja de betarraga. En boca, jugosa, frutal y tersa, de rica textura.",
         "premios": "92 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2019",
-        "cepa": "Carmenère",
+        "anada": "",
+        "cepa": "Carmén&egrave;re",
         "valle": "Valle de Colchagua",
         "grad": "13%",
         "crianza": "15 meses en barrica de roble francés",
-        "nota": "Guinda con ribetes púrpuras. En nariz, aromas frutales, cereza, mora, grosella, notas a tabaco, chocolate amargo, pimentón rojo asado. En boca, acidez media y tanino equilibrado.",
+        "nota": "Guinda con ribetes púrpuras. En nariz, aromas frutales de cereza, mora y grosella, con notas a tabaco, chocolate amargo y pimentón rojo asado. En boca, acidez media y tanino equilibrado.",
         "premios": "92 pts La Cav · 93 pts Descorchados",
         "revista": ""
       },
       {
-        "anada": "2016",
+        "anada": "",
         "cepa": "Ensamblaje tinto",
-        "valle": "Colchagua",
+        "valle": "Valle de Colchagua",
         "grad": "13%",
         "crianza": "15 meses en barrica de roble francés",
-        "nota": "Guinda con ribetes púrpuras. En nariz, aromas frutales, cereza, mora, grosella, notas a tabaco, chocolate amargo, pimentón rojo asado. Color rojo rubí violeta. Nariz: aromas a frutas como cereza y ciruela y a especias como clavo de olor y leve tabaco. Boca: aterciopelado, con taninos suaves, agradable acidez y buen volumen y estructura. 92 puntos CAV.",
-        "premios": "",
+        "nota": "Rojo rubí violeta. En nariz, aromas a cereza y ciruela y a especias como clavo de olor y un leve tabaco. En boca es aterciopelado, con taninos suaves, agradable acidez y buen volumen y estructura.",
+        "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Petite Sirah de OWM Wines, especialistas en Petit Verdot y Petite Sirah en Cachapoal. En copa, color profundo, fruta negra y una estructura potente.",
-    "sugiere": "Bife ancho a la parrilla, Cordero al horno con romero, Osobuco braseado al vino tinto, Costillar de vacuno a la BBQ, Entrecot a la pimienta. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "OWM se especializa en cepas poco vistas &mdash;Petite Sirah y Petit Verdot&mdash; y Contao es su línea camaleónica: cambia de cepa según el año pero mantiene el nivel, entre 92 y 93 puntos de La Cav cosecha tras cosecha, con 15 meses de roble francés siempre bien integrados. Color profundo, fruta negra y estructura potente.",
+    "sugiere": "Bife ancho a la parrilla, cordero al horno con romero, osobuco braseado al vino tinto, costillar de vacuno a la BBQ y entrecot a la pimienta. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "OWM Divino Petit",
@@ -7758,48 +7758,48 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2021",
-        "cepa": "Petit Verdot, Petite Sirah",
+        "anada": "",
+        "cepa": "Petit Verdot · Petite Sirah",
         "valle": "Valle de Colchagua",
         "grad": "14%",
-        "crianza": "17 meses en BARRICA de ROBLE francés",
-        "nota": "Rojo cereza medio. En nariz, fruta roja madura, de suaves especias, algo de hoja de betarraga. Rojo cereza. Nariz a moras, chocolate amargo, clavo de olor. Higos secos. En la boca es jugoso, frutal, de tanino firme.",
+        "crianza": "17 meses en barrica de roble francés",
+        "nota": "Rojo cereza. En nariz, moras, chocolate amargo, clavo de olor e higos secos. En boca es jugoso y frutal, de tanino firme.",
         "premios": "93 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2020",
-        "cepa": "Petit Verdot, Petite Sirah",
-        "valle": "Cachapoal",
+        "anada": "",
+        "cepa": "Petit Verdot · Petite Sirah",
+        "valle": "Valle del Cachapoal",
         "grad": "14%",
-        "crianza": "17 meses en BARRICA de ROBLE francés",
-        "nota": "Rojo cereza medio. En nariz, fruta roja madura, de suaves especias, algo de hoja de betarraga. En boca, jugosa, frutal, tersa, de rica textura.",
+        "crianza": "17 meses en barrica de roble francés",
+        "nota": "Rojo cereza medio. En nariz, fruta roja madura, suaves especias y algo de hoja de betarraga. En boca, jugosa, frutal y tersa, de rica textura.",
         "premios": "93 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2019",
-        "cepa": "Petit Verdot, Petite Sirah",
-        "valle": "Cachapoal",
+        "anada": "",
+        "cepa": "Petit Verdot · Petite Sirah",
+        "valle": "Valle del Cachapoal",
         "grad": "14%",
-        "crianza": "17 meses en BARRICA de ROBLE francés",
-        "nota": "Rojo guinda con ribetes púrpuras. En nariz, frutales, cereza, mora, grosella, notas a tabaco, chocolate amargo, pimentón rojo asado. En boca, de acidez media y tanino equilibrado.",
+        "crianza": "17 meses en barrica de roble francés",
+        "nota": "Rojo guinda con ribetes púrpuras. En nariz, aromas frutales de cereza, mora y grosella, con notas a tabaco, chocolate amargo y pimentón rojo asado. En boca, acidez media y tanino equilibrado.",
         "premios": "93 pts La Cav · 93 pts Descorchados",
         "revista": ""
       },
       {
-        "anada": "2018",
-        "cepa": "Petit Verdot, Petite Sirah",
-        "valle": "Cachapoal",
+        "anada": "",
+        "cepa": "Petit Verdot · Petite Sirah",
+        "valle": "Valle del Cachapoal",
         "grad": "14%",
-        "crianza": "17 meses en BARRICA de ROBLE francés",
-        "nota": "Rojo guinda con ribetes púrpuras. En nariz, frutales, cereza, mora, grosella, notas a tabaco, chocolate amargo, pimentón rojo asado. En boca, de acidez media y tanino equilibrado.",
+        "crianza": "17 meses en barrica de roble francés",
+        "nota": "Rojo guinda con ribetes púrpuras. En nariz, aromas frutales de cereza, mora y grosella, con notas a tabaco, chocolate amargo y pimentón rojo asado. En boca, acidez media y tanino equilibrado.",
         "premios": "93 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Ensamblaje de Petit Verdot, Petite Sirah de Valle de Colchagua: el color y la potencia del Petit Verdot con los taninos robustos de la Petite Sirah. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas. Con 17 meses en BARRICA de ROBLE francés.",
-    "sugiere": "Costillar de vacuno a la BBQ, Berenjenas a la parmesana, Queso manchego curado, Ragú de cordero con pappardelle, Cordero al horno con romero. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "El vino que define a OWM: un ensamblaje de Petit Verdot y Petite Sirah, dos cepas de las que casi nadie hace un varietal en Chile, menos aún juntas. El Petit Verdot pone color y potencia; la Petite Sirah, taninos robustos. El resultado es un tinto denso y especiado, de 93 puntos La Cav en las cuatro cosechas y 93 de Descorchados en la 2019. Consistencia de vino serio.",
+    "sugiere": "Costillar de vacuno a la BBQ, berenjenas a la parmesana, queso manchego curado, ragú de cordero con pappardelle y cordero al horno con romero. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "OWM Hand-made",
@@ -7810,38 +7810,38 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2021",
-        "cepa": "Carménère, Petite Sirah, Petit Verdot, Cabernet Sauvignon, TE, Malbec",
+        "anada": "",
+        "cepa": "Carmén&egrave;re · Petite Sirah · Petit Verdot · Cabernet Sauvignon · Malbec",
         "valle": "Valle de Colchagua",
         "grad": "",
         "crianza": "",
-        "nota": "Violeta profundo. En nariz, especiada, moras, frambuesas en su jugo, chocolate amargo, notas herbales. En boca, es frutal, maduro, de cuerpo medio.",
+        "nota": "Violeta profundo. En nariz, especiada, con moras, frambuesa en su jugo, chocolate amargo y notas herbales. En boca es frutal y maduro, de cuerpo medio.",
         "premios": "92 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2018",
-        "cepa": "Carménère, Petite Sirah, Petit Verdot, Cabernet Sauvignon, TE, Malbec",
-        "valle": "Cachapoal",
+        "anada": "",
+        "cepa": "Carmén&egrave;re · Petite Sirah · Petit Verdot · Cabernet Sauvignon · Malbec",
+        "valle": "Valle del Cachapoal",
         "grad": "",
         "crianza": "",
-        "nota": "Rojo cereza oscuro con opacidad. En nariz, fruta roja madura, de especias tostadas, perfumado, de fondo de suave madera. En boca, jugosa, tersa, fresca, vertical, larga.",
+        "nota": "Rojo cereza oscuro con opacidad. En nariz, fruta roja madura, especias tostadas, perfumado, con un fondo de suave madera. En boca, jugosa, tersa, fresca, vertical y larga.",
         "premios": "93 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2017",
-        "cepa": "Carménère, Petite Sirah, Petit Verdot, Cabernet Sauvignon, TE, Malbec",
-        "valle": "Cachapoal",
+        "anada": "",
+        "cepa": "Carmén&egrave;re · Petite Sirah · Petit Verdot · Cabernet Sauvignon · Malbec",
+        "valle": "Valle del Cachapoal",
         "grad": "",
         "crianza": "",
-        "nota": "Rojo cereza oscuro con opacidad. En nariz, fruta roja madura, de especias tostadas, perfumado, de fondo de suave madera. En boca, jugosa, tersa, fresca, vertical, larga.",
+        "nota": "Rojo cereza oscuro con opacidad. En nariz, fruta roja madura, especias tostadas, perfumado, con un fondo de suave madera. En boca, jugosa, tersa, fresca, vertical y larga.",
         "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Ensamblaje de Carménère, Petite Sirah, Petit Verdot, Cabernet Sauvignon, TE, Malbec de Valle de Colchagua: el pimentón y las especias dulces del Carménère, los taninos robustos de la Petite Sirah y el color y la potencia del Petit Verdot. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas.",
-    "sugiere": "Bife ancho a la parrilla, Queso manchego curado, Lomo vetado a la parrilla, Anticuchos, Costillar de vacuno a la BBQ. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "Hand-made es el ensamblaje mayor de OWM: cinco a seis cepas cofermentadas, con el Carmén&egrave;re al mando aportando pimentón y especia dulce, la Petite Sirah los taninos robustos y el Petit Verdot el color y la potencia. Un tinto complejo, especiado y de buen volumen, con 92-93 puntos de La Cav según la cosecha.",
+    "sugiere": "Bife ancho a la parrilla, queso manchego curado, lomo vetado a la parrilla, anticuchos y costillar de vacuno a la BBQ. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "OWM Pillo de Panamá",
@@ -7852,48 +7852,48 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2024",
-        "cepa": "Cabernet Sauvignon, Syrah, Petit Verdot",
+        "anada": "",
+        "cepa": "Cabernet Sauvignon · Syrah · Petit Verdot",
         "valle": "Valle de Colchagua",
         "grad": "14%",
         "crianza": "20 meses en estanque de acero inoxidable",
-        "nota": "Rojo guinda con ribetes púrpuras. En nariz, frutales, cereza, mora, grosella, notas a tabaco, chocolate amargo, pimentón rojo asado. En boca, jugosa, intensa, oscura, algo de amargo y dulce, redonda.",
+        "nota": "Rojo guinda con ribetes púrpuras. En nariz, aromas frutales de cereza, mora y grosella, con notas a tabaco, chocolate amargo y pimentón rojo asado. En boca, jugosa, intensa y oscura, con un juego de amargo y dulce, redonda.",
         "premios": "92 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2022",
-        "cepa": "Cabernet Sauvignon, Syrah, Malbec",
+        "anada": "",
+        "cepa": "Cabernet Sauvignon · Syrah · Malbec",
         "valle": "Valle de Colchagua",
         "grad": "14%",
         "crianza": "20 meses en estanque de acero inoxidable",
-        "nota": "Rojo guinda con ribetes púrpuras. En nariz, frutales, cereza, mora, grosella, notas a tabaco, chocolate amargo, pimentón rojo asado. En boca, jugosa, tersa, frutal, de berries cítricos, largo.",
+        "nota": "Rojo guinda con ribetes púrpuras. En nariz, aromas frutales de cereza, mora y grosella, con notas a tabaco, chocolate amargo y pimentón rojo asado. En boca, jugosa, tersa y frutal, de berries y cítricos, larga.",
         "premios": "93 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2019",
-        "cepa": "Cabernet Sauvignon / Syrah / Carignan",
-        "valle": "Cachapoal",
+        "anada": "",
+        "cepa": "Cabernet Sauvignon · Syrah · Carignan",
+        "valle": "Valle del Cachapoal",
         "grad": "14%",
         "crianza": "20 meses en estanque de acero inoxidable",
-        "nota": "Rojo guinda con ribetes púrpuras. En nariz, frutales, cereza, mora, grosella, notas a tabaco, chocolate amargo, pimentón rojo asado. En boca, de acidez media y tanino equilibrado.",
+        "nota": "Rojo guinda con ribetes púrpuras. En nariz, aromas frutales de cereza, mora y grosella, con notas a tabaco, chocolate amargo y pimentón rojo asado. En boca, acidez media y tanino equilibrado.",
         "premios": "94 pts La Cav · 93 pts Descorchados",
         "revista": ""
       },
       {
-        "anada": "2016",
-        "cepa": "Cabernet Sauvignon, Syrah, Petit Verdot",
-        "valle": "Cachapoal",
+        "anada": "",
+        "cepa": "Cabernet Sauvignon · Syrah · Petit Verdot",
+        "valle": "Valle del Cachapoal",
         "grad": "14%",
         "crianza": "20 meses en estanque de acero inoxidable",
-        "nota": "Rojo guinda con ribetes púrpuras. En nariz, frutales, cereza, mora, grosella, notas a tabaco, chocolate amargo, pimentón rojo asado. En boca, de acidez media y tanino equilibrado.",
+        "nota": "Rojo guinda con ribetes púrpuras. En nariz, aromas frutales de cereza, mora y grosella, con notas a tabaco, chocolate amargo y pimentón rojo asado. En boca, acidez media y tanino equilibrado.",
         "premios": "89 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Ensamblaje de Cabernet Sauvignon, Syrah, Petit Verdot de Valle de Colchagua: la estructura y el casis del Cabernet, la pimienta y la fruta negra de la Syrah y el color y la potencia del Petit Verdot. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas. Con 20 meses en estanque de acero inoxidable.",
-    "sugiere": "Bife ancho a la parrilla, Queso manchego curado, Berenjenas a la parmesana, Costillar de vacuno a la BBQ, Anticuchos. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "El tinto de entrada de OWM y, curiosamente, el más premiado: la cosecha 2019 alcanzó 94 puntos de La Cav &mdash;el puntaje más alto de toda la viña&mdash; y 93 de Descorchados. Base de Cabernet y Syrah que cambia el tercer socio cada año (Petit Verdot, Malbec o Carignan), criado en acero para dejar la fruta al frente: cereza, mora y grosella con un fondo de tabaco y chocolate amargo. Por $9.500 es una de las mejores compras del catálogo.",
+    "sugiere": "Bife ancho a la parrilla, queso manchego curado, berenjenas a la parmesana, costillar de vacuno a la BBQ y anticuchos. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Peroli Chasconas Brut Nature",
