@@ -3478,7 +3478,7 @@
   {
     "name": "Encierra Carménère",
     "winery": "Encierra",
-    "image": "",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093406/ENCIERRA_20_20CARMENERE.png?1785098990",
     "url": "https://uptowine.cl/encierra",
     "price": 23900,
     "available": false,
@@ -3520,7 +3520,7 @@
   {
     "name": "Encierra Porel",
     "winery": "Encierra",
-    "image": "",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093408/ENCIERRA_20POREL.png?1785098161",
     "url": "https://uptowine.cl/encierra-porel",
     "price": 60000,
     "available": false,
@@ -3540,9 +3540,9 @@
     "sugiere": "Tinto estructurado y de guarda: bife ancho a la parrilla, cordero al horno con romero, ragú de cordero con pappardelle, anticuchos y queso manchego curado."
   },
   {
-    "name": "Encierra Puquillay Gran Reserva",
+    "name": "Encierra Puquillay Gran Reserva Carmenere",
     "winery": "Encierra",
-    "image": "",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093409/ENCIERRA_20PUIQUILLAY_20GRAN_20RESERVA_20CARMENERE.png?1785098780",
     "url": "https://uptowine.cl/encierra-puquillay-gran-reserva",
     "price": 9990,
     "available": false,
@@ -4600,28 +4600,6 @@
     "sugiere": "Bife ancho a la parrilla, berenjenas a la parmesana, queso manchego curado, ragú de cordero con pappardelle y osobuco braseado al vino tinto. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
-    "name": "Javiera Ortúzar Wines Barbera",
-    "winery": "Javiera Ortúzar",
-    "image": "",
-    "url": "https://uptowine.cl/javiera-ortuzar-wines-barbera",
-    "price": 18000,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "2021",
-        "cepa": "",
-        "valle": "Valle del Maule",
-        "grad": "",
-        "crianza": "",
-        "nota": "Rubí oscuro con toques ocres en los bordes. En nariz, fruta madura con algo de evolución, fondo terroso y tostado. En boca, jugosa, frutal, de profundidad media, amena pero corta.",
-        "premios": "90 pts La Cav · 92 pts Descorchados",
-        "revista": ""
-      }
-    ],
-    "opina": "Ensamblaje tinto de Valle del Maule: fruta madura y buena estructura.",
-    "sugiere": "Pastel de choclo, Ají de gallina, Cazuela de vacuno, Empanadas de pino, Pimentones rellenos de carne. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
-  },
-  {
     "name": "Javiera Ortúzar Wines Pinot Grigio",
     "winery": "Javiera Ortúzar",
     "image": "",
@@ -5510,18 +5488,18 @@
     "available": false,
     "anadas": [
       {
-        "anada": "2021",
-        "cepa": "Petit Verdot, Cabernet Sauvignon, Malbec, Cabernet Franc",
+        "anada": "",
+        "cepa": "Petit Verdot · Cabernet Sauvignon · Malbec · Cabernet Franc",
         "valle": "Valle de Colchagua",
         "grad": "",
         "crianza": "",
-        "nota": "Rojo cereza. En nariz, dulce, moras, frutillas maceradas, violetas, hojas de tabaco. En boca, tiene una ataque dulce, de cuerpo medio, leve rugosidad.",
-        "premios": "93 pts La Cav · 94 pts Tim Atkin",
+        "nota": "Rojo cereza. En nariz, dulce, con moras, frutilla macerada, violetas y hojas de tabaco. En boca, ataque dulce, de cuerpo medio y una leve rugosidad.",
+        "premios": "94 pts Tim Atkin · 93 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Ensamblaje de Petit Verdot, Cabernet Sauvignon, Malbec, Cabernet Franc de Valle de Colchagua: el color y la potencia del Petit Verdot, la estructura y el casis del Cabernet y el color y las moras del Malbec. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas.",
-    "sugiere": "Bife ancho a la parrilla, Cordero al horno con romero, Anticuchos, Queso manchego curado, Entrecot a la pimienta. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "El vino de más alto vuelo de Laura Hartwig: un ensamblaje de cuatro cepas bordelesas liderado por el Petit Verdot, que aporta color y potencia, con el casis del Cabernet, las moras del Malbec y el toque herbal del Cabernet Franc. 94 puntos de Tim Atkin y 93 de La Cav , de lo mejor puntuado del catálogo. Complejo, especiado y de guarda.",
+    "sugiere": "Bife ancho a la parrilla, cordero al horno con romero, anticuchos, queso manchego curado y entrecot a la pimienta. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Laura Hartwig Flor de la Pluma",
@@ -5532,18 +5510,18 @@
     "available": false,
     "anadas": [
       {
-        "anada": "NV",
+        "anada": "",
         "cepa": "Chardonnay",
-        "valle": "Valle de Loncomilla",
+        "valle": "Valle de Loncomilla (Maule)",
         "grad": "",
         "crianza": "",
-        "nota": "En boca, jugosa, tersa, cítrica, larga, compacta.",
+        "nota": "Fruta blanca con notas cremosas y volumen. En boca, jugosa, tersa, cítrica, compacta y de final largo.",
         "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Chardonnay de Laura Hartwig, viña clásica de Santa Cruz, en pleno valle de Colchagua. En copa, fruta blanca, notas cremosas y volumen.",
-    "sugiere": "Curry suave de pollo, Machas a la parmesana, Queso brie, Risotto de camarones, Fetuccine Alfredo. Blanco con cuerpo: pescados en salsa, mariscos gratinados y aves cremosas."
+    "opina": "El Chardonnay de Laura Hartwig, viña clásica de Santa Cruz que aquí sale a buscar fruta al Valle de Loncomilla, en el Maule interior. Fruta blanca, notas cremosas y volumen, con una boca cítrica y compacta que se mantiene fresca. 92 puntos La Cav para un blanco de mesa con cuerpo.",
+    "sugiere": "Curry suave de pollo, machas a la parmesana, queso brie, risotto de camarones y fetuccine Alfredo. Blanco con cuerpo: pescados en salsa, mariscos gratinados y aves cremosas."
   },
   {
     "name": "Laura Hartwig La Luca Malbec",
