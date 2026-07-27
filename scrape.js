@@ -167,6 +167,7 @@ async function fetchViaApi() {
           image: (product.images && product.images[0] && product.images[0].url) || '',
           url: 'https://uptowine.cl/' + product.permalink,
           price: product.price != null ? Number(product.price) : null,
+          compare_at: product.compare_at_price != null ? Number(product.compare_at_price) : null,
           available: product.status === 'available' && (product.stock_unlimited || product.stock > 0),
         });
         continue; // exclusivo: no va al catálogo general
