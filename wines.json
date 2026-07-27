@@ -5,21 +5,22 @@
     "image": "",
     "url": "https://uptowine.cl/3-monos-3-monos",
     "price": 15900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2024",
-        "cepa": "Carmenère",
-        "valle": "Peumo, valle del Cachapoal",
+        "anada": "",
+        "cepa": "Carmén&egrave;re",
+        "valle": "Peumo, Valle del Cachapoal",
         "grad": "",
         "crianza": "",
-        "nota": "Cereza oscuro con violeta. En nariz, berries rojos maduros, fondo de especias dulces y tostadas suaves. En boca, jugosa, tersa, frutal, madura, de fondo meloso.",
+        "nota": "Cereza oscuro con reflejos violeta. En nariz, berries rojos maduros, con fondo de especias dulces y tostados suaves. En boca, jugosa, tersa y frutal, de fondo meloso.",
         "premios": "91 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Carménère de Peumo, valle del Cachapoal: pimentón, especias dulces y frutos rojos, con taninos amables.",
-    "sugiere": "Pastel de choclo, Lasaña boloñesa, Cazuela de vacuno, Pimentones rellenos de carne, Empanadas de pino. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
+    "opina": "Carmén&egrave;re de Peumo, la zona insignia de la variedad en el Cachapoal: pimentón, especias dulces y frutos rojos, con taninos amables y cuerpo medio.",
+    "sugiere": "Pastel de choclo, lasaña boloñesa, cazuela de vacuno, pimentones rellenos de carne y empanadas de pino. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
   },
   {
     "name": "Alas de Parra Blend País Cinsault",
@@ -27,6 +28,7 @@
     "image": "",
     "url": "https://uptowine.cl/alas-de-parra-blend-pais-cinsault",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -49,6 +51,7 @@
     "image": "",
     "url": "https://uptowine.cl/alas-de-parra-cabernet-sauvignon",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -71,6 +74,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29439777/ALCHEMY_20ANGELINA_20BLACK.png?1783625353",
     "url": "https://uptowine.cl/alchemy-angelina-black",
     "price": 13000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -94,6 +98,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29567546/ALCHEMY_20ANGELINA_20CARMENERE.png?1783625013",
     "url": "https://uptowine.cl/alchemy-angelina-carmenere",
     "price": 13000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -127,6 +132,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29562558/Angelina_20Chardonnay.png?1784477254",
     "url": "https://uptowine.cl/alchemy-angelina-chardonnay",
     "price": 7992,
+    "compare_at": 9990,
     "available": false,
     "anadas": [
       {
@@ -150,6 +156,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29562735/ALCHEMY_20ANGELINA_20WHITE.png?1783891893",
     "url": "https://uptowine.cl/alchemy-angelina-white-angel",
     "price": 9990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -183,6 +190,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29562453/ALCHEMY_20CARMENERE.png?1783624978",
     "url": "https://uptowine.cl/alchemy-carmenere",
     "price": 18990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -246,6 +254,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29562301/ALCHEMY_20GRAND_20CUVEE.png?1783625170",
     "url": "https://uptowine.cl/alchemy-grand-cuvee",
     "price": 12720,
+    "compare_at": 15900,
     "available": false,
     "anadas": [
       {
@@ -309,6 +318,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29554000/ALCHEMY_20PARRONE_20BLEND.png?1783625237",
     "url": "https://uptowine.cl/alchemy-parrone-syrah-cabernet",
     "price": 8990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -342,6 +352,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29553828/ALCHEMY_20PARRONE_20CABERNET_20SAUVIGNON.png?1783625291",
     "url": "https://uptowine.cl/alchemy-parrone-cabernet-sauvignon",
     "price": 9000,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -375,6 +386,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29562509/ALCHEMY_20PARRONE_20GARNACHA.png?1783625129",
     "url": "https://uptowine.cl/alchemy-parrone-garnacha",
     "price": 12990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -398,6 +410,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29562530/ALCHEMY_20PARRONE_20MALBEC.png?1783625081",
     "url": "https://uptowine.cl/alchemy-parrone-malbec",
     "price": 12990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -451,6 +464,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29561835/ALCHEMY_20SYRAH.png?1783892035",
     "url": "https://uptowine.cl/alchemy-syrah",
     "price": 15900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -524,6 +538,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/35466610/ALGORTA_20FAMILY_20RESERVE_20CABERNET_20SAUVIGNON.png?1783626767",
     "url": "https://uptowine.cl/algorta-family-reserve-cabernet-sauvignon",
     "price": 12990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -547,6 +562,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32948470/ALGORTA_20FAMILY_20RESERVE_20CARMENERE.png?1783626681",
     "url": "https://uptowine.cl/algorta-family-reserve",
     "price": 12990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -580,6 +596,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32115125/ALGORTA_20GRAN_20RESERVA_20CABERNET_20SAUVIGNON.png?1783626838",
     "url": "https://uptowine.cl/algorta-gran-reserva-cabernet-sauvignon",
     "price": 9900,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -613,6 +630,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32948508/ALGORTA_20GRAN_20RESERVA_20CARMENERE.png?1783626628",
     "url": "https://uptowine.cl/algorta-carmenere",
     "price": 9900,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -636,11 +654,12 @@
     "image": "",
     "url": "https://uptowine.cl/algorta-grand-reserve",
     "price": 9490,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2022",
-        "cepa": "Carmenère",
+        "anada": "",
+        "cepa": "Carmén&egrave;re",
         "valle": "Valle del Rapel",
         "grad": "",
         "crianza": "",
@@ -649,18 +668,18 @@
         "revista": ""
       },
       {
-        "anada": "2021",
-        "cepa": "Cabernet sauvignon",
+        "anada": "",
+        "cepa": "Cabernet Sauvignon",
         "valle": "Valle del Rapel",
         "grad": "",
         "crianza": "",
-        "nota": "Rubí. En nariz, dulce, frutillas, moras, menta, algo de cuero. En la. Rojo rubí. Nariz dulce, frutillas, moras, menta, algo de cuero. En la boca es frutal, maduro, de cuerpo medio, sabroso.",
+        "nota": "Rojo rubí. En nariz, dulce, con frutillas, moras, menta y algo de cuero. En boca es frutal, maduro, de cuerpo medio y sabroso.",
         "premios": "91 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Carménère de Valle del Rapel: pimentón, especias dulces y frutos rojos, con taninos amables.",
-    "sugiere": "Lomo vetado a la parrilla, Osobuco braseado al vino tinto, Berenjenas a la parmesana, Anticuchos, Bife ancho a la parrilla. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "La línea Grand Reserve de Algorta, del Valle del Rapel, cambia de cepa según la cosecha: la 2022 es un Carmén&egrave;re perfumado de pimentón, especias dulces y frutos rojos (90 pts La Cav), y la 2021 un Cabernet Sauvignon frutal y sabroso, de cuerpo medio (91 pts La Cav). En ambos casos, tinto de fruta madura y taninos amables.",
+    "sugiere": "Lomo vetado a la parrilla, osobuco braseado al vino tinto, berenjenas a la parmesana, anticuchos y bife ancho a la parrilla. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Algorta Mala Testa GSM",
@@ -668,6 +687,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36260413/Algorta_20Mala_20Testa.png?1784494241",
     "url": "https://uptowine.cl/algorta-mala-testa-gsm",
     "price": 22990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -691,11 +711,12 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093375/ALGORTA_20THE_20BLEND.png?1783627534",
     "url": "https://uptowine.cl/algorta-the-blend",
     "price": 17990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2022",
-        "cepa": "Carménère, Cabernet Sauvignon, Petit Verdot",
+        "anada": "",
+        "cepa": "Carmén&egrave;re · Cabernet Sauvignon · Petit Verdot",
         "valle": "Valle del Rapel",
         "grad": "",
         "crianza": "",
@@ -704,8 +725,8 @@
         "revista": ""
       }
     ],
-    "opina": "Ensamblaje de Carménère, Cabernet Sauvignon, Petit Verdot de Valle del Rapel: el pimentón y las especias dulces del Carménère, la estructura y el casis del Cabernet y el color y la potencia del Petit Verdot. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas.",
-    "sugiere": "Bife ancho a la parrilla, Cordero al horno con romero, Anticuchos, Ragú de cordero con pappardelle, Osobuco braseado al vino tinto. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "Ensamblaje de Carmén&egrave;re, Cabernet Sauvignon y Petit Verdot del Valle del Rapel: el pimentón y las especias dulces del Carmén&egrave;re, la estructura y el casis del Cabernet y el color y la potencia del Petit Verdot. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas.",
+    "sugiere": "Bife ancho a la parrilla, cordero al horno con romero, anticuchos, ragú de cordero con pappardelle y osobuco braseado al vino tinto. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Astaburuaga Manu",
@@ -713,31 +734,32 @@
     "image": "",
     "url": "https://uptowine.cl/astaburuaga-manu",
     "price": 10090,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2019",
-        "cepa": "Carmenère",
+        "anada": "",
+        "cepa": "Carmén&egrave;re",
         "valle": "Valle de Curicó",
         "grad": "",
         "crianza": "",
-        "nota": "Oscuro con evolución ladrillo en los bordes. En nariz, fruta roja con suave matiz orgánico y fondo de especias dulces. En boca, golosa, con volumen, amena y muy animal.",
+        "nota": "Oscuro, con evolución ladrillo en los bordes. En nariz, fruta roja con un suave matiz orgánico y fondo de especias dulces. En boca, golosa, con volumen, amena y muy expresiva.",
         "premios": "91 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2018",
-        "cepa": "Carmenère",
+        "anada": "",
+        "cepa": "Carmén&egrave;re",
         "valle": "Valle de Curicó",
         "grad": "",
         "crianza": "",
-        "nota": "Cereza oscuro. En nariz, frutos rojos en suave evolución con un fondo maduro y especiado, algo herbal. En boca, jugosa, tersa, levemente golosa, amena.",
+        "nota": "Cereza oscuro. En nariz, frutos rojos en suave evolución con un fondo maduro y especiado, algo herbal. En boca, jugosa, tersa, levemente golosa y amena.",
         "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Carménère de Valle de Curicó: pimentón, especias dulces y frutos rojos, con taninos amables.",
-    "sugiere": "Pastel de choclo, Chorrillana, Costillar de cerdo a la BBQ, Ají de gallina, Lasaña boloñesa. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
+    "opina": "Carmén&egrave;re del Valle de Curicó: pimentón, especias dulces y frutos rojos, con taninos amables y una boca golosa y de buen volumen. Bien evaluado por La Cav en ambas cosechas (91–92 pts).",
+    "sugiere": "Pastel de choclo, chorrillana, costillar de cerdo a la BBQ, ají de gallina y lasaña boloñesa. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
   },
   {
     "name": "Bla Fierro Negro Premium Blend",
@@ -745,6 +767,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32928030/BLA_20FIERRO_20NEGRO_20BLEND_20PREMIUM.png?1783625742",
     "url": "https://uptowine.cl/bla-fierro-negro-premium",
     "price": 15900,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -768,6 +791,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32928044/BLA_20GRAN_20RESERVA_20CABERNET_20SAUVIGNON.png?1783625677",
     "url": "https://uptowine.cl/bla-gran-reserva-cabernet-sauvignon",
     "price": 9200,
+    "compare_at": 11500,
     "available": true,
     "anadas": [
       {
@@ -791,6 +815,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32927967/BLA_20GRAN_20RESERVA_20CARMENERE.png?1783625520",
     "url": "https://uptowine.cl/bla-gran-reserva-carmenere",
     "price": 11900,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -814,6 +839,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32927917/BLA_20RESERVA_20CABERNET_20SAUVIGNON.png?1783625574",
     "url": "https://uptowine.cl/bla-cabernet-sauvignon-reserva",
     "price": 7120,
+    "compare_at": 8900,
     "available": true,
     "anadas": [
       {
@@ -837,6 +863,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32927894/Bla_20Reserva_20Carmenere.png?1783626437",
     "url": "https://uptowine.cl/bla-reserva-carmenere",
     "price": 7120,
+    "compare_at": 8900,
     "available": true,
     "anadas": [
       {
@@ -860,6 +887,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32928016/Bla_20yawar.png?1783626530",
     "url": "https://uptowine.cl/bla-yawar-carmenere-premium",
     "price": 11920,
+    "compare_at": 14900,
     "available": true,
     "anadas": [
       {
@@ -875,7 +903,6 @@
     ],
     "opina": "Yawar, uno de los dos Carménère de Bla Wines —el visceral—: desde el Valle de Cachapoal, un rojo cereza profundo y denso, con mora y guinda madura, vainilla, clavo, pimienta y cacao, más capas de toffee y café de sus 18 meses en roble de primer y segundo uso. Amplio y envolvente, de taninos presentes y final tostado. Fuerza sin perder elegancia: un latido que viene desde lo profundo.",
     "sugiere": "Carménère premium de guarda para carnes de cocción lenta y platos de fondo intenso: wagyu a la parrilla, cordero confitado, costillar braseado 8 horas, risotto de setas y queso ahumado.",
-    "compare_at": 14900,
     "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78662270"
   },
   {
@@ -884,6 +911,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093377/BODEGAS_20RE_20CABERGNAN.png?1783630210",
     "url": "https://uptowine.cl/bodegas-re-cabergnan",
     "price": 24900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -916,6 +944,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29452406/BODEGAS_20RE_20CHARDONNOIR.png?1783632133",
     "url": "https://uptowine.cl/bodegas-re-chardonnoir",
     "price": 18990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -959,6 +988,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093380/BODEGAS_20RE_20ENREDO.png?1783629945",
     "url": "https://uptowine.cl/bodegas-re-enredo",
     "price": 18900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -981,6 +1011,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32925704/BODEGAS_20RE_20MAULINO_20DRY_20FARMER.png?1783711501",
     "url": "https://uptowine.cl/bodega-re-maulino-dry-farmer",
     "price": 9990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -1004,6 +1035,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093381/BODEGAS_20RE_20MEDITERRANEO.png?1783629734",
     "url": "https://uptowine.cl/bodegas-re-mediterraneo",
     "price": 13900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1036,6 +1068,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29872912/BODEGAS_20RE_20PARRAS_20ANCESTRALES.png?1783632683",
     "url": "https://uptowine.cl/bodegas-re-parras-ancestrales",
     "price": 17500,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -1059,6 +1092,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093382/BODEGAS_20RE_20PINOTEL.png?1783629388",
     "url": "https://uptowine.cl/bodegas-re-pinotel",
     "price": 13900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1091,6 +1125,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093383/BODEGAS_20RE_20RECUERDO.png?1783629107",
     "url": "https://uptowine.cl/bodegas-re-recuerdo",
     "price": 13900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1113,6 +1148,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093384/BODEGAS_20RE_20DOBLE.png?1783628793",
     "url": "https://uptowine.cl/bodegas-re-redoble",
     "price": 17500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1135,6 +1171,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093385/BODEGAS_20RE_20RENACE.png?1783628540",
     "url": "https://uptowine.cl/bodegas-re-renace",
     "price": 99000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1167,6 +1204,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093386/BODEGAS_20RE_20RESILIENTE.png?1783628243",
     "url": "https://uptowine.cl/bodegas-re-resiliente",
     "price": 15900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1189,6 +1227,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093387/BODEGAS_20RE_20SYRAGNAN.png?1783624728",
     "url": "https://uptowine.cl/bodegas-re-syragnan",
     "price": 18900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1231,6 +1270,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29440031/BODEGAS_20RE_20SYRANOIR.png?1783632376",
     "url": "https://uptowine.cl/bodegas-re-syranoir",
     "price": 18900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1254,6 +1294,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29710441/BODEGAS_20RE_20VIGNO_20CARIGNAN.png?1783636347",
     "url": "https://uptowine.cl/bodegas-re-vigno",
     "price": 24900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1287,6 +1328,7 @@
     "image": "",
     "url": "https://uptowine.cl/bowines-blend",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1309,6 +1351,7 @@
     "image": "",
     "url": "https://uptowine.cl/bowines-cabernet-sauvignon-gran-reserva",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1331,6 +1374,7 @@
     "image": "",
     "url": "https://uptowine.cl/bowines-carae",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1352,7 +1396,8 @@
     "winery": "BOWines",
     "image": "",
     "url": "https://uptowine.cl/bowines-carae-carignan",
-    "price": 0,
+    "price": 12900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1375,6 +1420,7 @@
     "image": "",
     "url": "https://uptowine.cl/bowines-carignan",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1397,6 +1443,7 @@
     "image": "",
     "url": "https://uptowine.cl/bowines-el-buen-viejo",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1419,6 +1466,7 @@
     "image": "",
     "url": "https://uptowine.cl/bowines-field-blend",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1441,6 +1489,7 @@
     "image": "",
     "url": "https://uptowine.cl/bowines-fillo-cabernet-sauvignon",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1463,6 +1512,7 @@
     "image": "",
     "url": "https://uptowine.cl/bowines-fillo-carignan",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1495,6 +1545,7 @@
     "image": "",
     "url": "https://uptowine.cl/bowines-fillo-malbec",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1517,6 +1568,7 @@
     "image": "",
     "url": "https://uptowine.cl/bowines-fillo-tempranillo",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1539,6 +1591,7 @@
     "image": "",
     "url": "https://uptowine.cl/bowines-malbec",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1560,7 +1613,8 @@
     "winery": "BOWines",
     "image": "",
     "url": "https://uptowine.cl/bowines-malcriado",
-    "price": 0,
+    "price": 12990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1583,6 +1637,7 @@
     "image": "",
     "url": "https://uptowine.cl/bowines-touriga-nacional",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1605,6 +1660,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/34886390/CALYPTRA_20BLEND_20PRESTIGE.png?1783711885",
     "url": "https://uptowine.cl/calyptra-blend-prestige",
     "price": 12500,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -1628,6 +1684,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093453/CALYPTRA_20FORT_20.png?1784320927",
     "url": "https://uptowine.cl/calyptra-fort",
     "price": 28900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1660,6 +1717,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093454/CALYPTRA_20GRAN_20PINOT_20NOIR.png?1784318437",
     "url": "https://uptowine.cl/calyptra-gran",
     "price": 25900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1702,6 +1760,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093455/CALYPTRA_20GRAN_20ASSEMBLAGE.png?1784320640",
     "url": "https://uptowine.cl/calyptra-gran-assemblage",
     "price": 25900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1724,6 +1783,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093456/CALYPTRA_20HERA_20EXTRA_20BRUT.png?1784321272",
     "url": "https://uptowine.cl/calyptra-hera-extra-brut",
     "price": 28900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1756,6 +1816,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093457/CALYPTRA_20INEDITO_20.png?1784319729",
     "url": "https://uptowine.cl/calyptra-inedito",
     "price": 50000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1788,6 +1849,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093458/CALYPTRA_20MARGINADO.png?1784320461",
     "url": "https://uptowine.cl/calyptra-marginado",
     "price": 25900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1820,6 +1882,7 @@
     "image": "",
     "url": "https://uptowine.cl/calyptra-mirlo",
     "price": 28900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1842,6 +1905,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32593638/CALYPTRA_20MOSAIKO_20CABERNET_20SAUVIGNON.png?1783712178",
     "url": "https://uptowine.cl/calyptra-mosaiko-cabernetsauvignon",
     "price": 9990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -1885,6 +1949,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/31157558/CALYPTRA_20PRESTIGE_20PINOT_20NOIR.png?1783892327",
     "url": "https://uptowine.cl/calyptra-prestige-pinot-noir",
     "price": 8500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1908,6 +1973,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/31157664/CALYPTRA_20TERRIOR_20CABERNET_20SAUVIGNON.png?1783712498",
     "url": "https://uptowine.cl/calyptra-terroir-cabernet-sauvignon",
     "price": 8500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -1931,6 +1997,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32593847/CALYPTRA_20VIVENDO_20BLEND.png?1783712765",
     "url": "https://uptowine.cl/calyptra-vivendo-blend-cabernet-sauvignon-merlot-syrah",
     "price": 13990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -1954,6 +2021,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36260161/Calyptra_20Vivendo_20rose_2020202.png?1784496762",
     "url": "https://uptowine.cl/calyptra-vivendo-rose",
     "price": 12900,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -1987,6 +2055,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093461/CALYPTRA_20ZAHIR.png?1784318638",
     "url": "https://uptowine.cl/calyptra-zahir",
     "price": 110000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -2029,21 +2098,22 @@
     "image": "",
     "url": "https://uptowine.cl/carinena-de-retupel",
     "price": 11990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2023",
-        "cepa": "Carignan",
-        "valle": "Valle del Maule",
+        "anada": "",
+        "cepa": "Carignan (Cariñena)",
+        "valle": "Retupel, Valle del Maule",
         "grad": "",
         "crianza": "",
-        "nota": "Cereza con violeta. En nariz, fruta roja, berries maduros, especias tostadas y perfumadas. Madera. En boca, jugosa, frutal, tersa, típica, larga, persistente.",
+        "nota": "Cereza con violeta. En nariz, fruta roja, berries maduros y especias tostadas y perfumadas, con un fondo de madera. En boca, jugosa, frutal, tersa y persistente, fiel al carácter de la cepa.",
         "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Carignan de Valle del Maule: fruta roja de secano, alta acidez y carácter rústico.",
-    "sugiere": "Bife ancho a la parrilla, Cordero al horno con romero, Anticuchos, Ragú de cordero con pappardelle, Berenjenas a la parmesana. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "Carignan (Cariñena) de Retupel, en el Valle del Maule, por El Rescate: fruta roja de secano, alta acidez y ese carácter rústico y fresco tan singular de la cepa, con un paso por madera que le suma especias tostadas. 92 puntos La Cav.",
+    "sugiere": "Bife ancho a la parrilla, cordero al horno con romero, anticuchos, ragú de cordero con pappardelle y berenjenas a la parmesana. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Cas romero Viento Puelche Malbec",
@@ -2051,21 +2121,22 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29723704/CASA_20ROMERO_20VIENTO_20PUELCHE_20MALBEC.png?1783638198",
     "url": "https://uptowine.cl/cas-romero-malbec",
     "price": 13990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2015",
+        "anada": "",
         "cepa": "100% Malbec",
         "valle": "Colchagua",
         "grad": "13,5%",
         "crianza": "",
-        "nota": "Color rojo granate profundo con tintes violáceos brillantes. Nariz compleja, desplegando aromas de violeta y frutas azules de arándano y ciruela. En boca el tanino es abundante y fino, con acidez profunda y notas minerales de grafito y cal.",
+        "nota": "Rojo granate profundo con tintes violáceos brillantes. Nariz compleja, con aromas de violeta y frutas azules de arándano y ciruela. En boca el tanino es abundante y fino, con acidez profunda y notas minerales de grafito y cal.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/uixe/"
       }
     ],
-    "opina": "Malbec de Colchagua: moras, violetas y un tanino jugoso.",
-    "sugiere": "Cazuela de vacuno, Empanadas de pino, Chorrillana, Costillar de cerdo a la BBQ, Pastel de choclo. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
+    "opina": "Malbec de Colchagua: moras, violetas y un tanino jugoso. Fruta azul madura sobre una acidez profunda y un fondo mineral que le da nervio y personalidad.",
+    "sugiere": "Cazuela de vacuno, empanadas de pino, chorrillana, costillar de cerdo a la BBQ y pastel de choclo. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
   },
   {
     "name": "Casa del Magnolio Chardonnay",
@@ -2073,6 +2144,7 @@
     "image": "",
     "url": "https://uptowine.cl/casa-del-magnolio-chardonnay",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -2095,6 +2167,7 @@
     "image": "",
     "url": "https://uptowine.cl/flaherty-casa-magnolio",
     "price": 7400,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -2137,6 +2210,7 @@
     "image": "",
     "url": "https://uptowine.cl/flaherty-casa-del-magnolio-dos-cepas",
     "price": 7400,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -2169,6 +2243,7 @@
     "image": "",
     "url": "https://uptowine.cl/casa-nicolas-cabernet-sauvignon",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -2191,6 +2266,7 @@
     "image": "",
     "url": "https://uptowine.cl/casa-nicolas-carignan",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -2213,6 +2289,7 @@
     "image": "",
     "url": "https://uptowine.cl/casa-nicolas-petit-verdot",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -2235,30 +2312,31 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093388/CASA_20ROMERO_20VIENTO_20PUELCHE_20SYRAH.png?1783636920",
     "url": "https://uptowine.cl/casa-romero-viento-puelche-syrah",
     "price": 15000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2022",
+        "anada": "",
         "cepa": "Syrah",
         "valle": "Casablanca",
         "grad": "14%",
         "crianza": "1 año en barricas de roble francés",
-        "nota": "Rojo cereza oscuro con violeta profundo. En nariz, fruta roja madura con toques licorosos, fondo especiado dulce, mermelada. En boca, jugosa, tersa, frutal, madura, larga.",
+        "nota": "Rojo cereza oscuro con violeta profundo. En nariz, fruta roja madura con toques licorosos, fondo especiado dulce y mermelada. En boca, jugosa, tersa, frutal, madura y larga.",
         "premios": "92 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2018",
+        "anada": "",
         "cepa": "Syrah",
         "valle": "Valle de Casablanca",
         "grad": "14,5%",
         "crianza": "12 meses",
-        "nota": "Violeta. En nariz, evolucionada, moras, pasta de aceitunas, pimiento verde cocido. En boca, es jugoso, lineal, de cuerpo medio; mejora mucho en la boca.",
-        "premios": "Oro - Catad'Or · 92 pts La Cav",
+        "nota": "Violeta. En nariz, evolucionada, con moras, pasta de aceitunas y pimiento verde cocido. En boca, jugoso, lineal y de cuerpo medio; mejora mucho en boca.",
+        "premios": "Oro Catad'Or · 92 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2015",
+        "anada": "",
         "cepa": "Syrah",
         "valle": "Casablanca",
         "grad": "14,5%",
@@ -2268,9 +2346,9 @@
         "revista": ""
       },
       {
-        "anada": "2014",
+        "anada": "",
         "cepa": "100% Syrah",
-        "valle": "Maipo Costa, Subvalle Puangue",
+        "valle": "Maipo Costa, subvalle Puangue",
         "grad": "14,5%",
         "crianza": "12 meses en barricas nuevas de roble francés (bosque Allier, grano fino, tostado medio)",
         "nota": "Violáceo intenso y profundo. En nariz, aromas a violetas que dan paso a toques de tabaco. En boca es elegante y estructurado, 100% de su cepa.",
@@ -2278,8 +2356,8 @@
         "revista": ""
       }
     ],
-    "opina": "Syrah de Casablanca: pimienta negra, fruta negra y un fondo especiado. Con 1 año en barricas de roble francés.",
-    "sugiere": "Anticuchos, Osobuco braseado al vino tinto, Cordero al horno con romero, Costillar de vacuno a la BBQ, Entrecot a la pimienta. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "Syrah de Casablanca de perfil fresco y costero: pimienta negra, fruta negra y un fondo especiado, con un año en barricas de roble francés que le da estructura sin taparlo. La 2018 suma un Oro Catad'Or.",
+    "sugiere": "Anticuchos, osobuco braseado al vino tinto, cordero al horno con romero, costillar de vacuno a la BBQ y entrecot a la pimienta. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Casalattes Kathu Family Collection Cabernet Sauvignon (2009)",
@@ -2287,6 +2365,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/34892774/CASALATTES_20KATHU_20FAMILY_20SELECCION_20CABERNET_20SAUVIGNON.png?1783713108",
     "url": "https://uptowine.cl/casalattes-family-colection-cabernet-sauvignon",
     "price": 8990,
+    "compare_at": 14990,
     "available": true,
     "anadas": [
       {
@@ -2309,7 +2388,8 @@
     "winery": "Casalibre",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36261346/de_20otro_20planeta_20cabernet_20franc.png?1784513996",
     "url": "https://uptowine.cl/casalibre-de-otro-planeta-cabernet-franc",
-    "price": 0,
+    "price": 16990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -2362,6 +2442,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093390/de_20otro_20planeta_20moscatel.png?1784514046",
     "url": "https://uptowine.cl/casalibre-de-otro-planeta",
     "price": 16990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -2393,7 +2474,8 @@
     "winery": "Casalibre",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36261343/de_20otro_20planeta_20sauvignon_20gris.png?1784514020",
     "url": "https://uptowine.cl/casalibre-de-otro-planeta-sauvignon-gris",
-    "price": 0,
+    "price": 16990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -2445,7 +2527,8 @@
     "winery": "Casalibre",
     "image": "",
     "url": "https://uptowine.cl/casalibre-minimo",
-    "price": 21990,
+    "price": 23990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -2497,7 +2580,8 @@
     "winery": "Casalibre",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36261366/siete_20perros_20cabernet_20sauvignon.png?1784513911",
     "url": "https://uptowine.cl/casalibre-siete-perros-cabernet-sauvignon",
-    "price": 0,
+    "price": 8990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -2550,6 +2634,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36261361/siete_20perros_20chardonnay.png?1784513850",
     "url": "https://uptowine.cl/casalibre-siete-perros-chardonnay",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -2573,6 +2658,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093392/siete_20perros_20pais.png?1784513891",
     "url": "https://uptowine.cl/casalibre-siete-perros",
     "price": 8990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -2594,7 +2680,8 @@
     "winery": "Casalibre",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36261359/casa_20libre_20siete_20perros_20petnat.png?1784513957",
     "url": "https://uptowine.cl/casalibre-siete-perros-pet-nat-moscatel-de-alejandria",
-    "price": 0,
+    "price": 10990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -2626,7 +2713,8 @@
     "winery": "Casalibre",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36261363/siete_20perros_20rose_20de_20garnacha.png?1784513930",
     "url": "https://uptowine.cl/casalibre-siete-perros-rose-de-garnacha",
-    "price": 0,
+    "price": 8990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -2659,6 +2747,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/31157307/CHILE_20DIVINO_20EL_20CANCHERO_20MALBEC.png?1783702237",
     "url": "https://uptowine.cl/chile-divino-el-canchero",
     "price": 18000,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -2682,6 +2771,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/31157456/CHILE_20DIVINO_20EL_20CONSENTIDO_20CABERNET_20SAUVIGNON.png?1783702027",
     "url": "https://uptowine.cl/chile-divino-el-consentido",
     "price": 16000,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -2715,6 +2805,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/31157084/CHILE_20DIVINO_20EL_20GOZADOR_20CARMENERE.png?1783702487",
     "url": "https://uptowine.cl/bodegas-re-vigno-copiar",
     "price": 9900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -2748,21 +2839,22 @@
     "image": "",
     "url": "https://uptowine.cl/chile-divino-corazon",
     "price": 28000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2021",
-        "cepa": "Carménère, Cabernet Sauvignon, Petit Verdot",
+        "anada": "",
+        "cepa": "Carmén&egrave;re · Cabernet Sauvignon · Petit Verdot",
         "valle": "Almahue, valle del Cachapoal",
         "grad": "14%",
         "crianza": "12 meses en barricas usadas",
-        "nota": "Rojo cereza oscuro, algo opaco. En nariz, fruta roja y negra madura, de especias perfumadas, fondo acaramelado. En boca, jugosa, tersa, fresca, algo golosa hacia el final.",
-        "premios": "Gran Oro - Catad'Or · 92 pts La Cav",
+        "nota": "Rojo cereza oscuro, algo opaco. En nariz, fruta roja y negra madura, especias perfumadas y un fondo acaramelado. En boca, jugosa, tersa y fresca, algo golosa hacia el final.",
+        "premios": "Gran Oro Catad'Or · 92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Ensamblaje de Carménère, Cabernet Sauvignon, Petit Verdot de Almahue, valle del Cachapoal: el pimentón y las especias dulces del Carménère, la estructura y el casis del Cabernet y el color y la potencia del Petit Verdot. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas. Con 12 meses en barricas usadas.",
-    "sugiere": "Bife ancho a la parrilla, Costillar de vacuno a la BBQ, Osobuco braseado al vino tinto, Cordero al horno con romero, Berenjenas a la parmesana. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "El ensamblaje ícono de Chile diVino, de Almahue (Cachapoal): el pimentón y las especias dulces del Carmén&egrave;re, la estructura y el casis del Cabernet y el color y la potencia del Petit Verdot, con 12 meses en barrica. Un tinto más complejo y equilibrado que la suma de sus cepas, premiado con Gran Oro Catad'Or y 92 puntos La Cav.",
+    "sugiere": "Bife ancho a la parrilla, costillar de vacuno a la BBQ, osobuco braseado al vino tinto, cordero al horno con romero y berenjenas a la parmesana. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Chile DiVino La Confundida",
@@ -2770,6 +2862,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32983091/CHILE_20DIVINO_20LA_20CONFUNDIDA_20CARMENERE.png?1783701481",
     "url": "https://uptowine.cl/chile-divino-la-confundida-carmenere",
     "price": 17990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -2813,6 +2906,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36260152/Cordilleramar_20cabernet_20franc.png?1784496586",
     "url": "https://uptowine.cl/choapa-cordilleramar-cabernet-franc",
     "price": 16000,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -2836,6 +2930,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36260154/Cordilleramar_20Syrah_202019.png?1784496517",
     "url": "https://uptowine.cl/choapa-cordilleramar-syrah",
     "price": 16000,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -2859,6 +2954,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29452623/CLAVIJERO_20BLEND.png?1783892491",
     "url": "https://uptowine.cl/clavijero-blend",
     "price": 13990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -2892,6 +2988,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29452701/CLAVIJERO_20GARNACHA.png?1783892754",
     "url": "https://uptowine.cl/clavijero-garnacha",
     "price": 13990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -2935,6 +3032,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29452732/CLAVIJERO_20SYRAH.png?1783713999",
     "url": "https://uptowine.cl/clavijero-syrah",
     "price": 13990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -2978,6 +3076,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093463/DAGAZ_20_20GRANITO_20ESTATE_20CABERNET_20SAUVIGNON.png?1784322262",
     "url": "https://uptowine.cl/dagaz-granito-estate-cabernet-sauvignon",
     "price": 24990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3030,6 +3129,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093464/DAGAZ_20_20GRANITO_20ESTATE_20CARMENERE.png?1784322397",
     "url": "https://uptowine.cl/dagaz-granito-estate-carmenere",
     "price": 19900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3062,6 +3162,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093465/DAGAZ_20ITATINO_20CINSAULT.png?1784324765",
     "url": "https://uptowine.cl/dagaz-itatino",
     "price": 15000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3094,6 +3195,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093466/DAGAZ_20KOLWE_20CABERNET_20SAUVIGNON.png?1784324373",
     "url": "https://uptowine.cl/dagaz-kolwe-vineyard",
     "price": 44990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3126,6 +3228,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093467/DAGAZ_20_20GRANITO_20TIERRAS_20DE_20PUMANQUE.png?1784322720",
     "url": "https://uptowine.cl/dagaz-tierras-de-pumanque",
     "price": 64990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3158,6 +3261,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29950074/DON_20ELIAS_20ENSAMBLAJE_20N3.png?1783716590",
     "url": "https://uptowine.cl/don-elias-ensamblaje",
     "price": 10900,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -3181,6 +3285,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29950194/DON_20ELIAS_20ORGULLO_20PORTE_C3_91O.png?1783716992",
     "url": "https://uptowine.cl/don-elias-orgullo-porteno",
     "price": 12990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3204,6 +3309,7 @@
     "image": "",
     "url": "https://uptowine.cl/el-escorial-cornisa",
     "price": 39000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3236,6 +3342,7 @@
     "image": "",
     "url": "https://uptowine.cl/el-escorial-gran-reserva",
     "price": 18000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3288,6 +3395,7 @@
     "image": "",
     "url": "https://uptowine.cl/el-escorial-premium",
     "price": 29000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3310,6 +3418,7 @@
     "image": "",
     "url": "https://uptowine.cl/el-escorial-signature-wines",
     "price": 18000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3342,6 +3451,7 @@
     "image": "",
     "url": "https://uptowine.cl/sypor-t-blanc-moscatel",
     "price": 20000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3364,6 +3474,7 @@
     "image": "",
     "url": "https://uptowine.cl/el-escorial-sypor-t-ruby",
     "price": 20000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3386,6 +3497,7 @@
     "image": "",
     "url": "https://uptowine.cl/el-pataguino-blend-cabernet-syrah",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3408,6 +3520,7 @@
     "image": "",
     "url": "https://uptowine.cl/el-pataguino-carmenere",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3430,6 +3543,7 @@
     "image": "",
     "url": "https://uptowine.cl/el-pataguino-garnacha",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3452,6 +3566,7 @@
     "image": "",
     "url": "https://uptowine.cl/el-pataguino-pataguina-garnacha",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3474,21 +3589,22 @@
     "image": "",
     "url": "https://uptowine.cl/el-rescate-ladino",
     "price": 13500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2022",
+        "anada": "",
         "cepa": "País",
         "valle": "Valle del Itata",
         "grad": "",
         "crianza": "",
-        "nota": "Cereza oscuro con toques violetas. En nariz, frutos rojos, fondos tostados, especias ahumadas. En boca, jugosa, tersa, de matices amargos, persistente.",
+        "nota": "Cereza oscuro con toques violetas. En nariz, frutos rojos, fondos tostados y especias ahumadas. En boca, jugosa, tersa, con matices amargos y buena persistencia.",
         "premios": "91 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "País de Valle del Itata: fruta roja fresca, ligereza y raíz campesina chilena.",
-    "sugiere": "Risotto de hongos, Quiche lorraine, Pollo asado con hierbas, Pato confitado, Atún sellado. Tinto ligero y fresco: salmón, hongos, aves y charcutería."
+    "opina": "País del Valle del Itata por El Rescate: fruta roja fresca, ligereza y esa raíz campesina chilena de las viñas viejas de secano. Frutos rojos con fondos tostados y especias ahumadas; boca jugosa, tersa y persistente.",
+    "sugiere": "Risotto de hongos, quiche lorraine, pollo asado con hierbas, pato confitado y atún sellado. Tinto ligero y fresco: salmón, hongos, aves y charcutería."
   },
   {
     "name": "Emica Del Secano",
@@ -3496,31 +3612,32 @@
     "image": "",
     "url": "https://uptowine.cl/emica-del-secano",
     "price": 14990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2023",
+        "anada": "",
         "cepa": "Carignan",
         "valle": "Empedrado, valle del Maule",
         "grad": "",
         "crianza": "",
-        "nota": "Cereza intenso de media profundidad. En nariz, berries maduros, en un fondo de tostado intenso, café, moka. En boca, jugosa, punzante, algo tánica, compacta.",
+        "nota": "Cereza intenso de media profundidad. En nariz, berries maduros sobre un fondo de tostado intenso, café y moka. En boca, jugosa, punzante, algo tánica y compacta.",
         "premios": "92 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2021",
+        "anada": "",
         "cepa": "País",
         "valle": "Empedrado, valle del Maule",
         "grad": "",
         "crianza": "",
-        "nota": "Guinda suave. En nariz, fruta rojas silvestres, frutillas y frambuesas maceradas, levemente medicinal, de especias rojas suaves. En boca, jugosa, media, fresca, compacta.",
+        "nota": "Guinda suave. En nariz, frutas rojas silvestres, frutillas y frambuesas maceradas, levemente medicinal, de especias rojas suaves. En boca, jugosa, media, fresca y compacta.",
         "premios": "91 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Carignan de Empedrado, valle del Maule: fruta roja de secano, alta acidez y carácter rústico.",
-    "sugiere": "Berenjenas a la parmesana, Ragú de cordero con pappardelle, Lomo vetado a la parrilla, Queso manchego curado, Costillar de vacuno a la BBQ. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "La línea del Secano de Emica, de Empedrado en el valle del Maule, cambia de cepa según la cosecha: la 2023 es un Carignan intenso, tánico y tostado (92 pts La Cav), y la 2021 un País más liviano y fresco de fruta roja silvestre (91 pts La Cav). Ambos, viñas viejas de secano con carácter rústico y alta acidez.",
+    "sugiere": "Berenjenas a la parmesana, ragú de cordero con pappardelle, lomo vetado a la parrilla, queso manchego curado y costillar de vacuno a la BBQ. Tinto de secano: carnes a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Encierra Carménère",
@@ -3528,6 +3645,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093406/ENCIERRA_20_20CARMENERE.png?1785098990",
     "url": "https://uptowine.cl/encierra",
     "price": 23900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3570,6 +3688,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093408/ENCIERRA_20POREL.png?1785098161",
     "url": "https://uptowine.cl/encierra-porel",
     "price": 60000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3592,6 +3711,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093409/ENCIERRA_20PUIQUILLAY_20GRAN_20RESERVA_20CARMENERE.png?1785098780",
     "url": "https://uptowine.cl/encierra-puquillay-gran-reserva",
     "price": 9990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3624,6 +3744,7 @@
     "image": "",
     "url": "https://uptowine.cl/erasmo",
     "price": 11500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3656,6 +3777,7 @@
     "image": "",
     "url": "https://uptowine.cl/erasmo-almaule",
     "price": 7000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3678,6 +3800,7 @@
     "image": "",
     "url": "https://uptowine.cl/erasmo-javier-rousseau",
     "price": 18000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3710,6 +3833,7 @@
     "image": "",
     "url": "https://uptowine.cl/erasmo-la-reserva-de-caliboro",
     "price": 18000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3732,6 +3856,7 @@
     "image": "",
     "url": "https://uptowine.cl/la-reserva-de-caliboro-erasmo-pais",
     "price": 15000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3754,6 +3879,7 @@
     "image": "",
     "url": "https://uptowine.cl/erasmo-late-harvest",
     "price": 25000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3786,6 +3912,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32983262/ESCANDALO_20CARIGNAN.png?1783892890",
     "url": "https://uptowine.cl/escandalo-carignan",
     "price": 13990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -3829,6 +3956,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32602409/ESCANDALO_20PIPE_C3_91O.png?1783717785",
     "url": "https://uptowine.cl/escandalo-wines-pipeno",
     "price": 6000,
+    "compare_at": 10500,
     "available": true,
     "anadas": [
       {
@@ -3852,6 +3980,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/34886051/ESCANDALO_20SEMILLON.png?1783718320",
     "url": "https://uptowine.cl/escandalo-semillon",
     "price": 12990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -3885,6 +4014,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/34839670/FARADAY_20SPARKLING_20ESPUMANTE_20EXTRA_20BRUT.png?1783718640",
     "url": "https://uptowine.cl/faraday-espumante-sparkling-extra-brut",
     "price": 18990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -3908,21 +4038,22 @@
     "image": "",
     "url": "https://uptowine.cl/faraday-mirabile",
     "price": 15990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2024",
-        "cepa": "Cabernet sauvignon",
+        "anada": "",
+        "cepa": "Cabernet Sauvignon",
         "valle": "Valle del Maipo",
         "grad": "",
         "crianza": "",
-        "nota": "En nariz el vino muestra un lado más hacia la fruta roja del Cabernet Sauvignon. En boca, es un vino estructurado pero amable con el paladar, con una concentración de sabores y aromas y un final largo que se balancea perfectamente con la acidez y los taninos.",
+        "nota": "En nariz muestra un lado marcado hacia la fruta roja del Cabernet Sauvignon. En boca es estructurado pero amable con el paladar, con concentración de sabores y aromas y un final largo que se balancea con la acidez y los taninos.",
         "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Cabernet Sauvignon de Valle del Maipo: casis, cedro y fruta negra, con taninos firmes.",
-    "sugiere": "Bife ancho a la parrilla, Osobuco braseado al vino tinto, Lomo vetado a la parrilla, Cordero al horno con romero, Berenjenas a la parmesana. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "Cabernet Sauvignon del Valle del Maipo por Faraday Wines: casis, cedro y fruta negra, con taninos firmes. Estructurado pero amable, de buena concentración y final largo, con la frescura que equilibra la fruta.",
+    "sugiere": "Bife ancho a la parrilla, osobuco braseado al vino tinto, lomo vetado a la parrilla, cordero al horno con romero y berenjenas a la parmesana. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Faraday Misculáre Cinsault + Carmenere",
@@ -3930,6 +4061,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32983681/FARADAY_20MISCULARE_20CINSAULT_20CARMENERE.png?1783718893",
     "url": "https://uptowine.cl/faraday-misculare-cinsault-carmenere",
     "price": 13990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -3963,6 +4095,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/34838692/FARADAY_20MISCULARE_20MOSCATEL_20CHARDONNAY.png?1783720555",
     "url": "https://uptowine.cl/faraday-misculare-moscatel-chardonnay",
     "price": 12990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -4006,6 +4139,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/34837008/FARADAY_20MISCULARE_20PAIS_20CABERNET_20SAUVIGNON.png?1783720841",
     "url": "https://uptowine.cl/faraday-misculare-pais-cabernet-sauvignon",
     "price": 13990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -4029,6 +4163,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/34892935/FARADAY_20UNICALIA_20CARMENERE.png?1783721070",
     "url": "https://uptowine.cl/faraday-unicalia-carmenere",
     "price": 18990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -4052,6 +4187,7 @@
     "image": "",
     "url": "https://uptowine.cl/flaherty-aconcagua",
     "price": 16990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4094,6 +4230,7 @@
     "image": "",
     "url": "https://uptowine.cl/flaherty-casa-del-magnolio",
     "price": 9990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4126,6 +4263,7 @@
     "image": "",
     "url": "https://uptowine.cl/flaherty",
     "price": 10000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4148,6 +4286,7 @@
     "image": "",
     "url": "https://uptowine.cl/flaherty-vinedo-ocoa",
     "price": 16990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4180,6 +4319,7 @@
     "image": "",
     "url": "https://uptowine.cl/flaherty-cauquenes-vinedo-tequel",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4202,6 +4342,7 @@
     "image": "",
     "url": "https://uptowine.cl/flaherty-pais-vinedo-tequel",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4224,6 +4365,7 @@
     "image": "",
     "url": "https://uptowine.cl/flaherty-petite-sirah-vinedo-tequel",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4246,6 +4388,7 @@
     "image": "",
     "url": "https://uptowine.cl/flaherty-tempranillo-vinedo-tequel",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4268,6 +4411,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29452922/GALAN_20DE_20ROUTE_20BLEND.png?1783893108",
     "url": "https://uptowine.cl/galan-d-route-blend",
     "price": 12000,
+    "compare_at": 15000,
     "available": false,
     "anadas": [
       {
@@ -4291,6 +4435,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29452806/GALAN_20DE_20MOLINA_20BLEND_20.png?1783893477",
     "url": "https://uptowine.cl/galan-de-molina-blend",
     "price": 7992,
+    "compare_at": 9990,
     "available": false,
     "anadas": [
       {
@@ -4314,6 +4459,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29452883/GALAN_20DE_20MOLINA_20CARIGNAN.png?1783894891",
     "url": "https://uptowine.cl/galan-de-molina-carignan",
     "price": 7992,
+    "compare_at": 9990,
     "available": false,
     "anadas": [
       {
@@ -4337,6 +4483,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29452868/GALAN_20DE_20MOLINA_20PINOT_20NOIR.png?1783721502",
     "url": "https://uptowine.cl/galan-de-molina-pinot-noir",
     "price": 7992,
+    "compare_at": 9990,
     "available": false,
     "anadas": [
       {
@@ -4360,6 +4507,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36260423/Grabados_20del_20choapa_20carmenere_202024.png?1784496565",
     "url": "https://uptowine.cl/grabados-del-choapa-carmenere",
     "price": 9900,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -4393,6 +4541,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36260457/Grabados_20del_20choapa_20merlot_202022.png?1784496614",
     "url": "https://uptowine.cl/grabados-del-choapa-merlot",
     "price": 9900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4426,6 +4575,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29442592/GRABADOS_20DE_20CHOAPA_20MOSCATEL.png?1783895122",
     "url": "https://uptowine.cl/grabados-del-choapa",
     "price": 8000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4449,6 +4599,7 @@
     "image": "",
     "url": "https://uptowine.cl/instinto-alvino",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4471,6 +4622,7 @@
     "image": "",
     "url": "https://uptowine.cl/instinto-de-colchagua",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4493,6 +4645,7 @@
     "image": "",
     "url": "https://uptowine.cl/instinto-del-maipo",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4515,6 +4668,7 @@
     "image": "",
     "url": "https://uptowine.cl/instinto-tintonero",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4537,6 +4691,7 @@
     "image": "",
     "url": "https://uptowine.cl/james-beneficus",
     "price": 10000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4559,6 +4714,7 @@
     "image": "",
     "url": "https://uptowine.cl/james-paradisus",
     "price": 12000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4581,6 +4737,7 @@
     "image": "",
     "url": "https://uptowine.cl/james-paradisus-single-vineyard",
     "price": 19990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4603,6 +4760,7 @@
     "image": "",
     "url": "https://uptowine.cl/javiera-ortuzar-impetu",
     "price": 16000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4635,6 +4793,7 @@
     "image": "",
     "url": "https://uptowine.cl/javiera-ortuzar-wines",
     "price": 14000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4667,6 +4826,7 @@
     "image": "",
     "url": "https://uptowine.cl/javiera-ortuzar-wines-pinot-grigio",
     "price": 13550,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4689,6 +4849,7 @@
     "image": "",
     "url": "https://uptowine.cl/jo-wines-barbera",
     "price": 18000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4711,6 +4872,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29553558/JO_20WINES_20JACINTA.png?1783895748",
     "url": "https://uptowine.cl/jo-wines-jacinta",
     "price": 9600,
+    "compare_at": 12000,
     "available": false,
     "anadas": [
       {
@@ -4744,6 +4906,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29428451/KALEI_20PINOT_20NOIR.png?1783895883",
     "url": "https://uptowine.cl/kalei-pinot-noir",
     "price": 15900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4767,6 +4930,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29428364/KALEI_20SAUVIGNON_20BLANC.png?1783896107",
     "url": "https://uptowine.cl/kalei-sauvignon-blanc",
     "price": 13900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4790,6 +4954,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29439385/KALEI_20SIDRA_20ESPUMANTE.png?1783896280",
     "url": "https://uptowine.cl/kalei-sidra-brut-nature",
     "price": 12900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4813,21 +4978,22 @@
     "image": "",
     "url": "https://uptowine.cl/kutralkura-brut-metodo-tradicional",
     "price": 16000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2020",
-        "cepa": "Chardonnay, Pinot Noir, Viognier",
+        "anada": "",
+        "cepa": "Chardonnay · Pinot Noir · Viognier",
         "valle": "Valle del Malleco",
         "grad": "13,5%",
-        "crianza": "Primera fermentación en barricas de",
-        "nota": "Verdoso suave y brillante. En nariz, aromas tenues, florales, con matices cítricos, de fondos maduros. En boca, fresca, tersa, algo rasposa, manzana verde.",
+        "crianza": "",
+        "nota": "Verdoso suave y brillante. En nariz, aromas tenues y florales, con matices cítricos y fondos maduros. En boca, fresca, tersa y de burbuja fina, con manzana verde.",
         "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Espumante de método tradicional de Kütralkura, desde Malleco en plena Araucanía —uno de los rincones más fríos de Chile—: burbuja fina, manzana verde, cítricos y un dejo de brioche por su tiempo en lías. Tenso, seco y elegante, mostrando el potencial del sur.",
-    "sugiere": "Ostras al natural, Machas a la parmesana, Empanaditas de queso, Jamón serrano, Frutillas con crema. Su acidez y burbuja fina van del aperitivo a los mariscos finos."
+    "opina": "Espumante de método tradicional de K&uuml;tralkura, desde Malleco en plena Araucanía —uno de los rincones más fríos de Chile—: burbuja fina, manzana verde, cítricos y un dejo de brioche por su tiempo sobre lías. Tenso, seco y elegante, muestra el potencial del sur.",
+    "sugiere": "Ostras al natural, machas a la parmesana, empanaditas de queso, jamón serrano y frutillas con crema. Su acidez y burbuja fina van del aperitivo a los mariscos finos."
   },
   {
     "name": "Kutralkura Pinot Noir",
@@ -4835,6 +5001,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29456148/KUTRALKURA_20PINOT_20NOIR.png?1783722706",
     "url": "https://uptowine.cl/kutralkura-pinot-noir",
     "price": 10800,
+    "compare_at": 13500,
     "available": true,
     "anadas": [
       {
@@ -4858,6 +5025,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29456242/KUTRALKURA_20ROSE.png?1783723336",
     "url": "https://uptowine.cl/kutralkura-pinot-noir-rose",
     "price": 9990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -4881,6 +5049,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29457342/KUTRALKURA_20VIOGNIER_20CHARDONNAY.png?1783896478",
     "url": "https://uptowine.cl/kutralkura-viognier-chardonnay",
     "price": 9200,
+    "compare_at": 11500,
     "available": false,
     "anadas": [
       {
@@ -4899,11 +5068,35 @@
     "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78735420"
   },
   {
+    "name": "La cabra carmenere",
+    "winery": "la cabra",
+    "image": "",
+    "url": "https://uptowine.cl/la-cabra-carmenere",
+    "price": 12000,
+    "compare_at": null,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "",
+        "cepa": "100% Carmén&egrave;re",
+        "valle": "Colchagua",
+        "grad": "14%",
+        "crianza": "6 meses en barrica de roble francés y americano",
+        "nota": "Rojo rubí intenso. En nariz, cerezas y frutillas con notas herbales que recuerdan al pimentón rojo, además de ciruela negra, moras y arándanos. En boca, de cuerpo medio-alto, taninos sedosos pero firmes, acidez media y un final persistente.",
+        "premios": "",
+        "revista": ""
+      }
+    ],
+    "opina": "Carmén&egrave;re de Colchagua de perfil goloso: pimentón rojo, especias dulces y fruta negra madura, con seis meses de barrica que redondean unos taninos sedosos. Un tinto de cuerpo medio-alto, amable y de buena fruta.",
+    "sugiere": "Empanada de pino, quiche de verduras, pastas con salsa de carne, pizza, chuleta de cordero o de cerdo y risotto de champiñón. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
+  },
+  {
     "name": "La Despensa Cinsault",
     "winery": "La Despensa",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29440983/LA_20DESPENSA_20CINSAULT.png?1783896642",
     "url": "https://uptowine.cl/la-despensa-cinsault",
     "price": 14990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4937,6 +5130,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29440553/LA_20DESPENSA_20FIELD_20BLEND.png?1783896809",
     "url": "https://uptowine.cl/la-despensa-field-blend",
     "price": 14990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -4980,6 +5174,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29873135/LA_20DESPENSA_20PAIS.png?1783897038",
     "url": "https://uptowine.cl/la-despensa-pais",
     "price": 14990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -5023,21 +5218,22 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29975953/LA_20DESPENSA_20ROSATO_20DI_20SANGIOVESE.png?1783975793",
     "url": "https://uptowine.cl/la-despensa-rosato-di-sangiovese",
     "price": 14990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2024",
+        "anada": "",
         "cepa": "Sangiovese",
         "valle": "Colchagua",
         "grad": "12,5%",
         "crianza": "3 horas de contacto con pieles; fermentación y crianza de 6 meses en barrica usada",
-        "nota": "En boca, es un vino fresco, con textura presente pero que te invita a beber.",
+        "nota": "Rosé fresco, con textura presente pero que invita a seguir bebiendo. Cereza ácida y un fondo de hierbas secas de vocación italiana.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/amfr/"
       }
     ],
-    "opina": "Sangiovese de Colchagua: cereza ácida, hierbas secas y un tanino firme de vocación italiana. Con 3 horas de contacto con pieles; fermentación y crianza de 6 meses en barrica usada.",
-    "sugiere": "Queso de cabra fresco, Salmón a la plancha, Quiche de verduras, Ceviche de salmón, Sushi rolls. Rosado versátil: cocina fresca, pescados, sushi y ensaladas de verano."
+    "opina": "Rosé de Sangiovese de Colchagua: cereza ácida, hierbas secas y un tanino firme de raíz italiana. Tres horas de contacto con pieles y seis meses en barrica usada le dan textura sin perder frescura.",
+    "sugiere": "Queso de cabra fresco, salmón a la plancha, quiche de verduras, ceviche de salmón y sushi rolls. Rosado versátil: cocina fresca, pescados, sushi y ensaladas de verano."
   },
   {
     "name": "La Despensa Sangiovese",
@@ -5045,6 +5241,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29444104/LA_20DESPENSA_20SANGIOVESE_20.png?1783897290",
     "url": "https://uptowine.cl/la-despensa-sangiovese",
     "price": 14900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -5068,6 +5265,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36260318/la_20prometida_20dichosa_20cabernet_20sauvignon.png?1784493542",
     "url": "https://uptowine.cl/la-prometida-dichosa-cabernet-sauvignon",
     "price": 13990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -5091,6 +5289,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36260319/La_20prometida_20dichosa_20merlot.png?1784493457",
     "url": "https://uptowine.cl/la-prometida-dichosa-merlot",
     "price": 13990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -5114,6 +5313,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36260326/la_20prometida_20revoltosa_20cabernet_20sauvignon.png?1784493480",
     "url": "https://uptowine.cl/la-prometida-revoltosa-cabernet-sauvignon",
     "price": 11990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -5137,6 +5337,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36260324/la_20prometida_20revoltosa_20carmenere.png?1784493397",
     "url": "https://uptowine.cl/la-prometida-revoltosa-carmenere",
     "price": 11990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -5160,6 +5361,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36260320/la_20prometida_20revoltosa_20nebbiolo.png?1784493434",
     "url": "https://uptowine.cl/la-prometida-revoltosa-nebbiolo",
     "price": 10980,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -5183,6 +5385,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29444264/LA_20SIRCA_20AMISTADES_20PELIGROSAS.png?1783723679",
     "url": "https://uptowine.cl/la-sirca-espumante-chardonnay",
     "price": 11990,
+    "compare_at": 14990,
     "available": true,
     "anadas": [
       {
@@ -5206,6 +5409,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29444310/la_20sirca_20kokon.png?1783724409",
     "url": "https://uptowine.cl/la-sirca-kokon-chardonnay",
     "price": 12990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -5239,6 +5443,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/30106539/LA_20SIRCA_20OJO_20EN_20TINTO_20CABERNET_20SAUVIGNON_20.png?1783724090",
     "url": "https://uptowine.cl/la-sirca-ojo-en-tinto-cabernet-sauvignon",
     "price": 14990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -5282,6 +5487,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29455450/LA_20SIRCA_20OJO_20EN_20TINTO_20CARMENERE_20.png?1783724268",
     "url": "https://uptowine.cl/la-sirca-ojo-en-tinto-carmenere",
     "price": 14990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -5305,6 +5511,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29442670/LA_20SIRCA_20WASI_20CABERNET_20SAUVIGNON_20.png?1783724601",
     "url": "https://uptowine.cl/la-sirca-wasi-cs",
     "price": 10000,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -5328,6 +5535,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29558431/la_20sirca_20Wasi_20carmenere.png?1783724384",
     "url": "https://uptowine.cl/la-sirca-wasi-carmenere",
     "price": 8000,
+    "compare_at": 10000,
     "available": false,
     "anadas": [
       {
@@ -5351,6 +5559,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29405436/LA_20TORINA_20GRAN_20RESERVA_20CARMENERE.png?1783725434",
     "url": "https://uptowine.cl/la-torina-gran-reserva-carmenere",
     "price": 16000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -5374,6 +5583,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29402750/LA_20TORINA_20PEDRO_20URDEMALES_20CABERNET_20SAUVIGNON_20.png?1783726000",
     "url": "https://uptowine.cl/la-torina-pedro-urdemales-cabernet",
     "price": 9600,
+    "compare_at": 12000,
     "available": true,
     "anadas": [
       {
@@ -5407,6 +5617,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29403160/LA_20TORINA_20RESERVA_20ESPECIAL_20BLEND.png?1783897650",
     "url": "https://uptowine.cl/la-torina-reserva-especial-blend",
     "price": 11200,
+    "compare_at": 14000,
     "available": false,
     "anadas": [
       {
@@ -5430,21 +5641,22 @@
     "image": "",
     "url": "https://uptowine.cl/la-veleidosa",
     "price": 9990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2024",
+        "anada": "",
         "cepa": "Cinsault",
-        "valle": "Valle de Itata",
+        "valle": "Valle del Itata",
         "grad": "",
         "crianza": "",
-        "nota": "Guinda de media profundidad. En nariz, guindas maceradas, frutos secos, matices florales rojos. En boca, tersa, jugosa, frutal, compacta, de rica textura.",
+        "nota": "Guinda de media profundidad. En nariz, guindas maceradas, frutos secos y matices florales rojos. En boca, tersa, jugosa, frutal y compacta, de rica textura.",
         "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Cinsault de Valle de Itata: fruta roja liviana, floral y de trago fácil.",
-    "sugiere": "Champiñones rellenos, Salmón a la plancha, Atún sellado, Tabla de charcutería, Cerdo a las finas hierbas. Tinto ligero y fresco: salmón, hongos, aves y charcutería."
+    "opina": "Cinsault del Valle del Itata por El Rescate: fruta roja liviana, floral y de trago fácil, con la frescura de las viñas viejas de secano. Un tinto ligero y jugoso, ideal para servir levemente fresco.",
+    "sugiere": "Champiñones rellenos, salmón a la plancha, atún sellado, tabla de charcutería y cerdo a las finas hierbas. Tinto ligero y fresco: salmón, hongos, aves y charcutería."
   },
   {
     "name": "Ladino el Encantador del Itata",
@@ -5452,21 +5664,22 @@
     "image": "",
     "url": "https://uptowine.cl/ladino-el-encantador-del-itata",
     "price": 9990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2024",
+        "anada": "",
         "cepa": "País",
         "valle": "Valle del Itata",
         "grad": "",
         "crianza": "",
-        "nota": "Rubí. En nariz, especiada, mora, cuero, tabaco, chocolate amargo. Notas florales. En la. En boca, es jugoso, de cuerpo medio, rugoso.",
+        "nota": "Rubí. En nariz, especiada, con mora, cuero, tabaco, chocolate amargo y notas florales. En boca es jugoso, de cuerpo medio y textura rugosa.",
         "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "País de Valle del Itata: fruta roja fresca, ligereza y raíz campesina chilena.",
-    "sugiere": "Tabla de charcutería, Risotto de hongos, Pato confitado, Atún sellado, Queso brie. Tinto ligero y fresco: salmón, hongos, aves y charcutería."
+    "opina": "País del Valle del Itata por El Rescate: fruta roja fresca, ligereza y esa raíz campesina chilena de las viñas viejas de secano. Especiado, con mora, cuero y tabaco; jugoso y de cuerpo medio.",
+    "sugiere": "Tabla de charcutería, risotto de hongos, pato confitado, atún sellado y queso brie. Tinto ligero y fresco: salmón, hongos, aves y charcutería."
   },
   {
     "name": "Laura Hartwig Cabernet Franc - Selección del Viticultor",
@@ -5474,6 +5687,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/33004027/LAURA_20HARTWIG_20SELECCION_20VIT_20CABERNET_20FRANC.png?1783726372",
     "url": "https://uptowine.cl/laura-hartwig-cabernet-franc-seleccion-viticultor",
     "price": 14000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -5497,6 +5711,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/35465632/LAURA_20HARTWIG_20SELECCION_20VIT_20CABERNET_20SAUVIGNON.png?1783726679",
     "url": "https://uptowine.cl/laura-hartwig-cabernet-sauvignon-seleccion-viticultor",
     "price": 14000,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -5520,6 +5735,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/35958754/laura_20hartwig_20single_20cabernet_20sauvignon_202022.png?1784490546",
     "url": "https://uptowine.cl/laura-hartwig-cabernet-sauvignon-single-vineyard",
     "price": 8990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -5543,6 +5759,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/35542253/LAURA_20HARTWIG_20SINGLE_20VANYARD_20CARMENERE.png?1783727309",
     "url": "https://uptowine.cl/laura-hartwig-carmenere-single-vanyard",
     "price": 8900,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -5576,6 +5793,7 @@
     "image": "",
     "url": "https://uptowine.cl/laura-hartwig-edicion-de-familia",
     "price": 24990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -5598,6 +5816,7 @@
     "image": "",
     "url": "https://uptowine.cl/laura-hartwig-flor-de-la-pluma",
     "price": 15000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -5620,6 +5839,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32983482/LAURA_20HARTWIG_20LA_20LUCA_20MALBEC.png?1783727551",
     "url": "https://uptowine.cl/laura-hartwig-la-luca-malbec",
     "price": 7990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -5643,6 +5863,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/35466820/LAURA_20HARTWIG_20SELECCION_20VIT_20PETIT_20VERDOT.png?1783727106",
     "url": "https://uptowine.cl/laura-hartwig-petit-verdot-seleccion-del-viticultor-copiar",
     "price": 14000,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -5666,6 +5887,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/33003921/LAURA_20HARTWIG_20CAMELIA_20ESPUMANTE.png?1783897799",
     "url": "https://uptowine.cl/laura-hartwig-camelia-brut-rose",
     "price": 10990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -5689,6 +5911,7 @@
     "image": "",
     "url": "https://uptowine.cl/laurent-clandestino",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -5721,6 +5944,7 @@
     "image": "",
     "url": "https://uptowine.cl/laurent-clandestino-petit-verdot",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -5743,6 +5967,7 @@
     "image": "",
     "url": "https://uptowine.cl/laurent-corrupto",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -5775,6 +6000,7 @@
     "image": "",
     "url": "https://uptowine.cl/laurent-corrupto-cabernet-sauvignon",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -5797,6 +6023,7 @@
     "image": "",
     "url": "https://uptowine.cl/laurent-ensamblaje",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -5819,6 +6046,7 @@
     "image": "",
     "url": "https://uptowine.cl/laurent-generoso",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -5841,6 +6069,7 @@
     "image": "",
     "url": "https://uptowine.cl/laurent-inocente",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -5863,6 +6092,7 @@
     "image": "",
     "url": "https://uptowine.cl/laurent-inocente-carmenere",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -5885,6 +6115,7 @@
     "image": "",
     "url": "https://uptowine.cl/laurent-polemico",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -5917,6 +6148,7 @@
     "image": "",
     "url": "https://uptowine.cl/laurent-ridiculo",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -5939,6 +6171,7 @@
     "image": "",
     "url": "https://uptowine.cl/laurent-vanidoso",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -5961,6 +6194,7 @@
     "image": "",
     "url": "https://uptowine.cl/laurent-vanidoso-chardonnay",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -5993,6 +6227,7 @@
     "image": "",
     "url": "https://uptowine.cl/laurent-zaphir",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6025,6 +6260,7 @@
     "image": "",
     "url": "https://uptowine.cl/lof",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6047,6 +6283,7 @@
     "image": "",
     "url": "https://uptowine.cl/lof-cabernet-sauvignon",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6069,6 +6306,7 @@
     "image": "",
     "url": "https://uptowine.cl/lof-syrah",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6091,6 +6329,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36167711/Los_20Chanchitos_20Cabernet_20Sauvignon.png?1784497133",
     "url": "https://uptowine.cl/los-chanchitos-cabernet-sauvignon",
     "price": 10990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -6114,6 +6353,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36167712/Los_20Chanchitos_20Web_20hog_20red.png?1784497189",
     "url": "https://uptowine.cl/los-chanchitos-wave-hog-red",
     "price": 8990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -6137,6 +6377,7 @@
     "image": "",
     "url": "https://uptowine.cl/magnolia-extra-brut",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6159,31 +6400,32 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/30005480/MAITIA_20ROTO_20CABERNET_20SAUVIGNON.png?1783975561",
     "url": "https://uptowine.cl/maitia-roto-cabernet-sauvignon",
     "price": 9900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2022",
+        "anada": "",
         "cepa": "100% Cabernet Sauvignon",
         "valle": "Maule",
         "grad": "13,5%",
         "crianza": "Sin madera; solo cubas de concreto, fermentación espontánea con levaduras nativas",
-        "nota": "Color intenso. En nariz a fruta roja y especias. En boca : jugoso, fresco, con taninos suaves. Un Cabernet sin corbata. Se toma fácil, se comparte mejor.",
+        "nota": "Color intenso. En nariz, fruta roja y especias. En boca, jugoso y fresco, con taninos suaves. Un Cabernet sin corbata: se toma fácil, se comparte mejor.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/amfr/"
       },
       {
-        "anada": "2020",
+        "anada": "",
         "cepa": "100% Cabernet Sauvignon",
         "valle": "Maule",
         "grad": "13,3%",
         "crianza": "8 meses en cubas de concreto",
-        "nota": "Color intenso. En nariz a fruta roja y especias. Cabernet Sauvignon chileno típico, linda acidez y mucha fruta. Vino típico Cabernet Sauvignon chileno, de linda acidez y mucha fruta.",
+        "nota": "Color intenso. En nariz, fruta roja y especias. Cabernet Sauvignon chileno típico, de linda acidez y mucha fruta.",
         "premios": "92 pts Parker",
         "revista": ""
       }
     ],
-    "opina": "Cabernet Sauvignon de Maule: casis, cedro y fruta negra, con taninos firmes. Con sin madera; solo cubas de concreto, fermentación espontánea con levaduras nativas.",
-    "sugiere": "Bife ancho a la parrilla, Anticuchos, Queso manchego curado, Lomo vetado a la parrilla, Ragú de cordero con pappardelle. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "Cabernet Sauvignon de Maule al natural: sin madera, solo concreto y fermentación espontánea con levaduras nativas. Casis, cedro y fruta negra, con taninos firmes pero amables; un Cabernet directo y jugoso.",
+    "sugiere": "Bife ancho a la parrilla, anticuchos, queso manchego curado, lomo vetado a la parrilla y ragú de cordero con pappardelle. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Mariposa Alegre Cabernet Sauvignon",
@@ -6191,6 +6433,7 @@
     "image": "",
     "url": "https://uptowine.cl/mariposa-alegre-cabernet-sauvignon",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6213,6 +6456,7 @@
     "image": "",
     "url": "https://uptowine.cl/mariposa-alegre-corazon-del-indio",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6235,6 +6479,7 @@
     "image": "",
     "url": "https://uptowine.cl/mariposa-alegre-syrah",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6257,6 +6502,7 @@
     "image": "",
     "url": "https://uptowine.cl/marty-chaka",
     "price": 7000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6289,6 +6535,7 @@
     "image": "",
     "url": "https://uptowine.cl/marty-clos-de-fa",
     "price": 110000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6311,6 +6558,7 @@
     "image": "",
     "url": "https://uptowine.cl/marty-corazon-del-indio",
     "price": 15000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6343,6 +6591,7 @@
     "image": "",
     "url": "https://uptowine.cl/marty-goutte-d-argent",
     "price": 20000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6375,6 +6624,7 @@
     "image": "",
     "url": "https://uptowine.cl/marty-kalak",
     "price": 25000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6397,6 +6647,7 @@
     "image": "",
     "url": "https://uptowine.cl/marty-love",
     "price": 9000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6429,6 +6680,7 @@
     "image": "",
     "url": "https://uptowine.cl/marty-newen",
     "price": 45000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6451,6 +6703,7 @@
     "image": "",
     "url": "https://uptowine.cl/marty-pacha",
     "price": 9000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6483,6 +6736,7 @@
     "image": "",
     "url": "https://uptowine.cl/marty-pillpintu",
     "price": 13000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6535,6 +6789,7 @@
     "image": "",
     "url": "https://uptowine.cl/marty-ser",
     "price": 38000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6567,6 +6822,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093621/Mendoza_20y_20carriel_20Atavus.png?1783759596",
     "url": "https://uptowine.cl/mendoza-carriel-atavus",
     "price": 23990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6590,6 +6846,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36143925/Mendoza_20y_20carriel_20cuartel_203.png?1783759768",
     "url": "https://uptowine.cl/mendoza-y-carriel-cuartel-3-cabernet-franc",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6613,6 +6870,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/35473628/Mendoza_20y_20carriel_20curtel_206.png?1783759224",
     "url": "https://uptowine.cl/mendoza-y-carriel-cuartel6-cabernet-sauvignon",
     "price": 15990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -6646,6 +6904,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/35543766/Mendoza_20y_20carriel_20Kolmos.png?1783759328",
     "url": "https://uptowine.cl/mendoza-y-carriel-kolmos-semillon",
     "price": 19000,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -6669,6 +6928,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32593932/MONTEFRANCO_20CABERNERT_20SAUVIGNON_20ETIQUETA_20NEGRA.png?1783797957",
     "url": "https://uptowine.cl/montefranco-cabernet-sauvignon",
     "price": 9900,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -6702,6 +6962,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29705214/MONTEFRANCO_20CARMENERE.png?1783898298",
     "url": "https://uptowine.cl/montefranco-carmenere",
     "price": 9000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6725,6 +6986,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32594572/MONTEFRANCO_20MERLOT_20ETIQUETA_20NEGRA.png?1783797449",
     "url": "https://uptowine.cl/montefranco-merlot-etiqueta-negra",
     "price": 9900,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -6748,6 +7010,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29711832/Moretta_20carigno_20del_20maule.png?1783762630",
     "url": "https://uptowine.cl/moretta-carigno-del-maule",
     "price": 16990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6791,6 +7054,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29456121/Moretta_20Ceniciento.png?1783762416",
     "url": "https://uptowine.cl/moretta-ceniciento",
     "price": 11990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -6844,6 +7108,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29455349/Moretta_20la_20novia_20chenin_20blanc.png?1783762878",
     "url": "https://uptowine.cl/moretta-la-novia-frustrada",
     "price": 8400,
+    "compare_at": 10500,
     "available": false,
     "anadas": [
       {
@@ -6867,6 +7132,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29463459/moretta_20lesespias_20cabernet_20sauvignon.png?1783762843",
     "url": "https://uptowine.cl/moretta-lesespias",
     "price": 8990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -6900,6 +7166,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29464794/moreta_20lesespias_20chenin_20blanc.png?1783762679",
     "url": "https://uptowine.cl/moretta-lesespias-chenin-blanc",
     "price": 6560,
+    "compare_at": 8200,
     "available": false,
     "anadas": [
       {
@@ -6923,6 +7190,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29709562/Moretta_20lesespias_20field_20blend.png?1783762808",
     "url": "https://uptowine.cl/moretta-lesespias-field-blend",
     "price": 8200,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6946,6 +7214,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29712080/Moretta_20sintruco_20blend.png?1783762572",
     "url": "https://uptowine.cl/moretta-sintruco-blend",
     "price": 14500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -6979,6 +7248,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29711709/Moretta_20sintruco_20carmenere.png?1783762600",
     "url": "https://uptowine.cl/moretta-sintruco-carmenere",
     "price": 14500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -7012,6 +7282,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29712310/moretta_20sintruco_20malbec.png?1783762537",
     "url": "https://uptowine.cl/moretta-sintruco-malbec",
     "price": 14990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -7055,6 +7326,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093624/Moretta_20Vedette.png?1783762378",
     "url": "https://uptowine.cl/moretta-vedette",
     "price": 12000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -7088,6 +7360,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36079637/Muelle_20Oculto_20Aniversario_202016.png?1783630168",
     "url": "https://uptowine.cl/bodega-muelle-oculto-1-aniversario-2016",
     "price": 29990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -7111,6 +7384,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36079644/muelle_20Oculto_20Aniversario_202015.png?1783634216",
     "url": "https://uptowine.cl/muelle-oculto-muelle-oculto-aniversario-edicion-especial-2015",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -7134,6 +7408,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29402505/Muelle_20Oculto_20Centinela.png?1783628248",
     "url": "https://uptowine.cl/muelle-oculto-centinela",
     "price": 11900,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -7157,6 +7432,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32947520/Muelle_20OcultoChardonnay.png?1783628361",
     "url": "https://uptowine.cl/muelle-oculto-edicion-limitada-chardonnay",
     "price": 8000,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -7180,6 +7456,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36081149/Muelle_20Oculto_20Gran_20Reserva_20Cabernet_20Sau.png?1783633979",
     "url": "https://uptowine.cl/muelle-oculto-gran-reserva-cabernet-sauvignon",
     "price": 9900,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -7233,6 +7510,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/30137674/Muelle_20oculto_20Gran_20Reserva_20Carmenere.png?1783633889",
     "url": "https://uptowine.cl/muelle-oculto-gran-reserva-carmenere",
     "price": 9900,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -7276,6 +7554,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/31156612/Muelle_20Syrah_20gr.png?1783634028",
     "url": "https://uptowine.cl/muelle-oculto-gran-reserva-syrah",
     "price": 9900,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -7299,6 +7578,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29396623/Muelle_20Oculto_20Lagunillas.png?1783628076",
     "url": "https://uptowine.cl/muelle-oculto-lagunillas",
     "price": 11900,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -7322,6 +7602,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29402497/Santona_20cabernet_20Blend.png?1783630281",
     "url": "https://uptowine.cl/santona-cabernet-sauvignon-blend",
     "price": 13900,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -7385,6 +7666,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36087332/Santona_20carmener_20100.png?1783630552",
     "url": "https://uptowine.cl/muelle-oculto-santona-carmenere-100",
     "price": 13900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -7408,6 +7690,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29402352/Santona_20Carmenere_20blend.png?1783628129",
     "url": "https://uptowine.cl/santona-carmenere-blend",
     "price": 13900,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -7461,6 +7744,7 @@
     "image": "",
     "url": "https://uptowine.cl/mujer-andina-ai-brut",
     "price": 12000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -7503,6 +7787,7 @@
     "image": "",
     "url": "https://uptowine.cl/mujer-andina-el-infaltable",
     "price": 18990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -7535,6 +7820,7 @@
     "image": "",
     "url": "https://uptowine.cl/mujer-andina-keluna",
     "price": 12990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -7567,6 +7853,7 @@
     "image": "",
     "url": "https://uptowine.cl/mujer-andina-levita-extra-brut-vintage-rose",
     "price": 34900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -7599,6 +7886,7 @@
     "image": "",
     "url": "https://uptowine.cl/mujer-andina-pinot-noir",
     "price": 13200,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -7621,6 +7909,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29441184/NARBONA_20CABERNET_20SAUVIGNON.png?1783898489",
     "url": "https://uptowine.cl/narbona-cabernet-sauvignon",
     "price": 14900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -7654,6 +7943,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/35960104//utq79d.png?1783882841",
     "url": "https://uptowine.cl/origenes-blend",
     "price": 22990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -7677,6 +7967,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/35465524/ORIGENES_20CABERNET_20FRANC.png?1783798526",
     "url": "https://uptowine.cl/origenes-cabernet-franc-2021",
     "price": 22990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -7720,6 +8011,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/33003728/ORIGENES_20GARNACHA.png?1783799347",
     "url": "https://uptowine.cl/origenes-garnacha",
     "price": 10900,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -7743,6 +8035,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/33003341/ORIGENES_20PINOT_20NOIR.png?1783798346",
     "url": "https://uptowine.cl/origenes-pinot-noir",
     "price": 19990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -7766,6 +8059,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/35543234/ORIGENES_20SYRAH.png?1783799739",
     "url": "https://uptowine.cl/origenes-syrah",
     "price": 10990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -7789,6 +8083,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32602524/ORIGENES_20TEMPRANILLO.png?1783801125",
     "url": "https://uptowine.cl/origenes-tempranillo-maule",
     "price": 10990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -7812,6 +8107,7 @@
     "image": "",
     "url": "https://uptowine.cl/owm-contao",
     "price": 14900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -7864,6 +8160,7 @@
     "image": "",
     "url": "https://uptowine.cl/owm-divino-petit",
     "price": 15900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -7916,6 +8213,7 @@
     "image": "",
     "url": "https://uptowine.cl/owm-hand-made",
     "price": 13900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -7958,6 +8256,7 @@
     "image": "",
     "url": "https://uptowine.cl/owm-pillo-de-panama",
     "price": 9500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -8010,6 +8309,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093470/Peroli_20Chasconas.png?1784515908",
     "url": "https://uptowine.cl/peroli-chasconas-brut-nature",
     "price": 15000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -8023,7 +8323,7 @@
         "revista": ""
       }
     ],
-    "opina": "Un Brut Nature del Itata, sin añada y sin azúcar añadido &mdash; eso es lo que significa brut nature, cero licor de expedición. Por eso se siente seco y directo, con la nariz intensa a piña y damasco que delata las cepas blancas del secano, más un toque de pimienta blanca. En boca es más amplio y envolvente de lo que uno esperaría de un espumante, con cuerpo medio y una textura algo rugosa que le da carácter. 92 puntos de La Cav.",
+    "opina": "Un Brut Nature del Itata, sin añada y sin azúcar añadido — eso es lo que significa brut nature, cero licor de expedición. Por eso se siente seco y directo, con la nariz intensa a piña y damasco que delata las cepas blancas del secano, más un toque de pimienta blanca. En boca es más amplio y envolvente de lo que uno esperaría de un espumante, con cuerpo medio y una textura algo rugosa que le da carácter. 92 puntos de La Cav.",
     "sugiere": "Espumante fresco de aperitivo: jamón serrano con melón, ceviche de reineta, tempura de camarón, croquetas de jamón y tartaletas de frutos rojos."
   },
   {
@@ -8032,6 +8332,7 @@
     "image": "",
     "url": "https://uptowine.cl/peroli-taii-velo",
     "price": 15500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -8045,7 +8346,7 @@
         "revista": ""
       }
     ],
-    "opina": "Torontel del secano de Checura, en Itata, trabajado como naranjo: color suave y medianamente turbio, sin filtrar. La cepa es de las históricas del sur y aquí muestra su lado más floral, con especias tostadas y ese fondo reducido tan propio de los vinos de baja intervención. Lo interesante es la boca &mdash; jugosa y tersa, pero con una textura que se siente y un final persistente. No es un blanco liviano de aperitivo, es un vino de mesa. 93 puntos de La Cav.",
+    "opina": "Torontel del secano de Checura, en Itata, trabajado como naranjo: color suave y medianamente turbio, sin filtrar. La cepa es de las históricas del sur y aquí muestra su lado más floral, con especias tostadas y ese fondo reducido tan propio de los vinos de baja intervención. Lo interesante es la boca — jugosa y tersa, pero con una textura que se siente y un final persistente. No es un blanco liviano de aperitivo, es un vino de mesa. 93 puntos de La Cav.",
     "sugiere": "Naranjo con textura, para platos con carácter: cocina especiada, cerdo a las finas hierbas, pescados con salsas cremosas, quesos semimaduros y verduras asadas."
   },
   {
@@ -8054,6 +8355,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29723737/Peroli_20umara_20carignan.png?1784515827",
     "url": "https://uptowine.cl/peroli-umara-carignan",
     "price": 14990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -8089,7 +8391,7 @@
       {
         "anada": "2019",
         "cepa": "100% Carignan",
-        "valle": "Itata &mdash; Checura",
+        "valle": "Itata — Checura",
         "grad": "13,5%",
         "crianza": "5 meses en cocciopesto (gota más prensa) y luego 10 meses en barrica francesa de cuarto uso",
         "nota": "En nariz, arándanos entrelazados con toques de fresas y frutas negras; tras unos minutos de oxigenación aparecen notas de final dulce. En boca, muy intenso, de gran profundidad tánica, buena estructura y un final largo y sedoso.",
@@ -8097,7 +8399,7 @@
         "revista": ""
       }
     ],
-    "opina": "Carignan del secano de Checura, en Itata, y el vino más premiado de Peroli: 94 puntos de La Cav en la 2023 y otros 94 de Descorchados en la 2019. Lo que distingue a esta línea es la crianza en greda &mdash; tinaja y cocciopesto &mdash; que respeta la fruta y la acidez alta del Carignan en vez de taparlas con madera. La 2019 es la más estructurada, con diez meses adicionales en barrica de cuarto uso; la 2021 se va por lo aromático, con cardamomo, violetas y regaliz; la 2023 es la más fresca y de textura más fina. Fruta roja, fondo terroso y esa acidez que pide comida.",
+    "opina": "Carignan del secano de Checura, en Itata, y el vino más premiado de Peroli: 94 puntos de La Cav en la 2023 y otros 94 de Descorchados en la 2019. Lo que distingue a esta línea es la crianza en greda — tinaja y cocciopesto — que respeta la fruta y la acidez alta del Carignan en vez de taparlas con madera. La 2019 es la más estructurada, con diez meses adicionales en barrica de cuarto uso; la 2021 se va por lo aromático, con cardamomo, violetas y regaliz; la 2023 es la más fresca y de textura más fina. Fruta roja, fondo terroso y esa acidez que pide comida.",
     "sugiere": "Tinto estructurado para carnes a la brasa y cocciones lentas: lomo vetado a la parrilla, cordero al horno con romero, ragú de cordero con pappardelle, berenjenas a la parmesana y queso manchego curado."
   },
   {
@@ -8106,6 +8408,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093473/Peroli_20Umara_20Rose.png?1784515885",
     "url": "https://uptowine.cl/peroli-umara-field-blend",
     "price": 13500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -8119,7 +8422,7 @@
         "revista": ""
       }
     ],
-    "opina": "Un field blend es exactamente eso: distintas cepas plantadas mezcladas en el mismo cuartel, que se cosechan y fermentan juntas, tal como se hacía en el secano antes de que existiera la idea de viñedo monovarietal. Este viene de Checura, en Itata, y sale con un color rosado de tonos cobrizos que no es ni blanco ni tinto. En nariz es suave &mdash; berries, flores, un dejo de especia dulce &mdash; y en boca resulta frutal y jugoso, de media profundidad. 93 puntos de La Cav.",
+    "opina": "Un field blend es exactamente eso: distintas cepas plantadas mezcladas en el mismo cuartel, que se cosechan y fermentan juntas, tal como se hacía en el secano antes de que existiera la idea de viñedo monovarietal. Este viene de Checura, en Itata, y sale con un color rosado de tonos cobrizos que no es ni blanco ni tinto. En nariz es suave — berries, flores, un dejo de especia dulce — y en boca resulta frutal y jugoso, de media profundidad. 93 puntos de La Cav.",
     "sugiere": "Rosado con cuerpo, más versátil de lo que parece: charcutería, empanadas de pino, pizza, pescados a la parrilla y quesos frescos. Servir fresco, en torno a los 10&deg;C."
   },
   {
@@ -8128,6 +8431,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093474/Peroli_20uyak.png?1784515800",
     "url": "https://uptowine.cl/peroli-uyak",
     "price": 9990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -8153,7 +8457,7 @@
       {
         "anada": "2019",
         "cepa": "100% Cinsault",
-        "valle": "Itata &mdash; Checura",
+        "valle": "Itata — Checura",
         "grad": "13,2%",
         "crianza": "10 meses en ánfora (gota más prensa); 25% del vino en barrica por 4 meses",
         "nota": "Rojo violeta pálido. En nariz, intenso, con frambuesa y notas a guinda. En boca, ligero, muy suave y de gran acidez, donde reaparece la frambuesa junto a un especiado ligero. Se siente el trabajo de la ánfora en la amplitud, sin perder el frescor y la acidez característicos de la variedad.",
@@ -8167,11 +8471,11 @@
         "grad": "13%",
         "crianza": "6 meses",
         "nota": "",
-        "premios": "Medalla de Oro &mdash; Catad'Or",
+        "premios": "Medalla de Oro — Catad'Or",
         "revista": ""
       }
     ],
-    "opina": "Cinsault de Checura, en el secano de Itata, y de los mejores exponentes de la cepa en Chile: la 2024 se llevó 94 puntos de La Cav, la 2019 otros 94 de Descorchados y la 2018 un Oro en el Catad'Or. Es un tinto liviano de verdad &mdash; 12 grados, fruta roja, acidez alta y tanino jugoso &mdash; que se puede servir fresco sin problema. Vale la pena comparar la 2019, criada diez meses en ánfora y más amplia en boca, con las más recientes, que combinan flextank y barrica en apenas cinco meses y salen más frutales.",
+    "opina": "Cinsault de Checura, en el secano de Itata, y de los mejores exponentes de la cepa en Chile: la 2024 se llevó 94 puntos de La Cav, la 2019 otros 94 de Descorchados y la 2018 un Oro en el Catad'Or. Es un tinto liviano de verdad — 12 grados, fruta roja, acidez alta y tanino jugoso — que se puede servir fresco sin problema. Vale la pena comparar la 2019, criada diez meses en ánfora y más amplia en boca, con las más recientes, que combinan flextank y barrica en apenas cinco meses y salen más frutales.",
     "sugiere": "Tinto ligero y fresco, mejor servido algo frío: champiñones rellenos, pollo asado con hierbas, quiche lorraine, cerdo a las finas hierbas y atún sellado."
   },
   {
@@ -8180,6 +8484,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29452532/Polkura_20Sauvignon_20Blanc.png?1783761379",
     "url": "https://uptowine.cl/polkura-aylin-sauvignon-blanc",
     "price": 7920,
+    "compare_at": 9900,
     "available": false,
     "anadas": [
       {
@@ -8333,6 +8638,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/33613452/Polkura_20G_2BI.png?1783761309",
     "url": "https://uptowine.cl/polkura-block-g-mas-i",
     "price": 29990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -8516,6 +8822,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/33613641/Polkura_20gsm_2Bt.png?1783761140",
     "url": "https://uptowine.cl/polkura-gsm-mas-t",
     "price": 29990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -8659,6 +8966,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29553390/Polkura_20Lote_20d.png?1783761172",
     "url": "https://uptowine.cl/polkura-lote-d",
     "price": 11900,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -8792,6 +9100,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/33623007/Polkura_20Malbec.png?1783761071",
     "url": "https://uptowine.cl/polkura-malbec",
     "price": 19990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -8935,6 +9244,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093638/Polkura_20Maniac.png?1783761040",
     "url": "https://uptowine.cl/polkura-maniac",
     "price": 60000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -9008,6 +9318,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36115361/Polkura_20Random.png?1783760994",
     "url": "https://uptowine.cl/polkura-random",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -9081,6 +9392,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29478375/Polkura_20Secano.png?1783761348",
     "url": "https://uptowine.cl/polkura-syrah-secano",
     "price": 49990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -9204,6 +9516,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/33622923/Polkura_20Syrah.png?1783761112",
     "url": "https://uptowine.cl/polkura-syrah",
     "price": 16990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -9417,6 +9730,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29455267/PRIMAVENTO_20INDICIO_20BLEND.png?1783898676",
     "url": "https://uptowine.cl/primavento-indicio-blend",
     "price": 9200,
+    "compare_at": 11500,
     "available": false,
     "anadas": [
       {
@@ -9440,6 +9754,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/31156741/PRIMAVENTO_20INDICIO_20CARMENERE.png?1783802717",
     "url": "https://uptowine.cl/primavento-indicio-blend-copiar",
     "price": 11500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -9463,6 +9778,7 @@
     "image": "",
     "url": "https://uptowine.cl/punti-ferrer-conforme",
     "price": 18900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -9525,6 +9841,7 @@
     "image": "",
     "url": "https://uptowine.cl/punti-ferrer-copperland-red-blend",
     "price": 5500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -9547,6 +9864,7 @@
     "image": "",
     "url": "https://uptowine.cl/punti-ferrer-garage-blend",
     "price": 16900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -9579,6 +9897,7 @@
     "image": "",
     "url": "https://uptowine.cl/punti-ferrer-gran-reserva",
     "price": 9900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -9641,6 +9960,7 @@
     "image": "",
     "url": "https://uptowine.cl/punti-ferrer-gran-reserva-cabernet-sauvignon",
     "price": 7900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -9673,6 +9993,7 @@
     "image": "",
     "url": "https://uptowine.cl/punti-ferrer-late-harvest",
     "price": 6500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -9695,31 +10016,32 @@
     "image": "",
     "url": "https://uptowine.cl/punti-ferrer-los-huevos-de-loco",
     "price": 14900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2024",
-        "cepa": "Sauvignon blanc",
+        "anada": "",
+        "cepa": "Sauvignon Blanc",
         "valle": "Valle del Cachapoal",
         "grad": "14%",
         "crianza": "10 meses",
-        "nota": "Plateado suave. En nariz, fruta blanca, neutra, suave especias, leves matices florales blancos. En boca, jugosa, tersa, fresca, algo cítrica.",
+        "nota": "Plateado suave. En nariz, fruta blanca neutra, especias suaves y leves matices florales blancos. En boca, jugosa, tersa, fresca y algo cítrica.",
         "premios": "92 pts La Cav",
         "revista": ""
       },
       {
-        "anada": "2023",
-        "cepa": "Sauvignon blanc",
+        "anada": "",
+        "cepa": "Sauvignon Blanc",
         "valle": "Valle del Cachapoal",
         "grad": "14%",
         "crianza": "18 meses en barrica de roble",
-        "nota": "Verdoso brillante con ribetes plateados. En nariz, notas minerales, piedra caliza, piña verde, pimentón, maracuyá, cebollín. En boca, acidez alta, seco, cítrico, final medio.",
+        "nota": "Verdoso brillante con ribetes plateados. En nariz, notas minerales, piedra caliza, piña verde, pimentón, maracuyá y cebollín. En boca, de acidez alta, seco y cítrico, de final medio.",
         "premios": "92 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Sauvignon Blanc de Puntí Ferrer, del valle del Rapel, en el corazón de Colchagua. En copa, cítricos, hierba fresca y una acidez vibrante.",
-    "sugiere": "Sushi nigiri, Ceviche de corvina, Reineta al vapor con cilantro, Espárragos a la parrilla, Queso de cabra fresco. Blanco fresco y cítrico: mariscos crudos, cebiches y ensaladas."
+    "opina": "Sauvignon Blanc de Puntí Ferrer, del Valle del Cachapoal: cítricos, hierba fresca y una acidez vibrante. La 2024 es más neutra y frutal; la 2023, con paso por barrica, suma mineralidad y complejidad.",
+    "sugiere": "Sushi nigiri, ceviche de corvina, reineta al vapor con cilantro, espárragos a la parrilla y queso de cabra fresco. Blanco fresco y cítrico: mariscos crudos, cebiches y ensaladas."
   },
   {
     "name": "Puntí Ferrer País",
@@ -9727,6 +10049,7 @@
     "image": "",
     "url": "https://uptowine.cl/punti-ferrer-pais",
     "price": 9990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -9749,21 +10072,22 @@
     "image": "",
     "url": "https://uptowine.cl/punti-ferrer-serie-tinajas-ensamblaje-tinto",
     "price": 14900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2024",
-        "cepa": "30% Carmenère  30% Cabernet Sauvignon  25% Syrah  15% Cabernet Franc",
+        "anada": "",
+        "cepa": "30% Carmén&egrave;re · 30% Cabernet Sauvignon · 25% Syrah · 15% Cabernet Franc",
         "valle": "Cachapoal",
         "grad": "14%",
         "crianza": "10 meses de guarda",
-        "nota": "Cereza. En nariz, berries rojos y negros jóvenes, suavemente especiados, de fondo frutal. Serie Tinajas 2024, un tinto del Cachapoal que seduce. Explosión de cerezas, frambuesas y moras, con un toque de higo y uva pasa. En boca, cuerpo medio y estructura que acaricia, taninos presentes. Notas terrosas a trufa y tierra húmeda, pimiento rojo y especias como clavo de olor y pimienta negra, junto a sutiles violetas. Cierre con chocolate, cuero y cedro, un final persistente.",
-        "premios": "Oro - Catad'Or · 93 pts La Cav",
+        "nota": "Cereza. En nariz, explosión de cerezas, frambuesas y moras, con un toque de higo y uva pasa, notas terrosas de trufa y tierra húmeda, pimiento rojo, clavo de olor, pimienta negra y sutiles violetas. En boca, de cuerpo medio y estructura que acaricia, con taninos presentes y un cierre de chocolate, cuero y cedro, de final persistente.",
+        "premios": "Oro Catad'Or · 93 pts La Cav",
         "revista": ""
       }
     ],
-    "opina": "Ensamblaje de 30% Carmenère  30% Cabernet Sauvignon  25% Syrah  15% Cabernet Franc de Cachapoal: el pimentón y las especias dulces del Carménère, la estructura y el casis del Cabernet y la pimienta y la fruta negra de la Syrah. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas. Con 10 meses de guarda.",
-    "sugiere": "Bife ancho a la parrilla, Cordero al horno con romero, Ragú de cordero con pappardelle, Queso manchego curado, Anticuchos. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "El ensamblaje Serie Tinajas de Puntí Ferrer, del Cachapoal: el pimentón y las especias dulces del Carmén&egrave;re, la estructura y el casis del Cabernet, la pimienta y fruta negra de la Syrah y el perfume del Cabernet Franc. Un tinto complejo y equilibrado, más que la suma de sus cepas, premiado con Oro Catad'Or y 93 puntos La Cav.",
+    "sugiere": "Bife ancho a la parrilla, cordero al horno con romero, ragú de cordero con pappardelle, queso manchego curado y anticuchos. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Puntí Ferrer Xtra Brut",
@@ -9771,6 +10095,7 @@
     "image": "",
     "url": "https://uptowine.cl/punti-ferrer-xtra-brut",
     "price": 9900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -9793,6 +10118,7 @@
     "image": "",
     "url": "https://uptowine.cl/robba-rossi-primitivo",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -9815,6 +10141,7 @@
     "image": "",
     "url": "https://uptowine.cl/robba-cabernet-franc",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -9837,6 +10164,7 @@
     "image": "",
     "url": "https://uptowine.cl/robba-primitivo-zinfandel",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -9859,6 +10187,7 @@
     "image": "",
     "url": "https://uptowine.cl/robba-sangiovese",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -9881,6 +10210,7 @@
     "image": "",
     "url": "https://uptowine.cl/robba-sangiovese-rosado",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -9903,6 +10233,7 @@
     "image": "",
     "url": "https://uptowine.cl/robba-zaphir",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -9925,6 +10256,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093652/Schwaderer_20brut_20blanc.png?1783722070",
     "url": "https://uptowine.cl/schwaderer-ancestral-semillon",
     "price": 16000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -9958,6 +10290,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093429/Schwaderer_20brut_20blanc.png?1783721947",
     "url": "https://uptowine.cl/schwaderer-brut-blanc-de-noir-pais",
     "price": 9000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -9981,6 +10314,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093430/Schwaderer_20cabernet_20Sauvignon.png?1783721872",
     "url": "https://uptowine.cl/schwaderer-cabernet-sauvignon",
     "price": 12000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10024,6 +10358,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093431/Schwaderer_20carignan.png?1783722099",
     "url": "https://uptowine.cl/schwaderer-carignan",
     "price": 12000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10047,6 +10382,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32947800/Schwaderer_20carmenere.png?1783721647",
     "url": "https://uptowine.cl/schwaderer-carmenere",
     "price": 12500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10090,6 +10426,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/33043671/Schwaderer_20brut_20rose.png?1783721781",
     "url": "https://uptowine.cl/schwaderer-espumante-brut-rose",
     "price": 14990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -10113,6 +10450,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093432/schaderer_20garnacha.png?1783723780",
     "url": "https://uptowine.cl/schwaderer-garnacha",
     "price": 13990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10136,21 +10474,22 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/33677110/Schwaderer_20rose.png?1783721714",
     "url": "https://uptowine.cl/schawaderer-malbec-rose",
     "price": 9900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2017",
-        "cepa": "100% Malbec",
+        "anada": "",
+        "cepa": "100% Malbec (vinificado en rosado)",
         "valle": "Maule",
         "grad": "14%",
         "crianza": "",
-        "nota": "Color rojo rubí profundo. Aromas a frutos rojos maduros como frutilla, guinda y ciruela. De paladar suave, con taninos y acidez balanceada, y una sutil nota de madera que da profundidad a un final largo y agradable.",
+        "nota": "Rosé de tono frambuesa brillante. En nariz, fruta roja fresca —frutilla, guinda y ciruela—. En boca es jugoso y amable, de acidez equilibrada y un final fresco y frutal.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/UTW-REVISTA---AGOSTO-2019/"
       }
     ],
-    "opina": "Malbec de Schwaderer Wines: fruta roja madura —frutilla, guinda y ciruela— con taninos suaves, acidez balanceada y un sutil toque de madera; frutal y de fácil disfrute. De las hermanas Constanza y Mariane Schwaderer (comercio justo y cepas poco tradicionales).",
-    "sugiere": "Fruta y ligereza para cocina fresca, pescados y ensaladas: ensalada de pollo y frutillas, ceviche de salmón, sushi rolls, tortilla de verduras y queso de cabra fresco.",
+    "opina": "Malbec vinificado en rosado de Schwaderer Wines: fruta roja fresca —frutilla, guinda y ciruela— con una acidez viva y un final ligero. De las hermanas Constanza y Mariane Schwaderer (comercio justo y cepas poco tradicionales).",
+    "sugiere": "Fruta y frescura para cocina liviana, pescados y ensaladas: ceviche de salmón, sushi rolls, ensalada de pollo y frutillas, tortilla de verduras y queso de cabra fresco.",
     "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78690931"
   },
   {
@@ -10159,6 +10498,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093434/Schwaderer_20Petit_20Verdot.png?1783722183",
     "url": "https://uptowine.cl/schwaderer-petit-verdot",
     "price": 13990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10192,6 +10532,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093435/Schwaderer_20pinot_20noir.png?1783722216",
     "url": "https://uptowine.cl/schwaderer-pinot-noir",
     "price": 13990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10225,6 +10566,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093436/schwaderer_20riesling.png?1783723814",
     "url": "https://uptowine.cl/schwaderer-riesling",
     "price": 13990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10248,6 +10590,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093437/schwaderer_20pedro_20ximenez.png?1783723278",
     "url": "https://uptowine.cl/schwaderer-sauvignon-blanc-pedro-jimenez",
     "price": 9990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10281,6 +10624,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093438/Schwaderer_20brut_20blanc.png?1783721991",
     "url": "https://uptowine.cl/schwaderer-semillon-brut",
     "price": 13990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10304,6 +10648,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32635810/SIETE_20CABERNET_20SAUVIGNON.png?1783805099",
     "url": "https://uptowine.cl/siete-cabernet-sauvignon",
     "price": 13500,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -10327,6 +10672,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32638169/SIETE_20CARMENERE_20CABERNET_20SAUVIGNON.png?1783898971",
     "url": "https://uptowine.cl/siete-cabernet-sauvignon-carmenere",
     "price": 12990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10350,6 +10696,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093439/SIETE_20_20WINES_20RESERVA_20SEMILLON.png?1783899181",
     "url": "https://uptowine.cl/siete-wines-reserva-semillon",
     "price": 8500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10373,6 +10720,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29670197/SIETE_20_20WINES_20RESERVA_20SEMILLON.png?1783899222",
     "url": "https://uptowine.cl/siete-wines-semillon",
     "price": 8500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10396,6 +10744,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29466316/SOL_20DE_20PRIMAVERA_20MOSCATEL.png?1783899500",
     "url": "https://uptowine.cl/sol-de-primavera-moscatel",
     "price": 9600,
+    "compare_at": 12000,
     "available": false,
     "anadas": [
       {
@@ -10419,6 +10768,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29455116/TESTARUDA_20BLEND.png?1783899620",
     "url": "https://uptowine.cl/testaruda-blend",
     "price": 11992,
+    "compare_at": 14990,
     "available": false,
     "anadas": [
       {
@@ -10442,6 +10792,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29455585/TESTARUDA_20CABRA_20SUELTA.png?1783899733",
     "url": "https://uptowine.cl/sagrada-familia-cabra-suelta",
     "price": 13990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10475,6 +10826,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29455928/TESTARUDA_20DISTINTO.png?1783899862",
     "url": "https://uptowine.cl/testaruda-distinto",
     "price": 10392,
+    "compare_at": 12990,
     "available": false,
     "anadas": [
       {
@@ -10498,6 +10850,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29455816/TESTARUDA_20RARO_20PREMIUM_20BLEND.png?1783900009",
     "url": "https://uptowine.cl/testaruda-raro-premium-blend",
     "price": 17592,
+    "compare_at": 21990,
     "available": false,
     "anadas": [
       {
@@ -10521,6 +10874,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29455505/TESTARUDA_20ZORRO_20CORRETEADO.png?1783971587",
     "url": "https://uptowine.cl/sagrada-familia-zorro-correteado",
     "price": 13990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10554,6 +10908,7 @@
     "image": "",
     "url": "https://uptowine.cl/trabun-consecuencia-cabernet-sauvignon",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10576,6 +10931,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29458694/TRABUN_20LOS_20SOSPECHOSOS_20CARIGNAN.png?1783971781",
     "url": "https://uptowine.cl/trabun-sospechosos-carignan",
     "price": 12000,
+    "compare_at": 15000,
     "available": false,
     "anadas": [
       {
@@ -10599,6 +10955,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29442490/TRABUN_20PERAGALLO_20BLEND.png?1783971929",
     "url": "https://uptowine.cl/trabun-peragallo-blend",
     "price": 9500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10622,6 +10979,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29442458/TRABUN_20ROCK_20BOTTOM.png?1783972058",
     "url": "https://uptowine.cl/trabun-rock-bottom-blend",
     "price": 25000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10645,6 +11003,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/35964915/Trabun_20Session_20Cabernet_20Sauvignon.png?1784493364",
     "url": "https://uptowine.cl/trabun-sessions-cabernet-sauvignon",
     "price": 10990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -10688,6 +11047,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29674335/TRABUN_20SESSIONS_20CABERNET_20SAUVIGNON_20COT.png?1783972231",
     "url": "https://uptowine.cl/trabun-sessions-cabernet-sauvignon-cot",
     "price": 13000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10731,6 +11091,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/35541983/TRABUN_20SESSIONS_20CARMENERE.png?1783807452",
     "url": "https://uptowine.cl/trabun-sessions-carmenere",
     "price": 9900,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -10754,6 +11115,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29441307/TRABUN_20SOLOIST_20CABERNET_20SAUVIGNON.png?1783808355",
     "url": "https://uptowine.cl/trabun-cabernet-sauvignon",
     "price": 13000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10777,6 +11139,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29441949/TRABUN_20SOLOIST_20COT.png?1783808878",
     "url": "https://uptowine.cl/trabun-soloist-cot",
     "price": 13000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10820,6 +11183,7 @@
     "image": "",
     "url": "https://uptowine.cl/trabun-soloist-sauvignon-blanc",
     "price": 9900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10852,6 +11216,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29442041/TRABUN_20SOLOIST_20SYRAH.png?1783891219",
     "url": "https://uptowine.cl/trabun-soloist-syrah",
     "price": 13000,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -10885,6 +11250,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29442405/TRABUN_20UNPLUGGED_20GARIGNAN.png?1783891396",
     "url": "https://uptowine.cl/trabun-unplugged-carignan",
     "price": 13000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10918,21 +11284,22 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/30105355/Trabun_Garnacha.png?1748636609",
     "url": "https://uptowine.cl/trabun-unplugged-garnacha",
     "price": 13000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2023",
-        "cepa": "Grenache",
+        "anada": "",
+        "cepa": "Grenache (Garnacha)",
         "valle": "San Nicolás, Itata",
         "grad": "14%",
-        "crianza": "15 meses en barrica francesa usada, levaduras nativas",
-        "nota": "Rubí violáceo. Tocino, hierbas y especias. Cuerpo medio, acidez equilibrada y persistente.",
+        "crianza": "15 meses en barrica francesa usada, con levaduras nativas",
+        "nota": "Rubí violáceo. En nariz, tocino, hierbas y especias. En boca, de cuerpo medio, acidez equilibrada y buena persistencia.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/vlpa/"
       }
     ],
-    "opina": "Grenache de Trabun, Cachapoal Andes de Requínoa: fruta roja jugosa, hierbas y un perfil goloso pero fresco, con la tensión de los 500 msnm. De la casa musical de Sergio Avendaño.",
-    "sugiere": "Pierna de cordero, Cuscús de verduras, Salchichas a la parrilla, Pisto, Queso de oveja. Garnacha de secano: cordero, verduras asadas y guisos especiados."
+    "opina": "Grenache de secano de San Nicolás, en Itata, elaborado por Trabun, la casa del músico-enólogo Sergio Avendaño: fruta roja jugosa, hierbas y un perfil goloso pero fresco, con levaduras nativas y mínima intervención.",
+    "sugiere": "Pierna de cordero, cuscús de verduras, salchichas a la parrilla, pisto y queso de oveja. Garnacha de secano: cordero, verduras asadas y guisos especiados."
   },
   {
     "name": "Trapi del Bueno Brut Nature",
@@ -10940,6 +11307,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093440/TRAPI_20DEL_20BUENO_20BRUT_20NATURE.png?1784311845",
     "url": "https://uptowine.cl/trapi-del-bueno-brut-nature",
     "price": 19900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10962,6 +11330,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093441/TRAPI_20DEL_20BUENO_20EL_20ALIADO.png?1784316953",
     "url": "https://uptowine.cl/trapi-del-bueno-el-aliado",
     "price": 16990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -10984,6 +11353,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093442/TRAPI_20DEL_20BUENO_20HAND_20MADE_20PINOT_20NOIR.png?1784315949",
     "url": "https://uptowine.cl/trapi-del-bueno-hand-made",
     "price": 14990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11017,7 +11387,7 @@
         "revista": ""
       }
     ],
-    "opina": "Hand Made es la línea de pequeños lotes de Trapi del Bueno y cambia de cepa según la cosecha, siempre en Osorno: Sauvignon Blanc el 2024, Pinot Noir el 2022 y Chardonnay el 2020. Las tres comparten lo que da el sur &mdash; acidez firme y aromas nítidos &mdash; pero son vinos distintos: el Sauvignon es cítrico y directo, el Pinot va por la fruta roja madura con canela y té negro, y el Chardonnay es el más amplio y cremoso. Dos de ellas llegaron a 95 puntos de La Cav. Conviene mirar la etiqueta para saber cuál es.",
+    "opina": "Hand Made es la línea de pequeños lotes de Trapi del Bueno y cambia de cepa según la cosecha, siempre en Osorno: Sauvignon Blanc el 2024, Pinot Noir el 2022 y Chardonnay el 2020. Las tres comparten lo que da el sur — acidez firme y aromas nítidos — pero son vinos distintos: el Sauvignon es cítrico y directo, el Pinot va por la fruta roja madura con canela y té negro, y el Chardonnay es el más amplio y cremoso. Dos de ellas llegaron a 95 puntos de La Cav. Conviene mirar la etiqueta para saber cuál es.",
     "sugiere": "Depende de la cosecha: el Sauvignon Blanc pide ostras al limón, cebiches y ensaladas; el Chardonnay funciona con pescados en salsa, pollo y risottos; el Pinot Noir, servido algo fresco, va con salmón, hongos, aves y charcutería."
   },
   {
@@ -11026,6 +11396,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093444/TRAPI_20DEL_20BUENO_20SAVAGE_20PINOT_20NOIR.png?1784314663",
     "url": "https://uptowine.cl/trapi-del-bueno-savage",
     "price": 14990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11048,6 +11419,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29468907/TRAPI_20SAUVIGNON_20BLANC.png?1783972528",
     "url": "https://uptowine.cl/trapi-sauvignon-blanc",
     "price": 11992,
+    "compare_at": 14990,
     "available": false,
     "anadas": [
       {
@@ -11071,6 +11443,7 @@
     "image": "",
     "url": "https://uptowine.cl/travesia-aprendiz",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11093,6 +11466,7 @@
     "image": "",
     "url": "https://uptowine.cl/travesia-carmenere",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11115,6 +11489,7 @@
     "image": "",
     "url": "https://uptowine.cl/travesia-l",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11137,6 +11512,7 @@
     "image": "",
     "url": "https://uptowine.cl/tringario-alma-cabernet-franc",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11159,6 +11535,7 @@
     "image": "",
     "url": "https://uptowine.cl/tringario-alma-cabernet-sauvignon",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11181,6 +11558,7 @@
     "image": "",
     "url": "https://uptowine.cl/tringario-ludopata",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11203,6 +11581,7 @@
     "image": "",
     "url": "https://uptowine.cl/tringario-marselan",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11235,6 +11614,7 @@
     "image": "",
     "url": "https://uptowine.cl/valle-secreto-first-edition",
     "price": 10500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11277,6 +11657,7 @@
     "image": "",
     "url": "https://uptowine.cl/valle-secreto-fruta-madre",
     "price": 13500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11299,6 +11680,7 @@
     "image": "",
     "url": "https://uptowine.cl/valle-secreto-orgullo-cruzado-1945-estadio-independencia",
     "price": 10000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11321,6 +11703,7 @@
     "image": "",
     "url": "https://uptowine.cl/valle-secreto-origen",
     "price": 26900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11353,6 +11736,7 @@
     "image": "",
     "url": "https://uptowine.cl/valle-secreto-private",
     "price": 16500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11415,6 +11799,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093450//hrfxa6.png?1783878507",
     "url": "https://uptowine.cl/valle-secreto-profundo",
     "price": 55000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11437,6 +11822,7 @@
     "image": "",
     "url": "https://uptowine.cl/vecinos-chardonnay",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11459,6 +11845,7 @@
     "image": "",
     "url": "https://uptowine.cl/vecinos-malbec",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11481,6 +11868,7 @@
     "image": "",
     "url": "https://uptowine.cl/vecinos-pais",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11503,6 +11891,7 @@
     "image": "",
     "url": "https://uptowine.cl/villalobos-nativa",
     "price": 13990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11525,6 +11914,7 @@
     "image": "",
     "url": "https://uptowine.cl/villalobos-silvestre",
     "price": 16500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11547,6 +11937,7 @@
     "image": "",
     "url": "https://uptowine.cl/villard-arganat",
     "price": 39940,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11569,6 +11960,7 @@
     "image": "",
     "url": "https://uptowine.cl/villard-expresion-reserve",
     "price": 11000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11611,6 +12003,7 @@
     "image": "",
     "url": "https://uptowine.cl/villard-jcv",
     "price": 15000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11633,6 +12026,7 @@
     "image": "",
     "url": "https://uptowine.cl/villard-jcv-carignan",
     "price": 15000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11655,6 +12049,7 @@
     "image": "",
     "url": "https://uptowine.cl/villard-jcv-garnacha",
     "price": 15000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11677,6 +12072,7 @@
     "image": "",
     "url": "https://uptowine.cl/villard-jcv-ramato-pinot-grigio",
     "price": 15000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11709,6 +12105,7 @@
     "image": "",
     "url": "https://uptowine.cl/villard-le-chardonnay-grand-vin",
     "price": 17490,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11741,6 +12138,7 @@
     "image": "",
     "url": "https://uptowine.cl/villard-le-pinot-noir-grand-vin",
     "price": 19900,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11773,6 +12171,7 @@
     "image": "",
     "url": "https://uptowine.cl/villard-le-syrah-grand-vin",
     "price": 19990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11805,6 +12204,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29442556/qv_20villard.png?1783634440",
     "url": "https://uptowine.cl/villard-qv-blend",
     "price": 11000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11828,6 +12228,7 @@
     "image": "",
     "url": "https://uptowine.cl/villard-tanagra",
     "price": 48990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11860,6 +12261,7 @@
     "image": "",
     "url": "https://uptowine.cl/vinos-manu-manu-cabernet-sauvignon",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11892,6 +12294,7 @@
     "image": "",
     "url": "https://uptowine.cl/vinos-manu-manu-carmenere",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11914,6 +12317,7 @@
     "image": "",
     "url": "https://uptowine.cl/vinos-manu-manu-ensamblaje",
     "price": 0,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11936,6 +12340,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29553651/VI_C3_91A_20ROJA_20EL_20MAULINO_20BLEND.png?1783972678",
     "url": "https://uptowine.cl/vina-roja-el-maulino-blend",
     "price": 8500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -11959,6 +12364,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29670088/VI_C3_91A_20ROJA_20EL_20MAULINO_20CABERNET_20SAUVIGNON.png?1783891537",
     "url": "https://uptowine.cl/vina-roja-el-maulino-cabernet-sauvignon",
     "price": 8500,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -11982,21 +12388,22 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/30104168/Maulino_Carignan__2_.png?1748631761",
     "url": "https://uptowine.cl/vina-roja-el-maulino-carignan",
     "price": 8500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2018",
+        "anada": "",
         "cepa": "100% Carignan",
         "valle": "Maule",
         "grad": "14,5%",
         "crianza": "Fermentación en cubas de cemento y guarda de 2 años en fudre de 2.000 litros",
-        "nota": "Carignan del secano del Maule, de color rojo intenso con tintes violáceos. En nariz frutos rojos ácidos y especias; en boca fresco, jugoso, con taninos firmes y acidez marcada.",
+        "nota": "Carignan del secano del Maule, de color rojo intenso con tintes violáceos. En nariz, frutos rojos ácidos y especias; en boca fresco, jugoso, con taninos firmes y acidez marcada.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/pjkr/"
       }
     ],
-    "opina": "Carignan de Maule: fruta roja de secano, alta acidez y carácter rústico. Con fermentación en cubas de cemento y guarda de 2 años en fudre de 2.",
-    "sugiere": "Bife ancho a la parrilla, Costillar de vacuno a la BBQ, Ragú de cordero con pappardelle, Anticuchos, Cordero al horno con romero. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "Carignan del secano del Maule: fruta roja ácida, alta acidez y ese carácter rústico y fresco que hace tan singular a la cepa. Fermentado en cemento y con 2 años de guarda en fudre de 2.000 litros, que le suman textura sin taparlo.",
+    "sugiere": "Bife ancho a la parrilla, costillar de vacuno a la BBQ, ragú de cordero con pappardelle, anticuchos y cordero al horno con romero. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Viña Zaranda Cinsault",
@@ -12004,6 +12411,7 @@
     "image": "",
     "url": "https://uptowine.cl/vina-zaranda-cinsault",
     "price": 9990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -12026,6 +12434,7 @@
     "image": "",
     "url": "https://uptowine.cl/vina-zaranda-moscatel-de-alejandria",
     "price": 7000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -12048,6 +12457,7 @@
     "image": "",
     "url": "https://uptowine.cl/vina-zaranda-pais",
     "price": 8000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -12080,6 +12490,7 @@
     "image": "",
     "url": "https://uptowine.cl/vina-zaranda-semillon",
     "price": 7000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -12102,6 +12513,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29453032/VULTUR_20GLOBO_20CARMENERE.png?1783972851",
     "url": "https://uptowine.cl/vultur-globo-carmenere",
     "price": 10000,
+    "compare_at": 12500,
     "available": false,
     "anadas": [
       {
@@ -12145,6 +12557,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/35965958/Globo_20Vultur_20Petit_20verdot.png?1784497498",
     "url": "https://uptowine.cl/vultur-petit-verdot",
     "price": 15990,
+    "compare_at": null,
     "available": true,
     "anadas": [
       {
@@ -12187,22 +12600,23 @@
     "winery": "Vultur",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29950295/GLOBO_20VULTUR_20RED_20BLEND.png?1783978655",
     "url": "https://uptowine.cl/vultur-globo-red-blend",
-    "price": 10000,
+    "price": 12990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
-        "anada": "2021",
-        "cepa": "50% Cabernet Sauvignon, 30% Malbec, 20% Syrah",
-        "valle": "Rapel",
+        "anada": "",
+        "cepa": "50% Cabernet Sauvignon · 30% Malbec · 20% Syrah",
+        "valle": "Valle del Rapel",
         "grad": "13%",
         "crianza": "12 meses en barrica",
-        "nota": "Vino joven, muy fresco, jugoso, destacando sus notas florales y aguindadas propias de la variedad. En boca, VULTUR.",
-        "premios": "",
-        "revista": "https://online.fliphtml5.com/votjo/cvnn/"
+        "nota": "Tinto joven, fresco y jugoso, con notas florales y de guinda. En boca es amable y de buena fruta, con taninos suaves.",
+        "premios": "92 pts La Cav",
+        "revista": ""
       }
     ],
-    "opina": "Ensamblaje de 50% Cabernet Sauvignon, 30% Malbec, 20% Syrah de Rapel: la estructura y el casis del Cabernet, el color y las moras del Malbec y la pimienta y la fruta negra de la Syrah. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas. Con 12 meses en barrica.",
-    "sugiere": "Bife ancho a la parrilla, Anticuchos, Ragú de cordero con pappardelle, Cordero al horno con romero, Lomo vetado a la parrilla. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter."
+    "opina": "El ensamblaje de entrada de Vultur: Cabernet del Rapel por estructura y casis, Malbec por color y moras, Syrah por pimienta y fruta negra. Doce meses de barrica lo redondean sin taparlo. Un tinto joven, jugoso y fácil de compartir, más completo que la suma de sus cepas.",
+    "sugiere": "Bife ancho a la parrilla, anticuchos, ragú de cordero con pappardelle, cordero al horno con romero y lomo vetado a la parrilla. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Vultur Petite Sirah",
@@ -12210,6 +12624,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29712786/VULTUR_20PETITE_20SYRAH.png?1783972992",
     "url": "https://uptowine.cl/vultur-petite-syrah",
     "price": 15990,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -12243,6 +12658,7 @@
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29712452/VULTUR_20TOROMILLO_20CARIGNAN.png?1783973180",
     "url": "https://uptowine.cl/vultur-toromiro-carignan",
     "price": 12500,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
@@ -12286,6 +12702,7 @@
     "image": "",
     "url": "https://uptowine.cl/zaranda-chasselas",
     "price": 7000,
+    "compare_at": null,
     "available": false,
     "anadas": [
       {
