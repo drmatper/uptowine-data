@@ -181,6 +181,7 @@ async function fetchViaApi() {
         image: (product.images && product.images[0] && product.images[0].url) || '',
         url: 'https://uptowine.cl/' + product.permalink,
         price: product.price != null ? Number(product.price) : null,
+        compare_at: product.compare_at_price != null ? Number(product.compare_at_price) : null,
         available: product.status === 'available' && (product.stock_unlimited || product.stock > 0),
         status: product.status,
         anadas: parsed.anadas, opina: parsed.opina, sugiere: parsed.sugiere,
@@ -221,7 +222,7 @@ async function fetchViaApi() {
   }
   const wines = out.filter((x) => x.anadas.length && x.opina).map((x) => ({
     name: x.name, winery: x.winery, image: x.image, url: x.url,
-    price: x.price, available: x.available === true,
+    price: x.price, compare_at: x.compare_at || null, available: x.available === true,
     anadas: [...x.anadas].sort((a, b) => (b.anada || '0').localeCompare(a.anada || '0')).map((a) => ({
       anada: a.anada || '', cepa: a.cepa || '', valle: a.valle || '', grad: a.grad || '',
       crianza: a.crianza || '', nota: a.nota || '', premios: a.premios || '', revista: a.revista || '',
