@@ -230,6 +230,32 @@ async function fetchViaApi() {
     opina: x.opina, sugiere: x.sugiere,
   })).sort((a, b) => a.name.localeCompare(b.name, 'es'));
   console.log('Vinos con ficha completa:', wines.length, '| fallidas:', failed.length);
+  // --- Miniaturas: solo cdnx.jumpseller.com soporta resize (/image/<id>/resize/W/H), pero
+  // usa ids que solo aparecen en la página pública (og:image). Cacheamos el mapeo url->cdnx
+  // en image-cdn.json y solo visitamos páginas de vinos nuevos o con foto cambiada.
+  // Vinos de archivo (página oculta) quedan sin thumb: la app usa la imagen original.
+  const CDN_MAP_FILE = __dirname + '/image-cdn.json';
+  let cdnMap = {};
+  try { cdnMap = JSON.parse(fs.readFileSync(CDN_MAP_FILE, 'utf8')); } catch (e) {}
+  const pending = wines.filter((w) => !cdnMap[w.url] || cdnMap[w.url].img !== w.image);
+  if (pending.length) {
+    console.log('Miniaturas cdnx: visitando', pending.length, 'páginas');
+    const queue = [...pending];
+    await Promise.all(Array.from({ length: 8 }, async () => {
+      while (queue.length) {
+        const w = queue.shift();
+        const page = await fetchPage(w.url);
+        if (!page || page.status !== 200) { cdnMap[w.url] = { img: w.image, cdn: '' }; continue; }
+        const og = page.html.match(/property="og:image" content="(https:\/\/cdnx\.jumpseller\.com\/[^/]+\/image\/\d+)\//);
+        cdnMap[w.url] = { img: w.image, cdn: og ? og[1] : '' };
+      }
+    }));
+    fs.writeFileSync(CDN_MAP_FILE, JSON.stringify(cdnMap, null, 1) + '\n');
+  }
+  for (const w of wines) {
+    const m = cdnMap[w.url];
+    if (m && m.cdn) w.thumb = m.cdn; // la app le agrega /resize/W/H
+  }
   // --- Recetas del sommelier: enlazar platos del 'sugiere' con el catalogo de recetas ---
   const recetas = JSON.parse(fs.readFileSync(__dirname + '/recetas.json', 'utf8'));
   const alias = JSON.parse(fs.readFileSync(__dirname + '/alias-platos.json', 'utf8'));
