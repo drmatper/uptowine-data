@@ -1,5 +1,14 @@
 {
   "code": "SOCIOS2026",
   "mensaje": "Bienvenido al Club Up to Wine",
-  "products": []
+  "products": [
+    {
+      "name": "Muelle Oculto Centinela",
+      "winery": "Muelle Oculto",
+      "image": "https://images.jumpseller.com/store/up-to-wine-chile/36406474/Muelle_20Oculto_20Centinela.png?1785112120",
+      "url": "https://uptowine.cl/muelle-oculto-centinela-copiar",
+      "price": 6000,
+      "available": true
+    }
+  ]
 }
