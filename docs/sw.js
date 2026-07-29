@@ -14,7 +14,7 @@ const BASE = '/uptowine-data/';
 const INDEX = BASE + 'index.html';
 
 self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(SHELL).then((c) => c.addAll([BASE, INDEX])).then(() => self.skipWaiting()));
+  e.waitUntil(caches.open(SHELL).then((c) => c.addAll([BASE, INDEX, '/uptowine-data/_expo/static/js/web/entry-7fda5c53d102c1ba92a8f3cc8c23abf3.js'])).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', (e) => {
