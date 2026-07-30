@@ -7,7 +7,7 @@
 // - Imágenes jumpseller: cache-first con tope de ~100 entradas (se borra la más antigua).
 // - Navegación offline: cualquier ruta desconocida sirve el index.html cacheado
 //   (mismo rol que cumple 404.html online).
-const SHELL = 'utw-shell-v1';
+const SHELL = 'utw-shell-v2'; // v2: rediseño Noche de Cava (fuentes Fraunces/Outfit, sin Ionicons)
 const DATA = 'utw-data-v1';
 const IMGS = 'utw-imgs-v1';
 const OCR = 'utw-ocr-v1';
@@ -15,7 +15,7 @@ const BASE = '/uptowine-data/';
 const INDEX = BASE + 'index.html';
 
 // El deploy reemplaza PRECACHE con la lista real: index, bundle JS, fuentes usadas y logo.
-const PRECACHE = ["/uptowine-data/","/uptowine-data/index.html","/uptowine-data/_expo/static/js/web/entry-529dd2e731f63dfeba33eca6ad8b3093.js","/uptowine-data/assets/assets/brand/logo-horizontal.09c7986ffa88b208c4ebd411d9537892.png","/uptowine-data/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Ionicons.b4eb097d35f44ed943676fd56f6bdc51.ttf","/uptowine-data/assets/node_modules/@expo-google-fonts/inter/400Regular/Inter_400Regular.51b6ad87261f18b6433ec52871ddfabc.ttf","/uptowine-data/assets/node_modules/@expo-google-fonts/inter/500Medium/Inter_500Medium.137ab18bace28dd0bd83eb3b8ed2bc54.ttf","/uptowine-data/assets/node_modules/@expo-google-fonts/inter/600SemiBold/Inter_600SemiBold.a5f35888d2da465de352e0dcfaf33324.ttf","/uptowine-data/assets/node_modules/@expo-google-fonts/playfair-display/600SemiBold/PlayfairDisplay_600SemiBold.f0713720c230460d5430d96d46f5cd28.ttf","/uptowine-data/assets/node_modules/@expo-google-fonts/playfair-display/600SemiBold_Italic/PlayfairDisplay_600SemiBold_Italic.ce09c0228b423716854f1a854c4d7fa5.ttf","/uptowine-data/assets/node_modules/@expo-google-fonts/playfair-display/700Bold/PlayfairDisplay_700Bold.f083d3d233c60977fde5d857afec24e8.ttf"];
+const PRECACHE = ["/uptowine-data/","/uptowine-data/index.html","/uptowine-data/_expo/static/js/web/entry-a5dc3b531d56c6e26aca59d8e4a83273.js","/uptowine-data/assets/assets/brand/logo-horizontal.09c7986ffa88b208c4ebd411d9537892.png","/uptowine-data/assets/node_modules/@expo-google-fonts/fraunces/600SemiBold/Fraunces_600SemiBold.e995588822b0867215ce518a9a79175b.ttf","/uptowine-data/assets/node_modules/@expo-google-fonts/fraunces/600SemiBold_Italic/Fraunces_600SemiBold_Italic.d3386675410283c88aedd87637eb5741.ttf","/uptowine-data/assets/node_modules/@expo-google-fonts/outfit/400Regular/Outfit_400Regular.5fc3fef1a1a55711c147d344132a468d.ttf","/uptowine-data/assets/node_modules/@expo-google-fonts/outfit/500Medium/Outfit_500Medium.3af2e072a31b85b3c0a55ede786b31ab.ttf","/uptowine-data/assets/node_modules/@expo-google-fonts/outfit/600SemiBold/Outfit_600SemiBold.fff3440ed39188f5d5bf85305e8b6be8.ttf"];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(SHELL).then((c) => c.addAll(PRECACHE)).then(() => self.skipWaiting()));
