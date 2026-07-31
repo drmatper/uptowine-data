@@ -1008,7 +1008,7 @@
   {
     "name": "Bodegas RE Maulino Dry Farmer",
     "winery": "Bodegas RE",
-    "image": "https://images.jumpseller.com/store/up-to-wine-chile/32925704/BODEGAS_20RE_20MAULINO_20DRY_20FARMER.png?1783711501",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/32925704/BODEGAS_20RE_20MAULINO_20DRY_20FARMER.png?1785517482",
     "url": "https://uptowine.cl/bodega-re-maulino-dry-farmer",
     "price": 9990,
     "compare_at": null,
@@ -1027,7 +1027,7 @@
     ],
     "opina": "Ensamblaje de secano del Maule —Carignan, Cabernet y Syrah, dry farmed— con 92 puntos La Cav: la acidez rústica del Carignan, la estructura y el casis del Cabernet y la pimienta y fruta negra de la Syrah. Rojo púrpura denso, con boldo, frutos silvestres y guinda ácida; boca ágil, fresca y frutal, con guarda de 5 a 7 años.",
     "sugiere": "Estructura y fruta para carnes rojas a la brasa y cocción lenta: bife ancho a la parrilla, costillar de vacuno a la BBQ, lomo vetado a la parrilla, entrecot a la pimienta y osobuco al vino tinto.",
-    "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78686201"
+    "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/79488095"
   },
   {
     "name": "Bodegas Re Mediterráneo",
@@ -7815,9 +7815,32 @@
     "sugiere": "Pastel de choclo, costillar de cerdo a la BBQ, pimentones rellenos de carne, queso gouda maduro y ají de gallina. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
   },
   {
+    "name": "Mujer Andina El infaltable Pinot Noir",
+    "winery": "Mujer Andina",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093630/MUJER_20ANDINA_20El_20INFALTABLE_20PINOT_20NOIR.png?1785517245",
+    "url": "https://uptowine.cl/mujer-andina-pinot-noir",
+    "price": 13200,
+    "compare_at": null,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "",
+        "cepa": "Pinot Noir",
+        "valle": "Valle de Cautín",
+        "grad": "",
+        "crianza": "",
+        "nota": "Cereza con ribetes rubíes. En nariz, cereza, mora y guinda, con notas terrosas, regaliz y pimienta negra. En boca, acidez media-alta, tanino fresco y jugoso, de final medio.",
+        "premios": "92 pts La Cav",
+        "revista": ""
+      }
+    ],
+    "opina": "Pinot Noir del Valle de Cautín, en plena Araucanía: una de las zonas vitícolas más australes de Chile y todavía poco explorada. El clima frío y lluvioso es exigente, pero cuando la cosecha acompaña da Pinot de acidez viva y perfil sedoso. Cereza, guinda y un fondo terroso con pimienta negra. 92 puntos La Cav para una zona que recién se está poniendo en el mapa.",
+    "sugiere": "Pato confitado, tabla de charcutería, risotto de hongos, queso brie y champiñones rellenos. Tinto ligero y fresco: salmón, hongos, aves y charcutería. Servir a 14-16 grados."
+  },
+  {
     "name": "Mujer Andina Kelüna Rosé",
     "winery": "Mujer Andina",
-    "image": "",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093627/MUJER_20ANDINA_20KELUNA_20ROSE.png?1785516804",
     "url": "https://uptowine.cl/mujer-andina-keluna",
     "price": 12990,
     "compare_at": null,
@@ -7879,29 +7902,6 @@
     ],
     "opina": "El espumante de más alto vuelo de Mujer Andina: un rosé extra brut de Syrah pura, con añada declarada &mdash;algo poco común en Chile, donde casi todos los espumantes son sin cosecha. Los 94 puntos La Cav de la cosecha 2019 son el puntaje más alto de la viña, y el Oro del Catad'Or lo respalda. Burbuja fina, bollería y frutos secos sobre una boca envolvente. Extra brut: prácticamente sin azúcar.",
     "sugiere": "Croquetas de jamón, jamón serrano con melón, empanaditas de queso, ostras al limón y tartaletas de frutos rojos. Espumante seco de aperitivo, que también aguanta mariscos, frituras ligeras y tablas de fiesta. Servir a 6-8 grados."
-  },
-  {
-    "name": "Mujer Andina Pinot Noir",
-    "winery": "Mujer Andina",
-    "image": "",
-    "url": "https://uptowine.cl/mujer-andina-pinot-noir",
-    "price": 13200,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "",
-        "cepa": "Pinot Noir",
-        "valle": "Valle de Cautín",
-        "grad": "",
-        "crianza": "",
-        "nota": "Cereza con ribetes rubíes. En nariz, cereza, mora y guinda, con notas terrosas, regaliz y pimienta negra. En boca, acidez media-alta, tanino fresco y jugoso, de final medio.",
-        "premios": "92 pts La Cav",
-        "revista": ""
-      }
-    ],
-    "opina": "Pinot Noir del Valle de Cautín, en plena Araucanía: una de las zonas vitícolas más australes de Chile y todavía poco explorada. El clima frío y lluvioso es exigente, pero cuando la cosecha acompaña da Pinot de acidez viva y perfil sedoso. Cereza, guinda y un fondo terroso con pimienta negra. 92 puntos La Cav para una zona que recién se está poniendo en el mapa.",
-    "sugiere": "Pato confitado, tabla de charcutería, risotto de hongos, queso brie y champiñones rellenos. Tinto ligero y fresco: salmón, hongos, aves y charcutería. Servir a 14-16 grados."
   },
   {
     "name": "Narbona Cabernet Sauvignon",
