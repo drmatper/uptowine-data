@@ -6430,6 +6430,85 @@
     "sugiere": "Bife ancho a la parrilla, anticuchos, queso manchego curado, lomo vetado a la parrilla y ragú de cordero con pappardelle. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
+    "name": "Manu Manu Cabernet Sauvignon",
+    "winery": "Vinos Manu",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36167718/MANU_20MANU_20CABERNET_20SAUVIGNON_20.png?1785711043",
+    "url": "https://uptowine.cl/vinos-manu-manu-cabernet-sauvignon",
+    "price": 0,
+    "compare_at": null,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2018",
+        "cepa": "100% Cabernet Sauvignon",
+        "valle": "Curicó",
+        "grad": "14%",
+        "crianza": "12 meses en barrica de madera",
+        "nota": "Rojo rubí intenso. En nariz, frutilla, bosque, regaliz, vainilla y un leve carácter animal. En boca, redonda, de buena estructura, con aromas a vainilla, chocolate y regaliz sobre un final largo.",
+        "premios": "Oro Catad'Or World Wine Awards",
+        "revista": ""
+      },
+      {
+        "anada": "2017",
+        "cepa": "100% Cabernet Sauvignon",
+        "valle": "Curicó",
+        "grad": "13,2%",
+        "crianza": "12 meses en barrica de madera",
+        "nota": "Color rubí. En nariz, fuerte intensidad aromática con frutos rojos como la cereza, mermelada de ciruela, aromas florales y un dejo de vainilla. En boca, de fuerte estructura tánica, jugoso, equilibrado, con buena acidez y larga duración.",
+        "premios": "Oro Catad'Or World Wine Awards",
+        "revista": ""
+      }
+    ],
+    "opina": "El Manu Cabernet Sauvignon de Vinos Manu (Curicó), doble Oro en el Catad'Or. Rubí intenso, con frutilla, bosque, regaliz y vainilla; boca redonda, de buena estructura, con chocolate y regaliz sobre un final largo.",
+    "sugiere": "Estructura y crianza para carnes a la brasa y quesos: bife ancho a la parrilla, costillar de vacuno a la BBQ, entrecot a la pimienta, lomo vetado a la parrilla y queso manchego curado."
+  },
+  {
+    "name": "Manu Manu Carménère",
+    "winery": "Vinos Manu",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36167719/MANU_20CARMENERE.png?1785711278",
+    "url": "https://uptowine.cl/vinos-manu-manu-carmenere",
+    "price": 0,
+    "compare_at": null,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2017",
+        "cepa": "100% Carménère",
+        "valle": "Curicó",
+        "grad": "13,2%",
+        "crianza": "12 meses en barrica de madera",
+        "nota": "Color rubí. En nariz, fuerte intensidad aromática, donde predominan los aromas de frutos rojos como la cereza, mermelada de ciruela, aromas florales y un dejo de vainilla. En boca, fuerte estructura tánica, jugoso, equilibrado, con una buena acidez y larga duración.",
+        "premios": "Oro Catad'Or 2021",
+        "revista": "https://online.fliphtml5.com/votjo/UTW-REVISTA---OCTUBRE-2019/"
+      }
+    ],
+    "opina": "Carménère de Curicó, Oro en el Catad'Or 2021. Rubí, con cereza, mermelada de ciruela, flores y un dejo de vainilla; boca de fuerte estructura tánica, jugosa y equilibrada, de buena acidez y larga duración.",
+    "sugiere": "Especia dulce y estructura para carnes a la brasa y cordero: bife ancho a la parrilla, anticuchos, cordero al horno con romero, berenjenas a la parmesana y lomo vetado a la parrilla."
+  },
+  {
+    "name": "Manu Manu Ensamblaje",
+    "winery": "Vinos Manu",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36167720/MANU_20MANU_20ENSAMBLAJE.png?1785711073",
+    "url": "https://uptowine.cl/vinos-manu-manu-ensamblaje",
+    "price": 0,
+    "compare_at": null,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2017",
+        "cepa": "52% Cabernet Sauvignon, 26% Carménère, 22% Merlot",
+        "valle": "Curicó",
+        "grad": "13,2%",
+        "crianza": "Cepas vinificadas por separado y criadas en barrica de roble francés. Cabernet de Porvenir, Carménère de Itahue, Merlot de Sagrada Familia",
+        "nota": "Color rubí. En nariz, fuerte intensidad aromática, donde predominan los aromas de frutos rojos como la cereza, mermelada de ciruela, aromas florales y un dejo de vainilla. En boca, fuerte estructura tánica, jugoso, equilibrado, con una buena acidez y larga duración.",
+        "premios": "Oro Catad'Or 2021",
+        "revista": "https://online.fliphtml5.com/votjo/UTW-REVISTA---OCTUBRE-2019/"
+      }
+    ],
+    "opina": "Ensamblaje de Curicó, Oro en el Catad'Or: Cabernet por estructura y casis, Carménère por pimentón y especia, Merlot por redondez y ciruela. Cereza y mermelada de ciruela con vainilla; boca de fuerte estructura tánica, jugosa y de larga duración.",
+    "sugiere": "Complejidad y estructura para carnes de cocción lenta y quesos: bife ancho a la parrilla, anticuchos, osobuco al vino tinto, costillar de vacuno a la BBQ y queso manchego curado."
+  },
+  {
     "name": "Mariposa Alegre Corazón del Indio",
     "winery": "Mariposa Alegre",
     "image": "",
@@ -10164,7 +10243,7 @@
   {
     "name": "Robba Primitivo (zinfandel)",
     "winery": "Robba & Rossi",
-    "image": "",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36167780/ROBBA_20_26_20ROSSY_20PRIMITIVO.png?1785708703",
     "url": "https://uptowine.cl/robba-primitivo-zinfandel",
     "price": 0,
     "compare_at": null,
@@ -10908,7 +10987,7 @@
   {
     "name": "Trabun Consecuencia Cabernet Sauvignon",
     "winery": "Trabun",
-    "image": "",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36260160/TRABUN_20CONSECUENCIA_20CABERNET_20SAUVIGNON_20.png?1785711602",
     "url": "https://uptowine.cl/trabun-consecuencia-cabernet-sauvignon",
     "price": 0,
     "compare_at": null,
@@ -10926,7 +11005,8 @@
       }
     ],
     "opina": "Un Cabernet distinto al de la casa: Trabun sale de su Cachapoal Andes y busca fruta en Chada, Maipo, para un tinto de apenas 12,5% y perfil liviano. Frutos secos, brioche y un toque mineral, con acidez refrescante y taninos ligeros sobre frambuesa, pimentón y eucalipto. De la casa musical de Sergio Avendaño.",
-    "sugiere": "Tinto ligero y fresco, ideal levemente enfriado, para mesa de verano: ensalada de quinoa con pollo, carnes magras a la plancha, sándwich gourmet de lomo, tabla de quesos frescos y salmón a la parrilla."
+    "sugiere": "Tinto ligero y fresco, ideal levemente enfriado, para mesa de verano: ensalada de quinoa con pollo, carnes magras a la plancha, sándwich gourmet de lomo, tabla de quesos frescos y salmón a la parrilla.",
+    "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/79550238"
   },
   {
     "name": "Trabun Los Sospechosos Carignan",
@@ -11513,7 +11593,7 @@
   {
     "name": "Tringario Alma Cabernet Franc",
     "winery": "Tringario",
-    "image": "",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36167714/TRINGARIO_20ALMA_20CABERNET_20FRANC_20_20.png?1785709513",
     "url": "https://uptowine.cl/tringario-alma-cabernet-franc",
     "price": 0,
     "compare_at": null,
@@ -11536,7 +11616,7 @@
   {
     "name": "Tringario Alma Cabernet Sauvignon",
     "winery": "Tringario",
-    "image": "",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36167715/TRINGARIO_20ALMA_20CABERNET_20SAUVIGNON_20_20.png?1785709394",
     "url": "https://uptowine.cl/tringario-alma-cabernet-sauvignon",
     "price": 0,
     "compare_at": null,
@@ -11559,7 +11639,7 @@
   {
     "name": "Tringario Ludópata",
     "winery": "Tringario",
-    "image": "",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36167716/TRINGARIO_20LUDOPATA.png?1785709073",
     "url": "https://uptowine.cl/tringario-ludopata",
     "price": 0,
     "compare_at": null,
@@ -11582,7 +11662,7 @@
   {
     "name": "Tringario Marselan",
     "winery": "Tringario",
-    "image": "",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36167717/TRINGARIO_20MARCELAN_20.png?1785709227",
     "url": "https://uptowine.cl/tringario-marselan",
     "price": 0,
     "compare_at": null,
@@ -11823,7 +11903,7 @@
   {
     "name": "Vecinos Chardonnay",
     "winery": "Vecinos",
-    "image": "",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36167704/VECINOS_20CHARDONNAY.png?1785710608",
     "url": "https://uptowine.cl/vecinos-chardonnay",
     "price": 0,
     "compare_at": null,
@@ -11846,7 +11926,7 @@
   {
     "name": "Vecinos Malbec",
     "winery": "Vecinos",
-    "image": "",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36167705/VECINOS_20MALBEC_20.png?1785710367",
     "url": "https://uptowine.cl/vecinos-malbec",
     "price": 0,
     "compare_at": null,
@@ -11869,7 +11949,7 @@
   {
     "name": "Vecinos País",
     "winery": "Vecinos",
-    "image": "",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36167706/VECINOS_20PAIS.png?1785710637",
     "url": "https://uptowine.cl/vecinos-pais",
     "price": 0,
     "compare_at": null,
@@ -12258,85 +12338,6 @@
     ],
     "opina": "Syrah de Casablanca, que es una decisión poco obvia: el valle se asocia a blancos y Pinot Noir, no a Syrah. Pero el clima frío costero le da a la cepa un registro distinto al del norte &mdash; menos confitada, con la aceituna negra y el fondo floral que aparecen en las Syrah de clima fresco. Es el segundo vino más caro de Villard y la cosecha 2018 alcanzó 94 puntos de Descorchados. La 2021 muestra la madera algo marcada, señal de que todavía tiene tiempo por delante.",
     "sugiere": "Tinto estructurado para carnes rojas a la brasa y cocciones lentas: cordero al horno con romero, ragú de cordero con pappardelle, costillar de vacuno a la BBQ, osobuco braseado al vino tinto y berenjenas a la parmesana."
-  },
-  {
-    "name": "Vinos Manu Manu Cabernet Sauvignon",
-    "winery": "Vinos Manu",
-    "image": "",
-    "url": "https://uptowine.cl/vinos-manu-manu-cabernet-sauvignon",
-    "price": 0,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "2018",
-        "cepa": "100% Cabernet Sauvignon",
-        "valle": "Curicó",
-        "grad": "14%",
-        "crianza": "12 meses en barrica de madera",
-        "nota": "Rojo rubí intenso. En nariz, frutilla, bosque, regaliz, vainilla y un leve carácter animal. En boca, redonda, de buena estructura, con aromas a vainilla, chocolate y regaliz sobre un final largo.",
-        "premios": "Oro Catad'Or World Wine Awards",
-        "revista": ""
-      },
-      {
-        "anada": "2017",
-        "cepa": "100% Cabernet Sauvignon",
-        "valle": "Curicó",
-        "grad": "13,2%",
-        "crianza": "12 meses en barrica de madera",
-        "nota": "Color rubí. En nariz, fuerte intensidad aromática con frutos rojos como la cereza, mermelada de ciruela, aromas florales y un dejo de vainilla. En boca, de fuerte estructura tánica, jugoso, equilibrado, con buena acidez y larga duración.",
-        "premios": "Oro Catad'Or World Wine Awards",
-        "revista": ""
-      }
-    ],
-    "opina": "El Manu Cabernet Sauvignon de Vinos Manu (Curicó), doble Oro en el Catad'Or. Rubí intenso, con frutilla, bosque, regaliz y vainilla; boca redonda, de buena estructura, con chocolate y regaliz sobre un final largo.",
-    "sugiere": "Estructura y crianza para carnes a la brasa y quesos: bife ancho a la parrilla, costillar de vacuno a la BBQ, entrecot a la pimienta, lomo vetado a la parrilla y queso manchego curado."
-  },
-  {
-    "name": "Vinos Manu Manu Carménère",
-    "winery": "Vinos Manu",
-    "image": "",
-    "url": "https://uptowine.cl/vinos-manu-manu-carmenere",
-    "price": 0,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "2017",
-        "cepa": "100% Carménère",
-        "valle": "Curicó",
-        "grad": "13,2%",
-        "crianza": "12 meses en barrica de madera",
-        "nota": "Color rubí. En nariz, fuerte intensidad aromática, donde predominan los aromas de frutos rojos como la cereza, mermelada de ciruela, aromas florales y un dejo de vainilla. En boca, fuerte estructura tánica, jugoso, equilibrado, con una buena acidez y larga duración.",
-        "premios": "Oro Catad'Or 2021",
-        "revista": "https://online.fliphtml5.com/votjo/UTW-REVISTA---OCTUBRE-2019/"
-      }
-    ],
-    "opina": "Carménère de Curicó, Oro en el Catad'Or 2021. Rubí, con cereza, mermelada de ciruela, flores y un dejo de vainilla; boca de fuerte estructura tánica, jugosa y equilibrada, de buena acidez y larga duración.",
-    "sugiere": "Especia dulce y estructura para carnes a la brasa y cordero: bife ancho a la parrilla, anticuchos, cordero al horno con romero, berenjenas a la parmesana y lomo vetado a la parrilla."
-  },
-  {
-    "name": "Vinos Manu Manu Ensamblaje",
-    "winery": "Vinos Manu",
-    "image": "",
-    "url": "https://uptowine.cl/vinos-manu-manu-ensamblaje",
-    "price": 0,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "2017",
-        "cepa": "52% Cabernet Sauvignon, 26% Carménère, 22% Merlot",
-        "valle": "Curicó",
-        "grad": "13,2%",
-        "crianza": "Cepas vinificadas por separado y criadas en barrica de roble francés. Cabernet de Porvenir, Carménère de Itahue, Merlot de Sagrada Familia",
-        "nota": "Color rubí. En nariz, fuerte intensidad aromática, donde predominan los aromas de frutos rojos como la cereza, mermelada de ciruela, aromas florales y un dejo de vainilla. En boca, fuerte estructura tánica, jugoso, equilibrado, con una buena acidez y larga duración.",
-        "premios": "Oro Catad'Or 2021",
-        "revista": "https://online.fliphtml5.com/votjo/UTW-REVISTA---OCTUBRE-2019/"
-      }
-    ],
-    "opina": "Ensamblaje de Curicó, Oro en el Catad'Or: Cabernet por estructura y casis, Carménère por pimentón y especia, Merlot por redondez y ciruela. Cereza y mermelada de ciruela con vainilla; boca de fuerte estructura tánica, jugosa y de larga duración.",
-    "sugiere": "Complejidad y estructura para carnes de cocción lenta y quesos: bife ancho a la parrilla, anticuchos, osobuco al vino tinto, costillar de vacuno a la BBQ y queso manchego curado."
   },
   {
     "name": "Viña Roja El Maulino Blend",
