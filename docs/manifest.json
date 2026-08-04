@@ -6,8 +6,8 @@
   "start_url": "/uptowine-data/",
   "scope": "/uptowine-data/",
   "display": "standalone",
-  "background_color": "#120A0E",
-  "theme_color": "#120A0E",
+  "background_color": "#0A0708",
+  "theme_color": "#0A0708",
   "icons": [
     {
       "src": "/uptowine-data/icon-192.png",

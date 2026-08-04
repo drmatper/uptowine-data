@@ -7,7 +7,7 @@
 // - Imágenes jumpseller: cache-first con tope de ~100 entradas (se borra la más antigua).
 // - Navegación offline: cualquier ruta desconocida sirve el index.html cacheado
 //   (mismo rol que cumple 404.html online).
-const SHELL = 'utw-shell-v2'; // v2: rediseño Noche de Cava (fuentes Fraunces/Outfit, sin Ionicons)
+const SHELL = 'utw-shell-v3'; // v3: rediseño Crimson (Archivo/Jost)
 const DATA = 'utw-data-v1';
 const IMGS = 'utw-imgs-v1';
 const OCR = 'utw-ocr-v1';
@@ -15,7 +15,7 @@ const BASE = '/uptowine-data/';
 const INDEX = BASE + 'index.html';
 
 // El deploy reemplaza PRECACHE con la lista real: index, bundle JS, fuentes usadas y logo.
-const PRECACHE = ["/uptowine-data/","/uptowine-data/index.html","/uptowine-data/_expo/static/js/web/entry-4a3bf135949951e7aeedaf575cff3af5.js","/uptowine-data/assets/assets/brand/logo-horizontal.09c7986ffa88b208c4ebd411d9537892.png","/uptowine-data/assets/node_modules/@expo-google-fonts/fraunces/600SemiBold/Fraunces_600SemiBold.e995588822b0867215ce518a9a79175b.ttf","/uptowine-data/assets/node_modules/@expo-google-fonts/fraunces/600SemiBold_Italic/Fraunces_600SemiBold_Italic.d3386675410283c88aedd87637eb5741.ttf","/uptowine-data/assets/node_modules/@expo-google-fonts/outfit/400Regular/Outfit_400Regular.5fc3fef1a1a55711c147d344132a468d.ttf","/uptowine-data/assets/node_modules/@expo-google-fonts/outfit/500Medium/Outfit_500Medium.3af2e072a31b85b3c0a55ede786b31ab.ttf","/uptowine-data/assets/node_modules/@expo-google-fonts/outfit/600SemiBold/Outfit_600SemiBold.fff3440ed39188f5d5bf85305e8b6be8.ttf"];
+const PRECACHE = ["/uptowine-data/","/uptowine-data/index.html","/uptowine-data/_expo/static/js/web/entry-c021cc17ebb01d10678626454b3cc6f9.js","/uptowine-data/assets/assets/brand/logo-horizontal.09c7986ffa88b208c4ebd411d9537892.png","/uptowine-data/assets/node_modules/@expo-google-fonts/archivo/700Bold/Archivo_700Bold.05670a2716518402b517d63a9e8d3413.ttf","/uptowine-data/assets/node_modules/@expo-google-fonts/archivo/800ExtraBold/Archivo_800ExtraBold.2a3f365320f15aeaa2b006ad720e5a40.ttf","/uptowine-data/assets/node_modules/@expo-google-fonts/instrument-serif/400Regular_Italic/InstrumentSerif_400Regular_Italic.4036d1c3db2f215c15e9c022fb4644c8.ttf","/uptowine-data/assets/node_modules/@expo-google-fonts/jost/400Regular/Jost_400Regular.3ccf189874e82464a4233d9dccd41c97.ttf","/uptowine-data/assets/node_modules/@expo-google-fonts/jost/500Medium/Jost_500Medium.090175d88161f36142c3b541783ca73b.ttf","/uptowine-data/assets/node_modules/@expo-google-fonts/jost/600SemiBold/Jost_600SemiBold.50dcc642bc107b54d474ab83800ac187.ttf"];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(SHELL).then((c) => c.addAll(PRECACHE)).then(() => self.skipWaiting()));
