@@ -1,23 +1,33 @@
 // Scrapea fichas de uptowine.cl y arma wines-new.json
 const fs = require('fs');
 
+// nombres en minúscula; si la entidad empieza con mayúscula (&Ntilde;) se sube el resultado
+const ENTITIES = {
+  quot: '"', apos: "'", amp: '&', lt: '<', gt: '>', nbsp: ' ',
+  iexcl: '¡', iquest: '¿', middot: '·', bull: '•', hellip: '…',
+  ndash: '–', mdash: '—', lsquo: '‘', rsquo: '’', ldquo: '“', rdquo: '”',
+  laquo: '«', raquo: '»', deg: '°', ordm: 'º', ordf: 'ª', frac12: '½', times: '×',
+  copy: '©', reg: '®', trade: '™', euro: '€', szlig: 'ß',
+  aacute: 'á', agrave: 'à', acirc: 'â', atilde: 'ã', auml: 'ä', aring: 'å', ccedil: 'ç',
+  eacute: 'é', egrave: 'è', ecirc: 'ê', euml: 'ë',
+  iacute: 'í', igrave: 'ì', icirc: 'î', iuml: 'ï', ntilde: 'ñ',
+  oacute: 'ó', ograve: 'ò', ocirc: 'ô', otilde: 'õ', ouml: 'ö',
+  uacute: 'ú', ugrave: 'ù', ucirc: 'û', uuml: 'ü', yacute: 'ý',
+};
+
 const decode = (s) => {
   if (!s) return '';
   let t = s;
   for (let i = 0; i < 3; i++) {
     t = t
-      .replace(/&quot;/g, '"').replace(/&#0?39;|&#x27;|&apos;/gi, "'").replace(/&#(\d+);/g, (_, n) => String.fromCharCode(n))
-      .replace(/&aacute;/gi, (m) => m[1] === 'A' ? 'Á' : 'á')
-      .replace(/&eacute;/gi, (m) => m[1] === 'E' ? 'É' : 'é')
-      .replace(/&iacute;/gi, (m) => m[1] === 'I' ? 'Í' : 'í')
-      .replace(/&oacute;/gi, (m) => m[1] === 'O' ? 'Ó' : 'ó')
-      .replace(/&uacute;/gi, (m) => m[1] === 'U' ? 'Ú' : 'ú')
-      .replace(/&ntilde;/gi, (m) => m[1] === 'N' ? 'Ñ' : 'ñ')
-      .replace(/&iquest;/g, '¿').replace(/&iexcl;/g, '¡')
-      .replace(/&middot;/g, '·').replace(/&nbsp;/g, ' ')
-      .replace(/&#8505;|&#65039;/g, '')
-      .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
-      .replace(/&amp;/g, '&');
+      .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+      .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(+n))
+      .replace(/&([a-zA-Z][a-zA-Z0-9]*);/g, (m, name) => {
+        const c = ENTITIES[name.toLowerCase()];
+        if (c === undefined) return m;
+        return /^[A-Z]/.test(name) ? c.toUpperCase() : c;
+      })
+      .replace(/[ℹ️]/g, ''); // ℹ️ decorativo que Jumpseller mete en las fichas
   }
   return t;
 };
@@ -191,6 +201,9 @@ async function fetchViaApi() {
   }
   return out;
 }
+
+module.exports = { decode };
+if (require.main !== module) return;
 
 (async () => {
   const smRes = await fetch('https://uptowine.cl/sitemap.xml', { signal: AbortSignal.timeout(30000) });
