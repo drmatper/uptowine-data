@@ -1,0 +1,28 @@
+name: Volcar catas de la comunidad (Nota UTW)
+
+on:
+  schedule:
+    - cron: '30 9 * * 1' # lunes 09:30 UTC (semanal)
+  workflow_dispatch: {} # permite ejecutarlo a mano desde GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  ratings:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Volcar catas_resumen a ratings.json
+        run: node dump-ratings.js
+      - name: Commit si hay cambios
+        run: |
+          git config user.name "uptowine-bot"
+          git config user.email "actions@github.com"
+          git add ratings.json
+          git diff --cached --quiet && echo "Sin cambios" || git commit -m "Actualizar notas de la comunidad $(date -u +'%Y-%m-%d')"
+          git pull --rebase
+          git push
