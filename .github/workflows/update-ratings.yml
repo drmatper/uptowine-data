@@ -22,7 +22,7 @@ jobs:
         run: |
           git config user.name "uptowine-bot"
           git config user.email "actions@github.com"
-          git add ratings.json
+          git add ratings.json alertas-catas.md 2>/dev/null || git add ratings.json
           git diff --cached --quiet && echo "Sin cambios" || git commit -m "Actualizar notas de la comunidad $(date -u +'%Y-%m-%d')"
           git pull --rebase
           git push
