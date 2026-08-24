@@ -1,28 +1,5 @@
 [
   {
-    "name": "3 Monos 3 Monos",
-    "winery": "3 Monos 3",
-    "image": "",
-    "url": "https://uptowine.cl/3-monos-3-monos",
-    "price": 15900,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "",
-        "cepa": "Carménère",
-        "valle": "Peumo, Valle del Cachapoal",
-        "grad": "",
-        "crianza": "",
-        "nota": "Cereza oscuro con reflejos violeta. En nariz, berries rojos maduros, con fondo de especias dulces y tostados suaves. En boca, jugosa, tersa y frutal, de fondo meloso.",
-        "premios": "91 pts La Cav",
-        "revista": ""
-      }
-    ],
-    "opina": "Carménère de Peumo, la zona insignia de la variedad en el Cachapoal: pimentón, especias dulces y frutos rojos, con taninos amables y cuerpo medio.",
-    "sugiere": "Pastel de choclo, lasaña boloñesa, cazuela de vacuno, pimentones rellenos de carne y empanadas de pino. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
-  },
-  {
     "name": "Alas de Parra Blend País Cinsault",
     "winery": "Alas de Parra",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36167734/ALAS_20DE_20PARRA_20BLEND_20PAIS_20CINSAULT.png?1785627144",
@@ -647,39 +624,6 @@
     "opina": "Carménère Gran Reserva de Rapel, con roble francés y fudre austriaco: granate profundo, dulce y perfumado, con mora, cereza madura y un fondo de chocolate amargo y tabaco; boca profunda y estructurada, de gran volumen, taninos maduros y cierre largo.",
     "sugiere": "Estructura y especia para carnes rojas a la brasa y cocción lenta: anticuchos, osobuco al vino tinto, costillar de vacuno a la BBQ, entrecot a la pimienta y lomo vetado a la parrilla.",
     "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78662311"
-  },
-  {
-    "name": "Algorta Grand Reserve",
-    "winery": "Algorta",
-    "image": "",
-    "url": "https://uptowine.cl/algorta-grand-reserve",
-    "price": 9490,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "",
-        "cepa": "Carménère",
-        "valle": "Valle del Rapel",
-        "grad": "",
-        "crianza": "",
-        "nota": "Granate profundo e intenso. En nariz es expresiva y compleja, con cereza madura, moras y un fondo perfumado de chocolate amargo y hojas de tabaco. En boca es profundo y de gran volumen, equilibrado y estructurado, con taninos maduros y un cierre persistente.",
-        "premios": "90 pts La Cav",
-        "revista": ""
-      },
-      {
-        "anada": "",
-        "cepa": "Cabernet Sauvignon",
-        "valle": "Valle del Rapel",
-        "grad": "",
-        "crianza": "",
-        "nota": "Rojo rubí. En nariz, dulce, con frutillas, moras, menta y algo de cuero. En boca es frutal, maduro, de cuerpo medio y sabroso.",
-        "premios": "91 pts La Cav",
-        "revista": ""
-      }
-    ],
-    "opina": "La línea Grand Reserve de Algorta, del Valle del Rapel, cambia de cepa según la cosecha: la 2022 es un Carménère perfumado de pimentón, especias dulces y frutos rojos (90 pts La Cav), y la 2021 un Cabernet Sauvignon frutal y sabroso, de cuerpo medio (91 pts La Cav). En ambos casos, tinto de fruta madura y taninos amables.",
-    "sugiere": "Lomo vetado a la parrilla, osobuco braseado al vino tinto, berenjenas a la parmesana, anticuchos y bife ancho a la parrilla. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Algorta Mala Testa GSM",
@@ -1324,52 +1268,6 @@
     "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78666294"
   },
   {
-    "name": "BOWines Blend",
-    "winery": "BOWines",
-    "image": "",
-    "url": "https://uptowine.cl/bowines-blend",
-    "price": 0,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "",
-        "cepa": "75% Carménère · 15% Cabernet Sauvignon · 10% Carignan",
-        "valle": "Valle del Cachapoal",
-        "grad": "14%",
-        "crianza": "24 meses en barricas francesas",
-        "nota": "Un blend elegante y complejo, con un bouquet único adquirido durante su larga crianza. En boca, entrada fresca, taninos envolventes y redondos y un final persistente.",
-        "premios": "",
-        "revista": "https://online.fliphtml5.com/votjo/ueyh/"
-      }
-    ],
-    "opina": "El ensamblaje de guarda de BOWines: el Carménère manda con su pimentón y especia dulce, el Cabernet aporta columna y casis, y el Carignan suma acidez y nervio de secano. Dos años de barrica francesa son muchísimo para un tinto chileno, y se notan en el bouquet: taninos ya redondos, sin aristas, y un final largo.",
-    "sugiere": "Tinto estructurado y especiado, para carnes de cocción lenta y quesos maduros: osobuco al vino tinto, ragú de cordero con pappardelle, bife ancho a la parrilla, anticuchos y queso manchego curado."
-  },
-  {
-    "name": "Bowines Cabernet Sauvignon Gran Reserva",
-    "winery": "BOWines",
-    "image": "",
-    "url": "https://uptowine.cl/bowines-cabernet-sauvignon-gran-reserva",
-    "price": 0,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "2019",
-        "cepa": "Cabernet Sauvignon",
-        "valle": "Maule",
-        "grad": "",
-        "crianza": "12 meses en barrica de roble francés usada",
-        "nota": "Rojo cereza intenso. En nariz, se aprecia mucha fruta roja y notas a mentol. En boca, es largo, robusto, con acidez refrescante y taninos presentes que hacen de este CS un gran exponente.",
-        "premios": "",
-        "revista": ""
-      }
-    ],
-    "opina": "Cabernet de secano del Maule de la mano de BOWines. Rojo cereza intenso, con fruta roja y un toque mentolado; en boca largo y robusto, de taninos presentes y una acidez refrescante que le da vida y guarda.",
-    "sugiere": "Robustez y frescura para la parrilla y quesos firmes: costillar de vacuno a la BBQ, bife ancho a la parrilla, lomo vetado a la parrilla, berenjenas a la parmesana y queso manchego curado."
-  },
-  {
     "name": "BOWines Carae",
     "winery": "BOWines",
     "image": "",
@@ -1414,29 +1312,6 @@
     ],
     "opina": "Carignan de secano del Maule, la especialidad de BOWines, y uno de los vinos más reconocidos del catálogo: 94 puntos Descorchados, 91 de Parker y 90 de Tim Atkin . Tres guías distintas coincidiendo es una señal fuerte. Fruta roja con tonos especiados y florales sobre una estructura tánica seria, bouquet elegante y ese nervio ácido que solo dan las viñas viejas del secano.",
     "sugiere": "Acidez y estructura para carnes a la brasa y cocción lenta: entrecot a la pimienta, ragú de cordero con pappardelle, cordero al horno con romero, anticuchos y berenjenas a la parmesana."
-  },
-  {
-    "name": "BOWines Carignan",
-    "winery": "BOWines",
-    "image": "",
-    "url": "https://uptowine.cl/bowines-carignan",
-    "price": 0,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "",
-        "cepa": "100% Carignan",
-        "valle": "Valle del Maule",
-        "grad": "13,5%",
-        "crianza": "1 año en depósito, sin madera",
-        "nota": "Un delicioso Carignan que muestra arándano seco, fresa, especias y hierbas frescas. De cuerpo medio y jugoso, con taninos redondos y una firme columna ácida que le da definición.",
-        "premios": "",
-        "revista": "https://online.fliphtml5.com/votjo/ueyh/"
-      }
-    ],
-    "opina": "El Carignan de entrada de BOWines: mismo secano del Maule que el Carae, pero criado un año en depósito en lugar de barrica, para preservar la fruta. Arándano seco, fresa, especias y hierbas frescas, con cuerpo medio, taninos redondos y esa columna ácida que define a la cepa. Más directo y bebible que su hermano mayor.",
-    "sugiere": "Fruta y acidez de secano, para carnes rojas y quesos de carácter: cordero al horno con romero, costillar de vacuno a la BBQ, osobuco al vino tinto, berenjenas a la parmesana y queso manchego curado."
   },
   {
     "name": "BOWines El Buen Viejo",
@@ -1587,29 +1462,6 @@
     "sugiere": "Calidez y fruta para comida chilena y pastas de carne: pizza de carne, pimentones rellenos de carne, costillar de cerdo a la BBQ, lasaña boloñesa y chorrillana."
   },
   {
-    "name": "BOWines Malbec",
-    "winery": "BOWines",
-    "image": "",
-    "url": "https://uptowine.cl/bowines-malbec",
-    "price": 0,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "2017",
-        "cepa": "100% Malbec",
-        "valle": "Colchagua",
-        "grad": "13,5%",
-        "crianza": "24 meses en barricas de 4to uso",
-        "nota": "Intensidad media a media +, en nariz frutos rojos, granada y leves notas dulces como vainilla. En boca de taninos suaves, jugoso y de buena persistencia.",
-        "premios": "",
-        "revista": "https://online.fliphtml5.com/votjo/ecnr/"
-      }
-    ],
-    "opina": "Malbec de Colchagua con 24 meses de crianza. Frutos rojos y granada con leves notas dulces de vainilla; en boca de taninos suaves, jugoso y de buena persistencia, redondo y fácil de disfrutar.",
-    "sugiere": "Redondez frutal para guisos y quesos maduros: cazuela de vacuno, costillar de cerdo a la BBQ, pizza de carne, lasaña boloñesa y queso gouda maduro."
-  },
-  {
     "name": "BOWines Malcriado",
     "winery": "BOWines",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36167749/BOWINES_20MALCRIADO_20BLEND.png?1785626227",
@@ -1631,29 +1483,6 @@
     ],
     "opina": "Ensamblaje del Maule con 92 puntos de James Suckling : el Carignan pone acidez y carácter de secano, el Cabernet aporta estructura y casis. Fresas, cerezas, ahumados, tabaco y mentol; boca untuosa y frutal, de cuerpo medio y cierre a confitura. Un tinto de nombre travieso pero factura seria.",
     "sugiere": "Estructura y frescura para carnes a la brasa y cordero: bife ancho a la parrilla, costillar de vacuno a la BBQ, cordero al horno con romero, lomo vetado a la parrilla y berenjenas a la parmesana."
-  },
-  {
-    "name": "BOWines Touriga Nacional",
-    "winery": "BOWines",
-    "image": "",
-    "url": "https://uptowine.cl/bowines-touriga-nacional",
-    "price": 0,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "",
-        "cepa": "100% Touriga Nacional",
-        "valle": "Valle de Colchagua",
-        "grad": "13,5%",
-        "crianza": "12 meses en barrica francesa de 4to uso",
-        "nota": "Vino de carácter frutal y especiado, con notas florales y buena estructura. En boca es equilibrado, de taninos firmes y final persistente.",
-        "premios": "90 pts James Suckling",
-        "revista": "https://online.fliphtml5.com/votjo/yvbn/"
-      }
-    ],
-    "opina": "Una rareza dentro del catálogo: Touriga Nacional, la gran cepa tinta de Portugal —la del Oporto— plantada en Colchagua. Hay muy poca en Chile. Carácter frutal y especiado con notas florales, taninos firmes y final persistente, con 90 puntos de James Suckling . Para quien ya probó todo lo clásico y quiere algo distinto.",
-    "sugiere": "Cepa exótica de buena estructura para brasa y quesos maduros: lomo vetado a la parrilla, bife ancho, anticuchos, osobuco al vino tinto y queso manchego curado."
   },
   {
     "name": "Calyptra Blend prestige",
@@ -2094,29 +1923,6 @@
     "sugiere": "Tinto estructurado y de guarda, para ocasiones: bife ancho a la parrilla, cordero al horno con romero, costillar de vacuno a la BBQ, anticuchos y berenjenas a la parmesana."
   },
   {
-    "name": "Cariñena de Retupel",
-    "winery": "El Rescate",
-    "image": "",
-    "url": "https://uptowine.cl/carinena-de-retupel",
-    "price": 11990,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "",
-        "cepa": "Carignan (Cariñena)",
-        "valle": "Retupel, Valle del Maule",
-        "grad": "",
-        "crianza": "",
-        "nota": "Cereza con violeta. En nariz, fruta roja, berries maduros y especias tostadas y perfumadas, con un fondo de madera. En boca, jugosa, frutal, tersa y persistente, fiel al carácter de la cepa.",
-        "premios": "92 pts La Cav",
-        "revista": ""
-      }
-    ],
-    "opina": "Carignan (Cariñena) de Retupel, en el Valle del Maule, por El Rescate: fruta roja de secano, alta acidez y ese carácter rústico y fresco tan singular de la cepa, con un paso por madera que le suma especias tostadas. 92 puntos La Cav.",
-    "sugiere": "Bife ancho a la parrilla, cordero al horno con romero, anticuchos, ragú de cordero con pappardelle y berenjenas a la parmesana. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
-  },
-  {
     "name": "Cas romero Viento Puelche Malbec",
     "winery": "Casa Romero",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29723704/CASA_20ROMERO_20VIENTO_20PUELCHE_20MALBEC.png?1783638198",
@@ -2142,9 +1948,9 @@
   {
     "name": "Casa del Magnolio Chardonnay",
     "winery": "Flaherty",
-    "image": "",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36259673/casa_20del_20magnolio_20Chardonnay.png?1787531335",
     "url": "https://uptowine.cl/casa-del-magnolio-chardonnay",
-    "price": 0,
+    "price": 7400,
     "compare_at": null,
     "available": false,
     "anadas": [
@@ -2959,6 +2765,16 @@
     "available": false,
     "anadas": [
       {
+        "anada": "2023",
+        "cepa": "50% Syrah y 50% Garnacha",
+        "valle": "Rapel",
+        "grad": "14,3%",
+        "crianza": "15 meses en barricas de roble francés de 2do uso",
+        "nota": "Púrpura de intensidad media alta con ribetes rubí. En nariz, grosella negra, moras, arándanos, ciruela roja, flores secas, frambuesa, pimienta blanca, vainilla, tostado y cedro. En boca es seco y balanceado, de acidez media a media alta, tanino pulido pero presente, intensidad media alta y persistencia media.",
+        "premios": "",
+        "revista": "https://online.fliphtml5.com/votjo/snzp/"
+      },
+      {
         "anada": "2022",
         "cepa": "50% Garnacha y 50% Syrah",
         "valle": "Rapel",
@@ -2979,8 +2795,8 @@
         "revista": ""
       }
     ],
-    "opina": "Ensamblaje de 50% Garnacha y 50% Syrah de Rapel: la fruta roja golosa de la Garnacha con la pimienta y la fruta negra de la Syrah. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas. Con 15 meses en barrica de roble francés usada.",
-    "sugiere": "Osobuco braseado al vino tinto, Cordero al horno con romero, Anticuchos, Lomo vetado a la parrilla, Entrecot a la pimienta. Tinto estructurado: carnes rojas a la brasa, cocción lenta y quesos de carácter.",
+    "opina": "Ensamblaje de 50% Syrah y 50% Garnacha de Rapel: la fruta roja golosa de la Garnacha con la pimienta y la fruta negra de la Syrah. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas. Con 15 meses en barrica de roble francés.",
+    "sugiere": "Comida chilena y de mesa: empanadas de pino o de champiñones, pastel de choclo, carne mechada, anticuchos y lomo vetado a la parrilla. Tinto de fruta y cuerpo medio, versátil para guisos y parrilla.",
     "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78734394"
   },
   {
@@ -2997,8 +2813,8 @@
         "cepa": "100% Garnacha",
         "valle": "Colchagua",
         "grad": "14,5%",
-        "crianza": "15 meses en barricas de roble francés de 2do uso; 20% racimo completo",
-        "nota": "Rubí de intensidad media con ribetes claros. En nariz, pimienta blanca, cerezas rojas, frutilla fresca, frambuesa, flores secas, grafito, cedro, anís y notas de vainilla. En boca es un vino seco, jugoso, fresco y con cierta calidez; tanino levemente rugoso, acidez media alta, persistencia e intensidad media alta. Se bebe fácil e invita a una nueva copa.",
+        "crianza": "15 meses en barricas de roble francés de 2do uso",
+        "nota": "Rubí de intensidad media con ribetes rubí claros. En nariz, pimienta blanca, cerezas rojas, frutilla fresca, frambuesa, flores secas, grafito, cedro, anís, notas de vainilla y chicle de fruta. En boca es un vino seco, jugoso, fresco y con cierta calidez; tanino levemente rugoso, acidez media alta, persistencia e intensidad media alta. Se bebe fácil e invita a una nueva copa.",
         "premios": "",
         "revista": "https://online.fliphtml5.com/votjo/snzp/"
       },
@@ -3023,8 +2839,8 @@
         "revista": ""
       }
     ],
-    "opina": "Garnacha de Colchagua: fruta roja jugosa, hierbas y un perfil cálido y goloso. Con 15 meses en barricas de roble francés de 2do uso; 20% racimo completo.",
-    "sugiere": "Costillar de cerdo a la BBQ, Queso gouda maduro, Chorrillana, Pizza de carne, Pastel de choclo. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros.",
+    "opina": "Garnacha de Colchagua: fruta roja jugosa, hierbas y un perfil cálido y goloso. Con 15 meses en barricas de roble francés de 2do uso.",
+    "sugiere": "Paella, confit de pato, charcutería y quesos cremosos. Tinto de fruta roja y cuerpo medio, también versátil con guisos, pizza de carne y pastel de choclo.",
     "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78734442"
   },
   {
@@ -3316,7 +3132,7 @@
       {
         "anada": "2022",
         "cepa": "Syrah",
-        "valle": "Aconcagua",
+        "valle": "Aconcagua — vino de altura",
         "grad": "",
         "crianza": "",
         "nota": "Rubí de intensidad media. En nariz, fruta negra, casis, violetas, aceitunas, pimienta negra y vainilla. En boca, de acidez media y tanino envolvente, con diferentes capas.",
@@ -3326,15 +3142,25 @@
       {
         "anada": "2020",
         "cepa": "Syrah · Malbec",
-        "valle": "Aconcagua",
+        "valle": "Aconcagua — vino de altura",
         "grad": "14%",
         "crianza": "18 meses en barrica",
         "nota": "Color cereza brillante. En nariz, fresco y frutal, donde predominan los frutos rojos y salvajes como murtilla, grosellas y moras. En boca, un vino ligero y suave, con una acidez equilibrada y fresca.",
         "premios": "Plata Catad'Or 2022 · 93 pts La Cav",
         "revista": ""
+      },
+      {
+        "anada": "2017",
+        "cepa": "60% Syrah · 40% Malbec",
+        "valle": "Aconcagua — Río Colorado, vino de altura (1.600 msnm)",
+        "grad": "14%",
+        "crianza": "14 meses en barrica de roble francés",
+        "nota": "",
+        "premios": "Oro Catad'Or",
+        "revista": ""
       }
     ],
-    "opina": "El tinto de más alto puntaje de El Escorial, con 94 puntos de La Cav en la 2022. Es Syrah del Aconcagua, un valle que sabe hacerla: fruta negra, violetas y pimienta, pero también ese dejo a aceituna que aparece en las Syrah bien logradas y que rara vez se encuentra en Chile. La 2020 sumó Malbec a la mezcla y salió más liviana y frutal, con dieciocho meses de barrica; la 2022, pura Syrah, tiene más capas y un tanino más envolvente.",
+    "opina": "Cornisa es la línea de altura de El Escorial: la fruta baja del viñedo de Río Colorado, camino a Portillo, a 1.600 metros sobre el nivel del mar, donde el frío de cordillera da acidez y color que no se ven en el valle. Es el tinto de más alto puntaje de la viña: 94 puntos de La Cav en la Syrah 2022 y 94 puntos de Tim Atkin MW para la Cornisa 2015. La Syrah del Aconcagua muestra fruta negra, violetas, pimienta y ese dejo a aceituna de las Syrah bien logradas; la 2020 sumó Malbec y salió más liviana y frutal, y la 2017 (60% Syrah / 40% Malbec) se llevó Oro en el Catad'Or con apenas 1.500 botellas.",
     "sugiere": "Tinto estructurado para carnes rojas a la brasa y cocciones lentas: entrecôte a la pimienta, costillar de vacuno a la BBQ, ragú de cordero con pappardelle, bife ancho y lomo vetado."
   },
   {
@@ -3385,10 +3211,30 @@
         "nota": "Rubí con ribetes cereza, brillante. En nariz, cereza, casis, mora y murtilla, con notas a regaliz y eucalipto. En boca, de acidez media, volumen y cuerpo medios, tanino sedoso y equilibrado.",
         "premios": "92 pts La Cav",
         "revista": ""
+      },
+      {
+        "anada": "2020",
+        "cepa": "100% Zinfandel (primitivo)",
+        "valle": "Aconcagua",
+        "grad": "12,7%",
+        "crianza": "6 meses en barrica de roble francés de tercer uso",
+        "nota": "Color cereza brillante. En nariz, aromas frescos y frutales, con frutos rojos y salvajes como murtilla, guinda, grosellas y moras. En boca es ligero y suave, con una acidez equilibrada y fresca.",
+        "premios": "",
+        "revista": ""
+      },
+      {
+        "anada": "2018",
+        "cepa": "100% Carménère",
+        "valle": "Aconcagua",
+        "grad": "13,8%",
+        "crianza": "14 meses en barricas usadas de roble francés y 6 meses en cava tras el embotellado",
+        "nota": "Rojo rubí. En nariz, intenso, con frutos negros como ciruela y mora, toques de chocolate amargo y café. En boca es un vino elegante y equilibrado, con taninos sedosos y maduros y un agradable final.",
+        "premios": "",
+        "revista": ""
       }
     ],
-    "opina": "Gran Reserva es la línea más versátil de El Escorial y cambia por completo según el año: un Chenin Blanc el 2024, un ensamblaje de cuatro cepas el 2023, Cabernet Sauvignon el 2022 y Cabernet Franc el 2021. Todas comparten la misma escuela — seis meses en acero, sin madera — que privilegia la fruta y la frescura por sobre la estructura. La viña trabaja en Aconcagua con cepas poco frecuentes en Chile, como el Sangiovese y el Petit Verdot, y esta línea es donde más experimenta. Conviene mirar la etiqueta antes de servir.",
-    "sugiere": "Depende de la cosecha: el Chenin Blanc va con mariscos, cebiches y ensaladas; los tintos, de cuerpo medio y sin madera, funcionan con comida de olla, pastas y quesos semimaduros."
+    "opina": "Gran Reserva es la línea más versátil de El Escorial — la segunda viña más antigua del Aconcagua, en Panquehue — y cambia por completo según el año: Chenin Blanc el 2024, un ensamblaje de cuatro cepas el 2023, Cabernet Sauvignon el 2022, Cabernet Franc el 2021, Zinfandel el 2020 y Carménère el 2018. Es también donde más se nota la firma férrica del terroir de Panquehue. La crianza fue evolucionando: las cosechas antiguas pasaban 14 meses por barrica usada, mientras las más nuevas van a acero inoxidable para privilegiar la fruta y la frescura. Un dato de pedigrí: el Cabernet Sauvignon 2017 de esta casa obtuvo 92 puntos de La Cav. Conviene mirar la etiqueta antes de servir.",
+    "sugiere": "Depende de la cosecha: el Chenin Blanc va con mariscos, cebiches y ensaladas; el Zinfandel es fresco y de terraza, ideal de aperitivo; los tintos con barrica (Carménère, Cabernet) funcionan con comida de olla, carnes a la parrilla, pastas y quesos semimaduros."
   },
   {
     "name": "El Escorial Premium",
@@ -3441,10 +3287,30 @@
         "nota": "Cereza con ribetes rubíes. En nariz, notas florales, rosas rojas, regaliz, guindas y casis. En boca, de acidez media, tanino sedoso, fresco y frutal.",
         "premios": "93 pts La Cav",
         "revista": ""
+      },
+      {
+        "anada": "2019",
+        "cepa": "100% Sangiovese",
+        "valle": "Aconcagua",
+        "grad": "13,5%",
+        "crianza": "14 meses en barricas usadas de roble francés",
+        "nota": "Rojo cereza. En nariz, aromas definidos y elegantes, con frutos azules, malvas y flores púrpuras, hierbas y leve piel de naranja, sobre un fondo de compota de frutas silvestres y paladar de tiza con taninos granulares. En boca, acidez muy bien equilibrada con el dulzor y taninos delicados; cuerpo medio y largo final.",
+        "premios": "",
+        "revista": ""
+      },
+      {
+        "anada": "2018",
+        "cepa": "100% Sangiovese",
+        "valle": "Aconcagua",
+        "grad": "13,5%",
+        "crianza": "14 meses en barrica",
+        "nota": "",
+        "premios": "Oro Catad'Or",
+        "revista": ""
       }
     ],
-    "opina": "Sangiovese en Chile es una rareza — es la cepa del Chianti y casi nadie la planta acá — y El Escorial la trabaja en Aconcagua con catorce meses de barrica. Mantiene lo que uno busca en ella: acidez alta, cereza ácida, hierbas secas y un tanino de textura firme, más italiano que chileno. La 2021 es la más floral y sedosa; la 2023, ganadora de Oro en el Catad'Or, va por lo especiado, con laurel y chocolate amargo. Es un tinto que pide comida, no copa sola.",
-    "sugiere": "Tinto de cuerpo medio y acidez viva, perfecto para tomate y comida de olla: pizza de carne, pastas con salsas rojas, pastel de choclo, empanadas de pino y ají de gallina."
+    "opina": "Sangiovese en Chile es una rareza — es la cepa del Chianti y casi nadie la planta acá — y El Escorial la trabaja en Aconcagua con catorce meses de barrica. Mantiene lo que uno busca en ella: acidez alta, cereza ácida, hierbas secas y un tanino de textura firme, más italiano que chileno. Es un clásico de la casa: ganó Oro en el Catad'Or tanto en la 2018 como en la 2023. La 2021 es la más floral y sedosa; la 2023 va por lo especiado, con laurel y chocolate amargo; la 2019 muestra el lado más perfumado, con flores púrpuras y piel de naranja. Es un tinto que pide comida, no copa sola.",
+    "sugiere": "Tinto de cuerpo medio y acidez viva, perfecto para tomate y comida de olla: pizza de carne, pastas con salsas rojas y pomodoro, pastel de choclo, empanadas de pino y ají de gallina."
   },
   {
     "name": "El Escorial Sypor-t Blanc Moscatel",
@@ -3466,7 +3332,7 @@
         "revista": ""
       }
     ],
-    "opina": "Un vino fortificado chileno, categoría rarísima por acá. El nombre Sypor-t lo dice todo: es la versión de El Escorial de un oporto, y esta es la variante blanca, hecha con Muscat de Frontignan — el moscatel de grano pequeño, el más aromático de la familia y el mismo que se usa en los grandes dulces del sur de Francia. Los 17 grados vienen de la fortificación, que corta la fermentación y deja azúcar natural en la botella. Oro en el Catad'Or.",
+    "opina": "Un vino fortificado chileno, categoría rarísima por acá. El nombre Sypor-t lo dice todo: es la versión de El Escorial de un oporto — el «Oporto Blanco» que la viña de Panquehue se propuso crear — y esta es la variante blanca, hecha con Muscat de Frontignan, el moscatel de grano pequeño, el más aromático de la familia y el mismo que se usa en los grandes dulces del sur de Francia. Los 17 grados vienen de la fortificación, que corta la fermentación y deja azúcar natural en la botella. Oro en el Catad'Or.",
     "sugiere": "Fortificado dulce, para servir frío en copa pequeña: quesos azules, foie gras, tartas de fruta y frutos secos, o simplemente solo como bajativo."
   },
   {
@@ -3489,7 +3355,7 @@
         "revista": ""
       }
     ],
-    "opina": "La versión tinta del fortificado de El Escorial. El nombre junta las dos cosas que lo definen: Syrah y port. Es un estilo ruby — joven, de color intenso y fruta viva, sin las décadas de crianza oxidativa de un tawny — y la Syrah del Aconcagua le da la pimienta y la fruta negra que sostienen el dulzor. Es de las pocas bodegas chilenas que se atreve con esta categoría, y La Cav le puso 93 puntos.",
+    "opina": "La versión tinta del fortificado de El Escorial. El nombre junta las dos cosas que lo definen: Syrah y port. Es un estilo ruby — joven, de color intenso y fruta viva, sin las décadas de crianza oxidativa de un tawny — y la Syrah del Aconcagua le da la pimienta y la fruta negra que sostienen el dulzor. Es de las pocas bodegas chilenas que se atreve con esta categoría, y La Cav le puso 93 puntos. La casa también embotella una versión Vintage , con añada declarada y ensamblaje Syrah-Malbec, que se llevó Oro en el Catad'Or.",
     "sugiere": "Fortificado tinto, en copa pequeña al final de la comida: chocolate amargo, quesos azules, nueces y frutos secos, o postres de fruta negra."
   },
   {
@@ -3562,29 +3428,6 @@
     "sugiere": "Fruta roja golosa para comida de olla y quesos maduros: chorrillana, ají de gallina, pastel de choclo, pimentones rellenos de carne y queso gouda maduro."
   },
   {
-    "name": "El Patagüino Patagüina Garnacha",
-    "winery": "El Patagüino",
-    "image": "",
-    "url": "https://uptowine.cl/el-pataguino-pataguina-garnacha",
-    "price": 0,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "2020",
-        "cepa": "100% Garnacha",
-        "valle": "Almahue",
-        "grad": "14,1%",
-        "crianza": "12 meses en barricas de roble francés de segundo y tercer uso",
-        "nota": "Color rubí intenso. En nariz encontramos notas a frambuesas, ciruelas y especias. En boca tiene un cuerpo ligero, con taninos suaves, jugosos y un final medio.",
-        "premios": "",
-        "revista": "https://online.fliphtml5.com/votjo/pimz/"
-      }
-    ],
-    "opina": "Garnacha del Valle de Almahue, criada en roble francés de segundo y tercer uso. Rubí intenso, con frambuesa, ciruela y especias; boca de cuerpo ligero, taninos suaves y jugosos y un final medio muy amable.",
-    "sugiere": "Perfil cálido y frutal para pastas y comida chilena: lasaña boloñesa, pizza de carne, empanadas de pino, ají de gallina y chorrillana."
-  },
-  {
     "name": "El Rescate Ladino",
     "winery": "El Rescate",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093403/EL_20RESCATE_20LADINO_20.png?1785533635",
@@ -3606,39 +3449,6 @@
     ],
     "opina": "País del Valle del Itata por El Rescate: fruta roja fresca, ligereza y esa raíz campesina chilena de las viñas viejas de secano. Frutos rojos con fondos tostados y especias ahumadas; boca jugosa, tersa y persistente.",
     "sugiere": "Risotto de hongos, quiche lorraine, pollo asado con hierbas, pato confitado y atún sellado. Tinto ligero y fresco: salmón, hongos, aves y charcutería."
-  },
-  {
-    "name": "Emica Del Secano",
-    "winery": "Emica",
-    "image": "",
-    "url": "https://uptowine.cl/emica-del-secano",
-    "price": 14990,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "",
-        "cepa": "Carignan",
-        "valle": "Empedrado, valle del Maule",
-        "grad": "",
-        "crianza": "",
-        "nota": "Cereza intenso de media profundidad. En nariz, berries maduros sobre un fondo de tostado intenso, café y moka. En boca, jugosa, punzante, algo tánica y compacta.",
-        "premios": "92 pts La Cav",
-        "revista": ""
-      },
-      {
-        "anada": "",
-        "cepa": "País",
-        "valle": "Empedrado, valle del Maule",
-        "grad": "",
-        "crianza": "",
-        "nota": "Guinda suave. En nariz, frutas rojas silvestres, frutillas y frambuesas maceradas, levemente medicinal, de especias rojas suaves. En boca, jugosa, media, fresca y compacta.",
-        "premios": "91 pts La Cav",
-        "revista": ""
-      }
-    ],
-    "opina": "La línea del Secano de Emica, de Empedrado en el valle del Maule, cambia de cepa según la cosecha: la 2023 es un Carignan intenso, tánico y tostado (92 pts La Cav), y la 2021 un País más liviano y fresco de fruta roja silvestre (91 pts La Cav). Ambos, viñas viejas de secano con carácter rústico y alta acidez.",
-    "sugiere": "Berenjenas a la parmesana, ragú de cordero con pappardelle, lomo vetado a la parrilla, queso manchego curado y costillar de vacuno a la BBQ. Tinto de secano: carnes a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Encierra Carménère",
@@ -3738,39 +3548,6 @@
     ],
     "opina": "Puquillay es la línea Gran Reserva de Encierra y se elabora en distintas cepas según la cosecha: el 2023 salió como Cabernet Sauvignon y el 2022 como Carménère, ambos de Colchagua y ambos con 91 puntos de La Cav. El Cabernet es el más frutal y directo, con cereza y hierbas aromáticas sobre una boca amena de media profundidad. El Carménère va por otro lado: más perfumado y especiado, con mora, clavo de olor y un fondo de chocolate amargo, de tanino más dulce. Conviene revisar la etiqueta para saber cuál se está sirviendo.",
     "sugiere": "Tinto estructurado para carnes rojas y cocciones lentas: bife ancho a la parrilla, osobuco braseado al vino tinto, entrecôte a la pimienta, costillar de vacuno a la BBQ y lomo vetado."
-  },
-  {
-    "name": "Erasmo",
-    "winery": "Erasmo",
-    "image": "",
-    "url": "https://uptowine.cl/erasmo",
-    "price": 11500,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "2020",
-        "cepa": "",
-        "valle": "Maule",
-        "grad": "12,5%",
-        "crianza": "24 meses",
-        "nota": "Rubí con tintes granates. En nariz, cerezas negras, arándanos, grosellas negras, cuero, higos, eucalipto, compost, cedro, tabaco y regaliz. En boca, de buena estructura y balance, con taninos sedosos y final medio-largo.",
-        "premios": "93 pts La Cav",
-        "revista": ""
-      },
-      {
-        "anada": "2014",
-        "cepa": "Cabernet Sauvignon · Cabernet Franc · Merlot",
-        "valle": "Maule",
-        "grad": "12,5%",
-        "crianza": "24 meses",
-        "nota": "Rubí con tintes granates. En nariz, cerezas negras, arándanos, grosellas negras, cuero, higos, eucalipto, compost, cedro, tabaco y regaliz. En boca es amplio y vibrante, con fondo de chocolate negro.",
-        "premios": "Oro Catad'Or 2019 · 93 pts La Cav",
-        "revista": ""
-      }
-    ],
-    "opina": "El vino que da nombre a la bodega y su ensamblaje bordelés de referencia, hecho en Caliboro, Maule: Cabernet Sauvignon, Cabernet Franc y Merlot con veinticuatro meses de crianza. Lo notable es que con solo 12,5 grados logra una complejidad que normalmente pide más alcohol — el abanico va de la cereza negra y el arándano al cuero, el cedro, el tabaco y el regaliz, con un fondo terroso de compost y eucalipto. La 2014 ganó Oro en el Catad'Or 2019 y muestra un fondo de chocolate negro que la 2020 todavía no desarrolla.",
-    "sugiere": "Tinto estructurado para carnes rojas a la brasa y cocciones lentas: lomo vetado a la parrilla, entrecôte a la pimienta, anticuchos, berenjenas a la parmesana y queso manchego curado."
   },
   {
     "name": "Erasmo Almaule",
@@ -4187,7 +3964,7 @@
     "winery": "Flaherty",
     "image": "",
     "url": "https://uptowine.cl/flaherty-aconcagua",
-    "price": 16990,
+    "price": 10000,
     "compare_at": null,
     "available": false,
     "anadas": [
@@ -4230,7 +4007,7 @@
     "winery": "Flaherty",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093418/FLAHERTY_20CABERNET_20SAUVIGNON_20VI_C3_91EDO_20OCOA.png?1785535484",
     "url": "https://uptowine.cl/flaherty-casa-del-magnolio",
-    "price": 9990,
+    "price": 16990,
     "compare_at": null,
     "available": false,
     "anadas": [
@@ -4257,29 +4034,6 @@
     ],
     "opina": "Cabernet Sauvignon de viñedo único del Ocoa, a 40 km del Pacífico, con mañanas de niebla durante todo el verano y suelos coluviales de marga y granito. Diecisiete meses en barrica de roble francés y un año más de botella antes de salir al mercado. Producción mínima: 1.146 botellas.",
     "sugiere": "Tinto estructurado para carnes rojas a la brasa, cocción lenta y quesos de carácter: bife ancho a la parrilla, lomo vetado a la parrilla, cordero al horno con romero, costillar de vacuno a la BBQ y queso manchego curado."
-  },
-  {
-    "name": "Flaherty Carmenere Aconcagua",
-    "winery": "Flaherty",
-    "image": "",
-    "url": "https://uptowine.cl/flaherty",
-    "price": 10000,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "2022",
-        "cepa": "86% Carménère, 7% Cabernet Sauvignon, 7% Petit Verdot",
-        "valle": "Valle de Aconcagua (viñedos Caravic, en Panquehue, y Ocoa)",
-        "grad": "14,6%",
-        "crianza": "16 meses en barricas de roble francés y americano; 27% en cubas verticales de roble francés por 14 meses. Fermentación en cubas verticales de roble con remontados tradicionales y en cubas abiertas de 800 kilos con pisoneo manual",
-        "nota": "Un arcoíris de aromas y sabores. Predominan el pimiento rojo asado, las notas alquitranadas y la cereza seca, con un trasfondo terroso de higo fresco y mora silvestre y un toque de especias de pastel. De cuerpo medio, con taninos pulidos que dan un final largo y suave marcado por el roble tostado.",
-        "premios": "92 pts La Cav",
-        "revista": ""
-      }
-    ],
-    "opina": "El Carménère de Flaherty en su versión de valle: fruta de los viñedos Caravic (Panquehue) y Ocoa, con 7% de Cabernet Sauvignon que suma cereza roja y cuerpo, y 7% de Petit Verdot por sus taninos especiados. El clima semidesértico del Aconcagua es óptimo para madurar la cepa y sacarle sus sabores más característicos.",
-    "sugiere": "Tinto de fruta y cuerpo medio para guisos, comida chilena de olla y quesos maduros: pastel de choclo, empanadas de pino, lasaña boloñesa, ají de gallina y queso gouda maduro."
   },
   {
     "name": "Flaherty Carmenere Viñedo Ocoa",
@@ -4319,7 +4073,7 @@
     "winery": "Flaherty",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36259669/FLAHERTY_20_20CAUQUENES_20_20VI_C3_91EDO_20TEQUEL_20.png?1785536250",
     "url": "https://uptowine.cl/flaherty-cauquenes-vinedo-tequel",
-    "price": 0,
+    "price": 13990,
     "compare_at": null,
     "available": false,
     "anadas": [
@@ -4342,7 +4096,7 @@
     "winery": "Flaherty",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36259672/FLAHERTY_20_20PAIS_20_20VI_C3_91EDO_20TEQUEL_20.png?1785537023",
     "url": "https://uptowine.cl/flaherty-pais-vinedo-tequel",
-    "price": 0,
+    "price": 10990,
     "compare_at": null,
     "available": false,
     "anadas": [
@@ -4365,7 +4119,7 @@
     "winery": "Flaherty",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36259671/FLAHERTY_20PETIT_20SYRAH_20VI_C3_91EDO_20TEQUEL_20_20_281_29.png?1785536047",
     "url": "https://uptowine.cl/flaherty-petite-sirah-vinedo-tequel",
-    "price": 0,
+    "price": 17990,
     "compare_at": null,
     "available": false,
     "anadas": [
@@ -4388,7 +4142,7 @@
     "winery": "Flaherty",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36259670/FLAHERTY_20_20TEMPRANILLO_20VI_C3_91EDO_20TEQUEL_20.png?1785536760",
     "url": "https://uptowine.cl/flaherty-tempranillo-vinedo-tequel",
-    "price": 0,
+    "price": 17990,
     "compare_at": null,
     "available": false,
     "anadas": [
@@ -4733,29 +4487,6 @@
     "sugiere": "Cordero al horno con romero, lomo vetado a la parrilla, costillar de vacuno a la BBQ, berenjenas a la parmesana y anticuchos. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
-    "name": "James Paradisus Single Vineyard",
-    "winery": "James",
-    "image": "",
-    "url": "https://uptowine.cl/james-paradisus-single-vineyard",
-    "price": 19990,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "",
-        "cepa": "Tempranillo",
-        "valle": "Molina, Valle de Curicó",
-        "grad": "",
-        "crianza": "",
-        "nota": "Cereza. En nariz, fruta roja y negra madura, toques especiados, perfumado, con hierbas aromáticas. En boca, jugosa y frutal, de fruta confitada y un leve amargor.",
-        "premios": "92 pts La Cav",
-        "revista": ""
-      }
-    ],
-    "opina": "Un Tempranillo de viñedo único (single vineyard) en Molina, Curicó. La cepa insignia de Rioja tiene muy poca presencia en Chile, y aquí se muestra perfumada, con fruta roja y negra madura, hierbas aromáticas y ese cierre de fruta confitada con leve amargor tan propio de la variedad. 92 puntos La Cav. El precio ($19.990) refleja que es la etiqueta top de la viña.",
-    "sugiere": "Costillar de cerdo a la BBQ, chorrillana, empanadas de pino, queso gouda maduro y lasaña boloñesa. Tinto de fruta y cuerpo medio: guisos, comida chilena de olla y quesos maduros."
-  },
-  {
     "name": "Javiera Ortúzar Ímpetu",
     "winery": "Javiera Ortúzar",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093596/JAVIERA_20ORTUZAR_20IMPETU.png?1785601298",
@@ -4787,39 +4518,6 @@
     ],
     "opina": "Ímpetu es la línea de Syrah de Javiera Ortúzar, que en algunas cosechas suma Petit Verdot para dar más color y estructura. Pimienta negra, fruta negra y un fondo especiado con la madera bien integrada. Consistente en puntajes altos: 93 de La Cav en la 2022 y 93 de Descorchados en el ensamblaje 2018.",
     "sugiere": "Ragú de cordero con pappardelle, bife ancho a la parrilla, lomo vetado a la parrilla, costillar de vacuno a la BBQ y entrecot a la pimienta. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
-  },
-  {
-    "name": "Javiera Ortúzar Wines",
-    "winery": "Javiera Ortúzar",
-    "image": "",
-    "url": "https://uptowine.cl/javiera-ortuzar-wines",
-    "price": 14000,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "",
-        "cepa": "Cabernet Sauvignon",
-        "valle": "Valle de Colchagua",
-        "grad": "13,5%",
-        "crianza": "12 a 14 meses en barricas de roble francés usadas",
-        "nota": "Rubí. En nariz, fruta roja madura, berries licorosos y un fondo de suave tostado y especias dulces. En boca, jugosa, tersa, de tanino pulido, con rica acidez vertical y final largo.",
-        "premios": "93 pts La Cav",
-        "revista": ""
-      },
-      {
-        "anada": "",
-        "cepa": "Petit Verdot",
-        "valle": "Valle de Colchagua",
-        "grad": "13,5%",
-        "crianza": "12 a 14 meses en barricas de roble francés usadas",
-        "nota": "Cereza oscuro y opaco. En nariz, berries negros y rojos, algo terroso, hierbas, especias tostadas y un fondo maduro y licoroso. En boca, jugosa, de gran peso frutal, tanino reactivo, compacta y larga.",
-        "premios": "93 pts La Cav · 92 pts Descorchados",
-        "revista": ""
-      }
-    ],
-    "opina": "La línea de autor de Javiera Ortúzar cambia de cepa según el año: Cabernet Sauvignon el 2022, Petit Verdot el 2021, ambos de Colchagua y ambos con 93 puntos de La Cav . Vinos de tanino pulido y acidez vertical, criados en barrica usada para que la madera acompañe sin tapar la fruta.",
-    "sugiere": "Bife ancho a la parrilla, berenjenas a la parmesana, queso manchego curado, ragú de cordero con pappardelle y osobuco braseado al vino tinto. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Javiera Ortúzar Wines Pinot Grigio",
@@ -5638,29 +5336,6 @@
     "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78735604"
   },
   {
-    "name": "La Veleidosa",
-    "winery": "El Rescate",
-    "image": "",
-    "url": "https://uptowine.cl/la-veleidosa",
-    "price": 9990,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "",
-        "cepa": "Cinsault",
-        "valle": "Valle del Itata",
-        "grad": "",
-        "crianza": "",
-        "nota": "Guinda de media profundidad. En nariz, guindas maceradas, frutos secos y matices florales rojos. En boca, tersa, jugosa, frutal y compacta, de rica textura.",
-        "premios": "92 pts La Cav",
-        "revista": ""
-      }
-    ],
-    "opina": "Cinsault del Valle del Itata por El Rescate: fruta roja liviana, floral y de trago fácil, con la frescura de las viñas viejas de secano. Un tinto ligero y jugoso, ideal para servir levemente fresco.",
-    "sugiere": "Champiñones rellenos, salmón a la plancha, atún sellado, tabla de charcutería y cerdo a las finas hierbas. Tinto ligero y fresco: salmón, hongos, aves y charcutería."
-  },
-  {
     "name": "Ladino el Encantador del Itata",
     "winery": "El Rescate",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093404/EL_20RESCATE_20LADINO_20.png?1785606924",
@@ -6020,29 +5695,6 @@
     "sugiere": "Elegancia y estructura para carnes a la brasa y quesos firmes: bife ancho a la parrilla, entrecot a la pimienta, costillar de vacuno a la BBQ, cordero al horno con romero y queso manchego curado."
   },
   {
-    "name": "Laurent Ensamblaje",
-    "winery": "Laurent",
-    "image": "",
-    "url": "https://uptowine.cl/laurent-ensamblaje",
-    "price": 0,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "2013",
-        "cepa": "Ensamblaje",
-        "valle": "Maule",
-        "grad": "14%",
-        "crianza": "18 meses en barrica",
-        "nota": "",
-        "premios": "",
-        "revista": ""
-      }
-    ],
-    "opina": "Ensamblaje tinto del Maule con 18 meses de barrica. Fruta madura y buena estructura, de perfil amable y cuerpo medio, pensado para acompañar la mesa sin complicaciones.",
-    "sugiere": "Fruta y cuerpo medio para comida de olla y quesos maduros: ají de gallina, lasaña boloñesa, empanadas de pino, chorrillana y queso gouda maduro."
-  },
-  {
     "name": "Laurent Generoso",
     "winery": "Laurent",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36167764/LAURENT_20GENEROSO_20SYRAH.png?1785629939",
@@ -6376,9 +6028,9 @@
   {
     "name": "Magnolia Extra Brut",
     "winery": "Flaherty",
-    "image": "",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36259675/Magnolia_20Brut.png?1787522282",
     "url": "https://uptowine.cl/magnolia-extra-brut",
-    "price": 0,
+    "price": 13990,
     "compare_at": null,
     "available": false,
     "anadas": [
@@ -6507,29 +6159,6 @@
     ],
     "opina": "Ensamblaje de Curicó, Oro en el Catad'Or: Cabernet por estructura y casis, Carménère por pimentón y especia, Merlot por redondez y ciruela. Cereza y mermelada de ciruela con vainilla; boca de fuerte estructura tánica, jugosa y de larga duración.",
     "sugiere": "Complejidad y estructura para carnes de cocción lenta y quesos: bife ancho a la parrilla, anticuchos, osobuco al vino tinto, costillar de vacuno a la BBQ y queso manchego curado."
-  },
-  {
-    "name": "Mariposa Alegre Corazón del Indio",
-    "winery": "Mariposa Alegre",
-    "image": "",
-    "url": "https://uptowine.cl/mariposa-alegre-corazon-del-indio",
-    "price": 0,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "2019",
-        "cepa": "35% Cabernet Sauvignon / 40% Carménère / 25% Syrah",
-        "valle": "Valle Central",
-        "grad": "14,5%",
-        "crianza": "12 a 15 meses en barrica de roble francés de 1 y 2 usos",
-        "nota": "Color rojo cereza con reflejos violeta. Nariz: predominan las frutas negras como la mora, cassis, arándanos y calafate. Boca: elegante y equilibrada, con acidez media alta y un final largo y persistente.",
-        "premios": "",
-        "revista": "https://online.fliphtml5.com/votjo/dorm/"
-      }
-    ],
-    "opina": "Ensamblaje de Cabernet, Carménère y Syrah del Valle Central: estructura, especia y fruta negra en un solo trago. Cereza y violeta, con mora, cassis, arándano y calafate; boca elegante y equilibrada, de acidez media alta y final largo.",
-    "sugiere": "Complejidad y fruta negra para carnes a la brasa y cordero: bife ancho a la parrilla, ragú de cordero con pappardelle, costillar de vacuno a la BBQ, cordero al horno con romero y osobuco al vino tinto."
   },
   {
     "name": "Marty Chaka",
@@ -6754,29 +6383,6 @@
     ],
     "opina": "Syrah de Aconcagua, valle de referencia para la cepa. Cereza y rubí, con arándano y ciruela madura sobre especias dulces y chocolate; boca compleja, de taninos redondeados y buen equilibrio.",
     "sugiere": "Fruta negra y especia para carnes a la brasa y cordero: anticuchos, costillar de vacuno a la BBQ, osobuco al vino tinto, lomo vetado a la parrilla y ragú de cordero con pappardelle."
-  },
-  {
-    "name": "Marty Newen",
-    "winery": "Marty",
-    "image": "",
-    "url": "https://uptowine.cl/marty-newen",
-    "price": 45000,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "2019",
-        "cepa": "Cabernet Sauvignon · Carménère · Syrah · Cabernet Franc",
-        "valle": "Valle del Rapel",
-        "grad": "",
-        "crianza": "",
-        "nota": "En boca, jugosa, tersa y frutal, de textura tánica con trama y persistente.",
-        "premios": "92 pts La Cav",
-        "revista": ""
-      }
-    ],
-    "opina": "Ensamblaje de cuatro cepas del Valle del Rapel: la estructura y el casis del Cabernet Sauvignon, el pimentón y las especias dulces del Carménère, la pimienta y la fruta negra de la Syrah, y el toque herbal y floral del Cabernet Franc. El conjunto da un tinto más complejo y equilibrado que la suma de sus cepas, con textura tánica de buena trama y final persistente.",
-    "sugiere": "Bife ancho a la parrilla, cordero al horno con romero, entrecot a la pimienta, anticuchos y queso manchego curado. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
   },
   {
     "name": "Marty Pacha",
@@ -10195,52 +9801,6 @@
     "sugiere": "Ceviche de reineta, ostras al limón, croquetas de jamón, empanaditas de queso y tempura de camarón. Espumante fresco: aperitivo, mariscos, frituras ligeras y tablas de fiesta. Servir a 6-8 grados."
   },
   {
-    "name": "Robba & Rossi Primitivo",
-    "winery": "Robba & Rossi",
-    "image": "",
-    "url": "https://uptowine.cl/robba-rossi-primitivo",
-    "price": 0,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "2016",
-        "cepa": "100% Primitivo",
-        "valle": "Isla de Maipo",
-        "grad": "14,6%",
-        "crianza": "15 meses en barrica de roble francés usadas",
-        "nota": "Visual: violeta con ribetes color guinda ácida, intensidad media. Nariz: frutos rojos maduros y especias, con notas minerales en el fondo, intensidad media-alta. Boca: ligeramente untuoso, fresco, de amargor medio, cuerpo medio-bajo y persistencia media.",
-        "premios": "",
-        "revista": "https://online.fliphtml5.com/votjo/UTW-REVISTA---AGOSTO-2018---IMP2/"
-      }
-    ],
-    "opina": "Primitivo de Isla de Maipo, cepa poco vista en Chile. Violeta con guinda ácida, frutos rojos maduros y especias sobre un fondo mineral; boca ligeramente untuosa, fresca, de cuerpo medio y amargor amable.",
-    "sugiere": "Fruta y frescura para pastas y comida chilena: pastel de choclo, pizza de carne, chorrillana, empanadas de pino y pimentones rellenos de carne."
-  },
-  {
-    "name": "Robba Cabernet Franc",
-    "winery": "Robba & Rossi",
-    "image": "",
-    "url": "https://uptowine.cl/robba-cabernet-franc",
-    "price": 0,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "2017",
-        "cepa": "Cabernet Franc",
-        "valle": "Isla de Maipo",
-        "grad": "",
-        "crianza": "",
-        "nota": "Color rubí. En nariz, fuerte intensidad aromática, donde predominan las notas de casis, frutos rojos, chocolate y especias. En boca, vino elegante, complejo, con una buena estructura, redondo y taninos suaves. Acidez elevada y un final largo.",
-        "premios": "",
-        "revista": ""
-      }
-    ],
-    "opina": "Cabernet Franc de Isla de Maipo, elegante y complejo. Rubí, con casis, frutos rojos, chocolate y especias; boca de buena estructura, redonda, de taninos suaves, acidez elevada y final largo, con el sello herbal de la cepa.",
-    "sugiere": "Casis y frescura herbal para carnes a la brasa y cordero: cordero al horno con romero, costillar de vacuno a la BBQ, lomo vetado a la parrilla, entrecot a la pimienta y anticuchos."
-  },
-  {
     "name": "Robba Primitivo (zinfandel)",
     "winery": "Robba & Rossi",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36167780/ROBBA_20_26_20ROSSY_20PRIMITIVO.png?1785708703",
@@ -10285,52 +9845,6 @@
     ],
     "opina": "Sangiovese de vocación italiana en Casablanca. Rubí con ribete violeta, guinda ácida y notas terrosas de té; seco, de alta acidez, amargor medio y ese tanino firme y austero típico de la cepa toscana.",
     "sugiere": "Acidez y tanino italiano para pastas y comida de olla: empanadas de pino, ají de gallina, chorrillana, pastel de choclo y queso gouda maduro."
-  },
-  {
-    "name": "Robba Sangiovese Rosado",
-    "winery": "Robba & Rossi",
-    "image": "",
-    "url": "https://uptowine.cl/robba-sangiovese-rosado",
-    "price": 0,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "2018",
-        "cepa": "Sangiovese",
-        "valle": "Isla de Maipo",
-        "grad": "",
-        "crianza": "",
-        "nota": "",
-        "premios": "",
-        "revista": "https://online.fliphtml5.com/votjo/07---UTW-REVISTA---ENERO-2019/"
-      }
-    ],
-    "opina": "Rosado de Sangiovese de Isla de Maipo. Fruta roja fresca —cereza y frutilla—, buena acidez y un perfil seco y versátil; el lado más ligero y estival de la cepa italiana.",
-    "sugiere": "Frescura y versatilidad para cocina liviana y de verano: salmón a la plancha, ensalada caprese, queso de cabra fresco, tortilla de verduras y sushi."
-  },
-  {
-    "name": "Robba Zaphir",
-    "winery": "Robba & Rossi",
-    "image": "",
-    "url": "https://uptowine.cl/robba-zaphir",
-    "price": 0,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "2016",
-        "cepa": "Ensamblaje",
-        "valle": "Isla de Maipo",
-        "grad": "",
-        "crianza": "10 meses en barrica de roble francés",
-        "nota": "Rojo profundo con tonos violetas. Aroma intenso que recuerda cerezas y frutillas, con notas de tabaco, cedro, violeta y suaves toques ahumados. Jugoso, con taninos maduros y dulces que dan buena estructura y volumen, de final largo.",
-        "premios": "",
-        "revista": "https://online.fliphtml5.com/votjo/UTW-REVISTA---AGOSTO-2018---IMP2/"
-      }
-    ],
-    "opina": "Zaphir, el ensamblaje de guarda de Robba & Rossi (Isla de Maipo). Rojo profundo con violeta, cerezas y frutillas sobre tabaco, cedro y ahumados suaves; jugoso, de taninos maduros y dulces, buena estructura y final largo.",
-    "sugiere": "Estructura y volumen para carnes de cocción lenta y quesos: costillar de vacuno a la BBQ, osobuco al vino tinto, cordero al horno con romero, entrecot a la pimienta y queso manchego curado."
   },
   {
     "name": "Schwaderer Ancestral Semillón",
