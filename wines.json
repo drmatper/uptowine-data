@@ -3164,10 +3164,33 @@
     "sugiere": "Tinto estructurado para carnes rojas a la brasa y cocciones lentas: entrecôte a la pimienta, costillar de vacuno a la BBQ, ragú de cordero con pappardelle, bife ancho y lomo vetado."
   },
   {
-    "name": "El Escorial Gran Reserva",
+    "name": "El Escorial Gran Reserva Cabernet Franc",
     "winery": "El Escorial",
     "image": "",
-    "url": "https://uptowine.cl/el-escorial-gran-reserva",
+    "url": "https://uptowine.cl/el-escorial-gran-reserva-cabernet-franc",
+    "price": 18000,
+    "compare_at": null,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2021",
+        "cepa": "Cabernet Franc",
+        "valle": "Aconcagua",
+        "grad": "",
+        "crianza": "6 meses en acero inoxidable",
+        "nota": "Rubí con ribetes cereza, brillante. En nariz, cereza, casis, mora y murtilla, con notas a regaliz y eucalipto. En boca, de acidez media, volumen y cuerpo medios, tanino sedoso y equilibrado.",
+        "premios": "92 pts La Cav",
+        "revista": ""
+      }
+    ],
+    "opina": "El Cabernet Franc de la Gran Reserva de El Escorial, en Panquehue: una cepa poco frecuente en Chile que en el Aconcagua muestra su lado fresco y herbal — cereza, casis y mora con ese toque a regaliz y eucalipto tan propio de la variedad. Criado en acero para dejar la fruta al frente, es de cuerpo medio, tanino sedoso y bien equilibrado. 92 puntos de La Cav.",
+    "sugiere": "Tinto de cuerpo medio y perfil herbal, ideal con tomate y carnes a la parrilla: pastas con salsas rojas, pizza, lomo a la parrilla, pimentones rellenos y quesos semimaduros."
+  },
+  {
+    "name": "El Escorial Gran Reserva Chenin Blanc",
+    "winery": "El Escorial",
+    "image": "",
+    "url": "https://uptowine.cl/el-escorial-gran-reserva-chenin-blanc",
     "price": 18000,
     "compare_at": null,
     "available": false,
@@ -3181,63 +3204,13 @@
         "nota": "Plata verdoso. En nariz, oleosa, con pera, un dejo a pomelo y pimienta blanca. En boca es jugoso y cítrico, de acidez media.",
         "premios": "92 pts La Cav",
         "revista": ""
-      },
-      {
-        "anada": "2023",
-        "cepa": "Cabernet Sauvignon · Carménère · Syrah · Petit Verdot",
-        "valle": "Aconcagua",
-        "grad": "",
-        "crianza": "6 meses en acero inoxidable",
-        "nota": "En boca, jugosa y frutal, con tensión y agarre del tanino.",
-        "premios": "92 pts La Cav",
-        "revista": ""
-      },
-      {
-        "anada": "2022",
-        "cepa": "Cabernet Sauvignon",
-        "valle": "Aconcagua",
-        "grad": "",
-        "crianza": "6 meses en acero inoxidable",
-        "nota": "Guinda pálido. En nariz, murtilla, grosella roja, frutilla, limón amarillo y damasco. En boca es maduro, de cuerpo medio y dulce.",
-        "premios": "91 pts La Cav",
-        "revista": ""
-      },
-      {
-        "anada": "2021",
-        "cepa": "Cabernet Franc",
-        "valle": "Aconcagua",
-        "grad": "",
-        "crianza": "6 meses en acero inoxidable",
-        "nota": "Rubí con ribetes cereza, brillante. En nariz, cereza, casis, mora y murtilla, con notas a regaliz y eucalipto. En boca, de acidez media, volumen y cuerpo medios, tanino sedoso y equilibrado.",
-        "premios": "92 pts La Cav",
-        "revista": ""
-      },
-      {
-        "anada": "2020",
-        "cepa": "100% Zinfandel (primitivo)",
-        "valle": "Aconcagua",
-        "grad": "12,7%",
-        "crianza": "6 meses en barrica de roble francés de tercer uso",
-        "nota": "Color cereza brillante. En nariz, aromas frescos y frutales, con frutos rojos y salvajes como murtilla, guinda, grosellas y moras. En boca es ligero y suave, con una acidez equilibrada y fresca.",
-        "premios": "",
-        "revista": ""
-      },
-      {
-        "anada": "2018",
-        "cepa": "100% Carménère",
-        "valle": "Aconcagua",
-        "grad": "13,8%",
-        "crianza": "14 meses en barricas usadas de roble francés y 6 meses en cava tras el embotellado",
-        "nota": "Rojo rubí. En nariz, intenso, con frutos negros como ciruela y mora, toques de chocolate amargo y café. En boca es un vino elegante y equilibrado, con taninos sedosos y maduros y un agradable final.",
-        "premios": "",
-        "revista": ""
       }
     ],
-    "opina": "Gran Reserva es la línea más versátil de El Escorial — la segunda viña más antigua del Aconcagua, en Panquehue — y cambia por completo según el año: Chenin Blanc el 2024, un ensamblaje de cuatro cepas el 2023, Cabernet Sauvignon el 2022, Cabernet Franc el 2021, Zinfandel el 2020 y Carménère el 2018. Es también donde más se nota la firma férrica del terroir de Panquehue. La crianza fue evolucionando: las cosechas antiguas pasaban 14 meses por barrica usada, mientras las más nuevas van a acero inoxidable para privilegiar la fruta y la frescura. Un dato de pedigrí: el Cabernet Sauvignon 2017 de esta casa obtuvo 92 puntos de La Cav. Conviene mirar la etiqueta antes de servir.",
-    "sugiere": "Depende de la cosecha: el Chenin Blanc va con mariscos, cebiches y ensaladas; el Zinfandel es fresco y de terraza, ideal de aperitivo; los tintos con barrica (Carménère, Cabernet) funcionan con comida de olla, carnes a la parrilla, pastas y quesos semimaduros."
+    "opina": "El blanco de la Gran Reserva de El Escorial, en Panquehue: Chenin Blanc, una cepa poco común en Chile, criada en acero sin una gota de madera para dejar la fruta y la acidez al frente. Nariz oleosa de pera y pomelo con un dejo a pimienta blanca, boca jugosa y cítrica. Un blanco distinto, de los que la viña usa para experimentar dentro de su línea más versátil. 92 puntos de La Cav.",
+    "sugiere": "Blanco fresco y cítrico: mariscos, cebiches, ostras al limón, ensaladas y pescados a la plancha. Servir bien frío, entre 8 y 10°C."
   },
   {
-    "name": "El Escorial Premium",
+    "name": "El Escorial Premium Petit Verdot",
     "winery": "El Escorial",
     "image": "",
     "url": "https://uptowine.cl/el-escorial-premium",
@@ -3258,59 +3231,6 @@
     ],
     "opina": "Petit Verdot como protagonista, algo poco habitual: en Burdeos se usa en dosis pequeñas dentro de un ensamblaje, justamente porque aporta color y potencia en exceso. Embotellarlo solo es una declaración de principios, y en el Aconcagua funciona — sale profundo de color, con berries rojos y negros sobre un fondo especiado, e intenso en boca sin perder la fruta. Catorce meses de barrica y Oro en el Catad'Or.",
     "sugiere": "Tinto estructurado y potente, para carnes rojas a la brasa: entrecôte a la pimienta, costillar de vacuno a la BBQ, bife ancho a la parrilla, cordero al horno con romero y lomo vetado."
-  },
-  {
-    "name": "El Escorial Signature Wines",
-    "winery": "El Escorial",
-    "image": "",
-    "url": "https://uptowine.cl/el-escorial-signature-wines",
-    "price": 18000,
-    "compare_at": null,
-    "available": false,
-    "anadas": [
-      {
-        "anada": "2023",
-        "cepa": "Sangiovese",
-        "valle": "Aconcagua",
-        "grad": "14%",
-        "crianza": "14 meses en barrica",
-        "nota": "Rubí. En nariz, especiada, con ciruela, hojas de laurel, pimienta negra y chocolate amargo. En boca es maduro, cálido y de cuerpo medio.",
-        "premios": "Oro Catad'Or · 92 pts La Cav",
-        "revista": ""
-      },
-      {
-        "anada": "2021",
-        "cepa": "Sangiovese",
-        "valle": "Aconcagua",
-        "grad": "14%",
-        "crianza": "14 meses en barrica",
-        "nota": "Cereza con ribetes rubíes. En nariz, notas florales, rosas rojas, regaliz, guindas y casis. En boca, de acidez media, tanino sedoso, fresco y frutal.",
-        "premios": "93 pts La Cav",
-        "revista": ""
-      },
-      {
-        "anada": "2019",
-        "cepa": "100% Sangiovese",
-        "valle": "Aconcagua",
-        "grad": "13,5%",
-        "crianza": "14 meses en barricas usadas de roble francés",
-        "nota": "Rojo cereza. En nariz, aromas definidos y elegantes, con frutos azules, malvas y flores púrpuras, hierbas y leve piel de naranja, sobre un fondo de compota de frutas silvestres y paladar de tiza con taninos granulares. En boca, acidez muy bien equilibrada con el dulzor y taninos delicados; cuerpo medio y largo final.",
-        "premios": "",
-        "revista": ""
-      },
-      {
-        "anada": "2018",
-        "cepa": "100% Sangiovese",
-        "valle": "Aconcagua",
-        "grad": "13,5%",
-        "crianza": "14 meses en barrica",
-        "nota": "",
-        "premios": "Oro Catad'Or",
-        "revista": ""
-      }
-    ],
-    "opina": "Sangiovese en Chile es una rareza — es la cepa del Chianti y casi nadie la planta acá — y El Escorial la trabaja en Aconcagua con catorce meses de barrica. Mantiene lo que uno busca en ella: acidez alta, cereza ácida, hierbas secas y un tanino de textura firme, más italiano que chileno. Es un clásico de la casa: ganó Oro en el Catad'Or tanto en la 2018 como en la 2023. La 2021 es la más floral y sedosa; la 2023 va por lo especiado, con laurel y chocolate amargo; la 2019 muestra el lado más perfumado, con flores púrpuras y piel de naranja. Es un tinto que pide comida, no copa sola.",
-    "sugiere": "Tinto de cuerpo medio y acidez viva, perfecto para tomate y comida de olla: pizza de carne, pastas con salsas rojas y pomodoro, pastel de choclo, empanadas de pino y ají de gallina."
   },
   {
     "name": "El Escorial Sypor-t Blanc Moscatel",
@@ -3336,7 +3256,7 @@
     "sugiere": "Fortificado dulce, para servir frío en copa pequeña: quesos azules, foie gras, tartas de fruta y frutos secos, o simplemente solo como bajativo."
   },
   {
-    "name": "El Escorial Sypor-t Ruby",
+    "name": "El Escorial Sypor-t Ruby Syrah",
     "winery": "El Escorial",
     "image": "",
     "url": "https://uptowine.cl/el-escorial-sypor-t-ruby",

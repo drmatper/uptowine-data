@@ -10,6 +10,60 @@
       "price": 6000,
       "compare_at": 11900,
       "available": true
+    },
+    {
+      "name": "El Escorial Gran Reserva Blend",
+      "winery": "El Escorial",
+      "image": "",
+      "url": "https://uptowine.cl/el-escorial-gran-reserva",
+      "price": 18000,
+      "compare_at": null,
+      "available": false
+    },
+    {
+      "name": "El Escorial Gran Reserva Cabernet Sauvignon",
+      "winery": "El Escorial",
+      "image": "",
+      "url": "https://uptowine.cl/el-escorial-gran-reserva-cabernet-sauvignon",
+      "price": 18000,
+      "compare_at": null,
+      "available": false
+    },
+    {
+      "name": "El Escorial Gran Reserva Carménère",
+      "winery": "El Escorial",
+      "image": "",
+      "url": "https://uptowine.cl/el-escorial-gran-reserva-carmenere",
+      "price": 18000,
+      "compare_at": null,
+      "available": false
+    },
+    {
+      "name": "El Escorial Gran Reserva Syrah",
+      "winery": "El Escorial",
+      "image": "",
+      "url": "https://uptowine.cl/el-escorial-gran-reserva-syrah",
+      "price": 18000,
+      "compare_at": null,
+      "available": false
+    },
+    {
+      "name": "El Escorial Gran Reserva Zinfandel",
+      "winery": "El Escorial",
+      "image": "",
+      "url": "https://uptowine.cl/el-escorial-gran-reserva-zinfandel",
+      "price": 18000,
+      "compare_at": null,
+      "available": false
+    },
+    {
+      "name": "El Escorial Signature Wines Sangiovese",
+      "winery": "El Escorial",
+      "image": "",
+      "url": "https://uptowine.cl/el-escorial-signature-wines",
+      "price": 18000,
+      "compare_at": null,
+      "available": false
     }
   ]
 }
