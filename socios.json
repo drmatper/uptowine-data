@@ -12,6 +12,15 @@
       "available": true
     },
     {
+      "name": "3 Monos Carignan",
+      "winery": "3 Monos",
+      "image": "",
+      "url": "https://uptowine.cl/3-monos-carignan",
+      "price": 12000,
+      "compare_at": null,
+      "available": false
+    },
+    {
       "name": "El Escorial Gran Reserva Blend",
       "winery": "El Escorial",
       "image": "",
@@ -62,6 +71,51 @@
       "image": "",
       "url": "https://uptowine.cl/el-escorial-signature-wines",
       "price": 18000,
+      "compare_at": null,
+      "available": false
+    },
+    {
+      "name": "Javiera Ortúzar Syrah",
+      "winery": "Javiera Ortúzar",
+      "image": "",
+      "url": "https://uptowine.cl/javiera-ortuzar-syrah",
+      "price": 16000,
+      "compare_at": null,
+      "available": false
+    },
+    {
+      "name": "Los Dos Enólogos Gran Vin Carignan",
+      "winery": "Los Dos Enólogos",
+      "image": "",
+      "url": "https://uptowine.cl/los-dos-enologos-gran-vin-carignan",
+      "price": 21990,
+      "compare_at": null,
+      "available": false
+    },
+    {
+      "name": "Schwaderer Kimbao Malbec Gran Reserva",
+      "winery": "Schwaderer",
+      "image": "",
+      "url": "https://uptowine.cl/schwaderer-kimbao-malbec-gran-reserva",
+      "price": 9990,
+      "compare_at": null,
+      "available": false
+    },
+    {
+      "name": "Schwaderer Syrah-Viognier",
+      "winery": "Schwaderer",
+      "image": "",
+      "url": "https://uptowine.cl/schwaderer-syrah-viognier",
+      "price": 9990,
+      "compare_at": null,
+      "available": false
+    },
+    {
+      "name": "Tatita País",
+      "winery": "Tatita",
+      "image": "",
+      "url": "https://uptowine.cl/tatita-pais",
+      "price": 8990,
       "compare_at": null,
       "available": false
     }
