@@ -3,6 +3,24 @@
   "mensaje": "Bienvenido al Club Up to Wine",
   "products": [
     {
+      "name": "3 Monos Carignan",
+      "winery": "3 Monos",
+      "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920381/3_20monos_20carignan.png?1788123083",
+      "url": "https://uptowine.cl/3-monos-carignan",
+      "price": 16000,
+      "compare_at": null,
+      "available": true
+    },
+    {
+      "name": "Javiera Ortúzar Ímpetu Syrah",
+      "winery": "Javiera Ortúzar",
+      "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920388/JO_20Impetu.syrah.png?1788122801",
+      "url": "https://uptowine.cl/javiera-ortuzar-syrah",
+      "price": 16000,
+      "compare_at": null,
+      "available": true
+    },
+    {
       "name": "Muelle Oculto Centinela",
       "winery": "Muelle Oculto",
       "image": "https://images.jumpseller.com/store/up-to-wine-chile/36406474/Muelle_20Oculto_20Centinela.png?1785112120",
@@ -12,13 +30,31 @@
       "available": true
     },
     {
-      "name": "3 Monos Carignan",
-      "winery": "3 Monos",
-      "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920381/3_20monos_20carignan.png?1788123083",
-      "url": "https://uptowine.cl/3-monos-carignan",
-      "price": 12000,
+      "name": "Schwaderer Kimbao Malbec Gran Reserva",
+      "winery": "Schwaderer",
+      "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920370/kimbao_20malbec.png?1788122929",
+      "url": "https://uptowine.cl/schwaderer-kimbao-malbec-gran-reserva",
+      "price": 9990,
       "compare_at": null,
-      "available": false
+      "available": true
+    },
+    {
+      "name": "Schwaderer Syrah-Viognier",
+      "winery": "Schwaderer",
+      "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920376/swaderer_20Syrah_20viognier.png?1788122907",
+      "url": "https://uptowine.cl/schwaderer-syrah-viognier",
+      "price": 9990,
+      "compare_at": null,
+      "available": true
+    },
+    {
+      "name": "Tatita País",
+      "winery": "Tatita",
+      "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920366/tatita_20pais.png?1788123015",
+      "url": "https://uptowine.cl/tatita-pais",
+      "price": 9990,
+      "compare_at": null,
+      "available": true
     },
     {
       "name": "El Escorial Gran Reserva Blend",
@@ -75,47 +111,11 @@
       "available": false
     },
     {
-      "name": "Javiera Ortúzar Ímpetu Syrah",
-      "winery": "Javiera Ortúzar",
-      "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920388/JO_20Impetu.syrah.png?1788122801",
-      "url": "https://uptowine.cl/javiera-ortuzar-syrah",
-      "price": 16000,
-      "compare_at": null,
-      "available": false
-    },
-    {
       "name": "Los Dos Enólogos Gran Vin Carignan",
       "winery": "Los Dos Enólogos",
       "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920386/lex_20deux_20enologuues.png?1788123201",
       "url": "https://uptowine.cl/los-dos-enologos-gran-vin-carignan",
-      "price": 21990,
-      "compare_at": null,
-      "available": false
-    },
-    {
-      "name": "Schwaderer Kimbao Malbec Gran Reserva",
-      "winery": "Schwaderer",
-      "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920370/kimbao_20malbec.png?1788122929",
-      "url": "https://uptowine.cl/schwaderer-kimbao-malbec-gran-reserva",
-      "price": 9990,
-      "compare_at": null,
-      "available": false
-    },
-    {
-      "name": "Schwaderer Syrah-Viognier",
-      "winery": "Schwaderer",
-      "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920376/swaderer_20Syrah_20viognier.png?1788122907",
-      "url": "https://uptowine.cl/schwaderer-syrah-viognier",
-      "price": 9990,
-      "compare_at": null,
-      "available": false
-    },
-    {
-      "name": "Tatita País",
-      "winery": "Tatita",
-      "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920366/tatita_20pais.png?1788123015",
-      "url": "https://uptowine.cl/tatita-pais",
-      "price": 8990,
+      "price": 23990,
       "compare_at": null,
       "available": false
     }
