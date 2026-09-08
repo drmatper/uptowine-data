@@ -1,5 +1,29 @@
 [
   {
+    "name": "3 Monos Carignan",
+    "winery": "3 Monos",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920381/3_20monos_20carignan.png?1788123083",
+    "url": "https://uptowine.cl/3-monos-carignan",
+    "price": 16000,
+    "compare_at": null,
+    "available": true,
+    "anadas": [
+      {
+        "anada": "2018",
+        "cepa": "Carignan · Garnacha",
+        "valle": "Maule",
+        "grad": "14,5%",
+        "crianza": "16 meses en barricas francesas de distintos usos, con un 15% de barrica nueva",
+        "nota": "Rojo rubí profundo, con matices violáceos y buena intensidad. En nariz, intenso y fresco, con notas de berries rojos, flores violetas y sutiles tonos especiados y cremosos aportados por la crianza. En boca, fresco, equilibrado y de buena acidez, con fruta roja marcada, taninos suaves y un final persistente con delicados recuerdos de madera y crema.",
+        "premios": "",
+        "revista": ""
+      }
+    ],
+    "opina": "Ensamblaje de Carignan y Garnacha del secano del Maule, dos cepas mediterráneas que se llevan de maravilla: el Carignan pone la acidez y el carácter terroso, la Garnacha la fruta roja jugosa y las flores. Dieciséis meses de barrica francesa (con un 15% nueva) le suman ese fondo especiado y cremoso sin tapar la fruta. Fresco, equilibrado y de final persistente.",
+    "sugiere": "Tinto estructurado y de buena acidez para carnes y cocción lenta: carnes rojas, cordero, charcutería, quesos maduros y preparaciones de cocción lenta.",
+    "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/80672220"
+  },
+  {
     "name": "Alas de Parra Blend País Cinsault",
     "winery": "Alas de Parra",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36167734/ALAS_20DE_20PARRA_20BLEND_20PAIS_20CINSAULT.png?1785627144",
@@ -3164,6 +3188,39 @@
     "sugiere": "Tinto estructurado para carnes rojas a la brasa y cocciones lentas: entrecôte a la pimienta, costillar de vacuno a la BBQ, ragú de cordero con pappardelle, bife ancho y lomo vetado."
   },
   {
+    "name": "El Escorial Gran Reserva Blend",
+    "winery": "El Escorial",
+    "image": "",
+    "url": "https://uptowine.cl/el-escorial-gran-reserva",
+    "price": 18000,
+    "compare_at": null,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2023",
+        "cepa": "Cabernet Sauvignon · Carménère · Syrah · Petit Verdot",
+        "valle": "Aconcagua",
+        "grad": "",
+        "crianza": "6 meses en acero inoxidable",
+        "nota": "En boca, jugosa y frutal, con tensión y agarre del tanino.",
+        "premios": "92 pts La Cav",
+        "revista": ""
+      },
+      {
+        "anada": "2017",
+        "cepa": "65% Syrah · 35% Malbec",
+        "valle": "Aconcagua",
+        "grad": "13,5%",
+        "crianza": "14 meses en barricas usadas de roble francés",
+        "nota": "Rojo cereza. En nariz, aromas dulces de fruta madura, hojas secas y pétalos de rosa roja, con té y especias de fondo sobre rocas negras. En boca es maduro y de taninos sedosos; cuerpo medio y final de chocolate amargo.",
+        "premios": "",
+        "revista": ""
+      }
+    ],
+    "opina": "Blend es la etiqueta de ensamblaje de la Gran Reserva de El Escorial y cambia de receta según el año: en la 2023 son cuatro cepas — Cabernet Sauvignon, Carménère, Syrah y Petit Verdot — criadas en acero para dejar la fruta al frente; la 2017 fue un clásico Syrah-Malbec (65/35) con catorce meses de barrica usada, más maduro y de final a chocolate amargo. La casa — segunda viña más antigua del Aconcagua, en Panquehue — le imprime la firma férrica de su terroir.",
+    "sugiere": "Tinto de cuerpo medio para la mesa: pastas al pesto o con salsas rojas, carnes de vacuno a la parrilla o guisadas con finas hierbas, pastel de choclo y quesos semimaduros."
+  },
+  {
     "name": "El Escorial Gran Reserva Cabernet Franc",
     "winery": "El Escorial",
     "image": "",
@@ -3185,6 +3242,62 @@
     ],
     "opina": "El Cabernet Franc de la Gran Reserva de El Escorial, en Panquehue: una cepa poco frecuente en Chile que en el Aconcagua muestra su lado fresco y herbal — cereza, casis y mora con ese toque a regaliz y eucalipto tan propio de la variedad. Criado en acero para dejar la fruta al frente, es de cuerpo medio, tanino sedoso y bien equilibrado. 92 puntos de La Cav.",
     "sugiere": "Tinto de cuerpo medio y perfil herbal, ideal con tomate y carnes a la parrilla: pastas con salsas rojas, pizza, lomo a la parrilla, pimentones rellenos y quesos semimaduros."
+  },
+  {
+    "name": "El Escorial Gran Reserva Cabernet Sauvignon",
+    "winery": "El Escorial",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36841204/el_20escorial_20gr_20cs.png?1788122717",
+    "url": "https://uptowine.cl/el-escorial-gran-reserva-cabernet-sauvignon",
+    "price": 18000,
+    "compare_at": null,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2022",
+        "cepa": "100% Cabernet Sauvignon",
+        "valle": "Aconcagua",
+        "grad": "",
+        "crianza": "6 meses en acero inoxidable",
+        "nota": "Guinda pálido. En nariz, murtilla, grosella roja, frutilla, limón amarillo y damasco. En boca es maduro, de cuerpo medio y dulce.",
+        "premios": "91 pts La Cav",
+        "revista": ""
+      },
+      {
+        "anada": "2017",
+        "cepa": "100% Cabernet Sauvignon",
+        "valle": "Aconcagua",
+        "grad": "13,7%",
+        "crianza": "14 meses en barrica de roble francés de tercer uso y 6 meses de guarda en botella",
+        "nota": "Color rojo rubí. En nariz, aromas de ciruela e higos, junto a flores secas, con un fondo de mora y frutos del bosque y toques de chocolate amargo y café. Es un vino intenso, largo, con taninos suaves, elegantes y persistentes.",
+        "premios": "92 pts La Cav 2020",
+        "revista": ""
+      }
+    ],
+    "opina": "El Cabernet Sauvignon de la Gran Reserva de El Escorial, la segunda viña más antigua del Aconcagua, en Panquehue. Es un Cabernet de perfil cálido pero con la firma férrica del terroir: ciruela, higos y frutos del bosque con un fondo de chocolate amargo y café, sobre taninos suaves y elegantes. La 2017 pasó catorce meses por barrica de tercer uso y sumó 92 puntos de La Cav; la 2022 va más frutal y directa, criada en acero.",
+    "sugiere": "Tinto estructurado para carnes rojas a la parrilla: costillar de cerdo, lomo vetado, bife ancho, entrecôte a la pimienta y quesos maduros. Servir entre 16 y 18°C."
+  },
+  {
+    "name": "El Escorial Gran Reserva Carménère",
+    "winery": "El Escorial",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36841212/el_20escorial_20gr_20carmenere.png?1788122667",
+    "url": "https://uptowine.cl/el-escorial-gran-reserva-carmenere",
+    "price": 18000,
+    "compare_at": null,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2018",
+        "cepa": "100% Carménère",
+        "valle": "Aconcagua",
+        "grad": "13,8%",
+        "crianza": "14 meses en barricas usadas de roble francés y 6 meses en cava tras el embotellado",
+        "nota": "Color rojo rubí. En nariz es intenso, con aroma a frutos negros como ciruela y mora, y toques de chocolate amargo y café. En boca es un vino elegante y equilibrado, con taninos sedosos, maduros y un agradable final.",
+        "premios": "",
+        "revista": ""
+      }
+    ],
+    "opina": "El Carménère de la Gran Reserva de El Escorial, en Panquehue: la cepa emblema de Chile leída desde el Aconcagua, con su perfil de frutos negros — ciruela y mora — sobre un fondo de chocolate amargo y café. Catorce meses en barrica usada más seis meses de cava tras el embotellado le dan taninos sedosos y maduros y un final elegante. La madera es de 3 a 5 años de uso, la justa para acompañar sin tapar la fruta.",
+    "sugiere": "Tinto de cuerpo medio, ideal para carnes grasas o condimentadas: costillar de cerdo a la BBQ, plateada al horno, pastel de choclo, carnes de vacuno a la parrilla y quesos maduros."
   },
   {
     "name": "El Escorial Gran Reserva Chenin Blanc",
@@ -3210,6 +3323,52 @@
     "sugiere": "Blanco fresco y cítrico: mariscos, cebiches, ostras al limón, ensaladas y pescados a la plancha. Servir bien frío, entre 8 y 10°C."
   },
   {
+    "name": "El Escorial Gran Reserva Syrah",
+    "winery": "El Escorial",
+    "image": "",
+    "url": "https://uptowine.cl/el-escorial-gran-reserva-syrah",
+    "price": 18000,
+    "compare_at": null,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2019",
+        "cepa": "100% Syrah",
+        "valle": "Aconcagua",
+        "grad": "13,5%",
+        "crianza": "14 meses en barrica de roble francés de tercer uso y 6 meses de guarda en botella",
+        "nota": "Color rojo carmesí, intenso y profundo con destellos púrpura. En nariz, aromas intensos de fruta roja confitada, flores secas y especias como té y pimienta negra, con charcutería de fondo y mineral férrico. En boca es amplio, de cuerpo alto y estilizado, con una columna tánica que alarga y suaviza el vino de inicio a fin. Persistente y equilibrado.",
+        "premios": "Medalla de Oro Cata D'Or 2021",
+        "revista": ""
+      }
+    ],
+    "opina": "El Syrah de la Gran Reserva de El Escorial, en Panquehue, muestra la cepa como la da el Aconcagua: fruta roja confitada, flores secas, té y pimienta negra, con ese fondo de charcutería y mineral férrico que es la firma de la casa. En boca es amplio y estilizado, con una columna tánica que lo alarga y equilibra. Catorce meses de barrica de tercer uso y Medalla de Oro en el Cata D'Or 2021.",
+    "sugiere": "Carnes exóticas y comidas sazonadas — india, mexicana o peruana —, carnes grasas condimentadas y quesos maduros. Conviene abrirlo 30 minutos antes o usar decantador; servir entre 16 y 18°C."
+  },
+  {
+    "name": "El Escorial Gran Reserva Zinfandel",
+    "winery": "El Escorial",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36841214/el_20escorial_20gr_20zinfandel.png?1788122637",
+    "url": "https://uptowine.cl/el-escorial-gran-reserva-zinfandel",
+    "price": 18000,
+    "compare_at": null,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2020",
+        "cepa": "100% Zinfandel (primitivo)",
+        "valle": "Aconcagua",
+        "grad": "12,7%",
+        "crianza": "6 meses en barrica de roble francés de tercer uso",
+        "nota": "Color cereza brillante. Aromas frescos y frutales, en donde predominan los frutos rojos y salvajes como murtilla, guinda, grosellas y moras. En boca es un vino ligero y suave, con una acidez equilibrada y fresca.",
+        "premios": "",
+        "revista": ""
+      }
+    ],
+    "opina": "El Zinfandel — también conocido como primitivo — es una de las rarezas de El Escorial, en Panquehue: una cepa italiana poco vista en Chile que la viña embotella como tinto fresco de terraza. Cereza brillante, frutos rojos y salvajes (murtilla, guinda, grosella y mora), boca ligera y suave con acidez viva. Seis meses de barrica de tercer uso y a la botella dentro del año, sin mayor guarda, para que sea ágil y fácil de tomar.",
+    "sugiere": "Fresco y de aperitivo: appetizers, ensaladas, quesos de pelo blanco (incluso ahumados) y pastas a la mantequilla. Servir algo frío, entre 14 y 16°C."
+  },
+  {
     "name": "El Escorial Premium Petit Verdot",
     "winery": "El Escorial",
     "image": "",
@@ -3231,6 +3390,59 @@
     ],
     "opina": "Petit Verdot como protagonista, algo poco habitual: en Burdeos se usa en dosis pequeñas dentro de un ensamblaje, justamente porque aporta color y potencia en exceso. Embotellarlo solo es una declaración de principios, y en el Aconcagua funciona — sale profundo de color, con berries rojos y negros sobre un fondo especiado, e intenso en boca sin perder la fruta. Catorce meses de barrica y Oro en el Catad'Or.",
     "sugiere": "Tinto estructurado y potente, para carnes rojas a la brasa: entrecôte a la pimienta, costillar de vacuno a la BBQ, bife ancho a la parrilla, cordero al horno con romero y lomo vetado."
+  },
+  {
+    "name": "El Escorial Signature Wines Sangiovese",
+    "winery": "El Escorial",
+    "image": "",
+    "url": "https://uptowine.cl/el-escorial-signature-wines",
+    "price": 18000,
+    "compare_at": null,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2023",
+        "cepa": "Sangiovese",
+        "valle": "Aconcagua",
+        "grad": "14%",
+        "crianza": "14 meses en barrica",
+        "nota": "Rubí. En nariz, especiada, con ciruela, hojas de laurel, pimienta negra y chocolate amargo. En boca es maduro, cálido y de cuerpo medio.",
+        "premios": "Oro Catad'Or · 92 pts La Cav",
+        "revista": ""
+      },
+      {
+        "anada": "2021",
+        "cepa": "Sangiovese",
+        "valle": "Aconcagua",
+        "grad": "14%",
+        "crianza": "14 meses en barrica",
+        "nota": "Cereza con ribetes rubíes. En nariz, notas florales, rosas rojas, regaliz, guindas y casis. En boca, de acidez media, tanino sedoso, fresco y frutal.",
+        "premios": "93 pts La Cav",
+        "revista": ""
+      },
+      {
+        "anada": "2019",
+        "cepa": "100% Sangiovese",
+        "valle": "Aconcagua",
+        "grad": "13,5%",
+        "crianza": "14 meses en barricas usadas de roble francés",
+        "nota": "Rojo cereza. En nariz, aromas definidos y elegantes, con frutos azules, malvas y flores púrpuras, hierbas y leve piel de naranja, sobre un fondo de compota de frutas silvestres y paladar de tiza con taninos granulares. En boca, acidez muy bien equilibrada con el dulzor y taninos delicados; cuerpo medio y largo final.",
+        "premios": "",
+        "revista": ""
+      },
+      {
+        "anada": "2018",
+        "cepa": "100% Sangiovese",
+        "valle": "Aconcagua",
+        "grad": "13,5%",
+        "crianza": "14 meses en barrica",
+        "nota": "",
+        "premios": "Oro Catad'Or",
+        "revista": ""
+      }
+    ],
+    "opina": "Sangiovese en Chile es una rareza — es la cepa del Chianti y casi nadie la planta acá — y El Escorial la trabaja en Aconcagua con catorce meses de barrica. Mantiene lo que uno busca en ella: acidez alta, cereza ácida, hierbas secas y un tanino de textura firme, más italiano que chileno. Es un clásico de la casa: ganó Oro en el Catad'Or tanto en la 2018 como en la 2023. La 2021 es la más floral y sedosa; la 2023 va por lo especiado, con laurel y chocolate amargo; la 2019 muestra el lado más perfumado, con flores púrpuras y piel de naranja. Es un tinto que pide comida, no copa sola.",
+    "sugiere": "Tinto de cuerpo medio y acidez viva, perfecto para tomate y comida de olla: pizza de carne, pastas con salsas rojas y pomodoro, pastel de choclo, empanadas de pino y ají de gallina."
   },
   {
     "name": "El Escorial Sypor-t Blanc Moscatel",
@@ -4438,6 +4650,30 @@
     ],
     "opina": "Ímpetu es la línea de Syrah de Javiera Ortúzar, que en algunas cosechas suma Petit Verdot para dar más color y estructura. Pimienta negra, fruta negra y un fondo especiado con la madera bien integrada. Consistente en puntajes altos: 93 de La Cav en la 2022 y 93 de Descorchados en el ensamblaje 2018.",
     "sugiere": "Ragú de cordero con pappardelle, bife ancho a la parrilla, lomo vetado a la parrilla, costillar de vacuno a la BBQ y entrecot a la pimienta. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
+  },
+  {
+    "name": "Javiera Ortúzar Ímpetu Syrah",
+    "winery": "Javiera Ortúzar",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920388/JO_20Impetu.syrah.png?1788122801",
+    "url": "https://uptowine.cl/javiera-ortuzar-syrah",
+    "price": 16000,
+    "compare_at": null,
+    "available": true,
+    "anadas": [
+      {
+        "anada": "2023",
+        "cepa": "100% Syrah",
+        "valle": "Valle de Colchagua",
+        "grad": "13,8%",
+        "crianza": "Maceración carbónica y 2 años en barricas de segundo uso",
+        "nota": "Rojo intenso. En nariz, aromas a cerezas y frutas frescas. En boca aparecen notas de cerezas negras, combinadas con una acidez fresca y taninos vibrantes que evolucionan a medida que el vino se airea.",
+        "premios": "",
+        "revista": ""
+      }
+    ],
+    "opina": "Syrah de Colchagua de Javiera Ortúzar, la mujer viticultora, en un registro distinto: maceración carbónica — la técnica del Beaujolais que fermenta la uva entera — para sacar una fruta viva y jugosa, y luego dos años en barrica usada que dan estructura sin madera invasiva. Cerezas frescas y negras, acidez vibrante y un tanino que se abre con el aire. Conviene airearlo antes de servir.",
+    "sugiere": "Vino de amplio maridaje, ideal para tártaro de res, quesos grasos y paella de conejo. También con carnes a la parrilla y charcutería.",
+    "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/80672040"
   },
   {
     "name": "Javiera Ortúzar Wines Pinot Grigio",
@@ -5946,6 +6182,29 @@
     "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78928560"
   },
   {
+    "name": "Los Dos Enólogos Gran Vin Carignan",
+    "winery": "Los Dos Enólogos",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920386/lex_20deux_20enologuues.png?1788123201",
+    "url": "https://uptowine.cl/los-dos-enologos-gran-vin-carignan",
+    "price": 23990,
+    "compare_at": null,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2021",
+        "cepa": "100% Carignan",
+        "valle": "Itata",
+        "grad": "14%",
+        "crianza": "14 meses en barricas de roble de segundo o más usos",
+        "nota": "Rojo cereza con ribetes púrpuras. En nariz, notas de frutos negros, como moras y arándanos, con un fondo de ciruela, frambuesa, guinda y sutiles ahumados. En boca presenta una acidez media-alta, con taninos sedosos y equilibrados. Final largo y voluptuoso.",
+        "premios": "91 pts La Cav",
+        "revista": ""
+      }
+    ],
+    "opina": "El Gran Vin de Los Dos Enólogos — Les Deux Oenologues — es un Carignan de viñas viejas del secano del Itata, la zona por excelencia para esta cepa en Chile. Frutos negros y rojos (mora, arándano, ciruela, guinda) con un dejo de alquitrán y ahumados, y una boca de acidez media-alta, tanino sedoso y final largo y voluptuoso. 91 puntos de La Cav.",
+    "sugiere": "Ideal para carnes rojas con buena proporción de grasa: lomo vetado a la parrilla, asado de tira, plateada al horno y cordero."
+  },
+  {
     "name": "Magnolia Extra Brut",
     "winery": "Flaherty",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36259675/Magnolia_20Brut.png?1787522282",
@@ -7032,6 +7291,30 @@
     "opina": "Blend de Muelle Oculto, la bodega de autor de la playa de Matanzas: Carménère fresco con Syrah y Malbec que aportan estructura y fruta negra, con paso por barrica. Equilibrado y de perfil bien chileno, pensado para la mesa y el picoteo.",
     "sugiere": "Carménère fresco y especiado para comida chilena de olla y sabores caseros: empanadas de pino fritas, plateada al horno con puré rústico, chorrillana, lomo saltado y queso mantecoso.",
     "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78663061"
+  },
+  {
+    "name": "Muelle Oculto Centinela",
+    "winery": "Muelle Oculto",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36406474/Muelle_20Oculto_20Centinela.png?1785112120",
+    "url": "https://uptowine.cl/muelle-oculto-centinela-copiar",
+    "price": 6000,
+    "compare_at": 11900,
+    "available": true,
+    "anadas": [
+      {
+        "anada": "",
+        "cepa": "70% Carménère, 15% Syrah y 15% Malbec",
+        "valle": "Colchagua",
+        "grad": "14,5%",
+        "crianza": "14 meses en barrica de roble francés de tercer uso",
+        "nota": "El Carménère entrega notas frescas y vibrantes, fruta roja y notas especiadas. Estructura, calidez, equilibrio y fruta negra aportadas por el Syrah y el Malbec.",
+        "premios": "",
+        "revista": "https://online.fliphtml5.com/votjo/koew/"
+      }
+    ],
+    "opina": "Blend de Muelle Oculto, la bodega de autor de la playa de Matanzas: Carménère fresco con Syrah y Malbec que aportan estructura y fruta negra, con paso por barrica. Equilibrado y de perfil bien chileno, pensado para la mesa y el picoteo.",
+    "sugiere": "Carménère fresco y especiado para comida chilena de olla y sabores caseros: empanadas de pino fritas, plateada al horno con puré rústico, chorrillana, lomo saltado y queso mantecoso.",
+    "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/79247714"
   },
   {
     "name": "Muelle Oculto Chardonnay",
@@ -9985,6 +10268,30 @@
     "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78691759"
   },
   {
+    "name": "Schwaderer Kimbao Malbec Gran Reserva",
+    "winery": "Schwaderer",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920370/kimbao_20malbec.png?1788122929",
+    "url": "https://uptowine.cl/schwaderer-kimbao-malbec-gran-reserva",
+    "price": 9990,
+    "compare_at": null,
+    "available": true,
+    "anadas": [
+      {
+        "anada": "2023",
+        "cepa": "Malbec",
+        "valle": "Valle Central",
+        "grad": "13,5%",
+        "crianza": "1 año en barricas de roble francés de distinto uso",
+        "nota": "Violeta con matices rubí. En nariz, notas de mora, granada madura y un delicado toque floral. En boca, frutal, con un sutil toque de chocolate, cuerpo medio y taninos presentes pero maduros.",
+        "premios": "",
+        "revista": ""
+      }
+    ],
+    "opina": "El Malbec Gran Reserva de Schwaderer, bajo la etiqueta Kimbao: un tinto de perfil goloso y accesible, con la mora y la granada madura de la cepa sobre un fondo floral, y un año de barrica de roble francés de distinto uso que aporta ese sutil toque de chocolate sin tapar la fruta. Cuerpo medio, taninos maduros y fácil de disfrutar.",
+    "sugiere": "Tinto de mesa, versátil y frutal: lasaña, carnes a la parrilla, pizza y tabla de charcutería.",
+    "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/80672121"
+  },
+  {
     "name": "Schwaderer Malbec Rose",
     "winery": "Schwaderer",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/33677110/Schwaderer_20rose.png?1783721714",
@@ -10159,6 +10466,40 @@
     "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78691043"
   },
   {
+    "name": "Schwaderer Syrah-Viognier",
+    "winery": "Schwaderer",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920376/swaderer_20Syrah_20viognier.png?1788122907",
+    "url": "https://uptowine.cl/schwaderer-syrah-viognier",
+    "price": 9990,
+    "compare_at": null,
+    "available": true,
+    "anadas": [
+      {
+        "anada": "2023",
+        "cepa": "85% Syrah · 15% Viognier",
+        "valle": "Sagrada Familia, Curicó",
+        "grad": "13,8%",
+        "crianza": "Fermentación en estanque de acero y 6 meses en botella",
+        "nota": "Rubí intenso y brillante con ribetes violeta. En nariz, frutoso y jugoso, con especias dulces, violetas y mora fresca. En boca, de textura aterciopelada y taninos maduros.",
+        "premios": "",
+        "revista": ""
+      },
+      {
+        "anada": "2022",
+        "cepa": "85% Syrah · 15% Viognier",
+        "valle": "Curicó",
+        "grad": "14%",
+        "crianza": "100% estanque de acero inoxidable",
+        "nota": "Violeta intenso y brillante. En nariz, muy expresivo, con notas de moras maduras y cremosas, arándanos y una sutil nota balsámica. En boca, de cuerpo medio, jugoso y consistente con sus aromas, con taninos extremadamente sedosos. La cofermentación de Syrah y Viognier aporta frescura, expresión aromática y una textura elegante y sedosa.",
+        "premios": "",
+        "revista": ""
+      }
+    ],
+    "opina": "De la línea Cielos Intensos de Schwaderer, en Curicó: un tinto sin una gota de barrica, donde la gracia está en la cofermentación — la Syrah y el Viognier fermentan juntos, y esa pizca de uva blanca aromática le da frescura, perfume floral y una textura sedosa poco habitual. Mora, arándano y violetas sobre taninos muy suaves. Fácil, jugoso y de puro placer frutal.",
+    "sugiere": "Tinto joven y frutal para picoteo y mesa informal: hamburguesas, pizza, tabla de charcutería y una buena película.",
+    "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/80672110"
+  },
+  {
     "name": "Siete Cabernet Sauvignon",
     "winery": "Siete Wines",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32635810/SIETE_20CABERNET_20SAUVIGNON.png?1783805099",
@@ -10277,6 +10618,30 @@
     "opina": "Moscatel Rosada del Maule, muy aromática: dorado con ribetes verdosos, con pera de agua, durazno, piña madura y flores blancas; en boca ligera, frutal y de acidez media. Un blanco perfumado y de fácil disfrute.",
     "sugiere": "Blanco aromático y fresco para cocina liviana y especiada suave: reineta al vapor con cilantro, sushi, pad thai suave, queso de cabra fresco y espárragos a la parrilla.",
     "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/78735927"
+  },
+  {
+    "name": "Tatita País",
+    "winery": "Tatita",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920366/tatita_20pais.png?1788123015",
+    "url": "https://uptowine.cl/tatita-pais",
+    "price": 9990,
+    "compare_at": null,
+    "available": true,
+    "anadas": [
+      {
+        "anada": "2024",
+        "cepa": "País",
+        "valle": "Maule — San Javier",
+        "grad": "13,5%",
+        "crianza": "1 año en barricas de tercer y cuarto uso",
+        "nota": "Ligero color rojo cereza. En nariz, aroma limpio a frutilla, guinda, flores silvestres y un dejo ligeramente especiado. En boca es dulce y fresco.",
+        "premios": "",
+        "revista": ""
+      }
+    ],
+    "opina": "País de San Javier, en el Maule: un rescate de la cepa histórica de Chile trabajado con mínima intervención y barrica muy usada, que casi no deja madera para que hable la fruta. Rojo cereza claro, frutilla y guinda con un toque de flores silvestres, boca dulce y fresca. Un tinto liviano y fácil, de esos para tomar sin ceremonia. Se sirve algo frío, a unos 13°C.",
+    "sugiere": "Como aperitivo o con quesos suaves, y al comienzo del asado junto al choripan. También con charcutería y comida chilena de olla.",
+    "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/80672158"
   },
   {
     "name": "Testaruda Blend",
