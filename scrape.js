@@ -180,7 +180,9 @@ async function fetchViaApi() {
           compare_at: product.compare_at_price != null ? Number(product.compare_at_price) : null,
           available: product.status === 'available' && (product.stock_unlimited || product.stock > 0),
         });
-        continue; // exclusivo: no va al catálogo general
+        // Sin continue: si además trae ficha completa, va también a wines.json —
+        // el escáner, las catas y el sommelier matchean contra el catálogo general,
+        // y los vinos del despacho del mes son justo los que los socios escanean.
       }
       const desc = product.description || '';
       const parsed = parseIframe(desc) || parseTabs(desc) || parseTables(desc);
