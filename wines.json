@@ -1,5 +1,28 @@
 [
   {
+    "name": "3 Monos Cabernet Sauvignon",
+    "winery": "3 Monos",
+    "image": "",
+    "url": "https://uptowine.cl/3-monos-cabernet-sauvignon",
+    "price": 12000,
+    "compare_at": null,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2020",
+        "cepa": "100% Cabernet Sauvignon",
+        "valle": "Valle del Maipo",
+        "grad": "14%",
+        "crianza": "14 meses en barricas francesas usadas",
+        "nota": "Color rubí de intensidad media. Perfil aromático de fruta madura, con recuerdos de cerezas en almíbar, membrillo dulce y un toque de especias. Jugoso y de marcada expresión frutal, con taninos firmes pero redondeados; de carácter maduro y goloso, equilibrado por un final fresco y frutal.",
+        "premios": "",
+        "revista": ""
+      }
+    ],
+    "opina": "Cabernet Sauvignon de Maipo de 3 Monos: rubí de intensidad media, fruta madura — cerezas en almíbar y membrillo — con un toque especiado. Jugoso y goloso, de taninos firmes pero redondeados y final fresco. Un Cabernet de fruta, fácil de recomendar.",
+    "sugiere": "Cabernet de fruta para carnes rojas y cerdo: bistec a lo pobre, costillar de cerdo, anticuchos y quesos maduros."
+  },
+  {
     "name": "3 Monos Carignan",
     "winery": "3 Monos",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920381/3_20monos_20carignan.png?1788123083",
@@ -3826,6 +3849,16 @@
     "available": false,
     "anadas": [
       {
+        "anada": "2023",
+        "cepa": "92% Carignan y 8% Cabernet Sauvignon",
+        "valle": "Colchagua",
+        "grad": "13,5%",
+        "crianza": "12 meses en barricas usadas de roble francés",
+        "nota": "Color púrpura profundo. Aromas de ciruela y mora, acompañados de pimienta, especias y matices terrosos. En boca muestra energía, taninos de textura granulada, acidez marcada y un final persistente; de cuerpo medio a ligero, fresco y equilibrado.",
+        "premios": "",
+        "revista": ""
+      },
+      {
         "anada": "2021",
         "cepa": "Carignan (cofermentado con 5% Petit Verdot)",
         "valle": "Colchagua",
@@ -3869,6 +3902,16 @@
     "compare_at": 10500,
     "available": false,
     "anadas": [
+      {
+        "anada": "2025",
+        "cepa": "País, Cinsault y Carignan",
+        "valle": "Itata",
+        "grad": "12,5%",
+        "crianza": "En estanques de acero inoxidable, con embotellado después del invierno",
+        "nota": "Color rubí de intensidad ligera. Aromas frutales con matices terrosos y especiados. En boca es fresco y vivaz, de cuerpo medio, con notas de frutilla, cereza y ciruela, acompañadas de un toque ahumado.",
+        "premios": "",
+        "revista": ""
+      },
       {
         "anada": "2023",
         "cepa": "60% País, 20% Cinsault, 20% Carignan",
@@ -5513,6 +5556,29 @@
     ],
     "opina": "País del Valle del Itata por El Rescate: fruta roja fresca, ligereza y esa raíz campesina chilena de las viñas viejas de secano. Especiado, con mora, cuero y tabaco; jugoso y de cuerpo medio.",
     "sugiere": "Tabla de charcutería, risotto de hongos, pato confitado, atún sellado y queso brie. Tinto ligero y fresco: salmón, hongos, aves y charcutería."
+  },
+  {
+    "name": "Laslarra Blend",
+    "winery": "Laslarra",
+    "image": "",
+    "url": "https://uptowine.cl/laslarra-blend",
+    "price": 12000,
+    "compare_at": null,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2023",
+        "cepa": "85% Merlot y 15% Petit Verdot",
+        "valle": "Lontué, Sagrada Familia",
+        "grad": "13,5%",
+        "crianza": "3 años",
+        "nota": "Rojo rubí con reflejos violáceos. Notas frescas de frutilla, guinda y ciruela, con delicados matices mentolados. Jugoso y sabroso, de carácter frutal, con taninos suaves y una agradable frescura que acompaña el final.",
+        "premios": "",
+        "revista": ""
+      }
+    ],
+    "opina": "Blend de Laslarra sobre Merlot con un aporte de Petit Verdot: fruta roja fresca — frutilla, guinda y ciruela — con un guiño mentolado y tres años de guarda que redondean el conjunto. Jugoso, de taninos suaves y buena frescura; un tinto amable y de mesa.",
+    "sugiere": "Merlot frutal y suave para carnes a la parrilla, asados y tablas: lomo liso a la plancha, pastas con salsa de tomate, empanadas y quesos semimaduros."
   },
   {
     "name": "Laura Hartwig Cabernet Franc - Selección del Viticultor",
@@ -10004,6 +10070,29 @@
     "sugiere": "Ceviche de reineta, ostras al limón, croquetas de jamón, empanaditas de queso y tempura de camarón. Espumante fresco: aperitivo, mariscos, frituras ligeras y tablas de fiesta. Servir a 6-8 grados."
   },
   {
+    "name": "Ranquilhue Cabernet Sauvignon",
+    "winery": "Ranquilhue",
+    "image": "",
+    "url": "https://uptowine.cl/ranquilhue-cabernet-sauvignon",
+    "price": 10000,
+    "compare_at": null,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2024",
+        "cepa": "100% Cabernet Sauvignon",
+        "valle": "Valle de Colchagua",
+        "grad": "13,5%",
+        "crianza": "12 meses en barricas francesas y americanas, nuevas y usadas",
+        "nota": "Rojo brillante con ribetes violáceos. Notas de frutos rojos, como frutilla y frambuesa. Taninos suaves, sedosos y aterciopelados, con un final largo y persistente.",
+        "premios": "",
+        "revista": ""
+      }
+    ],
+    "opina": "Cabernet Sauvignon de Colchagua de Ranquilhue: rojo brillante con ribetes violáceos, fruta roja jugosa — frutilla y frambuesa — y taninos suaves, sedosos y aterciopelados sobre un final largo. Un Cabernet amable y fácil de disfrutar.",
+    "sugiere": "Cabernet versátil para comida chilena y de parrilla: carnes a la parrilla o al horno, empanadas, porotos con riendas, charquicán, embutidos y quesos maduros."
+  },
+  {
     "name": "Robba Primitivo (zinfandel)",
     "winery": "Robba & Rossi",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36167780/ROBBA_20_26_20ROSSY_20PRIMITIVO.png?1785708703",
@@ -10116,6 +10205,16 @@
     "compare_at": null,
     "available": false,
     "anadas": [
+      {
+        "anada": "2023",
+        "cepa": "Cabernet Sauvignon",
+        "valle": "Maipo",
+        "grad": "14%",
+        "crianza": "24 meses en barrica de roble francés; sólo 10% en barrica de primer uso",
+        "nota": "Rubí profundo y brillante. Aroma expresivo, con frutas rojas y negras frescas, un sutil toque de chocolate, especias dulces y una delicada nota mentolada. De cuerpo medio y elegante, con taninos maduros que aportan una textura sedosa; final largo y equilibrado, donde la fruta y la barrica se integran armoniosamente.",
+        "premios": "",
+        "revista": ""
+      },
       {
         "anada": "2020",
         "cepa": "Cabernet Sauvignon",
@@ -10640,7 +10739,7 @@
       }
     ],
     "opina": "País de San Javier, en el Maule: un rescate de la cepa histórica de Chile trabajado con mínima intervención y barrica muy usada, que casi no deja madera para que hable la fruta. Rojo cereza claro, frutilla y guinda con un toque de flores silvestres, boca dulce y fresca. Un tinto liviano y fácil, de esos para tomar sin ceremonia. Se sirve algo frío, a unos 13°C.",
-    "sugiere": "Como aperitivo o con quesos suaves, y al comienzo del asado junto al choripan. También con charcutería y comida chilena de olla.",
+    "sugiere": "Especial para comida chilena: empanadas de pino, pastel de choclo, humitas, porotos granados y arrollado huaso. También de aperitivo o con quesos suaves, y al comienzo del asado junto al choripán y la charcutería. Un País de mesa criolla, ideal ligeramente frío.",
     "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/80672158"
   },
   {

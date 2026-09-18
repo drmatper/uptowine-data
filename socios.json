@@ -30,6 +30,15 @@
       "available": true
     },
     {
+      "name": "3 Monos Cabernet Sauvignon",
+      "winery": "3 Monos",
+      "image": "",
+      "url": "https://uptowine.cl/3-monos-cabernet-sauvignon",
+      "price": 12000,
+      "compare_at": null,
+      "available": false
+    },
+    {
       "name": "El Escorial Gran Reserva Blend",
       "winery": "El Escorial",
       "image": "",
@@ -84,6 +93,33 @@
       "available": false
     },
     {
+      "name": "Escandalo Carignan",
+      "winery": "Escándalo",
+      "image": "https://images.jumpseller.com/store/up-to-wine-chile/32983262/ESCANDALO_20CARIGNAN.png?1783892890",
+      "url": "https://uptowine.cl/escandalo-carignan",
+      "price": 13990,
+      "compare_at": null,
+      "available": false
+    },
+    {
+      "name": "Escandalo Pipeño",
+      "winery": "Escándalo",
+      "image": "https://images.jumpseller.com/store/up-to-wine-chile/32602409/ESCANDALO_20PIPE_C3_91O.png?1783717785",
+      "url": "https://uptowine.cl/escandalo-wines-pipeno",
+      "price": 6000,
+      "compare_at": 10500,
+      "available": false
+    },
+    {
+      "name": "Laslarra Blend",
+      "winery": "Laslarra",
+      "image": "",
+      "url": "https://uptowine.cl/laslarra-blend",
+      "price": 12000,
+      "compare_at": null,
+      "available": false
+    },
+    {
       "name": "Los Dos Enólogos Gran Vin Carignan",
       "winery": "Los Dos Enólogos",
       "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920386/lex_20deux_20enologuues.png?1788123201",
@@ -99,6 +135,24 @@
       "url": "https://uptowine.cl/muelle-oculto-centinela-copiar",
       "price": 6000,
       "compare_at": 11900,
+      "available": false
+    },
+    {
+      "name": "Ranquilhue Cabernet Sauvignon",
+      "winery": "Ranquilhue",
+      "image": "",
+      "url": "https://uptowine.cl/ranquilhue-cabernet-sauvignon",
+      "price": 10000,
+      "compare_at": null,
+      "available": false
+    },
+    {
+      "name": "Schwaderer Cabernet Sauvignon",
+      "winery": "Schwaderer",
+      "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093430/Schwaderer_20cabernet_20Sauvignon.png?1783721872",
+      "url": "https://uptowine.cl/schwaderer-cabernet-sauvignon",
+      "price": 12000,
+      "compare_at": null,
       "available": false
     },
     {
