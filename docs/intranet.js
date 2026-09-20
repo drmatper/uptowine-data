@@ -150,6 +150,71 @@ cuerpoHtml(personalizar(texto, contacto)) +
       .trim() + '\n\n—\nUp to Wine · uptowine.cl · ventas@uptowine.cl\nResponde con la palabra BAJA para no recibir más correos.';
   }
 
+  // --- club: estado por fecha del ultimo cobro (MP, Payku y PAT) --------------
+  // hasta 35 dias al dia, hasta 75 moroso, despues inactivo. Sin fecha: inactivo.
+  function estadoPorFecha(ultimoPago, hoy) {
+    if (!ultimoPago) return 'inactivo';
+    var dias = Math.floor((new Date(hoy || Date.now()).getTime() - new Date(ultimoPago).getTime()) / 86400000);
+    return dias <= 35 ? 'al_dia' : dias <= 75 ? 'moroso' : 'inactivo';
+  }
+  var ESTADO_CLUB = { al_dia: 'Al día', moroso: 'Moroso', inactivo: 'Inactivo', baja: 'Baja' };
+
+  // RUT chileno: 12.345.678-5 -> 12345678-5, o '' si no calza. Se valida el
+  // dígito verificador (módulo 11): sin eso un celular de 9 dígitos pasa por RUT.
+  function rutNormalizar(raw) {
+    var d = String(raw || '').replace(/[^0-9kK]/g, '').toUpperCase();
+    if (!/^[0-9]{7,8}[0-9K]$/.test(d)) return '';
+    var cuerpo = d.slice(0, -1), dv = d.slice(-1), suma = 0, mult = 2;
+    for (var i = cuerpo.length - 1; i >= 0; i--) { suma += Number(cuerpo[i]) * mult; mult = mult === 7 ? 2 : mult + 1; }
+    var r = 11 - (suma % 11), calc = r === 11 ? '0' : r === 10 ? 'K' : String(r);
+    return calc === dv ? cuerpo + '-' + dv : '';
+  }
+
+  // Export de Payku: una suscripcion por fila. Estatus manda; si no lo trae, la fecha.
+  function paykuFila(f, mapa, hoy) {
+    var estatus = String(mapa.estatus >= 0 ? f[mapa.estatus] || '' : '').toLowerCase();
+    var ultima = mapa.ultima >= 0 ? String(f[mapa.ultima] || '').slice(0, 10) : '';
+    var estado = /activ/.test(estatus) ? 'al_dia'
+      : /cancel|inactiv|suspend|baja|anul/.test(estatus) ? 'baja'
+      : estadoPorFecha(ultima, hoy);
+    return {
+      canal: 'payku',
+      id_externo: String(mapa.sub >= 0 && f[mapa.sub] ? f[mapa.sub] : (mapa.email >= 0 ? f[mapa.email] : '')).trim(),
+      email: mapa.email >= 0 ? String(f[mapa.email] || '').trim().toLowerCase() : '',
+      nombre: mapa.nombre >= 0 ? String(f[mapa.nombre] || '').trim() : '',
+      celular: mapa.celular >= 0 ? String(f[mapa.celular] || '') : '',
+      plan: mapa.plan >= 0 ? String(f[mapa.plan] || '') : '',
+      monto: mapa.monto >= 0 ? Number(String(f[mapa.monto] || '').replace(/[^0-9.-]/g, '')) || null : null,
+      estado: estado,
+      ultimo_pago: ultima || null,
+      detalle: [estatus, mapa.frecuencia >= 0 ? f[mapa.frecuencia] : ''].filter(Boolean).join(' · '),
+    };
+  }
+
+  // Cartola Transbank ya procesada (hoja "Transbank datos"): una fila por cobro.
+  // Se agrupan los cobros PAT por RUT: cuota actual = ultimo monto, y el estado
+  // lo pone la fecha del ultimo cobro.
+  function patAgrupar(filas, mapa, hoy) {
+    var socios = {};
+    filas.forEach(function (f) {
+      var rut = rutNormalizar(mapa.rut >= 0 ? f[mapa.rut] : '');
+      if (!rut) return;
+      if (mapa.canal >= 0 && !/pat/i.test(String(f[mapa.canal] || ''))) return;
+      var fecha = String(mapa.fecha >= 0 ? f[mapa.fecha] || '' : '').slice(0, 10);
+      var monto = Number(String(mapa.monto >= 0 ? f[mapa.monto] || 0 : 0).replace(/[^0-9.-]/g, '')) || 0;
+      var s = socios[rut] = socios[rut] || { rut: rut, primero: fecha, ultimo: '', monto: 0, cobros: 0 };
+      s.cobros++;
+      if (fecha && fecha < s.primero) s.primero = fecha;
+      if (fecha >= s.ultimo) { s.ultimo = fecha; s.monto = monto; }
+    });
+    return Object.keys(socios).map(function (rut) {
+      var s = socios[rut];
+      return { canal: 'pat', id_externo: rut, rut: rut, plan: 'Cuota PAT Transdata', monto: s.monto,
+        estado: estadoPorFecha(s.ultimo, hoy), alta: s.primero || null, ultimo_pago: s.ultimo || null,
+        detalle: s.cobros + ' cobros en la cartola' };
+    });
+  }
+
   // --- CSV: importar contactos de otra herramienta ---------------------------
   // Acepta coma o punto y coma, comillas y BOM. Devuelve {cabeceras, filas}.
   function csvLeer(texto) {
@@ -182,12 +247,28 @@ cuerpoHtml(personalizar(texto, contacto)) +
       }
       return -1;
     };
-    return {
+    var m = {
       nombre: busca(['nombre', 'name', 'first']),
       email: busca(['email', 'correo', 'mail']),
       celular: busca(['celular', 'telefono', 'teléfono', 'phone', 'movil', 'móvil', 'whatsapp']),
       etiquetas: busca(['etiqueta', 'tag', 'segmento']),
+      rut: busca(['rut']),
+      comuna: busca(['comuna', 'municipality', 'ciudad']),
+      // Payku
+      sub: busca(['suscripción id', 'suscripcion id', 'subscription']),
+      estatus: busca(['estatus', 'status', 'estado']),
+      plan: busca(['plan']),
+      frecuencia: busca(['frecuencia']),
+      monto: busca(['monto', 'amount', 'cuota']),
+      ultima: busca(['última fecha', 'ultima fecha', 'último cobro', 'ultimo cobro']),
+      // Transbank
+      canal: busca(['canal']),
+      fecha: busca(['fecha']),
     };
+    m.tipo = m.sub >= 0 && m.estatus >= 0 ? 'payku'
+      : m.rut >= 0 && m.canal >= 0 && m.monto >= 0 ? 'pat'
+      : 'contactos';
+    return m;
   }
 
   function csvSalida(contactos) {
@@ -203,7 +284,8 @@ cuerpoHtml(personalizar(texto, contacto)) +
     module.exports = { fonoWhatsApp: fonoWhatsApp, esc: esc, personalizar: personalizar,
       plata: plata, cuerpoHtml: cuerpoHtml, correoHtml: correoHtml, correoTexto: correoTexto,
       enlaceSeguro: enlaceSeguro, csvLeer: csvLeer, csvMapear: csvMapear, csvSalida: csvSalida,
-      diasDesde: diasDesde };
+      diasDesde: diasDesde, estadoPorFecha: estadoPorFecha, rutNormalizar: rutNormalizar,
+      paykuFila: paykuFila, patAgrupar: patAgrupar };
     return;
   }
 
@@ -216,7 +298,8 @@ cuerpoHtml(personalizar(texto, contacto)) +
   var S = {
     sesion: null, admin: false, listo: false,
     vista: 'resumen',
-    contactos: [], total: 0, q: '', origen: '', etiqueta: '', compras: '', sel: {}, ficha: null,
+    contactos: [], total: 0, q: '', origen: '', etiqueta: '', compras: '', club: '', sel: {}, ficha: null,
+    eventos: [],
     segmentos: [], plantillas: [], campanas: [], historial: [], cola: null, metricas: null,
     etiquetas: [],
     campana: null, adjuntos: [], previa: 'escritorio',
@@ -371,7 +454,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
   // 4) Datos
   // ==========================================================================
 
-  var COLS = 'id,nombre,email,celular,origen,etiquetas,notas,n_pedidos,total_gastado,ultima_compra,baja,creado';
+  var COLS = 'id,nombre,email,celular,rut,comuna,origen,etiquetas,notas,n_pedidos,total_gastado,ultima_compra,baja,creado,club_estado,club_canal,club_plan,club_monto,club_alta,club_ultimo_pago,club_baja';
 
   // Una sola función arma la consulta: la usan la lista, los segmentos y el envío.
   function consulta(f) {
@@ -385,11 +468,14 @@ cuerpoHtml(personalizar(texto, contacto)) +
       var hace90 = new Date(Date.now() - 90 * 86400000).toISOString().slice(0, 10);
       sel = sel.gt('n_pedidos', 0).lt('ultima_compra', hace90);
     }
+    if (f.club === 'socio') sel = sel.in('club_estado', ['al_dia', 'moroso', 'inactivo']);
+    else if (f.club === 'nosocio') sel = sel.is('club_estado', null);
+    else if (f.club) sel = sel.eq('club_estado', f.club);
     if (f.activos !== false) sel = sel.eq('baja', false);
     return sel;
   }
 
-  function filtroActual() { return { q: S.q, origen: S.origen, etiqueta: S.etiqueta, compras: S.compras }; }
+  function filtroActual() { return { q: S.q, origen: S.origen, etiqueta: S.etiqueta, compras: S.compras, club: S.club }; }
 
   function cargarContactos() {
     return consulta(filtroActual()).then(function (r) {
@@ -407,11 +493,18 @@ cuerpoHtml(personalizar(texto, contacto)) +
       sb.from('contactos').select('id', { count: 'exact', head: true }).eq('baja', true),
       sb.from('correos_enviados').select('id', { count: 'exact', head: true }).gte('creado', hace30).eq('estado', 'enviado'),
       sb.from('contactos').select('id', { count: 'exact', head: true }).gt('n_pedidos', 0),
+      sb.from('contactos').select('id', { count: 'exact', head: true }).eq('club_estado', 'al_dia'),
+      sb.from('contactos').select('id', { count: 'exact', head: true }).eq('club_estado', 'moroso'),
+      sb.from('membresias_eventos').select('id', { count: 'exact', head: true }).gte('fecha', hace30).eq('a', 'al_dia').is('de', null),
+      sb.from('membresias_eventos').select('id', { count: 'exact', head: true }).gte('fecha', hace30).eq('a', 'baja'),
+      sb.from('membresias_eventos').select('id,canal,de,a,fecha,contacto:contacto_id(id,nombre,email,club_plan)').order('fecha', { ascending: false }).limit(12),
     ]).then(function (rs) {
       S.metricas = {
         total: rs[0].count || 0, conCorreo: rs[1].count || 0, conCelular: rs[2].count || 0,
         bajas: rs[3].count || 0, correos30: rs[4].count || 0, compradores: rs[5].count || 0,
+        sociosAlDia: rs[6].count || 0, morosos: rs[7].count || 0, altas30: rs[8].count || 0, bajas30: rs[9].count || 0,
       };
+      S.eventos = rs[10].data || [];
       pintar();
     });
   }
@@ -515,14 +608,23 @@ cuerpoHtml(personalizar(texto, contacto)) +
   // 5) Acciones
   // ==========================================================================
 
+  // Dos viajes: tienda + app primero, el club despues (Reveniu y Mercado Pago tardan).
   function sincronizar() {
-    S.ocupado = true; aviso('Sincronizando con la tienda…');
+    S.ocupado = true; aviso('Sincronizando tienda y app…');
     sb.functions.invoke('intranet', { body: { accion: 'crm-sync' } }).then(function (r) {
-      S.ocupado = false;
       var d = r.data || {};
-      if (r.error || !d.ok) return aviso(d.error || (r.error && r.error.message) || 'No se pudo sincronizar.', 'err');
-      aviso('Listo: ' + d.jumpseller + ' de la tienda, ' + d.socios + ' socios, ' + (d.con_compras || 0) + ' con compras al día.');
-      cargarContactos(); cargarMetricas();
+      if (r.error || !d.ok) { S.ocupado = false; return aviso(d.error || (r.error && r.error.message) || 'No se pudo sincronizar la tienda.', 'err'); }
+      aviso('Tienda: ' + d.jumpseller + ' · app: ' + d.socios + ' · con compras: ' + (d.con_compras || 0) + '. Ahora el club (Reveniu y Mercado Pago)…');
+      cargarContactos();
+      return sb.functions.invoke('intranet', { body: { accion: 'club-sync' } }).then(function (r2) {
+        S.ocupado = false;
+        var c = r2.data || {};
+        if (r2.error || !c.ok) return aviso(c.error || (r2.error && r2.error.message) || 'El club no se pudo sincronizar.', 'err');
+        var rv = c.reveniu || {}, mp = c.mercadopago || {};
+        aviso('Club al día: Reveniu ' + (rv.guardadas || 0) + ' suscripciones · Mercado Pago ' + (mp.guardados || 0) + ' suscriptores · ' +
+          (c.reclasificados || 0) + ' cambios de estado por fecha.');
+        cargarContactos(); cargarMetricas(); cargarEtiquetas();
+      });
     });
   }
 
@@ -540,6 +642,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
   }
 
   function importarCSV(filas, mapa) {
+    if (mapa.tipo === 'payku' || mapa.tipo === 'pat') return importarMembresias(filas, mapa);
     var i = 0, ok = 0, fallos = 0;
     S.ocupado = true;
     function siguiente() {
@@ -557,6 +660,8 @@ cuerpoHtml(personalizar(texto, contacto)) +
         p_email: mapa.email >= 0 ? (f[mapa.email] || null) : null,
         p_celular: mapa.celular >= 0 ? (f[mapa.celular] || null) : null,
         p_origen: 'manual',
+        p_rut: mapa.rut >= 0 ? (f[mapa.rut] || null) : null,
+        p_comuna: mapa.comuna >= 0 ? (f[mapa.comuna] || null) : null,
       }).then(function (r) {
         if (r.error || !r.data) { fallos++; return siguiente(); }
         ok++;
@@ -568,6 +673,31 @@ cuerpoHtml(personalizar(texto, contacto)) +
           });
         } else siguiente();
       });
+    }
+    siguiente();
+  }
+
+  // Payku y PAT no tienen API: entran por su export, como membresias del club.
+  function importarMembresias(filas, mapa) {
+    var lista = mapa.tipo === 'payku'
+      ? filas.map(function (f) { return paykuFila(f, mapa); }).filter(function (m) { return m.id_externo; })
+      : patAgrupar(filas, mapa);
+    var i = 0, ok = 0, fallos = 0;
+    S.ocupado = true;
+    function siguiente() {
+      if (i >= lista.length) {
+        S.ocupado = false; S.importar = null; S.progreso = '';
+        aviso((mapa.tipo === 'payku' ? 'Payku: ' : 'PAT Transdata: ') + ok + ' membresía(s) registradas' + (fallos ? ' · ' + fallos + ' sin datos para identificar' : '') + '.');
+        cargarContactos(); cargarMetricas();
+        return;
+      }
+      var m = lista[i++];
+      S.progreso = i + '/' + lista.length; pintar();
+      sb.rpc('crm_membresia', {
+        p_canal: m.canal, p_id_externo: m.id_externo, p_email: m.email || null, p_nombre: m.nombre || '',
+        p_celular: m.celular || null, p_rut: m.rut || null, p_plan: m.plan || null, p_monto: m.monto,
+        p_estado: m.estado, p_alta: m.alta || null, p_ultimo_pago: m.ultimo_pago || null, p_detalle: m.detalle || null,
+      }).then(function (r) { if (r.error || !r.data) fallos++; else ok++; siguiente(); });
     }
     siguiente();
   }
@@ -593,7 +723,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     var s = S.segmentos.filter(function (x) { return String(x.id) === String(id); })[0];
     if (!s) return;
     var f = s.filtro || {};
-    S.q = f.q || ''; S.origen = f.origen || ''; S.etiqueta = f.etiqueta || ''; S.compras = f.compras || '';
+    S.q = f.q || ''; S.origen = f.origen || ''; S.etiqueta = f.etiqueta || ''; S.compras = f.compras || ''; S.club = f.club || '';
     cargarContactos();
   }
 
@@ -601,10 +731,12 @@ cuerpoHtml(personalizar(texto, contacto)) +
     Promise.all([
       sb.from('contactos').select(COLS).eq('id', id).maybeSingle(),
       sb.from('crm_mensajes').select('*').eq('contacto_id', id).order('creado', { ascending: false }).limit(20),
+      sb.from('membresias').select('canal,estado,plan,monto,alta,ultimo_pago').eq('contacto_id', id),
     ]).then(function (rs) {
       if (!rs[0].data) return aviso('No encontramos ese contacto.', 'err');
       S.ficha = rs[0].data;
       S.ficha.mensajes = rs[1].data || [];
+      S.ficha.membresias = rs[2].data || [];
       pintar();
     });
   }
@@ -638,7 +770,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     var c = S.campana;
     if (c.segmento_id) {
       var s = S.segmentos.filter(function (x) { return String(x.id) === String(c.segmento_id); })[0];
-      return consulta(Object.assign({ q: '', origen: '', etiqueta: '', compras: '' }, (s && s.filtro) || {}))
+      return consulta(Object.assign({ q: '', origen: '', etiqueta: '', compras: '', club: '' }, (s && s.filtro) || {}))
         .then(function (r) { return r.data || []; });
     }
     if (c.destinatarios && c.destinatarios.length) {
@@ -814,7 +946,16 @@ cuerpoHtml(personalizar(texto, contacto)) +
 
   // ---------- Resumen ----------
   function vistaResumen() {
-    var m = S.metricas || { total: 0, conCorreo: 0, conCelular: 0, bajas: 0, correos30: 0, compradores: 0 };
+    var m = S.metricas || { total: 0, conCorreo: 0, conCelular: 0, bajas: 0, correos30: 0, compradores: 0, sociosAlDia: 0, morosos: 0, altas30: 0, bajas30: 0 };
+    var movimientos = (S.eventos || []).map(function (e) {
+      var c = e.contacto || {};
+      var texto = e.a === 'baja' ? 'se dio de baja' : e.a === 'moroso' ? 'cayó en mora' : e.a === 'inactivo' ? 'quedó inactivo'
+        : (!e.de || e.de === 'baja') ? 'se sumó al club' : 'volvió a estar al día';
+      var clase = e.a === 'al_dia' ? 'ok' : e.a === 'baja' ? 'gris' : 'warn';
+      return '<div class="dato"><span><b style="color:var(--tx)">' + esc(c.nombre || c.email || 'contacto') + '</b> ' + texto +
+        ' <span class="mini">· ' + esc(e.canal) + (c.club_plan ? ' · ' + esc(c.club_plan) : '') + '</span></span>' +
+        '<span class="pill ' + clase + '">' + fecha(e.fecha) + '</span></div>';
+    }).join('') || '<p class="mini">Sin movimientos todavía: sincroniza para traer el club.</p>';
     var ultimas = S.campanas.slice(0, 5).map(function (c) {
       return '<tr><td><b>' + esc(c.nombre) + '</b><div class="mini">' + (c.canal === 'correo' ? 'Correo' : 'WhatsApp') + ' · ' + fecha(c.actualizado) + '</div></td>' +
         '<td>' + pillEstado(c.estado) + '</td><td class="dim">' + (c.enviados || 0) + ' enviados</td>' +
@@ -826,12 +967,21 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '<button class="btn" data-nueva="1">Nueva campaña</button></div></div>' +
       '<div class="grid g4">' +
       kpi(m.total, 'contactos en total') +
-      kpi(m.conCorreo, 'con correo (alcanzables)') +
-      kpi(m.conCelular, 'con celular') +
+      kpi(m.sociosAlDia, 'socios del club al día') +
+      kpi(m.morosos, 'socios morosos') +
       kpi(m.correos30, 'correos enviados en 30 días') +
       '</div>' +
+      '<div class="grid g4" style="margin-top:12px">' +
+      kpi(m.altas30, 'altas al club en 30 días') +
+      kpi(m.bajas30, 'bajas del club en 30 días') +
+      kpi(m.conCorreo, 'con correo (alcanzables)') +
+      kpi(m.conCelular, 'con celular') +
+      '</div>' +
       '<div class="grid g2" style="margin-top:12px">' +
+      '<div class="card"><h3>Movimientos del club</h3>' + movimientos +
+      '<p class="ayuda">Cada cambio de estado de un socio (alta, mora, baja) queda aquí. Se actualiza solo todos los días a las 6:30; "Sincronizar" lo trae al instante.</p></div>' +
       '<div class="card"><h3>Últimas campañas</h3><table class="tabla" style="margin-top:8px">' + ultimas + '</table></div>' +
+      '</div><div class="grid g2" style="margin-top:12px">' +
       '<div class="card"><h3>Estado del canal</h3>' +
       '<div class="dato"><span>Compradores registrados</span><b>' + m.compradores + '</b></div>' +
       '<div class="dato"><span>Dados de baja</span><b>' + m.bajas + '</b></div>' +
@@ -842,6 +992,13 @@ cuerpoHtml(personalizar(texto, contacto)) +
   }
 
   function kpi(n, txt) { return '<div class="card kpi"><b>' + n + '</b><span>' + txt + '</span></div>'; }
+
+  function pillClub(c) {
+    if (!c.club_estado) return '<span class="mini">' + esc((c.origen || []).join(', ') || '—') + '</span>';
+    var clase = c.club_estado === 'al_dia' ? 'ok' : c.club_estado === 'moroso' ? 'warn' : c.club_estado === 'baja' ? 'gris' : 'crim';
+    return '<span class="pill ' + clase + '">' + ESTADO_CLUB[c.club_estado] + '</span>' +
+      '<div class="mini">' + esc(c.club_plan || c.club_canal || '') + (c.club_monto ? ' · ' + plata(c.club_monto) : '') + '</div>';
+  }
 
   function pillEstado(e) {
     var clase = e === 'enviada' ? 'ok' : e === 'enviando' ? 'crim' : e === 'programada' ? 'warn' : 'gris';
@@ -864,7 +1021,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
         '<td><b>' + esc(c.nombre || '(sin nombre)') + '</b>' +
         (c.baja ? ' <span class="pill warn">baja</span>' : '') +
         '<div class="mini">' + esc([c.email, c.celular].filter(Boolean).join(' · ') || 'sin correo ni celular') + '</div></td>' +
-        '<td class="dim">' + (c.origen || []).join(', ') + '</td>' +
+        '<td>' + pillClub(c) + '</td>' +
         '<td>' + ((c.etiquetas || []).map(function (e) { return tag(e); }).join('') || '<span class="mini">—</span>') + '</td>' +
         '<td class="dim">' + (c.n_pedidos ? c.n_pedidos + ' · ' + plata(c.total_gastado) : '—') + '</td>' +
         '<td class="dim">' + (dias == null ? '—' : dias + ' días') + '</td>' +
@@ -901,6 +1058,8 @@ cuerpoHtml(personalizar(texto, contacto)) +
       chips('origen', [['', 'Todos'], ['app', 'Socios'], ['jumpseller', 'Tienda'], ['manual', 'A mano']]) +
       '<span style="width:12px"></span>' +
       chips('compras', [['', 'Compren o no'], ['con', 'Con compras'], ['sin', 'Sin compras'], ['dormidos', 'Dormidos 90 días']]) +
+      '<span style="width:12px"></span>' +
+      chips('club', [['', 'Club: todos'], ['al_dia', 'Al día'], ['moroso', 'Morosos'], ['inactivo', 'Inactivos'], ['baja', 'Ex socios'], ['nosocio', 'No socios']]) +
       '<select id="utwi-filtro-etiqueta" style="width:auto;min-width:170px;margin-left:8px">' +
       '<option value="">Toda etiqueta</option>' +
       S.etiquetas.map(function (e) {
@@ -909,7 +1068,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '</div></div>' +
 
       '<div class="scroll"><table class="tabla">' +
-      '<thead><tr><th><input type="checkbox" id="utwi-todos" aria-label="Marcar todos"></th><th>Contacto</th><th>Origen</th><th>Etiquetas</th><th>Compras</th><th>Última</th><th></th></tr></thead>' +
+      '<thead><tr><th><input type="checkbox" id="utwi-todos" aria-label="Marcar todos"></th><th>Contacto</th><th>Club</th><th>Etiquetas</th><th>Compras</th><th>Última</th><th></th></tr></thead>' +
       '<tbody>' + filas + '</tbody></table></div>' +
       '<p class="ayuda">' + S.contactos.length + ' contactos con estos filtros' + (sel.length ? ' · ' + sel.length + ' seleccionados' : '') + '. Guarda el filtro como segmento para reusarlo en una campaña.</p>';
   }
@@ -917,14 +1076,18 @@ cuerpoHtml(personalizar(texto, contacto)) +
   function panelImportar() {
     var imp = S.importar;
     var cab = imp.cabeceras.map(function (h, i) {
-      var papel = imp.mapa.nombre === i ? 'nombre' : imp.mapa.email === i ? 'correo' : imp.mapa.celular === i ? 'celular' : imp.mapa.etiquetas === i ? 'etiquetas' : '';
+      var mp = imp.mapa;
+      var papel = mp.nombre === i ? 'nombre' : mp.email === i ? 'correo' : mp.celular === i ? 'celular' : mp.etiquetas === i ? 'etiquetas'
+        : mp.rut === i ? 'rut' : mp.comuna === i ? 'comuna' : mp.sub === i ? 'suscripción' : mp.estatus === i ? 'estado'
+        : mp.plan === i ? 'plan' : mp.monto === i ? 'monto' : mp.ultima === i ? 'último cobro' : mp.canal === i ? 'canal' : mp.fecha === i ? 'fecha' : '';
       return '<th>' + esc(h) + (papel ? '<div class="pill crim" style="margin-top:3px">' + papel + '</div>' : '') + '</th>';
     }).join('');
     var muestra = imp.filas.slice(0, 3).map(function (f) {
       return '<tr>' + f.map(function (v) { return '<td class="dim">' + esc(v) + '</td>'; }).join('') + '</tr>';
     }).join('');
     return '<div class="card" style="margin-bottom:12px;border-color:var(--crim)">' +
-      '<div class="cab" style="margin-bottom:8px"><h3>Importar ' + imp.filas.length + ' filas</h3><div class="sp">' +
+      '<div class="cab" style="margin-bottom:8px"><h3>Importar ' + imp.filas.length + ' filas' +
+      (imp.mapa.tipo === 'payku' ? ' · export de Payku (suscripciones del club)' : imp.mapa.tipo === 'pat' ? ' · cartola Transbank (socios PAT por RUT)' : '') + '</h3><div class="sp">' +
       '<button class="btn sec mini" id="utwi-cancelar-import">Cancelar</button>' +
       '<button class="btn mini" id="utwi-confirmar-import"' + (S.ocupado ? ' disabled' : '') + '>' +
       (S.ocupado ? 'Importando ' + S.progreso : 'Importar') + '</button></div></div>' +
@@ -935,7 +1098,8 @@ cuerpoHtml(personalizar(texto, contacto)) +
   function fichaContacto() {
     var c = S.ficha;
     var mensajes = (c.mensajes || []).map(function (m) {
-      return '<div class="dato"><span>' + (m.canal === 'correo' ? '✉️ ' : '💬 ') + esc((m.titulo || '').slice(0, 42)) + '</span><b class="mini">' + fecha(m.creado) + ' · ' + esc(m.estado) + '</b></div>';
+      var icono = m.canal === 'correo' ? '✉️ ' : m.canal === 'whatsapp' ? '💬 ' : '🍷 ';
+      return '<div class="dato"><span>' + icono + esc((m.titulo || '').slice(0, 42)) + '</span><b class="mini">' + fecha(m.creado) + (m.canal === 'club' ? '' : ' · ' + esc(m.estado)) + '</b></div>';
     }).join('') || '<p class="mini">Todavía no le hemos escrito.</p>';
 
     return '<div class="velo" id="utwi-velo"></div><div class="ficha">' +
@@ -944,6 +1108,8 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '<label class="lbl">Nombre</label><input id="utwi-f-nombre" value="' + esc(c.nombre) + '">' +
       '<label class="lbl">Correo</label><input id="utwi-f-email" value="' + esc(c.email || '') + '" inputmode="email">' +
       '<label class="lbl">Celular</label><input id="utwi-f-celular" value="' + esc(c.celular || '') + '" inputmode="tel">' +
+      '<div class="grid g2"><div><label class="lbl">RUT</label><input id="utwi-f-rut" value="' + esc(c.rut || '') + '" placeholder="12345678-9"></div>' +
+      '<div><label class="lbl">Comuna</label><input id="utwi-f-comuna" value="' + esc(c.comuna || '') + '"></div></div>' +
       '<label class="lbl">Etiquetas</label><div>' +
       ((c.etiquetas || []).map(function (e) { return tag(e, '<button data-quita-etiqueta="' + esc(e) + '" aria-label="Quitar">×</button>'); }).join('') || '<span class="mini">Sin etiquetas</span>') +
       '</div><div style="display:flex;gap:8px;margin-top:8px"><input id="utwi-f-etiqueta" list="utwi-lista-etiquetas" placeholder="club, mayorista, vip…" style="flex:1">' +
@@ -954,6 +1120,16 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '<button class="btn" id="utwi-f-guardar">Guardar</button>' +
       '<button class="btn sec" id="utwi-f-baja">' + (c.baja ? 'Reactivar' : 'Dar de baja') + '</button>' +
       '<button class="btn sec" id="utwi-f-escribir">Escribirle</button></div>' +
+      (c.club_estado ? '<h3 style="margin-top:20px">Club</h3>' +
+        '<div class="dato"><span>Estado</span><b>' + pillClub(c).split('<div')[0] + '</b></div>' +
+        '<div class="dato"><span>Plan</span><b>' + esc(c.club_plan || '—') + (c.club_monto ? ' · ' + plata(c.club_monto) : '') + '</b></div>' +
+        '<div class="dato"><span>Canal de cobro</span><b>' + esc(c.club_canal || '—') + '</b></div>' +
+        '<div class="dato"><span>Socio desde</span><b>' + (fecha(c.club_alta) || '—') + '</b></div>' +
+        '<div class="dato"><span>Último cobro</span><b>' + (fecha(c.club_ultimo_pago) || '—') + '</b></div>' +
+        (c.club_baja ? '<div class="dato"><span>Baja</span><b>' + fecha(c.club_baja) + '</b></div>' : '') +
+        ((c.membresias || []).length > 1 ? '<p class="mini" style="margin-top:6px">Tiene ' + c.membresias.length + ' suscripciones registradas: ' +
+          c.membresias.map(function (m) { return esc(m.canal) + ' (' + ESTADO_CLUB[m.estado] + ')'; }).join(', ') + '</p>' : '')
+        : '') +
       '<h3 style="margin-top:20px">Compras</h3>' +
       '<div class="dato"><span>Pedidos</span><b>' + (c.n_pedidos || 0) + '</b></div>' +
       '<div class="dato"><span>Total gastado</span><b>' + (plata(c.total_gastado) || '$0') + '</b></div>' +
@@ -1242,7 +1418,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
           var datos = csvLeer(String(lector.result));
           if (!datos.filas.length) return aviso('Ese CSV no trae filas.', 'err');
           var mapa = csvMapear(datos.cabeceras);
-          if (mapa.email < 0 && mapa.celular < 0) return aviso('El CSV necesita una columna de correo o de celular.', 'err');
+          if (mapa.tipo === 'contactos' && mapa.email < 0 && mapa.celular < 0 && mapa.rut < 0) return aviso('El CSV necesita una columna de correo, celular o RUT.', 'err');
           S.importar = { cabeceras: datos.cabeceras, filas: datos.filas, mapa: mapa };
           pintar();
         };
@@ -1263,7 +1439,8 @@ cuerpoHtml(personalizar(texto, contacto)) +
     if ($('utwi-cerrar-ficha')) $('utwi-cerrar-ficha').onclick = function () { S.ficha = null; pintar(); };
     if ($('utwi-f-guardar')) $('utwi-f-guardar').onclick = function () {
       guardarContacto({ nombre: $('utwi-f-nombre').value, email: $('utwi-f-email').value || null,
-        celular: $('utwi-f-celular').value || null, notas: $('utwi-f-notas').value }, S.ficha.id);
+        celular: $('utwi-f-celular').value || null, rut: rutNormalizar($('utwi-f-rut').value) || null,
+        comuna: $('utwi-f-comuna').value || null, notas: $('utwi-f-notas').value }, S.ficha.id);
     };
     if ($('utwi-f-baja')) $('utwi-f-baja').onclick = function () {
       guardarContacto({ baja: !S.ficha.baja }, S.ficha.id);
