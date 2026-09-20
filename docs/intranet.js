@@ -218,6 +218,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     vista: 'resumen',
     contactos: [], total: 0, q: '', origen: '', etiqueta: '', compras: '', sel: {}, ficha: null,
     segmentos: [], plantillas: [], campanas: [], historial: [], cola: null, metricas: null,
+    etiquetas: [],
     campana: null, adjuntos: [], previa: 'escritorio',
     importar: null,
     msj: '', err: false, ocupado: false, confirmar: false, progreso: '',
@@ -282,6 +283,15 @@ cuerpoHtml(personalizar(texto, contacto)) +
     '.utwi .chip.on{background:var(--tx);border-color:var(--tx);color:#fff}',
     '.utwi .tag{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;margin:2px 4px 2px 0;border-radius:999px;background:#eef1f5;color:#48505c;font-size:11.5px}',
     '.utwi .tag button{border:0;background:transparent;color:inherit;cursor:pointer;font-size:13px;line-height:1;padding:0}',
+    '.utwi .tag.vino{background:#fdeef1;color:#a1102f}',
+    '.utwi .tag.dorado{background:#fdf3e3;color:#8a5b00}',
+    '.utwi .tag.verde{background:#e8f6ef;color:#0b7a4b}',
+    '.utwi .tag.azul{background:#e8f1fd;color:#13538f}',
+    '.utwi .tag.morado{background:#f1ecfd;color:#5b3aa8}',
+    '.utwi .tag.naranjo{background:#fdf0e8;color:#9a4a12}',
+    '.utwi .acciones{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;padding:10px 13px;border:1px solid var(--crim);border-radius:11px;background:var(--crimSoft)}',
+    '.utwi .acciones select{width:auto;min-width:170px}',
+    '.utwi .punto-color{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:7px;vertical-align:-1px}',
     '.utwi .pill{display:inline-block;padding:3px 9px;border-radius:999px;font-size:11.5px;font-weight:600}',
     '.utwi .pill.ok{background:var(--okSoft);color:var(--ok)}',
     '.utwi .pill.warn{background:var(--warnSoft);color:var(--warn)}',
@@ -351,7 +361,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     sb.from('profiles').select('admin').eq('id', sesion.user.id).maybeSingle().then(function (r) {
       S.admin = !!(r.data && r.data.admin);
       pintar();
-      if (S.admin) { cargarContactos(); cargarPlantillas(); cargarSegmentos(); cargarCampanas(); cargarMetricas(); cargarCola(); }
+      if (S.admin) { cargarContactos(); cargarPlantillas(); cargarSegmentos(); cargarCampanas(); cargarMetricas(); cargarCola(); cargarEtiquetas(); }
     });
   }
 
@@ -438,10 +448,67 @@ cuerpoHtml(personalizar(texto, contacto)) +
     });
   }
 
-  function etiquetasConocidas() {
-    var vistas = {};
-    S.contactos.forEach(function (c) { (c.etiquetas || []).forEach(function (e) { vistas[e] = (vistas[e] || 0) + 1; }); });
-    return Object.keys(vistas).sort();
+  function cargarEtiquetas() {
+    return sb.rpc('crm_etiquetas').then(function (r) {
+      S.etiquetas = r.error ? [] : (r.data || []);
+      pintar();
+    });
+  }
+
+  function colorDe(nombre) {
+    var e = S.etiquetas.filter(function (x) { return x.nombre === nombre; })[0];
+    return (e && e.color) || 'gris';
+  }
+
+  function tag(nombre, extra) {
+    return '<span class="tag ' + colorDe(nombre) + '">' + esc(nombre) + (extra || '') + '</span>';
+  }
+
+  // Etiquetar o desetiquetar todo lo seleccionado de una vez.
+  function etiquetarSeleccion(etiqueta, quitar) {
+    var ids = Object.keys(S.sel).filter(function (k) { return S.sel[k]; }).map(Number);
+    if (!ids.length || !etiqueta) return;
+    sb.rpc('crm_etiquetar', { p_ids: ids, p_etiqueta: etiqueta, p_quitar: !!quitar }).then(function (r) {
+      if (r.error) return aviso(r.error.message, 'err');
+      aviso((quitar ? 'Quitamos' : 'Pusimos') + ' "' + etiqueta + '" en ' + r.data + ' contacto(s).');
+      cargarContactos(); cargarEtiquetas();
+    });
+  }
+
+  function renombrarEtiqueta(vieja) {
+    var nueva = window.prompt('Nuevo nombre para "' + vieja + '" (cambia en todos los contactos)', vieja);
+    if (!nueva || !nueva.trim() || nueva.trim() === vieja) return;
+    sb.rpc('crm_renombrar_etiqueta', { p_vieja: vieja, p_nueva: nueva.trim() }).then(function (r) {
+      if (r.error) return aviso(r.error.message, 'err');
+      aviso('Renombrada en ' + r.data + ' contacto(s).');
+      if (S.etiqueta === vieja) S.etiqueta = nueva.trim();
+      cargarContactos(); cargarEtiquetas();
+    });
+  }
+
+  function borrarEtiqueta(nombre, cuantos) {
+    if (!window.confirm('¿Eliminar la etiqueta "' + nombre + '"?\n\nSe la quitamos a ' + cuantos + ' contacto(s). Los contactos NO se borran.')) return;
+    sb.rpc('crm_borrar_etiqueta', { p_nombre: nombre }).then(function (r) {
+      if (r.error) return aviso(r.error.message, 'err');
+      aviso('Etiqueta eliminada de ' + r.data + ' contacto(s).');
+      if (S.etiqueta === nombre) S.etiqueta = '';
+      cargarContactos(); cargarEtiquetas();
+    });
+  }
+
+  function colorEtiqueta(nombre, color) {
+    sb.rpc('crm_color_etiqueta', { p_nombre: nombre, p_color: color }).then(function (r) {
+      if (r.error) return aviso(r.error.message, 'err');
+      cargarEtiquetas();
+    });
+  }
+
+  function crearEtiqueta(nombre, color) {
+    return sb.from('etiquetas').insert({ nombre: nombre, color: color || 'gris' }).then(function (r) {
+      if (r.error) return aviso(/duplicate|unique/i.test(r.error.message) ? 'Esa etiqueta ya existe.' : r.error.message, 'err');
+      aviso('Etiqueta "' + nombre + '" creada. Ya puedes ponérsela a los contactos.');
+      cargarEtiquetas();
+    });
   }
 
   // ==========================================================================
@@ -677,9 +744,10 @@ cuerpoHtml(personalizar(texto, contacto)) +
   // ==========================================================================
 
   var MENU = [
-    ['resumen', 'Resumen'], ['contactos', 'Contactos'], ['campanas', 'Campañas'],
-    ['plantillas', 'Plantillas'], ['historial', 'Historial'],
+    ['resumen', 'Resumen'], ['contactos', 'Contactos'], ['etiquetas', 'Etiquetas'],
+    ['campanas', 'Campañas'], ['plantillas', 'Plantillas'], ['historial', 'Historial'],
   ];
+  var COLORES = ['gris', 'vino', 'dorado', 'verde', 'azul', 'morado', 'naranjo'];
 
   function pintar() {
     if (!S.listo) return;
@@ -695,12 +763,14 @@ cuerpoHtml(personalizar(texto, contacto)) +
     var nav = MENU.map(function (m) {
       var n = m[0] === 'contactos' ? (S.metricas ? S.metricas.total : S.contactos.length)
         : m[0] === 'campanas' ? S.campanas.length
+        : m[0] === 'etiquetas' ? S.etiquetas.length
         : m[0] === 'plantillas' ? S.plantillas.length : '';
       return '<button class="nav' + (S.vista === m[0] || (S.vista === 'campana' && m[0] === 'campanas') ? ' on' : '') + '" data-vista="' + m[0] + '">' +
         m[1] + (n !== '' ? '<span class="n">' + n + '</span>' : '') + '</button>';
     }).join('');
 
     var contenido = S.vista === 'resumen' ? vistaResumen()
+      : S.vista === 'etiquetas' ? vistaEtiquetas()
       : S.vista === 'contactos' ? vistaContactos()
       : S.vista === 'campanas' ? vistaCampanas()
       : S.vista === 'campana' ? vistaEditor()
@@ -786,7 +856,6 @@ cuerpoHtml(personalizar(texto, contacto)) +
         return '<button class="chip' + (S[campo] === o[0] ? ' on' : '') + '" data-filtro="' + campo + '" data-valor="' + o[0] + '">' + o[1] + '</button>';
       }).join('');
     };
-    var etiquetas = etiquetasConocidas();
 
     var filas = S.contactos.map(function (c) {
       var dias = diasDesde(c.ultima_compra);
@@ -796,11 +865,15 @@ cuerpoHtml(personalizar(texto, contacto)) +
         (c.baja ? ' <span class="pill warn">baja</span>' : '') +
         '<div class="mini">' + esc([c.email, c.celular].filter(Boolean).join(' · ') || 'sin correo ni celular') + '</div></td>' +
         '<td class="dim">' + (c.origen || []).join(', ') + '</td>' +
-        '<td>' + ((c.etiquetas || []).map(function (e) { return '<span class="tag">' + esc(e) + '</span>'; }).join('') || '<span class="mini">—</span>') + '</td>' +
+        '<td>' + ((c.etiquetas || []).map(function (e) { return tag(e); }).join('') || '<span class="mini">—</span>') + '</td>' +
         '<td class="dim">' + (c.n_pedidos ? c.n_pedidos + ' · ' + plata(c.total_gastado) : '—') + '</td>' +
         '<td class="dim">' + (dias == null ? '—' : dias + ' días') + '</td>' +
         '<td style="text-align:right"><button class="btn sec mini" data-ficha="' + c.id + '">Ver</button></td></tr>';
     }).join('') || '<tr><td colspan="7" class="dim" style="padding:18px">Sin contactos con estos filtros.</td></tr>';
+
+    var opcionesEtiqueta = S.etiquetas.map(function (e) {
+      return '<option value="' + esc(e.nombre) + '">' + esc(e.nombre) + ' (' + e.n + ')</option>';
+    }).join('');
 
     return '<div class="cab"><h1>Contactos</h1><div class="sp">' +
       '<button class="btn sec" id="utwi-importar">Importar CSV</button>' +
@@ -810,6 +883,13 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '</div></div>' +
 
       (S.importar ? panelImportar() : '') +
+
+      /* acciones sobre lo seleccionado: etiquetar es lo que más se usa */
+      (sel.length ? '<div class="acciones"><b>' + sel.length + ' seleccionados</b>' +
+        '<select id="utwi-poner-etiqueta"><option value="">Poner etiqueta…</option>' + opcionesEtiqueta +
+        '<option value="__nueva__">+ Etiqueta nueva…</option></select>' +
+        '<select id="utwi-quitar-etiqueta"><option value="">Quitar etiqueta…</option>' + opcionesEtiqueta + '</select>' +
+        '<button class="btn sec mini" id="utwi-limpiar-sel">Quitar selección</button></div>' : '') +
 
       '<div class="card" style="margin-bottom:12px">' +
       '<div class="grid g2"><input id="utwi-buscar" placeholder="Buscar por nombre, correo o celular" value="' + esc(S.q) + '">' +
@@ -821,7 +901,11 @@ cuerpoHtml(personalizar(texto, contacto)) +
       chips('origen', [['', 'Todos'], ['app', 'Socios'], ['jumpseller', 'Tienda'], ['manual', 'A mano']]) +
       '<span style="width:12px"></span>' +
       chips('compras', [['', 'Compren o no'], ['con', 'Con compras'], ['sin', 'Sin compras'], ['dormidos', 'Dormidos 90 días']]) +
-      (etiquetas.length ? '<span style="width:12px"></span>' + chips('etiqueta', [['', 'Toda etiqueta']].concat(etiquetas.map(function (e) { return [e, e]; }))) : '') +
+      '<select id="utwi-filtro-etiqueta" style="width:auto;min-width:170px;margin-left:8px">' +
+      '<option value="">Toda etiqueta</option>' +
+      S.etiquetas.map(function (e) {
+        return '<option value="' + esc(e.nombre) + '"' + (S.etiqueta === e.nombre ? ' selected' : '') + '>' + esc(e.nombre) + ' (' + e.n + ')</option>';
+      }).join('') + '</select>' +
       '</div></div>' +
 
       '<div class="scroll"><table class="tabla">' +
@@ -861,8 +945,10 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '<label class="lbl">Correo</label><input id="utwi-f-email" value="' + esc(c.email || '') + '" inputmode="email">' +
       '<label class="lbl">Celular</label><input id="utwi-f-celular" value="' + esc(c.celular || '') + '" inputmode="tel">' +
       '<label class="lbl">Etiquetas</label><div>' +
-      ((c.etiquetas || []).map(function (e) { return '<span class="tag">' + esc(e) + '<button data-quita-etiqueta="' + esc(e) + '" aria-label="Quitar">×</button></span>'; }).join('') || '<span class="mini">Sin etiquetas</span>') +
-      '</div><div style="display:flex;gap:8px;margin-top:8px"><input id="utwi-f-etiqueta" placeholder="club, mayorista, vip…" style="flex:1"><button class="btn sec mini" id="utwi-add-etiqueta">Agregar</button></div>' +
+      ((c.etiquetas || []).map(function (e) { return tag(e, '<button data-quita-etiqueta="' + esc(e) + '" aria-label="Quitar">×</button>'); }).join('') || '<span class="mini">Sin etiquetas</span>') +
+      '</div><div style="display:flex;gap:8px;margin-top:8px"><input id="utwi-f-etiqueta" list="utwi-lista-etiquetas" placeholder="club, mayorista, vip…" style="flex:1">' +
+      '<datalist id="utwi-lista-etiquetas">' + S.etiquetas.map(function (e) { return '<option value="' + esc(e.nombre) + '">'; }).join('') + '</datalist>' +
+      '<button class="btn sec mini" id="utwi-add-etiqueta">Agregar</button></div>' +
       '<label class="lbl">Notas internas</label><textarea id="utwi-f-notas" style="min-height:90px">' + esc(c.notas || '') + '</textarea>' +
       '<div style="display:flex;gap:8px;margin-top:12px">' +
       '<button class="btn" id="utwi-f-guardar">Guardar</button>' +
@@ -875,6 +961,40 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '<div class="dato"><span>Origen</span><b>' + (c.origen || []).join(', ') + '</b></div>' +
       '<h3 style="margin-top:20px">Mensajes</h3>' + mensajes +
       '</div>';
+  }
+
+  // ---------- Etiquetas ----------
+  function vistaEtiquetas() {
+    var filas = S.etiquetas.map(function (e) {
+      var opciones = COLORES.map(function (c) {
+        return '<option value="' + c + '"' + (e.color === c ? ' selected' : '') + '>' + c + '</option>';
+      }).join('');
+      return '<tr><td>' + tag(e.nombre) + '</td>' +
+        '<td><select data-color="' + esc(e.nombre) + '" style="width:auto">' + opciones + '</select></td>' +
+        '<td><b>' + e.n + '</b> <span class="dim">contacto(s)</span></td>' +
+        '<td style="text-align:right">' +
+        '<button class="btn sec mini" data-ver-etiqueta="' + esc(e.nombre) + '">Ver contactos</button> ' +
+        '<button class="btn sec mini" data-escribir-etiqueta="' + esc(e.nombre) + '"' + (e.n ? '' : ' disabled') + '>Escribirles</button> ' +
+        '<button class="btn sec mini" data-renombrar="' + esc(e.nombre) + '">Renombrar</button> ' +
+        '<button class="btn sec mini" data-borrar-etiqueta="' + esc(e.nombre) + '" data-n="' + e.n + '">Eliminar</button></td></tr>';
+    }).join('') || '<tr><td colspan="4" class="dim" style="padding:18px">Sin etiquetas todavía. Crea la primera aquí abajo.</td></tr>';
+
+    var sinUsar = S.etiquetas.filter(function (e) { return !e.n; }).length;
+
+    return '<div class="cab"><h1>Etiquetas</h1><div class="sp">' +
+      '<button class="btn sec" data-vista="contactos">Ir a contactos</button></div></div>' +
+      '<div class="scroll"><table class="tabla">' +
+      '<thead><tr><th>Etiqueta</th><th>Color</th><th>Uso</th><th></th></tr></thead>' +
+      '<tbody>' + filas + '</tbody></table></div>' +
+      '<p class="ayuda">Renombrar cambia la etiqueta en todos los contactos de una vez. Eliminar se la quita a todos, pero no borra ningún contacto.' +
+      (sinUsar ? ' Hay ' + sinUsar + ' etiqueta(s) sin usar.' : '') + '</p>' +
+
+      '<div class="card" style="margin-top:14px;max-width:520px"><h3>Nueva etiqueta</h3>' +
+      '<div style="display:flex;gap:8px;margin-top:10px">' +
+      '<input id="utwi-nueva-etiqueta" placeholder="club, mayorista, horeca, vip…" style="flex:1">' +
+      '<select id="utwi-nuevo-color" style="width:auto">' + COLORES.map(function (c) { return '<option value="' + c + '">' + c + '</option>'; }).join('') + '</select>' +
+      '<button class="btn" id="utwi-crear-etiqueta">Crear</button></div>' +
+      '<p class="ayuda">También puedes crear etiquetas sobre la marcha: selecciona contactos y usa "Poner etiqueta → + Etiqueta nueva".</p></div>';
   }
 
   // ---------- Campañas ----------
@@ -1162,6 +1282,53 @@ cuerpoHtml(personalizar(texto, contacto)) +
         var e = b.getAttribute('data-quita-etiqueta');
         guardarContacto({ etiquetas: (S.ficha.etiquetas || []).filter(function (x) { return x !== e; }) }, S.ficha.id);
       };
+    });
+
+    // ---- etiquetas ----
+    if ($('utwi-filtro-etiqueta')) $('utwi-filtro-etiqueta').onchange = function () {
+      S.etiqueta = this.value; cargarContactos();
+    };
+    if ($('utwi-poner-etiqueta')) $('utwi-poner-etiqueta').onchange = function () {
+      var v = this.value; this.value = '';
+      if (v === '__nueva__') {
+        var nueva = window.prompt('Nombre de la etiqueta nueva');
+        if (nueva && nueva.trim()) etiquetarSeleccion(nueva.trim(), false);
+        return;
+      }
+      if (v) etiquetarSeleccion(v, false);
+    };
+    if ($('utwi-quitar-etiqueta')) $('utwi-quitar-etiqueta').onchange = function () {
+      var v = this.value; this.value = '';
+      if (v) etiquetarSeleccion(v, true);
+    };
+    if ($('utwi-limpiar-sel')) $('utwi-limpiar-sel').onclick = function () { S.sel = {}; pintar(); };
+    if ($('utwi-crear-etiqueta')) $('utwi-crear-etiqueta').onclick = function () {
+      var n = ($('utwi-nueva-etiqueta').value || '').trim();
+      if (!n) return aviso('Escribe el nombre de la etiqueta.', 'err');
+      crearEtiqueta(n, $('utwi-nuevo-color').value);
+    };
+    cada('[data-color]', function (sel) {
+      sel.onchange = function () { colorEtiqueta(sel.getAttribute('data-color'), sel.value); };
+    });
+    cada('[data-ver-etiqueta]', function (b) {
+      b.onclick = function () {
+        S.etiqueta = b.getAttribute('data-ver-etiqueta'); S.vista = 'contactos';
+        cargarContactos();
+      };
+    });
+    cada('[data-escribir-etiqueta]', function (b) {
+      b.onclick = function () {
+        var e = b.getAttribute('data-escribir-etiqueta');
+        consulta({ etiqueta: e }).then(function (r) {
+          nuevaCampana({ nombre: 'A los de ' + e, destinatarios: (r.data || []).map(function (c) { return c.id; }) });
+        });
+      };
+    });
+    cada('[data-renombrar]', function (b) {
+      b.onclick = function () { renombrarEtiqueta(b.getAttribute('data-renombrar')); };
+    });
+    cada('[data-borrar-etiqueta]', function (b) {
+      b.onclick = function () { borrarEtiqueta(b.getAttribute('data-borrar-etiqueta'), b.getAttribute('data-n')); };
     });
 
     // ---- campañas ----
