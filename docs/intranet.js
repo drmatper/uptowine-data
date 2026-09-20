@@ -331,6 +331,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     picker: null,   // panel de destinatarios: { todos: [], q: '' }
     nombres: {},    // id -> nombre, para mostrar los destinatarios elegidos
     plantillaEdit: null,   // copia de la plantilla abierta en la vista Plantillas
+    recuperar: false,      // true mientras se elige una clave nueva (enlace de recuperacion)
     importar: null,
     msj: '', err: false, ocupado: false, confirmar: false, progreso: '',
   };
@@ -469,7 +470,11 @@ cuerpoHtml(personalizar(texto, contacto)) +
   cdn.onload = function () {
     sb = window.supabase.createClient(SB_URL, SB_ANON, { auth: { persistSession: true, autoRefreshToken: true } });
     sb.auth.getSession().then(function (r) { entrar(r.data.session); });
-    sb.auth.onAuthStateChange(function (_e, ses) { entrar(ses); });
+    sb.auth.onAuthStateChange(function (evento, ses) {
+      // el enlace del correo de recuperacion abre la intranet con una sesion temporal: pedimos la clave nueva
+      if (evento === 'PASSWORD_RECOVERY') S.recuperar = true;
+      entrar(ses);
+    });
   };
   document.head.appendChild(cdn);
 
@@ -978,6 +983,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
   function pintar() {
     if (!S.listo) return;
     if (!S.sesion) return vistaLogin();
+    if (S.recuperar) return vistaNuevaClave();
     if (!S.admin) {
       host.innerHTML = '<div class="utwi"><div class="panel"><h1>Solo administración</h1>' +
         '<p class="dim" style="margin:10px 0 16px">Esta sección es para el equipo de Up to Wine.</p>' +
@@ -1030,10 +1036,22 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '<form class="card" id="utwi-login" style="margin-top:14px">' +
       '<label class="lbl" for="utwi-email">Correo</label><input id="utwi-email" type="email" autocomplete="username" inputmode="email" required>' +
       '<label class="lbl" for="utwi-clave">Contraseña</label><input id="utwi-clave" type="password" autocomplete="current-password" required>' +
-      '<div style="margin-top:16px"><button class="btn" type="submit" id="utwi-entrar">Entrar</button></div>' +
+      '<div style="margin-top:16px;display:flex;gap:14px;align-items:center"><button class="btn" type="submit" id="utwi-entrar">Entrar</button>' +
+      '<a href="#" id="utwi-olvide" class="dim" style="font-size:13px">¿Olvidaste tu contraseña?</a></div>' +
       '<p class="msj" id="utwi-login-msj" style="margin-top:12px"></p></form></div></div>';
     var email = document.getElementById('utwi-email'), clave = document.getElementById('utwi-clave');
     var boton = document.getElementById('utwi-entrar'), salida = document.getElementById('utwi-login-msj');
+    document.getElementById('utwi-olvide').onclick = function (ev) {
+      ev.preventDefault();
+      var correo = email.value.trim();
+      if (!correo) { salida.className = 'msj err'; salida.textContent = 'Escribe tu correo arriba y vuelve a pulsar el enlace.'; email.focus(); return; }
+      salida.className = 'msj'; salida.textContent = 'Enviando…';
+      sb.auth.resetPasswordForEmail(correo, { redirectTo: 'https://uptowine.cl/intranet' }).then(function (r) {
+        salida.className = r.error ? 'msj err' : 'msj';
+        salida.textContent = r.error ? 'No pudimos enviar el correo: ' + r.error.message
+          : 'Si ese correo tiene cuenta, te llegará un enlace para elegir una contraseña nueva. Revisa también el spam.';
+      });
+    };
     document.getElementById('utwi-login').onsubmit = function (ev) {
       ev.preventDefault();
       boton.disabled = true; salida.className = 'msj'; salida.textContent = 'Entrando…';
@@ -1043,6 +1061,31 @@ cuerpoHtml(personalizar(texto, contacto)) +
       }, function () {
         boton.disabled = false;
         salida.className = 'msj err'; salida.textContent = 'Sin conexión con el servidor. Reintenta.';
+      });
+    };
+  }
+
+  // pantalla que abre el enlace del correo de recuperacion
+  function vistaNuevaClave() {
+    host.innerHTML = '<div class="utwi"><div class="panel" style="max-width:420px;margin:26px auto">' +
+      '<h1>Contraseña nueva</h1><p class="dim" style="margin:6px 0 4px">Elige la clave con la que entrarás a la intranet.</p>' +
+      '<form class="card" id="utwi-nueva" style="margin-top:14px">' +
+      '<label class="lbl" for="utwi-clave1">Contraseña nueva</label><input id="utwi-clave1" type="password" autocomplete="new-password" minlength="8" required>' +
+      '<label class="lbl" for="utwi-clave2">Repítela</label><input id="utwi-clave2" type="password" autocomplete="new-password" minlength="8" required>' +
+      '<div style="margin-top:16px"><button class="btn" type="submit" id="utwi-cambiar">Guardar y entrar</button></div>' +
+      '<p class="msj" id="utwi-nueva-msj" style="margin-top:12px"></p></form></div></div>';
+    var c1 = document.getElementById('utwi-clave1'), c2 = document.getElementById('utwi-clave2');
+    var boton = document.getElementById('utwi-cambiar'), salida = document.getElementById('utwi-nueva-msj');
+    document.getElementById('utwi-nueva').onsubmit = function (ev) {
+      ev.preventDefault();
+      if (c1.value !== c2.value) { salida.className = 'msj err'; salida.textContent = 'Las dos contraseñas no coinciden.'; return; }
+      boton.disabled = true; salida.className = 'msj'; salida.textContent = 'Guardando…';
+      sb.auth.updateUser({ password: c1.value }).then(function (r) {
+        boton.disabled = false;
+        if (r.error) { salida.className = 'msj err'; salida.textContent = 'No se pudo guardar: ' + r.error.message; return; }
+        S.recuperar = false;
+        if (window.history && window.history.replaceState) window.history.replaceState(null, '', window.location.pathname);
+        aviso('Contraseña actualizada.');
       });
     };
   }
