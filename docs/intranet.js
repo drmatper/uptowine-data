@@ -322,6 +322,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     etiquetas: [],
     campana: null, adjuntos: [], previa: 'escritorio',
     picker: null,   // panel de destinatarios: { todos: [], q: '' }
+    nombres: {},    // id -> nombre, para mostrar los destinatarios elegidos
     importar: null,
     msj: '', err: false, ocupado: false, confirmar: false, progreso: '',
   };
@@ -506,7 +507,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
   function cargarContactos() {
     return consulta(filtroActual()).then(function (r) {
       if (r.error) return aviso('No pudimos leer los contactos: ' + r.error.message, 'err');
-      S.contactos = r.data || []; pintar();
+      S.contactos = r.data || []; recordarNombres(S.contactos); pintar();
     });
   }
 
@@ -771,7 +772,19 @@ cuerpoHtml(personalizar(texto, contacto)) +
   function abrirPicker() {
     S.picker = { todos: [], q: '', cargando: true }; pintar();
     consulta({ q: '', origen: '', etiqueta: '', compras: '', club: '' }).then(function (r) {
-      S.picker.todos = r.data || []; S.picker.cargando = false; pintar();
+      S.picker.todos = r.data || []; recordarNombres(S.picker.todos); S.picker.cargando = false; pintar();
+    });
+  }
+  function recordarNombres(lista) {
+    lista.forEach(function (c) { S.nombres[c.id] = c.nombre || c.email || c.celular || '(sin nombre)'; });
+  }
+  // campañas del historial traen ids sin nombre: los pedimos una vez
+  function completarNombres(ids) {
+    var faltan = ids.filter(function (id) { return !S.nombres[id]; });
+    if (!faltan.length) return;
+    faltan.forEach(function (id) { S.nombres[id] = '…'; });
+    sb.from('contactos').select('id,nombre,email,celular').in('id', faltan).then(function (r) {
+      recordarNombres(r.data || []); pintar();
     });
   }
   function elegidosSet() {
@@ -1330,6 +1343,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
       return '<option value="' + s.id + '"' + (String(c.segmento_id) === String(s.id) ? ' selected' : '') + '>' + esc(s.nombre) + '</option>';
     }).join('');
     var nSel = (c.destinatarios || []).length;
+    if (nSel) completarNombres(c.destinatarios);
 
     var adjuntos = S.adjuntos.map(function (a, i) {
       return '<span class="tag">📎 ' + esc(a.nombre) + ' · ' + Math.round(a.bytes / 1024) + ' KB<button data-quita="' + i + '" aria-label="Quitar">×</button></span>';
@@ -1358,6 +1372,9 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '<span class="dim">' + (c.segmento_id
         ? 'segmento guardado: <b>' + esc((S.segmentos.filter(function (x) { return String(x.id) === String(c.segmento_id); })[0] || {}).nombre || '') + '</b>'
         : nSel ? '<b>' + nSel + '</b> contacto(s) elegidos a mano' : 'nadie todavía') + '</span></div>' +
+      (nSel && !c.segmento_id ? '<div style="margin-top:6px">' + c.destinatarios.map(function (id) {
+        return '<span class="tag">' + esc(S.nombres[id] || '…') + '<button data-quita-dest="' + id + '" aria-label="Quitar">×</button></span>';
+      }).join('') + '</div>' : '') +
       (S.segmentos.length ? '<select id="utwi-destinatarios" style="margin-top:8px"><option value="">…o usar un segmento guardado</option>' + opcionesSeg + '</select>' : '') +
 
       (esCorreo ? '<label class="lbl" for="utwi-asunto">Asunto</label>' +
@@ -1712,6 +1729,11 @@ cuerpoHtml(personalizar(texto, contacto)) +
       if (S.confirmar) enviarCampana(); else { S.confirmar = true; pintar(); }
     };
     if ($('utwi-archivo')) $('utwi-archivo').onchange = function () { sumarAdjuntos(this.files); this.value = ''; };
+    cada('[data-quita-dest]', function (b) {
+      b.onclick = function () {
+        var set = elegidosSet(); delete set[b.getAttribute('data-quita-dest')]; fijarDestinatarios(set); pintar();
+      };
+    });
     cada('[data-quita]', function (b) {
       b.onclick = function () { S.adjuntos.splice(Number(b.getAttribute('data-quita')), 1); pintar(); };
     });
