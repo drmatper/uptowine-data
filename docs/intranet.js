@@ -321,6 +321,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     segmentos: [], plantillas: [], campanas: [], historial: [], cola: null, metricas: null,
     etiquetas: [],
     campana: null, adjuntos: [], previa: 'escritorio',
+    picker: null,   // panel de destinatarios: { todos: [], q: '' }
     importar: null,
     msj: '', err: false, ocupado: false, confirmar: false, progreso: '',
   };
@@ -423,6 +424,13 @@ cuerpoHtml(personalizar(texto, contacto)) +
     /* ficha lateral */
     '.utwi .velo{position:fixed;inset:0;z-index:99998;background:rgba(17,24,39,.35)}',
     '.utwi .ficha{position:fixed;top:0;right:0;bottom:0;z-index:99999;width:min(430px,100%);padding:20px;overflow:auto;background:#fff;box-shadow:-10px 0 40px rgba(0,0,0,.18)}',
+    '.utwi .ficha.ancha{width:min(560px,100%)}',
+    '.utwi .grupo{display:flex;align-items:center;gap:9px;padding:7px 4px;border-top:1px solid #f0f2f5;font-size:13.5px}',
+    '.utwi .grupo input[type=checkbox]{width:16px;height:16px;flex:0 0 auto;accent-color:var(--crim)}',
+    '.utwi .grupo>div{flex:1;min-width:0}',
+    '.utwi .grupo .n{color:var(--tx2);font-size:12px}',
+    '.utwi .grupo .sp{margin-left:auto}',
+    '.utwi .pie{position:sticky;bottom:-20px;margin:16px -20px -20px;padding:12px 20px;background:#fff;border-top:1px solid var(--linea);display:flex;gap:8px;align-items:center}',
     '.utwi .dato{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid #f0f2f5;font-size:13.5px}',
     '.utwi .dato span{color:var(--tx2)}',
     '@media(max-width:1000px){.utwi .cuerpo{grid-template-columns:1fr}.utwi .lado{display:flex;gap:6px;overflow:auto;border-right:0;border-bottom:1px solid var(--linea)}.utwi .nav{width:auto;margin:0;white-space:nowrap}.utwi .nav .n{margin-left:6px}.utwi .g4,.utwi .g3,.utwi .g2{grid-template-columns:1fr 1fr}}',
@@ -759,6 +767,31 @@ cuerpoHtml(personalizar(texto, contacto)) +
     });
   }
 
+  // ---- destinatarios ----
+  function abrirPicker() {
+    S.picker = { todos: [], q: '', cargando: true }; pintar();
+    consulta({ q: '', origen: '', etiqueta: '', compras: '', club: '' }).then(function (r) {
+      S.picker.todos = r.data || []; S.picker.cargando = false; pintar();
+    });
+  }
+  function elegidosSet() {
+    var set = {};
+    (S.campana.destinatarios || []).forEach(function (id) { set[id] = true; });
+    return set;
+  }
+  function fijarDestinatarios(set) {
+    S.campana.destinatarios = Object.keys(set).filter(function (k) { return set[k]; }).map(Number);
+    S.campana.segmento_id = null;   // la eleccion a mano manda sobre el segmento
+    S.confirmar = false;
+  }
+  // agrega o quita de golpe un grupo (una etiqueta, un estado del club)
+  function alternarGrupo(ids) {
+    var set = elegidosSet();
+    var todos = ids.length && ids.every(function (id) { return set[id]; });
+    ids.forEach(function (id) { set[id] = !todos; });
+    fijarDestinatarios(set); pintar();
+  }
+
   // ---- campañas ----
   function nuevaCampana(base) {
     S.campana = Object.assign({}, VACIA, base || {});
@@ -962,6 +995,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '<div class="cuerpo"><div class="lado">' + nav + '</div>' +
       '<div class="panel"><p class="msj ' + (S.err ? 'err' : '') + '">' + esc(S.msj) + '</p>' + contenido + '</div></div>' +
       (S.ficha ? fichaContacto() : '') +
+      (S.picker && S.vista === 'campana' ? panelDestinatarios() : '') +
       '</div>';
     Array.prototype.forEach.call(host.querySelectorAll(SCROLLS), function (el, i) { if (scrolls[i]) el.scrollTop = scrolls[i]; });
     if (scrollY) window.scrollTo(0, scrollY);
@@ -1221,6 +1255,53 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '<p class="ayuda">También puedes crear etiquetas sobre la marcha: selecciona contactos y usa "Poner etiqueta → + Etiqueta nueva".</p></div>';
   }
 
+  // ---------- Panel de destinatarios ----------
+  function panelDestinatarios() {
+    var pk = S.picker, set = elegidosSet(), todos = pk.todos || [];
+    var n = Object.keys(set).length;
+    var q = (pk.q || '').toLowerCase().trim();
+
+    // grupos por etiqueta y por estado del club, con sus ids
+    var porEtiqueta = {}, porClub = {};
+    todos.forEach(function (c) {
+      (c.etiquetas || []).forEach(function (e) { (porEtiqueta[e] = porEtiqueta[e] || []).push(c.id); });
+      if (c.club_estado) (porClub[c.club_estado] = porClub[c.club_estado] || []).push(c.id);
+    });
+    var fila = function (clave, nombre, ids, etiqueta) {
+      var todosIn = ids.every(function (id) { return set[id]; });
+      var algunos = !todosIn && ids.some(function (id) { return set[id]; });
+      return '<div class="grupo"><input type="checkbox" data-grupo="' + clave + '"' + (todosIn ? ' checked' : '') + ' aria-label="' + esc(nombre) + '">' +
+        (etiqueta ? tag(nombre) : '<b>' + esc(nombre) + '</b>') + '<span class="n">' + ids.length + (algunos ? ' · algunos' : '') + '</span></div>';
+    };
+    var grupos = Object.keys(porEtiqueta).sort().map(function (e) { return fila('etiqueta:' + e, e, porEtiqueta[e], true); }).join('') ||
+      '<p class="mini">Sin etiquetas todavía.</p>';
+    var club = ['al_dia', 'moroso', 'inactivo', 'baja'].filter(function (k) { return porClub[k]; })
+      .map(function (k) { return fila('club:' + k, ESTADO_CLUB[k], porClub[k]); }).join('') || '<p class="mini">Sin socios del club sincronizados.</p>';
+
+    var visibles = todos.filter(function (c) {
+      return !q || (c.nombre || '').toLowerCase().indexOf(q) !== -1 || (c.email || '').toLowerCase().indexOf(q) !== -1 || (c.celular || '').indexOf(q) !== -1;
+    });
+    var lista = visibles.slice(0, 200).map(function (c) {
+      var sinCanal = S.campana.canal === 'correo' ? !c.email : !fonoWhatsApp(c.celular);
+      return '<div class="grupo"><input type="checkbox" data-pk-id="' + c.id + '"' + (set[c.id] ? ' checked' : '') + ' aria-label="' + esc(c.nombre) + '">' +
+        '<div style="flex:1;min-width:0"><div>' + esc(c.nombre || '(sin nombre)') + (c.club_estado ? ' <span class="mini">· ' + ESTADO_CLUB[c.club_estado] + '</span>' : '') + '</div>' +
+        '<div class="mini">' + esc([c.email, c.celular].filter(Boolean).join(' · ')) + (sinCanal ? ' · <span class="err">sin ' + (S.campana.canal === 'correo' ? 'correo' : 'celular') + '</span>' : '') + '</div></div>' +
+        ((c.etiquetas || []).slice(0, 2).map(function (e) { return tag(e); }).join('')) + '</div>';
+    }).join('') + (visibles.length > 200 ? '<p class="mini">…y ' + (visibles.length - 200) + ' más: afina la búsqueda.</p>' : '');
+
+    return '<div class="velo" id="utwi-velo-pk"></div><div class="ficha ancha">' +
+      '<div class="cab"><h1>Destinatarios · ' + n + '</h1><div class="sp"><button class="btn mini" id="utwi-pk-listo">Listo</button></div></div>' +
+      (pk.cargando ? '<p class="dim">Cargando contactos…</p>' :
+      '<h3>Por etiqueta</h3><p class="mini" style="margin:2px 0 6px">Marca una etiqueta para agregar a todos los que la tienen.</p>' + grupos +
+      '<h3 style="margin-top:18px">Por estado en el club</h3>' + club +
+      '<h3 style="margin-top:18px">Uno por uno</h3>' +
+      '<input id="utwi-pk-buscar" placeholder="Buscar por nombre, correo o celular" value="' + esc(pk.q || '') + '" style="margin:8px 0 4px">' +
+      '<div class="row" style="margin:6px 0"><button class="btn sec mini" id="utwi-pk-visibles">Marcar los ' + Math.min(visibles.length, 200) + ' visibles</button>' +
+      '<button class="btn sec mini" id="utwi-pk-limpiar">Quitar todos</button></div>' + lista) +
+      '<div class="pie"><b>' + n + ' elegidos</b><span class="dim">' + (S.campana.canal === 'correo' ? 'reciben los que tienen correo' : 'reciben los que tienen celular') + '</span>' +
+      '<button class="btn" id="utwi-pk-listo2" style="margin-left:auto">Listo</button></div></div>';
+  }
+
   // ---------- Campañas ----------
   function vistaCampanas() {
     var filas = S.campanas.map(function (c) {
@@ -1272,11 +1353,12 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '<button class="chip' + (esCorreo ? ' on' : '') + '" data-canal="correo">Correo</button>' +
       '<button class="chip' + (!esCorreo ? ' on' : '') + '" data-canal="whatsapp">WhatsApp</button></div></div></div>' +
 
-      '<label class="lbl" for="utwi-destinatarios">Destinatarios</label>' +
-      '<select id="utwi-destinatarios"><option value="">— elegir —</option>' +
-      (nSel ? '<option value="sel"' + (!c.segmento_id ? ' selected' : '') + '>Selección manual (' + nSel + ' contactos)</option>' : '') +
-      opcionesSeg + '</select>' +
-      '<p class="mini" style="margin-top:5px">Los segmentos se crean en Contactos, guardando un filtro.</p>' +
+      '<label class="lbl">Destinatarios</label>' +
+      '<div class="row"><button class="btn sec" id="utwi-elegir">Elegir destinatarios</button>' +
+      '<span class="dim">' + (c.segmento_id
+        ? 'segmento guardado: <b>' + esc((S.segmentos.filter(function (x) { return String(x.id) === String(c.segmento_id); })[0] || {}).nombre || '') + '</b>'
+        : nSel ? '<b>' + nSel + '</b> contacto(s) elegidos a mano' : 'nadie todavía') + '</span></div>' +
+      (S.segmentos.length ? '<select id="utwi-destinatarios" style="margin-top:8px"><option value="">…o usar un segmento guardado</option>' + opcionesSeg + '</select>' : '') +
 
       (esCorreo ? '<label class="lbl" for="utwi-asunto">Asunto</label>' +
         '<input id="utwi-asunto" value="' + esc(c.asunto || '') + '" placeholder="Lo nuevo en Up to Wine, {nombre}">' : '') +
@@ -1591,11 +1673,39 @@ cuerpoHtml(personalizar(texto, contacto)) +
       clearTimeout(reloj); reloj = setTimeout(refrescarPrevia, 450);
     };
     if ($('utwi-destinatarios')) $('utwi-destinatarios').onchange = function () {
-      if (this.value === 'sel') { S.campana.segmento_id = null; }
-      else if (this.value) { S.campana.segmento_id = Number(this.value); S.campana.destinatarios = []; }
-      else { S.campana.segmento_id = null; }
-      pintar();
+      S.campana.segmento_id = this.value ? Number(this.value) : null;
+      if (this.value) S.campana.destinatarios = [];
+      S.confirmar = false; pintar();
     };
+    if ($('utwi-elegir')) $('utwi-elegir').onclick = abrirPicker;
+    if (S.picker) {
+      var cerrarPk = function () { S.picker = null; pintar(); refrescarPrevia(); };
+      ['utwi-velo-pk', 'utwi-pk-listo', 'utwi-pk-listo2'].forEach(function (id) { if ($(id)) $(id).onclick = cerrarPk; });
+      var pkBuscar = $('utwi-pk-buscar');
+      if (pkBuscar) pkBuscar.oninput = function () { clearTimeout(reloj); reloj = setTimeout(function () { S.picker.q = pkBuscar.value; pintar(); }, 250); };
+      cada('[data-grupo]', function (cb) {
+        cb.onchange = function () {
+          var partes = cb.getAttribute('data-grupo').split(':'), tipo = partes[0], valor = partes.slice(1).join(':');
+          var ids = S.picker.todos.filter(function (c) {
+            return tipo === 'etiqueta' ? (c.etiquetas || []).indexOf(valor) !== -1 : c.club_estado === valor;
+          }).map(function (c) { return c.id; });
+          var set = elegidosSet();
+          ids.forEach(function (id) { set[id] = cb.checked; });
+          fijarDestinatarios(set); pintar();
+        };
+      });
+      cada('[data-pk-id]', function (cb) {
+        cb.onchange = function () { var set = elegidosSet(); set[cb.getAttribute('data-pk-id')] = cb.checked; fijarDestinatarios(set); pintar(); };
+      });
+      if ($('utwi-pk-visibles')) $('utwi-pk-visibles').onclick = function () {
+        var q = (S.picker.q || '').toLowerCase().trim();
+        var ids = S.picker.todos.filter(function (c) {
+          return !q || (c.nombre || '').toLowerCase().indexOf(q) !== -1 || (c.email || '').toLowerCase().indexOf(q) !== -1 || (c.celular || '').indexOf(q) !== -1;
+        }).slice(0, 200).map(function (c) { return c.id; });
+        var set = elegidosSet(); ids.forEach(function (id) { set[id] = true; }); fijarDestinatarios(set); pintar();
+      };
+      if ($('utwi-pk-limpiar')) $('utwi-pk-limpiar').onclick = function () { fijarDestinatarios({}); pintar(); };
+    }
     if ($('utwi-guardar-campana')) $('utwi-guardar-campana').onclick = function () { guardarCampana(); };
     if ($('utwi-prueba')) $('utwi-prueba').onclick = enviarPrueba;
     if ($('utwi-enviar')) $('utwi-enviar').onclick = function () {
