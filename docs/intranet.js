@@ -330,6 +330,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     campana: null, adjuntos: [], previa: 'escritorio',
     picker: null,   // panel de destinatarios: { todos: [], q: '' }
     nombres: {},    // id -> nombre, para mostrar los destinatarios elegidos
+    plantillaEdit: null,   // copia de la plantilla abierta en la vista Plantillas
     importar: null,
     msj: '', err: false, ocupado: false, confirmar: false, progreso: '',
   };
@@ -1404,7 +1405,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
       (adjuntos ? '<div style="margin-top:8px">' + adjuntos + '</div>' : '') +
 
       '<div style="display:flex;gap:8px;margin-top:14px">' +
-      '<button class="btn sec mini" id="utwi-guardar-plantilla">Guardar como plantilla</button>' +
+      '<button class="btn sec mini" id="utwi-guardar-plantilla">' + (c.plantilla_id ? 'Guardar cambios en la plantilla' : 'Guardar como plantilla') + '</button>' +
       '<select id="utwi-usar-plantilla" style="flex:1"><option value="">Cargar una plantilla…</option>' +
       S.plantillas.filter(function (p) { return p.canal === c.canal; })
         .map(function (p) { return '<option value="' + p.id + '">' + esc(p.nombre) + '</option>'; }).join('') +
@@ -1460,11 +1461,22 @@ cuerpoHtml(personalizar(texto, contacto)) +
       return '<tr><td><b>' + esc(p.nombre) + '</b><div class="mini">' + esc((p.cuerpo || '').slice(0, 70).replace(/\n/g, ' ')) + '…</div></td>' +
         '<td>' + (p.canal === 'correo' ? '✉️ Correo' : '💬 WhatsApp') + '</td>' +
         '<td class="dim">' + esc(p.asunto || '—') + '</td><td class="dim">' + fecha(p.actualizado) + '</td>' +
-        '<td style="text-align:right"><button class="btn sec mini" data-plantilla-usar="' + p.id + '">Usar</button> ' +
+        '<td style="text-align:right"><button class="btn sec mini" data-plantilla-editar="' + p.id + '">Editar</button> ' +
+        '<button class="btn sec mini" data-plantilla-usar="' + p.id + '">Usar</button> ' +
         '<button class="btn sec mini" data-plantilla-borrar="' + p.id + '">Archivar</button></td></tr>';
     }).join('') || '<tr><td colspan="5" class="dim" style="padding:18px">Sin plantillas guardadas.</td></tr>';
 
-    return '<div class="cab"><h1>Plantillas</h1><div class="sp"><button class="btn" data-nueva="1">Nueva campaña</button></div></div>' +
+    var e = S.plantillaEdit;
+    var editor = !e ? '' :
+      '<div class="card" style="margin-bottom:16px"><h3 style="margin:0 0 10px">Editar plantilla</h3>' +
+      '<div class="grid g2"><div><label class="lbl" for="utwi-pl-nombre">Nombre</label><input id="utwi-pl-nombre" value="' + esc(e.nombre) + '"></div>' +
+      (e.canal === 'correo' ? '<div><label class="lbl" for="utwi-pl-asunto">Asunto</label><input id="utwi-pl-asunto" value="' + esc(e.asunto || '') + '"></div>' : '<div><label class="lbl">Canal</label><div class="dim" style="padding:9px 0">💬 WhatsApp</div></div>') + '</div>' +
+      '<label class="lbl" for="utwi-pl-cuerpo">Mensaje</label><textarea id="utwi-pl-cuerpo">' + esc(e.cuerpo || '') + '</textarea>' +
+      '<p class="ayuda">Variables: <code>{nombre}</code> <code>{plan}</code> <code>{mes}</code> · lo que va entre <code>[corchetes]</code> se completa en cada envío.</p>' +
+      '<div style="display:flex;gap:8px;margin-top:10px"><button class="btn" id="utwi-pl-guardar"' + (S.ocupado ? ' disabled' : '') + '>Guardar</button>' +
+      '<button class="btn sec" id="utwi-pl-cancelar">Cancelar</button></div></div>';
+
+    return '<div class="cab"><h1>Plantillas</h1><div class="sp"><button class="btn" data-nueva="1">Nueva campaña</button></div></div>' + editor +
       '<div class="scroll"><table class="tabla"><thead><tr><th>Plantilla</th><th>Canal</th><th>Asunto</th><th>Modificada</th><th></th></tr></thead>' +
       '<tbody>' + filas + '</tbody></table></div>' +
       '<h3 style="margin:18px 0 10px">Diseños listos para usar</h3>' +
@@ -1746,22 +1758,52 @@ cuerpoHtml(personalizar(texto, contacto)) +
     });
     if ($('utwi-guardar-plantilla')) $('utwi-guardar-plantilla').onclick = function () {
       if (!S.campana.cuerpo.trim()) return aviso('Escribe el mensaje antes de guardarlo como plantilla.', 'err');
-      var nombre = window.prompt('Nombre de la plantilla', S.campana.nombre || '');
+      if (S.campana.plantilla_id) {   // vino de una plantilla: se actualiza esa, no se crea otra
+        return sb.from('plantillas').update({ asunto: S.campana.canal === 'correo' ? S.campana.asunto : null, cuerpo: S.campana.cuerpo, actualizado: new Date().toISOString() })
+          .eq('id', S.campana.plantilla_id).then(function (r) {
+            if (r.error) return aviso(r.error.message, 'err');
+            aviso('Plantilla actualizada.'); cargarPlantillas();
+          });
+      }
+      var nombre = window.prompt('Nombre de la nueva plantilla', S.campana.nombre || '');
       if (nombre && nombre.trim()) guardarPlantillaDesdeCampana(nombre.trim());
     };
     if ($('utwi-usar-plantilla')) $('utwi-usar-plantilla').onchange = function () {
       var p = S.plantillas.filter(function (x) { return String(x.id) === String(this.value); }.bind(this))[0];
       if (!p) return;
-      S.campana.asunto = p.asunto || ''; S.campana.cuerpo = p.cuerpo || '';
+      S.campana.asunto = p.asunto || ''; S.campana.cuerpo = p.cuerpo || ''; S.campana.plantilla_id = p.id;
       if (!S.campana.nombre) S.campana.nombre = p.nombre;
       pintar();
     };
 
     // ---- plantillas ----
+    cada('[data-plantilla-editar]', function (b) {
+      b.onclick = function () {
+        var p = S.plantillas.filter(function (x) { return String(x.id) === String(b.getAttribute('data-plantilla-editar')); })[0];
+        if (p) { S.plantillaEdit = Object.assign({}, p); pintar(); window.scrollTo(0, 0); }
+      };
+    });
+    // los campos escriben directo en la copia; asi pintar() no pisa lo que se esta tipeando
+    if ($('utwi-pl-nombre')) $('utwi-pl-nombre').oninput = function () { S.plantillaEdit.nombre = this.value; };
+    if ($('utwi-pl-asunto')) $('utwi-pl-asunto').oninput = function () { S.plantillaEdit.asunto = this.value; };
+    if ($('utwi-pl-cuerpo')) $('utwi-pl-cuerpo').oninput = function () { S.plantillaEdit.cuerpo = this.value; };
+    if ($('utwi-pl-cancelar')) $('utwi-pl-cancelar').onclick = function () { S.plantillaEdit = null; pintar(); };
+    if ($('utwi-pl-guardar')) $('utwi-pl-guardar').onclick = function () {
+      var e = S.plantillaEdit;
+      if (!e.nombre.trim()) return aviso('La plantilla necesita un nombre.', 'err');
+      if (!e.cuerpo.trim()) return aviso('El mensaje no puede quedar vacío.', 'err');
+      S.ocupado = true; pintar();
+      sb.from('plantillas').update({ nombre: e.nombre.trim(), asunto: e.canal === 'correo' ? (e.asunto || '') : null, cuerpo: e.cuerpo, actualizado: new Date().toISOString() })
+        .eq('id', e.id).then(function (r) {
+          S.ocupado = false;
+          if (r.error) { pintar(); return aviso(/duplicate|unique/i.test(r.error.message) ? 'Ya existe otra plantilla con ese nombre.' : r.error.message, 'err'); }
+          S.plantillaEdit = null; aviso('Plantilla guardada.'); cargarPlantillas();
+        });
+    };
     cada('[data-plantilla-usar]', function (b) {
       b.onclick = function () {
         var p = S.plantillas.filter(function (x) { return String(x.id) === String(b.getAttribute('data-plantilla-usar')); })[0];
-        if (p) nuevaCampana({ nombre: p.nombre, canal: p.canal, asunto: p.asunto || '', cuerpo: p.cuerpo });
+        if (p) nuevaCampana({ nombre: p.nombre, canal: p.canal, asunto: p.asunto || '', cuerpo: p.cuerpo, plantilla_id: p.id });
       };
     });
     cada('[data-plantilla-borrar]', function (b) {
