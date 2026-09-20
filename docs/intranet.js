@@ -139,8 +139,9 @@ cuerpoHtml(personalizar(texto, contacto)) +
 '<tr><td style="padding:10px 32px 28px">' +
 '<div style="border-top:1px solid #2A2226;margin-bottom:14px"></div>' +
 '<p style="margin:0;font-family:\'Jost\',\'Segoe UI\',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.6;color:#8A8087">' +
-'Up to Wine &middot; Vinos de autor boutique &middot; @uptowine<br>' +
-'<a href="https://uptowine.cl" style="color:#F1315B;text-decoration:none">uptowine.cl</a> &middot; ventas@uptowine.cl &middot; +56 9 3173 7400<br>' +
+'Up to Wine &middot; Vinos de autor boutique<br>' +
+'<a href="https://uptowine.cl" style="color:#F1315B;text-decoration:none">uptowine.cl</a> &middot; Instagram @uptowine &middot; WhatsApp +56 9 3173 7400 &middot; ventas@uptowine.cl<br>' +
+'Venta de alcohol solo a mayores de 18 a&ntilde;os. Disfruta con moderaci&oacute;n.<br>' +
 'Si no quieres seguir recibiendo estos correos, responde con la palabra BAJA y te sacamos de la lista.' +
 '</p></td></tr>' +
 '</table></td></tr></table></body></html>';
@@ -153,7 +154,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
       .replace(/!\[[^\]]*\]\(([^)]+)\)/g, '')
       .replace(/^##\s+/gm, '')
       .replace(/\*\*([^*]+)\*\*/g, '$1')
-      .trim() + '\n\n—\nUp to Wine · uptowine.cl · ventas@uptowine.cl\nResponde con la palabra BAJA para no recibir más correos.';
+      .trim() + '\n\n—\nUp to Wine · Vinos de autor boutique\nuptowine.cl · Instagram @uptowine · WhatsApp +56 9 3173 7400 · ventas@uptowine.cl\nVenta de alcohol solo a mayores de 18 años. Disfruta con moderación.\nResponde con la palabra BAJA para no recibir más correos.';
   }
 
   // --- el mismo marcado, en formato WhatsApp -----------------------------------
