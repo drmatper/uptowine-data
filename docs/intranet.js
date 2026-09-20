@@ -150,6 +150,24 @@ cuerpoHtml(personalizar(texto, contacto)) +
       .trim() + '\n\n—\nUp to Wine · uptowine.cl · ventas@uptowine.cl\nResponde con la palabra BAJA para no recibir más correos.';
   }
 
+  // --- el mismo marcado, en formato WhatsApp -----------------------------------
+  // Una plantilla sirve para los dos canales: por WhatsApp el titulo va en
+  // *negrita*, las listas con viñeta, los enlaces como "texto: url" y el boton
+  // como una linea con la url. Nada de ##, ** ni corchetes.
+  function textoWhatsApp(texto) {
+    return String(texto || '')
+      .replace(/^##\s+(.+)$/gm, function (_, t) { return '*' + t.trim() + '*'; })
+      .replace(/\*\*([^*\n]+)\*\*/g, '*$1*')
+      .replace(/(^|[^*\w])\*([^*\n]+)\*(?=[^*\w]|$)/g, '$1*$2*')
+      .replace(/^[ \t]*[-*][ \t]+/gm, '\u2022 ')   // [ \t] y no \s: \s se tragaba la linea en blanco anterior
+      .replace(/^\[\[([^|\]]+)\|([^\]]+)\]\]$/gm, '\ud83d\udc49 $1: $2')
+      .replace(/!\[[^\]]*\]\(([^)]+)\)/g, '$1')
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1: $2')
+      .replace(/^---$/gm, '')
+      .replace(/\n{3,}/g, '\n\n')
+      .trim();
+  }
+
   // --- club: estado por fecha del ultimo cobro (MP, Payku y PAT) --------------
   // hasta 35 dias al dia, hasta 75 moroso, despues inactivo. Sin fecha: inactivo.
   function estadoPorFecha(ultimoPago, hoy) {
@@ -285,7 +303,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
       plata: plata, cuerpoHtml: cuerpoHtml, correoHtml: correoHtml, correoTexto: correoTexto,
       enlaceSeguro: enlaceSeguro, csvLeer: csvLeer, csvMapear: csvMapear, csvSalida: csvSalida,
       diasDesde: diasDesde, estadoPorFecha: estadoPorFecha, rutNormalizar: rutNormalizar,
-      paykuFila: paykuFila, patAgrupar: patAgrupar };
+      paykuFila: paykuFila, patAgrupar: patAgrupar, textoWhatsApp: textoWhatsApp };
     return;
   }
 
@@ -851,7 +869,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
           // La tienda nunca habla con el VPS: deja la fila y el puente sale a buscarla.
           p = sb.from('whatsapp_outbox').insert({
             numero: fonoWhatsApp(c.celular), nombre: c.nombre || '?',
-            texto: personalizar(S.campana.cuerpo, c), contacto_id: c.id, por: 'intranet',
+            texto: textoWhatsApp(personalizar(S.campana.cuerpo, c)), contacto_id: c.id, por: 'intranet',
             datos: rutaPdf ? { archivo: rutaPdf, nombre: S.adjuntos[0].nombre } : {},
           }).then(function (r) { return r.error ? r.error.message : null; });
         }
@@ -1271,7 +1289,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
         '<button data-marca="separador">Separador</button><button data-marca="nombre">{nombre}</button></div>' : '') +
       '<textarea id="utwi-cuerpo" placeholder="' + (esCorreo ? 'Escribe el correo…' : 'Mensaje corto, como lo escribirías tú por WhatsApp.') + '">' + esc(c.cuerpo) + '</textarea>' +
       '<p class="ayuda">Variables: <code>{nombre}</code> <code>{comuna}</code> <code>{email}</code> <code>{celular}</code>' +
-      (esCorreo ? ' · Formato: <code>## Título</code> <code>**negrita**</code> <code>- lista</code> <code>[texto](url)</code> <code>[[Botón|url]]</code> <code>![foto](url)</code>' : ' · WhatsApp va sin formato. Con PDF adjunto, el texto sale como leyenda del documento.') + '</p>' +
+      (esCorreo ? ' · Formato: <code>## Título</code> <code>**negrita**</code> <code>- lista</code> <code>[texto](url)</code> <code>[[Botón|url]]</code> <code>![foto](url)</code>' : ' · Por WhatsApp el título va en *negrita*, las listas con viñeta y el botón como enlace: la vista previa muestra cómo queda. Con PDF adjunto, el texto sale como leyenda del documento.') + '</p>' +
 
       (esCorreo ? '<label class="lbl">Adjuntos (PDF o imagen, hasta ' + MAX_ADJUNTOS + ')</label>' +
         '<input type="file" id="utwi-archivo" accept="application/pdf,image/*" multiple>'
@@ -1304,7 +1322,8 @@ cuerpoHtml(personalizar(texto, contacto)) +
     if (S.campana.canal === 'correo') {
       marco.srcdoc = correoHtml(S.campana.cuerpo || '_Escribe el mensaje y aquí lo verás tal cual le llega._', quien);
     } else {
-      var texto = esc(personalizar(S.campana.cuerpo || 'Escribe el mensaje…', quien)).replace(/\n/g, '<br>');
+      var texto = esc(textoWhatsApp(personalizar(S.campana.cuerpo || 'Escribe el mensaje…', quien)))
+        .replace(/\*([^*\n]+)\*/g, '<b>$1</b>').replace(/_([^_\n]+)_/g, '<i>$1</i>').replace(/\n/g, '<br>');
       var doc = S.adjuntos[0]
         ? '<div style="display:flex;align-items:center;gap:10px;margin:-3px -5px 8px;padding:10px 12px;border-radius:9px;background:rgba(0,0,0,.18)">' +
           '<span style="font-size:26px">📄</span><div><div style="font-weight:600;font-size:14px">' + esc(S.adjuntos[0].nombre) + '</div>' +
@@ -1315,7 +1334,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
         '<div style="max-width:420px;margin:0 auto"><div style="background:#005c4b;color:#fff;border-radius:12px 12px 4px 12px;padding:11px 13px;font-size:15px;line-height:1.5">' +
         doc + texto + '<div style="text-align:right;font-size:10.5px;color:rgba(255,255,255,.65);margin-top:5px">' +
         new Date().toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit' }) + ' ✓✓</div></div>' +
-        '<p style="color:rgba(255,255,255,.45);font-size:11.5px;margin-top:14px">' + (S.campana.cuerpo || '').length + ' caracteres</p></div></body></html>';
+        '<p style="color:rgba(255,255,255,.45);font-size:11.5px;margin-top:14px">' + textoWhatsApp(S.campana.cuerpo || '').length + ' caracteres</p></div></body></html>';
     }
     // cuántos van a recibirlo de verdad
     var resumen = document.getElementById('utwi-resumen-envio');
