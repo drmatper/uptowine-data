@@ -800,9 +800,25 @@ cuerpoHtml(personalizar(texto, contacto)) +
   }
 
   // Envío en lote: uno por uno, con el nombre de cada quien y un ritmo tranquilo.
+  // El PDF de una campaña de WhatsApp se sube una sola vez al bucket privado;
+  // el puente del VPS lo baja con la service key y se lo entrega al bot con el
+  // texto como leyenda. Devuelve la ruta dentro del bucket (o null si no hay).
+  function subirDocumentoWhatsApp() {
+    var a = S.adjuntos[0];
+    if (!a || S.campana.canal !== 'whatsapp') return Promise.resolve(null);
+    var bytes = Uint8Array.from(atob(a.base64), function (c) { return c.charCodeAt(0); });
+    var ruta = 'wa/campana-' + (S.campana.id || 'nueva') + '-' + Date.now() + '.pdf';
+    return sb.storage.from('intranet').upload(ruta, bytes, { contentType: 'application/pdf', upsert: false })
+      .then(function (r) {
+        if (r.error) throw new Error('No se pudo subir el PDF: ' + r.error.message);
+        return ruta;
+      });
+  }
+
   function enviarCampana() {
     S.confirmar = false; S.ocupado = true; pintar();
-    destinatariosDeCampana().then(function (todos) {
+    Promise.all([destinatariosDeCampana(), subirDocumentoWhatsApp()]).then(function (rs) {
+      var todos = rs[0], rutaPdf = rs[1];
       var lista = alcanzables(todos), i = 0, ok = 0, fallos = [];
       if (!lista.length) { S.ocupado = false; return aviso('No hay destinatarios alcanzables.', 'err'); }
       S.campana.estado = 'enviando';
@@ -836,6 +852,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
           p = sb.from('whatsapp_outbox').insert({
             numero: fonoWhatsApp(c.celular), nombre: c.nombre || '?',
             texto: personalizar(S.campana.cuerpo, c), contacto_id: c.id, por: 'intranet',
+            datos: rutaPdf ? { archivo: rutaPdf, nombre: S.adjuntos[0].nombre } : {},
           }).then(function (r) { return r.error ? r.error.message : null; });
         }
         p.then(function (error) {
@@ -844,6 +861,9 @@ cuerpoHtml(personalizar(texto, contacto)) +
         });
       }
       siguiente();
+    }).catch(function (e) {
+      S.ocupado = false; S.progreso = '';
+      aviso(String(e.message || e), 'err');
     });
   }
 
@@ -859,8 +879,10 @@ cuerpoHtml(personalizar(texto, contacto)) +
   }
 
   function sumarAdjuntos(files) {
+    var tope = S.campana && S.campana.canal === 'whatsapp' ? 1 : MAX_ADJUNTOS;
+    if (tope === 1) S.adjuntos = [];
     Array.prototype.forEach.call(files, function (f) {
-      if (S.adjuntos.length >= MAX_ADJUNTOS) return aviso('Máximo ' + MAX_ADJUNTOS + ' adjuntos.', 'err');
+      if (S.adjuntos.length >= tope) return aviso(tope === 1 ? 'Por WhatsApp va un solo PDF por mensaje.' : 'Máximo ' + MAX_ADJUNTOS + ' adjuntos.', 'err');
       if (f.size > MAX_ADJUNTO) return aviso(f.name + ' pesa más de 8 MB.', 'err');
       var lector = new FileReader();
       lector.onload = function () {
@@ -1249,11 +1271,13 @@ cuerpoHtml(personalizar(texto, contacto)) +
         '<button data-marca="separador">Separador</button><button data-marca="nombre">{nombre}</button></div>' : '') +
       '<textarea id="utwi-cuerpo" placeholder="' + (esCorreo ? 'Escribe el correo…' : 'Mensaje corto, como lo escribirías tú por WhatsApp.') + '">' + esc(c.cuerpo) + '</textarea>' +
       '<p class="ayuda">Variables: <code>{nombre}</code> <code>{comuna}</code> <code>{email}</code> <code>{celular}</code>' +
-      (esCorreo ? ' · Formato: <code>## Título</code> <code>**negrita**</code> <code>- lista</code> <code>[texto](url)</code> <code>[[Botón|url]]</code> <code>![foto](url)</code>' : ' · WhatsApp va sin formato.') + '</p>' +
+      (esCorreo ? ' · Formato: <code>## Título</code> <code>**negrita**</code> <code>- lista</code> <code>[texto](url)</code> <code>[[Botón|url]]</code> <code>![foto](url)</code>' : ' · WhatsApp va sin formato. Con PDF adjunto, el texto sale como leyenda del documento.') + '</p>' +
 
       (esCorreo ? '<label class="lbl">Adjuntos (PDF o imagen, hasta ' + MAX_ADJUNTOS + ')</label>' +
-        '<input type="file" id="utwi-archivo" accept="application/pdf,image/*" multiple>' +
-        (adjuntos ? '<div style="margin-top:8px">' + adjuntos + '</div>' : '') : '') +
+        '<input type="file" id="utwi-archivo" accept="application/pdf,image/*" multiple>'
+        : '<label class="lbl">PDF adjunto (uno; va como documento y el mensaje como leyenda)</label>' +
+        '<input type="file" id="utwi-archivo" accept="application/pdf">') +
+      (adjuntos ? '<div style="margin-top:8px">' + adjuntos + '</div>' : '') +
 
       '<div style="display:flex;gap:8px;margin-top:14px">' +
       '<button class="btn sec mini" id="utwi-guardar-plantilla">Guardar como plantilla</button>' +
@@ -1281,10 +1305,15 @@ cuerpoHtml(personalizar(texto, contacto)) +
       marco.srcdoc = correoHtml(S.campana.cuerpo || '_Escribe el mensaje y aquí lo verás tal cual le llega._', quien);
     } else {
       var texto = esc(personalizar(S.campana.cuerpo || 'Escribe el mensaje…', quien)).replace(/\n/g, '<br>');
+      var doc = S.adjuntos[0]
+        ? '<div style="display:flex;align-items:center;gap:10px;margin:-3px -5px 8px;padding:10px 12px;border-radius:9px;background:rgba(0,0,0,.18)">' +
+          '<span style="font-size:26px">📄</span><div><div style="font-weight:600;font-size:14px">' + esc(S.adjuntos[0].nombre) + '</div>' +
+          '<div style="font-size:11.5px;opacity:.7">' + Math.round(S.adjuntos[0].bytes / 1024) + ' KB · PDF</div></div></div>'
+        : '';
       marco.srcdoc = '<!doctype html><html lang="es"><head><meta charset="utf-8"></head>' +
         '<body style="margin:0;background:#0b141a;font-family:Helvetica,Arial,sans-serif;padding:18px">' +
         '<div style="max-width:420px;margin:0 auto"><div style="background:#005c4b;color:#fff;border-radius:12px 12px 4px 12px;padding:11px 13px;font-size:15px;line-height:1.5">' +
-        texto + '<div style="text-align:right;font-size:10.5px;color:rgba(255,255,255,.65);margin-top:5px">' +
+        doc + texto + '<div style="text-align:right;font-size:10.5px;color:rgba(255,255,255,.65);margin-top:5px">' +
         new Date().toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit' }) + ' ✓✓</div></div>' +
         '<p style="color:rgba(255,255,255,.45);font-size:11.5px;margin-top:14px">' + (S.campana.cuerpo || '').length + ' caracteres</p></div></body></html>';
     }
