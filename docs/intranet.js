@@ -50,8 +50,11 @@
       .replace(/\{nombre_completo\}/gi, c.nombre || pila)
       .replace(/\{email\}/gi, c.email || '')
       .replace(/\{celular\}/gi, c.celular || '')
-      .replace(/\{comuna\}/gi, c.comuna || '');
+      .replace(/\{comuna\}/gi, c.comuna || '')
+      .replace(/\{plan\}/gi, c.club_plan || 'tu plan')
+      .replace(/\{mes\}/gi, MESES[new Date().getMonth()]);
   }
+  var MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 
   function plata(n) {
     return n == null ? '' : '$' + String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
@@ -1387,7 +1390,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
         '<button data-marca="boton">Botón</button><button data-marca="imagen">Imagen</button>' +
         '<button data-marca="separador">Separador</button><button data-marca="nombre">{nombre}</button></div>' : '') +
       '<textarea id="utwi-cuerpo" placeholder="' + (esCorreo ? 'Escribe el correo…' : 'Mensaje corto, como lo escribirías tú por WhatsApp.') + '">' + esc(c.cuerpo) + '</textarea>' +
-      '<p class="ayuda">Variables: <code>{nombre}</code> <code>{comuna}</code> <code>{email}</code> <code>{celular}</code>' +
+      '<p class="ayuda">Variables: <code>{nombre}</code> <code>{comuna}</code> <code>{email}</code> <code>{celular}</code> <code>{plan}</code> <code>{mes}</code>' +
       (esCorreo ? ' · Formato: <code>## Título</code> <code>**negrita**</code> <code>- lista</code> <code>[texto](url)</code> <code>[[Botón|url]]</code> <code>![foto](url)</code>' : ' · Por WhatsApp el título va en *negrita*, las listas con viñeta y el botón como enlace: la vista previa muestra cómo queda. Un enlace en su propia línea sale con la tarjeta de la página (imagen y título). Con PDF adjunto, el texto sale como leyenda del documento.') + '</p>' +
 
       (esCorreo ? '<label class="lbl">Adjuntos (PDF o imagen, hasta ' + MAX_ADJUNTOS + ')</label>' +
