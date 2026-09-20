@@ -19,7 +19,7 @@
   var SB_URL = 'https://oontbdybvewvziamwfcn.supabase.co';
   var SB_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9vbnRiZHlidmV3dnppYW13ZmNuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ0MTA2MjEsImV4cCI6MjA5OTk4NjYyMX0.tk951I0-1LTCBI7RJGAfZyjB99tHuhY_VgLhdnSLlfw';
   var CDN = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js';
-  var LOGO = 'https://app.uptowine.cl/og-logo.png';
+  var LOGO = 'https://app.uptowine.cl/logo-blanco.png';   // wordmark blanco del kit Crimson (Logos utw/57)
   var MAX_ADJUNTO = 8 * 1024 * 1024;
   var MAX_ADJUNTOS = 3;
 
@@ -82,9 +82,9 @@
       })
       .replace(/\[([^\]]+)\]\(([^)]+)\)/g, function (_, txt, url) {
         var u = enlaceSeguro(url);
-        return u ? '<a href="' + u + '" style="color:#61041E;text-decoration:underline">' + txt + '</a>' : txt;
+        return u ? '<a href="' + u + '" style="color:#F1315B;text-decoration:underline">' + txt + '</a>' : txt;
       })
-      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*\*([^*]+)\*\*/g, '<strong style="color:#ffffff">$1</strong>')
       .replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>');
   }
 
@@ -99,14 +99,14 @@
         var u = enlaceSeguro(boton[2]);
         if (!u) continue;
         salida.push(
-          '<table role="presentation" cellpadding="0" cellspacing="0" style="margin:26px auto"><tr><td style="border-radius:999px;background:#61041E">' +
-          '<a href="' + u + '" style="display:inline-block;padding:14px 30px;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:bold;letter-spacing:.6px;color:#ffffff;text-decoration:none">' +
+          '<table role="presentation" cellpadding="0" cellspacing="0" style="margin:26px auto"><tr><td style="border-radius:999px;background:#E2123F">' +
+          '<a href="' + u + '" style="display:inline-block;padding:15px 30px;font-family:\'Archivo\',Helvetica,Arial,sans-serif;font-size:13px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#ffffff;text-decoration:none">' +
           boton[1].trim() + '</a></td></tr></table>');
         continue;
       }
-      if (/^---$/.test(b)) { salida.push('<div style="border-top:2px solid #D6B05C;width:56px;margin:24px 0"></div>'); continue; }
+      if (/^---$/.test(b)) { salida.push('<div style="border-top:2px solid #E0B450;width:56px;margin:24px 0"></div>'); continue; }
       if (/^##\s+/.test(b)) {
-        salida.push('<h2 style="margin:0 0 14px;font-family:Georgia,serif;font-size:24px;line-height:1.25;color:#61041E">' + enLinea(b.replace(/^##\s+/, '')) + '</h2>');
+        salida.push('<h2 style="margin:0 0 14px;font-family:\'Archivo\',Helvetica,Arial,sans-serif;font-weight:800;font-size:26px;line-height:1.1;letter-spacing:-.5px;color:#ffffff">' + enLinea(b.replace(/^##\s+/, '')) + '</h2>');
         continue;
       }
       if (/^[-*]\s+/m.test(b) && b.split('\n').every(function (l) { return /^[-*]\s+/.test(l.trim()) || !l.trim(); })) {
@@ -123,24 +123,24 @@
   function correoHtml(texto, contacto) {
     return '' +
 '<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">' +
-'<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></head>' +
-'<body style="margin:0;padding:0;background:#f7f3ee">' +
-'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f7f3ee;padding:26px 12px">' +
+'<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Jost:wght@400;500;600&display=swap" rel="stylesheet"></head>' +
+/* kit Crimson: fondo negro siempre, carmesi solo en botones, dorado para lo que brilla */
+'<body style="margin:0;padding:0;background:#0A0708">' +
+'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#0A0708;padding:26px 12px">' +
 '<tr><td align="center">' +
-'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.06)">' +
-/* logo como texto: nunca se ve roto aunque el cliente de correo bloquee imagenes */
-'<tr><td align="center" style="padding:28px 32px 0">' +
-'<div style="font-family:Georgia,\'Times New Roman\',serif;font-style:italic;font-size:28px;letter-spacing:.5px;color:#61041E">Up to Wine</div>' +
-'<div style="width:44px;border-top:2px solid #D6B05C;margin:12px auto 0"></div>' +
+'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background:#140E10;border:1px solid #2A2226;border-radius:16px;overflow:hidden">' +
+'<tr><td align="center" style="padding:30px 32px 0">' +
+'<img src="' + LOGO + '" alt="Up to Wine" width="170" style="display:block;width:170px;max-width:60%;height:auto">' +
+'<div style="margin-top:12px;font-family:\'Archivo\',Helvetica,Arial,sans-serif;font-weight:700;font-size:10px;letter-spacing:2.4px;text-transform:uppercase;color:#F1315B">Vinos de autor boutique</div>' +
 '</td></tr>' +
-'<tr><td style="padding:26px 32px 6px;font-family:\'Open Sans\',Helvetica,Arial,sans-serif;font-size:15.5px;line-height:1.65;color:#2b2326">' +
+'<tr><td style="padding:28px 32px 6px;font-family:\'Jost\',\'Segoe UI\',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#B5B0B2">' +
 cuerpoHtml(personalizar(texto, contacto)) +
 '</td></tr>' +
 '<tr><td style="padding:10px 32px 28px">' +
-'<div style="border-top:1px solid #eee4d8;margin-bottom:14px"></div>' +
-'<p style="margin:0;font-family:\'Open Sans\',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.6;color:#8a7c80">' +
-'Up to Wine &middot; Vinos de autor de Chile<br>' +
-'<a href="https://uptowine.cl" style="color:#61041E;text-decoration:none">uptowine.cl</a> &middot; ventas@uptowine.cl &middot; +56 9 3173 7400<br>' +
+'<div style="border-top:1px solid #2A2226;margin-bottom:14px"></div>' +
+'<p style="margin:0;font-family:\'Jost\',\'Segoe UI\',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.6;color:#8A8087">' +
+'Up to Wine &middot; Vinos de autor boutique &middot; @uptowine<br>' +
+'<a href="https://uptowine.cl" style="color:#F1315B;text-decoration:none">uptowine.cl</a> &middot; ventas@uptowine.cl &middot; +56 9 3173 7400<br>' +
 'Si no quieres seguir recibiendo estos correos, responde con la palabra BAJA y te sacamos de la lista.' +
 '</p></td></tr>' +
 '</table></td></tr></table></body></html>';
