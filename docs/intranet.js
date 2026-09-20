@@ -909,6 +909,12 @@ cuerpoHtml(personalizar(texto, contacto)) +
       : S.vista === 'plantillas' ? vistaPlantillas()
       : vistaHistorial();
 
+    // Repintar borra el DOM y con el el scroll: se guarda y se repone, si no
+    // marcar un contacto al final de la lista te devolvia arriba.
+    var SCROLLS = '.scroll, .ficha, .panel';
+    var scrolls = Array.prototype.map.call(host.querySelectorAll(SCROLLS), function (el) { return el.scrollTop; });
+    var scrollY = window.scrollY;
+
     host.innerHTML = '<div class="utwi">' +
       '<div class="top"><div class="marca"><span class="punto"></span> Intranet Up to Wine</div>' +
       '<div class="sp"><span>' + esc(S.sesion.user.email) + '</span>' +
@@ -917,6 +923,8 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '<div class="panel"><p class="msj ' + (S.err ? 'err' : '') + '">' + esc(S.msj) + '</p>' + contenido + '</div></div>' +
       (S.ficha ? fichaContacto() : '') +
       '</div>';
+    Array.prototype.forEach.call(host.querySelectorAll(SCROLLS), function (el, i) { if (scrolls[i]) el.scrollTop = scrolls[i]; });
+    if (scrollY) window.scrollTo(0, scrollY);
     conectar();
     if (S.vista === 'campana') refrescarPrevia();
   }
