@@ -463,6 +463,8 @@ cuerpoHtml(personalizar(texto, contacto)) +
     '.utwi .barra{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 6px}',
     '.utwi .barra button{padding:5px 10px;border:1px solid var(--linea);border-radius:7px;background:#fff;color:var(--tx2);cursor:pointer;font:inherit;font-size:12px}',
     '.utwi .barra button:hover{background:#f2f4f7;color:var(--tx)}',
+    '.utwi .barra.emojis button{padding:3px 6px;font-size:17px;line-height:1;border-color:transparent;background:transparent}',
+    '.utwi .barra.emojis button:hover{background:#f2f4f7}',
     /* ficha lateral */
     '.utwi .velo{position:fixed;inset:0;z-index:99998;background:rgba(17,24,39,.35)}',
     '.utwi .ficha{position:fixed;top:0;right:0;bottom:0;z-index:99999;width:min(430px,100%);padding:20px;overflow:auto;background:#fff;box-shadow:-10px 0 40px rgba(0,0,0,.18)}',
@@ -1049,6 +1051,10 @@ cuerpoHtml(personalizar(texto, contacto)) +
     var SCROLLS = '.scroll, .ficha, .panel';
     var scrolls = Array.prototype.map.call(host.querySelectorAll(SCROLLS), function (el) { return el.scrollTop; });
     var scrollY = window.scrollY;
+    // el campo con foco (p. ej. el buscador del panel) se vuelve a enfocar tras redibujar,
+    // si no, cada letra tecleada cerraba el teclado y habia que volver a hacer clic
+    var activo = document.activeElement, focoId = activo && host.contains(activo) ? activo.id : '';
+    var caret = focoId && activo.selectionStart != null ? activo.selectionStart : null;
 
     host.innerHTML = '<div class="utwi">' +
       '<div class="top"><div class="marca"><span class="punto"></span> Intranet Up to Wine</div>' +
@@ -1061,6 +1067,10 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '</div>';
     Array.prototype.forEach.call(host.querySelectorAll(SCROLLS), function (el, i) { if (scrolls[i]) el.scrollTop = scrolls[i]; });
     if (scrollY) window.scrollTo(0, scrollY);
+    if (focoId && $(focoId)) {
+      var el = $(focoId); el.focus({ preventScroll: true });
+      if (caret != null) { try { el.setSelectionRange(caret, caret); } catch (e) { /* no es de texto */ } }
+    }
     conectar();
     if (S.vista === 'campana') refrescarPrevia();
   }
@@ -1472,6 +1482,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
         '<button data-marca="lista">Lista</button><button data-marca="enlace">Enlace</button>' +
         '<button data-marca="boton">Botón</button><button data-marca="imagen">Imagen</button>' +
         '<button data-marca="separador">Separador</button><button data-marca="nombre">{nombre}</button></div>' : '') +
+      barraEmojis() +
       '<textarea id="utwi-cuerpo" placeholder="' + (esCorreo ? 'Escribe el correo…' : 'Mensaje corto, como lo escribirías tú por WhatsApp.') + '">' + esc(c.cuerpo) + '</textarea>' +
       '<p class="ayuda">Variables: <code>{nombre}</code> <code>{comuna}</code> <code>{email}</code> <code>{celular}</code> <code>{plan}</code> <code>{mes}</code>' +
       (esCorreo ? ' · Formato: <code>## Título</code> <code>**negrita**</code> <code>- lista</code> <code>[texto](url)</code> <code>[[Botón|url]]</code> <code>![foto](url)</code>' : ' · Por WhatsApp el título va en *negrita*, las listas con viñeta y el botón como enlace: la vista previa muestra cómo queda. Un enlace en su propia línea sale con la tarjeta de la página (imagen y título). Con PDF o foto adjunta, el texto sale como leyenda.') + '</p>') +
@@ -1502,6 +1513,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
 
   function editorHtmlMarkup(id) {
     return '<label class="lbl">Mensaje · diseño HTML: haz clic sobre cualquier texto y edítalo ahí mismo</label>' +
+      barraEmojis() +
       '<iframe class="previa editor" id="' + id + '" title="Editor del diseño"></iframe>' +
       '<p class="ayuda">Lo que va entre <code>[corchetes]</code> se reemplaza antes de enviar. Variables: <code>{{nombre}}</code> <code>{{plan}}</code> <code>{{mes}}</code>. ' +
       'El diseño se envía tal cual se ve aquí.' + (id === 'utwi-editor-html' ? ' <button class="btn sec mini" id="utwi-quitar-html" type="button">Volver al texto simple</button>' : '') + '</p>';
@@ -1576,7 +1588,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '<div class="grid g2"><div><label class="lbl" for="utwi-pl-nombre">Nombre</label><input id="utwi-pl-nombre" value="' + esc(e.nombre) + '"></div>' +
       (e.canal === 'correo' ? '<div><label class="lbl" for="utwi-pl-asunto">Asunto</label><input id="utwi-pl-asunto" value="' + esc(e.asunto || '') + '"></div>' : '<div><label class="lbl">Canal</label><div class="dim" style="padding:9px 0">💬 WhatsApp</div></div>') + '</div>' +
       (e.html ? editorHtmlMarkup('utwi-pl-editor')
-        : '<label class="lbl" for="utwi-pl-cuerpo">Mensaje</label><textarea id="utwi-pl-cuerpo">' + esc(e.cuerpo || '') + '</textarea>' +
+        : '<label class="lbl" for="utwi-pl-cuerpo">Mensaje</label>' + barraEmojis() + '<textarea id="utwi-pl-cuerpo">' + esc(e.cuerpo || '') + '</textarea>' +
           '<p class="ayuda">Variables: <code>{nombre}</code> <code>{plan}</code> <code>{mes}</code> · lo que va entre <code>[corchetes]</code> se completa en cada envío.</p>') +
       '<div style="display:flex;gap:8px;margin-top:10px"><button class="btn" id="utwi-pl-guardar"' + (S.ocupado ? ' disabled' : '') + '>Guardar</button>' +
       '<button class="btn sec" id="utwi-pl-cancelar">Cancelar</button></div></div>';
@@ -1622,6 +1634,28 @@ cuerpoHtml(personalizar(texto, contacto)) +
   };
 
   var BLOQUES = { titulo: 1, lista: 1, boton: 1, imagen: 1, separador: 1 };
+
+  var EMOJIS = ['🍷', '🍾', '🥂', '🍇', '🎉', '✨', '🔥', '❤️', '😊', '🙂', '😉', '👌', '👉', '🙌', '👏', '🎁', '🎄', '📦', '🚚', '📍', '⏰', '✅', '🥩', '🧀', '🍝', '🌊'];
+  function barraEmojis() {
+    return '<div class="barra emojis">' + EMOJIS.map(function (e) { return '<button type="button" data-emoji="' + e + '" title="Insertar ' + e + '">' + e + '</button>'; }).join('') + '</div>';
+  }
+  function insertarEmoji(e) {
+    var t = $('utwi-cuerpo') || $('utwi-pl-cuerpo');
+    if (t) {   // texto simple (correo o WhatsApp): en el cursor
+      var ini = t.selectionStart, fin = t.selectionEnd;
+      t.value = t.value.slice(0, ini) + e + t.value.slice(fin);
+      if (t.id === 'utwi-cuerpo') S.campana.cuerpo = t.value; else S.plantillaEdit.cuerpo = t.value;
+      t.focus(); t.selectionStart = t.selectionEnd = ini + e.length;
+      if (t.id === 'utwi-cuerpo') refrescarPrevia();
+      return;
+    }
+    var marco = $('utwi-editor-html') || $('utwi-pl-editor');   // diseno HTML: donde este el cursor dentro del iframe
+    if (marco && marco.contentDocument) {
+      marco.contentWindow.focus();
+      marco.contentDocument.execCommand('insertText', false, e);
+      marco.contentDocument.dispatchEvent(new Event('input'));
+    }
+  }
 
   function insertarMarca(clave) {
     var t = $('utwi-cuerpo'); if (!t) return;
@@ -1670,6 +1704,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     cada('[data-filtro]', function (b) {
       b.onclick = function () { S[b.getAttribute('data-filtro')] = b.getAttribute('data-valor'); cargarContactos(); };
     });
+    cada('[data-emoji]', function (b) { b.onmousedown = function (ev) { ev.preventDefault(); }; b.onclick = function () { insertarEmoji(b.getAttribute('data-emoji')); }; });
     cada('[data-marca]', function (b) {
       if (b.tagName === 'INPUT') {
         b.onclick = function (ev) { ev.stopPropagation(); S.sel[b.getAttribute('data-marca')] = b.checked; pintar(); };
