@@ -253,7 +253,8 @@ body.exportando .quote-print{display:block;position:absolute;left:0;top:0;width:
 .qp-pay-wa a{color:#1a7a3a;font-weight:700;text-decoration:underline}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
 
@@ -854,7 +855,24 @@ document.getElementById('btnPdf').onclick=async ()=>{ EXPORTANDO=false; await ar
       EXPORTANDO=true; await armarDocumento(); EXPORTANDO=false;
       document.body.classList.add('exportando');
       const el=document.getElementById('printDoc');
-      const uri=await html2pdf().set({margin:[12,10,12,10], image:{type:'jpeg',quality:0.92}, html2canvas:{scale:2,useCORS:true,logging:false,scrollX:0,scrollY:0}, jsPDF:{unit:'mm',format:'a4'}, pagebreak:{mode:['css','legacy']}, enableLinks:true}).from(el).outputPdf('datauristring');
+      const canvas=await html2canvas(el,{scale:2,useCORS:true,backgroundColor:'#ffffff',scrollX:0,scrollY:0,logging:false});
+      // A4 con margenes: el lienzo se corta en paginas. Los <a href> del documento (link de pago,
+      // WhatsApp) se anotan en el PDF en su misma posicion, asi siguen siendo clicables.
+      const pdf=new jspdf.jsPDF({unit:'mm',format:'a4'});
+      const M=10, W=210-2*M, H=297-2*M, ratio=W/canvas.width, altoPag=H/ratio;
+      for(let y=0, pag=0; y<canvas.height; y+=altoPag, pag++){
+        const h=Math.min(altoPag, canvas.height-y);
+        const trozo=document.createElement('canvas'); trozo.width=canvas.width; trozo.height=Math.ceil(h);
+        trozo.getContext('2d').drawImage(canvas,0,y,canvas.width,h,0,0,canvas.width,h);
+        if(pag>0) pdf.addPage();
+        pdf.addImage(trozo.toDataURL('image/jpeg',0.92),'JPEG',M,M,W,h*ratio);
+      }
+      const base=el.getBoundingClientRect(), escala=canvas.width/el.offsetWidth;
+      el.querySelectorAll('a[href^="http"]').forEach(a=>{
+        const r=a.getBoundingClientRect(); const x=(r.left-base.left)*escala, y=(r.top-base.top)*escala, p=Math.floor(y/altoPag);
+        pdf.setPage(p+1); pdf.link(M+x*ratio, M+(y-p*altoPag)*ratio, r.width*escala*ratio, r.height*escala*ratio, {url:a.href});
+      });
+      const uri=pdf.output('datauristring');
       document.body.classList.remove('exportando');
       const t=calcTotales(), montoTot=currentTotal();
       const pago=['mp','flow'].map(k=>pays[k]).find(pd=>pd&&pd.monto===montoTot)||null;
