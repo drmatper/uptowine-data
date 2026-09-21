@@ -856,6 +856,11 @@ document.getElementById('btnPdf').onclick=async ()=>{ EXPORTANDO=false; await ar
       EXPORTANDO=true; await armarDocumento(); EXPORTANDO=false;
       document.body.classList.add('exportando');
       const el=document.getElementById('printDoc');
+      // las imagenes de la tienda no traen CORS: se pasan por el proxy de la intranet solo para dibujar el PDF
+      const PROXY='https://oontbdybvewvziamwfcn.supabase.co/functions/v1/publico?accion=imagen&u=';
+      const imgs=[...el.querySelectorAll('img')].filter(i=>/jumpseller\.com/.test(i.src));
+      imgs.forEach(i=>{ i.dataset.orig=i.src; i.crossOrigin='anonymous'; i.src=PROXY+encodeURIComponent(i.dataset.orig); });
+      await Promise.all(imgs.map(i=>new Promise(ok=>{ if(i.complete&&i.naturalWidth) return ok(); i.onload=ok; i.onerror=ok; setTimeout(ok,8000); })));
       const canvas=await html2canvas(el,{scale:2,useCORS:true,backgroundColor:'#ffffff',scrollX:0,scrollY:0,logging:false});
       // A4 con margenes: el lienzo se corta en paginas. Los <a href> del documento (link de pago,
       // WhatsApp) se anotan en el PDF en su misma posicion, asi siguen siendo clicables.
@@ -874,6 +879,7 @@ document.getElementById('btnPdf').onclick=async ()=>{ EXPORTANDO=false; await ar
         pdf.setPage(p+1); pdf.link(M+x*ratio, M+(y-p*altoPag)*ratio, r.width*escala*ratio, r.height*escala*ratio, {url:a.href});
       });
       const uri=pdf.output('datauristring');
+      imgs.forEach(i=>{ i.removeAttribute('crossorigin'); i.src=i.dataset.orig; });
       document.body.classList.remove('exportando');
       const t=calcTotales(), montoTot=currentTotal();
       const pago=['mp','flow'].map(k=>pays[k]).find(pd=>pd&&pd.monto===montoTot)||null;
