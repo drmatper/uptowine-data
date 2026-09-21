@@ -73,6 +73,9 @@ self.addEventListener('fetch', (e) => {
   const url = new URL(req.url);
 
   // Navegación (incluye rutas /vino/..., /fichas...): offline sirve el index cacheado
+  // Paginas sueltas (cotizador.html, etc.) viven junto a la app pero no son la app:
+  // van a la red, si no el iframe recibiria el index y el router diria 'Unmatched Route'.
+  if (req.mode === 'navigate' && /\.html$/.test(url.pathname) && url.pathname !== INDEX) return;
   if (req.mode === 'navigate') {
     e.respondWith(
       swr(SHELL, INDEX).catch(() => caches.match(INDEX)),
