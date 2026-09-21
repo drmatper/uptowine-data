@@ -847,7 +847,8 @@ document.getElementById('btnPdf').onclick=async ()=>{ EXPORTANDO=false; await ar
 (function(){
   const b=document.getElementById('btnEnviar'); if(!b || window.parent===window) return;
   b.style.display='';
-  const destino = /^(https:\/\/uptowine\.cl|http:\/\/localhost)/.test(document.referrer) ? new URL(document.referrer).origin : 'https://uptowine.cl';
+  // el iframe es srcdoc dentro de la intranet: comparte origen con ella
+  let destino='https://uptowine.cl'; try { destino = window.parent.location.origin; } catch(e) {}
   b.onclick=async ()=>{
     if(!Object.keys(state.sel).length){ alert('Elige al menos un vino.'); return; }
     b.disabled=true; b.textContent='Armando PDF…';
