@@ -46,6 +46,8 @@
     c = c || {};
     var pila = (c.nombre || '').trim().split(/\s+/)[0] || 'hola';
     return String(texto || '')
+      .replace(/\{\{\s*([a-z_]+)\s*\}\}/gi, '{$1}')   // {{nombre}} de los disenos HTML = {nombre}
+      .replace(/\{link_baja\}/gi, 'mailto:ventas@uptowine.cl?subject=BAJA')
       .replace(/\{nombre\}/gi, pila)
       .replace(/\{nombre_completo\}/gi, c.nombre || pila)
       .replace(/\{email\}/gi, c.email || '')
@@ -155,6 +157,35 @@ cuerpoHtml(personalizar(texto, contacto)) +
       .replace(/^##\s+/gm, '')
       .replace(/\*\*([^*]+)\*\*/g, '$1')
       .trim() + '\n\n—\nUp to Wine · Vinos de autor boutique\nuptowine.cl · Instagram @uptowine · WhatsApp +56 9 3173 7400 · ventas@uptowine.cl\nVenta de alcohol solo a mayores de 18 años. Disfruta con moderación.\nResponde con la palabra BAJA para no recibir más correos.';
+  }
+
+  // --- disenos HTML (plantillas hechas fuera): van tal cual, solo se personalizan ---
+  function correoHtmlDisenado(html, c) {
+    var seguro = {};
+    Object.keys(c || {}).forEach(function (k) { seguro[k] = typeof c[k] === 'string' ? esc(c[k]) : c[k]; });
+    return personalizar(html, seguro);
+  }
+  // version en texto plano del diseno, para el respaldo text/plain del correo
+  function htmlATexto(html) {
+    return String(html || '')
+      .replace(/<head[\s\S]*?<\/head>/gi, '')
+      .replace(/<style[\s\S]*?<\/style>/gi, '')
+      .replace(/<!--[\s\S]*?-->/g, '')
+      .replace(/<a [^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi, function (_, u, t) {
+        var tx = t.replace(/<[^>]+>/g, '').trim();
+        return tx && /^(https?:|mailto:)/i.test(u) ? tx + ' (' + u + ')' : tx;
+      })
+      .replace(/<(br|\/p|\/div|\/tr|\/h[1-6]|\/li|\/td)[^>]*>/gi, '\n')
+      .replace(/<[^>]+>/g, '')
+      .replace(/&nbsp;/g, ' ').replace(/&middot;/g, '\u00b7').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'")
+      .replace(/&#(\d+);/g, function (_, n) { return String.fromCharCode(n); })
+      .replace(/[ \t]+\n/g, '\n').replace(/\n{3,}/g, '\n\n').trim();
+  }
+  // html y texto de una campana o plantilla, venga del marcado simple o de un diseno HTML
+  function correoDe(obj, contacto) {
+    return obj.html
+      ? { html: correoHtmlDisenado(obj.html, contacto), texto: htmlATexto(personalizar(obj.html, contacto)) }
+      : { html: correoHtml(obj.cuerpo, contacto), texto: correoTexto(obj.cuerpo, contacto) };
   }
 
   // --- el mismo marcado, en formato WhatsApp -----------------------------------
@@ -307,7 +338,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
 
   if (typeof module !== 'undefined' && module.exports) {   // solo para los tests
     module.exports = { fonoWhatsApp: fonoWhatsApp, esc: esc, personalizar: personalizar,
-      plata: plata, cuerpoHtml: cuerpoHtml, correoHtml: correoHtml, correoTexto: correoTexto,
+      plata: plata, cuerpoHtml: cuerpoHtml, correoHtml: correoHtml, correoTexto: correoTexto, correoDe: correoDe,
       enlaceSeguro: enlaceSeguro, csvLeer: csvLeer, csvMapear: csvMapear, csvSalida: csvSalida,
       diasDesde: diasDesde, estadoPorFecha: estadoPorFecha, rutNormalizar: rutNormalizar,
       paykuFila: paykuFila, patAgrupar: patAgrupar, textoWhatsApp: textoWhatsApp };
@@ -319,7 +350,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
   // ==========================================================================
 
   var sb = null;
-  var VACIA = { id: null, nombre: '', canal: 'correo', asunto: '', cuerpo: '', segmento_id: null, destinatarios: [], estado: 'borrador' };
+  var VACIA = { id: null, nombre: '', canal: 'correo', asunto: '', cuerpo: '', html: null, segmento_id: null, destinatarios: [], estado: 'borrador' };
   var S = {
     sesion: null, admin: false, listo: false,
     vista: 'resumen',
@@ -425,6 +456,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     '.utwi .msj:empty{display:none}',
     /* previa */
     '.utwi .previa{width:100%;height:600px;border:1px solid var(--linea);border-radius:12px;background:#f4efec}',
+    '.utwi .previa.editor{height:760px;background:#0a0708;border-color:#E2123F}',
     '.utwi .previa.movil{width:390px;max-width:100%;margin:0 auto;display:block}',
     '.utwi .ayuda{margin:8px 0 0;color:var(--tx2);font-size:12px;line-height:1.8}',
     '.utwi .ayuda code{padding:2px 6px;border:1px solid var(--linea);border-radius:5px;background:#fff;font-size:11.5px;color:#374151}',
@@ -828,7 +860,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     var c = S.campana;
     if (!c) return Promise.resolve();
     var fila = {
-      nombre: c.nombre || 'Sin nombre', canal: c.canal, asunto: c.asunto || null, cuerpo: c.cuerpo || '',
+      nombre: c.nombre || 'Sin nombre', canal: c.canal, asunto: c.asunto || null, cuerpo: c.cuerpo || '', html: c.html || null,
       segmento_id: c.segmento_id || null, destinatarios: c.destinatarios || [],
       estado: c.estado || 'borrador', programada_para: c.programada_para || null,
       actualizado: new Date().toISOString(),
@@ -867,7 +899,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     aviso('Enviando la prueba a ' + yo + '…');
     sb.functions.invoke('intranet', { body: {
       accion: 'correo', para: yo, asunto: '[PRUEBA] ' + personalizar(S.campana.asunto || '(sin asunto)', quien),
-      html: correoHtml(S.campana.cuerpo, quien), texto: correoTexto(S.campana.cuerpo, quien),
+      html: correoDe(S.campana, quien).html, texto: correoDe(S.campana, quien).texto,
       adjuntos: S.adjuntos.map(function (a) { return { filename: a.nombre, content: a.base64 }; }),
     } }).then(function (r) {
       var d = r.data || {};
@@ -920,7 +952,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
         if (S.campana.canal === 'correo') {
           p = sb.functions.invoke('intranet', { body: {
             accion: 'correo', para: c.email, asunto: personalizar(S.campana.asunto, c),
-            html: correoHtml(S.campana.cuerpo, c), texto: correoTexto(S.campana.cuerpo, c),
+            html: correoDe(S.campana, c).html, texto: correoDe(S.campana, c).texto,
             adjuntos: S.adjuntos.map(function (a) { return { filename: a.nombre, content: a.base64 }; }),
             contacto_id: c.id } })
             .then(function (r) { return (r.data && r.data.ok) ? null : ((r.data && r.data.error) || (r.error && r.error.message) || 'falló el envío'); });
@@ -947,7 +979,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
   function guardarPlantillaDesdeCampana(nombre) {
     return sb.from('plantillas').insert({
       nombre: nombre, canal: S.campana.canal,
-      asunto: S.campana.canal === 'correo' ? S.campana.asunto : null, cuerpo: S.campana.cuerpo,
+      asunto: S.campana.canal === 'correo' ? S.campana.asunto : null, cuerpo: S.campana.cuerpo, html: S.campana.html || null,
     }).then(function (r) {
       if (r.error) return aviso(/duplicate|unique/i.test(r.error.message) ? 'Ya existe una plantilla con ese nombre.' : r.error.message, 'err');
       aviso('Guardada como plantilla.');
@@ -1405,7 +1437,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '<button class="btn sec" id="utwi-guardar-campana">Guardar borrador</button>' +
       (esCorreo ? '<button class="btn sec" id="utwi-prueba">Enviar prueba a mí</button>' : '') +
       '<button class="btn' + (S.confirmar ? ' peligro' : '') + '" id="utwi-enviar"' +
-        (S.ocupado || !c.cuerpo.trim() || (esCorreo && !(c.asunto || '').trim()) ? ' disabled' : '') + '>' +
+        (S.ocupado || !(c.html || c.cuerpo.trim()) || (esCorreo && !(c.asunto || '').trim()) ? ' disabled' : '') + '>' +
       (S.ocupado ? 'Enviando ' + S.progreso : S.confirmar ? 'Confirmar envío' : esCorreo ? 'Enviar campaña' : 'Encolar WhatsApp') +
       '</button></div></div>' +
 
@@ -1431,7 +1463,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
       (esCorreo ? '<label class="lbl" for="utwi-asunto">Asunto</label>' +
         '<input id="utwi-asunto" value="' + esc(c.asunto || '') + '" placeholder="Lo nuevo en Up to Wine, {nombre}">' : '') +
 
-      '<label class="lbl" for="utwi-cuerpo">Mensaje</label>' +
+      (esCorreo && c.html ? editorHtmlMarkup('utwi-editor-html') : '<label class="lbl" for="utwi-cuerpo">Mensaje</label>' +
       (esCorreo ? '<div class="barra">' +
         '<button data-marca="titulo">Título</button><button data-marca="negrita">Negrita</button>' +
         '<button data-marca="lista">Lista</button><button data-marca="enlace">Enlace</button>' +
@@ -1439,7 +1471,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
         '<button data-marca="separador">Separador</button><button data-marca="nombre">{nombre}</button></div>' : '') +
       '<textarea id="utwi-cuerpo" placeholder="' + (esCorreo ? 'Escribe el correo…' : 'Mensaje corto, como lo escribirías tú por WhatsApp.') + '">' + esc(c.cuerpo) + '</textarea>' +
       '<p class="ayuda">Variables: <code>{nombre}</code> <code>{comuna}</code> <code>{email}</code> <code>{celular}</code> <code>{plan}</code> <code>{mes}</code>' +
-      (esCorreo ? ' · Formato: <code>## Título</code> <code>**negrita**</code> <code>- lista</code> <code>[texto](url)</code> <code>[[Botón|url]]</code> <code>![foto](url)</code>' : ' · Por WhatsApp el título va en *negrita*, las listas con viñeta y el botón como enlace: la vista previa muestra cómo queda. Un enlace en su propia línea sale con la tarjeta de la página (imagen y título). Con PDF adjunto, el texto sale como leyenda del documento.') + '</p>' +
+      (esCorreo ? ' · Formato: <code>## Título</code> <code>**negrita**</code> <code>- lista</code> <code>[texto](url)</code> <code>[[Botón|url]]</code> <code>![foto](url)</code>' : ' · Por WhatsApp el título va en *negrita*, las listas con viñeta y el botón como enlace: la vista previa muestra cómo queda. Un enlace en su propia línea sale con la tarjeta de la página (imagen y título). Con PDF adjunto, el texto sale como leyenda del documento.') + '</p>') +
 
       (esCorreo ? '<label class="lbl">Adjuntos (PDF o imagen, hasta ' + MAX_ADJUNTOS + ')</label>' +
         '<input type="file" id="utwi-archivo" accept="application/pdf,image/*" multiple>'
@@ -1465,12 +1497,38 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '</div></div>';
   }
 
+  function editorHtmlMarkup(id) {
+    return '<label class="lbl">Mensaje · diseño HTML: haz clic sobre cualquier texto y edítalo ahí mismo</label>' +
+      '<iframe class="previa editor" id="' + id + '" title="Editor del diseño"></iframe>' +
+      '<p class="ayuda">Lo que va entre <code>[corchetes]</code> se reemplaza antes de enviar. Variables: <code>{{nombre}}</code> <code>{{plan}}</code> <code>{{mes}}</code>. ' +
+      'El diseño se envía tal cual se ve aquí.' + (id === 'utwi-editor-html' ? ' <button class="btn sec mini" id="utwi-quitar-html" type="button">Volver al texto simple</button>' : '') + '</p>';
+  }
+  // El diseno se edita dentro de un iframe en designMode: el texto cambia, el HTML queda intacto.
+  function montarEditorHtml(id, obj) {
+    var marco = document.getElementById(id);
+    if (!marco || !obj || !obj.html || marco.getAttribute('data-montado')) return;
+    marco.setAttribute('data-montado', '1');
+    marco.srcdoc = obj.html;
+    marco.onload = function () {
+      var doc = marco.contentDocument; if (!doc) return;
+      doc.designMode = 'on';
+      var t;
+      var guardar = function () {
+        obj.html = '<!DOCTYPE html>\n' + doc.documentElement.outerHTML;
+        if (obj === S.campana) { clearTimeout(t); t = setTimeout(refrescarPrevia, 500); }
+      };
+      doc.addEventListener('input', guardar);
+      doc.addEventListener('keyup', guardar);
+    };
+  }
+
   function refrescarPrevia() {
     var marco = document.getElementById('utwi-previa');
     if (!marco || !S.campana) return;
     var quien = { nombre: 'María Soledad Rojas', email: 'cliente@ejemplo.cl', celular: '56912345678', comuna: 'Providencia' };
     if (S.campana.canal === 'correo') {
-      marco.srcdoc = correoHtml(S.campana.cuerpo || '_Escribe el mensaje y aquí lo verás tal cual le llega._', quien);
+      marco.srcdoc = S.campana.html ? correoHtmlDisenado(S.campana.html, quien)
+        : correoHtml(S.campana.cuerpo || '_Escribe el mensaje y aquí lo verás tal cual le llega._', quien);
     } else {
       var texto = esc(textoWhatsApp(personalizar(S.campana.cuerpo || 'Escribe el mensaje…', quien)))
         .replace(/\*([^*\n]+)\*/g, '<b>$1</b>').replace(/_([^_\n]+)_/g, '<i>$1</i>').replace(/\n/g, '<br>');
@@ -1501,7 +1559,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
   // ---------- Plantillas ----------
   function vistaPlantillas() {
     var filas = S.plantillas.map(function (p) {
-      return '<tr><td><b>' + esc(p.nombre) + '</b><div class="mini">' + esc((p.cuerpo || '').slice(0, 70).replace(/\n/g, ' ')) + '…</div></td>' +
+      return '<tr><td><b>' + esc(p.nombre) + '</b><div class="mini">' + (p.html ? '🎨 Diseño HTML' : esc((p.cuerpo || '').slice(0, 70).replace(/\n/g, ' ')) + '…') + '</div></td>' +
         '<td>' + (p.canal === 'correo' ? '✉️ Correo' : '💬 WhatsApp') + '</td>' +
         '<td class="dim">' + esc(p.asunto || '—') + '</td><td class="dim">' + fecha(p.actualizado) + '</td>' +
         '<td style="text-align:right"><button class="btn sec mini" data-plantilla-editar="' + p.id + '">Editar</button> ' +
@@ -1514,8 +1572,9 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '<div class="card" style="margin-bottom:16px"><h3 style="margin:0 0 10px">Editar plantilla</h3>' +
       '<div class="grid g2"><div><label class="lbl" for="utwi-pl-nombre">Nombre</label><input id="utwi-pl-nombre" value="' + esc(e.nombre) + '"></div>' +
       (e.canal === 'correo' ? '<div><label class="lbl" for="utwi-pl-asunto">Asunto</label><input id="utwi-pl-asunto" value="' + esc(e.asunto || '') + '"></div>' : '<div><label class="lbl">Canal</label><div class="dim" style="padding:9px 0">💬 WhatsApp</div></div>') + '</div>' +
-      '<label class="lbl" for="utwi-pl-cuerpo">Mensaje</label><textarea id="utwi-pl-cuerpo">' + esc(e.cuerpo || '') + '</textarea>' +
-      '<p class="ayuda">Variables: <code>{nombre}</code> <code>{plan}</code> <code>{mes}</code> · lo que va entre <code>[corchetes]</code> se completa en cada envío.</p>' +
+      (e.html ? editorHtmlMarkup('utwi-pl-editor')
+        : '<label class="lbl" for="utwi-pl-cuerpo">Mensaje</label><textarea id="utwi-pl-cuerpo">' + esc(e.cuerpo || '') + '</textarea>' +
+          '<p class="ayuda">Variables: <code>{nombre}</code> <code>{plan}</code> <code>{mes}</code> · lo que va entre <code>[corchetes]</code> se completa en cada envío.</p>') +
       '<div style="display:flex;gap:8px;margin-top:10px"><button class="btn" id="utwi-pl-guardar"' + (S.ocupado ? ' disabled' : '') + '>Guardar</button>' +
       '<button class="btn sec" id="utwi-pl-cancelar">Cancelar</button></div></div>';
 
@@ -1745,6 +1804,10 @@ cuerpoHtml(personalizar(texto, contacto)) +
       b.onclick = function () { S.previa = b.getAttribute('data-previa'); pintar(); };
     });
     if ($('utwi-nombre')) $('utwi-nombre').oninput = function () { S.campana.nombre = this.value; };
+    montarEditorHtml('utwi-editor-html', S.campana);
+    if ($('utwi-quitar-html')) $('utwi-quitar-html').onclick = function () {
+      if (window.confirm('¿Dejar el diseño HTML y volver al texto simple? Se pierde el diseño en esta campaña.')) { S.campana.html = null; pintar(); }
+    };
     if ($('utwi-asunto')) $('utwi-asunto').oninput = function () { S.campana.asunto = this.value; };
     var cuerpo = $('utwi-cuerpo');
     if (cuerpo) cuerpo.oninput = function () {
@@ -1800,9 +1863,9 @@ cuerpoHtml(personalizar(texto, contacto)) +
       b.onclick = function () { S.adjuntos.splice(Number(b.getAttribute('data-quita')), 1); pintar(); };
     });
     if ($('utwi-guardar-plantilla')) $('utwi-guardar-plantilla').onclick = function () {
-      if (!S.campana.cuerpo.trim()) return aviso('Escribe el mensaje antes de guardarlo como plantilla.', 'err');
+      if (!(S.campana.html || S.campana.cuerpo.trim())) return aviso('Escribe el mensaje antes de guardarlo como plantilla.', 'err');
       if (S.campana.plantilla_id) {   // vino de una plantilla: se actualiza esa, no se crea otra
-        return sb.from('plantillas').update({ asunto: S.campana.canal === 'correo' ? S.campana.asunto : null, cuerpo: S.campana.cuerpo, actualizado: new Date().toISOString() })
+        return sb.from('plantillas').update({ asunto: S.campana.canal === 'correo' ? S.campana.asunto : null, cuerpo: S.campana.cuerpo, html: S.campana.html || null, actualizado: new Date().toISOString() })
           .eq('id', S.campana.plantilla_id).then(function (r) {
             if (r.error) return aviso(r.error.message, 'err');
             aviso('Plantilla actualizada.'); cargarPlantillas();
@@ -1814,7 +1877,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     if ($('utwi-usar-plantilla')) $('utwi-usar-plantilla').onchange = function () {
       var p = S.plantillas.filter(function (x) { return String(x.id) === String(this.value); }.bind(this))[0];
       if (!p) return;
-      S.campana.asunto = p.asunto || ''; S.campana.cuerpo = p.cuerpo || ''; S.campana.plantilla_id = p.id;
+      S.campana.asunto = p.asunto || ''; S.campana.cuerpo = p.cuerpo || ''; S.campana.html = p.html || null; S.campana.plantilla_id = p.id;
       if (!S.campana.nombre) S.campana.nombre = p.nombre;
       pintar();
     };
@@ -1830,13 +1893,14 @@ cuerpoHtml(personalizar(texto, contacto)) +
     if ($('utwi-pl-nombre')) $('utwi-pl-nombre').oninput = function () { S.plantillaEdit.nombre = this.value; };
     if ($('utwi-pl-asunto')) $('utwi-pl-asunto').oninput = function () { S.plantillaEdit.asunto = this.value; };
     if ($('utwi-pl-cuerpo')) $('utwi-pl-cuerpo').oninput = function () { S.plantillaEdit.cuerpo = this.value; };
+    montarEditorHtml('utwi-pl-editor', S.plantillaEdit);
     if ($('utwi-pl-cancelar')) $('utwi-pl-cancelar').onclick = function () { S.plantillaEdit = null; pintar(); };
     if ($('utwi-pl-guardar')) $('utwi-pl-guardar').onclick = function () {
       var e = S.plantillaEdit;
       if (!e.nombre.trim()) return aviso('La plantilla necesita un nombre.', 'err');
-      if (!e.cuerpo.trim()) return aviso('El mensaje no puede quedar vacío.', 'err');
+      if (!(e.html || (e.cuerpo || '').trim())) return aviso('El mensaje no puede quedar vacío.', 'err');
       S.ocupado = true; pintar();
-      sb.from('plantillas').update({ nombre: e.nombre.trim(), asunto: e.canal === 'correo' ? (e.asunto || '') : null, cuerpo: e.cuerpo, actualizado: new Date().toISOString() })
+      sb.from('plantillas').update({ nombre: e.nombre.trim(), asunto: e.canal === 'correo' ? (e.asunto || '') : null, cuerpo: e.cuerpo || '', html: e.html || null, actualizado: new Date().toISOString() })
         .eq('id', e.id).then(function (r) {
           S.ocupado = false;
           if (r.error) { pintar(); return aviso(/duplicate|unique/i.test(r.error.message) ? 'Ya existe otra plantilla con ese nombre.' : r.error.message, 'err'); }
@@ -1846,7 +1910,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     cada('[data-plantilla-usar]', function (b) {
       b.onclick = function () {
         var p = S.plantillas.filter(function (x) { return String(x.id) === String(b.getAttribute('data-plantilla-usar')); })[0];
-        if (p) nuevaCampana({ nombre: p.nombre, canal: p.canal, asunto: p.asunto || '', cuerpo: p.cuerpo, plantilla_id: p.id });
+        if (p) nuevaCampana({ nombre: p.nombre, canal: p.canal, asunto: p.asunto || '', cuerpo: p.cuerpo, html: p.html || null, plantilla_id: p.id });
       };
     });
     cada('[data-plantilla-borrar]', function (b) {
