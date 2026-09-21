@@ -47,7 +47,7 @@
     var pila = (c.nombre || '').trim().split(/\s+/)[0] || 'hola';
     return String(texto || '')
       .replace(/\{\{\s*([a-z_]+)\s*\}\}/gi, '{$1}')   // {{nombre}} de los disenos HTML = {nombre}
-      .replace(/\{link_baja\}/gi, 'mailto:ventas@uptowine.cl?subject=BAJA')
+      .replace(/\{link_baja\}/gi, '%%BAJA%%')   // la Edge Function pone el enlace firmado de cada contacto
       .replace(/\{nombre\}/gi, pila)
       .replace(/\{nombre_completo\}/gi, c.nombre || pila)
       .replace(/\{email\}/gi, c.email || '')
@@ -144,7 +144,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
 'Up to Wine &middot; Vinos de autor boutique<br>' +
 '<a href="https://uptowine.cl" style="color:#F1315B;text-decoration:none">uptowine.cl</a> &middot; Instagram @uptowine &middot; WhatsApp +56 9 3173 7400 &middot; ventas@uptowine.cl<br>' +
 'Venta de alcohol solo a mayores de 18 a&ntilde;os. Disfruta con moderaci&oacute;n.<br>' +
-'Si no quieres seguir recibiendo estos correos, responde con la palabra BAJA y te sacamos de la lista.' +
+'<a href="%%BAJA%%" style="color:#8A8087">Darme de baja</a> &middot; o responde con la palabra BAJA y te sacamos de la lista.' +
 '</p></td></tr>' +
 '</table></td></tr></table></body></html>';
   }
@@ -156,7 +156,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
       .replace(/!\[[^\]]*\]\(([^)]+)\)/g, '')
       .replace(/^##\s+/gm, '')
       .replace(/\*\*([^*]+)\*\*/g, '$1')
-      .trim() + '\n\n—\nUp to Wine · Vinos de autor boutique\nuptowine.cl · Instagram @uptowine · WhatsApp +56 9 3173 7400 · ventas@uptowine.cl\nVenta de alcohol solo a mayores de 18 años. Disfruta con moderación.\nResponde con la palabra BAJA para no recibir más correos.';
+      .trim() + '\n\n—\nUp to Wine · Vinos de autor boutique\nuptowine.cl · Instagram @uptowine · WhatsApp +56 9 3173 7400 · ventas@uptowine.cl\nVenta de alcohol solo a mayores de 18 años. Disfruta con moderación.\nDarme de baja: %%BAJA%%';
   }
 
   // --- disenos HTML (plantillas hechas fuera): van tal cual, solo se personalizan ---
@@ -528,7 +528,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
   // 4) Datos
   // ==========================================================================
 
-  var COLS = 'id,nombre,email,celular,rut,comuna,origen,etiquetas,notas,n_pedidos,total_gastado,ultima_compra,baja,creado,club_estado,club_canal,club_plan,club_monto,club_alta,club_ultimo_pago,club_baja';
+  var COLS = 'id,nombre,email,celular,rut,comuna,origen,etiquetas,notas,n_pedidos,total_gastado,ultima_compra,baja,baja_motivo,correo_invalido,creado,club_estado,club_canal,club_plan,club_monto,club_alta,club_ultimo_pago,club_baja';
 
   // Una sola función arma la consulta: la usan la lista, los segmentos y el envío.
   function consulta(f) {
@@ -596,9 +596,38 @@ cuerpoHtml(personalizar(texto, contacto)) +
   }
 
   function cargarCampanas() {
-    return sb.from('campanas').select('*').order('actualizado', { ascending: false }).limit(60).then(function (r) {
-      S.campanas = r.error ? [] : (r.data || []); pintar();
+    return Promise.all([
+      sb.from('campanas').select('*').order('actualizado', { ascending: false }).limit(60),
+      sb.from('campanas_metricas').select('*'),
+    ]).then(function (rs) {
+      S.campanas = rs[0].error ? [] : (rs[0].data || []);
+      S.metricasCampana = {};
+      (rs[1].data || []).forEach(function (m) { S.metricasCampana[m.campana_id] = m; });
+      pintar();
     });
+  }
+  // "80 entregados · 31 abiertos · 9 clics · 2 rebotes · 1 baja" (lo que llego por el webhook de Resend)
+  function resumenMetricas(c) {
+    var m = (S.metricasCampana || {})[c.id];
+    if (!m || c.canal !== 'correo') return '';
+    var partes = [];
+    if (m.entregados) partes.push(m.entregados + ' entregados');
+    if (m.abiertos) partes.push('<b>' + m.abiertos + '</b> abiertos');
+    if (m.clics) partes.push('<b>' + m.clics + '</b> clics');
+    if (m.rebotados) partes.push('<span class="pill warn">' + m.rebotados + ' rebote' + (m.rebotados > 1 ? 's' : '') + '</span>');
+    if (m.quejas) partes.push('<span class="pill warn">' + m.quejas + ' spam</span>');
+    if (m.bajas) partes.push('<span class="pill gris">' + m.bajas + ' baja' + (m.bajas > 1 ? 's' : '') + '</span>');
+    return partes.length ? '<div class="mini" style="margin-top:3px">' + partes.join(' · ') + '</div>' : '';
+  }
+  // lo que paso con un correo despues de salir, como pastillas
+  function pillsCorreo(m) {
+    var out = '';
+    if (m.rebotado) out += ' <span class="pill warn">rebotó</span>';
+    else if (m.abierto) out += ' <span class="pill ok">abierto' + (m.clic ? ' · clic' : '') + '</span>';
+    else if (m.entregado) out += ' <span class="pill gris">entregado</span>';
+    if (m.queja) out += ' <span class="pill warn">spam</span>';
+    if (m.baja) out += ' <span class="pill gris">baja</span>';
+    return out;
   }
 
   function cargarHistorial() {
@@ -892,7 +921,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
   }
 
   function alcanzables(lista) {
-    return lista.filter(function (c) { return S.campana.canal === 'correo' ? c.email : fonoWhatsApp(c.celular); });
+    return lista.filter(function (c) { return S.campana.canal === 'correo' ? (c.email && !c.correo_invalido) : fonoWhatsApp(c.celular); });
   }
 
   function enviarPrueba() {
@@ -955,7 +984,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
         var p;
         if (S.campana.canal === 'correo') {
           p = sb.functions.invoke('intranet', { body: {
-            accion: 'correo', para: c.email, asunto: personalizar(S.campana.asunto, c),
+            accion: 'correo', para: c.email, asunto: personalizar(S.campana.asunto, c), campana_id: S.campana.id || null,
             html: correoDe(S.campana, c).html, texto: correoDe(S.campana, c).texto,
             adjuntos: S.adjuntos.map(function (a) { return { filename: a.nombre, content: a.base64 }; }),
             contacto_id: c.id } })
@@ -1210,7 +1239,8 @@ cuerpoHtml(personalizar(texto, contacto)) +
       return '<tr class="' + (S.sel[c.id] ? 'on' : '') + '" data-id="' + c.id + '">' +
         '<td><input type="checkbox"' + (S.sel[c.id] ? ' checked' : '') + ' data-marca="' + c.id + '" aria-label="Seleccionar"></td>' +
         '<td><b>' + esc(c.nombre || '(sin nombre)') + '</b>' +
-        (c.baja ? ' <span class="pill warn">baja</span>' : '') +
+        (c.baja ? ' <span class="pill warn">baja' + (c.baja_motivo === 'enlace' ? ' (pidió salir)' : c.baja_motivo === 'queja' ? ' (marcó spam)' : '') + '</span>' : '') +
+        (c.correo_invalido ? ' <span class="pill warn">correo rebota</span>' : '') +
         '<div class="mini">' + esc([c.email, c.celular].filter(Boolean).join(' · ') || 'sin correo ni celular') + '</div></td>' +
         '<td>' + pillClub(c) + '</td>' +
         '<td>' + ((c.etiquetas || []).map(function (e) { return tag(e); }).join('') || '<span class="mini">—</span>') + '</td>' +
@@ -1290,7 +1320,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     var c = S.ficha;
     var mensajes = (c.mensajes || []).map(function (m) {
       var icono = m.canal === 'correo' ? '✉️ ' : m.canal === 'whatsapp' ? '💬 ' : '🍷 ';
-      return '<div class="dato"><span>' + icono + esc((m.titulo || '').slice(0, 42)) + '</span><b class="mini">' + fecha(m.creado) + (m.canal === 'club' ? '' : ' · ' + esc(m.estado)) + '</b></div>';
+      return '<div class="dato"><span>' + icono + esc((m.titulo || '').slice(0, 42)) + '</span><b class="mini">' + fecha(m.creado) + (m.canal === 'club' ? '' : ' · ' + esc(m.estado)) + pillsCorreo(m) + '</b></div>';
     }).join('') || '<p class="mini">Todavía no le hemos escrito.</p>';
 
     return '<div class="velo" id="utwi-velo"></div><div class="ficha">' +
@@ -1417,7 +1447,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
       return '<tr><td><b>' + esc(c.nombre) + '</b><div class="mini">' + esc(c.asunto || (c.canal === 'whatsapp' ? 'WhatsApp' : 'sin asunto')) + '</div></td>' +
         '<td>' + (c.canal === 'correo' ? '✉️ Correo' : '💬 WhatsApp') + '</td>' +
         '<td>' + pillEstado(c.estado) + '</td>' +
-        '<td class="dim">' + (c.estado === 'enviada' ? c.enviados + ' enviados' + (c.fallidos ? ' · ' + c.fallidos + ' fallidos' : '') : '—') + '</td>' +
+        '<td class="dim">' + (c.estado === 'enviada' ? c.enviados + ' enviados' + (c.fallidos ? ' · ' + c.fallidos + ' fallidos' : '') + resumenMetricas(c) : '—') + '</td>' +
         '<td class="dim">' + fecha(c.actualizado) + '</td>' +
         '<td style="text-align:right"><button class="btn sec mini" data-campana="' + c.id + '">Abrir</button> ' +
         '<button class="btn sec mini" data-duplicar="' + c.id + '">Duplicar</button></td></tr>';
@@ -1609,7 +1639,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
       var clase = m.estado === 'enviado' ? 'ok' : (m.estado === 'fallido' || m.estado === 'rechazado') ? 'warn' : 'gris';
       return '<tr><td>' + (m.canal === 'correo' ? '✉️' : '💬') + '</td>' +
         '<td><b>' + esc(m.titulo || '(sin asunto)') + '</b><div class="mini">' + esc((m.cuerpo || '').replace(/<[^>]*>/g, ' ').slice(0, 80)) + '</div></td>' +
-        '<td><span class="pill ' + clase + '">' + esc(m.estado) + '</span></td>' +
+        '<td><span class="pill ' + clase + '">' + esc(m.estado) + '</span>' + pillsCorreo(m) + '</td>' +
         '<td class="dim">' + fecha(m.creado) + '</td>' +
         '<td style="text-align:right">' + (m.contacto_id ? '<button class="btn sec mini" data-ficha="' + m.contacto_id + '">Contacto</button>' : '') + '</td></tr>';
     }).join('') || '<tr><td colspan="5" class="dim" style="padding:18px">Todavía no se ha enviado nada.</td></tr>';
