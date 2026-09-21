@@ -858,7 +858,8 @@ document.getElementById('btnPdf').onclick=async ()=>{ EXPORTANDO=false; await ar
       const el=document.getElementById('printDoc');
       // las imagenes de la tienda no traen CORS: se pasan por el proxy de la intranet solo para dibujar el PDF
       const PROXY='https://oontbdybvewvziamwfcn.supabase.co/functions/v1/publico?accion=imagen&u=';
-      const imgs=[...el.querySelectorAll('img')].filter(i=>/jumpseller\.com/.test(i.src));
+      // solo las que vienen directo de la tienda (el logo); las botellas pasan por wsrv.nl, que si manda CORS
+      const imgs=[...el.querySelectorAll('img')].filter(i=>{ try { return /(^|\.)jumpseller\.com$/.test(new URL(i.src).hostname); } catch(e) { return false; } });
       imgs.forEach(i=>{ i.dataset.orig=i.src; i.crossOrigin='anonymous'; i.src=PROXY+encodeURIComponent(i.dataset.orig); });
       await Promise.all(imgs.map(i=>new Promise(ok=>{ if(i.complete&&i.naturalWidth) return ok(); i.onload=ok; i.onerror=ok; setTimeout(ok,8000); })));
       const canvas=await html2canvas(el,{scale:2,useCORS:true,backgroundColor:'#ffffff',scrollX:0,scrollY:0,logging:false});
