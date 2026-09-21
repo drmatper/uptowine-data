@@ -1692,12 +1692,22 @@ cuerpoHtml(personalizar(texto, contacto)) +
   var COTIZADOR_URL = 'https://app.uptowine.cl/cotizador.html';
   function vistaCotizador() {
     return '<div class="cab"><h1>Cotizador</h1><div class="sp"><span class="dim">Arma la cotización y pulsa <b>Enviar por la intranet</b>: se abre una campaña con el PDF adjunto y el link de pago, para correo o WhatsApp.</span></div></div>' +
-      '<iframe class="cotizador" id="utwi-cotizador" src="' + COTIZADOR_URL + '" title="Cotizador Up to Wine"></iframe>';
+      '<iframe class="cotizador" id="utwi-cotizador" title="Cotizador Up to Wine"></iframe>';
+  }
+  // El cotizador se incrusta con srcdoc (la intranet trae el HTML y lo pinta ella misma):
+  // asi no hay navegacion a app.uptowine.cl ni service worker de la app en el medio.
+  function montarCotizador() {
+    var marco = $('utwi-cotizador');
+    if (!marco || marco.getAttribute('data-cargado')) return;
+    marco.setAttribute('data-cargado', '1');
+    fetch(COTIZADOR_URL, { cache: 'no-cache' }).then(function (r) { return r.ok ? r.text() : Promise.reject(new Error('HTTP ' + r.status)); })
+      .then(function (html) { marco.srcdoc = html; })
+      .catch(function (e) { aviso('No se pudo cargar el cotizador: ' + e.message, 'err'); });
   }
   // Lo que manda el cotizador: PDF en base64 + resumen. Se abre una campana lista para elegir destinatario.
   function recibirCotizacion(ev) {
-    var origen = String(ev.origin || '');
-    if (origen !== 'https://app.uptowine.cl' && !/^http:\/\/localhost(:\d+)?$/.test(origen)) return;
+    // el iframe es srcdoc: hereda el origen de la intranet (uptowine.cl, o localhost en la simulacion)
+    if (String(ev.origin || '') !== window.location.origin) return;
     var d = ev.data || {};
     if (d.tipo !== 'utw-cotizacion' || !d.pdf) return;
     nuevaCampana({
@@ -1813,6 +1823,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
   }
 
   function conectar() {
+    montarCotizador();
     if ($('utwi-salir')) $('utwi-salir').onclick = function () { S.sel = {}; S.msj = ''; sb.auth.signOut(); };
 
     cada('[data-vista]', function (b) {
