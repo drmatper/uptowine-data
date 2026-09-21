@@ -1,0 +1,989 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cotizador Up to Wine</title>
+<style>
+:root{
+  --burgundy:#7a2438; --burgundy-dark:#5e1a2b; --cream:#faf5ef; --cream2:#f4f0e8;
+  --line:#e4dacd; --ink:#2b1c1f; --muted:#8a7d76; --gold:#b8894b; --green:#2f7d5b;
+  --shadow:0 2px 10px rgba(60,30,35,.08);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:var(--ink);background:#efe9e1;line-height:1.5}
+h1,h2,h3{margin:0}
+button{font-family:inherit;cursor:pointer}
+input,select{font-family:inherit;font-size:14px}
+a{color:var(--burgundy)}
+
+/* ===== Header ===== */
+.topbar{background:var(--burgundy);color:#fff;padding:12px 20px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:50;box-shadow:var(--shadow)}
+.topbar img{height:40px;background:#fff;border-radius:6px;padding:3px 6px}
+.topbar .t{font-size:18px;font-weight:800;letter-spacing:.02em}
+.topbar .s{font-size:12px;opacity:.85;margin-top:1px}
+.topbar .spacer{flex:1}
+.topbar .count{background:rgba(255,255,255,.15);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:700}
+
+/* ===== Layout ===== */
+.app{display:grid;grid-template-columns:1fr 430px;gap:0;align-items:start}
+@media(max-width:960px){.app{grid-template-columns:1fr}}
+.catalog{padding:18px 20px}
+.quote{position:sticky;top:64px;height:calc(100vh - 64px);overflow-y:auto;background:#fff;border-left:1px solid var(--line);padding:18px 18px 60px}
+@media(max-width:960px){.quote{position:static;height:auto;border-left:none;border-top:2px solid var(--burgundy)}}
+
+/* ===== Filtros ===== */
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
+.search{flex:1;min-width:200px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.chip{border:1px solid var(--line);background:#fff;color:var(--burgundy);border-radius:20px;padding:7px 14px;font-size:13px;font-weight:700}
+.chip.on{background:var(--burgundy);color:#fff;border-color:var(--burgundy)}
+.toggle{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);font-weight:600;cursor:pointer;user-select:none}
+
+/* ===== Grid catálogo ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .12s,box-shadow .12s}
+.card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(60,30,35,.14)}
+.card .imgwrap{height:150px;background:linear-gradient(135deg,#f7f2ea,#efe6d8);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative}
+.card .imgwrap img{max-height:140px;max-width:88%;object-fit:contain}
+.badge{position:absolute;top:8px;left:8px;background:rgba(122,36,56,.92);color:#fff;font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:12px}
+.badge.acc{background:#6b6b6b}
+.soldout{position:absolute;top:8px;right:8px;background:#b23b3b;color:#fff;font-size:10px;font-weight:800;padding:3px 8px;border-radius:12px}
+.card .body{padding:10px 12px 12px;display:flex;flex-direction:column;flex:1}
+.card .nm{font-size:14px;font-weight:700;line-height:1.25;cursor:pointer}
+.card .meta{font-size:11.5px;color:var(--muted);margin-top:3px;min-height:15px}
+.card .pr{font-size:16px;font-weight:800;color:var(--burgundy);margin-top:8px}
+.card .add{margin-top:9px;background:var(--burgundy);color:#fff;border:none;border-radius:9px;padding:9px;font-weight:700;font-size:13px}
+.card .add.in{background:#eadfce;color:var(--burgundy)}
+.card .verficha{background:none;border:none;color:var(--muted);font-size:11.5px;text-decoration:underline;padding:6px 0 0;text-align:left}
+
+/* ===== Quote panel ===== */
+.qh{font-size:16px;font-weight:800;color:var(--burgundy);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.section{border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:14px;background:var(--cream)}
+.fld{margin-bottom:8px}
+.fld label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:700;margin-bottom:3px}
+.fld input,.fld textarea{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff}
+.fld textarea{resize:vertical;min-height:44px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.gdisc{display:flex;gap:8px;align-items:flex-end}
+.gdisc .fld{flex:1;margin:0}
+.gdisc button{background:var(--burgundy);color:#fff;border:none;border-radius:8px;padding:9px 12px;font-weight:700;font-size:12px;white-space:nowrap}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px}
+.checks label{display:flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;color:var(--ink);cursor:pointer;user-select:none}
+.checks input{width:18px;height:18px;accent-color:var(--burgundy);cursor:pointer;flex-shrink:0}
+.packchips{display:flex;flex-direction:column;gap:4px;margin-top:8px}
+.packchips:empty{display:none}
+.packchip{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--burgundy);color:var(--burgundy);border-radius:16px;padding:4px 6px 4px 12px;font-size:12.5px;font-weight:700}
+.packchip button{background:none;border:none;color:var(--burgundy);font-size:15px;line-height:1;cursor:pointer;padding:0 4px}
+.envrow{align-items:center}
+.envctl{display:flex;align-items:center;gap:10px}
+.envgratis{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--muted);font-weight:600;cursor:pointer;user-select:none}
+.envgratis input{width:15px;height:15px;accent-color:var(--burgundy)}
+.envin{font-weight:700}
+.envin input{width:80px;padding:5px 6px;border:1px solid var(--line);border-radius:7px;text-align:right;font-size:14px;font-weight:700}
+.packlbl{font-size:14px}
+.itemdesc,.packdesc{width:100%;margin-top:8px;border:1px solid var(--line);border-radius:8px;padding:7px 9px;font-family:inherit;font-size:12.5px;resize:vertical;min-height:32px;line-height:1.35;background:#fffdfb}
+.itemdesc:focus,.packdesc:focus{outline:2px solid var(--burgundy);border-color:var(--burgundy)}
+.packrow{display:flex;flex-direction:column;gap:0;width:100%;margin-bottom:8px}
+.packrow .packchip{align-self:flex-start}
+.packrow .packdesc{margin-top:6px}
+.packsel{border:1px solid var(--burgundy);border-radius:7px;padding:5px 6px;font-size:12px;background:#fff;color:var(--burgundy);font-weight:700;max-width:120px}
+.packhead{display:flex;justify-content:space-between;align-items:center;padding:10px 0 4px;border-bottom:none;font-size:12px;font-weight:800;color:var(--burgundy);text-transform:uppercase;letter-spacing:.03em}
+.packhead .pt{font-weight:800;color:var(--ink)}
+.li.grouped{padding-left:10px;border-left:3px solid #eadfce;margin-left:2px}
+
+.items{list-style:none;margin:0;padding:0}
+.empty{text-align:center;color:var(--muted);padding:26px 10px;font-size:14px}
+.li{display:grid;grid-template-columns:46px 1fr;gap:10px;padding:11px 0;border-bottom:1px solid var(--line)}
+.li .th{width:46px;height:56px;background:#f4ede2;border-radius:6px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.li .th img{max-width:100%;max-height:100%;object-fit:contain}
+.li .nm{font-size:13px;font-weight:700;line-height:1.2}
+.li .rowc{display:flex;align-items:center;gap:6px;margin-top:6px;flex-wrap:wrap}
+.stepper{display:flex;align-items:center;border:1px solid var(--line);border-radius:7px;overflow:hidden;background:#fff}
+.stepper button{width:38px;height:38px;border:none;background:#f2e9dd;color:var(--burgundy);font-size:22px;font-weight:800;line-height:1}
+.stepper button:active{background:#e6d6bf}
+.stepper input{width:48px;text-align:center;border:none;height:38px;padding:0;font-size:16px;font-weight:700;-moz-appearance:textfield}
+.stepper input::-webkit-outer-spin-button,.stepper input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.dline{display:flex;align-items:center;gap:5px;font-size:13px;color:var(--muted);font-weight:600}
+.dline input{width:64px;padding:8px 8px;border:1px solid var(--line);border-radius:8px;text-align:right;font-size:16px;font-weight:700;color:var(--burgundy)}
+.dline input:focus,.stepper input:focus{outline:2px solid var(--burgundy);outline-offset:0}
+.li .prices{margin-top:6px;font-size:12px;display:flex;justify-content:space-between;align-items:baseline}
+.li .normal{color:var(--muted);text-decoration:line-through;font-size:11.5px}
+.li .final{font-weight:800;color:var(--ink);font-size:14px}
+.li .rm{background:none;border:none;color:#b23b3b;font-size:12px;padding:0;text-decoration:underline}
+
+.totals{border-top:2px solid var(--burgundy);padding-top:12px;margin-top:6px}
+.trow{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px}
+.trow.big{font-size:20px;font-weight:800;color:var(--burgundy);margin-top:8px}
+.trow .disc{color:var(--green);font-weight:700}
+.actions{display:flex;gap:8px;margin-top:16px}
+.btn{flex:1;padding:12px;border-radius:10px;border:none;font-weight:800;font-size:14px}
+.btn.pri{background:var(--burgundy);color:#fff}
+.btn.sec{background:#eadfce;color:var(--burgundy);flex:0 0 auto;padding:12px 14px}
+.paybox{margin-top:12px}
+.btn.pay{width:100%;background:#009ee3;color:#fff;border:none;border-radius:10px;padding:13px;font-weight:800;font-size:14px}
+.btn.pay:active{background:#0088c7}
+.btn.pay:disabled{opacity:.6}
+.btn.payflow{width:100%;margin-top:8px;background:#2b3a8c;color:#fff;border:none;border-radius:10px;padding:13px;font-weight:800;font-size:14px}
+.btn.payflow:active{background:#232f70}
+.btn.payflow:disabled{opacity:.6}
+.payresult{margin-top:10px;border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--cream)}
+.payresult .lnk{display:block;word-break:break-all;font-size:12.5px;color:var(--burgundy);background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin-bottom:8px}
+.payresult .pbtns{display:flex;gap:8px;flex-wrap:wrap}
+.payresult .pbtns button,.payresult .pbtns a{flex:1;text-align:center;border:none;border-radius:8px;padding:9px;font-weight:700;font-size:12.5px;text-decoration:none;cursor:pointer}
+.payresult .pbtns .cpy{background:var(--burgundy);color:#fff}
+.payresult .pbtns .opn{background:#009ee3;color:#fff}
+.payresult .pbtns .wa{background:#25d366;color:#fff}
+.payresult .err{color:#b23b3b;font-size:13px;margin-top:8px}
+.payrow{padding:8px 0;border-bottom:1px solid var(--line)}
+.payrow:last-child{border-bottom:none}
+.payrow-h{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);margin-bottom:6px}
+.payrow-h .stale{color:#b23b3b;font-weight:700;font-size:11px}
+.paycfg{margin-top:10px;font-size:12.5px;color:var(--muted)}
+.paycfg summary{cursor:pointer;font-weight:600;user-select:none}
+
+/* ===== Modal ficha ===== */
+.modal{position:fixed;inset:0;background:rgba(30,15,20,.55);display:none;align-items:center;justify-content:center;z-index:100;padding:20px}
+.modal.on{display:flex}
+.mbox{background:#fff;border-radius:16px;max-width:640px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.mhead{display:flex;gap:16px;padding:18px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff}
+.mhead .mimg{width:90px;height:120px;background:#f4ede2;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.mhead .mimg img{max-width:100%;max-height:100%}
+.mhead h2{font-size:19px;color:var(--burgundy)}
+.mclose{position:absolute;top:12px;right:14px;background:none;border:none;font-size:26px;color:var(--muted);line-height:1}
+.mbody{padding:18px}
+.frow{display:flex;padding:8px 0;border-top:1px solid #f0e9e0;font-size:14px}
+.frow .fl{width:120px;flex-shrink:0;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700;padding-top:2px}
+.som{background:var(--cream2);border-radius:10px;padding:2px 14px 12px;margin-top:14px}
+.som h4{color:var(--burgundy);font-size:14px;margin:14px 0 4px}
+.som p{margin:0;font-size:13.5px}
+.maddbtn{width:100%;margin-top:16px;background:var(--burgundy);color:#fff;border:none;border-radius:10px;padding:13px;font-weight:800;font-size:15px}
+
+/* ===== Print / PDF ===== */
+.quote-print{display:none}
+/* exportando a PDF desde la intranet: se dibuja fuera de pantalla */
+body.exportando .quote-print{display:block;position:absolute;left:-10000px;top:0;width:190mm}
+@media print{
+  @page{margin:14mm 12mm}
+  body{background:#fff}
+  .topbar,.app,.modal{display:none !important}
+  .quote-print{display:block}
+}
+.quote-print{color:var(--ink);--serif:Georgia,'Times New Roman',serif;--sec:#6b5d55;--burgundy:#a41d3a;background:#fff}
+/* Encabezado */
+.qp-head{display:flex;align-items:center;gap:14px;border-bottom:2px solid var(--burgundy);padding-bottom:9px;margin-bottom:12px}
+.qp-head img{height:44px;flex-shrink:0}
+.qp-head .qhrule{width:1px;align-self:stretch;background:var(--line)}
+.qp-head .qtitle{flex:1;min-width:0}
+.qp-head .qt{font-family:var(--serif);font-size:27px;font-weight:700;color:var(--burgundy);line-height:1;letter-spacing:.01em}
+.qp-head .qs{font-size:10.5px;color:var(--sec);margin-top:4px}
+.qp-head .qmeta{flex-shrink:0;text-align:right;font-size:11.5px;color:var(--ink);line-height:1.55;white-space:nowrap}
+.qp-head .qmeta b{color:var(--burgundy)}
+.qp-head .qmeta .qval{color:var(--sec)}
+/* Cliente */
+.qp-client{display:flex;justify-content:space-between;gap:20px;padding:2px 2px 10px;margin-bottom:4px;font-size:13px;border-bottom:1.5px solid var(--burgundy)}
+.qp-client b{color:var(--burgundy)}
+.qp-client .qcr{color:var(--sec);font-weight:600}
+/* Botella con presencia (piso + sombra) */
+.qbot{display:flex;flex-direction:column;align-items:center;flex-shrink:0}
+.qbot img{object-fit:contain;display:block}
+.qbot .qsh{width:78%;height:6px;margin-top:1px;border-radius:50%;background:radial-gradient(ellipse at center, rgba(43,28,31,.22), rgba(43,28,31,0) 70%)}
+/* Fila de producto (suelto) */
+.qp-item{display:flex;gap:13px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);page-break-inside:avoid}
+.qp-item .qbw{display:flex;align-items:flex-end;justify-content:center;flex-shrink:0;width:62px}
+.qp-item .qbw img{height:106px;width:auto;max-width:62px;object-fit:contain;object-position:bottom;display:block}
+.qp-item .qinfo{flex:1;min-width:0}
+.qp-item .qn{font-size:14.5px;font-weight:700;color:var(--ink);line-height:1.15}
+.qp-item .qtags{font-size:10px;color:var(--burgundy);font-weight:800;letter-spacing:.03em;text-transform:uppercase;margin:2px 0 3px}
+.qp-note{font-size:11.5px;color:#3f342f;line-height:1.4;margin-top:2px}
+.qp-note b{color:var(--ink);font-weight:700}
+.qp-desc{font-size:12px;color:#2b1c1f;line-height:1.45;margin:3px 0;padding-left:8px;border-left:2px solid var(--burgundy)}
+.qp-pack-desc{font-size:12.5px;color:#2b1c1f;line-height:1.45;padding:8px 14px 2px}
+.qp-item .qprice{width:128px;flex-shrink:0;text-align:right}
+.qp-norm{text-decoration:line-through;color:#6b5d55;font-size:12px;font-weight:600}
+.qp-final{font-size:21px;font-weight:800;color:var(--burgundy);line-height:1.05}
+.qp-chip{display:inline-block;border:1.4px solid var(--burgundy);color:var(--burgundy);font-size:10px;font-weight:800;border-radius:4px;padding:0 6px;margin-top:4px}
+.qp-unit{font-size:10.5px;color:var(--sec);margin-top:4px}
+/* Pack */
+.qp-pack{border:1.5px solid var(--burgundy);border-radius:10px;overflow:hidden;margin:12px 0;page-break-inside:avoid}
+.qp-pack-head{border-left:5px solid var(--burgundy);padding:8px 14px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1.5px solid var(--burgundy)}
+.qp-pack-title{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--burgundy);text-transform:capitalize}
+.qp-pack-meta{font-size:10px;color:var(--sec);font-weight:700;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
+.qp-pack-top{display:flex;gap:10px;align-items:center;padding:14px 14px 12px;border-bottom:1px solid var(--line)}
+.qp-pack-bots{display:flex;align-items:flex-end;justify-content:center;gap:16px;flex:1;min-height:180px}
+.qp-pack-bots .qbw{display:flex;align-items:flex-end;justify-content:center}
+.qp-pack-bots .qbw img{height:180px;width:auto;max-width:120px;object-fit:contain;object-position:bottom;display:block}
+.qp-pack-panel{flex-shrink:0;width:172px;text-align:right;border-left:1px solid var(--line);padding-left:14px}
+.qp-antes{font-size:12.5px;color:var(--sec);text-decoration:line-through}
+.qp-of{font-family:var(--serif);font-size:36px;font-weight:700;color:var(--burgundy);line-height:1.02}
+.qp-save{font-size:11.5px;color:var(--green);font-weight:800;margin-top:2px}
+.qp-pack-wines{padding:5px 14px 11px}
+.qp-pw{padding:6px 0;border-top:1px solid #f0e9e0}
+.qp-pw:first-child{border-top:none}
+.qp-pw-n{font-size:12.5px;font-weight:700;color:var(--ink)}
+.qp-pw-x{color:var(--burgundy);font-weight:800}
+.qp-pw-tags{font-weight:800;color:var(--burgundy);font-size:10px;text-transform:uppercase;letter-spacing:.03em}
+/* Totales */
+.qp-tot{margin-top:12px;margin-left:auto;width:258px}
+.qp-tot .r{display:flex;justify-content:space-between;font-size:13px;padding:3px 0}
+.qp-tot .r.grand{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--burgundy);border-top:2px solid var(--burgundy);margin-top:5px;padding-top:7px}
+/* Pago + transferencia (dos columnas, sobrio) */
+.qp-blocks{display:flex;gap:12px;margin-top:14px;align-items:stretch;page-break-inside:avoid}
+.qp-blocks>div{flex:1}
+.qp-pay,.qp-trans{border:1px solid #d9cdbb;border-top:3px solid var(--burgundy);border-radius:8px;padding:10px 13px;background:#fff}
+.qp-trans{border-top-color:var(--gold)}
+.qp-pay-t,.qp-trans-t{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--burgundy);margin-bottom:6px}
+.qp-trans-t{color:#9a6a1f}
+.qp-paybtn{display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid #d9cdbb;border-radius:9px;padding:8px 11px;margin-top:8px}
+.qp-paylogo{height:26px;width:auto;display:block;flex-shrink:0}
+.qp-pay-meta{flex:1;font-size:11px;color:#2b1c1f;line-height:1.3}
+.qp-pay-meta b{color:var(--burgundy)}
+.qp-pay-cta{flex-shrink:0;font-weight:800;font-size:12px;color:var(--burgundy);white-space:nowrap;border:1.5px solid var(--burgundy);border-radius:6px;padding:4px 9px}
+.qp-trans-b{font-size:11.5px;color:#2b1c1f;line-height:1.55}
+.qp-trans-b div{padding:.5px 0}
+.qp-foot{margin-top:16px;border-top:1px solid var(--line);padding-top:9px;font-size:10.5px;color:var(--sec);text-align:center}
+.qp-paybtn{align-items:stretch}
+.qp-pay-info{flex:1;display:flex;flex-direction:column;justify-content:center;gap:3px}
+.qp-pay-qr{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:2px;padding-left:10px;border-left:1px solid #eadfce}
+.qp-pay-qr img{width:86px;height:86px;display:block;image-rendering:pixelated}
+.qp-pay-qr span{font-size:8.5px;font-weight:700;color:var(--burgundy);text-transform:uppercase;letter-spacing:.03em}
+.qp-pay-link{font-size:10px;color:#2b1c1f;margin-top:6px;line-height:1.4;word-break:break-all}
+.qp-pay-link b{color:var(--burgundy);text-transform:uppercase;font-size:8.5px;letter-spacing:.03em;display:block}
+.qp-pay-link a{color:#1a5fb4;text-decoration:underline}
+.qp-pay-wa{font-size:10px;color:#2b1c1f;margin-top:4px}
+.qp-pay-wa a{color:#1a7a3a;font-weight:700;text-decoration:underline}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <img src="https://images.jumpseller.com/store/up-to-wine-chile/store/logo/Up_to_Wine_-_Logo-TR-2-01.png?1744053756" alt="Up to Wine">
+  <div>
+    <div class="t">Cotizador de Vinos</div>
+    <div class="s">Up to Wine · Vinos de autor boutique</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="count" id="topcount">0 en cotización</div>
+</div>
+
+<div class="app">
+  <div class="catalog">
+    <div class="filters">
+      <input class="search" id="search" placeholder="Buscar por nombre, cepa, valle, viña…">
+    </div>
+    <div class="filters" id="chips"></div>
+    <div class="filters" style="justify-content:space-between">
+      <label class="toggle"><input type="checkbox" id="onlyAvail" checked> Solo disponibles (con stock)</label>
+      <span id="resultcount" style="font-size:13px;color:var(--muted);font-weight:600"></span>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <div class="quote">
+    <div class="qh">🍷 Cotización</div>
+    <div class="section">
+      <div class="fld"><label>Título del documento</label><input id="cTitulo" value="Cotización" placeholder="Cotización"></div>
+      <div class="grid2">
+        <div class="fld"><label>Cliente</label><input id="cCliente" placeholder="Nombre del cliente"></div>
+        <div class="fld"><label>Empresa / Contacto</label><input id="cEmpresa" placeholder="Empresa o teléfono"></div>
+      </div>
+      <div class="grid2">
+        <div class="fld"><label>Fecha</label><input id="cFecha" type="date"></div>
+        <div class="fld"><label>Válida hasta</label><input id="cValidez" type="date"></div>
+      </div>
+      <div class="fld"><label>N° de cotización</label><input id="cNumero" placeholder="Ej: UTW-2026-001"></div>
+      <div class="fld"><label>Email cliente (para Flow, opcional)</label><input id="cEmail" type="email" placeholder="cliente@correo.cl"></div>
+    </div>
+
+    <div class="section">
+      <div class="gdisc">
+        <div class="fld"><label>Descuento global (%)</label><input id="gDisc" type="number" inputmode="decimal" min="0" max="100" step="1" value="0" onfocus="this.select()"></div>
+        <button id="applyAll">Aplicar a todos</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <label style="display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:700;margin-bottom:8px">Mostrar en la cotización (PDF)</label>
+      <div class="checks">
+        <label><input type="checkbox" id="chkImagen" checked> Imagen</label>
+        <label><input type="checkbox" id="chkNota" checked> Nota de cata</label>
+        <label><input type="checkbox" id="chkCrianza" checked> Crianza</label>
+        <label><input type="checkbox" id="chkMaridaje" checked> Maridaje</label>
+        <label><input type="checkbox" id="chkPremios"> Premios y puntajes</label>
+        <label><input type="checkbox" id="chkPago" checked> Link de pago</label>
+        <label><input type="checkbox" id="chkTransfer" checked> Datos de transferencia</label>
+      </div>
+    </div>
+
+    <div class="section">
+      <label style="display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:700;margin-bottom:8px">Packs (agrupar vinos)</label>
+      <div class="gdisc">
+        <div class="fld" style="flex:1;margin:0"><input id="packName" placeholder="Nombre del pack (ej: Pack Degustación)"></div>
+        <button id="addPack">Crear pack</button>
+      </div>
+      <div id="packList" class="packchips"></div>
+    </div>
+
+    <ul class="items" id="items"><li class="empty">Aún no has agregado vinos.<br>Elige del catálogo para armar la cotización.</li></ul>
+
+    <div class="totals" id="totals" style="display:none">
+      <div class="trow"><span>Subtotal (precio normal)</span><span id="tSub">$0</span></div>
+      <div class="trow"><span>Descuento</span><span class="disc" id="tDisc">-$0</span></div>
+      <div class="trow envrow">
+        <span>Envío</span>
+        <span class="envctl">
+          <label class="envgratis"><input type="checkbox" id="envGratis"> Gratis</label>
+          <span class="envin">$<input id="envMonto" type="number" inputmode="numeric" min="0" step="500" value="0" onfocus="this.select()"></span>
+        </span>
+      </div>
+      <div class="trow big"><span>TOTAL</span><span id="tTotal">$0</span></div>
+      <div class="trow" style="font-size:12px;color:var(--muted)"><span id="tCount">0 botellas</span><span id="tAhorro"></span></div>
+    </div>
+
+    <div class="actions">
+      <button class="btn pri" id="btnPdf">📄 Descargar / Imprimir PDF</button>
+      <button class="btn pri" id="btnEnviar" style="display:none">📨 Enviar por la intranet</button>
+      <button class="btn sec" id="btnClear">Limpiar</button>
+    </div>
+
+    <div class="paybox" id="paybox">
+      <button class="btn pay" id="btnPay">💳 Link de pago · Mercado Pago</button>
+      <button class="btn payflow" id="btnPayFlow">💳 Link de pago · Flow (Webpay/tarjetas)</button>
+      <div id="payResult" class="payresult" style="display:none"></div>
+      <details class="paycfg">
+        <summary>⚙︎ Configurar servidor de pago</summary>
+        <div class="fld" style="margin-top:8px">
+          <label>URL de la Edge Function (Supabase)</label>
+          <input id="payUrl" placeholder="https://TU-PROYECTO.supabase.co/functions/v1/pago-mercadopago" value="">
+        </div>
+        <div class="fld">
+          <label>URL de la Edge Function de Flow (Supabase)</label>
+          <input id="payUrlFlow" placeholder="https://TU-PROYECTO.supabase.co/functions/v1/flow-pago" value="">
+        </div>
+        <div class="fld">
+          <label>Clave pública (anon key de Supabase)</label>
+          <input id="payKey" placeholder="eyJhbGciOi… (clave anon / public)" value="">
+        </div>
+        <p style="font-size:11.5px;color:var(--muted);margin:4px 0 0">Pégalas una vez. Usa la clave <b>anon / public</b>, nunca la <b>service_role</b>. Tus tokens de Mercado Pago y Flow viven solo en el servidor, nunca en este archivo.</p>
+      </details>
+    </div>
+  </div>
+</div>
+
+<!-- Modal ficha -->
+<div class="modal" id="modal">
+  <div class="mbox">
+    <div class="mhead">
+      <div class="mimg" id="mImg"></div>
+      <div>
+        <h2 id="mNombre"></h2>
+        <div id="mTags" style="font-size:13px;color:var(--burgundy);font-weight:600;margin-top:4px"></div>
+        <div id="mPrecio" style="font-size:20px;font-weight:800;color:var(--ink);margin-top:6px"></div>
+      </div>
+      <button class="mclose" id="mClose">×</button>
+    </div>
+    <div class="mbody" id="mBody"></div>
+  </div>
+</div>
+
+<!-- Documento imprimible -->
+<div class="quote-print" id="printDoc"></div>
+
+<script>
+// Catálogo en vivo: se lee desde Supabase (Jumpseller) al abrir. Ver init() al final.
+const CATALOGO_ENDPOINT = "https://oontbdybvewvziamwfcn.supabase.co/functions/v1/catalogo";
+let CATALOGO = [];
+const CLP = n => '$' + Math.round(n).toLocaleString('es-CL');
+const money = n => Math.round(n);
+const PH = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='80'%3E%3Crect width='60' height='80' fill='%23f0e6d6'/%3E%3Ctext x='30' y='46' font-size='26' text-anchor='middle'%3E%F0%9F%8D%B7%3C/text%3E%3C/svg%3E";
+function imgErr(el){ el.onerror=null; el.src=PH; }
+
+const state = { sel: {}, filtroTipo: 'Todos', busqueda: '', soloDisp: true, gDisc: 0, packs: [], packDesc: {}, envio: 0, envioGratis: false };
+function esc(s){ return String(s).replace(/[&<>"]/g, m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m])); }
+function escBr(s){ return esc(s).replace(/\n/g,'<br>'); }
+
+// ---- Filtros / chips ----
+const ordenTipo = {Tinto:0,Blanco:1,'Rosé':2,Espumante:3,Sidra:4,Otro:5,Accesorio:9};
+const chipsWrap = document.getElementById('chips');
+function buildChips(){
+  const tiposPresentes = [...new Set(CATALOGO.map(c=>c.tipo))];
+  tiposPresentes.sort((a,b)=>(ordenTipo[a]??6)-(ordenTipo[b]??6));
+  chipsWrap.innerHTML='';
+  ['Todos',...tiposPresentes].forEach(t=>{
+    const b=document.createElement('button'); b.className='chip'+(t===state.filtroTipo?' on':''); b.textContent=t;
+    b.onclick=()=>{state.filtroTipo=t; [...chipsWrap.children].forEach(c=>c.classList.remove('on')); b.classList.add('on'); render();};
+    chipsWrap.appendChild(b);
+  });
+}
+
+document.getElementById('search').addEventListener('input', e=>{state.busqueda=e.target.value.toLowerCase(); render();});
+document.getElementById('onlyAvail').addEventListener('change', e=>{state.soloDisp=e.target.checked; render();});
+
+function disponible(c){ return c.status==='available' && (c.stock_ilimitado || (c.stock??0)>0); }
+
+function filtrados(){
+  return CATALOGO.filter(c=>{
+    if(state.soloDisp && !disponible(c)) return false;
+    if(state.filtroTipo!=='Todos' && c.tipo!==state.filtroTipo) return false;
+    if(state.busqueda){
+      const h=(c.nombre+' '+c.cepa+' '+c.valle+' '+c.marca).toLowerCase();
+      if(!h.includes(state.busqueda)) return false;
+    }
+    return true;
+  });
+}
+
+// ---- Render catálogo ----
+const grid = document.getElementById('grid');
+function render(){
+  const list = filtrados();
+  document.getElementById('resultcount').textContent = list.length+' vinos';
+  grid.innerHTML='';
+  list.forEach(c=>{
+    const inSel = !!state.sel[c.id];
+    const card=document.createElement('div'); card.className='card';
+    const meta=[c.cepa, c.valle].filter(Boolean).join(' · ');
+    const badgeClass = c.tipo==='Accesorio'?'badge acc':'badge';
+    card.innerHTML = `
+      <div class="imgwrap" data-ficha="${c.id}">
+        <span class="${badgeClass}">${c.tipo}</span>
+        ${!disponible(c)?'<span class="soldout">Agotado</span>':''}
+        <img src="${c.imagen||PH}" loading="lazy" onerror="imgErr(this)">
+      </div>
+      <div class="body">
+        <div class="nm" data-ficha="${c.id}">${c.nombre.trim()}</div>
+        <div class="meta">${meta||'&nbsp;'}</div>
+        <div class="pr">${CLP(c.precio)}</div>
+        <button class="add ${inSel?'in':''}" data-add="${c.id}">${inSel?'✓ Agregado':'+ Agregar'}</button>
+        <button class="verficha" data-ficha="${c.id}">Ver ficha completa</button>
+      </div>`;
+    grid.appendChild(card);
+  });
+}
+grid.addEventListener('click', e=>{
+  const add=e.target.closest('[data-add]'); const fi=e.target.closest('[data-ficha]');
+  if(add){ toggleSel(+add.dataset.add); }
+  else if(fi){ abrirFicha(+fi.dataset.ficha); }
+});
+
+// ---- Selección ----
+function toggleSel(id){
+  if(state.sel[id]) delete state.sel[id];
+  else {
+    const c=CATALOGO.find(x=>x.id===id);
+    state.sel[id]={ id, qty:1, disc: state.gDisc, pack:'', desc:'' };
+  }
+  render(); renderQuote();
+}
+function findC(id){ return CATALOGO.find(x=>x.id===id); }
+
+// ---- Packs ----
+function renderPackList(){
+  const el=document.getElementById('packList');
+  el.innerHTML = state.packs.map((pk,i)=>`<div class="packrow"><span class="packchip">${esc(pk)} <button data-delpack="${i}" title="Eliminar pack">×</button></span><textarea class="packdesc" data-packdesc="${i}" rows="1" placeholder="Descripción del pack (opcional)">${esc(state.packDesc[pk]||'')}</textarea></div>`).join('');
+}
+document.getElementById('addPack').addEventListener('click', ()=>{
+  const inp=document.getElementById('packName'); const name=(inp.value||'').trim();
+  if(!name) return;
+  if(!state.packs.includes(name)) state.packs.push(name);
+  inp.value=''; renderQuote();
+});
+document.getElementById('packName').addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); document.getElementById('addPack').click(); } });
+document.getElementById('packList').addEventListener('click', e=>{
+  const d=e.target.closest('[data-delpack]'); if(!d) return;
+  const pk=state.packs[+d.getAttribute('data-delpack')];
+  state.packs=state.packs.filter(x=>x!==pk); delete state.packDesc[pk];
+  Object.keys(state.sel).forEach(id=>{ if(state.sel[id].pack===pk) state.sel[id].pack=''; });
+  renderQuote();
+});
+document.getElementById('packList').addEventListener('input', e=>{
+  const pd=e.target.closest('[data-packdesc]'); if(!pd) return;
+  const pk=state.packs[+pd.getAttribute('data-packdesc')];
+  if(pk!==undefined){ state.packDesc[pk]=pd.value; pd.style.height='auto'; pd.style.height=pd.scrollHeight+'px'; }
+});
+// Devuelve grupos ordenados: cada pack con items, y al final los sueltos
+function orderedGroups(){
+  const ids=Object.keys(state.sel);
+  const groups=[];
+  state.packs.forEach(pk=>{ const g=ids.filter(id=>state.sel[id].pack===pk); if(g.length) groups.push({pack:pk, ids:g}); });
+  const loose=ids.filter(id=>!state.sel[id].pack || !state.packs.includes(state.sel[id].pack));
+  if(loose.length) groups.push({pack:'', ids:loose});
+  return groups;
+}
+function itemInner(id){
+  const s=state.sel[id], c=findC(+id);
+  const lineNormal=c.precio*s.qty, lineFinal=c.precio*s.qty*(1-s.disc/100);
+  const packSel = state.packs.length ? `<span class="packlbl">📦</span><select class="packsel" data-packsel="${id}"><option value="">Sin pack</option>${state.packs.map((pk,i)=>`<option value="${i}" ${s.pack===pk?'selected':''}>${esc(pk)}</option>`).join('')}</select>` : '';
+  return `
+      <div class="th"><img src="${c.imagen||PH}" onerror="imgErr(this)"></div>
+      <div>
+        <div class="nm">${c.nombre.trim()}</div>
+        <div class="rowc">
+          <div class="stepper">
+            <button data-q="-" data-id="${id}" aria-label="Menos">−</button>
+            <input type="number" inputmode="numeric" min="1" value="${s.qty}" data-qty="${id}" onfocus="this.select()">
+            <button data-q="+" data-id="${id}" aria-label="Más">+</button>
+          </div>
+          <div class="dline">Desc <input type="number" inputmode="decimal" min="0" max="100" step="1" value="${s.disc}" data-disc="${id}" onfocus="this.select()">%</div>
+          ${packSel}
+        </div>
+        <div class="prices">
+          <span><span class="normal" data-normal="${id}" ${s.disc>0?'':'style="display:none"'}>${CLP(lineNormal)}</span> <span class="final" data-final="${id}">${CLP(lineFinal)}</span></span>
+          <button class="rm" data-rm="${id}">Quitar</button>
+        </div>
+        <textarea class="itemdesc" data-desctxt="${id}" rows="1" placeholder="Descripción / nota personalizada (opcional)">${esc(s.desc||'')}</textarea>
+      </div>`;
+}
+
+// ---- Render cotización ----
+const itemsEl=document.getElementById('items');
+function renderQuote(){
+  const ids=Object.keys(state.sel);
+  document.getElementById('topcount').textContent = ids.length+' en cotización';
+  renderPackList();
+  if(ids.length===0){
+    itemsEl.innerHTML='<li class="empty">Aún no has agregado vinos.<br>Elige del catálogo para armar la cotización.</li>';
+    document.getElementById('totals').style.display='none';
+    return;
+  }
+  let html='';
+  orderedGroups().forEach(g=>{
+    if(g.pack){ const pi=state.packs.indexOf(g.pack); html+=`<li class="packhead"><span>📦 ${esc(g.pack)}</span><span class="pt" data-packtotal="${pi}"></span></li>`; }
+    g.ids.forEach(id=>{ html+=`<li class="li${g.pack?' grouped':''}">${itemInner(id)}</li>`; });
+  });
+  itemsEl.innerHTML=html;
+  document.getElementById('totals').style.display='block';
+  updateTotals();
+}
+// Recalcula totales y precios de línea SIN reconstruir la lista (para editar sin perder foco)
+function updateTotals(){
+  const ids=Object.keys(state.sel);
+  let sub=0, totProd=0, bottles=0; const packSum={};
+  ids.forEach(id=>{
+    const s=state.sel[id], c=findC(+id);
+    const lineNormal=c.precio*s.qty, lineFinal=c.precio*s.qty*(1-s.disc/100);
+    sub+=lineNormal; totProd+=lineFinal; bottles+=s.qty;
+    if(s.pack){ const pi=state.packs.indexOf(s.pack); if(pi>=0) packSum[pi]=(packSum[pi]||0)+lineFinal; }
+    const fEl=document.querySelector(`[data-final="${id}"]`), nEl=document.querySelector(`[data-normal="${id}"]`);
+    if(fEl) fEl.textContent=CLP(lineFinal);
+    if(nEl){ nEl.textContent=CLP(lineNormal); nEl.style.display = s.disc>0 ? '' : 'none'; }
+  });
+  document.querySelectorAll('[data-packtotal]').forEach(el=>{ el.textContent=CLP(packSum[+el.getAttribute('data-packtotal')]||0); });
+  const envio = state.envioGratis ? 0 : (state.envio||0);
+  const total = totProd + envio;
+  document.getElementById('topcount').textContent = ids.length+' en cotización';
+  document.getElementById('tSub').textContent=CLP(sub);
+  document.getElementById('tDisc').textContent='-'+CLP(sub-totProd);
+  document.getElementById('tTotal').textContent=CLP(total);
+  document.getElementById('tCount').textContent=bottles+(bottles===1?' botella':' botellas');
+  const pct = sub>0 ? Math.round((sub-totProd)/sub*100) : 0;
+  document.getElementById('tAhorro').textContent = (sub-totProd)>0 ? `Ahorro ${pct}%` : '';
+  if(typeof renderPays==='function' && Object.keys(pays||{}).length) renderPays();
+}
+itemsEl.addEventListener('click', e=>{
+  const q=e.target.closest('[data-q]'); const rm=e.target.closest('[data-rm]');
+  if(q){ const id=q.dataset.id; state.sel[id].qty=Math.max(1, state.sel[id].qty + (q.dataset.q==='+'?1:-1));
+    const inp=document.querySelector(`[data-qty="${id}"]`); if(inp) inp.value=state.sel[id].qty; updateTotals(); }
+  else if(rm){ delete state.sel[rm.dataset.rm]; renderQuote(); render(); }
+});
+// Al escribir: solo actualiza estado y totales en el sitio (no reconstruye => no pierde el foco)
+itemsEl.addEventListener('input', e=>{
+  const qty=e.target.closest('[data-qty]'); const disc=e.target.closest('[data-disc]'); const dtxt=e.target.closest('[data-desctxt]');
+  if(qty){ const v=parseInt(qty.value); state.sel[qty.dataset.qty].qty = (isNaN(v)||v<1)?1:v; updateTotals(); }
+  else if(disc){ let v=parseFloat(disc.value); if(isNaN(v))v=0; v=Math.min(100,Math.max(0,v)); state.sel[disc.dataset.disc].disc=v; updateTotals(); }
+  else if(dtxt){ if(state.sel[dtxt.dataset.desctxt]) state.sel[dtxt.dataset.desctxt].desc=dtxt.value; dtxt.style.height='auto'; dtxt.style.height=dtxt.scrollHeight+'px'; }
+});
+// Al salir del campo (blur): normaliza el valor mostrado; y cambio de pack por línea
+itemsEl.addEventListener('change', e=>{
+  const qty=e.target.closest('[data-qty]'); const disc=e.target.closest('[data-disc]'); const psel=e.target.closest('[data-packsel]');
+  if(qty){ qty.value=state.sel[qty.dataset.qty].qty; }
+  else if(disc){ disc.value=state.sel[disc.dataset.disc].disc; updateTotals(); }
+  else if(psel){ const v=psel.value; state.sel[psel.dataset.packsel].pack = (v==='')?'':state.packs[+v]; renderQuote(); }
+});
+
+// ---- Envío ----
+document.getElementById('envMonto').addEventListener('input', e=>{ let v=parseInt(e.target.value); state.envio=(isNaN(v)||v<0)?0:v; updateTotals(); });
+document.getElementById('envGratis').addEventListener('change', e=>{
+  state.envioGratis=e.target.checked;
+  document.getElementById('envMonto').disabled=e.target.checked;
+  updateTotals();
+});
+
+// ---- Descuento global ----
+document.getElementById('gDisc').addEventListener('input', e=>{ let v=parseFloat(e.target.value); state.gDisc=isNaN(v)?0:v; });
+document.getElementById('applyAll').addEventListener('click', ()=>{
+  let v=parseFloat(document.getElementById('gDisc').value); v=isNaN(v)?0:Math.min(100,Math.max(0,v));
+  state.gDisc=v; Object.keys(state.sel).forEach(id=>state.sel[id].disc=v); renderQuote();
+});
+
+// ---- Ficha modal ----
+const modal=document.getElementById('modal');
+function abrirFicha(id){
+  const c=findC(id);
+  document.getElementById('mImg').innerHTML=`<img src="${c.imagen||PH}" onerror="imgErr(this)">`;
+  document.getElementById('mNombre').textContent=c.nombre.trim();
+  document.getElementById('mTags').textContent=[c.tipo,c.marca].filter(Boolean).join(' · ');
+  document.getElementById('mPrecio').textContent=CLP(c.precio);
+  const rows=[['Cepa',c.cepa],['Valle',c.valle],['Graduación',c.graduacion],['Crianza',c.crianza],['Nota de cata',c.notaCata],['Premios',c.premios]];
+  let html='';
+  rows.forEach(([l,v])=>{ if(v) html+=`<div class="frow"><div class="fl">${l}</div><div>${v}</div></div>`; });
+  if(c.anadas && c.anadas.length) html+=`<div class="frow"><div class="fl">Añadas</div><div>${c.anadas.join(', ')}</div></div>`;
+  if(c.somOpina||c.somSugiere){
+    html+='<div class="som">';
+    if(c.somOpina) html+=`<h4>¿Qué opina el sommelier?</h4><p>${c.somOpina}</p>`;
+    if(c.somSugiere) html+=`<h4>¿Qué sugiere maridar?</h4><p>${c.somSugiere}</p>`;
+    html+='</div>';
+  }
+  const inSel=!!state.sel[id];
+  html+=`<button class="maddbtn" id="mAdd">${inSel?'✓ Ya está en la cotización — Quitar':'+ Agregar a la cotización'}</button>`;
+  document.getElementById('mBody').innerHTML=html;
+  document.getElementById('mAdd').onclick=()=>{ toggleSel(id); abrirFicha(id); };
+  modal.classList.add('on');
+}
+document.getElementById('mClose').onclick=()=>modal.classList.remove('on');
+modal.addEventListener('click', e=>{ if(e.target===modal) modal.classList.remove('on'); });
+
+// ---- Limpiar ----
+document.getElementById('btnClear').onclick=()=>{ if(Object.keys(state.sel).length && confirm('¿Vaciar la cotización?')){ state.sel={}; renderQuote(); render(); } };
+
+// ---- Fechas por defecto ----
+(function(){
+  const t=new Date(); const iso=d=>d.toISOString().slice(0,10);
+  document.getElementById('cFecha').value=iso(t);
+  const v=new Date(t.getTime()+15*864e5); document.getElementById('cValidez').value=iso(v);
+})();
+
+// ---- Generar documento imprimible ----
+function fechaLarga(iso){ if(!iso) return ''; const [y,m,d]=iso.split('-'); const M=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre']; return `${+d} de ${M[+m-1]} de ${y}`; }
+
+// Recorta el margen vacío de la foto vía wsrv.nl (procesador gratuito), con respaldo a la imagen original.
+function bottleImg(c){
+  const raw = c.imagen || '';
+  if(!raw) return `<img src="${PH}">`;
+  const src = 'https://wsrv.nl/?url=' + encodeURIComponent(raw) + '&trim=15&h=520&output=png';
+  return `<img src="${src}" data-raw="${raw}" onerror="bottleFallback(this)">`;
+}
+function bottleFallback(el){
+  const raw = el.getAttribute('data-raw');
+  if(el.src.indexOf('wsrv.nl')>=0 && raw){ el.src = raw; }   // si wsrv falla, usar la original
+  else { el.onerror=null; el.src = PH; }                      // si tampoco, placeholder
+}
+// Logo del medio de pago como imagen SVG embebida (se imprime siempre)
+function payLogo(nombre){
+  const mp = `<svg xmlns="http://www.w3.org/2000/svg" width="170" height="38"><rect width="170" height="38" rx="7" fill="#00a5df"/><text x="85" y="25" font-family="Arial,Helvetica,sans-serif" font-size="15.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Mercado Pago</text></svg>`;
+  const fl = `<svg xmlns="http://www.w3.org/2000/svg" width="92" height="38"><rect width="92" height="38" rx="7" fill="#2d3a8c"/><text x="46" y="26" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Flow</text></svg>`;
+  return `<img class="qp-paylogo" src="data:image/svg+xml,${encodeURIComponent(nombre==='Flow'?fl:mp)}">`;
+}
+// Genera un QR (data-URL PNG/GIF) para el link de pago. Funciona impreso o en PDF de teléfono,
+// donde los enlaces clickeables se pierden: el cliente escanea con la cámara y paga.
+function qrDataUrl(text){
+  try{
+    if(typeof qrcode!=='function') return '';
+    const qr=qrcode(0,'M'); qr.addData(text); qr.make();
+    return qr.createDataURL(4,8);
+  }catch(e){ return ''; }
+}
+
+let EXPORTANDO=false;   // true mientras la intranet arma el PDF (usa el bloque de pago con link visible + QR)
+async function armarDocumento(){
+  const ids=Object.keys(state.sel);
+  if(!ids.length){ alert('Agrega al menos un vino para generar la cotización.'); return; }
+  const titulo=(document.getElementById('cTitulo').value||'').trim()||'Cotización';
+  const cli=document.getElementById('cCliente').value||'—';
+  const emp=document.getElementById('cEmpresa').value;
+  const num=document.getElementById('cNumero').value;
+  const fecha=fechaLarga(document.getElementById('cFecha').value);
+  const validez=fechaLarga(document.getElementById('cValidez').value);
+  const showImg=document.getElementById('chkImagen').checked;
+  const showNota=document.getElementById('chkNota').checked;
+  const showCrianza=document.getElementById('chkCrianza').checked;
+  const showMaridaje=document.getElementById('chkMaridaje').checked;
+  const showPremios=document.getElementById('chkPremios').checked;
+  const showPago=document.getElementById('chkPago').checked;
+  const showTransfer=document.getElementById('chkTransfer').checked;
+  let sub=0,totProd=0,bottles=0;
+  function notesHtml(c){
+    return `${(showNota&&c.notaCata)?`<div class="qp-note">${c.notaCata}</div>`:''}${(showCrianza&&c.crianza)?`<div class="qp-note"><b>Crianza:</b> ${c.crianza}</div>`:''}${(showMaridaje&&c.somSugiere)?`<div class="qp-note"><b>Maridaje:</b> ${c.somSugiere}</div>`:''}${(showPremios&&c.premios)?`<div class="qp-note"><b>Premios:</b> ${c.premios}</div>`:''}`;
+  }
+  function unitLineHtml(s,c){
+    const unitFinal=c.precio*(1-s.disc/100);
+    return s.disc>0
+      ? `<b>${s.qty}</b> ${s.qty===1?'botella':'botellas'} × <span style="text-decoration:line-through;color:#6b5d55">${CLP(c.precio)}</span> <b style="color:var(--burgundy)">${CLP(unitFinal)}</b> c/u <span style="color:#2f7d5b">(−${s.disc}%)</span>`
+      : `<b>${s.qty}</b> ${s.qty===1?'botella':'botellas'} × ${CLP(c.precio)} c/u`;
+  }
+  function acc(id){ const s=state.sel[id],c=findC(+id); const lineNormal=c.precio*s.qty, lineFinal=c.precio*s.qty*(1-s.disc/100); sub+=lineNormal; totProd+=lineFinal; bottles+=s.qty; return {s,c,lineNormal,lineFinal}; }
+  function bottleHtml(c){ return `<div class="qbw">${bottleImg(c)}</div>`; }
+  function itemPdfHtml(id){
+    const {s,c,lineNormal,lineFinal}=acc(id);
+    const tags=[c.cepa,c.valle,c.graduacion].filter(Boolean).join(' · ');
+    return `
+      <div class="qp-item">
+        ${showImg?bottleHtml(c):''}
+        <div class="qinfo">
+          <div class="qn">${c.nombre.trim()}</div>
+          <div class="qtags">${tags}</div>
+          ${s.desc?`<div class="qp-desc">${escBr(s.desc)}</div>`:''}
+          ${notesHtml(c)}
+          <div class="qp-unit">${unitLineHtml(s,c)}</div>
+        </div>
+        <div class="qprice">
+          ${s.disc>0?`<div class="qp-norm">${CLP(lineNormal)}</div>`:''}
+          <div class="qp-final">${CLP(lineFinal)}</div>
+          ${s.disc>0?`<div class="qp-chip">−${s.disc}%</div>`:''}
+        </div>
+      </div>`;
+  }
+  function packWineHtml(id){
+    const {s,c}=acc(id);
+    const tags=[c.cepa,c.valle,c.graduacion].filter(Boolean).join(' · ');
+    return `
+      <div class="qp-pw">
+        <div class="qp-pw-n">${c.nombre.trim()}${s.qty>1?` <span class="qp-pw-x">×${s.qty}</span>`:''}${tags?`<span class="qp-pw-tags"> · ${tags}</span>`:''}</div>
+        ${s.desc?`<div class="qp-desc">${escBr(s.desc)}</div>`:''}
+        ${notesHtml(c)}
+      </div>`;
+  }
+  let itemsHtml='';
+  orderedGroups().forEach(g=>{
+    if(g.pack){
+      const normBefore=sub, offBefore=totProd;
+      const bots = showImg ? `<div class="qp-pack-bots">${g.ids.map(id=>`<div class="qbw">${bottleImg(findC(+id))}</div>`).join('')}</div>` : '';
+      let wines=''; g.ids.forEach(id=>{ wines+=packWineHtml(id); });
+      const packNormal=sub-normBefore, packOffer=totProd-offBefore;
+      const packPct = packNormal>packOffer ? Math.round((packNormal-packOffer)/packNormal*100) : 0;
+      const packBottles=g.ids.reduce((a,id)=>a+state.sel[id].qty,0);
+      itemsHtml+=`<div class="qp-pack">
+        <div class="qp-pack-head"><span class="qp-pack-title">${esc(g.pack)}</span><span class="qp-pack-meta">${g.ids.length} vinos · ${packBottles} bot.</span></div>
+        <div class="qp-pack-top">
+          ${bots}
+          <div class="qp-pack-panel">
+            ${packPct>0?`<div class="qp-antes">Normal ${CLP(packNormal)}</div>`:''}
+            <div class="qp-of">${CLP(packOffer)}</div>
+            ${packPct>0?`<div class="qp-save">Ahorras ${CLP(packNormal-packOffer)}</div><div class="qp-chip">−${packPct}%</div>`:''}
+          </div>
+        </div>
+        ${state.packDesc[g.pack]?`<div class="qp-pack-desc">${escBr(state.packDesc[g.pack])}</div>`:''}
+        <div class="qp-pack-wines">${wines}</div>
+      </div>`;
+    } else {
+      g.ids.forEach(id=>{ itemsHtml+=itemPdfHtml(id); });
+    }
+  });
+  const envio = state.envioGratis ? 0 : (state.envio||0);
+  const tot = totProd + envio;
+  const ahorro=sub-totProd, pct=sub>0?Math.round(ahorro/sub*100):0;
+  const montoTot=Math.round(tot);
+  const transHtml = showTransfer ? `
+    <div class="qp-trans">
+      <div class="qp-trans-t">Transferencia bancaria</div>
+      <div class="qp-trans-b">
+        <div>Sociedad Comercial Perez-Villafranca Limitada</div>
+        <div>RUT: 76.761.036-K</div>
+        <div>Banco: Santander</div>
+        <div>Tipo de cuenta: Cuenta Corriente</div>
+        <div>N° de cuenta: 000071842240</div>
+        <div>Email: ventas@uptowine.cl</div>
+      </div>
+    </div>` : '';
+  const paysVig = ['mp','flow'].map(k=>pays[k]).filter(pd=>pd && pd.monto===montoTot);
+  const esPhone = EXPORTANDO || /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) || (window.matchMedia && window.matchMedia('(pointer:coarse)').matches);
+  const payHtml = (showPago && paysVig.length) ? `
+    <div class="qp-pay">
+      <div class="qp-pay-t">Pago en línea</div>
+      ${paysVig.map(pd=>{
+        const meta = `<span class="qp-pay-meta">${pd.nombre==='Flow'?'Webpay, tarjetas y transferencia':'Tarjetas o saldo Mercado Pago'} · <b>${CLP(pd.monto)}</b></span>`;
+        if(!esPhone){
+          // PC: el botón clickeable se conserva al imprimir → se deja tal cual.
+          return `
+      <a class="qp-paybtn" href="${pd.link}">
+        <span class="qp-pay-info">${payLogo(pd.nombre)}${meta}</span>
+        <span class="qp-pay-cta">Pagar aquí →</span>
+      </a>`;
+        }
+        // Teléfono: el link del botón se pierde al imprimir → link visible + QR + refuerzo WhatsApp.
+        const qr=qrDataUrl(pd.link);
+        const waStore='https://wa.me/56931737400?text='+encodeURIComponent(`Hola, quiero coordinar el pago de mi cotización Up to Wine (${CLP(pd.monto)}) con ${pd.nombre}.`);
+        return `
+      <a class="qp-paybtn" href="${pd.link}">
+        <span class="qp-pay-info">${payLogo(pd.nombre)}${meta}</span>
+        ${qr?`<span class="qp-pay-qr"><img src="${qr}"><span>Escanea<br>para pagar</span></span>`:''}
+      </a>
+      <div class="qp-pay-link"><b>Pagar desde este teléfono — toca el link:</b><a href="${pd.link}">${pd.link}</a></div>
+      <div class="qp-pay-wa">¿Prefieres pagar por WhatsApp? <a href="${waStore}">Escríbenos aquí</a></div>`;
+      }).join('')}
+    </div>` : '';
+  const blocksHtml = (payHtml||transHtml) ? `<div class="qp-blocks">${payHtml}${transHtml}</div>` : '';
+  document.getElementById('printDoc').innerHTML=`
+    <div class="qp-head">
+      <img src="https://images.jumpseller.com/store/up-to-wine-chile/store/logo/Up_to_Wine_-_Logo-TR-2-01.png?1744053756">
+      <div class="qhrule"></div>
+      <div class="qtitle"><div class="qt">${esc(titulo)}</div><div class="qs">Up to Wine · Vinos de autor boutique · uptowine.cl</div></div>
+      <div class="qmeta">${num?`<div><b>${num}</b></div>`:''}${fecha?`<div>${fecha}</div>`:''}${validez?`<div class="qval">Válida hasta ${validez}</div>`:''}</div>
+    </div>
+    <div class="qp-client">
+      <div><b>Cliente:</b> ${cli}${emp?` · <span class="qcr">${emp}</span>`:''}</div>
+      <div class="qcr">${bottles} ${bottles===1?'botella':'botellas'} · ${ids.length} ${ids.length===1?'referencia':'referencias'}</div>
+    </div>
+    ${itemsHtml}
+    <div class="qp-tot">
+      <div class="r"><span>Subtotal</span><span>${CLP(sub)}</span></div>
+      ${ahorro>0?`<div class="r" style="color:#2f7d5b"><span>Descuento (${pct}%)</span><span>−${CLP(ahorro)}</span></div>`:''}
+      ${(envio>0)?`<div class="r"><span>Envío</span><span>${CLP(envio)}</span></div>`:(state.envioGratis?`<div class="r" style="color:#2f7d5b"><span>Envío</span><span>Gratis</span></div>`:'')}
+      <div class="r grand"><span>TOTAL</span><span>${CLP(tot)}</span></div>
+    </div>
+    ${blocksHtml}
+    <div class="qp-foot">
+      Precios en pesos chilenos (CLP), IVA incluido. Valores sujetos a disponibilidad de stock.<br>
+      Up to Wine · ventas@uptowine.cl · WhatsApp +56 9 3173 7400 · uptowine.cl
+    </div>`;
+}
+document.getElementById('btnPdf').onclick=async ()=>{ EXPORTANDO=false; await armarDocumento(); window.print(); };
+
+// ---- Enviar por la intranet (solo cuando el cotizador vive dentro de uptowine.cl/intranet) ----
+// Arma el mismo documento, lo convierte a PDF en el navegador y se lo pasa a la intranet,
+// que abre una campana con el PDF adjunto y el link de pago para mandarla por correo o WhatsApp.
+(function(){
+  const b=document.getElementById('btnEnviar'); if(!b || window.parent===window) return;
+  b.style.display='';
+  const destino = /^(https:\/\/uptowine\.cl|http:\/\/localhost)/.test(document.referrer) ? new URL(document.referrer).origin : 'https://uptowine.cl';
+  b.onclick=async ()=>{
+    if(!Object.keys(state.sel).length){ alert('Elige al menos un vino.'); return; }
+    b.disabled=true; b.textContent='Armando PDF…';
+    try{
+      EXPORTANDO=true; await armarDocumento(); EXPORTANDO=false;
+      document.body.classList.add('exportando');
+      const el=document.getElementById('printDoc');
+      const uri=await html2pdf().set({margin:[12,10,12,10], image:{type:'jpeg',quality:0.92}, html2canvas:{scale:2,useCORS:true,logging:false}, jsPDF:{unit:'mm',format:'a4'}, pagebreak:{mode:['css','legacy']}, enableLinks:true}).from(el).outputPdf('datauristring');
+      document.body.classList.remove('exportando');
+      const t=calcTotales(), montoTot=currentTotal();
+      const pago=['mp','flow'].map(k=>pays[k]).find(pd=>pd&&pd.monto===montoTot)||null;
+      const items=Object.keys(state.sel).map(id=>{ const s=state.sel[id], c=findC(+id); return {nombre:c.nombre.trim(), qty:s.qty, total:Math.round(c.precio*s.qty*(1-s.disc/100))}; });
+      const cli=document.getElementById('cCliente').value||'', num=document.getElementById('cNumero').value||'';
+      window.parent.postMessage({tipo:'utw-cotizacion', pdf:uri.split(',')[1], nombre:('Cotizacion '+(num||cli||'Up to Wine')).replace(/[^\w\- ]+/g,'').trim()+'.pdf', cliente:cli, numero:num, total:montoTot, botellas:t.bottles, envio:t.envio, items, pago: pago?{nombre:pago.nombre, link:pago.link}:null}, destino);
+    }catch(e){ document.body.classList.remove('exportando'); alert('No se pudo armar el PDF: '+(e&&e.message||e)); }
+    b.disabled=false; b.textContent='📨 Enviar por la intranet';
+  };
+})();
+
+// ---- Pago (Supabase Edge Functions) ----
+// Se fijan aquí una vez desplegadas las funciones. También puedes pegarlas en ⚙︎ Configurar.
+const PAY_ENDPOINT      = "https://oontbdybvewvziamwfcn.supabase.co/functions/v1/pago-mercadopago";  // Mercado Pago
+const PAY_ENDPOINT_FLOW = "https://oontbdybvewvziamwfcn.supabase.co/functions/v1/flow-pago";        // Flow
+const PAY_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9vbnRiZHlidmV3dnppYW13ZmNuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ0MTA2MjEsImV4cCI6MjA5OTk4NjYyMX0.tk951I0-1LTCBI7RJGAfZyjB99tHuhY_VgLhdnSLlfw"; // clave anon / public
+(function(){
+  const u=document.getElementById('payUrl'); if(u && !u.value && PAY_ENDPOINT) u.value = PAY_ENDPOINT;
+  const uf=document.getElementById('payUrlFlow'); if(uf && !uf.value && PAY_ENDPOINT_FLOW) uf.value = PAY_ENDPOINT_FLOW;
+  const k=document.getElementById('payKey'); if(k && !k.value && PAY_ANON) k.value = PAY_ANON;
+})();
+function calcTotales(){
+  let sub=0, totProd=0, bottles=0;
+  Object.keys(state.sel).forEach(id=>{ const s=state.sel[id], c=findC(+id); sub+=c.precio*s.qty; totProd+=c.precio*s.qty*(1-s.disc/100); bottles+=s.qty; });
+  const envio = state.envioGratis ? 0 : (state.envio||0);
+  return {sub, totProd, envio, tot: totProd+envio, bottles};
+}
+const pays = {};  // { mp:{link,monto,nombre}, flow:{...} } — links generados por proveedor
+
+const PROVIDERS = {
+  mp:   { btn:'btnPay',     urlField:'payUrl',     nombre:'Mercado Pago', label:'💳 Link de pago · Mercado Pago' },
+  flow: { btn:'btnPayFlow', urlField:'payUrlFlow', nombre:'Flow',         label:'💳 Link de pago · Flow (Webpay/tarjetas)' },
+};
+function currentTotal(){ return Math.round(calcTotales().tot); }
+
+function renderPays(loading){
+  const res=document.getElementById('payResult');
+  const orden=['mp','flow'];
+  if(!orden.some(k=>pays[k]) && !loading){ res.style.display='none'; res.innerHTML=''; return; }
+  res.style.display='block';
+  const tot=currentTotal();
+  const cli=document.getElementById('cCliente').value||'';
+  let html='';
+  orden.forEach(k=>{
+    if(loading===k){ html+=`<div class="payrow"><div style="font-size:13px;color:var(--muted)">Creando link de ${PROVIDERS[k].nombre}…</div></div>`; return; }
+    const pd=pays[k]; if(!pd) return;
+    const stale = pd.monto!==tot;
+    const waMsg=encodeURIComponent(`Hola${cli?' '+cli:''}, aquí tienes el link para pagar tu pedido Up to Wine (${CLP(pd.monto)}): ${pd.link}`);
+    html+=`<div class="payrow">
+      <div class="payrow-h"><span>${pd.nombre} · <b>${CLP(pd.monto)}</b></span>${stale?'<span class="stale">⚠ el total cambió — vuelve a generar</span>':''}</div>
+      <a class="lnk" href="${pd.link}" target="_blank" rel="noopener">${pd.link}</a>
+      <div class="pbtns">
+        <button class="cpy" data-copy="${encodeURIComponent(pd.link)}">Copiar</button>
+        <a class="opn" href="${pd.link}" target="_blank" rel="noopener">Abrir</a>
+        <a class="wa" href="https://wa.me/?text=${waMsg}" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>`;
+  });
+  res.innerHTML=html;
+}
+
+async function generarPago(prov){
+  const cfg=PROVIDERS[prov];
+  const ids=Object.keys(state.sel);
+  const res=document.getElementById('payResult');
+  if(!ids.length){ res.style.display='block'; res.innerHTML='<div class="err">Agrega al menos un vino a la cotización.</div>'; return; }
+  const url=(document.getElementById(cfg.urlField).value||'').trim();
+  if(!url){ res.style.display='block'; renderPays(); res.insertAdjacentHTML('beforeend', `<div class="err">Falta la URL del servidor de ${cfg.nombre}. Ábrela en ⚙︎ Configurar servidor de pago.</div>`); document.querySelector('.paycfg').open=true; return; }
+  const {tot, bottles}=calcTotales();
+  const monto=Math.round(tot);
+  const cli=document.getElementById('cCliente').value||'';
+  const email=document.getElementById('cEmail').value||'';
+  const num=document.getElementById('cNumero').value||'';
+  const desc=`Up to Wine${num?' · '+num:''} — ${bottles} ${bottles===1?'botella':'botellas'}`;
+  const key=(document.getElementById('payKey').value||'').trim();
+  const btn=document.getElementById(cfg.btn); btn.disabled=true; btn.textContent='Generando link…';
+  renderPays(prov);
+  try{
+    const headers={'Content-Type':'application/json'};
+    if(key){ headers['apikey']=key; headers['Authorization']='Bearer '+key; }
+    const r=await fetch(url, {method:'POST', headers, body:JSON.stringify({monto, descripcion:desc, cliente:cli, email, referencia:num})});
+    const data=await r.json();
+    if(!r.ok || !data.init_point){
+      let msg = data.error || 'No se pudo generar el link';
+      if(data.detail){ msg += ' — ' + (data.detail.message || data.detail.error || JSON.stringify(data.detail)).toString().slice(0,300); }
+      throw new Error(msg);
+    }
+    pays[prov] = { link:data.init_point, monto, nombre:cfg.nombre };
+    renderPays();
+  }catch(e){
+    renderPays();
+    document.getElementById('payResult').insertAdjacentHTML('beforeend', `<div class="err">Error (${cfg.nombre}): ${e.message}.<br>Revisa la URL del servidor y las credenciales.</div>`);
+  }finally{
+    btn.disabled=false; btn.textContent=cfg.label;
+  }
+}
+document.getElementById('btnPay').addEventListener('click', ()=>generarPago('mp'));
+document.getElementById('btnPayFlow').addEventListener('click', ()=>generarPago('flow'));
+document.getElementById('payResult').addEventListener('click', e=>{
+  const c=e.target.closest('[data-copy]');
+  if(c){ const link=decodeURIComponent(c.dataset.copy); if(navigator.clipboard) navigator.clipboard.writeText(link); c.textContent='¡Copiado!'; setTimeout(()=>c.textContent='Copiar',1500); }
+});
+
+// ---- Carga del catálogo en vivo desde Supabase ----
+async function init(){
+  const grid=document.getElementById('grid');
+  const rc=document.getElementById('resultcount');
+  grid.innerHTML='<div style="grid-column:1/-1;text-align:center;color:var(--muted);padding:48px 10px;font-size:15px">Cargando catálogo…</div>';
+  if(rc) rc.textContent='';
+  try{
+    const headers={};
+    if(typeof PAY_ANON!=='undefined' && PAY_ANON){ headers['apikey']=PAY_ANON; headers['Authorization']='Bearer '+PAY_ANON; }
+    const r=await fetch(CATALOGO_ENDPOINT,{headers});
+    const data=await r.json();
+    if(!r.ok || !Array.isArray(data)) throw new Error((data && data.error) ? data.error : ('HTTP '+r.status));
+    CATALOGO=data;
+    buildChips();
+    render(); renderQuote();
+  }catch(e){
+    grid.innerHTML=`<div style="grid-column:1/-1;text-align:center;padding:40px 12px">
+      <div style="color:#b23b3b;font-weight:700;font-size:15px">No se pudo cargar el catálogo</div>
+      <div style="color:var(--muted);font-size:12.5px;margin-top:6px">${esc(e.message)}</div>
+      <button id="retry" style="margin-top:14px;background:var(--burgundy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-weight:700;cursor:pointer">Reintentar</button></div>`;
+    const rb=document.getElementById('retry'); if(rb) rb.onclick=init;
+  }
+}
+init();
+</script>
+</body>
+</html>
+```
