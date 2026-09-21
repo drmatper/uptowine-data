@@ -916,10 +916,12 @@ cuerpoHtml(personalizar(texto, contacto)) +
     var a = S.adjuntos[0];
     if (!a || S.campana.canal !== 'whatsapp') return Promise.resolve(null);
     var bytes = Uint8Array.from(atob(a.base64), function (c) { return c.charCodeAt(0); });
-    var ruta = 'wa/campana-' + (S.campana.id || 'nueva') + '-' + Date.now() + '.pdf';
-    return sb.storage.from('intranet').upload(ruta, bytes, { contentType: 'application/pdf', upsert: false })
+    var ext = (a.nombre.match(/\.(pdf|jpe?g|png)$/i) || ['', 'pdf'])[1].toLowerCase();
+    var ruta = 'wa/campana-' + (S.campana.id || 'nueva') + '-' + Date.now() + '.' + ext;
+    // el bot decide por la extension: jpg/png salen como foto con leyenda, pdf como documento
+    return sb.storage.from('intranet').upload(ruta, bytes, { contentType: a.tipo || 'application/pdf', upsert: false })
       .then(function (r) {
-        if (r.error) throw new Error('No se pudo subir el PDF: ' + r.error.message);
+        if (r.error) throw new Error('No se pudo subir el archivo: ' + r.error.message);
         return ruta;
       });
   }
@@ -991,11 +993,12 @@ cuerpoHtml(personalizar(texto, contacto)) +
     var tope = S.campana && S.campana.canal === 'whatsapp' ? 1 : MAX_ADJUNTOS;
     if (tope === 1) S.adjuntos = [];
     Array.prototype.forEach.call(files, function (f) {
-      if (S.adjuntos.length >= tope) return aviso(tope === 1 ? 'Por WhatsApp va un solo PDF por mensaje.' : 'Máximo ' + MAX_ADJUNTOS + ' adjuntos.', 'err');
+      if (S.adjuntos.length >= tope) return aviso(tope === 1 ? 'Por WhatsApp va un solo archivo por mensaje (PDF o imagen).' : 'Máximo ' + MAX_ADJUNTOS + ' adjuntos.', 'err');
+      if (tope === 1 && !/\.(pdf|jpe?g|png)$/i.test(f.name)) return aviso('Por WhatsApp solo PDF, JPG o PNG.', 'err');
       if (f.size > MAX_ADJUNTO) return aviso(f.name + ' pesa más de 8 MB.', 'err');
       var lector = new FileReader();
       lector.onload = function () {
-        S.adjuntos.push({ nombre: f.name, bytes: f.size, base64: String(lector.result).split(',')[1] || '' });
+        S.adjuntos.push({ nombre: f.name, bytes: f.size, tipo: f.type, base64: String(lector.result).split(',')[1] || '' });
         pintar();
       };
       lector.readAsDataURL(f);
@@ -1471,12 +1474,12 @@ cuerpoHtml(personalizar(texto, contacto)) +
         '<button data-marca="separador">Separador</button><button data-marca="nombre">{nombre}</button></div>' : '') +
       '<textarea id="utwi-cuerpo" placeholder="' + (esCorreo ? 'Escribe el correo…' : 'Mensaje corto, como lo escribirías tú por WhatsApp.') + '">' + esc(c.cuerpo) + '</textarea>' +
       '<p class="ayuda">Variables: <code>{nombre}</code> <code>{comuna}</code> <code>{email}</code> <code>{celular}</code> <code>{plan}</code> <code>{mes}</code>' +
-      (esCorreo ? ' · Formato: <code>## Título</code> <code>**negrita**</code> <code>- lista</code> <code>[texto](url)</code> <code>[[Botón|url]]</code> <code>![foto](url)</code>' : ' · Por WhatsApp el título va en *negrita*, las listas con viñeta y el botón como enlace: la vista previa muestra cómo queda. Un enlace en su propia línea sale con la tarjeta de la página (imagen y título). Con PDF adjunto, el texto sale como leyenda del documento.') + '</p>') +
+      (esCorreo ? ' · Formato: <code>## Título</code> <code>**negrita**</code> <code>- lista</code> <code>[texto](url)</code> <code>[[Botón|url]]</code> <code>![foto](url)</code>' : ' · Por WhatsApp el título va en *negrita*, las listas con viñeta y el botón como enlace: la vista previa muestra cómo queda. Un enlace en su propia línea sale con la tarjeta de la página (imagen y título). Con PDF o foto adjunta, el texto sale como leyenda.') + '</p>') +
 
       (esCorreo ? '<label class="lbl">Adjuntos (PDF o imagen, hasta ' + MAX_ADJUNTOS + ')</label>' +
         '<input type="file" id="utwi-archivo" accept="application/pdf,image/*" multiple>'
-        : '<label class="lbl">PDF adjunto (uno; va como documento y el mensaje como leyenda)</label>' +
-        '<input type="file" id="utwi-archivo" accept="application/pdf">') +
+        : '<label class="lbl">Adjunto (uno): PDF como documento, o JPG/PNG como foto; el mensaje va de leyenda</label>' +
+        '<input type="file" id="utwi-archivo" accept="application/pdf,image/jpeg,image/png">') +
       (adjuntos ? '<div style="margin-top:8px">' + adjuntos + '</div>' : '') +
 
       '<div style="display:flex;gap:8px;margin-top:14px">' +
@@ -1534,8 +1537,8 @@ cuerpoHtml(personalizar(texto, contacto)) +
         .replace(/\*([^*\n]+)\*/g, '<b>$1</b>').replace(/_([^_\n]+)_/g, '<i>$1</i>').replace(/\n/g, '<br>');
       var doc = S.adjuntos[0]
         ? '<div style="display:flex;align-items:center;gap:10px;margin:-3px -5px 8px;padding:10px 12px;border-radius:9px;background:rgba(0,0,0,.18)">' +
-          '<span style="font-size:26px">📄</span><div><div style="font-weight:600;font-size:14px">' + esc(S.adjuntos[0].nombre) + '</div>' +
-          '<div style="font-size:11.5px;opacity:.7">' + Math.round(S.adjuntos[0].bytes / 1024) + ' KB · PDF</div></div></div>'
+          '<span style="font-size:26px">' + (/^image\//.test(S.adjuntos[0].tipo || '') ? '🖼️' : '📄') + '</span><div><div style="font-weight:600;font-size:14px">' + esc(S.adjuntos[0].nombre) + '</div>' +
+          '<div style="font-size:11.5px;opacity:.7">' + Math.round(S.adjuntos[0].bytes / 1024) + ' KB · ' + (/^image\//.test(S.adjuntos[0].tipo || '') ? 'Foto' : 'PDF') + '</div></div></div>'
         : '';
       marco.srcdoc = '<!doctype html><html lang="es"><head><meta charset="utf-8"></head>' +
         '<body style="margin:0;background:#0b141a;font-family:Helvetica,Arial,sans-serif;padding:18px">' +
