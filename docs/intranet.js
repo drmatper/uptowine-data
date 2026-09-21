@@ -188,6 +188,37 @@ cuerpoHtml(personalizar(texto, contacto)) +
       : { html: correoHtml(obj.cuerpo, contacto), texto: correoTexto(obj.cuerpo, contacto) };
   }
 
+  // --- resultados de una campana de correo: tasas y veredicto -------------------
+  // Referencias de correo comercial (retail/vino): apertura 20-35 %, clic 2-5 %,
+  // rebote < 2 %, bajas < 0,5 %. El clic manda: Apple Mail y Gmail inflan aperturas.
+  function evaluarCampana(m) {
+    m = m || {};
+    var enviados = Number(m.enviados || 0), entregados = Number(m.entregados || 0);
+    var base = entregados || enviados;
+    var pct = function (n) { return base ? Math.round((Number(n || 0) / base) * 1000) / 10 : 0; };
+    var r = {
+      enviados: enviados, entregados: entregados,
+      entrega: enviados ? Math.round((entregados / enviados) * 1000) / 10 : 0,
+      apertura: pct(m.abiertos), clic: pct(m.clics),
+      rebote: enviados ? Math.round((Number(m.rebotados || 0) / enviados) * 1000) / 10 : 0,
+      baja: enviados ? Math.round((Number(m.bajas || 0) / enviados) * 1000) / 10 : 0,
+      quejas: Number(m.quejas || 0),
+    };
+    if (!enviados || (!entregados && !Number(m.abiertos || 0) && !Number(m.clics || 0) && !Number(m.rebotados || 0))) {
+      r.nivel = 'sin datos'; r.motivo = 'Todav\u00eda no llegan avisos de Resend para esta campa\u00f1a.';
+    } else if (r.rebote > 5 || r.baja > 1 || r.quejas > 0) {
+      r.nivel = 'floja'; r.motivo = r.quejas ? 'Alguien la marc\u00f3 como spam: revisa a qui\u00e9n se la mandaste.'
+        : r.rebote > 5 ? 'Demasiados rebotes: hay correos malos en la lista.' : 'Demasiadas bajas: el mensaje o la frecuencia no calzaron.';
+    } else if (r.clic >= 3 || r.apertura >= 35) {
+      r.nivel = 'buena'; r.motivo = r.clic >= 3 ? 'Los clics superan el 3 %, por encima de lo normal en retail.' : 'Apertura muy por encima de lo habitual.';
+    } else if (r.clic < 1 && r.apertura < 15) {
+      r.nivel = 'floja'; r.motivo = 'Pocas aperturas y casi sin clics: prueba otro asunto u otra hora.';
+    } else {
+      r.nivel = 'normal'; r.motivo = 'Dentro de lo esperable para un correo comercial.';
+    }
+    return r;
+  }
+
   // --- el mismo marcado, en formato WhatsApp -----------------------------------
   // Una plantilla sirve para los dos canales: por WhatsApp el titulo va en
   // *negrita*, las listas con viñeta, los enlaces como "texto: url" y el boton
@@ -338,7 +369,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
 
   if (typeof module !== 'undefined' && module.exports) {   // solo para los tests
     module.exports = { fonoWhatsApp: fonoWhatsApp, esc: esc, personalizar: personalizar,
-      plata: plata, cuerpoHtml: cuerpoHtml, correoHtml: correoHtml, correoTexto: correoTexto, correoDe: correoDe,
+      plata: plata, cuerpoHtml: cuerpoHtml, correoHtml: correoHtml, correoTexto: correoTexto, correoDe: correoDe, evaluarCampana: evaluarCampana,
       enlaceSeguro: enlaceSeguro, csvLeer: csvLeer, csvMapear: csvMapear, csvSalida: csvSalida,
       diasDesde: diasDesde, estadoPorFecha: estadoPorFecha, rutNormalizar: rutNormalizar,
       paykuFila: paykuFila, patAgrupar: patAgrupar, textoWhatsApp: textoWhatsApp };
@@ -363,6 +394,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     nombres: {},    // id -> nombre, para mostrar los destinatarios elegidos
     plantillaEdit: null,   // copia de la plantilla abierta en la vista Plantillas
     recuperar: false,      // true mientras se elige una clave nueva (enlace de recuperacion)
+    resultados: null,      // campana cuyo panel de resultados esta abierto
     importar: null,
     msj: '', err: false, ocupado: false, confirmar: false, progreso: '',
   };
@@ -467,6 +499,11 @@ cuerpoHtml(personalizar(texto, contacto)) +
     '.utwi .barra.emojis button:hover{background:#f2f4f7}',
     /* ficha lateral */
     '.utwi .velo{position:fixed;inset:0;z-index:99998;background:rgba(17,24,39,.35)}',
+    '.utwi .metrica{margin:14px 0}',
+    '.utwi .pista{height:12px;border-radius:999px;background:#eef1f5;overflow:hidden;margin:6px 0 4px}',
+    '.utwi .relleno{height:100%;border-radius:999px;transition:width .4s}',
+    '.utwi .relleno.ok{background:var(--ok)}.utwi .relleno.warn{background:var(--warn)}.utwi .relleno.crim{background:var(--crim)}.utwi .relleno.gris{background:#b9c0cb}',
+    '.utwi .veredicto{border-left:5px solid #b9c0cb;margin-bottom:6px}.utwi .veredicto.ok{border-color:var(--ok)}.utwi .veredicto.warn{border-color:var(--warn)}.utwi .veredicto.crim{border-color:var(--crim)}',
     '.utwi .ficha{position:fixed;top:0;right:0;bottom:0;z-index:99999;width:min(430px,100%);padding:20px;overflow:auto;background:#fff;box-shadow:-10px 0 40px rgba(0,0,0,.18)}',
     '.utwi .ficha.ancha{width:min(560px,100%)}',
     '.utwi .grupo{display:flex;align-items:center;gap:9px;padding:7px 4px;border-top:1px solid #f0f2f5;font-size:13.5px}',
@@ -1092,6 +1129,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '<div class="cuerpo"><div class="lado">' + nav + '</div>' +
       '<div class="panel"><p class="msj ' + (S.err ? 'err' : '') + '">' + esc(S.msj) + '</p>' + contenido + '</div></div>' +
       (S.ficha ? fichaContacto() : '') +
+      (S.resultados ? panelResultados() : '') +
       (S.picker && S.vista === 'campana' ? panelDestinatarios() : '') +
       '</div>';
     Array.prototype.forEach.call(host.querySelectorAll(SCROLLS), function (el, i) { if (scrolls[i]) el.scrollTop = scrolls[i]; });
@@ -1316,6 +1354,35 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '<p class="ayuda">Reconocemos las columnas por su nombre. Las filas sin correo ni celular válido se saltan; los repetidos se fusionan con el contacto que ya existe.</p></div>';
   }
 
+  function panelResultados() {
+    var c = S.resultados, m = (S.metricasCampana || {})[c.id] || {};
+    var r = evaluarCampana(m);
+    var color = r.nivel === 'buena' ? 'ok' : r.nivel === 'floja' ? 'warn' : r.nivel === 'normal' ? 'crim' : 'gris';
+    // promedio de las demas campanas con datos, para comparar
+    var otras = Object.keys(S.metricasCampana || {}).filter(function (k) { return String(k) !== String(c.id); })
+      .map(function (k) { return evaluarCampana(S.metricasCampana[k]); }).filter(function (x) { return x.nivel !== 'sin datos'; });
+    var prom = function (k) { return otras.length ? Math.round(otras.reduce(function (a, x) { return a + x[k]; }, 0) / otras.length * 10) / 10 : null; };
+    var barra = function (titulo, clave, valor, n, ref, malo) {
+      var ancho = Math.max(2, Math.min(100, valor));
+      var tono = malo ? (valor > ref ? 'warn' : 'ok') : (valor >= ref ? 'ok' : valor >= ref / 2 ? 'crim' : 'gris');
+      var p = prom(clave);
+      return '<div class="metrica"><div class="cab" style="margin:0"><span>' + titulo + ' <span class="mini">(' + n + ')</span></span><b>' + valor + ' %</b></div>' +
+        '<div class="pista"><div class="relleno ' + tono + '" style="width:' + ancho + '%"></div></div>' +
+        '<div class="mini">' + (malo ? 'bien si es menor a ' : 'referencia: ') + ref + ' %' + (p != null ? ' · tus otras campañas: ' + p + ' %' : '') + '</div></div>';
+    };
+    return '<div class="velo" id="utwi-velo-res"></div><div class="ficha">' +
+      '<div class="cab"><h1>Resultados</h1><div class="sp"><button class="btn sec mini" id="utwi-cerrar-res">Cerrar</button></div></div>' +
+      '<p class="dim" style="margin:4px 0 14px"><b>' + esc(c.nombre) + '</b> · ' + esc(c.asunto || '') + '<br>enviada ' + fecha(c.enviada_at || c.actualizado) + ' · ' + r.enviados + ' correos</p>' +
+      '<div class="card veredicto ' + color + '"><div class="mini">Veredicto</div><h2 style="margin:2px 0 6px;text-transform:capitalize">' + r.nivel + '</h2><p style="margin:0">' + r.motivo + '</p></div>' +
+      barra('Entrega', 'entrega', r.entrega, (r.entregados || 0) + ' de ' + r.enviados, 95) +
+      barra('Apertura', 'apertura', r.apertura, (m.abiertos || 0) + ' abrieron', 20) +
+      barra('Clics', 'clic', r.clic, (m.clics || 0) + ' hicieron clic', 2) +
+      barra('Rebotes', 'rebote', r.rebote, (m.rebotados || 0), 2, true) +
+      barra('Bajas', 'baja', r.baja, (m.bajas || 0), 0.5, true) +
+      '<p class="ayuda" style="margin-top:14px">Las aperturas se inflan (Apple Mail y Gmail "abren" solos); los clics son el dato fiable. Los avisos de Resend llegan durante horas después del envío: vuelve a mirar mañana.</p>' +
+      '</div>';
+  }
+
   function fichaContacto() {
     var c = S.ficha;
     var mensajes = (c.mensajes || []).map(function (m) {
@@ -1449,7 +1516,8 @@ cuerpoHtml(personalizar(texto, contacto)) +
         '<td>' + pillEstado(c.estado) + '</td>' +
         '<td class="dim">' + (c.estado === 'enviada' ? c.enviados + ' enviados' + (c.fallidos ? ' · ' + c.fallidos + ' fallidos' : '') + resumenMetricas(c) : '—') + '</td>' +
         '<td class="dim">' + fecha(c.actualizado) + '</td>' +
-        '<td style="text-align:right"><button class="btn sec mini" data-campana="' + c.id + '">Abrir</button> ' +
+        '<td style="text-align:right">' + (c.estado === 'enviada' && c.canal === 'correo' ? '<button class="btn mini" data-resultados="' + c.id + '">Resultados</button> ' : '') +
+        '<button class="btn sec mini" data-campana="' + c.id + '">Abrir</button> ' +
         '<button class="btn sec mini" data-duplicar="' + c.id + '">Duplicar</button></td></tr>';
     }).join('') || '<tr><td colspan="6" class="dim" style="padding:18px">Todavía no hay campañas. Crea la primera desde una plantilla.</td></tr>';
 
@@ -1781,6 +1849,13 @@ cuerpoHtml(personalizar(texto, contacto)) +
     // ---- ficha ----
     if ($('utwi-velo')) $('utwi-velo').onclick = function () { S.ficha = null; pintar(); };
     if ($('utwi-cerrar-ficha')) $('utwi-cerrar-ficha').onclick = function () { S.ficha = null; pintar(); };
+    cada('[data-resultados]', function (b) {
+      b.onclick = function () {
+        S.resultados = S.campanas.filter(function (x) { return String(x.id) === String(b.getAttribute('data-resultados')); })[0] || null;
+        cargarCampanas();   // refresca las metricas al abrir
+      };
+    });
+    ['utwi-velo-res', 'utwi-cerrar-res'].forEach(function (id) { if ($(id)) $(id).onclick = function () { S.resultados = null; pintar(); }; });
     if ($('utwi-f-guardar')) $('utwi-f-guardar').onclick = function () {
       guardarContacto({ nombre: $('utwi-f-nombre').value, email: $('utwi-f-email').value || null,
         celular: $('utwi-f-celular').value || null, rut: rutNormalizar($('utwi-f-rut').value) || null,
