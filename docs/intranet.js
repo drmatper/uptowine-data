@@ -219,6 +219,21 @@ cuerpoHtml(personalizar(texto, contacto)) +
     return r;
   }
 
+  // --- cotizacion que llega desde el cotizador (iframe): texto del mensaje ---------
+  function cotizacionTexto(d) {
+    var items = (d.items || []).map(function (it) {
+      return '- ' + it.nombre + (it.qty > 1 ? ' \u00d7' + it.qty : '') + ' \u2014 ' + plata(it.total);
+    }).join('\n');
+    return '## Tu cotizaci\u00f3n Up to Wine' + (d.numero ? ' ' + d.numero : '') + '\n\n' +
+      'Hola {nombre}, te adjuntamos la cotizaci\u00f3n' + (d.numero ? ' **' + d.numero + '**' : '') + ' por **' + plata(d.total) + '**' +
+      (d.botellas ? ' (' + d.botellas + ' botella' + (d.botellas === 1 ? '' : 's') + ')' : '') + ':\n\n' +
+      items + (d.envio ? '\n- Env\u00edo \u2014 ' + plata(d.envio) : '') + '\n\n' +
+      (d.pago && d.pago.link
+        ? '[[Pagar en l\u00ednea \u00b7 ' + d.pago.nombre + '|' + d.pago.link + ']]\n\nTambi\u00e9n puedes pagar por transferencia: los datos van en el PDF adjunto.\n\n'
+        : 'Los datos para pagar por transferencia van en el PDF adjunto.\n\n') +
+      'Cualquier duda, responde este mensaje o escr\u00edbenos al +56 9 3173 7400.\n\n\u00a1Salud!\nEquipo Up to Wine';
+  }
+
   // --- el mismo marcado, en formato WhatsApp -----------------------------------
   // Una plantilla sirve para los dos canales: por WhatsApp el titulo va en
   // *negrita*, las listas con viñeta, los enlaces como "texto: url" y el boton
@@ -369,7 +384,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
 
   if (typeof module !== 'undefined' && module.exports) {   // solo para los tests
     module.exports = { fonoWhatsApp: fonoWhatsApp, esc: esc, personalizar: personalizar,
-      plata: plata, cuerpoHtml: cuerpoHtml, correoHtml: correoHtml, correoTexto: correoTexto, correoDe: correoDe, evaluarCampana: evaluarCampana,
+      plata: plata, cuerpoHtml: cuerpoHtml, correoHtml: correoHtml, correoTexto: correoTexto, correoDe: correoDe, evaluarCampana: evaluarCampana, cotizacionTexto: cotizacionTexto,
       enlaceSeguro: enlaceSeguro, csvLeer: csvLeer, csvMapear: csvMapear, csvSalida: csvSalida,
       diasDesde: diasDesde, estadoPorFecha: estadoPorFecha, rutNormalizar: rutNormalizar,
       paykuFila: paykuFila, patAgrupar: patAgrupar, textoWhatsApp: textoWhatsApp };
@@ -499,6 +514,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     '.utwi .barra.emojis button:hover{background:#f2f4f7}',
     /* ficha lateral */
     '.utwi .velo{position:fixed;inset:0;z-index:99998;background:rgba(17,24,39,.35)}',
+    '.utwi .cotizador{display:block;width:100%;height:calc(100vh - 150px);min-height:640px;border:1px solid var(--linea);border-radius:12px;background:#fff}',
     '.utwi .metrica{margin:14px 0}',
     '.utwi .pista{height:12px;border-radius:999px;background:#eef1f5;overflow:hidden;margin:6px 0 4px}',
     '.utwi .relleno{height:100%;border-radius:999px;transition:width .4s}',
@@ -541,6 +557,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
   cdn.onload = function () {
     sb = window.supabase.createClient(SB_URL, SB_ANON, { auth: { persistSession: true, autoRefreshToken: true } });
     sb.auth.getSession().then(function (r) { entrar(r.data.session); });
+    window.addEventListener('message', recibirCotizacion);
     sb.auth.onAuthStateChange(function (evento, ses) {
       // el enlace del correo de recuperacion abre la intranet con una sesion temporal: pedimos la clave nueva
       if (evento === 'PASSWORD_RECOVERY') S.recuperar = true;
@@ -1079,7 +1096,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
 
   var MENU = [
     ['resumen', 'Resumen'], ['contactos', 'Contactos'], ['etiquetas', 'Etiquetas'],
-    ['campanas', 'Campañas'], ['plantillas', 'Plantillas'], ['historial', 'Historial'],
+    ['campanas', 'Campañas'], ['cotizador', 'Cotizador'], ['plantillas', 'Plantillas'], ['historial', 'Historial'],
   ];
   var COLORES = ['gris', 'vino', 'dorado', 'verde', 'azul', 'morado', 'naranjo'];
 
@@ -1087,6 +1104,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     if (!S.listo) return;
     if (!S.sesion) return vistaLogin();
     if (S.recuperar) return vistaNuevaClave();
+    if (S.vista === 'cotizador' && $('utwi-cotizador')) return;   // el iframe se queda como esta
     if (!S.admin) {
       host.innerHTML = '<div class="utwi"><div class="panel"><h1>Solo administración</h1>' +
         '<p class="dim" style="margin:10px 0 16px">Esta sección es para el equipo de Up to Wine.</p>' +
@@ -1109,6 +1127,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
       : S.vista === 'contactos' ? vistaContactos()
       : S.vista === 'campanas' ? vistaCampanas()
       : S.vista === 'campana' ? vistaEditor()
+      : S.vista === 'cotizador' ? vistaCotizador()
       : S.vista === 'plantillas' ? vistaPlantillas()
       : vistaHistorial();
 
@@ -1670,6 +1689,26 @@ cuerpoHtml(personalizar(texto, contacto)) +
   }
 
   // ---------- Plantillas ----------
+  var COTIZADOR_URL = 'https://app.uptowine.cl/cotizador.html';
+  function vistaCotizador() {
+    return '<div class="cab"><h1>Cotizador</h1><div class="sp"><span class="dim">Arma la cotización y pulsa <b>Enviar por la intranet</b>: se abre una campaña con el PDF adjunto y el link de pago, para correo o WhatsApp.</span></div></div>' +
+      '<iframe class="cotizador" id="utwi-cotizador" src="' + COTIZADOR_URL + '" title="Cotizador Up to Wine"></iframe>';
+  }
+  // Lo que manda el cotizador: PDF en base64 + resumen. Se abre una campana lista para elegir destinatario.
+  function recibirCotizacion(ev) {
+    var origen = String(ev.origin || '');
+    if (origen !== 'https://app.uptowine.cl' && !/^http:\/\/localhost(:\d+)?$/.test(origen)) return;
+    var d = ev.data || {};
+    if (d.tipo !== 'utw-cotizacion' || !d.pdf) return;
+    nuevaCampana({
+      nombre: 'Cotización ' + (d.numero || d.cliente || new Date().toLocaleDateString('es-CL')),
+      canal: 'correo', asunto: 'Tu cotización Up to Wine' + (d.numero ? ' ' + d.numero : ''),
+      cuerpo: cotizacionTexto(d),
+    });
+    S.adjuntos = [{ nombre: d.nombre || 'cotizacion.pdf', bytes: Math.round(String(d.pdf).length * 0.75), tipo: 'application/pdf', base64: d.pdf }];
+    aviso('Cotización lista' + (d.cliente ? ' para ' + d.cliente : '') + ': elige el destinatario y el canal (correo o WhatsApp) y envíala. El PDF ya va adjunto.');
+  }
+
   function vistaPlantillas() {
     var filas = S.plantillas.map(function (p) {
       return '<tr><td><b>' + esc(p.nombre) + '</b><div class="mini">' + (p.html ? '🎨 Diseño HTML' : esc((p.cuerpo || '').slice(0, 70).replace(/\n/g, ' ')) + '…') + '</div></td>' +
