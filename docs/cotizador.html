@@ -161,7 +161,7 @@ a{color:var(--burgundy)}
 /* ===== Print / PDF ===== */
 .quote-print{display:none}
 /* exportando a PDF desde la intranet: se dibuja fuera de pantalla */
-body.exportando .quote-print{display:block;position:absolute;left:-10000px;top:0;width:190mm}
+body.exportando .quote-print{display:block;position:absolute;left:0;top:0;width:190mm;z-index:-1}   /* detras de la app: html2canvas no dibuja lo que queda fuera de pantalla */
 @media print{
   @page{margin:14mm 12mm}
   body{background:#fff}
@@ -854,7 +854,7 @@ document.getElementById('btnPdf').onclick=async ()=>{ EXPORTANDO=false; await ar
       EXPORTANDO=true; await armarDocumento(); EXPORTANDO=false;
       document.body.classList.add('exportando');
       const el=document.getElementById('printDoc');
-      const uri=await html2pdf().set({margin:[12,10,12,10], image:{type:'jpeg',quality:0.92}, html2canvas:{scale:2,useCORS:true,logging:false}, jsPDF:{unit:'mm',format:'a4'}, pagebreak:{mode:['css','legacy']}, enableLinks:true}).from(el).outputPdf('datauristring');
+      const uri=await html2pdf().set({margin:[12,10,12,10], image:{type:'jpeg',quality:0.92}, html2canvas:{scale:2,useCORS:true,logging:false,scrollX:0,scrollY:0}, jsPDF:{unit:'mm',format:'a4'}, pagebreak:{mode:['css','legacy']}, enableLinks:true}).from(el).outputPdf('datauristring');
       document.body.classList.remove('exportando');
       const t=calcTotales(), montoTot=currentTotal();
       const pago=['mp','flow'].map(k=>pays[k]).find(pd=>pd&&pd.monto===montoTot)||null;
