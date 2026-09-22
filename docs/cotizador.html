@@ -884,7 +884,8 @@ document.getElementById('btnPdf').onclick=async ()=>{ EXPORTANDO=false; await ar
       document.body.classList.remove('exportando');
       const t=calcTotales(), montoTot=currentTotal();
       const pago=['mp','flow'].map(k=>pays[k]).find(pd=>pd&&pd.monto===montoTot)||null;
-      const items=Object.keys(state.sel).map(id=>{ const s=state.sel[id], c=findC(+id); return {nombre:c.nombre.trim(), qty:s.qty, total:Math.round(c.precio*s.qty*(1-s.disc/100))}; });
+      // precio normal = el tachado de la tienda si existe, si no el de lista; oferta = con el descuento de la linea
+      const items=Object.keys(state.sel).map(id=>{ const s=state.sel[id], c=findC(+id); const normal=(c.compare_at&&c.compare_at>c.precio)?c.compare_at:c.precio; const oferta=Math.round(c.precio*(1-s.disc/100)); return {nombre:c.nombre.trim(), qty:s.qty, precio:normal, oferta: oferta<normal?oferta:null, total:Math.round(oferta*s.qty), imagen:c.imagen||''}; });
       const cli=document.getElementById('cCliente').value||'', num=document.getElementById('cNumero').value||'';
       window.parent.postMessage({tipo:'utw-cotizacion', pdf:uri.split(',')[1], nombre:('Cotizacion '+(num||cli||'Up to Wine')).replace(/[^\w\- ]+/g,'').trim()+'.pdf', cliente:cli, numero:num, total:montoTot, botellas:t.bottles, envio:t.envio, items, pago: pago?{nombre:pago.nombre, link:pago.link}:null}, destino);
     }catch(e){ document.body.classList.remove('exportando'); alert('No se pudo armar el PDF: '+(e&&e.message||e)); }
