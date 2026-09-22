@@ -86,6 +86,7 @@
         var u = enlaceSeguro(url);
         return u ? '<a href="' + u + '" style="color:#F1315B;text-decoration:underline">' + txt + '</a>' : txt;
       })
+      .replace(/~~([^~\n]+)~~/g, '<s style="color:#8A8087">$1</s>')   // precio normal tachado
       .replace(/\*\*([^*]+)\*\*/g, '<strong style="color:#ffffff">$1</strong>')
       .replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>');
   }
@@ -115,6 +116,13 @@
         var items = b.split('\n').filter(function (l) { return l.trim(); })
           .map(function (l) { return '<li style="margin:0 0 7px">' + enLinea(l.replace(/^\s*[-*]\s+/, '')) + '</li>'; }).join('');
         salida.push('<ul style="margin:0 0 16px;padding-left:20px">' + items + '</ul>');
+        continue;
+      }
+      var conFoto = b.match(/^!\[([^\]]*)\]\(([^)]+)\)\s+([\s\S]+)$/);
+      if (conFoto && enlaceSeguro(conFoto[2])) {
+        salida.push('<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 14px;width:100%"><tr>' +
+          '<td style="width:64px;vertical-align:top;padding-right:12px"><img src="' + enlaceSeguro(conFoto[2]) + '" alt="' + conFoto[1] + '" width="56" style="display:block;width:56px;height:auto;border-radius:8px;background:#fff"></td>' +
+          '<td style="vertical-align:middle;font-size:15px;line-height:1.5">' + enLinea(conFoto[3]).replace(/\n/g, '<br>') + '</td></tr></table>');
         continue;
       }
       salida.push('<p style="margin:0 0 15px">' + enLinea(b).replace(/\n/g, '<br>') + '</p>');
@@ -156,6 +164,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
       .replace(/!\[[^\]]*\]\(([^)]+)\)/g, '')
       .replace(/^##\s+/gm, '')
       .replace(/\*\*([^*]+)\*\*/g, '$1')
+      .replace(/~~([^~\n]+)~~/g, '(antes $1)')
       .trim() + '\n\n—\nUp to Wine · Vinos de autor boutique\nuptowine.cl · Instagram @uptowine · WhatsApp +56 9 3173 7400 · ventas@uptowine.cl\nVenta de alcohol solo a mayores de 18 años. Disfruta con moderación.\nDarme de baja: %%BAJA%%';
   }
 
@@ -221,13 +230,19 @@ cuerpoHtml(personalizar(texto, contacto)) +
 
   // --- cotizacion que llega desde el cotizador (iframe): texto del mensaje ---------
   function cotizacionTexto(d) {
+    // cada vino es un parrafo: foto chica (solo en el correo) + nombre + precio; si hay oferta, el normal va tachado
     var items = (d.items || []).map(function (it) {
-      return '- ' + it.nombre + (it.qty > 1 ? ' \u00d7' + it.qty : '') + ' \u2014 ' + plata(it.total);
-    }).join('\n');
+      var foto = it.imagen ? '![' + it.nombre + '](https://wsrv.nl/?url=' + encodeURIComponent(it.imagen) + '&h=160&output=png) ' : '';
+      var precio = it.oferta ? '~~' + plata(it.precio) + '~~ **' + plata(it.oferta) + '**' : (it.precio ? plata(it.precio) : plata(it.total));
+      var linea = foto + '**' + it.nombre + '**' + (it.qty > 1 ? ' \u00d7' + it.qty : '');
+      if (it.qty > 1 && it.precio) linea += '\n' + precio + ' c/u \u00b7 total **' + plata(it.total) + '**';
+      else linea += '\n' + precio;
+      return linea;
+    }).join('\n\n');
     return '## Tu cotizaci\u00f3n Up to Wine' + (d.numero ? ' ' + d.numero : '') + '\n\n' +
       'Hola {nombre}, te adjuntamos la cotizaci\u00f3n' + (d.numero ? ' **' + d.numero + '**' : '') + ' por **' + plata(d.total) + '**' +
       (d.botellas ? ' (' + d.botellas + ' botella' + (d.botellas === 1 ? '' : 's') + ')' : '') + ':\n\n' +
-      items + (d.envio ? '\n- Env\u00edo \u2014 ' + plata(d.envio) : '') + '\n\n' +
+      items + (d.envio ? '\n\n**Env\u00edo:** ' + plata(d.envio) : '') + '\n\n' +
       (d.pago && d.pago.link
         ? '[[Pagar en l\u00ednea \u00b7 ' + d.pago.nombre + '|' + d.pago.link + ']]\n\nTambi\u00e9n puedes pagar por transferencia: los datos van en el PDF adjunto.\n\n'
         : 'Los datos para pagar por transferencia van en el PDF adjunto.\n\n') +
@@ -245,7 +260,8 @@ cuerpoHtml(personalizar(texto, contacto)) +
       .replace(/(^|[^*\w])\*([^*\n]+)\*(?=[^*\w]|$)/g, '$1*$2*')
       .replace(/^[ \t]*[-*][ \t]+/gm, '\u2022 ')   // [ \t] y no \s: \s se tragaba la linea en blanco anterior
       .replace(/^\[\[([^|\]]+)\|([^\]]+)\]\]$/gm, '\ud83d\udc49 $1: $2')
-      .replace(/!\[[^\]]*\]\(([^)]+)\)/g, '$1')
+      .replace(/~~([^~\n]+)~~/g, '~$1~')             // tachado de WhatsApp
+      .replace(/!\[[^\]]*\]\(([^)]+)\)[ \t]*/g, '')  // las fotos no viajan por texto
       .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1: $2')
       .replace(/^---$/gm, '')
       .replace(/\n{3,}/g, '\n\n')
