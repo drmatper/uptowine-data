@@ -6,21 +6,23 @@
 <title>Cotizador Up to Wine</title>
 <style>
 :root{
-  --burgundy:#7a2438; --burgundy-dark:#5e1a2b; --cream:#faf5ef; --cream2:#f4f0e8;
-  --line:#e4dacd; --ink:#2b1c1f; --muted:#8a7d76; --gold:#b8894b; --green:#2f7d5b;
-  --shadow:0 2px 10px rgba(60,30,35,.08);
+  /* kit Crimson: interfaz clara (como la intranet), carmesi solo en botones y detalles, dorado para lo que brilla */
+  --burgundy:#E2123F; --burgundy-dark:#B80E33; --cream:#f6f7f9; --cream2:#eef1f5;
+  --line:#e6e8ec; --ink:#111827; --muted:#6b7280; --gold:#B8860B; --green:#0b7a4b; --negro:#0A0708;
+  --shadow:0 2px 10px rgba(17,24,39,.06);
 }
 *{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:var(--ink);background:#efe9e1;line-height:1.5}
+body{margin:0;font-family:'Jost',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:var(--ink);background:#f6f7f9;line-height:1.5}
+h1,h2,h3,.topbar .t,.btn,.chip{font-family:'Archivo','Helvetica Neue',Arial,sans-serif}
 h1,h2,h3{margin:0}
 button{font-family:inherit;cursor:pointer}
 input,select{font-family:inherit;font-size:14px}
 a{color:var(--burgundy)}
 
 /* ===== Header ===== */
-.topbar{background:var(--burgundy);color:#fff;padding:12px 20px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:50;box-shadow:var(--shadow)}
-.topbar img{height:40px;background:#fff;border-radius:6px;padding:3px 6px}
-.topbar .t{font-size:18px;font-weight:800;letter-spacing:.02em}
+.topbar{background:var(--negro);color:#fff;padding:12px 20px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:50;box-shadow:var(--shadow)}
+.topbar img{height:34px}
+.topbar .t{font-size:18px;font-weight:800;letter-spacing:-.01em;text-transform:uppercase}
 .topbar .s{font-size:12px;opacity:.85;margin-top:1px}
 .topbar .spacer{flex:1}
 .topbar .count{background:rgba(255,255,255,.15);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:700}
@@ -35,15 +37,15 @@ a{color:var(--burgundy)}
 /* ===== Filtros ===== */
 .filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
 .search{flex:1;min-width:200px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:#fff}
-.chip{border:1px solid var(--line);background:#fff;color:var(--burgundy);border-radius:20px;padding:7px 14px;font-size:13px;font-weight:700}
-.chip.on{background:var(--burgundy);color:#fff;border-color:var(--burgundy)}
+.chip{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:20px;padding:7px 14px;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.chip.on{background:var(--negro);color:#fff;border-color:var(--negro)}
 .toggle{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);font-weight:600;cursor:pointer;user-select:none}
 
 /* ===== Grid catálogo ===== */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
 .card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .12s,box-shadow .12s}
 .card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(60,30,35,.14)}
-.card .imgwrap{height:150px;background:linear-gradient(135deg,#f7f2ea,#efe6d8);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative}
+.card .imgwrap{height:150px;background:linear-gradient(135deg,#f6f7f9,#eef1f5);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative}
 .card .imgwrap img{max-height:140px;max-width:88%;object-fit:contain}
 .badge{position:absolute;top:8px;left:8px;background:rgba(122,36,56,.92);color:#fff;font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:12px}
 .badge.acc{background:#6b6b6b}
@@ -116,9 +118,9 @@ a{color:var(--burgundy)}
 .trow.big{font-size:20px;font-weight:800;color:var(--burgundy);margin-top:8px}
 .trow .disc{color:var(--green);font-weight:700}
 .actions{display:flex;gap:8px;margin-top:16px}
-.btn{flex:1;padding:12px;border-radius:10px;border:none;font-weight:800;font-size:14px}
+.btn{flex:1;padding:12px;border-radius:999px;border:none;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
 .btn.pri{background:var(--burgundy);color:#fff}
-.btn.sec{background:#eadfce;color:var(--burgundy);flex:0 0 auto;padding:12px 14px}
+.btn.sec{background:#fff;border:1px solid var(--line);color:var(--ink);flex:0 0 auto;padding:12px 14px}
 .paybox{margin-top:12px}
 .btn.pay{width:100%;background:#009ee3;color:#fff;border:none;border-radius:10px;padding:13px;font-weight:800;font-size:14px}
 .btn.pay:active{background:#0088c7}
@@ -168,17 +170,17 @@ body.exportando .quote-print{display:block;position:absolute;left:0;top:0;width:
   .topbar,.app,.modal{display:none !important}
   .quote-print{display:block}
 }
-.quote-print{color:var(--ink);--serif:Georgia,'Times New Roman',serif;--sec:#6b5d55;--burgundy:#a41d3a;background:#fff}
+.quote-print{color:var(--ink);--serif:'Archivo','Helvetica Neue',Arial,sans-serif;--sec:#6b7280;--burgundy:#E2123F;background:#fff;font-family:'Jost',Helvetica,Arial,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 /* Encabezado */
-.qp-head{display:flex;align-items:center;gap:14px;border-bottom:2px solid var(--burgundy);padding-bottom:9px;margin-bottom:12px}
-.qp-head img{height:44px;flex-shrink:0}
-.qp-head .qhrule{width:1px;align-self:stretch;background:var(--line)}
+.qp-head{display:flex;align-items:center;gap:14px;background:#0A0708;color:#fff;padding:14px 16px;border-radius:12px;margin-bottom:14px;border-bottom:3px solid var(--burgundy)}
+.qp-head img{height:40px;flex-shrink:0}
+.qp-head .qhrule{width:1px;align-self:stretch;background:rgba(255,255,255,.18)}
 .qp-head .qtitle{flex:1;min-width:0}
-.qp-head .qt{font-family:var(--serif);font-size:27px;font-weight:700;color:var(--burgundy);line-height:1;letter-spacing:.01em}
-.qp-head .qs{font-size:10.5px;color:var(--sec);margin-top:4px}
-.qp-head .qmeta{flex-shrink:0;text-align:right;font-size:11.5px;color:var(--ink);line-height:1.55;white-space:nowrap}
-.qp-head .qmeta b{color:var(--burgundy)}
-.qp-head .qmeta .qval{color:var(--sec)}
+.qp-head .qt{font-family:var(--serif);font-size:26px;font-weight:800;color:#fff;line-height:1;letter-spacing:-.02em;text-transform:uppercase}
+.qp-head .qs{font-size:9px;color:#F1315B;margin-top:5px;font-family:var(--serif);font-weight:700;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.qp-head .qmeta{flex-shrink:0;text-align:right;font-size:11.5px;color:rgba(255,255,255,.75);line-height:1.55;white-space:nowrap}
+.qp-head .qmeta b{color:#fff}
+.qp-head .qmeta .qval{color:#E0B450}
 /* Cliente */
 .qp-client{display:flex;justify-content:space-between;gap:20px;padding:2px 2px 10px;margin-bottom:4px;font-size:13px;border-bottom:1.5px solid var(--burgundy)}
 .qp-client b{color:var(--burgundy)}
@@ -201,7 +203,7 @@ body.exportando .quote-print{display:block;position:absolute;left:0;top:0;width:
 .qp-item .qprice{width:128px;flex-shrink:0;text-align:right}
 .qp-norm{text-decoration:line-through;color:#6b5d55;font-size:12px;font-weight:600}
 .qp-final{font-size:21px;font-weight:800;color:var(--burgundy);line-height:1.05}
-.qp-chip{display:inline-block;border:1.4px solid var(--burgundy);color:var(--burgundy);font-size:10px;font-weight:800;border-radius:4px;padding:0 6px;margin-top:4px}
+.qp-chip{display:inline-block;border:1.4px solid #B8860B;color:#B8860B;font-size:10px;font-weight:800;border-radius:4px;padding:0 6px;margin-top:4px}
 .qp-unit{font-size:10.5px;color:var(--sec);margin-top:4px}
 /* Pack */
 .qp-pack{border:1.5px solid var(--burgundy);border-radius:10px;overflow:hidden;margin:12px 0;page-break-inside:avoid}
@@ -252,6 +254,7 @@ body.exportando .quote-print{display:block;position:absolute;left:0;top:0;width:
 .qp-pay-wa{font-size:10px;color:#2b1c1f;margin-top:4px}
 .qp-pay-wa a{color:#1a7a3a;font-weight:700;text-decoration:underline}
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -259,7 +262,7 @@ body.exportando .quote-print{display:block;position:absolute;left:0;top:0;width:
 <body>
 
 <div class="topbar">
-  <img src="https://images.jumpseller.com/store/up-to-wine-chile/store/logo/Up_to_Wine_-_Logo-TR-2-01.png?1744053756" alt="Up to Wine">
+  <img src="https://app.uptowine.cl/logo-email.png" alt="Up to Wine">
   <div>
     <div class="t">Cotizador de Vinos</div>
     <div class="s">Up to Wine · Vinos de autor boutique</div>
@@ -817,7 +820,7 @@ async function armarDocumento(){
   const blocksHtml = (payHtml||transHtml) ? `<div class="qp-blocks">${payHtml}${transHtml}</div>` : '';
   document.getElementById('printDoc').innerHTML=`
     <div class="qp-head">
-      <img src="https://images.jumpseller.com/store/up-to-wine-chile/store/logo/Up_to_Wine_-_Logo-TR-2-01.png?1744053756">
+      <img src="https://app.uptowine.cl/logo-email.png">
       <div class="qhrule"></div>
       <div class="qtitle"><div class="qt">${esc(titulo)}</div><div class="qs">Up to Wine · Vinos de autor boutique · uptowine.cl</div></div>
       <div class="qmeta">${num?`<div><b>${num}</b></div>`:''}${fecha?`<div>${fecha}</div>`:''}${validez?`<div class="qval">Válida hasta ${validez}</div>`:''}</div>
