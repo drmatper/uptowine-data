@@ -16,7 +16,7 @@ body{margin:0;font-family:'Jost',-apple-system,'Segoe UI',Roboto,Arial,sans-seri
 h1,h2,h3,.topbar .t,.btn,.chip{font-family:'Archivo','Helvetica Neue',Arial,sans-serif}
 h1,h2,h3{margin:0}
 button{font-family:inherit;cursor:pointer}
-input,select{font-family:inherit;font-size:14px}
+input,select,textarea{font-family:inherit;font-size:14px}
 a{color:var(--burgundy)}
 
 /* ===== Header ===== */
@@ -63,7 +63,7 @@ a{color:var(--burgundy)}
 .section{border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:14px;background:var(--cream)}
 .fld{margin-bottom:8px}
 .fld label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:700;margin-bottom:3px}
-.fld input,.fld textarea{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff}
+.fld input,.fld textarea,.fld select{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff}
 .fld textarea{resize:vertical;min-height:44px}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .gdisc{display:flex;gap:8px;align-items:flex-end}
@@ -209,6 +209,47 @@ body.exportando-pieza #piezaDoc{display:block;position:absolute;left:0;top:0;z-i
 .pieza .pz-cupon{border:2px solid #B8860B;color:#B8860B;border-radius:999px;padding:10px 24px;font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:26px;letter-spacing:.08em;text-transform:uppercase}
 .pieza .pz-pag{color:#8A8087;font-size:24px;font-weight:600}
 .pieza .pz-glow{position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(closest-side,rgba(226,18,63,.28),rgba(226,18,63,0));right:-380px;top:-420px;pointer-events:none}
+
+/* plantillas: portada, vino destacado, frase y evento (comparten cabecera, pie y kit) */
+.pieza .pz-bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.pieza .pz-velo{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,7,8,.30) 0%,rgba(10,7,8,.55) 45%,rgba(10,7,8,.96) 100%)}
+.pieza .pz-head,.pieza .pz-title,.pieza .pz-sub,.pieza .pz-items,.pieza .pz-foot,.pieza .pz-centro,.pieza .pz-hero,.pieza .pz-cita,.pieza .pz-rows{position:relative;z-index:1}
+.pieza .pz-centro{flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:22px;min-height:0}
+.pieza .pz-title.grande{font-size:118px;margin-top:0}
+.pieza.story .pz-title.grande{font-size:150px}
+.pieza .pz-bajada{font-size:36px;line-height:1.3;color:#d9d2d4;max-width:900px}
+.pieza.story .pz-bajada{font-size:44px}
+.pieza .pz-cta{align-self:flex-start;background:#E2123F;color:#fff;font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:26px;padding:16px 34px;border-radius:999px;text-transform:uppercase;letter-spacing:.06em}
+.pieza .pz-hero{flex:1;display:grid;grid-template-columns:420px 1fr;gap:44px;align-items:center;min-height:0;margin-top:30px}
+.pieza.story .pz-hero{grid-template-columns:1fr;grid-template-rows:auto 1fr;justify-items:center;text-align:center}
+.pieza .pz-hero .pz-foto{height:100%;max-height:660px}
+.pieza.story .pz-hero .pz-foto{height:760px}
+.pieza.story .pz-hero .pz-pr{justify-content:center}
+.pieza.story .pz-hero .pz-cta{align-self:center}
+.pieza .pz-hero .pz-nm{font-size:58px;-webkit-line-clamp:3}
+.pieza.story .pz-hero .pz-nm{font-size:64px}
+.pieza .pz-hero .pz-meta{font-size:26px}
+.pieza .pz-texto{font-size:27px;line-height:1.45;color:#d9d2d4;margin-top:22px;display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden}
+.pieza.story .pz-texto{font-size:32px;-webkit-line-clamp:8}
+.pieza .pz-hero .pz-cta{margin-top:26px;display:inline-block}
+.pieza .pz-cita{flex:1;display:flex;flex-direction:column;justify-content:center;gap:26px;min-height:0}
+.pieza .pz-comilla{font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:220px;line-height:.55;color:#B8860B;height:110px}
+.pieza .pz-frase{font-family:'Archivo',Arial,sans-serif;font-weight:700;font-size:54px;line-height:1.22;overflow:hidden}
+.pieza .pz-frase.media{font-size:44px}
+.pieza .pz-frase.larga{font-size:36px}
+.pieza.story .pz-frase{font-size:64px}
+.pieza.story .pz-frase.media{font-size:52px}
+.pieza.story .pz-frase.larga{font-size:42px}
+.pieza .pz-autor{color:#E2123F;font-size:30px;font-weight:600}
+.pieza .pz-rows{flex:1;margin-top:40px;display:flex;flex-direction:column;justify-content:center;gap:24px;min-height:0}
+.pieza .pz-row{display:grid;grid-template-columns:190px 1fr;gap:22px;align-items:baseline;border-bottom:1px solid #2a2226;padding-bottom:18px}
+.pieza .pz-lbl{font-family:'Archivo',Arial,sans-serif;font-weight:700;font-size:22px;letter-spacing:.14em;text-transform:uppercase;color:#B8860B}
+.pieza .pz-val{font-size:36px;font-weight:600;line-height:1.25}
+.pieza.story .pz-val{font-size:42px}
+.rz-tipos{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.rz-foto{display:flex;align-items:center;gap:8px;font-size:12.5px}
+.rz-foto input[type=file]{font-size:12px}
+.rz-foto button{background:none;border:none;color:#b23b3b;text-decoration:underline;font-size:12px;padding:0}
 
 /* ===== Print / PDF ===== */
 .quote-print{display:none}
@@ -447,12 +488,10 @@ body.exportando .quote-print{display:block;position:absolute;left:0;top:0;width:
   <div class="mbox" style="max-width:560px">
     <div class="mhead" style="align-items:center"><h2 style="font-size:18px">📣 Pieza para redes</h2><button class="mclose" id="rzClose">×</button></div>
     <div class="mbody">
-      <div class="rz-ctl">
-        <div class="fld w"><label>Título de la campaña</label><input id="rzTitulo" placeholder="Cyber Monday" value="Oferta de la semana"></div>
-        <div class="fld"><label>Vigencia</label><input id="rzVigencia" placeholder="Hasta el 30 de nov"></div>
-        <div class="fld"><label>Cupón (opcional)</label><input id="rzCupon" placeholder="CYBER20"></div>
-        <div class="fld w"><label>Formato</label><div class="rz-fmt"><button class="chip on" data-fmt="post">Post 1080×1080</button><button class="chip" data-fmt="story">Historia 1080×1920</button></div></div>
-      </div>
+      <label style="display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:700;margin-bottom:6px">Tipo de pieza</label>
+      <div class="rz-tipos" id="rzTipos"></div>
+      <div class="rz-ctl" id="rzCampos"></div>
+      <div class="rz-ctl"><div class="fld w"><label>Formato</label><div class="rz-fmt"><button class="chip on" data-fmt="post">Post 1080×1080</button><button class="chip" data-fmt="story">Historia 1080×1920</button></div></div></div>
       <div class="rz-prevwrap" id="rzPrev"></div>
       <div class="rz-hint" id="rzHint"></div>
       <button class="btn pri" id="rzGen" style="width:100%;margin-top:12px">⬇️ Generar imágenes</button>
@@ -986,57 +1025,112 @@ async function incrustarFotos(el){
   return ()=>imgs.forEach(i=>{ if(i.dataset.orig){ i.src=i.dataset.orig; i.style.visibility=''; } });
 }
 
-// ---- Pieza para redes: post 1080x1080 e historia 1080x1920 con los vinos de la cotizacion ----
-// Hasta 3 vinos por post y 4 por historia; con mas, salen varias imagenes (carrusel).
+// ---- Pieza para redes: post 1080x1080 e historia 1080x1920 ----
+// Cinco plantillas con el kit: oferta (los vinos de la cotizacion, hasta 3 por post y 4 por
+// historia, con carrusel si hay mas), portada, vino destacado, frase/testimonio y evento.
 const FORMATOS={ post:{w:1080,h:1080,porPagina:3}, story:{w:1080,h:1920,porPagina:4} };
-const redes={ fmt:'post' };
+const LOGO_PZ='https://app.uptowine.cl/logo-blanco.png';
+// campos: [clave, rotulo, placeholder | 'file' | 'select' | 'check']
+const TIPOS={
+  oferta:  { nombre:'Oferta', conVinos:true, campos:[['titulo','Título de la campaña','Cyber Monday'],['vigencia','Vigencia','Hasta el 30 de nov'],['cupon','Cupón (opcional)','CYBER20']] },
+  portada: { nombre:'Portada', campos:[['titulo','Título','Se viene el Cyber'],['bajada','Bajada','Vinos de viñas chicas con hasta 30% de descuento'],['tag','Etiqueta chica (arriba)','Vinos de autor boutique'],['cta','Botón / llamado (opcional)','Link en la bio'],['foto','Foto de fondo (opcional)','file']] },
+  vino:    { nombre:'Vino destacado', campos:[['vinoId','Vino','select'],['tag','Etiqueta chica (arriba)','Vino del mes'],['texto','Texto','Se completa con la nota de cata si lo dejas vacío'],['precio','Mostrar precio','check'],['cta','Botón / llamado (opcional)','Pídelo en uptowine.cl']] },
+  frase:   { nombre:'Frase / testimonio', campos:[['frase','Frase','Llevo más de un año en el club y cada caja es una sorpresa…'],['autor','Autor','Pablo — Santiago'],['tag','Etiqueta chica (arriba)','Lo que dicen los socios']] },
+  evento:  { nombre:'Evento / cata', campos:[['titulo','Título','Cata en el Emporio'],['fecha','Fecha','Sábado 18 de octubre'],['hora','Hora','19:00 hrs'],['lugar','Lugar','Emporio del Vino, Matanzas'],['valor','Valor / cupos','$25.000 · 12 cupos'],['cta','Botón / llamado (opcional)','Reserva por WhatsApp'],['foto','Foto de fondo (opcional)','file']] },
+};
+const redes={ fmt:'post', tipo:'oferta', datos:{ oferta:{titulo:'Oferta de la semana'}, portada:{}, vino:{precio:true}, frase:{}, evento:{} } };
+const datosRedes=()=>redes.datos[redes.tipo]||(redes.datos[redes.tipo]={});
+const sinHtml=t=>String(t||'').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
+
 function ofertaDe(id){
-  const s=state.sel[id], c=findC(+id);
+  const s=state.sel[id]||{}, c=findC(+id);
   const normal=(c.compare_at&&c.compare_at>c.precio)?c.compare_at:c.precio;
   const oferta=Math.round(c.precio*(1-(s.disc||0)/100));
   const pct=normal>0?Math.round((1-oferta/normal)*100):0;
   return {c, normal, oferta, pct: oferta<normal?pct:0};
 }
+function cabeceraPz(tag){ return `<div class="pz-head"><img src="${LOGO_PZ}" alt=""><div class="pz-tag">${esc(tag||'Vinos de autor boutique')}</div></div>`; }
+function piePz(extra,pag,total){ return `<div class="pz-foot"><div class="pz-web">uptowine.cl</div>${extra||''}<div class="pz-pag">${total>1?pag+'/'+total:''}</div></div>`; }
+function fondoPz(d){ return d.foto?`<div class="pz-bg" style="background-image:url(${d.foto})"></div><div class="pz-velo"></div>`:'<div class="pz-glow"></div>'; }
+function vinoElegido(d){
+  if(d.vinoId && findC(+d.vinoId)) return findC(+d.vinoId);
+  const sel=Object.keys(state.sel)[0]; if(sel) return findC(+sel);
+  return CATALOGO.filter(c=>c.tipo!=='Accesorio'&&c.imagen)[0]||CATALOGO[0];
+}
 function piezaHtml(ids, fmt, pag, total){
-  const titulo=document.getElementById('rzTitulo').value.trim()||'Oferta de la semana';
-  const vig=document.getElementById('rzVigencia').value.trim();
-  const cupon=document.getElementById('rzCupon').value.trim();
-  const items=ids.map(id=>{ const o=ofertaDe(id), c=o.c;
-    const meta=[c.cepa,c.valle].filter(Boolean).join(' · ');
-    const precio=o.pct?`<span class="pz-normal">${CLP(o.normal)}</span><span class="pz-oferta">${CLP(o.oferta)}</span><span class="pz-chip">−${o.pct}%</span>`:`<span class="pz-oferta">${CLP(o.oferta)}</span>`;
-    return `<div class="pz-it"><div class="pz-foto"><img src="${esc(c.imagen||PH)}"></div><div><div class="pz-nm">${esc(c.nombre.trim())}</div>${meta?`<div class="pz-meta">${esc(meta)}</div>`:''}<div class="pz-pr">${precio}</div></div></div>`; }).join('');
-  return `<div class="pieza ${fmt}"><div class="pz-glow"></div>
-    <div class="pz-head"><img src="https://app.uptowine.cl/logo-blanco.png" alt=""><div class="pz-tag">Vinos de autor boutique</div></div>
-    <div class="pz-title">${esc(titulo)}</div>${vig?`<div class="pz-sub">${esc(vig)}</div>`:''}
-    <div class="pz-items">${items}</div>
-    <div class="pz-foot"><div class="pz-web">uptowine.cl</div>${cupon?`<div class="pz-cupon">Cupón ${esc(cupon)}</div>`:''}<div class="pz-pag">${total>1?pag+'/'+total:''}</div></div></div>`;
+  const d=datosRedes(), t=redes.tipo;
+  let cuerpo='', tag=d.tag, extraPie='';
+  if(t==='oferta'){
+    const items=ids.map(id=>{ const o=ofertaDe(id), c=o.c;
+      const meta=[c.cepa,c.valle].filter(Boolean).join(' · ');
+      const precio=o.pct?`<span class="pz-normal">${CLP(o.normal)}</span><span class="pz-oferta">${CLP(o.oferta)}</span><span class="pz-chip">−${o.pct}%</span>`:`<span class="pz-oferta">${CLP(o.oferta)}</span>`;
+      return `<div class="pz-it"><div class="pz-foto"><img src="${esc(c.imagen||PH)}"></div><div><div class="pz-nm">${esc(c.nombre.trim())}</div>${meta?`<div class="pz-meta">${esc(meta)}</div>`:''}<div class="pz-pr">${precio}</div></div></div>`; }).join('');
+    cuerpo=`<div class="pz-title">${esc(d.titulo||'Oferta de la semana')}</div>${d.vigencia?`<div class="pz-sub">${esc(d.vigencia)}</div>`:''}<div class="pz-items">${items}</div>`;
+    extraPie=d.cupon?`<div class="pz-cupon">Cupón ${esc(d.cupon)}</div>`:'';
+  } else if(t==='portada'){
+    cuerpo=`<div class="pz-centro"><div class="pz-title grande">${esc(d.titulo||'Título')}</div>${d.bajada?`<div class="pz-bajada">${esc(d.bajada)}</div>`:''}${d.cta?`<div class="pz-cta">${esc(d.cta)}</div>`:''}</div>`;
+  } else if(t==='vino'){
+    const c=vinoElegido(d); if(!c) return '';
+    const o=ofertaDe(c.id), meta=[c.cepa,c.valle].filter(Boolean).join(' · ');
+    const texto=d.texto||sinHtml(c.notaCata);
+    const precio=!d.precio?'':(o.pct?`<div class="pz-pr"><span class="pz-normal">${CLP(o.normal)}</span><span class="pz-oferta">${CLP(o.oferta)}</span><span class="pz-chip">−${o.pct}%</span></div>`:`<div class="pz-pr"><span class="pz-oferta">${CLP(c.precio)}</span></div>`);
+    cuerpo=`<div class="pz-hero"><div class="pz-foto"><img src="${esc(c.imagen||PH)}"></div><div><div class="pz-nm">${esc(c.nombre.trim())}</div>${meta?`<div class="pz-meta">${esc(meta)}</div>`:''}${texto?`<div class="pz-texto">${esc(texto)}</div>`:''}${precio}${d.cta?`<div class="pz-cta">${esc(d.cta)}</div>`:''}</div></div>`;
+    tag=d.tag||'Vino del mes';
+  } else if(t==='frase'){
+    const f=d.frase||'Escribe la frase o el testimonio', cl=f.length>300?' larga':f.length>170?' media':'';
+    cuerpo=`<div class="pz-cita"><div class="pz-comilla">“</div><div class="pz-frase${cl}">${esc(f)}</div>${d.autor?`<div class="pz-autor">— ${esc(d.autor)}</div>`:''}</div>`;
+    tag=d.tag||'Lo que dicen los socios';
+  } else if(t==='evento'){
+    const filas=[['Fecha',d.fecha],['Hora',d.hora],['Lugar',d.lugar],['Valor',d.valor]].filter(r=>r[1]).map(r=>`<div class="pz-row"><span class="pz-lbl">${r[0]}</span><span class="pz-val">${esc(r[1])}</span></div>`).join('');
+    cuerpo=`<div class="pz-title">${esc(d.titulo||'Evento')}</div><div class="pz-rows">${filas}${d.cta?`<div class="pz-cta">${esc(d.cta)}</div>`:''}</div>`;
+    tag=d.tag||'Descorchamos en Matanzas';
+  }
+  return `<div class="pieza ${fmt} ${t}">${fondoPz(d)}${cabeceraPz(tag)}${cuerpo}${piePz(extraPie,pag,total)}</div>`;
 }
 function paginasRedes(){
+  if(redes.tipo!=='oferta') return [[]];
   const ids=Object.keys(state.sel), n=FORMATOS[redes.fmt].porPagina, pags=[];
   for(let i=0;i<ids.length;i+=n) pags.push(ids.slice(i,i+n));
   return pags;
 }
+function renderTiposRedes(){
+  document.getElementById('rzTipos').innerHTML=Object.keys(TIPOS).map(k=>`<button class="chip${k===redes.tipo?' on':''}" data-tipo="${k}">${TIPOS[k].nombre}</button>`).join('');
+  document.querySelectorAll('#rzTipos [data-tipo]').forEach(b=>b.onclick=()=>{ redes.tipo=b.dataset.tipo; renderTiposRedes(); renderCamposRedes(); renderRedes(); });
+}
+function renderCamposRedes(){
+  const d=datosRedes(), el=document.getElementById('rzCampos');
+  el.innerHTML=TIPOS[redes.tipo].campos.map(([k,rot,ph])=>{
+    if(ph==='file') return `<div class="fld w"><label>${rot}</label><div class="rz-foto">${d.foto?`<span>✓ Foto cargada</span><button type="button" data-quitafoto="1">Quitar</button>`:`<input type="file" accept="image/*" data-foto="${k}">`}</div></div>`;
+    if(ph==='select'){ const ops=CATALOGO.filter(c=>c.tipo!=='Accesorio').slice().sort((a,b)=>a.nombre.localeCompare(b.nombre)); const v=vinoElegido(d); return `<div class="fld w"><label>${rot}</label><select data-campo="${k}">${ops.map(c=>`<option value="${c.id}"${v&&c.id===v.id?' selected':''}>${esc(c.nombre.trim())}</option>`).join('')}</select></div>`; }
+    if(ph==='check') return `<div class="fld w"><label style="display:flex;gap:7px;align-items:center;text-transform:none;letter-spacing:0;font-size:13.5px;color:var(--ink);cursor:pointer"><input type="checkbox" data-campo="${k}"${d[k]?' checked':''} style="width:18px;height:18px;accent-color:var(--burgundy)"> ${rot}</label></div>`;
+    const ancho=(k==='titulo'||k==='frase'||k==='bajada'||k==='texto')?' w':'';
+    const tagEl=(k==='frase'||k==='texto'||k==='bajada')?`<textarea data-campo="${k}" rows="3" placeholder="${esc(ph)}">${esc(d[k]||'')}</textarea>`:`<input data-campo="${k}" placeholder="${esc(ph)}" value="${esc(d[k]||'')}">`;
+    return `<div class="fld${ancho}"><label>${rot}</label>${tagEl}</div>`;
+  }).join('');
+  el.querySelectorAll('[data-campo]').forEach(i=>{ const ev=i.type==='checkbox'||i.tagName==='SELECT'?'change':'input'; i.addEventListener(ev,()=>{ d[i.dataset.campo]=i.type==='checkbox'?i.checked:i.value; renderRedes(); }); });
+  el.querySelectorAll('[data-foto]').forEach(i=>i.addEventListener('change',()=>{ const f=i.files&&i.files[0]; if(!f) return; const fr=new FileReader(); fr.onload=()=>{ d.foto=fr.result; renderCamposRedes(); renderRedes(); }; fr.readAsDataURL(f); }));
+  el.querySelectorAll('[data-quitafoto]').forEach(b=>b.onclick=()=>{ delete d.foto; renderCamposRedes(); renderRedes(); });
+}
 function renderRedes(){
-  const f=FORMATOS[redes.fmt], pags=paginasRedes(), wrap=document.getElementById('rzPrev');
+  const f=FORMATOS[redes.fmt], pags=paginasRedes(), wrap=document.getElementById('rzPrev'), hint=document.getElementById('rzHint');
   const ancho=Math.min(wrap.parentElement.clientWidth-36||440, 480), k=ancho/f.w;
   wrap.style.width=ancho+'px'; wrap.style.height=Math.round(f.h*k)+'px';
   wrap.innerHTML=pags.length?piezaHtml(pags[0],redes.fmt,1,pags.length):'';
   const pz=wrap.firstElementChild; if(pz) pz.style.transform=`scale(${k})`;
-  document.getElementById('rzHint').textContent=pags.length>1?`${Object.keys(state.sel).length} vinos → ${pags.length} imágenes (carrusel). La vista previa muestra la primera.`:'';
+  hint.textContent=!pags.length?'La oferta usa los vinos de la cotización: agrega al menos uno (o elige otro tipo de pieza).':pags.length>1?`${Object.keys(state.sel).length} vinos → ${pags.length} imágenes (carrusel). La vista previa muestra la primera.`:'';
   document.getElementById('rzOut').innerHTML='';
 }
 document.getElementById('btnRedes').onclick=()=>{
-  if(!Object.keys(state.sel).length){ alert('Elige al menos un vino.'); return; }
-  document.getElementById('modalRedes').classList.add('on'); renderRedes();
+  if(redes.tipo==='oferta' && !Object.keys(state.sel).length) redes.tipo='portada';   // sin vinos, parte por una portada
+  document.getElementById('modalRedes').classList.add('on'); renderTiposRedes(); renderCamposRedes(); renderRedes();
 };
 document.getElementById('rzClose').onclick=()=>document.getElementById('modalRedes').classList.remove('on');
 document.querySelectorAll('#modalRedes [data-fmt]').forEach(b=>b.onclick=()=>{ redes.fmt=b.dataset.fmt; document.querySelectorAll('#modalRedes [data-fmt]').forEach(x=>x.classList.toggle('on',x===b)); renderRedes(); });
-['rzTitulo','rzVigencia','rzCupon'].forEach(id=>document.getElementById(id).addEventListener('input',renderRedes));
 document.getElementById('rzGen').onclick=async ()=>{
   const b=document.getElementById('rzGen'), out=document.getElementById('rzOut'), doc=document.getElementById('piezaDoc');
   const f=FORMATOS[redes.fmt], pags=paginasRedes(); if(!pags.length) return;
   b.disabled=true; out.innerHTML='';
-  const slug=(document.getElementById('rzTitulo').value.trim()||'oferta').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+  const d=datosRedes(), slug=(d.titulo||d.frase||(redes.tipo==='vino'&&vinoElegido(d)?vinoElegido(d).nombre:'')||redes.tipo).trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,40)||redes.tipo;
   try{
     document.body.classList.add('exportando-pieza');
     for(let i=0;i<pags.length;i++){
@@ -1062,7 +1156,7 @@ const CHECKS_COT=['chkImagen','chkNota','chkCrianza','chkMaridaje','chkPremios',
 function exportarEstado(){
   const d={ campos:{}, checks:{}, gDisc:state.gDisc, envio:state.envio, envioGratis:state.envioGratis, packs:state.packs.slice(), packDesc:Object.assign({},state.packDesc),
     sel:Object.keys(state.sel).map(id=>{ const s=state.sel[id]; return {id:+id, qty:s.qty, disc:s.disc, pack:s.pack||'', desc:s.desc||''}; }),
-    redes:{ titulo:document.getElementById('rzTitulo').value, vigencia:document.getElementById('rzVigencia').value, cupon:document.getElementById('rzCupon').value } };
+    redes:{ tipo:redes.tipo, fmt:redes.fmt, datos:JSON.parse(JSON.stringify(redes.datos, (k,v)=>k==='foto'?undefined:v)) } };
   CAMPOS_COT.forEach(id=>d.campos[id]=document.getElementById(id).value||'');
   CHECKS_COT.forEach(id=>d.checks[id]=document.getElementById(id).checked);
   return d;
@@ -1076,7 +1170,7 @@ function importarEstado(d){
   d=d||{};
   Object.keys(d.campos||{}).forEach(id=>{ const el=document.getElementById(id); if(el) el.value=d.campos[id]||''; });
   Object.keys(d.checks||{}).forEach(id=>{ const el=document.getElementById(id); if(el) el.checked=!!d.checks[id]; });
-  if(d.redes){ document.getElementById('rzTitulo').value=d.redes.titulo||''; document.getElementById('rzVigencia').value=d.redes.vigencia||''; document.getElementById('rzCupon').value=d.redes.cupon||''; }
+  if(d.redes){ if(d.redes.tipo&&TIPOS[d.redes.tipo]) redes.tipo=d.redes.tipo; if(FORMATOS[d.redes.fmt]) redes.fmt=d.redes.fmt; if(d.redes.datos&&typeof d.redes.datos==='object') Object.keys(d.redes.datos).forEach(k=>{ redes.datos[k]=Object.assign({},redes.datos[k]||{},d.redes.datos[k]); }); else if(d.redes.titulo!==undefined) redes.datos.oferta={titulo:d.redes.titulo||'',vigencia:d.redes.vigencia||'',cupon:d.redes.cupon||''}; }
   state.gDisc=+d.gDisc||0; document.getElementById('gDisc').value=state.gDisc;
   state.envio=+d.envio||0; state.envioGratis=!!d.envioGratis;
   document.getElementById('envMonto').value=state.envio; document.getElementById('envMonto').disabled=state.envioGratis; document.getElementById('envGratis').checked=state.envioGratis;
