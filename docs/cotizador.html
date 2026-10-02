@@ -160,6 +160,56 @@ a{color:var(--burgundy)}
 .som p{margin:0;font-size:13.5px}
 .maddbtn{width:100%;margin-top:16px;background:var(--burgundy);color:#fff;border:none;border-radius:10px;padding:13px;font-weight:800;font-size:15px}
 
+/* ===== Pieza para redes (Instagram) ===== */
+.btnrow{display:flex;gap:8px;margin-top:8px}
+.btn.redes{background:var(--negro);color:#fff}
+.rz-ctl{display:grid;grid-template-columns:1fr 1fr;gap:8px 10px;margin-bottom:12px}
+.rz-ctl .fld{margin:0}
+.rz-ctl .fld.w{grid-column:1/-1}
+.rz-fmt{display:flex;gap:6px}
+.rz-fmt .chip{flex:1;text-align:center}
+.rz-prevwrap{overflow:hidden;border-radius:12px;background:#0A0708;margin:0 auto;position:relative}
+.rz-prevwrap .pieza{transform-origin:0 0;position:absolute;left:0;top:0}
+.rz-out{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin-top:14px}
+.rz-out .th{border-radius:10px;overflow:hidden;background:#0A0708;border:1px solid var(--line)}
+.rz-out img{width:100%;display:block}
+.rz-out a{display:block;text-align:center;background:var(--burgundy);color:#fff;text-decoration:none;font-weight:700;font-size:12px;padding:7px;border-radius:0 0 10px 10px}
+.rz-hint{font-size:12.5px;color:var(--muted);margin-top:8px}
+#piezaDoc{display:none}
+body.exportando-pieza #piezaDoc{display:block;position:absolute;left:0;top:0;z-index:-1}
+
+/* el lienzo: siempre 1080 de ancho, fondo negro del kit, Archivo para titulos y Jost para el resto */
+.pieza{width:1080px;background:#0A0708;color:#fff;font-family:'Jost',Helvetica,Arial,sans-serif;display:flex;flex-direction:column;box-sizing:border-box;position:relative;overflow:hidden}
+.pieza.post{height:1080px;padding:56px 64px 52px}
+.pieza.story{height:1920px;padding:220px 72px 240px}
+.pieza .pz-head{display:flex;align-items:center;justify-content:space-between}
+.pieza .pz-head img{height:60px}
+.pieza .pz-tag{font-family:'Archivo',Arial,sans-serif;font-weight:700;font-size:20px;letter-spacing:.18em;text-transform:uppercase;color:#B8860B}
+.pieza .pz-title{font-family:'Archivo',Arial,sans-serif;font-weight:800;text-transform:uppercase;line-height:.98;letter-spacing:-.02em;margin-top:28px;word-break:break-word}
+.pieza.post .pz-title{font-size:78px}
+.pieza.story .pz-title{font-size:104px}
+.pieza .pz-sub{color:#E2123F;font-weight:600;font-size:30px;margin-top:8px}
+.pieza.story .pz-sub{font-size:36px}
+.pieza .pz-items{flex:1;display:grid;grid-auto-rows:1fr;gap:18px;margin-top:26px;min-height:0;align-content:center}
+.pieza .pz-it{display:grid;grid-template-columns:200px 1fr;gap:30px;align-items:center;background:#140E10;border:1px solid #2a2226;border-radius:26px;padding:14px 28px 14px 18px;min-height:0;overflow:hidden;align-self:center;height:min(100%,380px)}
+.pieza.story .pz-it{height:min(100%,460px)}
+.pieza.story .pz-it{grid-template-columns:230px 1fr}
+.pieza .pz-foto{height:100%;min-height:0;display:flex;align-items:center;justify-content:center}
+.pieza .pz-foto img{max-height:100%;max-width:100%;object-fit:contain;filter:drop-shadow(0 14px 24px rgba(0,0,0,.6))}
+.pieza .pz-nm{font-family:'Archivo',Arial,sans-serif;font-weight:700;font-size:31px;line-height:1.1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pieza.story .pz-nm{font-size:40px}
+.pieza .pz-meta{color:#8A8087;font-size:21px;margin-top:4px}
+.pieza .pz-pr{display:flex;align-items:baseline;gap:16px;margin-top:8px;flex-wrap:wrap}
+.pieza .pz-normal{color:#8A8087;text-decoration:line-through;font-size:28px}
+.pieza .pz-oferta{font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:46px;color:#E2123F;letter-spacing:-.02em}
+.pieza.story .pz-oferta{font-size:58px}
+.pieza .pz-chip{background:#B8860B;color:#0A0708;font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:24px;padding:6px 16px;border-radius:999px;align-self:center}
+.pieza .pz-foot{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:26px;padding-top:22px;border-top:1px solid #2a2226}
+.pieza .pz-web{font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:34px}
+.pieza .pz-cupon{border:2px solid #B8860B;color:#B8860B;border-radius:999px;padding:10px 24px;font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:26px;letter-spacing:.08em;text-transform:uppercase}
+.pieza .pz-pag{color:#8A8087;font-size:24px;font-weight:600}
+.pieza .pz-glow{position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(closest-side,rgba(226,18,63,.28),rgba(226,18,63,0));right:-380px;top:-420px;pointer-events:none}
+
 /* ===== Print / PDF ===== */
 .quote-print{display:none}
 /* exportando a PDF desde la intranet: se dibuja fuera de pantalla */
@@ -350,6 +400,7 @@ body.exportando .quote-print{display:block;position:absolute;left:0;top:0;width:
       <button class="btn pri" id="btnEnviar" style="display:none">📨 Enviar por la intranet</button>
       <button class="btn sec" id="btnClear">Limpiar</button>
     </div>
+    <div class="btnrow"><button class="btn redes" id="btnRedes">📣 Pieza para redes (Instagram)</button></div>
 
     <div class="paybox" id="paybox">
       <button class="btn pay" id="btnPay">💳 Link de pago · Mercado Pago</button>
@@ -392,6 +443,25 @@ body.exportando .quote-print{display:block;position:absolute;left:0;top:0;width:
 </div>
 
 <!-- Documento imprimible -->
+<div class="modal" id="modalRedes">
+  <div class="mbox" style="max-width:560px">
+    <div class="mhead" style="align-items:center"><h2 style="font-size:18px">📣 Pieza para redes</h2><button class="mclose" id="rzClose">×</button></div>
+    <div class="mbody">
+      <div class="rz-ctl">
+        <div class="fld w"><label>Título de la campaña</label><input id="rzTitulo" placeholder="Cyber Monday" value="Oferta de la semana"></div>
+        <div class="fld"><label>Vigencia</label><input id="rzVigencia" placeholder="Hasta el 30 de nov"></div>
+        <div class="fld"><label>Cupón (opcional)</label><input id="rzCupon" placeholder="CYBER20"></div>
+        <div class="fld w"><label>Formato</label><div class="rz-fmt"><button class="chip on" data-fmt="post">Post 1080×1080</button><button class="chip" data-fmt="story">Historia 1080×1920</button></div></div>
+      </div>
+      <div class="rz-prevwrap" id="rzPrev"></div>
+      <div class="rz-hint" id="rzHint"></div>
+      <button class="btn pri" id="rzGen" style="width:100%;margin-top:12px">⬇️ Generar imágenes</button>
+      <div class="rz-out" id="rzOut"></div>
+    </div>
+  </div>
+</div>
+<div id="piezaDoc"></div>
+
 <div class="quote-print" id="printDoc"></div>
 
 <script>
@@ -862,19 +932,8 @@ document.getElementById('btnPdf').onclick=async ()=>{ EXPORTANDO=false; await ar
       // Las fotos se bajan primero y se meten como data: (asi html2canvas no espera nada de
       // la red, que era donde se quedaba pegado). La tienda no manda CORS: esas pasan por el
       // proxy de la intranet; wsrv.nl si lo manda. Si una foto falla, sale en blanco y sigue.
-      const PROXY='https://oontbdybvewvziamwfcn.supabase.co/functions/v1/publico?accion=imagen&u=';
-      const conPlazo=(p,ms,msg)=>Promise.race([p,new Promise((_,ko)=>setTimeout(()=>ko(new Error(msg)),ms))]);
-      const imgs=[...el.querySelectorAll('img')].filter(i=>i.getAttribute('src')&&!i.getAttribute('src').startsWith('data:'));
       b.textContent='Armando PDF… (fotos)';
-      await Promise.all(imgs.map(async i=>{
-        const src=i.getAttribute('src'); i.dataset.orig=src;
-        let u=src; try{ if(/(^|\.)jumpseller\.com$/.test(new URL(src).hostname)) u=PROXY+encodeURIComponent(src); }catch(e){}
-        try{
-          const r=await conPlazo(fetch(u,{mode:'cors'}),8000,'foto lenta'); if(!r.ok) throw new Error('HTTP '+r.status);
-          const bl=await r.blob();
-          i.src=await new Promise(ok=>{ const fr=new FileReader(); fr.onload=()=>ok(fr.result); fr.readAsDataURL(bl); });
-        }catch(e){ i.removeAttribute('src'); i.style.visibility='hidden'; }
-      }));
+      const restaurar=await incrustarFotos(el);
       b.textContent='Armando PDF… (dibujando)';
       const canvas=await conPlazo(html2canvas(el,{scale:2,backgroundColor:'#ffffff',scrollX:0,scrollY:0,logging:false,imageTimeout:5000}),40000,'el dibujo del PDF tardó demasiado; prueba con menos vinos o sin imágenes');
       // A4 con margenes: el lienzo se corta en paginas. Los <a href> del documento (link de pago,
@@ -894,7 +953,7 @@ document.getElementById('btnPdf').onclick=async ()=>{ EXPORTANDO=false; await ar
         pdf.setPage(p+1); pdf.link(M+x*ratio, M+(y-p*altoPag)*ratio, r.width*escala*ratio, r.height*escala*ratio, {url:a.href});
       });
       const uri=pdf.output('datauristring');
-      imgs.forEach(i=>{ if(i.dataset.orig){ i.src=i.dataset.orig; i.style.visibility=''; } });
+      restaurar();
       document.body.classList.remove('exportando');
       const t=calcTotales(), montoTot=currentTotal();
       const pago=['mp','flow'].map(k=>pays[k]).find(pd=>pd&&pd.monto===montoTot)||null;
@@ -906,6 +965,92 @@ document.getElementById('btnPdf').onclick=async ()=>{ EXPORTANDO=false; await ar
     finally{ b.disabled=false; b.textContent='📨 Enviar por la intranet'; }
   };
 })();
+
+// ---- Fotos para html2canvas (PDF y pieza para redes) ----
+// Las fotos se bajan primero y se meten como data: (asi html2canvas no espera nada de la red,
+// que era donde se quedaba pegado). La tienda no manda CORS: esas pasan por el proxy de la
+// intranet; wsrv.nl y app.uptowine.cl si lo mandan. Si una foto falla, sale en blanco y sigue.
+const PROXY='https://oontbdybvewvziamwfcn.supabase.co/functions/v1/publico?accion=imagen&u=';
+const conPlazo=(p,ms,msg)=>Promise.race([p,new Promise((_,ko)=>setTimeout(()=>ko(new Error(msg)),ms))]);
+async function incrustarFotos(el){
+  const imgs=[...el.querySelectorAll('img')].filter(i=>i.getAttribute('src')&&!i.getAttribute('src').startsWith('data:'));
+  await Promise.all(imgs.map(async i=>{
+    const src=i.getAttribute('src'); i.dataset.orig=src;
+    let u=src; try{ if(/(^|\.)jumpseller\.com$/.test(new URL(src).hostname)) u=PROXY+encodeURIComponent(src); }catch(e){}
+    try{
+      const r=await conPlazo(fetch(u,{mode:'cors'}),8000,'foto lenta'); if(!r.ok) throw new Error('HTTP '+r.status);
+      const bl=await r.blob();
+      i.src=await new Promise(ok=>{ const fr=new FileReader(); fr.onload=()=>ok(fr.result); fr.readAsDataURL(bl); });
+    }catch(e){ i.removeAttribute('src'); i.style.visibility='hidden'; }
+  }));
+  return ()=>imgs.forEach(i=>{ if(i.dataset.orig){ i.src=i.dataset.orig; i.style.visibility=''; } });
+}
+
+// ---- Pieza para redes: post 1080x1080 e historia 1080x1920 con los vinos de la cotizacion ----
+// Hasta 3 vinos por post y 4 por historia; con mas, salen varias imagenes (carrusel).
+const FORMATOS={ post:{w:1080,h:1080,porPagina:3}, story:{w:1080,h:1920,porPagina:4} };
+const redes={ fmt:'post' };
+function ofertaDe(id){
+  const s=state.sel[id], c=findC(+id);
+  const normal=(c.compare_at&&c.compare_at>c.precio)?c.compare_at:c.precio;
+  const oferta=Math.round(c.precio*(1-(s.disc||0)/100));
+  const pct=normal>0?Math.round((1-oferta/normal)*100):0;
+  return {c, normal, oferta, pct: oferta<normal?pct:0};
+}
+function piezaHtml(ids, fmt, pag, total){
+  const titulo=document.getElementById('rzTitulo').value.trim()||'Oferta de la semana';
+  const vig=document.getElementById('rzVigencia').value.trim();
+  const cupon=document.getElementById('rzCupon').value.trim();
+  const items=ids.map(id=>{ const o=ofertaDe(id), c=o.c;
+    const meta=[c.cepa,c.valle].filter(Boolean).join(' · ');
+    const precio=o.pct?`<span class="pz-normal">${CLP(o.normal)}</span><span class="pz-oferta">${CLP(o.oferta)}</span><span class="pz-chip">−${o.pct}%</span>`:`<span class="pz-oferta">${CLP(o.oferta)}</span>`;
+    return `<div class="pz-it"><div class="pz-foto"><img src="${esc(c.imagen||PH)}"></div><div><div class="pz-nm">${esc(c.nombre.trim())}</div>${meta?`<div class="pz-meta">${esc(meta)}</div>`:''}<div class="pz-pr">${precio}</div></div></div>`; }).join('');
+  return `<div class="pieza ${fmt}"><div class="pz-glow"></div>
+    <div class="pz-head"><img src="https://app.uptowine.cl/logo-blanco.png" alt=""><div class="pz-tag">Vinos de autor boutique</div></div>
+    <div class="pz-title">${esc(titulo)}</div>${vig?`<div class="pz-sub">${esc(vig)}</div>`:''}
+    <div class="pz-items">${items}</div>
+    <div class="pz-foot"><div class="pz-web">uptowine.cl</div>${cupon?`<div class="pz-cupon">Cupón ${esc(cupon)}</div>`:''}<div class="pz-pag">${total>1?pag+'/'+total:''}</div></div></div>`;
+}
+function paginasRedes(){
+  const ids=Object.keys(state.sel), n=FORMATOS[redes.fmt].porPagina, pags=[];
+  for(let i=0;i<ids.length;i+=n) pags.push(ids.slice(i,i+n));
+  return pags;
+}
+function renderRedes(){
+  const f=FORMATOS[redes.fmt], pags=paginasRedes(), wrap=document.getElementById('rzPrev');
+  const ancho=Math.min(wrap.parentElement.clientWidth-36||440, 480), k=ancho/f.w;
+  wrap.style.width=ancho+'px'; wrap.style.height=Math.round(f.h*k)+'px';
+  wrap.innerHTML=pags.length?piezaHtml(pags[0],redes.fmt,1,pags.length):'';
+  const pz=wrap.firstElementChild; if(pz) pz.style.transform=`scale(${k})`;
+  document.getElementById('rzHint').textContent=pags.length>1?`${Object.keys(state.sel).length} vinos → ${pags.length} imágenes (carrusel). La vista previa muestra la primera.`:'';
+  document.getElementById('rzOut').innerHTML='';
+}
+document.getElementById('btnRedes').onclick=()=>{
+  if(!Object.keys(state.sel).length){ alert('Elige al menos un vino.'); return; }
+  document.getElementById('modalRedes').classList.add('on'); renderRedes();
+};
+document.getElementById('rzClose').onclick=()=>document.getElementById('modalRedes').classList.remove('on');
+document.querySelectorAll('#modalRedes [data-fmt]').forEach(b=>b.onclick=()=>{ redes.fmt=b.dataset.fmt; document.querySelectorAll('#modalRedes [data-fmt]').forEach(x=>x.classList.toggle('on',x===b)); renderRedes(); });
+['rzTitulo','rzVigencia','rzCupon'].forEach(id=>document.getElementById(id).addEventListener('input',renderRedes));
+document.getElementById('rzGen').onclick=async ()=>{
+  const b=document.getElementById('rzGen'), out=document.getElementById('rzOut'), doc=document.getElementById('piezaDoc');
+  const f=FORMATOS[redes.fmt], pags=paginasRedes(); if(!pags.length) return;
+  b.disabled=true; out.innerHTML='';
+  const slug=(document.getElementById('rzTitulo').value.trim()||'oferta').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+  try{
+    document.body.classList.add('exportando-pieza');
+    for(let i=0;i<pags.length;i++){
+      b.textContent=`Dibujando ${i+1} de ${pags.length}…`;
+      doc.innerHTML=piezaHtml(pags[i],redes.fmt,i+1,pags.length);
+      await incrustarFotos(doc);
+      const canvas=await conPlazo(html2canvas(doc.firstElementChild,{scale:1,width:f.w,height:f.h,backgroundColor:'#0A0708',scrollX:0,scrollY:0,logging:false,imageTimeout:5000}),40000,'el dibujo tardó demasiado');
+      const url=canvas.toDataURL('image/png'), nombre=`${slug}-${redes.fmt}${pags.length>1?'-'+(i+1):''}.png`;
+      out.insertAdjacentHTML('beforeend',`<div class="th"><img src="${url}"><a href="${url}" download="${nombre}">Descargar ${pags.length>1?(i+1)+'/'+pags.length:''}</a></div>`);
+    }
+    document.getElementById('rzHint').textContent='Listo: toca Descargar en cada imagen y súbela a Instagram desde el teléfono.';
+  }catch(e){ alert('No se pudo generar la imagen: '+(e&&e.message||e)); }
+  finally{ document.body.classList.remove('exportando-pieza'); doc.innerHTML=''; b.disabled=false; b.textContent='⬇️ Generar imágenes'; }
+};
 
 // ---- Pago (Supabase Edge Functions) ----
 // Se fijan aquí una vez desplegadas las funciones. También puedes pegarlas en ⚙︎ Configurar.
