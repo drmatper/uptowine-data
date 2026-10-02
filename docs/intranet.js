@@ -426,6 +426,8 @@ cuerpoHtml(personalizar(texto, contacto)) +
     plantillaEdit: null,   // copia de la plantilla abierta en la vista Plantillas
     recuperar: false,      // true mientras se elige una clave nueva (enlace de recuperacion)
     resultados: null,      // campana cuyo panel de resultados esta abierto
+    cotizaciones: [], verCotizaciones: false,   // historial del cotizador y si la lista esta desplegada
+    cotizacionDeCampana: null,                  // cotizacion que origino la campana abierta (para enlazarla al guardar)
     importar: null,
     msj: '', err: false, ocupado: false, confirmar: false, progreso: '',
   };
@@ -531,6 +533,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     /* ficha lateral */
     '.utwi .velo{position:fixed;inset:0;z-index:99998;background:rgba(17,24,39,.35)}',
     '.utwi .cotizador{display:block;width:100%;height:calc(100vh - 150px);min-height:640px;border:1px solid var(--linea);border-radius:12px;background:#fff}',
+    '.utwi .cotlista{margin-bottom:12px;max-height:320px}',
     '.utwi .metrica{margin:14px 0}',
     '.utwi .pista{height:12px;border-radius:999px;background:#eef1f5;overflow:hidden;margin:6px 0 4px}',
     '.utwi .relleno{height:100%;border-radius:999px;transition:width .4s}',
@@ -588,7 +591,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     sb.from('profiles').select('admin').eq('id', sesion.user.id).maybeSingle().then(function (r) {
       S.admin = !!(r.data && r.data.admin);
       pintar();
-      if (S.admin) { cargarContactos(); cargarPlantillas(); cargarSegmentos(); cargarCampanas(); cargarMetricas(); cargarCola(); cargarEtiquetas(); }
+      if (S.admin) { cargarContactos(); cargarPlantillas(); cargarSegmentos(); cargarCampanas(); cargarMetricas(); cargarCola(); cargarEtiquetas(); cargarCotizaciones(); }
     });
   }
 
@@ -971,6 +974,8 @@ cuerpoHtml(personalizar(texto, contacto)) +
     return p.then(function (r) {
       if (r.error) return aviso(r.error.message, 'err');
       if (r.data) S.campana.id = r.data.id;
+      // la campana nacio de una cotizacion: se deja enlazada en el historial del cotizador
+      if (r.data && S.cotizacionDeCampana) { sb.from('cotizaciones').update({ campana_id: r.data.id }).eq('id', S.cotizacionDeCampana).then(function () {}); S.cotizacionDeCampana = null; }
       if (!silencioso) aviso('Campaña guardada como borrador.');
       cargarCampanas();
     });
@@ -1707,8 +1712,100 @@ cuerpoHtml(personalizar(texto, contacto)) +
   // ---------- Plantillas ----------
   var COTIZADOR_URL = 'https://app.uptowine.cl/cotizador.html';
   function vistaCotizador() {
-    return '<div class="cab"><h1>Cotizador</h1><div class="sp"><span class="dim">Arma la cotización y pulsa <b>Enviar por la intranet</b>: se abre una campaña con el PDF adjunto y el link de pago, para correo o WhatsApp.</span></div></div>' +
+    return '<div class="cab"><h1>Cotizador</h1><div class="sp"><span class="dim">Arma la cotización y pulsa <b>Enviar por la intranet</b>: se abre una campaña con el PDF adjunto y el link de pago, para correo o WhatsApp.</span> ' +
+      '<button class="btn sec" id="utwi-cot-hist">' + rotuloHistorialCot() + '</button></div></div>' +
+      '<div id="utwi-cot-msg" class="dim"></div>' +
+      '<div id="utwi-cot-lista">' + (S.verCotizaciones ? listaCotizacionesHtml() : '') + '</div>' +
       '<iframe class="cotizador" id="utwi-cotizador" title="Cotizador Up to Wine"></iframe>';
+  }
+  // ---- Historial del cotizador: cada cotización guardada o enviada, para reabrir, duplicar o borrar ----
+  // La vista del cotizador no se repinta (pintar() respeta el iframe), asi que la lista y los
+  // avisos se tocan directo en el DOM.
+  function rotuloHistorialCot() {
+    return S.verCotizaciones ? 'Ocultar historial' : '📂 Historial' + (S.cotizaciones.length ? ' (' + S.cotizaciones.length + ')' : '');
+  }
+  function cargarCotizaciones() {
+    return sb.from('cotizaciones').select('*').order('actualizado', { ascending: false }).limit(100).then(function (r) {
+      S.cotizaciones = r.error ? [] : (r.data || []);
+      pintarCotizaciones();
+    });
+  }
+  function listaCotizacionesHtml() {
+    var filas = S.cotizaciones.map(function (c) {
+      return '<tr><td class="dim">' + fecha(c.actualizado) + '</td><td><b>' + esc(c.numero || '—') + '</b></td>' +
+        '<td>' + esc(c.cliente || '—') + (c.email ? '<div class="mini">' + esc(c.email) + '</div>' : '') + '</td>' +
+        '<td>' + plata(c.total) + '<div class="mini">' + c.botellas + (c.botellas === 1 ? ' botella' : ' botellas') + '</div></td>' +
+        '<td><span class="pill ' + (c.estado === 'enviada' ? 'ok' : 'gris') + '">' + (c.estado === 'enviada' ? 'enviada' : 'borrador') + '</span></td>' +
+        '<td style="text-align:right;white-space:nowrap"><button class="btn sec mini" data-cot-abrir="' + c.id + '">Abrir</button> ' +
+        '<button class="btn sec mini" data-cot-dup="' + c.id + '">Duplicar</button> ' +
+        (c.campana_id ? '<button class="btn sec mini" data-cot-campana="' + c.campana_id + '">Campaña</button> ' : '') +
+        '<button class="btn sec mini" data-cot-borrar="' + c.id + '">Borrar</button></td></tr>';
+    }).join('') || '<tr><td colspan="6" class="dim" style="padding:14px">Todavía no hay cotizaciones guardadas. Arma una y pulsa <b>Guardar en el historial</b>; las que envías se guardan solas.</td></tr>';
+    return '<div class="scroll cotlista"><table class="tabla"><thead><tr><th>Fecha</th><th>N°</th><th>Cliente</th><th>Total</th><th>Estado</th><th></th></tr></thead><tbody>' + filas + '</tbody></table></div>';
+  }
+  function pintarCotizaciones() {
+    var l = $('utwi-cot-lista'); if (!l) return;
+    l.innerHTML = S.verCotizaciones ? listaCotizacionesHtml() : '';
+    if ($('utwi-cot-hist')) $('utwi-cot-hist').textContent = rotuloHistorialCot();
+    conectarCotizaciones();
+  }
+  function avisoCot(t, err) {
+    var m = $('utwi-cot-msg'); if (!m) return aviso(t, err ? 'err' : '');
+    m.textContent = t; m.className = err ? 'msj err' : 'msj';
+    clearTimeout(avisoCot.t); avisoCot.t = setTimeout(function () { m.textContent = ''; m.className = 'dim'; }, 8000);
+  }
+  function enviarAlCotizador(msg) {
+    var m = $('utwi-cotizador');
+    if (m && m.contentWindow) m.contentWindow.postMessage(msg, window.location.origin);
+  }
+  function cotizacionPorId(id) { return S.cotizaciones.filter(function (c) { return String(c.id) === String(id); })[0]; }
+  // Inserta o actualiza. Al guardar a mano una que ya se envio, no se le baja el estado.
+  function guardarCotizacion(id, datos, res, estado) {
+    var fila = { numero: res.numero || null, cliente: res.cliente || null, email: res.email || null, total: Math.round(res.total || 0), botellas: res.botellas || 0, datos: datos || {}, actualizado: new Date().toISOString() };
+    if (!id || estado === 'enviada') fila.estado = estado;
+    var p = id ? sb.from('cotizaciones').update(fila).eq('id', id).select().maybeSingle()
+               : sb.from('cotizaciones').insert(fila).select().maybeSingle();
+    return p.then(function (r) {
+      if (r.error) { avisoCot('No se pudo guardar la cotización: ' + r.error.message, true); return null; }
+      cargarCotizaciones();
+      return r.data ? r.data.id : id;
+    });
+  }
+  function conectarCotizaciones() {
+    if ($('utwi-cot-hist')) $('utwi-cot-hist').onclick = function () { S.verCotizaciones = !S.verCotizaciones; pintarCotizaciones(); if (S.verCotizaciones) cargarCotizaciones(); };
+    cada('[data-cot-abrir]', function (b) {
+      b.onclick = function () {
+        var c = cotizacionPorId(b.getAttribute('data-cot-abrir')); if (!c) return;
+        enviarAlCotizador({ tipo: 'utw-cargar', id: c.id, estado: c.datos || {} });
+        avisoCot('Cotización ' + (c.numero || c.cliente || '') + ' cargada en el cotizador: modifícala y vuelve a guardar o envíala.');
+        if ($('utwi-cotizador')) $('utwi-cotizador').scrollIntoView({ behavior: 'smooth' });
+      };
+    });
+    cada('[data-cot-dup]', function (b) {
+      b.onclick = function () {
+        var c = cotizacionPorId(b.getAttribute('data-cot-dup')); if (!c) return;
+        var e = JSON.parse(JSON.stringify(c.datos || {}));
+        if (e.campos) e.campos.cNumero = '';   // la copia lleva numero nuevo
+        enviarAlCotizador({ tipo: 'utw-cargar', id: null, estado: e });
+        avisoCot('Copia de la cotización ' + (c.numero || c.cliente || '') + ' cargada: al guardar queda como una nueva.');
+        if ($('utwi-cotizador')) $('utwi-cotizador').scrollIntoView({ behavior: 'smooth' });
+      };
+    });
+    cada('[data-cot-campana]', function (b) {
+      b.onclick = function () {
+        var id = b.getAttribute('data-cot-campana');
+        var c = S.campanas.filter(function (x) { return String(x.id) === String(id); })[0];
+        if (!c) return avisoCot('Esa campaña ya no está en la lista de campañas.', true);
+        S.campana = Object.assign({}, c); S.adjuntos = []; S.confirmar = false; S.vista = 'campana'; pintar();
+      };
+    });
+    cada('[data-cot-borrar]', function (b) {
+      b.onclick = function () {
+        var c = cotizacionPorId(b.getAttribute('data-cot-borrar')); if (!c) return;
+        if (!confirm('¿Borrar del historial la cotización ' + (c.numero || c.cliente || '') + '? La campaña, si existe, no se toca.')) return;
+        sb.from('cotizaciones').delete().eq('id', c.id).then(function (r) { if (r.error) avisoCot(r.error.message, true); cargarCotizaciones(); });
+      };
+    });
   }
   // El cotizador se incrusta con srcdoc (la intranet trae el HTML y lo pinta ella misma):
   // asi no hay navegacion a app.uptowine.cl ni service worker de la app en el medio.
@@ -1725,6 +1822,13 @@ cuerpoHtml(personalizar(texto, contacto)) +
     // el iframe es srcdoc: hereda el origen de la intranet (uptowine.cl, o localhost en la simulacion)
     if (String(ev.origin || '') !== window.location.origin) return;
     var d = ev.data || {};
+    if (d.tipo === 'utw-guardar') {   // boton "Guardar en el historial" del cotizador
+      return guardarCotizacion(d.id, d.estado, d.resumen || {}, 'borrador').then(function (id) {
+        if (!id) return;
+        enviarAlCotizador({ tipo: 'utw-guardada', id: id });
+        avisoCot('Cotización guardada en el historial' + (d.resumen && d.resumen.cliente ? ' (' + d.resumen.cliente + ')' : '') + '.');
+      });
+    }
     if (d.tipo !== 'utw-cotizacion' || !d.pdf) return;
     nuevaCampana({
       nombre: 'Cotización ' + (d.numero || d.cliente || new Date().toLocaleDateString('es-CL')),
@@ -1732,6 +1836,10 @@ cuerpoHtml(personalizar(texto, contacto)) +
       cuerpo: cotizacionTexto(d),
     });
     S.adjuntos = [{ nombre: d.nombre || 'cotizacion.pdf', bytes: Math.round(String(d.pdf).length * 0.75), tipo: 'application/pdf', base64: d.pdf }];
+    // queda en el historial como enviada; la campana se enlaza cuando se guarde (tiene id recien ahi)
+    S.cotizacionDeCampana = null;
+    if (d.estado) guardarCotizacion(d.cotizacion_id, d.estado, { cliente: d.cliente, numero: d.numero, email: d.email, total: d.total, botellas: d.botellas }, 'enviada')
+      .then(function (id) { S.cotizacionDeCampana = id; });
     aviso('Cotización lista' + (d.cliente ? ' para ' + d.cliente : '') + ': elige el destinatario y el canal (correo o WhatsApp) y envíala. El PDF ya va adjunto.');
   }
 
@@ -1840,6 +1948,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
 
   function conectar() {
     montarCotizador();
+    conectarCotizaciones();
     if ($('utwi-salir')) $('utwi-salir').onclick = function () { S.sel = {}; S.msj = ''; sb.auth.signOut(); };
 
     cada('[data-vista]', function (b) {
