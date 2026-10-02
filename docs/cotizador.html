@@ -400,7 +400,7 @@ body.exportando .quote-print{display:block;position:absolute;left:0;top:0;width:
       <button class="btn pri" id="btnEnviar" style="display:none">📨 Enviar por la intranet</button>
       <button class="btn sec" id="btnClear">Limpiar</button>
     </div>
-    <div class="btnrow"><button class="btn redes" id="btnRedes">📣 Pieza para redes (Instagram)</button></div>
+    <div class="btnrow"><button class="btn redes" id="btnRedes">📣 Pieza para redes (Instagram)</button><button class="btn sec" id="btnGuardar" style="display:none">💾 Guardar en el historial</button></div>
 
     <div class="paybox" id="paybox">
       <button class="btn pay" id="btnPay">💳 Link de pago · Mercado Pago</button>
@@ -719,7 +719,7 @@ document.getElementById('mClose').onclick=()=>modal.classList.remove('on');
 modal.addEventListener('click', e=>{ if(e.target===modal) modal.classList.remove('on'); });
 
 // ---- Limpiar ----
-document.getElementById('btnClear').onclick=()=>{ if(Object.keys(state.sel).length && confirm('¿Vaciar la cotización?')){ state.sel={}; renderQuote(); render(); } };
+document.getElementById('btnClear').onclick=()=>{ if(Object.keys(state.sel).length && confirm('¿Vaciar la cotización?')){ state.sel={}; state.cotizacionId=null; renderQuote(); render(); } };
 
 // ---- Fechas por defecto ----
 (function(){
@@ -960,7 +960,7 @@ document.getElementById('btnPdf').onclick=async ()=>{ EXPORTANDO=false; await ar
       // precio normal = el tachado de la tienda si existe, si no el de lista; oferta = con el descuento de la linea
       const items=Object.keys(state.sel).map(id=>{ const s=state.sel[id], c=findC(+id); const normal=(c.compare_at&&c.compare_at>c.precio)?c.compare_at:c.precio; const oferta=Math.round(c.precio*(1-s.disc/100)); return {nombre:c.nombre.trim(), qty:s.qty, precio:normal, oferta: oferta<normal?oferta:null, total:Math.round(oferta*s.qty), imagen:c.imagen||''}; });
       const cli=document.getElementById('cCliente').value||'', num=document.getElementById('cNumero').value||'';
-      window.parent.postMessage({tipo:'utw-cotizacion', pdf:uri.split(',')[1], nombre:('Cotizacion '+(num||cli||'Up to Wine')).replace(/[^\w\- ]+/g,'').trim()+'.pdf', cliente:cli, numero:num, total:montoTot, botellas:t.bottles, envio:t.envio, items, pago: pago?{nombre:pago.nombre, link:pago.link}:null}, destino);
+      window.parent.postMessage({tipo:'utw-cotizacion', pdf:uri.split(',')[1], nombre:('Cotizacion '+(num||cli||'Up to Wine')).replace(/[^\w\- ]+/g,'').trim()+'.pdf', cliente:cli, numero:num, total:montoTot, botellas:t.bottles, envio:t.envio, items, pago: pago?{nombre:pago.nombre, link:pago.link}:null, email:document.getElementById('cEmail').value||'', cotizacion_id:state.cotizacionId, estado:exportarEstado()}, destino);
     }catch(e){ document.body.classList.remove('exportando'); [...document.querySelectorAll('#printDoc img')].forEach(i=>{ if(i.dataset.orig){ i.src=i.dataset.orig; i.style.visibility=''; } }); alert('No se pudo armar el PDF: '+(e&&e.message||e)); }
     finally{ b.disabled=false; b.textContent='📨 Enviar por la intranet'; }
   };
@@ -1051,6 +1051,63 @@ document.getElementById('rzGen').onclick=async ()=>{
   }catch(e){ alert('No se pudo generar la imagen: '+(e&&e.message||e)); }
   finally{ document.body.classList.remove('exportando-pieza'); doc.innerHTML=''; b.disabled=false; b.textContent='⬇️ Generar imágenes'; }
 };
+
+// ---- Historial: la intranet guarda y reabre cotizaciones ----
+// El cotizador no toca la base: exporta su estado (vinos, cantidades, descuentos, packs,
+// textos) y la intranet lo guarda con su sesión. Al "Abrir" desde el historial, la intranet
+// manda ese mismo estado de vuelta y aquí se repone todo.
+state.cotizacionId=null;   // fila del historial que esta abierta (null = nueva)
+const CAMPOS_COT=['cCliente','cEmpresa','cEmail','cFecha','cValidez','cNumero'];
+const CHECKS_COT=['chkImagen','chkNota','chkCrianza','chkMaridaje','chkPremios','chkPago','chkTransfer'];
+function exportarEstado(){
+  const d={ campos:{}, checks:{}, gDisc:state.gDisc, envio:state.envio, envioGratis:state.envioGratis, packs:state.packs.slice(), packDesc:Object.assign({},state.packDesc),
+    sel:Object.keys(state.sel).map(id=>{ const s=state.sel[id]; return {id:+id, qty:s.qty, disc:s.disc, pack:s.pack||'', desc:s.desc||''}; }),
+    redes:{ titulo:document.getElementById('rzTitulo').value, vigencia:document.getElementById('rzVigencia').value, cupon:document.getElementById('rzCupon').value } };
+  CAMPOS_COT.forEach(id=>d.campos[id]=document.getElementById(id).value||'');
+  CHECKS_COT.forEach(id=>d.checks[id]=document.getElementById(id).checked);
+  return d;
+}
+function resumenEstado(){
+  const t=calcTotales(), v=id=>document.getElementById(id).value||'';
+  return { cliente:v('cCliente'), empresa:v('cEmpresa'), email:v('cEmail'), numero:v('cNumero'), total:Math.round(t.tot), botellas:t.bottles };
+}
+// Repone el estado guardado. Devuelve cuantos vinos ya no estan en el catalogo (se omiten).
+function importarEstado(d){
+  d=d||{};
+  Object.keys(d.campos||{}).forEach(id=>{ const el=document.getElementById(id); if(el) el.value=d.campos[id]||''; });
+  Object.keys(d.checks||{}).forEach(id=>{ const el=document.getElementById(id); if(el) el.checked=!!d.checks[id]; });
+  if(d.redes){ document.getElementById('rzTitulo').value=d.redes.titulo||''; document.getElementById('rzVigencia').value=d.redes.vigencia||''; document.getElementById('rzCupon').value=d.redes.cupon||''; }
+  state.gDisc=+d.gDisc||0; document.getElementById('gDisc').value=state.gDisc;
+  state.envio=+d.envio||0; state.envioGratis=!!d.envioGratis;
+  document.getElementById('envMonto').value=state.envio; document.getElementById('envMonto').disabled=state.envioGratis; document.getElementById('envGratis').checked=state.envioGratis;
+  state.packs=(d.packs||[]).slice(); state.packDesc=Object.assign({},d.packDesc||{});
+  state.sel={}; let faltan=0;
+  (d.sel||[]).forEach(s=>{ if(findC(+s.id)) state.sel[s.id]={ id:+s.id, qty:Math.max(1,+s.qty||1), disc:+s.disc||0, pack:s.pack||'', desc:s.desc||'' }; else faltan++; });
+  render(); renderQuote();
+  return faltan;
+}
+(function(){
+  if(window.parent===window) return;   // solo dentro de la intranet
+  let destino='https://uptowine.cl'; try{ destino=window.parent.location.origin; }catch(e){}
+  const bg=document.getElementById('btnGuardar'); bg.style.display='';
+  bg.onclick=()=>{
+    if(!Object.keys(state.sel).length){ alert('Elige al menos un vino.'); return; }
+    window.parent.postMessage({ tipo:'utw-guardar', id:state.cotizacionId, estado:exportarEstado(), resumen:resumenEstado() }, destino);
+  };
+  let pendiente=null;
+  function aplicar(d){
+    const faltan=importarEstado(d.estado); state.cotizacionId=d.id||null;
+    if(faltan) alert(faltan+(faltan===1?' vino de esta cotización ya no está':' vinos de esta cotización ya no están')+' en el catálogo y se omitió.');
+    window.scrollTo(0,0);
+  }
+  window.aplicarPendiente=()=>{ if(pendiente){ const d=pendiente; pendiente=null; aplicar(d); } };
+  window.addEventListener('message', ev=>{
+    if(ev.source!==window.parent || ev.origin!==destino) return;
+    const d=ev.data||{};
+    if(d.tipo==='utw-cargar'){ if(!CATALOGO.length) pendiente=d; else aplicar(d); }
+    else if(d.tipo==='utw-guardada'){ state.cotizacionId=d.id||null; }
+  });
+})();
 
 // ---- Pago (Supabase Edge Functions) ----
 // Se fijan aquí una vez desplegadas las funciones. También puedes pegarlas en ⚙︎ Configurar.
@@ -1159,6 +1216,7 @@ async function init(){
     CATALOGO=data;
     buildChips();
     render(); renderQuote();
+    if(window.aplicarPendiente) window.aplicarPendiente();   // una cotización del historial que llegó antes que el catálogo
   }catch(e){
     grid.innerHTML=`<div style="grid-column:1/-1;text-align:center;padding:40px 12px">
       <div style="color:#b23b3b;font-weight:700;font-size:15px">No se pudo cargar el catálogo</div>
