@@ -1115,6 +1115,7 @@ function renderRedes(){
   const f=FORMATOS[redes.fmt], pags=paginasRedes(), wrap=document.getElementById('rzPrev'), hint=document.getElementById('rzHint');
   const ancho=Math.min(wrap.parentElement.clientWidth-36||440, 480), k=ancho/f.w;
   wrap.style.width=ancho+'px'; wrap.style.height=Math.round(f.h*k)+'px';
+  document.querySelectorAll('#modalRedes [data-fmt]').forEach(x=>x.classList.toggle('on',x.dataset.fmt===redes.fmt));
   wrap.innerHTML=pags.length?piezaHtml(pags[0],redes.fmt,1,pags.length):'';
   const pz=wrap.firstElementChild; if(pz) pz.style.transform=`scale(${k})`;
   hint.textContent=!pags.length?'La oferta usa los vinos de la cotización: agrega al menos uno (o elige otro tipo de pieza).':pags.length>1?`${Object.keys(state.sel).length} vinos → ${pags.length} imágenes (carrusel). La vista previa muestra la primera.`:'';
