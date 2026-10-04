@@ -1033,13 +1033,15 @@ cuerpoHtml(personalizar(texto, contacto)) +
     });
   }
 
-  // Prueba de WhatsApp: un solo mensaje al número que se indique (se recuerda en
-  // este navegador). No puede ser el número del negocio: el bot no se escribe a sí mismo.
+  // Prueba de WhatsApp: un solo mensaje al celular de prueba guardado en este
+  // navegador (no en el código: intranet.js es público). Sin número guardado, o con
+  // Mayús+clic, lo pregunta. No puede ser el número del negocio: el bot no se escribe a sí mismo.
   var FONO_PRUEBA = 'utwi.prueba.fono', FONO_NEGOCIO = '56931737400';
-  function enviarPruebaWhatsApp() {
+  function enviarPruebaWhatsApp(ev) {
     var previo = '';
     try { previo = localStorage.getItem(FONO_PRUEBA) || ''; } catch (e) {}
-    var raw = window.prompt('¿A qué celular mando la prueba? (ej. 9 1234 5678)', previo);
+    var raw = previo && !(ev && ev.shiftKey) ? previo
+      : window.prompt('¿A qué celular mando la prueba? (ej. 9 1234 5678)', previo);
     if (raw === null) return;
     var numero = fonoWhatsApp(raw);
     if (!numero) return aviso('Ese número no parece un celular chileno (9 dígitos que parten con 9).', 'err');
@@ -1632,7 +1634,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '<button class="btn sec" data-vista="campanas">Volver</button>' +
       '<button class="btn sec" id="utwi-guardar-campana">Guardar borrador</button>' +
       (esCorreo ? '<button class="btn sec" id="utwi-prueba">Enviar prueba a mí</button>'
-                : '<button class="btn sec" id="utwi-prueba-wa"' + (S.ocupado || !c.cuerpo.trim() ? ' disabled' : '') + '>Enviar WhatsApp de prueba</button>') +
+                : '<button class="btn sec" id="utwi-prueba-wa" title="Mayús+clic para cambiar el número de prueba"' + (S.ocupado || !c.cuerpo.trim() ? ' disabled' : '') + '>Enviar WhatsApp de prueba</button>') +
       '<button class="btn' + (S.confirmar ? ' peligro' : '') + '" id="utwi-enviar"' +
         (S.ocupado || !(c.html || c.cuerpo.trim()) || (esCorreo && !(c.asunto || '').trim()) ? ' disabled' : '') + '>' +
       (S.ocupado ? 'Enviando ' + S.progreso : S.confirmar ? 'Confirmar envío' : esCorreo ? 'Enviar campaña' : 'Encolar WhatsApp') +
