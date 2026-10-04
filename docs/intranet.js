@@ -1033,6 +1033,32 @@ cuerpoHtml(personalizar(texto, contacto)) +
     });
   }
 
+  // Prueba de WhatsApp: un solo mensaje al número que se indique (se recuerda en
+  // este navegador). No puede ser el número del negocio: el bot no se escribe a sí mismo.
+  var FONO_PRUEBA = 'utwi.prueba.fono', FONO_NEGOCIO = '56931737400';
+  function enviarPruebaWhatsApp() {
+    var previo = '';
+    try { previo = localStorage.getItem(FONO_PRUEBA) || ''; } catch (e) {}
+    var raw = window.prompt('¿A qué celular mando la prueba? (ej. 9 1234 5678)', previo);
+    if (raw === null) return;
+    var numero = fonoWhatsApp(raw);
+    if (!numero) return aviso('Ese número no parece un celular chileno (9 dígitos que parten con 9).', 'err');
+    if (numero === FONO_NEGOCIO) return aviso('Ese es el número del negocio, desde donde sale el WhatsApp: usa tu celular personal.', 'err');
+    try { localStorage.setItem(FONO_PRUEBA, raw); } catch (e) {}
+    var quien = { nombre: 'Prueba', celular: numero, comuna: 'Santiago' };
+    aviso('Encolando la prueba para ' + numero + '…');
+    subirDocumentoWhatsApp().then(function (rutaPdf) {
+      return sb.from('whatsapp_outbox').insert({
+        numero: numero, nombre: 'Prueba intranet',
+        texto: '[PRUEBA]\n' + textoWhatsApp(personalizar(S.campana.cuerpo, quien)), por: 'intranet-prueba',
+        datos: rutaPdf ? { archivo: rutaPdf, nombre: S.adjuntos[0].nombre } : {},
+      });
+    }).then(function (r) {
+      if (r.error) return aviso('La prueba no se encoló: ' + r.error.message, 'err');
+      aviso('Prueba encolada para ' + numero + '. El bot la manda en 1 a 2 minutos.');
+    }).catch(function (e) { aviso(e.message, 'err'); });
+  }
+
   // Envío en lote: uno por uno, con el nombre de cada quien y un ritmo tranquilo.
   // El PDF de una campaña de WhatsApp se sube una sola vez al bucket privado;
   // el puente del VPS lo baja con la service key y se lo entrega al bot con el
@@ -1605,7 +1631,8 @@ cuerpoHtml(personalizar(texto, contacto)) +
     return '<div class="cab"><h1>' + (c.id ? 'Editar campaña' : 'Nueva campaña') + '</h1><div class="sp">' +
       '<button class="btn sec" data-vista="campanas">Volver</button>' +
       '<button class="btn sec" id="utwi-guardar-campana">Guardar borrador</button>' +
-      (esCorreo ? '<button class="btn sec" id="utwi-prueba">Enviar prueba a mí</button>' : '') +
+      (esCorreo ? '<button class="btn sec" id="utwi-prueba">Enviar prueba a mí</button>'
+                : '<button class="btn sec" id="utwi-prueba-wa"' + (S.ocupado || !c.cuerpo.trim() ? ' disabled' : '') + '>Enviar WhatsApp de prueba</button>') +
       '<button class="btn' + (S.confirmar ? ' peligro' : '') + '" id="utwi-enviar"' +
         (S.ocupado || !(c.html || c.cuerpo.trim()) || (esCorreo && !(c.asunto || '').trim()) ? ' disabled' : '') + '>' +
       (S.ocupado ? 'Enviando ' + S.progreso : S.confirmar ? 'Confirmar envío' : esCorreo ? 'Enviar campaña' : 'Encolar WhatsApp') +
@@ -2192,6 +2219,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     }
     if ($('utwi-guardar-campana')) $('utwi-guardar-campana').onclick = function () { guardarCampana(); };
     if ($('utwi-prueba')) $('utwi-prueba').onclick = enviarPrueba;
+    if ($('utwi-prueba-wa')) $('utwi-prueba-wa').onclick = enviarPruebaWhatsApp;
     if ($('utwi-enviar')) $('utwi-enviar').onclick = function () {
       if (S.confirmar) enviarCampana(); else { S.confirmar = true; pintar(); }
     };
