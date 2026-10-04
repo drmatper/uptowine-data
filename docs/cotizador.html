@@ -495,6 +495,7 @@ body.exportando .quote-print{display:block;position:absolute;left:0;top:0;width:
       <div class="rz-prevwrap" id="rzPrev"></div>
       <div class="rz-hint" id="rzHint"></div>
       <button class="btn pri" id="rzGen" style="width:100%;margin-top:12px">⬇️ Generar imágenes</button>
+      <button class="btn redes" id="rzMailing" style="width:100%;margin-top:8px;display:none">📧 Crear mailing con esta oferta</button>
       <div class="rz-out" id="rzOut"></div>
     </div>
   </div>
@@ -1118,6 +1119,7 @@ function renderRedes(){
   document.querySelectorAll('#modalRedes [data-fmt]').forEach(x=>x.classList.toggle('on',x.dataset.fmt===redes.fmt));
   wrap.innerHTML=pags.length?piezaHtml(pags[0],redes.fmt,1,pags.length):'';
   const pz=wrap.firstElementChild; if(pz) pz.style.transform=`scale(${k})`;
+  const bm=document.getElementById('rzMailing'); if(bm) bm.style.display=(redes.tipo==='oferta'&&window.parent!==window&&pags.length)?'':'none';
   hint.textContent=!pags.length?'La oferta usa los vinos de la cotización: agrega al menos uno (o elige otro tipo de pieza).':pags.length>1?`${Object.keys(state.sel).length} vinos → ${pags.length} imágenes (carrusel). La vista previa muestra la primera.`:'';
   document.getElementById('rzOut').innerHTML='';
 }
@@ -1185,6 +1187,13 @@ function importarEstado(d){
   if(window.parent===window) return;   // solo dentro de la intranet
   let destino='https://uptowine.cl'; try{ destino=window.parent.location.origin; }catch(e){}
   const bg=document.getElementById('btnGuardar'); bg.style.display='';
+  // Mailing de la oferta: los mismos vinos y textos de la pieza, como campaña de correo/WhatsApp
+  document.getElementById('rzMailing').onclick=()=>{
+    const d=redes.datos.oferta||{};
+    const items=Object.keys(state.sel).map(id=>{ const o=ofertaDe(id), c=o.c; return { nombre:c.nombre.trim(), cepa:c.cepa||'', valle:c.valle||'', precio:o.normal, oferta:o.pct?o.oferta:null, pct:o.pct, imagen:c.imagen||'' }; });
+    window.parent.postMessage({ tipo:'utw-mailing', titulo:d.titulo||'Oferta de la semana', vigencia:d.vigencia||'', cupon:d.cupon||'', items }, destino);
+    document.getElementById('modalRedes').classList.remove('on');
+  };
   bg.onclick=()=>{
     if(!Object.keys(state.sel).length){ alert('Elige al menos un vino.'); return; }
     window.parent.postMessage({ tipo:'utw-guardar', id:state.cotizacionId, estado:exportarEstado(), resumen:resumenEstado() }, destino);
