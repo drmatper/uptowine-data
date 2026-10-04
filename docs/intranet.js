@@ -249,6 +249,25 @@ cuerpoHtml(personalizar(texto, contacto)) +
       'Cualquier duda, responde este mensaje o escr\u00edbenos al +56 9 3173 7400.\n\n\u00a1Salud!\nEquipo Up to Wine';
   }
 
+  // --- oferta armada en el cotizador: mailing para muchos (sin PDF ni link de pago) ---
+  // Un parrafo por vino con foto chica, nombre, cepa y valle, precio normal tachado y
+  // precio oferta; boton a la tienda y cupon si lo hay. Sirve igual por WhatsApp.
+  function ofertaTexto(d) {
+    var items = (d.items || []).map(function (it) {
+      var foto = it.imagen ? '![' + it.nombre + '](https://wsrv.nl/?url=' + encodeURIComponent(it.imagen) + '&h=160&output=png) ' : '';
+      var meta = [it.cepa, it.valle].filter(Boolean).join(' \u00b7 ');
+      var precio = it.oferta ? '~~' + plata(it.precio) + '~~ **' + plata(it.oferta) + '**' + (it.pct ? ' (\u2212' + it.pct + '%)' : '') : '**' + plata(it.precio) + '**';
+      return foto + '**' + it.nombre + '**' + (meta ? ' \u00b7 ' + meta : '') + '\n' + precio;
+    }).join('\n\n');
+    var utm = 'utm_source=crm&utm_medium=correo&utm_campaign=' + encodeURIComponent(String(d.titulo || 'oferta').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'oferta');
+    return '## ' + (d.titulo || 'Oferta de la semana') + '\n\n' +
+      'Hola {nombre}, elegimos estos vinos con precio especial' + (d.vigencia ? ' **' + d.vigencia.replace(/^(hasta|solo hasta)\s+/i, 'hasta ') + '**' : '') + ':\n\n' +
+      items + '\n\n' +
+      '[[Ver la oferta en la tienda|https://uptowine.cl/catalogo?' + utm + ']]\n\n' +
+      (d.cupon ? 'Usa el cup\u00f3n **' + d.cupon + '** al pagar' + (d.vigencia ? ' (' + d.vigencia + ')' : '') + '.\n\n' : '') +
+      'Partidas chicas: cuando se acaban, se acaban. Si quieres que te apartemos alguna, responde este mensaje.\n\n\u00a1Salud!\nEquipo Up to Wine';
+  }
+
   // --- el mismo marcado, en formato WhatsApp -----------------------------------
   // Una plantilla sirve para los dos canales: por WhatsApp el titulo va en
   // *negrita*, las listas con viñeta, los enlaces como "texto: url" y el boton
@@ -400,7 +419,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
 
   if (typeof module !== 'undefined' && module.exports) {   // solo para los tests
     module.exports = { fonoWhatsApp: fonoWhatsApp, esc: esc, personalizar: personalizar,
-      plata: plata, cuerpoHtml: cuerpoHtml, correoHtml: correoHtml, correoTexto: correoTexto, correoDe: correoDe, evaluarCampana: evaluarCampana, cotizacionTexto: cotizacionTexto,
+      plata: plata, cuerpoHtml: cuerpoHtml, correoHtml: correoHtml, correoTexto: correoTexto, correoDe: correoDe, evaluarCampana: evaluarCampana, cotizacionTexto: cotizacionTexto, ofertaTexto: ofertaTexto,
       enlaceSeguro: enlaceSeguro, csvLeer: csvLeer, csvMapear: csvMapear, csvSalida: csvSalida,
       diasDesde: diasDesde, estadoPorFecha: estadoPorFecha, rutNormalizar: rutNormalizar,
       paykuFila: paykuFila, patAgrupar: patAgrupar, textoWhatsApp: textoWhatsApp };
@@ -1828,6 +1847,11 @@ cuerpoHtml(personalizar(texto, contacto)) +
         enviarAlCotizador({ tipo: 'utw-guardada', id: id });
         avisoCot('Cotización guardada en el historial' + (d.resumen && d.resumen.cliente ? ' (' + d.resumen.cliente + ')' : '') + '.');
       });
+    }
+    if (d.tipo === 'utw-mailing') {   // oferta del cotizador -> campana para muchos, sin PDF
+      nuevaCampana({ nombre: 'Oferta \u00b7 ' + (d.titulo || new Date().toLocaleDateString('es-CL')), canal: 'correo', asunto: d.titulo || 'Oferta Up to Wine', cuerpo: ofertaTexto(d) });
+      aviso('Mailing de la oferta listo: elige el segmento o los destinatarios, revisa el texto y env\u00edalo por correo o WhatsApp.');
+      return;
     }
     if (d.tipo !== 'utw-cotizacion' || !d.pdf) return;
     nuevaCampana({
