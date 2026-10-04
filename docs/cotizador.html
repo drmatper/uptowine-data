@@ -975,7 +975,8 @@ document.getElementById('btnPdf').onclick=async ()=>{ EXPORTANDO=false; await ar
       b.textContent='Armando PDF… (fotos)';
       const restaurar=await incrustarFotos(el);
       b.textContent='Armando PDF… (dibujando)';
-      const canvas=await conPlazo(html2canvas(el,{scale:2,backgroundColor:'#ffffff',scrollX:0,scrollY:0,logging:false,imageTimeout:5000}),40000,'el dibujo del PDF tardó demasiado; prueba con menos vinos o sin imágenes');
+      const canvas=await conPlazo(html2canvas(el,{scale:2,windowWidth:el.offsetWidth,windowHeight:el.scrollHeight,backgroundColor:'#ffffff',scrollX:0,scrollY:0,logging:false,imageTimeout:5000}),40000,'el dibujo del PDF tardó demasiado; prueba con menos vinos o sin imágenes');
+      // (windowWidth/Height = el documento mismo: en iOS el iframe mide lo que mide el contenido y sin esto html2canvas dibujaba un viewport gigante)
       // A4 con margenes: el lienzo se corta en paginas. Los <a href> del documento (link de pago,
       // WhatsApp) se anotan en el PDF en su misma posicion, asi siguen siendo clicables.
       const pdf=new jspdf.jsPDF({unit:'mm',format:'a4'});
@@ -1140,7 +1141,7 @@ document.getElementById('rzGen').onclick=async ()=>{
       b.textContent=`Dibujando ${i+1} de ${pags.length}…`;
       doc.innerHTML=piezaHtml(pags[i],redes.fmt,i+1,pags.length);
       await incrustarFotos(doc);
-      const canvas=await conPlazo(html2canvas(doc.firstElementChild,{scale:1,width:f.w,height:f.h,backgroundColor:'#0A0708',scrollX:0,scrollY:0,logging:false,imageTimeout:5000}),40000,'el dibujo tardó demasiado');
+      const canvas=await conPlazo(html2canvas(doc.firstElementChild,{scale:1,width:f.w,height:f.h,windowWidth:f.w,windowHeight:f.h,backgroundColor:'#0A0708',scrollX:0,scrollY:0,logging:false,imageTimeout:5000}),40000,'el dibujo tardó demasiado');
       const url=canvas.toDataURL('image/png'), nombre=`${slug}-${redes.fmt}${pags.length>1?'-'+(i+1):''}.png`;
       out.insertAdjacentHTML('beforeend',`<div class="th"><img src="${url}"><a href="${url}" download="${nombre}">Descargar ${pags.length>1?(i+1)+'/'+pags.length:''}</a></div>`);
     }
