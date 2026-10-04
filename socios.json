@@ -7,8 +7,8 @@
       "winery": "3 Monos",
       "image": "https://images.jumpseller.com/store/up-to-wine-chile/37203414/Cabernet_20Sauvignon_203_20Monos.png?1789837607",
       "url": "https://uptowine.cl/3-monos-cabernet-sauvignon",
-      "price": 12000,
-      "compare_at": null,
+      "price": 10190,
+      "compare_at": 12000,
       "available": true
     },
     {
@@ -16,8 +16,17 @@
       "winery": "3 Monos",
       "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920381/3_20monos_20carignan.png?1788123083",
       "url": "https://uptowine.cl/3-monos-carignan",
-      "price": 16000,
-      "compare_at": null,
+      "price": 13590,
+      "compare_at": 16000,
+      "available": true
+    },
+    {
+      "name": "Escandalo Pipeño",
+      "winery": "Escándalo",
+      "image": "https://images.jumpseller.com/store/up-to-wine-chile/32602409/ESCANDALO_20PIPE_C3_91O.png?1783717785",
+      "url": "https://uptowine.cl/escandalo-wines-pipeno",
+      "price": 6000,
+      "compare_at": 10500,
       "available": true
     },
     {
@@ -30,12 +39,21 @@
       "available": true
     },
     {
+      "name": "Los Dos Enólogos Gran Vin Carignan",
+      "winery": "Los Dos Enólogos",
+      "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920386/lex_20deux_20enologuues.png?1788123201",
+      "url": "https://uptowine.cl/los-dos-enologos-gran-vin-carignan",
+      "price": 20390,
+      "compare_at": 23990,
+      "available": true
+    },
+    {
       "name": "Ranquilhue Cabernet Sauvignon",
       "winery": "Ranquilhue",
       "image": "https://images.jumpseller.com/store/up-to-wine-chile/37203413/Ranquilhue_20cabernet_20Sauvignon.png?1789837903",
       "url": "https://uptowine.cl/ranquilhue-cabernet-sauvignon",
-      "price": 17990,
-      "compare_at": null,
+      "price": 14390,
+      "compare_at": 17990,
       "available": true
     },
     {
@@ -48,12 +66,30 @@
       "available": true
     },
     {
+      "name": "Schwaderer Kimbao Malbec Gran Reserva",
+      "winery": "Schwaderer",
+      "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920370/kimbao_20malbec.png?1788122929",
+      "url": "https://uptowine.cl/schwaderer-kimbao-malbec-gran-reserva",
+      "price": 8490,
+      "compare_at": 9990,
+      "available": true
+    },
+    {
+      "name": "Schwaderer Syrah-Viognier",
+      "winery": "Schwaderer",
+      "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920376/swaderer_20Syrah_20viognier.png?1788122907",
+      "url": "https://uptowine.cl/schwaderer-syrah-viognier",
+      "price": 7490,
+      "compare_at": 9990,
+      "available": true
+    },
+    {
       "name": "Tatita País",
       "winery": "Tatita",
       "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920366/tatita_20pais.png?1788123015",
       "url": "https://uptowine.cl/tatita-pais",
-      "price": 9990,
-      "compare_at": null,
+      "price": 8490,
+      "compare_at": 9990,
       "available": true
     },
     {
@@ -61,8 +97,8 @@
       "winery": "Testaruda",
       "image": "https://images.jumpseller.com/store/up-to-wine-chile/37203411/Laslarra.png?1789837332",
       "url": "https://uptowine.cl/laslarra-blend",
-      "price": 13990,
-      "compare_at": null,
+      "price": 11190,
+      "compare_at": 13990,
       "available": true
     },
     {
@@ -165,48 +201,12 @@
       "available": false
     },
     {
-      "name": "Escandalo Pipeño",
-      "winery": "Escándalo",
-      "image": "https://images.jumpseller.com/store/up-to-wine-chile/32602409/ESCANDALO_20PIPE_C3_91O.png?1783717785",
-      "url": "https://uptowine.cl/escandalo-wines-pipeno",
-      "price": 6000,
-      "compare_at": 10500,
-      "available": false
-    },
-    {
-      "name": "Los Dos Enólogos Gran Vin Carignan",
-      "winery": "Los Dos Enólogos",
-      "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920386/lex_20deux_20enologuues.png?1788123201",
-      "url": "https://uptowine.cl/los-dos-enologos-gran-vin-carignan",
-      "price": 23990,
-      "compare_at": null,
-      "available": false
-    },
-    {
       "name": "Muelle Oculto Centinela",
       "winery": "Muelle Oculto",
       "image": "https://images.jumpseller.com/store/up-to-wine-chile/36406474/Muelle_20Oculto_20Centinela.png?1785112120",
       "url": "https://uptowine.cl/muelle-oculto-centinela-copiar",
       "price": 6000,
       "compare_at": 11900,
-      "available": false
-    },
-    {
-      "name": "Schwaderer Kimbao Malbec Gran Reserva",
-      "winery": "Schwaderer",
-      "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920370/kimbao_20malbec.png?1788122929",
-      "url": "https://uptowine.cl/schwaderer-kimbao-malbec-gran-reserva",
-      "price": 9990,
-      "compare_at": null,
-      "available": false
-    },
-    {
-      "name": "Schwaderer Syrah-Viognier",
-      "winery": "Schwaderer",
-      "image": "https://images.jumpseller.com/store/up-to-wine-chile/36920376/swaderer_20Syrah_20viognier.png?1788122907",
-      "url": "https://uptowine.cl/schwaderer-syrah-viognier",
-      "price": 9990,
-      "compare_at": null,
       "available": false
     },
     {
