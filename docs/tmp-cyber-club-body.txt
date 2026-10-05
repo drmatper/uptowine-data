@@ -1,0 +1,502 @@
+      <!-- Landing Cyber Club (upgrade / ex socios) oct-2026, generada desde club-emporio. Pagina completa, oculta el chrome de la tienda -->
+<style>#top_components,#theme-section-breadcrumbs,#bottom_components{display:none !important}
+body{background:#0A0708}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Jost:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0A0708; --surface:#140E10; --surface2:#171013; --tinte:#2A0D15;
+  --crimson:#E2123F; --crimson-tx:#F1315B; --profundo:#5A0A1E;
+  --dorado:#E0B450; --texto:#FFFFFF; --cuerpo:rgba(255,255,255,.70);
+  --suave:rgba(255,255,255,.55); --borde:rgba(255,255,255,.14);
+  --display:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --radius:16px;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:'Jost','Segoe UI',Arial,sans-serif;color:var(--texto);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+h1,h2,h3{font-family:var(--display)}
+
+.urg{position:sticky;top:0;z-index:50;background:var(--bg);color:var(--crimson-tx);
+  text-align:center;font-family:var(--display);font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  font-size:11.5px;padding:10px 14px;border-bottom:1px solid var(--borde)}
+.urg b{color:var(--dorado);font-weight:700}
+
+.hero{background:radial-gradient(90% 75% at 60% 0%, #E2123F, #5A0A1E 55%, #0A0708);
+  color:#fff;text-align:center;padding:46px 18px 50px}
+.eyebrow{font-family:var(--display);color:#fff;opacity:.92;font-weight:700;text-transform:uppercase;letter-spacing:.24em;font-size:12px;margin:0 0 16px}
+.hero h1{color:#fff;font-weight:800;line-height:1.05;letter-spacing:-.02em;text-wrap:balance;
+  font-size:clamp(32px,8.5vw,58px);margin:.1em auto .3em;max-width:16ch;text-transform:none}
+.hero h1 .g{color:var(--dorado)}
+.hero .lede{font-size:clamp(15px,4.2vw,17.5px);color:rgba(255,255,255,.85);max-width:44ch;margin:0 auto 22px}
+.chips{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin:0 auto 8px;max-width:760px}
+.chip{border:1px solid rgba(224,180,80,.55);color:#E9D9B0;background:rgba(10,7,8,.35);
+  border-radius:999px;padding:6px 14px;font-size:13.5px}
+.chip .n{color:var(--dorado);font-weight:600}
+.chip.kit{border-color:var(--dorado);color:var(--dorado);font-family:var(--display);font-weight:700;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:9px 16px;background:transparent}
+.cta{display:inline-block;margin-top:22px;background:var(--crimson);color:#fff;
+  font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:13px;
+  padding:14px 28px;border-radius:999px;text-decoration:none;transition:filter .15s}
+.cta:hover{filter:brightness(1.08)}
+.cta:active{transform:scale(.98)}
+.baja{max-width:52ch;margin:14px auto 0;font-size:14px;color:#fff;background:rgba(10,7,8,.45);border:1px solid rgba(224,180,80,.5);border-radius:12px;padding:10px 14px}
+.baja b{color:var(--dorado);font-weight:500}
+.hero .fine{display:block;margin-top:14px;font-size:12.5px;color:rgba(255,255,255,.6)}
+
+.benefits{background:var(--surface);border-top:1px solid var(--borde);border-bottom:1px solid var(--borde)}
+.benefits .wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 22px;padding:20px 18px}
+.benefit{display:flex;gap:10px;align-items:flex-start;padding:8px 0;font-size:14px}
+.benefit svg{flex:0 0 auto;margin-top:2px}
+.benefit b{display:block;font-weight:500;color:#fff}
+.benefit span{color:var(--cuerpo);font-size:12.5px}
+
+.section{padding:46px 0}
+.section h2{font-weight:800;letter-spacing:-.01em;text-align:center;text-wrap:balance;
+  font-size:clamp(24px,5.5vw,32px);margin:0 0 6px;color:#fff;text-transform:none}
+.section .sub{text-align:center;color:var(--cuerpo);max-width:48ch;margin:0 auto 26px;font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:840px;margin:0 auto}
+.step{background:var(--surface);border:1px solid var(--borde);border-radius:var(--radius);padding:20px 16px;text-align:center}
+.step .num{width:34px;height:34px;border-radius:50%;background:var(--crimson);color:#fff;
+  font-family:var(--display);font-weight:800;display:grid;place-items:center;margin:0 auto 10px}
+.step b{display:block;font-size:14.5px;margin-bottom:3px;color:#fff;font-weight:500}
+.step span{font-size:12.5px;color:var(--cuerpo)}
+
+/* toggles */
+.toggles{display:flex;flex-direction:column;align-items:center;gap:10px;margin:0 auto 20px}
+.tgl{background:var(--surface2);border:1px solid var(--borde);border-radius:999px;padding:4px;display:inline-flex;position:relative}
+.tgl button{border:0;background:transparent;font-family:var(--display);font-weight:700;font-size:12px;
+  text-transform:uppercase;letter-spacing:.06em;color:var(--cuerpo);padding:10px 16px;border-radius:999px;cursor:pointer;position:relative;z-index:2;transition:color .2s}
+.tgl button.on{color:#fff}
+.tgl .slider{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);background:var(--crimson);border-radius:999px;transition:transform .22s ease;z-index:1}
+.tgl .slider.right{transform:translateX(100%)}
+.saveline{text-align:center;color:var(--dorado);font-weight:500;font-size:13px;margin:-6px 0 22px;min-height:18px}
+
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;max-width:1080px;margin:0 auto}
+.plan{background:var(--surface);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:22px 20px 24px;position:relative;display:flex;flex-direction:column}
+.plan.fav{background:var(--tinte);border-color:rgba(226,18,63,.45)}
+.plan .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);white-space:nowrap;
+  background:var(--crimson);color:#fff;font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+  font-size:10px;padding:5px 12px;border-radius:999px}
+.plan h3{font-weight:800;letter-spacing:-.01em;color:#fff;font-size:19px;margin:4px 0 2px;text-transform:none}
+.plan .bottles{font-size:12px;color:var(--suave);font-weight:500;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+.plan .off{display:inline-block;background:rgba(226,18,63,.14);color:var(--crimson-tx);font-family:var(--display);font-weight:700;font-size:11px;
+  letter-spacing:.04em;padding:3px 9px;border-radius:6px;margin-bottom:8px}
+.plan .price{font-family:var(--display);font-size:28px;font-weight:800;color:var(--dorado);line-height:1;font-variant-numeric:tabular-nums}
+.plan .price small{font-family:'Jost',sans-serif;font-size:14px;font-weight:400;color:var(--suave)}
+.plan .was{font-size:13px;color:var(--suave);text-decoration:line-through;margin-top:4px;min-height:18px}
+.plan .envnota{font-size:11.5px;color:var(--suave);margin-top:2px;min-height:16px}
+.plan .desc{font-size:13.5px;color:var(--cuerpo);margin:10px 0 16px;flex:1}
+.plan .pbtn{display:block;text-align:center;background:var(--crimson);color:#fff;font-family:var(--display);font-weight:800;text-transform:uppercase;
+  letter-spacing:.08em;font-size:12.5px;padding:13px;border-radius:999px;text-decoration:none;transition:filter .15s;border:0;cursor:pointer;width:100%}
+.plan .pbtn:hover{filter:brightness(1.08)}
+.plan .pbtn:active{transform:scale(.99)}
+.plan .trust{font-size:11px;color:var(--dorado);text-align:center;margin-top:9px;opacity:.9}
+
+.kit-cta{background:radial-gradient(80% 100% at 50% 0%, #2A0D15, #0A0708 70%);color:#fff;text-align:center;padding:46px 18px;border-top:1px solid var(--borde)}
+.kit-cta .tag{font-family:var(--display);color:var(--crimson-tx);font-weight:700;text-transform:uppercase;letter-spacing:.24em;font-size:12px;margin-bottom:8px}
+.kit-cta h2{color:#fff;font-size:clamp(24px,6vw,30px);font-weight:800;letter-spacing:-.01em;margin:0 0 8px;text-transform:none}
+.kit-cta h2 .brillo{color:var(--dorado)}
+.kit-cta p{color:var(--cuerpo);font-size:14.5px;margin:0 auto 18px;max-width:46ch}
+.kit-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:22px auto 4px;max-width:920px}
+.kit-item{width:152px;background:#fff;border-radius:14px;padding:10px 10px 12px;text-align:center;box-shadow:0 12px 34px rgba(0,0,0,.5)}
+.kit-item img{width:100%;height:112px;object-fit:contain;display:block}
+.kit-item b{display:block;color:#141413;font-family:var(--display);font-weight:700;font-size:12px;line-height:1.25;margin-top:7px}
+.kit-item .kbadge{display:inline-block;margin-top:7px;font-family:var(--display);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 9px;border-radius:999px;background:#f0ecee;color:#6b6165}
+.kit-item .kbadge.plus{background:var(--dorado);color:#0A0708}
+.kit-cta .kit-note{color:var(--cuerpo);font-size:13px;max-width:62ch;margin:16px auto 0}
+
+.help{text-align:center;padding:30px 18px 8px;color:var(--suave);font-size:14px}
+.help a{color:#fff;font-weight:500;text-decoration:none;border-bottom:2px solid var(--crimson-tx)}
+
+footer{background:var(--bg);color:var(--suave);text-align:center;padding:28px 18px;margin-top:40px;font-size:13px;border-top:1px solid var(--borde)}
+footer .fbrand{color:#fff;font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.12em;margin-bottom:4px}
+footer .ftag{color:var(--dorado);font-style:italic;margin-bottom:8px}
+footer .fnote{opacity:.8;max-width:54ch;margin:8px auto 0}
+
+@media(max-width:560px){
+  .steps{grid-template-columns:1fr}
+  .benefits .wrap{grid-template-columns:1fr}
+  .plan .price{font-size:26px}
+}
+</style>
+
+<div class="urg">🔥 Cyber Club · <b>solo hasta el miércoles 7 de octubre</b></div>
+
+<header class="hero">
+  <p class="eyebrow" id="h-eye"></p>
+  <h1 id="h-tit"></h1>
+  <p class="lede" id="h-lede"></p>
+
+  <div class="chips">
+    <span class="chip">🚚 Envío a todo Chile: <span class="n">10% OFF</span> mensual · <span class="n">15% OFF</span> anual</span>
+    <span class="chip">🔒 Descuento <span class="n">permanente</span> mientras sigas en el club</span>
+    <span class="chip kit">🎁 Kit de bienvenida de regalo</span>
+  </div>
+  <p class="baja">🔁 ¿Tienes una suscripción activa? Al suscribirte al plan nuevo <b>damos de baja la anterior el mismo día</b>. No pagas doble.</p>
+
+  <a class="cta" href="#planes" id="h-cta"></a>
+  <span class="fine">Sin permanencia · cancela cuando quieras</span>
+</header>
+
+<section class="benefits">
+  <div class="wrap">
+    <div class="benefit">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#F1315B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><b>Selección de autor</b><span>Etiquetas de pequeñas producciones que no están en el supermercado.</span></div>
+    </div>
+    <div class="benefit">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#F1315B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><b>Cada mes, sin repetir</b><span>Nunca te llega el mismo vino dos veces.</span></div>
+    </div>
+    <div class="benefit">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#F1315B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><b>Con su ficha de cata</b><span>La historia de cada botella para contar en la mesa.</span></div>
+    </div>
+    <div class="benefit">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#F1315B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><b>Envío a todo Chile</b><span>Gratis en Santiago y O'Higgins; en el resto, según tu comuna.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Cómo funciona</h2>
+    <p class="sub">Eliges, pagas en línea y nosotros nos encargamos del resto.</p>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><b>Elige tu plan</b><span>Desde 2 botellas al mes, mensual o anual.</span></div>
+      <div class="step"><div class="num">2</div><b>Tu comuna y pago</b><span>Ves el total con envío y pagas con WebPay o Mercado Pago.</span></div>
+      <div class="step"><div class="num">3</div><b>Recibe tu kit</b><span>Tu primera caja llega con el kit de bienvenida. Si tenías un plan activo, lo damos de baja el mismo día.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="planes" style="padding-top:6px">
+  <div class="wrap">
+    <h2>Elige tu plan</h2>
+    <p class="sub">Precio Cyber con descuento permanente. El envío se suma según tu comuna.</p>
+
+    <div class="toggles">
+      <div class="tgl" id="tglEnt" style="display:none">
+        <span class="slider" id="sliEnt"></span>
+        <button class="on" id="btnRet" onclick="setEnt('retiro')">🏬 Retiro en tienda</button>
+        <button id="btnEnv" onclick="setEnt('envio')">🚚 Envío a domicilio</button>
+      </div>
+      <div class="tgl" id="tglPer">
+        <span class="slider" id="sliPer"></span>
+        <button class="on" id="btnMes" onclick="setPer('mes')">Mensual · <span id="pctMes">10%</span> OFF</button>
+        <button id="btnAno" onclick="setPer('ano')">Anual · <span id="pctAno">15%</span> OFF</button>
+      </div>
+    </div>
+    <p class="saveline" id="saveline"></p>
+
+    <div class="plans" id="plans"><!-- generado por JS --></div>
+    <p style="text-align:center;color:rgba(255,255,255,.55);font-size:12px;margin-top:20px">
+      Oferta válida para suscripciones nuevas, cambios de plan y reactivaciones hechas hasta el miércoles 7 de octubre de 2026. El total exacto con despacho aparece al elegir tu comuna.
+    </p>
+  </div>
+</section>
+
+<section class="kit-cta" id="kit">
+  <p class="tag">🎁 Regalo de bienvenida</p>
+  <h2>Kit de bienvenida <span class="brillo">de regalo</span></h2>
+  <p>Tu primera caja con el plan nuevo llega con estos regalos, según tu plan. También si subes de plan o vuelves al club:</p>
+  <div class="kit-grid">
+    <div class="kit-item"><img src="https://images.jumpseller.com/store/up-to-wine-chile/29558961/DESCORCHADOR_20CAJA_20MUELLE_20OCULTO_202.png?1783715387" alt="Descorchador profesional Muelle Oculto" loading="lazy"><b>Descorchador profesional Muelle Oculto</b><span class="kbadge">Todos los planes</span></div>
+    <div class="kit-item"><img src="https://images.jumpseller.com/store/up-to-wine-chile/35866610/CORTA_20GOTAS_20DROP_20STOP_20CD_20UP_20TO_20WINE_201.png?1785517822" alt="Cortagotas reutilizable" loading="lazy"><b>Cortagotas reutilizable</b><span class="kbadge">Todos los planes</span></div>
+    <div class="kit-item"><img src="https://images.jumpseller.com/store/up-to-wine-chile/35866352/TAPON_20PARA_20VINOS_20UP_20TO_20WINE.png?1783806311" alt="Tapón sujetador" loading="lazy"><b>Tapón sujetador</b><span class="kbadge">Todos los planes</span></div>
+    <div class="kit-item"><img src="https://images.jumpseller.com/store/up-to-wine-chile/35865728/AIREADOR_20TIPO_20CENTELLINO_20UP_20TO_20WINE_201.png?1783711015" alt="Aireador y dosificador de vidrio soplado" loading="lazy"><b>Aireador y dosificador de vidrio</b><span class="kbadge plus">Desde Conocedor</span></div>
+    <div class="kit-item"><img src="https://images.jumpseller.com/store/up-to-wine-chile/35866548/COPA_20GRABADA_20MUELLE_20OCULTO.png?1783714559" alt="Copa de cristal grabada Muelle Oculto" loading="lazy"><b>3 copas de cristal grabadas</b><span class="kbadge plus">Solo Sommelier</span></div>
+  </div>
+  <p class="kit-note">Dúo, Dúo Premium, Descubridor y Aficionado reciben descorchador, cortagotas y tapón. Conocedor y Enófilo suman el aireador de vidrio soplado. Sommelier se lleva el kit completo, con 3 copas de cristal grabadas para degustar como corresponde.</p>
+  <a class="cta" href="#planes">Elegir mi plan ahora ↑</a>
+</section>
+
+<div class="help">
+  ¿Dudas? Escríbenos por
+  <a href="https://wa.me/56931737400?text=Hola!%20Tengo%20una%20duda%20con%20la%20oferta%20Cyber%20Club" target="_blank" rel="noopener">WhatsApp</a>
+  y te ayudamos a elegir.
+</div>
+
+<footer>
+  <div class="fbrand">Up to Wine · Club de vinos boutique</div>
+  <div class="ftag">Vinos de autor boutique</div>
+  <div>Sin permanencia · cancela cuando quieras · garantía de calidad total</div>
+  <div class="fnote">Si ya tienes una suscripción activa, damos de baja la anterior el mismo día en que se activa la nueva. El descuento se mantiene mientras la suscripción siga activa.</div>
+</footer>
+
+<script>
+/* ---- planes: retiro 15%/20% · envio 10%/15% ---- */
+var PLANES = [
+  {id:'duo',        n:'Dúo',          b:'2 botellas / mes',     desc:'Dos vinos distintos al mes: uno para el gusto seguro, otro para descubrir.'},
+  {id:'duo-premium',n:'Dúo Premium',  b:'2 Premium / mes',      desc:'Dos etiquetas Premium al mes — para brindar solo con lo mejor.'},
+  {id:'descubridor',n:'Descubridor',  b:'3 Gran Reserva / mes', desc:'Tres Gran Reserva: la forma de conocer más viñas gastando menos.'},
+  {id:'aficionado', n:'Aficionado',   b:'3 botellas / mes',     desc:'Tres botellas: dos para la semana y un Premium para la ocasión.'},
+  {id:'conocedor',  n:'Conocedor',    b:'3 Premium / mes',      desc:'Tres Premium al mes — una cata distinta cada semana.', fav:true},
+  {id:'enofilo',    n:'Enófilo',      b:'4 botellas / mes',     desc:'Todo el Conocedor + 1 Gran Reserva, por muy poco más.'},
+  {id:'sommelier',  n:'Sommelier',    b:'6 botellas / mes',     desc:'Media caja de lo mejor del mes, sin tener que elegir.'}
+];
+var CFG = {"retiroMensual":{"duo":22090,"duo-premium":25490,"descubridor":26760,"aficionado":33130,"conocedor":35690,"enofilo":42490,"sommelier":57790},"retiroAnual":{"duo":249500,"duo-premium":287900,"descubridor":302210,"aficionado":374210,"conocedor":403100,"enofilo":479900,"sommelier":652700},"envioMensual":{"duo":23390,"duo-premium":26990,"descubridor":28330,"aficionado":35080,"conocedor":37790,"enofilo":44990,"sommelier":61190},"envioAnual":{"duo":265100,"duo-premium":305900,"descubridor":321100,"aficionado":397600,"conocedor":428300,"enofilo":509900,"sommelier":693500},"base":{"duo":25990,"duo-premium":29990,"descubridor":31480,"aficionado":38980,"conocedor":41990,"enofilo":49990,"sommelier":67990},"tokens":{"retiro":{"mensual":{"duo":"Hrst9ZfLNqN1AdFWCtmx1upDD3BKakqg","duo-premium":"4ZXUBNiiCgQalYjRCAUOn6j1TylU5AYo","descubridor":"J6UCFjEOct2ttZ0epE5k9qjOGGz2DCh4","aficionado":"MsEiSlWdFc5cLNs8w1GFWS3hHGAFuuPX","conocedor":"bpr99S6pNZCfKesmMdjs8x4LP4xDz0NY","enofilo":"y6nDERo7gSXYiKJK9hrqMQ26b30Ri5hT","sommelier":"w9LKKDQfyfin1XtdUYfH6hVrhl750SX4"},"anual":{"duo":"OxhpQNjemXumM1GYlm8HiwKXVnjQWpjQ","duo-premium":"bKepoUtAr1ErobwnMCpZ9AEkOAxqUKYQ","descubridor":"DhEk9m1XerIysMMuVPEn8SRtgZidO6IC","aficionado":"1BJbO62606RfgjPUDgEatVeefmOcPx4g","conocedor":"BKQyXmdDBNH1BATBcnjdHn1j7mPYWnkx","enofilo":"cNGQits0vhIfybm0AKwHDipbn7a1YAyL","sommelier":"wYAhhZY4J11r5nhkguobxJWf9ns73B1v"}},"envio":{"mensual":{"duo":{"0":"7hJxkmUQdCDGVqsSJ9eelXn1WyKtyfUm","3000":"5DRdJwc17iYzHukHD8qMQ3zqUQKZzc49","3500":"sKXTDrxDXknTldVzk3jSBax2HpDbztCE","4500":"qnJVGgOLswoaPa6gXzMMHEJxg70ggIOM","5000":"0UJbS1PeWz1wQtnIyHdCznscAkLgtz4i","5800":"QKswCOBrb2o0Ik0b7CN7nXty54o6rmnL","6500":"RCpCyHCpg1J0H2I1eSPf22MYrGo8hyaa","10000":"X4uJcKc8jEuRUoX7EhMnj1fphTGszs00","11000":"vasDQ7Y3DKhtm82CUfovrm4rx22x2hE2","15000":"Wrp5VZsVT9RblS7MQZmpX0ibmXAMpfKE","20000":"7QtB5IdxNe7oh02vyYmYc1Sk5AalCOKe"},"duo-premium":{"0":"b7VRov2gBUWzOS5QZoc07BuDN2VtQwhh","3000":"3vuphzwKYPFvm2je3g6FXF0tBtkdWYrF","3500":"f88mJo4SBGDVPhgE9bpTmhm9wjGUd2Wz","4500":"7c5PFsL3pnKuHZc6SYaUVPQYwtYmtoHU","5000":"sZymdPGJxSvk1ydPcbsrjxOMPhEN1hhD","5800":"Dtgan2t5J0nQEaMyda6K6JN4KFqCTVP5","6500":"efFy6iSnVt2s2cJbqFwiCvYbJMXuZoYE","10000":"bJfsL5yzsZqlUHQ8pVQ7tfN7qADsHrt4","11000":"IDu6FYE2CKWJvc1N2KFIbyeBWagA2YCQ","15000":"RQ5YB031BG8MSVKLq2QP68XiXh5yJhkT","20000":"2Pm4dQvONOUwyt40eHNsFs0Ee2e5XwVl"},"descubridor":{"0":"ZHPxSuVfxH1ttWjY1S7DkyPfu5PJfJM0","3000":"MNhQP0CewpooFE6zxLi6KbwYgHXkM6J8","3500":"BzhmhLUXNEPBk6ROjQnmmNprL2B0ng3w","4500":"dAgRXQ0qUiD2gXBSh8Wv46rjBWxcxhev","5000":"LPG7oLj0Op4CuVYRYqVHqfSqlDL4iyms","5800":"6J354E6ou1SDqXUuAVrzNvpiZPPc8tp0","6500":"b3GwTguX4bnqWSTEKs776P1X6oXHS11T","10000":"oHUcWde5kUYU3uDBaum2TFTWNAbpTIRs","11000":"l5OuW1Qsg2flbUXhjwV2P1oh4stT99IQ","15000":"qkJozCc99om99zOTsxYPo5QYWz4Ih34A","20000":"nB2OjWpoA4fo0KbRHPxqb2CarB2t1s1G"},"aficionado":{"0":"Mw2yn9GgYWlFFBsnUXT507qIvCXymii5","3000":"fvA3RV9JFEjhjWGtAOvivBZP97mOyEuN","3500":"e4RmuS7PWn279IqRmKG4u8vMreUkf5Dn","4500":"rDDXrvhxV5jmst0exFtLN8449rTZtQSx","5000":"YlDr1mQcuRe6ovlZqXWBv7SF5TAtExJM","5800":"dK9Mo8bfo5nnCg2hDa09JHMpU6YRLYGx","6500":"fdorWC3T4nA39jziZrweLC3pSKBbYkwS","10000":"rlfLujKdif0FeuKrbX1eOIgdiOun4Jf9","11000":"9SqsesLnYz99MOGASGmYIzMQOIzjkSGu","15000":"lAaIrURigeK3lC5BO7FuP08PvJcSMrKj","20000":"HssSQXoL7t7eXTnN8O1VyTVQ8Hb24QjA"},"conocedor":{"0":"oBOI2t1OUVqjN9gx0ekvH4Ovxdi0Tsrr","3000":"lM9XmpDasiybOW23kL1drNVt0dTQQb0d","3500":"cQWcyeSMYz3hsQge6TP5KSoJ5zhU1nM7","4500":"F6KrBTQaWHKKU4Ql0O7wPAW6E9EFswLe","5000":"7dIgJXL4xGOnYrRaYtk1AOdCkF42MDZg","5800":"rckOFP0yf6CZ5G9NQKS7pwzHWeDqaqHg","6500":"TTDUtm7ZuHZDd6Brzsk4htGfkS7GMX3z","10000":"vXYoLDOmWIvLaaO7ZtddVn0SA82aNDfW","11000":"g5bQQZM9TOOrzqjcrlavARtoEJGG737d","15000":"7QxUz0Hoxgyh3J7SDXrbfY0PAJ1RxhCE","20000":"NJnuIB0KUWJbgI0QEtDCpah14qovpYTt"},"enofilo":{"0":"UCKF2azFL5TIqI7b13Av3NCNnwEOLcTF","3000":"krZpotigW6Ve1y6Ob03NvabwrjOqUVyu","3500":"sPaspWBe4fUsnffUUroGEkad5e7owW0g","4500":"gLlfxTbu44jo7VPVinLfkfIAi5b9YA01","5000":"EBuLme4ZamJ0AfMJTxWimtdTMnaRmTmu","5800":"CwJ2rD8UVlRN6huH6To5h0J9ZDgan69m","6500":"LVBOUk0h4vGVfIrMCxuUylqubHNkUAMZ","10000":"iu63twPMsywWa4e3wshTQWtCOyzh99oj","11000":"Rn08uHgcWRrDHz11oNznShbG54wmHnWw","15000":"Pq0txMLisXVJchIMvYYDhgJrMgvV0fFL","20000":"Jowbgby3jCxW2kFiAi9xJiFz5LMSmLZg"},"sommelier":{"0":"ETvbk3sEHtN5nGEmVJkppDxOTpDYk6ZK","3000":"MTvcoeBrfrRjS6xWpZbvRFuipoxHWm48","3500":"9d3oHFqKJI2zjNjksmjMBHulxCMW46JM","4500":"5LL3aVuVZDKUfuIaMPOET1ufqSrF7uDm","5000":"XewM9jHwG9ErIZVS2VgQlezLqPkGa3f4","5800":"8s3R7EbR3o3yZLg1shUEK3nhzfoL1c7S","6500":"468ZOFicv4m7aVRJWD5fDJ3rqzhFWQgA","10000":"5I72XSF0k4LQWNTi53GeREMSBbOHNndA","11000":"tqSxocDXtawTPR8PAzYxdP2R7ZR8hgMf","15000":"v8OhiIflUfqbROmXSaxdrALNL5UkPYPp","20000":"rJo1PECfWC0Fm8JSURlnSRdGELqw2QCq"}},"anual":{"duo":{"0":"4U2z76KaaS8fPIVMZ7nea9g0PmPnuusi","3000":"5MAkuu5kKaYWZpFC6HWmza9CLhsh3yT4","3500":"n6125HhfNkYkAqBlXeLgSqoXmAJk399Q","4500":"MjHxMGrtVfCv5ZuKNpbp7x138yHNVyUI","5000":"cxAq5w5DorRZpZNTQlV9F6Y733fFXnk8","5800":"s5FWpyfWyt4BtsITpyxmS1n8Mh1GNokA","6500":"SrdgHlbXQ4jOa1ufxFH77AB0OpZVb2yW","10000":"gQAISVa0jnZIRhsL6ZdH1uCW60pqaajl","11000":"27j1QZRyolfkoTb2exZbujZsnPapRKMg","15000":"XFtUrhJa8cLDX4LdNl70T8tWu8fuUYg6","20000":"vKPyJAovox8W06bCfN7C7TMWTzA7xwX0"},"duo-premium":{"0":"NJYY3kdNYAHdqraJqy7Wib8kI0DSNRCS","3000":"AddqRHPYL2Ls09wJW6qDoZtzfjmSk6dn","3500":"enN8NQ890kspyc84UmwpJSeDd0xafw0c","4500":"CJFyEDeqTzKoafmE3Ejn3J8cb8tWCcai","5000":"hvkwhNJa3lkPpekvmHyjxKcxetWYnR2O","5800":"0NnAVRkwIJnLdhOFE7So6APxVsQmyUx8","6500":"KNlJONMmJ2W69XOFCWb37bILApz5hpRv","10000":"fZpjJowGcQcPJjZ1Xy4WGVkK32WTGjfa","11000":"exisHUZnKlw8mPCooQL7L4K2hiIkRmWO","15000":"zPG6f7MmKRtwc3akbsddTYFZSesbUEDl","20000":"Arbl8iqdYxzGwf8mPE8q46WT04YYIrx3"},"descubridor":{"0":"BCNwPZoFH6qXcCz6lVvrKfwjaCyQWTcL","3000":"1DDiKGA8cOV7k2datSrl0fEQTxLFGTwy","3500":"E2VmMmUEsnp0G6Pk2JZE8XlpYZ5CBPvH","4500":"EUFOUUNCYwpUPosLiXQnkVX4yYkZG9vn","5000":"tzloejSJkdxItNtAHFTpDt59csnb6Sgv","5800":"eXIcX9KbCHzoSWJ8gQCtiYsKp6zilfcP","6500":"TudVzEChxBlUx3lcijayvfAH6Ms433oR","10000":"fVZlv1hCeNR99qoALTuHODxU6pw7ct5x","11000":"rdb8QYbevRsczSj2FbzRYU85Tuk70LXj","15000":"2kvd4eSAqykNslrdBVs7JrqbGTa5K0gl","20000":"CAPBg8L2JhNFLMD5OuMdAobZ89wOZ6FC"},"aficionado":{"0":"OTxRLviAgCrRf5J0t24olEL0S2TDoOwF","3000":"wlCvb4RBzEOCpwi84fumAcNJ3xiNE7mt","3500":"3F6oTZgJwaXEfAK9kzWiS8NcXwkYxDRH","4500":"NqtNgsd5BV19a9to6Ke3BUa7ccI7BJTq","5000":"AXPA8EvZF3c5z9oRG3LVl5P8vszaxv6q","5800":"Z9Gzz5slg7PLev0ZHpLZncHue6bp8uf0","6500":"xRlG7IvFC3CnTbG3FI81LZ6qwtz2P8mg","10000":"ObY79D0ydmCixaCH1AmJfqMgcwqhB8lS","11000":"QV3egIai1vzzrnsTjJGk7R8zX3p8IxrE","15000":"KjCAiYN5PDJaQ2fu8KlbMgKXnZGxw8Cv","20000":"kOhYK3o1DN0o5MFTfKjNSEZGJq2ptOhU"},"conocedor":{"0":"u5ZvfFxWR9s3CYtWKo3Sv6blSsYZkc8F","3000":"iNDq83c58J66gG8aoiF4D13j9qJEO8FT","3500":"X4R5yWEjJq6A5lseW0cp99GXzdBRjFyj","4500":"ldpHdDdc64bEmolcmG8Q04CSnGdAI27d","5000":"7MARJN8p9jDK1pO3hB4wfjKpYPxuvj55","5800":"XP09apE7TcZb9DH0xCpDGsO8Dx5oKEFe","6500":"DaVIYES2ZmQaeLUFffrCijnM8CvhAMYr","10000":"W3AqcTFWyI3f3NwhXaAltkcEgwmse82e","11000":"BPzTim9GXMPUeyYlak5gT57KOKQ9jK9b","15000":"FBDpxrOspabaSAg1ROp5kSwYxO6v7deY","20000":"5CXp40IAEh7BtVc8XOdi4fGs6GF0UYtE"},"enofilo":{"0":"6kJaKK8vszeQsSfTnx6M79bf8bfzBBhK","3000":"nWFGw2O8WI3307yj48nwy9NpaFH5kDEo","3500":"FiiPj4Br0Vi4lHx7qwJrecLcMt3C2IR1","4500":"twGNi2aYJMFu5dBAvLw2EqQVUADyOncR","5000":"NV5XFq7zfTasOGy4XpNXZH2aSBO3CcpF","5800":"XGcAN0hq1BCniaNBFVEKGDnwvfKrTA26","6500":"QZEJ4HE5I5PEu5C7B8GzzxmSz63IjfO0","10000":"0XEpUcl6r80BWylGwUgFPM967vrtQftd","11000":"NiQxHc0ccAV9LEe56puP5edTiSJdRkkj","15000":"QtoY7vWoQyzPKKHn8s9v0ESTiZGkx0xy","20000":"ltL8s4pIrCejECqHfgowCnkx3tbdubcp"},"sommelier":{"0":"QNRQHZpwgLqkKt8sxHJs7xE9aIVCMD0L","3000":"zQY6nUAxJkCjxe6IDU1nPTuqSvTf7pzx","3500":"4W0COVGsQDAQ0RPRzZGumCE9qngAP4Il","4500":"oNzBsSFVqHikCBQO5CxEx0h6bKClRmCx","5000":"uVPkPWyHPIACsjk5MwB78Z6UpaqN0m3n","5800":"ebkOUW7hR2XgsaBpXYe2ZiT1ZskokUpE","6500":"EPRjap8AbW6mqyXGVrmXt8te4Bx6oTiM","10000":"xpQ27QV2aNXtU1utWNRT7HeHa65sXPiv","11000":"3z509BWbTNYZNBsAf8cXgSrCHpQw87oF","15000":"Ql0MOEyVXnJKUUfyC6qLTZHKuybXwtBu","20000":"UNK4gO7Y2TJapnAhDdJxKB3K7wIM6KHZ"}}}},"comunaEnvio":{"Cerrillos":0,"Cerro Navia":0,"Chimbarongo":0,"Chépica":0,"Codegua":0,"Coinco":0,"Colina":0,"Coltauco":0,"Conchalí":0,"Doñihue":0,"El Bosque":0,"Estación Central":0,"Graneros":0,"Huechuraba":0,"Independencia":0,"La Cisterna":0,"La Estrella":0,"La Florida":0,"La Granja":0,"La Pintana":0,"La Reina":0,"Las Cabras":0,"Las Condes":0,"Litueche":0,"Lo Barnechea":0,"Lo Espejo":0,"Lo Prado":0,"Lolol":0,"Machalí":0,"Macul":0,"Maipú":0,"Malloa":0,"Marchigüe":0,"Nancagua":0,"Navidad":0,"Olivar":0,"Palmilla":0,"Paredones":0,"Pedro Aguirre Cerda":0,"Peralillo":0,"Peumo":0,"Peñalolén":0,"Pichidegua":0,"Pichilemu":0,"Placilla":0,"Providencia":0,"Pudahuel":0,"Puente Alto":0,"Pumanque":0,"Quilicura":0,"Quinta Normal":0,"Quinta de Tilcoco":0,"Rancagua":0,"Recoleta":0,"Renca":0,"Rengo":0,"Requínoa":0,"San Bernardo":0,"San Fernando":0,"San Joaquín":0,"San Miguel":0,"San Ramón":0,"San Vicente":0,"Santa Cruz":0,"Santiago":0,"Vitacura":0,"Ñuñoa":0,"Calera":3000,"Concepción":3000,"Concón":3000,"El Monte":3000,"Isla de Maipo":3000,"La Cruz":3000,"Lampa":3000,"Padre Hurtado":3000,"Peñaflor":3000,"Pirque":3000,"Quillota":3000,"Talagante":3000,"Valparaíso":3000,"Viña del Mar":3000,"Buin":3500,"Calera de Tango":3500,"Calle Larga":3500,"Casablanca":3500,"Catemu":3500,"Chillán":3500,"Chillán Viejo":3500,"Copiapó":3500,"Coquimbo":3500,"Curacaví":3500,"La Serena":3500,"Los Andes":3500,"Los Ángeles":3500,"Melipilla":3500,"Osorno":3500,"Paine":3500,"Panquehue":3500,"Puerto Montt":3500,"Putaendo":3500,"Rinconada":3500,"San Esteban":3500,"San Felipe":3500,"San Pedro de la Paz":3500,"Talca":3500,"Talcahuano":3500,"Temuco":3500,"Tiltil":3500,"Valdivia":3500,"Algarrobo":4500,"Antofagasta":4500,"Cabildo":4500,"Calama":4500,"Canela":4500,"Cartagena":4500,"Cauquenes":4500,"Colbún":4500,"Constitución":4500,"Curicó":4500,"El Quisco":4500,"El Tabo":4500,"Hijuelas":4500,"Illapel":4500,"La Ligua":4500,"Linares":4500,"Llaillay":4500,"Longaví":4500,"Los Vilos":4500,"Maule":4500,"Molina":4500,"Nogales":4500,"Ovalle":4500,"Papudo":4500,"Parral":4500,"Pelarco":4500,"Pencahue":4500,"Puchuncaví":4500,"Quintero":4500,"Rauco":4500,"Romeral":4500,"Río Claro":4500,"Sagrada Familia":4500,"San Antonio":4500,"San Clemente":4500,"San Javier":4500,"San Rafael":4500,"Santo Domingo":4500,"Teno":4500,"Villa Alegre":4500,"Yerbas Buenas":4500,"Zapallar":4500,"Alto del Carmen":5000,"Angol":5000,"Antuco":5000,"Arauco":5000,"Cabrero":5000,"Carahue":5000,"Chiguayante":5000,"Coelemu":5000,"Collipulli":5000,"Coronel":5000,"Cunco":5000,"El Carmen":5000,"Ercilla":5000,"Freire":5000,"Freirina":5000,"Galvarino":5000,"Gorbea":5000,"Hualpén":5000,"Hualqui":5000,"Huasco":5000,"Iquique":5000,"La Higuera":5000,"Laja":5000,"Lanco":5000,"Lautaro":5000,"Loncoche":5000,"Lota":5000,"Mulchén":5000,"Nacimiento":5000,"Negrete":5000,"Nueva Imperial":5000,"Padre Las Casas":5000,"Penco":5000,"Perquenco":5000,"Pitrufquén":5000,"Pucón":5000,"Punitaqui":5000,"Quilaco":5000,"Quilleco":5000,"Renaico":5000,"Ránquil":5000,"Saavedra":5000,"San Rosendo":5000,"Santa Bárbara":5000,"Teodoro Schmidt":5000,"Toltén":5000,"Tomé":5000,"Traiguén":5000,"Tucapel":5000,"Vallenar":5000,"Victoria":5000,"Vicuña":5000,"Vilcún":5000,"Villarrica":5000,"Yumbel":5000,"Ñiquén":5000,"Arica":5800,"Calbuco":5800,"Caldera":5800,"Fresia":5800,"Frutillar":5800,"La Unión":5800,"Llanquihue":5800,"Los Lagos":5800,"Los Muermos":5800,"Mariquina":5800,"Maullín":5800,"Máfil":5800,"Paillaco":5800,"Puerto Octay":5800,"Puerto Varas":5800,"Puyehue":5800,"Río Bueno":5800,"Río Negro":5800,"San Juan de la Costa":5800,"San Pablo":5800,"Tierra Amarilla":5800,"Alhué":6500,"Coyhaique":6500,"Mejillones":6500,"Pozo Almonte":6500,"San José de Maipo":6500,"San Pedro":6500,"Alto Hospicio":10000,"Andacollo":10000,"Camarones":10000,"Cañete":10000,"Cholchol":10000,"Cobquecura":10000,"Contulmo":10000,"Curacautín":10000,"Curanilahue":10000,"Florida":10000,"Lebu":10000,"Los Sauces":10000,"Los Álamos":10000,"Lumaco":10000,"Melipeuco":10000,"Monte Patria":10000,"Panguipulli":10000,"Punta Arenas":10000,"Purén":10000,"Retiro":10000,"Río Hurtado":10000,"Salamanca":10000,"San Fabián":10000,"Santa Juana":10000,"Tirúa":10000,"Yungay":10000,"Ancud":11000,"Aysén":11000,"Castro":11000,"Chañaral":11000,"Corral":11000,"Diego de Almagro":11000,"Futrono":11000,"Lago Ranco":11000,"Purranque":11000,"Quellón":11000,"Quemchi":11000,"Alto Biobío":15000,"Bulnes":15000,"Camiña":15000,"Chanco":15000,"Cisnes":15000,"Cochrane":15000,"Coihueco":15000,"Combarbalá":15000,"Curarrehue":15000,"Curepto":15000,"Empedrado":15000,"Guaitecas":15000,"Hualañé":15000,"Huara":15000,"Lago Verde":15000,"Licantén":15000,"Lonquimay":15000,"María Elena":15000,"Ninhue":15000,"O'Higgins":15000,"Paiguano":15000,"Pelluhue":15000,"Pemuco":15000,"Pica":15000,"Pinto":15000,"Portezuelo":15000,"Quillón":15000,"Quirihue":15000,"San Carlos":15000,"San Ignacio":15000,"San Nicolás":15000,"San Pedro de Atacama":15000,"Sierra Gorda":15000,"Taltal":15000,"Tocopilla":15000,"Tortel":15000,"Treguaco":15000,"Vichuquén":15000,"Cabo de Hornos":20000,"Chaitén":20000,"Chile Chico":20000,"Chonchi":20000,"Cochamó":20000,"Colchane":20000,"Curaco de Vélez":20000,"Dalcahue":20000,"Futaleufú":20000,"General Lagos":20000,"Hualaihué":20000,"Laguna Blanca":20000,"Natales":20000,"Ollagüe":20000,"Palena":20000,"Petorca":20000,"Porvenir":20000,"Primavera":20000,"Puqueldón":20000,"Putre":20000,"Queilén":20000,"Quinchao":20000,"Río Ibáñez":20000,"Río Verde":20000,"San Gregorio":20000,"Timaukel":20000,"Torres del Paine":20000},"regiones":{"Arica Parinacota":["Arica","Camarones","General Lagos","Putre"],"Tarapaca":["Alto Hospicio","Camiña","Colchane","Huara","Iquique","Pica","Pozo Almonte"],"Antofagasta":["Antofagasta","Calama","María Elena","Mejillones","Ollagüe","San Pedro de Atacama","Sierra Gorda","Taltal","Tocopilla"],"Atacama":["Alto del Carmen","Caldera","Chañaral","Copiapó","Diego de Almagro","Freirina","Huasco","Tierra Amarilla","Vallenar"],"Coquimbo":["Andacollo","Canela","Combarbalá","Coquimbo","Illapel","La Higuera","La Serena","Los Vilos","Monte Patria","Ovalle","Paiguano","Punitaqui","Río Hurtado","Salamanca","Vicuña"],"Valparaiso":["Algarrobo","Cabildo","Calera","Calle Larga","Cartagena","Casablanca","Catemu","Concón","El Quisco","El Tabo","Hijuelas","La Cruz","La Ligua","Llaillay","Los Andes","Nogales","Panquehue","Papudo","Petorca","Puchuncaví","Putaendo","Quillota","Quintero","Rinconada","San Antonio","San Esteban","San Felipe","Santo Domingo","Valparaíso","Viña del Mar","Zapallar"],"Metropolitana":["Alhué","Buin","Calera de Tango","Cerrillos","Cerro Navia","Colina","Conchalí","Curacaví","El Bosque","El Monte","Estación Central","Huechuraba","Independencia","Isla de Maipo","La Cisterna","La Florida","La Granja","La Pintana","La Reina","Lampa","Las Condes","Lo Barnechea","Lo Espejo","Lo Prado","Macul","Maipú","Melipilla","Padre Hurtado","Paine","Pedro Aguirre Cerda","Peñaflor","Peñalolén","Pirque","Providencia","Pudahuel","Puente Alto","Quilicura","Quinta Normal","Recoleta","Renca","San Bernardo","San Joaquín","San José de Maipo","San Miguel","San Pedro","San Ramón","Santiago","Talagante","Tiltil","Vitacura","Ñuñoa"],"Ohiggins":["Chimbarongo","Chépica","Codegua","Coinco","Coltauco","Doñihue","Graneros","La Estrella","Las Cabras","Litueche","Lolol","Machalí","Malloa","Marchigüe","Nancagua","Navidad","Olivar","Palmilla","Paredones","Peralillo","Peumo","Pichidegua","Pichilemu","Placilla","Pumanque","Quinta de Tilcoco","Rancagua","Rengo","Requínoa","San Fernando","San Vicente","Santa Cruz"],"Maule":["Cauquenes","Chanco","Colbún","Constitución","Curepto","Curicó","Empedrado","Hualañé","Licantén","Linares","Longaví","Maule","Molina","Parral","Pelarco","Pelluhue","Pencahue","Rauco","Retiro","Romeral","Río Claro","Sagrada Familia","San Clemente","San Javier","San Rafael","Talca","Teno","Vichuquén","Villa Alegre","Yerbas Buenas"],"Nuble":["Bulnes","Chillán","Chillán Viejo","Cobquecura","Coelemu","Coihueco","El Carmen","Ninhue","Pemuco","Pinto","Portezuelo","Quillón","Quirihue","Ránquil","San Carlos","San Fabián","San Ignacio","San Nicolás","Treguaco","Yungay","Ñiquén"],"Biobio":["Alto Biobío","Antuco","Arauco","Cabrero","Cañete","Chiguayante","Concepción","Contulmo","Coronel","Curanilahue","Florida","Hualpén","Hualqui","Laja","Lebu","Los Álamos","Los Ángeles","Lota","Mulchén","Nacimiento","Negrete","Penco","Quilaco","Quilleco","San Pedro de la Paz","San Rosendo","Santa Bárbara","Santa Juana","Talcahuano","Tirúa","Tomé","Tucapel","Yumbel"],"Araucania":["Angol","Carahue","Cholchol","Collipulli","Cunco","Curacautín","Curarrehue","Ercilla","Freire","Galvarino","Gorbea","Lautaro","Loncoche","Lonquimay","Los Sauces","Lumaco","Melipeuco","Nueva Imperial","Padre Las Casas","Perquenco","Pitrufquén","Pucón","Purén","Renaico","Saavedra","Temuco","Teodoro Schmidt","Toltén","Traiguén","Victoria","Vilcún","Villarrica"],"Los Rios":["Corral","Futrono","La Unión","Lago Ranco","Lanco","Los Lagos","Mariquina","Máfil","Paillaco","Panguipulli","Río Bueno","Valdivia"],"Los Lagos":["Ancud","Calbuco","Castro","Chaitén","Chonchi","Cochamó","Curaco de Vélez","Dalcahue","Fresia","Frutillar","Futaleufú","Hualaihué","Llanquihue","Los Muermos","Maullín","Osorno","Palena","Puerto Montt","Puerto Octay","Puerto Varas","Puqueldón","Purranque","Puyehue","Queilén","Quellón","Quemchi","Quinchao","Río Negro","San Juan de la Costa","San Pablo"],"Aysen":["Aysén","Chile Chico","Cisnes","Cochrane","Coyhaique","Guaitecas","Lago Verde","O'Higgins","Río Ibáñez","Tortel"],"Magallanes":["Cabo de Hornos","Laguna Blanca","Natales","Porvenir","Primavera","Punta Arenas","Río Verde","San Gregorio","Timaukel","Torres del Paine"]}};
+function clp(n){return '$'+ n.toLocaleString('es-CL');}
+var ent='envio', per='mes';
+function precio(p){
+  if(ent==='retiro') return per==='mes'? CFG.retiroMensual[p.id] : CFG.retiroAnual[p.id];
+  return per==='mes'? CFG.envioMensual[p.id] : CFG.envioAnual[p.id];
+}
+function pct(){ return ent==='retiro' ? (per==='mes'?'15%':'20%') : (per==='mes'?'10%':'15%'); }
+function render(){
+  document.getElementById('pctMes').textContent = ent==='retiro'?'15%':'10%';
+  document.getElementById('pctAno').textContent = ent==='retiro'?'20%':'15%';
+  document.getElementById('saveline').textContent = ent==='retiro'
+    ? (per==='mes' ? 'Retiras tu caja cada mes en el Emporio con 15% de descuento.' : 'Pagas el año con 20% OFF y retiras tu caja cada mes en el Emporio.')
+    : (per==='mes' ? 'Te la enviamos cada mes con 10% de descuento (+ envío según tu comuna).' : 'Pagas el año con 15% OFF y te la enviamos cada mes (+ envío según tu comuna).');
+  var host=document.getElementById('plans'); host.innerHTML='';
+  PLANES.forEach(function(p){
+    var isMes = per==='mes';
+    var pr = precio(p);
+    var was = isMes? CFG.base[p.id] : CFG.base[p.id]*12;
+    var unit = isMes? '/mes' : '/año';
+    var el=document.createElement('div');
+    el.className='plan'+(p.fav?' fav':'');
+    el.innerHTML =
+      (p.fav?'<span class="badge">★ El favorito de los socios</span>':'')+
+      '<h3>'+p.n+'</h3>'+
+      '<div class="bottles">'+p.b+'</div>'+
+      '<span class="off">'+pct()+' OFF permanente</span>'+
+      '<div class="price">'+clp(pr)+' <small>'+unit+'</small></div>'+
+      '<div class="was">antes '+clp(was)+unit+'</div>'+
+      '<div class="envnota">'+(ent==='envio'?'+ envío según comuna':'retiro en el Emporio, sin envío')+'</div>'+
+      '<div class="desc">'+p.desc+'</div>'+
+      '<button class="pbtn" data-em-plan="'+p.id+'">Suscribirme</button>'+
+      '<div class="trust">'+(p.id==='sommelier'?'🎁 Kit completo + 3 copas grabadas':(p.id==='conocedor'||p.id==='enofilo')?'🎁 Kit de bienvenida + aireador':'🎁 Kit de bienvenida de regalo')+'</div>';
+    host.appendChild(el);
+  });
+}
+function setEnt(e){
+  ent=e;
+  document.getElementById('btnRet').classList.toggle('on',e==='retiro');
+  document.getElementById('btnEnv').classList.toggle('on',e==='envio');
+  document.getElementById('sliEnt').classList.toggle('right',e==='envio');
+  render();
+}
+function setPer(m){
+  per=m;
+  document.getElementById('btnMes').classList.toggle('on',m==='mes');
+  document.getElementById('btnAno').classList.toggle('on',m==='ano');
+  document.getElementById('sliPer').classList.toggle('right',m==='ano');
+  render();
+}
+render();
+</script>
+
+<!-- ===== SUSCRIPCIÓN EMPORIO: modal retiro/envío → total → Reveniu / Mercado Pago ===== -->
+<style>
+#em-ov{position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;z-index:99;padding:16px;font-family:'Jost','Segoe UI',Arial,sans-serif}
+#em-ov.open{display:flex}
+#em-modal{background:#140E10;border:1px solid rgba(255,255,255,.14);border-radius:16px;max-width:430px;width:100%;max-height:92vh;overflow:auto;box-shadow:0 18px 50px rgba(0,0,0,.6);color:#fff}
+#em-modal h3{margin:0;padding:15px 20px;background:radial-gradient(120% 160% at 50% 0%, #5A0A1E, #0A0708);color:#fff;font-family:'Archivo',sans-serif;font-size:16px;font-weight:800;letter-spacing:-.01em;border-radius:16px 16px 0 0;border-bottom:1px solid rgba(255,255,255,.14)}
+#em-modal h3 .r{color:#F1315B}
+#em-modal .cuerpo{padding:16px 20px 20px}
+.em-entrega{display:flex;gap:10px;margin-bottom:12px}
+.em-entrega button{flex:1;border:1px solid rgba(255,255,255,.16);background:#171013;border-radius:12px;padding:12px 8px;cursor:pointer;font-family:inherit;font-size:13px;font-weight:500;color:#fff;line-height:1.35}
+.em-entrega button small{display:block;font-weight:400;color:rgba(255,255,255,.55);font-size:11.5px}
+.em-entrega button.on{border-color:#F1315B;background:rgba(226,18,63,.10)}
+#em-modal select{width:100%;padding:11px;border:1px solid rgba(255,255,255,.16);border-radius:10px;font-family:inherit;font-size:14px;margin-bottom:10px;background:#171013;color:#fff}
+#em-res{background:#171013;border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:10px 12px;font-size:13.5px;margin-bottom:6px;display:none;line-height:1.6;color:rgba(255,255,255,.85)}
+#em-res b{color:#fff}
+#em-res .tot{font-family:'Archivo',sans-serif;font-weight:800;color:#E0B450;font-variant-numeric:tabular-nums}
+.em-paylabel{display:block;text-align:center;font-family:'Archivo',sans-serif;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);margin:12px 0 5px;font-weight:700}
+#em-rev{display:flex;align-items:center;justify-content:center;gap:8px;flex-direction:column;width:100%;box-sizing:border-box;padding:11px 14px;border-radius:999px;background:#E2123F;color:#fff !important;font-family:'Archivo',sans-serif;font-weight:800;text-align:center;text-decoration:none;font-size:13px;border:0;cursor:pointer}
+#em-rev img{height:17px;filter:brightness(0) invert(1)}
+#em-rev .cap{font-family:'Jost',sans-serif;font-size:10.5px;font-weight:400;opacity:.85}
+#em-mp{display:flex;align-items:center;justify-content:center;gap:5px;flex-direction:column;margin-top:8px;padding:10px 14px;border-radius:999px;background:#009ee3;color:#fff;font-family:'Archivo',sans-serif;font-weight:800;border:0;width:100%;font-size:13px;cursor:pointer;box-sizing:border-box}
+#em-mp .chip{background:#fff;border-radius:999px;padding:4px 12px;display:inline-flex;align-items:center;line-height:1}
+#em-mp .chip img{height:14px}
+#em-mp .cap{font-family:'Jost',sans-serif;font-size:10.5px;font-weight:400;opacity:.9}
+#em-modal label{display:block;font-size:12px;color:rgba(255,255,255,.55);margin:10px 0 3px;font-weight:500}
+#em-modal input{width:100%;padding:10px 11px;border:1px solid rgba(255,255,255,.16);border-radius:8px;font-size:14px;box-sizing:border-box;font-family:inherit;background:#171013;color:#fff}
+#em-modal .fila{display:flex;gap:10px}#em-modal .fila>div{flex:1}
+#em-modal .acciones{margin-top:14px;display:flex;gap:10px}
+#em-modal .volver{flex:0 0 auto;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:11px 16px;cursor:pointer;font-weight:500;font-family:inherit}
+#em-modal .err{color:#F1315B;font-size:13px;margin-top:10px;display:none}
+#em-modal .pista{font-size:11px;color:rgba(255,255,255,.55);margin-top:3px}
+#em-x{float:right;background:none;border:none;color:#F1315B;font-size:20px;cursor:pointer;margin:12px 12px 0 0}
+</style>
+<div id="em-ov" role="dialog" aria-modal="true"><div id="em-modal">
+  <div id="em-p1">
+    <button id="em-x" aria-label="Cerrar">&times;</button>
+    <h3>Tu suscripci&oacute;n <span class="r">&middot;</span> Cyber Club</h3>
+    <div class="cuerpo">
+      <div class="em-entrega" style="display:none">
+        <button type="button" id="em-bret">🏬 Retiro en tienda<small>15% mensual · 20% anual</small></button>
+        <button type="button" id="em-benv">🚚 Env&iacute;o a domicilio<small>10% mensual · 15% anual</small></button>
+      </div>
+      <div id="em-dirsel" style="display:none">
+        <select id="em-region"><option value="">Regi&oacute;n</option></select>
+        <select id="em-comuna" disabled><option value="">Comuna</option></select>
+      </div>
+      <div id="em-res"></div>
+      <div id="em-pagos" style="display:none">
+        <span class="em-paylabel">Elige c&oacute;mo pagar</span>
+        <a id="em-rev" target="_blank" rel="noopener" aria-label="Pagar con Reveniu"><img src="https://static.tildacdn.one/tild3766-3533-4539-b838-343334383939/reveniu-logo-main.svg" alt="Reveniu"><span class="cap">WebPay &middot; d&eacute;bito y cr&eacute;dito</span></a>
+        <button type="button" id="em-mp" aria-label="Pagar con Mercado Pago"><span class="chip"><img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.19.1/mercadopago/logo__large.png" alt="Mercado Pago"></span><span class="cap">Cuotas con tarjeta o saldo</span></button>
+      </div>
+    </div>
+  </div>
+  <div id="em-p2" style="display:none">
+    <h3>Tus datos</h3>
+    <div class="cuerpo">
+      <p id="em-res2" style="margin:0 0 12px;font-size:13px;color:rgba(255,255,255,.7);background:#171013;padding:8px 10px;border-radius:8px"></p>
+      <form id="em-form" autocomplete="on">
+        <label>Nombre y apellido *</label><input name="nombre" required>
+        <div class="fila"><div><label>RUT *</label><input name="rut" required placeholder="12.345.678-9"></div>
+        <div><label>Tel&eacute;fono *</label><input name="telefono" required placeholder="+56 9 ..."></div></div>
+        <label>Email *</label><input name="email" type="email" required>
+        <div class="pista">Usa el mismo correo con el que pagar&aacute;s en Mercado Pago.</div>
+        <div id="em-dircampos">
+          <label>Direcci&oacute;n (calle y n&uacute;mero) *</label><input name="direccion">
+          <label>Depto / casa / referencia</label><input name="depto">
+        </div>
+        <div class="err" id="em-err"></div>
+        <div class="acciones">
+          <button type="button" class="volver" id="em-volver">Volver</button>
+          <button type="submit" id="em-enviar" style="flex:1;background:#009ee3;color:#fff;font-weight:700;border:0;border-radius:999px;padding:11px;cursor:pointer;font-family:inherit;font-size:14px">Continuar al pago &rarr;</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div></div>
+<script>
+(function(){
+var EM = CFG;
+var REVENIU = "https://app.reveniu.com/checkout-custom-link/";
+var WEBAPP = "https://script.google.com/macros/s/AKfycbyHur7NbMycwjXY7H7ZNy1qcJR4_LK2tyFD22jslQE4mD1Z3X_yX1FcVUBpA3fuIKk/exec";
+var $=function(id){return document.getElementById(id)};
+var clp2=function(n){return "$"+n.toLocaleString("es-CL")};
+var ov=$("em-ov"),selR=$("em-region"),selC=$("em-comuna"),res=$("em-res"),pagos=$("em-pagos"),
+    aRev=$("em-rev"),bMp=$("em-mp"),p1=$("em-p1"),p2=$("em-p2"),form=$("em-form"),
+    err=$("em-err"),res2=$("em-res2"),btnEnv2=$("em-enviar"),
+    bRet=$("em-bret"),bEnv=$("em-benv"),dirsel=$("em-dirsel"),dircampos=$("em-dircampos");
+var st={plan:null,anual:false,ent:"retiro",token:null,total:0,comuna:""};
+var NOM={"duo":"Dúo","duo-premium":"Dúo Premium","descubridor":"Descubridor","aficionado":"Aficionado","conocedor":"Conocedor","enofilo":"Enófilo","sommelier":"Sommelier"};
+var KITFZ=function(p){return p==="sommelier"?"descorchador Muelle Oculto, cortagotas, tapón, aireador y 3 copas de cristal grabadas":(p==="conocedor"||p==="enofilo")?"descorchador Muelle Oculto, cortagotas, tapón y aireador de vidrio soplado":"descorchador Muelle Oculto, cortagotas y tapón"};
+Object.keys(EM.regiones).forEach(function(r){selR.add(new Option(r,r))});
+function llenarComunas(){selC.innerHTML='<option value="">Comuna</option>';(EM.regiones[selR.value]||[]).forEach(function(c){selC.add(new Option(c,c))});selC.disabled=!selR.value}
+function actualizar(){
+  if(!st.plan){res.style.display="none";pagos.style.display="none";return}
+  var nom=NOM[st.plan], html, kit="<br><span style='color:#E0B450;font-weight:500'>🎁 Kit de bienvenida gratis: "+KITFZ(st.plan)+"</span><br><span style='color:rgba(255,255,255,.7)'>🔁 Si tenías un plan activo, paga con el mismo correo: lo damos de baja el mismo día.</span>";
+  if(st.ent==="retiro"){
+    st.comuna="Matanzas (retiro en tienda)";
+    if(st.anual){st.total=EM.retiroAnual[st.plan];st.token=EM.tokens.retiro.anual[st.plan]||null;
+      html="<b>Plan "+nom+" ANUAL</b> · 20% OFF permanente<br>Retiro mensual en el Emporio del Vino, Matanzas"+
+        "<br><span class='tot'>Total: "+clp2(st.total)+"/año</span>";
+    }else{st.total=EM.retiroMensual[st.plan];st.token=EM.tokens.retiro.mensual[st.plan]||null;
+      html="<b>Plan "+nom+"</b> · 15% OFF permanente<br>Retiro en el Emporio del Vino, Matanzas — sin costo de envío"+
+        "<br><span class='tot'>Total: "+clp2(st.total)+"/mes</span>";
+    }
+  }else{
+    var c=selC.value;
+    if(!c){res.style.display="none";pagos.style.display="none";return}
+    try{localStorage.setItem("em_rc",selR.value+"|"+c)}catch(e){}
+    st.comuna=c;
+    var envio=EM.comunaEnvio[c]||0;
+    if(st.anual){var pa=EM.envioAnual[st.plan], ea=envio*12;
+      st.total=pa+ea;st.token=(EM.tokens.envio.anual[st.plan]||{})[String(envio)]||null;
+      html="<b>Plan "+nom+" ANUAL</b> · 15% OFF permanente — "+clp2(pa)+"/año<br>"+
+        "Envío a "+c+": "+(envio===0?"<b style='color:#7BD88F'>GRATIS</b>":clp2(envio)+" x 12 = "+clp2(ea))+
+        "<br><span class='tot'>Total: "+clp2(st.total)+"/año</span>";
+    }else{var pm=EM.envioMensual[st.plan];
+      st.total=pm+envio;st.token=(EM.tokens.envio.mensual[st.plan]||{})[String(envio)]||null;
+      html="<b>Plan "+nom+"</b> · 10% OFF permanente — "+clp2(pm)+"/mes<br>"+
+        "Envío a "+c+": "+(envio===0?"<b style='color:#7BD88F'>GRATIS</b>":clp2(envio)+"/mes")+
+        "<br><span class='tot'>Total: "+clp2(st.total)+"/mes</span>";
+    }
+  }
+  res.innerHTML=html+kit;res.style.display="block";
+  if(st.token){aRev.href=REVENIU+st.token;pagos.style.display="block"}
+  else{pagos.style.display="none"}
+}
+function setEntM(e){
+  st.ent=e;
+  bRet.classList.toggle("on",e==="retiro");bEnv.classList.toggle("on",e==="envio");
+  dirsel.style.display=e==="envio"?"block":"none";
+  actualizar();
+}
+bRet.onclick=function(){setEntM("retiro")};
+bEnv.onclick=function(){setEntM("envio")};
+selR.onchange=function(){llenarComunas();actualizar()};
+selC.onchange=actualizar;
+function cerrar(){ov.classList.remove("open");p2.style.display="none";p1.style.display="block"}
+$("em-x").onclick=cerrar;
+ov.addEventListener("click",function(e){if(e.target===ov)cerrar()});
+$("em-volver").onclick=function(){p2.style.display="none";p1.style.display="block"};
+bMp.onclick=function(){
+  res2.textContent="Plan "+NOM[st.plan]+(st.anual?" ANUAL":"")+(st.ent==="retiro"?" · retiro en tienda":" · envío a "+st.comuna)+" · "+clp2(st.total)+(st.anual?"/año":"/mes");
+  dircampos.style.display=st.ent==="retiro"?"none":"block";
+  form.direccion.required=st.ent!=="retiro";
+  err.style.display="none";p1.style.display="none";p2.style.display="block";
+};
+form.addEventListener("submit",function(e){
+  e.preventDefault();err.style.display="none";
+  btnEnv2.disabled=true;btnEnv2.textContent="Procesando...";
+  var fd=new FormData(form);
+  var payload={token:st.token,comuna:st.comuna,region:st.ent==="retiro"?"Retiro en tienda":selR.value,
+    plan:st.plan,periodicidad:st.anual?"anual":"mensual",total:st.total,
+    nombre:fd.get("nombre"),rut:fd.get("rut"),email:fd.get("email"),
+    telefono:fd.get("telefono"),
+    direccion:st.ent==="retiro"?"Retiro en Emporio del Vino, Matanzas":fd.get("direccion"),
+    depto:st.ent==="retiro"?"":fd.get("depto")};
+  fetch(WEBAPP,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(payload)})
+    .then(function(r){return r.json()})
+    .then(function(r){if(r&&r.ok&&r.init_point){window.location.href=r.init_point}
+      else{throw new Error(r&&r.error?r.error:"No se pudo iniciar el pago.")}})
+    .catch(function(e2){err.textContent="Ups: "+e2.message+" — inténtalo de nuevo o escríbenos por WhatsApp.";
+      err.style.display="block";btnEnv2.disabled=false;btnEnv2.textContent="Continuar al pago →"});
+});
+document.addEventListener("click",function(e){
+  var a=e.target.closest?e.target.closest("[data-em-plan]"):null;
+  if(!a)return;
+  e.preventDefault();
+  st.plan=a.getAttribute("data-em-plan");
+  st.anual=(typeof per!=="undefined"&&per==="ano");
+  setEntM("envio");
+  try{var rc=(localStorage.getItem("em_rc")||"").split("|");
+    if(rc[0]&&EM.regiones[rc[0]]){selR.value=rc[0];llenarComunas();
+      if((EM.regiones[rc[0]]||[]).indexOf(rc[1])>=0)selC.value=rc[1]}}catch(e3){}
+  actualizar();
+  p2.style.display="none";p1.style.display="block";
+  ov.classList.add("open");
+});
+})();
+</script>
+
+
+<script>
+(function(){
+var MODOS={
+  sube:{eye:"Socios Up to Wine · Cyber Club",tit:'Sube a <span class="g">dos o más botellas</span>',
+    lede:"Hoy recibes una botella al mes. Pasa a un plan de 2 o más vinos, Premium y de pequeños productores, con descuento permanente.",cta:"Quiero subir mi plan ↓"},
+  vuelve:{eye:"Club de Amigos · Cyber Club",tit:'Vuelve al club con <span class="g">descuento permanente</span>',
+    lede:"Te echamos de menos. Vuelve esta semana y quédate con el descuento mientras sigas en el club: vinos de autor de pequeños productores, cada mes en tu casa.",cta:"Quiero volver ↓"}};
+var m=MODOS[new URLSearchParams(location.search).get("m")]||MODOS.vuelve;
+document.getElementById("h-eye").textContent=m.eye;
+document.getElementById("h-tit").innerHTML=m.tit;
+document.getElementById("h-lede").textContent=m.lede;
+document.getElementById("h-cta").textContent=m.cta;
+if(new Date()>=new Date("2026-10-08T00:00:00-03:00")){
+  document.getElementById("plans").innerHTML='<p style="text-align:center;color:#fff;grid-column:1/-1">La oferta Cyber Club terminó el 7 de octubre. Mira los planes vigentes en <a href="https://uptowine.cl/club-up-to-wine" style="color:#F1315B">uptowine.cl/club-up-to-wine</a>.</p>';
+  document.querySelector(".urg").textContent="La oferta Cyber Club terminó";
+}
+})();
+</script>
+<script>
+(function(){function unbox(){var e=document.querySelector('.urg');
+  while(e&&e.parentElement&&e.parentElement!==document.body){e=e.parentElement;
+    e.style.maxWidth='none';e.style.padding='0';e.style.margin='0';e.style.width='100%';}}
+if(document.readyState!=='loading')unbox();else document.addEventListener('DOMContentLoaded',unbox);})();
+</script>
