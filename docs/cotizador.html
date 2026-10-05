@@ -27,6 +27,7 @@ a{color:var(--burgundy)}
 .topbar .spacer{flex:1}
 .topbar .count{background:rgba(255,255,255,.15);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:700}
 
+@media(max-width:620px){.topbar{padding:10px 12px;gap:10px}.topbar img{height:26px}.topbar .t{font-size:14px}.topbar .s{display:none}.topbar .count{padding:5px 10px;font-size:12px;white-space:nowrap}}
 /* ===== Layout ===== */
 .app{display:grid;grid-template-columns:1fr 430px;gap:0;align-items:start;background:#f6f7f9;position:relative;z-index:0;min-height:calc(100vh - 64px)}   /* opaco: tapa el lienzo del PDF y de la pieza que se dibujan detras */
 @media(max-width:960px){.app{grid-template-columns:1fr}}
