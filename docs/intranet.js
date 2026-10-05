@@ -447,6 +447,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     resultados: null,      // campana cuyo panel de resultados esta abierto
     cotizaciones: [], verCotizaciones: false,   // historial del cotizador y si la lista esta desplegada
     cotizacionDeCampana: null,                  // cotizacion que origino la campana abierta (para enlazarla al guardar)
+    programar: null,       // 'YYYY-MM-DDTHH:MM' mientras se elige fecha y hora de envio
     importar: null,
     msj: '', err: false, ocupado: false, confirmar: false, progreso: '',
   };
@@ -1089,6 +1090,75 @@ cuerpoHtml(personalizar(texto, contacto)) +
       });
   }
 
+  // 'YYYY-MM-DDTHH:MM' en hora local, para <input type="datetime-local">
+  function fechaLocal(d) {
+    var p = function (n) { return (n < 10 ? '0' : '') + n; };
+    return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()) + 'T' + p(d.getHours()) + ':' + p(d.getMinutes());
+  }
+  function fechaHora(iso) {
+    if (!iso) return '';
+    var d = new Date(iso);
+    return d.toLocaleDateString('es-CL', { weekday: 'long', day: 'numeric', month: 'long' }) + ' a las ' + d.toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit' });
+  }
+
+  // Programar: se personaliza cada mensaje ahora y queda en envios_programados; el cron del
+  // servidor los manda a la hora (correo por Resend, WhatsApp a la cola del bot). Asi no hace
+  // falta tener la intranet abierta. La lista de destinatarios queda congelada en este momento.
+  function programarCampana(cuandoLocal) {
+    var cuando = new Date(cuandoLocal);
+    if (isNaN(cuando.getTime())) return aviso('Elige fecha y hora.', 'err');
+    if (cuando.getTime() < Date.now() + 60000) return aviso('La hora tiene que ser al menos un minuto en el futuro.', 'err');
+    S.programar = null; S.confirmar = false; S.ocupado = true; S.progreso = ''; pintar();
+    var esCorreo = S.campana.canal === 'correo';
+    Promise.all([destinatariosDeCampana(), subirDocumentoWhatsApp()]).then(function (rs) {
+      var lista = alcanzables(rs[0], S.campana.canal), rutaPdf = rs[1];
+      if (!lista.length) { S.ocupado = false; pintar(); return aviso('No hay destinatarios alcanzables.', 'err'); }
+      S.campana.estado = 'programada'; S.campana.programada_para = cuando.toISOString();
+      return guardarCampana(true).then(function () {
+        if (!S.campana.id) throw new Error('No se pudo guardar la campaña.');
+        var filas = lista.map(function (c) {
+          if (esCorreo) {
+            var m = correoDe(S.campana, c);
+            return { campana_id: S.campana.id, contacto_id: c.id, canal: 'correo', para: String(c.email).trim(), nombre: c.nombre || null,
+              asunto: personalizar(S.campana.asunto, c), html: m.html, texto: m.texto, enviar_en: cuando.toISOString() };
+          }
+          return { campana_id: S.campana.id, contacto_id: c.id, canal: 'whatsapp', para: fonoWhatsApp(c.celular), nombre: c.nombre || '?',
+            texto: textoWhatsApp(personalizar(S.campana.cuerpo, c)), datos: rutaPdf ? { archivo: rutaPdf, nombre: S.adjuntos[0].nombre } : {}, enviar_en: cuando.toISOString() };
+        });
+        var i = 0;
+        function lote() {
+          if (i >= filas.length) return Promise.resolve();
+          var trozo = filas.slice(i, i + 50); i += 50;
+          S.progreso = Math.min(i, filas.length) + '/' + filas.length; pintar();
+          return sb.from('envios_programados').insert(trozo).then(function (r) { if (r.error) throw new Error(r.error.message); return lote(); });
+        }
+        return lote().then(function () {
+          // los adjuntos del correo se guardan una vez por campana
+          return sb.from('campanas').update({ adjuntos: esCorreo ? S.adjuntos.map(function (a) { return { filename: a.nombre, content: a.base64 }; }) : [] }).eq('id', S.campana.id);
+        }).then(function () {
+          S.ocupado = false; S.progreso = '';
+          aviso(filas.length + (esCorreo ? ' correo(s) programado(s)' : ' WhatsApp programado(s)') + ' para el ' + fechaHora(cuando.toISOString()) + '.');
+          cargarCampanas();
+        });
+      });
+    }).catch(function (e) {
+      S.ocupado = false; S.progreso = '';
+      S.campana.estado = 'borrador'; S.campana.programada_para = null;
+      aviso(String(e.message || e), 'err');
+    });
+  }
+  function desprogramarCampana() {
+    if (!S.campana.id) return;
+    S.ocupado = true; pintar();
+    sb.from('envios_programados').delete().eq('campana_id', S.campana.id).eq('estado', 'pendiente').then(function (r) {
+      if (r.error) throw new Error(r.error.message);
+      S.campana.estado = 'borrador'; S.campana.programada_para = null;
+      return sb.from('campanas').update({ estado: 'borrador', programada_para: null, adjuntos: [], actualizado: new Date().toISOString() }).eq('id', S.campana.id);
+    }).then(function () {
+      S.ocupado = false; aviso('Programación cancelada: la campaña vuelve a borrador.'); cargarCampanas();
+    }).catch(function (e) { S.ocupado = false; aviso(String(e.message || e), 'err'); });
+  }
+
   function enviarCampana() {
     S.confirmar = false; S.ocupado = true; pintar();
     Promise.all([destinatariosDeCampana(), subirDocumentoWhatsApp()]).then(function (rs) {
@@ -1611,7 +1681,9 @@ cuerpoHtml(personalizar(texto, contacto)) +
       return '<tr><td><b>' + esc(c.nombre) + '</b><div class="mini">' + esc(c.asunto || (c.canal === 'whatsapp' ? 'WhatsApp' : 'sin asunto')) + '</div></td>' +
         '<td>' + (c.canal === 'correo' ? '✉️ Correo' : '💬 WhatsApp') + '</td>' +
         '<td>' + pillEstado(c.estado) + '</td>' +
-        '<td class="dim">' + (c.estado === 'enviada' ? c.enviados + ' enviados' + (c.fallidos ? ' · ' + c.fallidos + ' fallidos' : '') + resumenMetricas(c) : '—') + '</td>' +
+        '<td class="dim">' + (c.estado === 'enviada' ? c.enviados + ' enviados' + (c.fallidos ? ' · ' + c.fallidos + ' fallidos' : '') + resumenMetricas(c)
+          : c.estado === 'programada' ? '⏰ ' + esc(fechaHora(c.programada_para))
+          : c.estado === 'enviando' ? 'enviando… ' + (c.enviados || 0) + ' listos' : '—') + '</td>' +
         '<td class="dim">' + fecha(c.actualizado) + '</td>' +
         '<td style="text-align:right">' + (c.estado === 'enviada' && c.canal === 'correo' ? '<button class="btn mini" data-resultados="' + c.id + '">Resultados</button> ' : '') +
         '<button class="btn sec mini" data-campana="' + c.id + '">Abrir</button> ' +
@@ -1645,10 +1717,22 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '<button class="btn sec" id="utwi-guardar-campana">Guardar borrador</button>' +
       (esCorreo ? '<button class="btn sec" id="utwi-prueba">Enviar prueba a mí</button>'
                 : '<button class="btn sec" id="utwi-prueba-wa" title="Mayús+clic para cambiar el número de prueba"' + (S.ocupado || !c.cuerpo.trim() ? ' disabled' : '') + '>Enviar WhatsApp de prueba</button>') +
-      '<button class="btn' + (S.confirmar ? ' peligro' : '') + '" id="utwi-enviar"' +
-        (S.ocupado || !(c.html || c.cuerpo.trim()) || (esCorreo && !(c.asunto || '').trim()) ? ' disabled' : '') + '>' +
-      (S.ocupado ? 'Enviando ' + S.progreso : S.confirmar ? 'Confirmar envío' : esCorreo ? 'Enviar campaña' : 'Encolar WhatsApp') +
-      '</button></div></div>' +
+      (c.estado === 'programada'
+        ? '<button class="btn sec" id="utwi-desprogramar">Cancelar programación</button>'
+        : '<button class="btn sec" id="utwi-programar"' + (S.ocupado || !(c.html || c.cuerpo.trim()) || (esCorreo && !(c.asunto || '').trim()) ? ' disabled' : '') + '>⏰ Programar</button>' +
+          '<button class="btn' + (S.confirmar ? ' peligro' : '') + '" id="utwi-enviar"' +
+          (S.ocupado || !(c.html || c.cuerpo.trim()) || (esCorreo && !(c.asunto || '').trim()) ? ' disabled' : '') + '>' +
+          (S.ocupado ? 'Enviando ' + S.progreso : S.confirmar ? 'Confirmar envío' : esCorreo ? 'Enviar campaña' : 'Encolar WhatsApp') +
+          '</button>') +
+      '</div></div>' +
+      (c.estado === 'programada'
+        ? '<p class="msj" style="margin:0 0 12px">⏰ Programada para el <b>' + esc(fechaHora(c.programada_para)) + '</b>. Los mensajes ya están personalizados y en cola; para cambiar algo, cancela la programación y vuelve a programar.</p>'
+        : S.programar !== null
+        ? '<div class="card" style="margin:0 0 12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap"><label class="lbl" for="utwi-fecha" style="margin:0">Enviar el</label>' +
+          '<input type="datetime-local" id="utwi-fecha" value="' + esc(S.programar) + '" min="' + esc(fechaLocal(new Date())) + '">' +
+          '<button class="btn" id="utwi-programar-ok">Programar envío</button><button class="btn sec" id="utwi-programar-no">Cancelar</button>' +
+          '<span class="dim" style="font-size:12.5px">Hora de Chile (la del computador). ' + (esCorreo ? 'Los correos salen de a 40 por minuto.' : 'Los WhatsApp entran a la cola del bot a esa hora.') + '</span></div>'
+        : '') +
 
       '<div class="grid g2">' +
       /* --- columna de edición --- */
@@ -2235,6 +2319,14 @@ cuerpoHtml(personalizar(texto, contacto)) +
     if ($('utwi-enviar')) $('utwi-enviar').onclick = function () {
       if (S.confirmar) enviarCampana(); else { S.confirmar = true; pintar(); }
     };
+    if ($('utwi-programar')) $('utwi-programar').onclick = function () {
+      var d = new Date(); d.setDate(d.getDate() + 1); d.setHours(10, 0, 0, 0);   // manana a las 10
+      S.programar = fechaLocal(d); S.confirmar = false; pintar();
+    };
+    if ($('utwi-programar-no')) $('utwi-programar-no').onclick = function () { S.programar = null; pintar(); };
+    if ($('utwi-fecha')) $('utwi-fecha').onchange = function () { S.programar = this.value; };
+    if ($('utwi-programar-ok')) $('utwi-programar-ok').onclick = function () { programarCampana($('utwi-fecha').value); };
+    if ($('utwi-desprogramar')) $('utwi-desprogramar').onclick = desprogramarCampana;
     if ($('utwi-archivo')) $('utwi-archivo').onchange = function () { sumarAdjuntos(this.files); this.value = ''; };
     cada('[data-quita-dest]', function (b) {
       b.onclick = function () {
