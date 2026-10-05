@@ -805,6 +805,26 @@ cuerpoHtml(personalizar(texto, contacto)) +
   // ==========================================================================
 
   // Dos viajes: tienda + app primero, el club despues (Reveniu y Mercado Pago tardan).
+  // Fichas importadas de una planilla con el +56 convertido en formula: el nombre llega como
+  // "Ana Perez =+56 Santiago". La RPC primero cuenta y, tras confirmar, corrige (nombre limpio,
+  // ciudad a la comuna; con eso el trigger pone la region).
+  function limpiarImportados() {
+    S.ocupado = true; aviso('Revisando fichas…');
+    sb.rpc('crm_limpiar_importados', { p_aplicar: false }).then(function (r) {
+      var d = (r.data && r.data[0]) || {};
+      if (r.error) { S.ocupado = false; return aviso(r.error.message, 'err'); }
+      if (!d.fichas) { S.ocupado = false; return aviso('No hay fichas con el teléfono o la ciudad pegados al nombre.'); }
+      if (!confirm(d.fichas + ' fichas tienen el teléfono y la ciudad pegados al nombre (ej. "Ana Pérez =+56 Santiago"). ¿Dejar solo el nombre y pasar la ciudad a la comuna?')) { S.ocupado = false; return pintar(); }
+      return sb.rpc('crm_limpiar_importados', { p_aplicar: true }).then(function (r2) {
+        S.ocupado = false;
+        var e = (r2.data && r2.data[0]) || {};
+        if (r2.error) return aviso(r2.error.message, 'err');
+        aviso(e.corregidas + ' fichas corregidas: nombre limpio y ciudad en la comuna.');
+        cargarContactos(); cargarEtiquetas();
+      });
+    });
+  }
+
   function sincronizar() {
     S.ocupado = true; aviso('Sincronizando tienda y app…');
     sb.functions.invoke('intranet', { body: { accion: 'crm-sync' } }).then(function (r) {
@@ -1462,6 +1482,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '<button class="btn sec" id="utwi-importar">Importar CSV</button>' +
       '<button class="btn sec" id="utwi-exportar">Exportar</button>' +
       '<button class="btn sec" id="utwi-sync"' + (S.ocupado ? ' disabled' : '') + '>Sincronizar tienda</button>' +
+      '<button class="btn sec" id="utwi-limpiar" title="Fichas importadas con el teléfono y la ciudad pegados al nombre"' + (S.ocupado ? ' disabled' : '') + '>🧹 Limpiar nombres importados</button>' +
       '<button class="btn" id="utwi-campana-sel"' + (sel.length ? '' : ' disabled') + '>Escribir a ' + sel.length + '</button>' +
       '</div></div>' +
 
@@ -2113,6 +2134,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
       };
     });
     if ($('utwi-sync')) $('utwi-sync').onclick = sincronizar;
+    if ($('utwi-limpiar')) $('utwi-limpiar').onclick = limpiarImportados;
     if ($('utwi-recargar')) $('utwi-recargar').onclick = cargarHistorial;
 
     // ---- contactos ----
