@@ -44,10 +44,13 @@
 
   function personalizar(texto, c) {
     c = c || {};
-    var pila = (c.nombre || '').trim().split(/\s+/)[0] || 'hola';
-    return String(texto || '')
+    var pila = (c.nombre || '').trim().split(/\s+/)[0];
+    var t = String(texto || '')
       .replace(/\{\{\s*([a-z_]+)\s*\}\}/gi, '{$1}')   // {{nombre}} de los disenos HTML = {nombre}
-      .replace(/\{link_baja\}/gi, '%%BAJA%%')   // la Edge Function pone el enlace firmado de cada contacto
+      .replace(/\{link_baja\}/gi, '%%BAJA%%');  // la Edge Function pone el enlace firmado de cada contacto
+    // sin nombre (ficha con solo correo o celular): el saludo se queda sin el hueco, "Hola {nombre}," -> "Hola,"
+    if (!pila) t = t.replace(/^\{nombre(_completo)?\},?\s*/gim, '').replace(/\s*\{nombre(_completo)?\}/gi, '');
+    return t
       .replace(/\{nombre\}/gi, pila)
       .replace(/\{nombre_completo\}/gi, c.nombre || pila)
       .replace(/\{email\}/gi, c.email || '')
