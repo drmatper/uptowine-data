@@ -574,6 +574,12 @@ cuerpoHtml(personalizar(texto, contacto)) +
     '.utwi .dato span{color:var(--tx2)}',
     '@media(max-width:1000px){.utwi .cuerpo{grid-template-columns:1fr}.utwi .lado{display:flex;gap:6px;overflow:auto;border-right:0;border-bottom:1px solid var(--linea)}.utwi .nav{width:auto;margin:0;white-space:nowrap}.utwi .nav .n{margin-left:6px}.utwi .g4,.utwi .g3,.utwi .g2{grid-template-columns:1fr 1fr}}',
     '@media(max-width:620px){.utwi .g4,.utwi .g3,.utwi .g2{grid-template-columns:1fr}.utwi .previa{height:460px}}',
+    /* telefono: sin marco exterior, menu pegado arriba, botones a lo ancho, letra de 16px en los campos (iOS no hace zoom) */
+    '@media(max-width:620px){.utwi{width:100%;margin:0;border:0;border-radius:0}.utwi .top{padding:10px 12px}.utwi .panel{padding:12px}.utwi .card{padding:12px}',
+    '  .utwi .lado{position:sticky;top:0;z-index:5;padding:8px}.utwi .nav{padding:8px 10px;font-size:13px;white-space:nowrap}',
+    '  .utwi .cab .sp{margin-left:0;width:100%}.utwi .cab .sp .btn{flex:1 1 auto;justify-content:center}',
+    '  .utwi input,.utwi textarea,.utwi select{font-size:16px}.utwi .tabla{font-size:13px}.utwi .tabla th,.utwi .tabla td{padding:8px 6px}',
+    '  .utwi .cotizador{height:calc(100vh - 120px);min-height:520px}.utwi .acciones select{min-width:0;flex:1}.utwi .kpi b{font-size:22px}}',
   ].join('\n');
 
   // ==========================================================================
