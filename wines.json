@@ -562,8 +562,8 @@
     "winery": "Algorta",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/35466610/ALGORTA_20FAMILY_20RESERVE_20CABERNET_20SAUVIGNON.png?1783626767",
     "url": "https://uptowine.cl/algorta-family-reserve-cabernet-sauvignon",
-    "price": 12990,
-    "compare_at": null,
+    "price": 10990,
+    "compare_at": 12990,
     "available": true,
     "anadas": [
       {
@@ -807,8 +807,8 @@
     "winery": "Bla",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/32927967/BLA_20GRAN_20RESERVA_20CARMENERE.png?1783625520",
     "url": "https://uptowine.cl/bla-gran-reserva-carmenere",
-    "price": 11500,
-    "compare_at": null,
+    "price": 9690,
+    "compare_at": 11500,
     "available": true,
     "anadas": [
       {
@@ -2724,8 +2724,8 @@
     "winery": "Choapa",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36260152/Cordilleramar_20cabernet_20franc.png?1784496586",
     "url": "https://uptowine.cl/choapa-cordilleramar-cabernet-franc",
-    "price": 16000,
-    "compare_at": null,
+    "price": 13590,
+    "compare_at": 16000,
     "available": true,
     "anadas": [
       {
@@ -2748,8 +2748,8 @@
     "winery": "Choapa",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36260154/Cordilleramar_20Syrah_202019.png?1784496517",
     "url": "https://uptowine.cl/choapa-cordilleramar-syrah",
-    "price": 16000,
-    "compare_at": null,
+    "price": 13590,
+    "compare_at": 16000,
     "available": true,
     "anadas": [
       {
@@ -5220,8 +5220,8 @@
     "winery": "La Prometida",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36260318/la_20prometida_20dichosa_20cabernet_20sauvignon.png?1784493542",
     "url": "https://uptowine.cl/la-prometida-dichosa-cabernet-sauvignon",
-    "price": 13990,
-    "compare_at": null,
+    "price": 11890,
+    "compare_at": 13990,
     "available": true,
     "anadas": [
       {
@@ -5667,8 +5667,8 @@
     "winery": "Laura Hartwig",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/35958754/laura_20hartwig_20single_20cabernet_20sauvignon_202022.png?1784490546",
     "url": "https://uptowine.cl/laura-hartwig-cabernet-sauvignon-single-vineyard",
-    "price": 8990,
-    "compare_at": null,
+    "price": 7640,
+    "compare_at": 8990,
     "available": true,
     "anadas": [
       {
@@ -7500,8 +7500,8 @@
     "winery": "Muelle Oculto",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/30137674/Muelle_20oculto_20Gran_20Reserva_20Carmenere.png?1783633889",
     "url": "https://uptowine.cl/muelle-oculto-gran-reserva-carmenere",
-    "price": 9900,
-    "compare_at": null,
+    "price": 8390,
+    "compare_at": 9900,
     "available": true,
     "anadas": [
       {
@@ -10151,8 +10151,8 @@
     "winery": "Schwaderer",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093430/Schwaderer_20cabernet_20Sauvignon.png?1783721872",
     "url": "https://uptowine.cl/schwaderer-cabernet-sauvignon",
-    "price": 12000,
-    "compare_at": null,
+    "price": 10190,
+    "compare_at": 12000,
     "available": true,
     "anadas": [
       {
