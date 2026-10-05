@@ -422,7 +422,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
       plata: plata, cuerpoHtml: cuerpoHtml, correoHtml: correoHtml, correoTexto: correoTexto, correoDe: correoDe, evaluarCampana: evaluarCampana, cotizacionTexto: cotizacionTexto, ofertaTexto: ofertaTexto,
       enlaceSeguro: enlaceSeguro, csvLeer: csvLeer, csvMapear: csvMapear, csvSalida: csvSalida,
       diasDesde: diasDesde, estadoPorFecha: estadoPorFecha, rutNormalizar: rutNormalizar,
-      paykuFila: paykuFila, patAgrupar: patAgrupar, textoWhatsApp: textoWhatsApp };
+      paykuFila: paykuFila, patAgrupar: patAgrupar, textoWhatsApp: textoWhatsApp, alcanzables: alcanzables };
     return;
   }
 
@@ -1014,8 +1014,18 @@ cuerpoHtml(personalizar(texto, contacto)) +
     return Promise.resolve([]);
   }
 
-  function alcanzables(lista) {
-    return lista.filter(function (c) { return S.campana.canal === 'correo' ? (c.email && !c.correo_invalido) : fonoWhatsApp(c.celular); });
+  // Una sola vez por destino: varios contactos pueden compartir celular (la misma
+  // persona cargada desde distintas fuentes) y sin esto le llegaba un mensaje por cada uno.
+  function alcanzables(lista, canal) {
+    var visto = {};
+    return lista.filter(function (c) {
+      var k = canal === 'correo'
+        ? (c.email && !c.correo_invalido ? String(c.email).trim().toLowerCase() : '')
+        : fonoWhatsApp(c.celular);
+      if (!k || visto[k]) return false;
+      visto[k] = true;
+      return true;
+    });
   }
 
   function enviarPrueba() {
@@ -1083,7 +1093,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     S.confirmar = false; S.ocupado = true; pintar();
     Promise.all([destinatariosDeCampana(), subirDocumentoWhatsApp()]).then(function (rs) {
       var todos = rs[0], rutaPdf = rs[1];
-      var lista = alcanzables(todos), i = 0, ok = 0, fallos = [];
+      var lista = alcanzables(todos, S.campana.canal), i = 0, ok = 0, fallos = [];
       if (!lista.length) { S.ocupado = false; return aviso('No hay destinatarios alcanzables.', 'err'); }
       S.campana.estado = 'enviando';
       guardarCampana(true);
@@ -1749,7 +1759,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     var resumen = document.getElementById('utwi-resumen-envio');
     if (!resumen) return;
     destinatariosDeCampana().then(function (todos) {
-      var listos = alcanzables(todos);
+      var listos = alcanzables(todos, S.campana.canal);
       resumen.innerHTML = todos.length
         ? '<b>' + listos.length + '</b> de ' + todos.length + ' destinatarios lo recibirán' +
           (todos.length - listos.length ? ' · ' + (todos.length - listos.length) + ' sin ' + (S.campana.canal === 'correo' ? 'correo' : 'celular') : '') + '.'
