@@ -438,7 +438,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
   var S = {
     sesion: null, admin: false, listo: false,
     vista: 'resumen',
-    contactos: [], total: 0, q: '', origen: '', etiqueta: '', compras: '', club: '', sel: {}, ficha: null,
+    contactos: [], total: 0, q: '', origen: '', etiqueta: '', compras: '', club: '', estado: '', sel: {}, ficha: null,
     eventos: [],
     segmentos: [], plantillas: [], campanas: [], historial: [], cola: null, metricas: null,
     etiquetas: [],
@@ -647,11 +647,14 @@ cuerpoHtml(personalizar(texto, contacto)) +
     if (f.club === 'socio') sel = sel.in('club_estado', ['al_dia', 'moroso', 'inactivo']);
     else if (f.club === 'nosocio') sel = sel.is('club_estado', null);
     else if (f.club) sel = sel.eq('club_estado', f.club);
-    if (f.activos !== false) sel = sel.eq('baja', false);
+    // estado: '' = activos; 'baja' = quienes se dieron de baja; 'invalido' = correo que rebota duro
+    if (f.estado === 'baja') sel = sel.eq('baja', true);
+    else if (f.estado === 'invalido') sel = sel.eq('correo_invalido', true);
+    else if (f.activos !== false) sel = sel.eq('baja', false);
     return sel;
   }
 
-  function filtroActual() { return { q: S.q, origen: S.origen, etiqueta: S.etiqueta, compras: S.compras, club: S.club }; }
+  function filtroActual() { return { q: S.q, origen: S.origen, etiqueta: S.etiqueta, compras: S.compras, club: S.club, estado: S.estado }; }
 
   function cargarContactos() {
     return consulta(filtroActual()).then(function (r) {
@@ -1516,6 +1519,8 @@ cuerpoHtml(personalizar(texto, contacto)) +
       chips('compras', [['', 'Compren o no'], ['con', 'Con compras'], ['sin', 'Sin compras'], ['dormidos', 'Dormidos 90 días']]) +
       '<span style="width:12px"></span>' +
       chips('club', [['', 'Club: todos'], ['al_dia', 'Al día'], ['moroso', 'Morosos'], ['inactivo', 'Inactivos'], ['baja', 'Ex socios'], ['nosocio', 'No socios']]) +
+      '<div style="flex-basis:100%;height:0"></div>' +
+      chips('estado', [['', 'Activos'], ['baja', '🚫 Dados de baja'], ['invalido', '📭 Correo que rebota']]) +
       '<select id="utwi-filtro-etiqueta" style="width:auto;min-width:170px;margin-left:8px">' +
       '<option value="">Toda etiqueta</option>' +
       S.etiquetas.map(function (e) {
