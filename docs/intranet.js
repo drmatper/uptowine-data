@@ -639,7 +639,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
 
   // Una sola función arma la consulta: la usan la lista, los segmentos y el envío.
   function consulta(f) {
-    var sel = sb.from('contactos').select(COLS).order('actualizado', { ascending: false }).limit(1000);
+    var sel = sb.from('contactos').select(COLS).order(f.porId ? 'id' : 'actualizado', { ascending: !!f.porId }).limit(1000);
     if (f.q && f.q.trim()) sel = sel.or('nombre.ilike.%' + f.q.trim() + '%,email.ilike.%' + f.q.trim() + '%,celular.ilike.%' + f.q.trim() + '%');
     if (f.origen) sel = sel.contains('origen', [f.origen]);
     if (f.etiqueta) sel = sel.contains('etiquetas', [f.etiqueta]);
@@ -658,6 +658,20 @@ cuerpoHtml(personalizar(texto, contacto)) +
     else if (f.estado === 'invalido') sel = sel.eq('correo_invalido', true);
     else if (f.activos !== false) sel = sel.eq('baja', false);
     return sel;
+  }
+
+  // Para enviar hace falta la lista entera: el servidor entrega 1.000 filas por respuesta,
+  // así que se pide de a páginas, en orden fijo por id para no saltar ni repetir a nadie.
+  function consultaCompleta(f) {
+    var filas = [];
+    function pagina(desde) {
+      return consulta(Object.assign({}, f, { porId: true })).range(desde, desde + 999).then(function (r) {
+        if (r.error) throw new Error('No pudimos leer los destinatarios: ' + r.error.message);
+        filas = filas.concat(r.data || []);
+        return (r.data || []).length === 1000 ? pagina(desde + 1000) : filas;
+      });
+    }
+    return pagina(0);
   }
 
   function filtroActual() { return { q: S.q, origen: S.origen, etiqueta: S.etiqueta, excluir: S.excluir, compras: S.compras, club: S.club, estado: S.estado }; }
@@ -1043,12 +1057,18 @@ cuerpoHtml(personalizar(texto, contacto)) +
     var c = S.campana;
     if (c.segmento_id) {
       var s = S.segmentos.filter(function (x) { return String(x.id) === String(c.segmento_id); })[0];
-      return consulta(Object.assign({ q: '', origen: '', etiqueta: '', compras: '', club: '' }, (s && s.filtro) || {}))
-        .then(function (r) { return r.data || []; });
+      return consultaCompleta(Object.assign({ q: '', origen: '', etiqueta: '', compras: '', club: '' }, (s && s.filtro) || {}));
     }
     if (c.destinatarios && c.destinatarios.length) {
-      return sb.from('contactos').select(COLS).in('id', c.destinatarios).eq('baja', false)
-        .then(function (r) { return r.data || []; });
+      // de a 300 ids: cabe en la URL y cada respuesta queda bajo el tope de 1.000 filas
+      var trozos = [];
+      for (var i = 0; i < c.destinatarios.length; i += 300) trozos.push(c.destinatarios.slice(i, i + 300));
+      return Promise.all(trozos.map(function (ids) {
+        return sb.from('contactos').select(COLS).in('id', ids).eq('baja', false).then(function (r) {
+          if (r.error) throw new Error('No pudimos leer los destinatarios: ' + r.error.message);
+          return r.data || [];
+        });
+      })).then(function (ls) { return [].concat.apply([], ls); });
     }
     return Promise.resolve([]);
   }
@@ -1894,7 +1914,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
         ? '<b>' + listos.length + '</b> de ' + todos.length + ' destinatarios lo recibirán' +
           (todos.length - listos.length ? ' · ' + (todos.length - listos.length) + ' sin ' + (S.campana.canal === 'correo' ? 'correo' : 'celular') : '') + '.'
         : 'Elige un segmento o selecciona contactos en la pestaña Contactos.';
-    });
+    }).catch(function (e) { resumen.textContent = String(e.message || e); });
   }
 
   // ---------- Plantillas ----------
@@ -2287,9 +2307,9 @@ cuerpoHtml(personalizar(texto, contacto)) +
     cada('[data-escribir-etiqueta]', function (b) {
       b.onclick = function () {
         var e = b.getAttribute('data-escribir-etiqueta');
-        consulta({ etiqueta: e }).then(function (r) {
-          nuevaCampana({ nombre: 'A los de ' + e, destinatarios: (r.data || []).map(function (c) { return c.id; }) });
-        });
+        consultaCompleta({ etiqueta: e }).then(function (todos) {
+          nuevaCampana({ nombre: 'A los de ' + e, destinatarios: todos.map(function (c) { return c.id; }) });
+        }).catch(function (err) { aviso(String(err.message || err), 'err'); });
       };
     });
     cada('[data-renombrar]', function (b) {
