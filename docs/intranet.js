@@ -420,12 +420,17 @@ cuerpoHtml(personalizar(texto, contacto)) +
     }).join('\n');
   }
 
+  // Literal de arreglo de Postgres para un filtro cs/not.cs: las etiquetas traen espacios y tildes
+  function arregloPg(texto) {
+    return '{"' + String(texto).replace(/\\/g, '\\\\').replace(/"/g, '\\"') + '"}';
+  }
+
   if (typeof module !== 'undefined' && module.exports) {   // solo para los tests
     module.exports = { fonoWhatsApp: fonoWhatsApp, esc: esc, personalizar: personalizar,
       plata: plata, cuerpoHtml: cuerpoHtml, correoHtml: correoHtml, correoTexto: correoTexto, correoDe: correoDe, evaluarCampana: evaluarCampana, cotizacionTexto: cotizacionTexto, ofertaTexto: ofertaTexto,
       enlaceSeguro: enlaceSeguro, csvLeer: csvLeer, csvMapear: csvMapear, csvSalida: csvSalida,
       diasDesde: diasDesde, estadoPorFecha: estadoPorFecha, rutNormalizar: rutNormalizar,
-      paykuFila: paykuFila, patAgrupar: patAgrupar, textoWhatsApp: textoWhatsApp, alcanzables: alcanzables };
+      paykuFila: paykuFila, patAgrupar: patAgrupar, textoWhatsApp: textoWhatsApp, alcanzables: alcanzables, arregloPg: arregloPg };
     return;
   }
 
@@ -438,7 +443,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
   var S = {
     sesion: null, admin: false, listo: false,
     vista: 'resumen',
-    contactos: [], total: 0, q: '', origen: '', etiqueta: '', compras: '', club: '', estado: '', sel: {}, ficha: null,
+    contactos: [], total: 0, q: '', origen: '', etiqueta: '', excluir: '', compras: '', club: '', estado: '', sel: {}, ficha: null,
     eventos: [],
     segmentos: [], plantillas: [], campanas: [], historial: [], cola: null, metricas: null,
     etiquetas: [],
@@ -638,6 +643,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     if (f.q && f.q.trim()) sel = sel.or('nombre.ilike.%' + f.q.trim() + '%,email.ilike.%' + f.q.trim() + '%,celular.ilike.%' + f.q.trim() + '%');
     if (f.origen) sel = sel.contains('origen', [f.origen]);
     if (f.etiqueta) sel = sel.contains('etiquetas', [f.etiqueta]);
+    if (f.excluir) sel = sel.not('etiquetas', 'cs', arregloPg(f.excluir));   // etiquetas nunca es null
     if (f.compras === 'con') sel = sel.gt('n_pedidos', 0);
     if (f.compras === 'sin') sel = sel.eq('n_pedidos', 0);
     if (f.compras === 'dormidos') {
@@ -654,7 +660,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     return sel;
   }
 
-  function filtroActual() { return { q: S.q, origen: S.origen, etiqueta: S.etiqueta, compras: S.compras, club: S.club, estado: S.estado }; }
+  function filtroActual() { return { q: S.q, origen: S.origen, etiqueta: S.etiqueta, excluir: S.excluir, compras: S.compras, club: S.club, estado: S.estado }; }
 
   function cargarContactos() {
     return consulta(filtroActual()).then(function (r) {
@@ -951,7 +957,7 @@ cuerpoHtml(personalizar(texto, contacto)) +
     var s = S.segmentos.filter(function (x) { return String(x.id) === String(id); })[0];
     if (!s) return;
     var f = s.filtro || {};
-    S.q = f.q || ''; S.origen = f.origen || ''; S.etiqueta = f.etiqueta || ''; S.compras = f.compras || ''; S.club = f.club || '';
+    S.q = f.q || ''; S.origen = f.origen || ''; S.etiqueta = f.etiqueta || ''; S.excluir = f.excluir || ''; S.compras = f.compras || ''; S.club = f.club || '';
     cargarContactos();
   }
 
@@ -1525,6 +1531,11 @@ cuerpoHtml(personalizar(texto, contacto)) +
       '<option value="">Toda etiqueta</option>' +
       S.etiquetas.map(function (e) {
         return '<option value="' + esc(e.nombre) + '"' + (S.etiqueta === e.nombre ? ' selected' : '') + '>' + esc(e.nombre) + ' (' + e.n + ')</option>';
+      }).join('') + '</select>' +
+      '<select id="utwi-filtro-excluir" title="Deja fuera a quienes tengan esta etiqueta" style="width:auto;min-width:170px;margin-left:8px">' +
+      '<option value="">Sin excluir</option>' +
+      S.etiquetas.map(function (e) {
+        return '<option value="' + esc(e.nombre) + '"' + (S.excluir === e.nombre ? ' selected' : '') + '>Excluir: ' + esc(e.nombre) + ' (' + e.n + ')</option>';
       }).join('') + '</select>' +
       '</div></div>' +
 
@@ -2241,6 +2252,9 @@ cuerpoHtml(personalizar(texto, contacto)) +
     // ---- etiquetas ----
     if ($('utwi-filtro-etiqueta')) $('utwi-filtro-etiqueta').onchange = function () {
       S.etiqueta = this.value; cargarContactos();
+    };
+    if ($('utwi-filtro-excluir')) $('utwi-filtro-excluir').onchange = function () {
+      S.excluir = this.value; cargarContactos();
     };
     if ($('utwi-poner-etiqueta')) $('utwi-poner-etiqueta').onchange = function () {
       var v = this.value; this.value = '';
