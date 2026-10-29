@@ -21,12 +21,39 @@
       "available": true
     },
     {
+      "name": "Dagaz Camino Blend",
+      "winery": "Camino",
+      "image": "https://images.jumpseller.com/store/up-to-wine-chile/1234669269/DAGAZ_20EL_20CAMINO.png?1793282452",
+      "url": "https://uptowine.cl/camino-blend",
+      "price": 18000,
+      "compare_at": null,
+      "available": true
+    },
+    {
       "name": "Escandalo Pipeño",
       "winery": "Escándalo",
       "image": "https://images.jumpseller.com/store/up-to-wine-chile/32602409/ESCANDALO_20PIPE_C3_91O.png?1783717785",
       "url": "https://uptowine.cl/escandalo-wines-pipeno",
       "price": 6000,
       "compare_at": 10500,
+      "available": true
+    },
+    {
+      "name": "Fuy Blend",
+      "winery": "Fuy",
+      "image": "https://images.jumpseller.com/store/up-to-wine-chile/1234669267/FUY_20BLEND.png?1793282604",
+      "url": "https://uptowine.cl/fuy-blend",
+      "price": 9900,
+      "compare_at": null,
+      "available": true
+    },
+    {
+      "name": "Fuy Gran Reserva Cabernet Sauvignon",
+      "winery": "Fuy",
+      "image": "https://images.jumpseller.com/store/up-to-wine-chile/1234669268/FUY_20CSGR.png?1793282726",
+      "url": "https://uptowine.cl/fuy-gran-reserva-cabernet-sauvignon",
+      "price": 9900,
+      "compare_at": null,
       "available": true
     },
     {
@@ -91,15 +118,6 @@
       "price": 13990,
       "compare_at": null,
       "available": true
-    },
-    {
-      "name": "Camino Blend",
-      "winery": "Camino",
-      "image": "",
-      "url": "https://uptowine.cl/camino-blend",
-      "price": 0,
-      "compare_at": null,
-      "available": false
     },
     {
       "name": "El Escorial Gran Reserva Blend",
@@ -197,24 +215,6 @@
       "image": "https://images.jumpseller.com/store/up-to-wine-chile/32983262/ESCANDALO_20CARIGNAN.png?1783892890",
       "url": "https://uptowine.cl/escandalo-carignan",
       "price": 13990,
-      "compare_at": null,
-      "available": false
-    },
-    {
-      "name": "Fuy Blend",
-      "winery": "Fuy",
-      "image": "",
-      "url": "https://uptowine.cl/fuy-blend",
-      "price": 0,
-      "compare_at": null,
-      "available": false
-    },
-    {
-      "name": "Fuy Gran Reserva Cabernet Sauvignon",
-      "winery": "Fuy",
-      "image": "",
-      "url": "https://uptowine.cl/fuy-gran-reserva-cabernet-sauvignon",
-      "price": 0,
       "compare_at": null,
       "available": false
     },
