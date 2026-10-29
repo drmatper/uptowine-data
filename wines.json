@@ -1935,6 +1935,29 @@
     "sugiere": "Tinto estructurado y de guarda, para ocasiones: bife ancho a la parrilla, cordero al horno con romero, costillar de vacuno a la BBQ, anticuchos y berenjenas a la parmesana."
   },
   {
+    "name": "Camino Blend",
+    "winery": "Camino",
+    "image": "",
+    "url": "https://uptowine.cl/camino-blend",
+    "price": 0,
+    "compare_at": null,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2024",
+        "cepa": "70% Cabernet Sauvignon, 30% Carménère",
+        "valle": "Colchagua Costa",
+        "grad": "14%",
+        "crianza": "12 meses en barrica",
+        "nota": "Rubí profundo y brillante. En nariz es rico en fruta: fruta negra como la ciruela y fruta roja, algo de especias y un leve toque de la madera. En boca presenta una rica acidez, taninos elegantes y un final largo que se condice con la nariz.",
+        "premios": "",
+        "revista": ""
+      }
+    ],
+    "opina": "Ensamblaje de Colchagua Costa con la receta chilena por excelencia: Cabernet Sauvignon para la estructura y el cassis, Carménère para la fruta negra y el toque especiado. La costa le da acidez y frescura, y un año de barrica lo redondea sin volverlo pesado.",
+    "sugiere": "Asado y carnes rojas, y toda la mesa chilena: pastel de choclo, empanadas de pino, guisos. En versión vegetariana, risotto de champiñones o verduras a la parrilla."
+  },
+  {
     "name": "Cas romero Viento Puelche Malbec",
     "winery": "Casa Romero",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29723704/CASA_20ROMERO_20VIENTO_20PUELCHE_20MALBEC.png?1783638198",
@@ -4439,6 +4462,52 @@
     "sugiere": "Tinto potente y rústico para carnes de sabor intenso y cocciones largas: cordero al horno con romero, costillar de vacuno a la BBQ, osobuco braseado al vino tinto, longaniza artesanal y queso manchego curado."
   },
   {
+    "name": "Fuy Blend",
+    "winery": "Fuy",
+    "image": "",
+    "url": "https://uptowine.cl/fuy-blend",
+    "price": 0,
+    "compare_at": null,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2223",
+        "cepa": "75% Carménère, 25% Carignan",
+        "valle": "Maule",
+        "grad": "13,5%",
+        "crianza": "14 meses en barricas de 3º a 5º uso",
+        "nota": "Color rojo violáceo. Aromas a mora, arándanos, pimienta y notas a vainilla. Jugoso y vivo, taninos maduros y largo final.",
+        "premios": "",
+        "revista": ""
+      }
+    ],
+    "opina": "Un ensamblaje del Maule que junta las dos cepas del secano chileno: el Carménère pone la fruta negra, el pimentón maduro y la textura; el Carignan, la acidez y la pimienta que lo mantienen vivo. Barricas de varios usos para que la madera acompañe sin tapar, y una mezcla de dos cosechas que busca equilibrio más que añada.",
+    "sugiere": "Vino de mesa de diario con nervio: costillas al horno, carne mechada, lasagna, guisos de invierno y una pizza de pepperoni."
+  },
+  {
+    "name": "Fuy Gran Reserva Cabernet Sauvignon",
+    "winery": "Fuy",
+    "image": "",
+    "url": "https://uptowine.cl/fuy-gran-reserva-cabernet-sauvignon",
+    "price": 0,
+    "compare_at": null,
+    "available": false,
+    "anadas": [
+      {
+        "anada": "2021",
+        "cepa": "100% Cabernet Sauvignon",
+        "valle": "Maipo",
+        "grad": "14,5%",
+        "crianza": "12 meses en barricas de 3º a 5º uso",
+        "nota": "Color rubí de intensidad ligera. Fruta negra, cassis, notas a mocha y canela. En boca es muy balanceado, de taninos sedosos, con ricas notas a chocolate amargo en el retrogusto.",
+        "premios": "",
+        "revista": ""
+      }
+    ],
+    "opina": "Cabernet Sauvignon del Maipo, la cepa y el valle clásicos de Chile, en versión Gran Reserva: cassis y fruta negra con un fondo de mocha y canela que deja la barrica usada, y taninos sedosos que lo hacen fácil de beber ya. Retrogusto a chocolate amargo, firma del Cabernet maipino.",
+    "sugiere": "Plateada al horno, pollo a la parrilla, pastas con salsas de carne y una tabla de quesos maduros."
+  },
+  {
     "name": "Galán D'Route Blend",
     "winery": "Galán",
     "image": "https://images.jumpseller.com/store/up-to-wine-chile/29452922/GALAN_20DE_20ROUTE_20BLEND.png?1783893108",
@@ -4767,12 +4836,22 @@
   {
     "name": "Javiera Ortúzar Ímpetu",
     "winery": "Javiera Ortúzar",
-    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093596/JAVIERA_20ORTUZAR_20IMPETU.png?1785601298",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093596/JAVIERA_20ORTUZAR_20IMPETU.png?1793272670",
     "url": "https://uptowine.cl/javiera-ortuzar-impetu",
     "price": 16000,
     "compare_at": null,
     "available": false,
     "anadas": [
+      {
+        "anada": "",
+        "cepa": "60% Petit Verdot, 30% Carignan, 10% Syrah",
+        "valle": "Valle de Colchagua",
+        "grad": "14,5%",
+        "crianza": "12 meses en barricas",
+        "nota": "Rojo brillante con ribetes violáceos. Aromas a frutos negros, violetas y especias. En boca se siente fresco, jugoso y equilibrado, con taninos sedosos y un final persistente.",
+        "premios": "",
+        "revista": ""
+      },
       {
         "anada": "",
         "cepa": "Syrah",
@@ -8319,7 +8398,7 @@
   {
     "name": "Peroli Umara Carignan",
     "winery": "Peroli",
-    "image": "https://images.jumpseller.com/store/up-to-wine-chile/29723737/PEROLI_20UMARA_20CARIGNAN.png?1785449701",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/29723737/PEROLI_20UMARA_20CARIGNAN.png?1793272672",
     "url": "https://uptowine.cl/peroli-umara-carignan",
     "price": 14990,
     "compare_at": null,
@@ -8395,7 +8474,7 @@
   {
     "name": "Peroli Üyak",
     "winery": "Peroli",
-    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093474/PEROLI_20UYAK.png?1785449816",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093474/PEROLI_20UYAK.png?1793272671",
     "url": "https://uptowine.cl/peroli-uyak",
     "price": 9990,
     "compare_at": null,
@@ -8419,6 +8498,16 @@
         "crianza": "5 meses, 60% en flextank y 40% en barrica",
         "nota": "Granate con ribetes púrpuras, brillante. En nariz, aromas frutales de guindas, moras y cerezas frescas. En boca, acidez media, tanino jugoso, fresco y especiado.",
         "premios": "93 pts La Cav · 92 pts Descorchados",
+        "revista": ""
+      },
+      {
+        "anada": "2020",
+        "cepa": "100% Cinsault",
+        "valle": "Itata",
+        "grad": "13,2%",
+        "crianza": "70% en tinaja y 25% en barrica de 4º y 5º uso, 8 meses",
+        "nota": "Rojo guinda pálido. Frambuesa con notas de guinda y toques de pimienta negra. Ligero, suave y de gran acidez, con frambuesa y un especiado ligero.",
+        "premios": "",
         "revista": ""
       },
       {

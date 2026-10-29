@@ -93,6 +93,15 @@
       "available": true
     },
     {
+      "name": "Camino Blend",
+      "winery": "Camino",
+      "image": "",
+      "url": "https://uptowine.cl/camino-blend",
+      "price": 0,
+      "compare_at": null,
+      "available": false
+    },
+    {
       "name": "El Escorial Gran Reserva Blend",
       "winery": "El Escorial",
       "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093396/El_20escorial_20Gran_20Reserva_20Blend.png?1789841875",
@@ -188,6 +197,24 @@
       "image": "https://images.jumpseller.com/store/up-to-wine-chile/32983262/ESCANDALO_20CARIGNAN.png?1783892890",
       "url": "https://uptowine.cl/escandalo-carignan",
       "price": 13990,
+      "compare_at": null,
+      "available": false
+    },
+    {
+      "name": "Fuy Blend",
+      "winery": "Fuy",
+      "image": "",
+      "url": "https://uptowine.cl/fuy-blend",
+      "price": 0,
+      "compare_at": null,
+      "available": false
+    },
+    {
+      "name": "Fuy Gran Reserva Cabernet Sauvignon",
+      "winery": "Fuy",
+      "image": "",
+      "url": "https://uptowine.cl/fuy-gran-reserva-cabernet-sauvignon",
+      "price": 0,
       "compare_at": null,
       "available": false
     },
