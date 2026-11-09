@@ -4839,11 +4839,11 @@
   {
     "name": "Javiera Ortúzar Ímpetu",
     "winery": "Javiera Ortúzar",
-    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093596/JAVIERA_20ORTUZAR_20IMPETU.png?1793272670",
+    "image": "https://images.jumpseller.com/store/up-to-wine-chile/36093596/impetu_20JO.png?1794193940",
     "url": "https://uptowine.cl/javiera-ortuzar-impetu",
     "price": 16000,
     "compare_at": null,
-    "available": false,
+    "available": true,
     "anadas": [
       {
         "anada": "",
@@ -4877,7 +4877,8 @@
       }
     ],
     "opina": "Ímpetu es la línea de Syrah de Javiera Ortúzar, que en algunas cosechas suma Petit Verdot para dar más color y estructura. Pimienta negra, fruta negra y un fondo especiado con la madera bien integrada. Consistente en puntajes altos: 93 de La Cav en la 2022 y 93 de Descorchados en el ensamblaje 2018.",
-    "sugiere": "Ragú de cordero con pappardelle, bife ancho a la parrilla, lomo vetado a la parrilla, costillar de vacuno a la BBQ y entrecot a la pimienta. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter."
+    "sugiere": "Ragú de cordero con pappardelle, bife ancho a la parrilla, lomo vetado a la parrilla, costillar de vacuno a la BBQ y entrecot a la pimienta. Tinto estructurado: carnes rojas a la brasa, cocciones lentas y quesos de carácter.",
+    "thumb": "https://cdnx.jumpseller.com/up-to-wine-chile/image/83678720"
   },
   {
     "name": "Javiera Ortúzar Ímpetu Syrah",
@@ -5751,7 +5752,7 @@
     "url": "https://uptowine.cl/laura-hartwig-cabernet-sauvignon-single-vineyard",
     "price": 8990,
     "compare_at": null,
-    "available": true,
+    "available": false,
     "anadas": [
       {
         "anada": "2022",
