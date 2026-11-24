@@ -44,15 +44,19 @@
 
   function personalizar(texto, c) {
     c = c || {};
-    var pila = (c.nombre || '').trim().split(/\s+/)[0];
+    // una ficha importada solo con el correo lo trae repetido en «nombre»: se trata como ficha sin nombre
+    var nombre = /@/.test(c.nombre || '') ? '' : (c.nombre || '').trim();
+    var pila = nombre.split(/\s+/)[0];
     var t = String(texto || '')
       .replace(/\{\{\s*([a-z_]+)\s*\}\}/gi, '{$1}')   // {{nombre}} de los disenos HTML = {nombre}
       .replace(/\{link_baja\}/gi, '%%BAJA%%');  // la Edge Function pone el enlace firmado de cada contacto
-    // sin nombre (ficha con solo correo o celular): el saludo se queda sin el hueco, "Hola {nombre}," -> "Hola,"
-    if (!pila) t = t.replace(/^\{nombre(_completo)?\},?\s*/gim, '').replace(/\s*\{nombre(_completo)?\}/gi, '');
+    // sin nombre (ficha con solo correo o celular): el saludo se queda sin el hueco, "Hola {nombre}," -> "Hola,";
+    // y si el hueco abria la linea, lo que sigue parte con mayuscula: "{nombre}, hoy..." -> "Hoy..."
+    if (!pila) t = t.replace(/^\{nombre(_completo)?\},?\s*(.)/gim, function (m, c1, letra) { return letra.toUpperCase(); })
+      .replace(/\s*\{nombre(_completo)?\}/gi, '');
     return t
       .replace(/\{nombre\}/gi, pila)
-      .replace(/\{nombre_completo\}/gi, c.nombre || pila)
+      .replace(/\{nombre_completo\}/gi, nombre || pila)
       .replace(/\{email\}/gi, c.email || '')
       .replace(/\{celular\}/gi, c.celular || '')
       .replace(/\{comuna\}/gi, c.comuna || '')
