@@ -21,6 +21,15 @@
       "available": true
     },
     {
+      "name": "Escandalo Pipeño",
+      "winery": "Escándalo",
+      "image": "https://images.jumpseller.com/store/up-to-wine-chile/32602409/ESCANDALO_20PIPE_C3_91O.png?1783717785",
+      "url": "https://uptowine.cl/escandalo-wines-pipeno",
+      "price": 6000,
+      "compare_at": 10500,
+      "available": true
+    },
+    {
       "name": "Fuy Blend",
       "winery": "Fuy",
       "image": "https://images.jumpseller.com/store/up-to-wine-chile/1234669267/FUY_20BLEND.png?1793282604",
@@ -198,15 +207,6 @@
       "url": "https://uptowine.cl/escandalo-carignan",
       "price": 13990,
       "compare_at": null,
-      "available": false
-    },
-    {
-      "name": "Escandalo Pipeño",
-      "winery": "Escándalo",
-      "image": "https://images.jumpseller.com/store/up-to-wine-chile/32602409/ESCANDALO_20PIPE_C3_91O.png?1783717785",
-      "url": "https://uptowine.cl/escandalo-wines-pipeno",
-      "price": 6000,
-      "compare_at": 10500,
       "available": false
     },
     {
